@@ -1011,6 +1011,9 @@ h2 span{
 .final-cta-centered{
   max-width:850px;
 
+  margin-left:auto;
+  margin-right:auto;
+
   text-align:center;
 }
 
@@ -1033,7 +1036,13 @@ h2 span{
 }
 
 .final-book-button{
+  display:flex;
+
+  width:max-content;
   min-width:300px;
+
+  margin-left:auto;
+  margin-right:auto;
 }
 
 
@@ -1486,6 +1495,11 @@ h2 span{
     width:calc(100% - 34px);
 
     max-width:none;
+
+    margin-left:auto;
+    margin-right:auto;
+
+    text-align:center;
   }
 
   .final-cta-centered .section-title{
@@ -1504,11 +1518,15 @@ h2 span{
   }
 
   .final-book-button{
-    width:100%;
+    display:flex;
+
+    width:min(100%,360px);
 
     min-width:0;
-
     min-height:54px;
+
+    margin-left:auto;
+    margin-right:auto;
   }
 
 
@@ -1607,4 +1625,4 @@ h2 span{
     transition-duration:.01ms !important;
   }
 
-         }
+    }

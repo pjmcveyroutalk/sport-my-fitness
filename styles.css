@@ -148,28 +148,34 @@ a{
   display:grid;
   align-items:center;
   overflow:hidden;
+  background:#000;
 }
 
 .hero-media{
   position:absolute;
   inset:0;
-  background-image:
-    url("https://static.wixstatic.com/media/697b1a_d7e253c37e9644fda7ae22ce0ba9102a~mv2.jpg/v1/crop/x_43%2Cy_24%2Cw_606%2Ch_515/fill/w_1500%2Ch_1275%2Cal_c%2Cq_90%2Cenc_auto/website%20pic%20C_edited.jpg");
-  background-size:cover;
-  background-position:center 38%;
-  filter:saturate(.9) contrast(1.08);
+
+  background-image:url("brand/yoshi-hero.png");
+  background-repeat:no-repeat;
+  background-size:contain;
+  background-position:right center;
+  background-color:#000;
+
+  filter:saturate(1.03) contrast(1.04);
 }
 
 .hero-overlay{
   position:absolute;
   inset:0;
+
   background:
     linear-gradient(
       90deg,
-      rgba(3,6,10,.98) 0%,
-      rgba(3,6,10,.82) 38%,
-      rgba(3,6,10,.2) 72%,
-      rgba(3,6,10,.42) 100%
+      rgba(3,6,10,.99) 0%,
+      rgba(3,6,10,.94) 29%,
+      rgba(3,6,10,.72) 47%,
+      rgba(3,6,10,.18) 70%,
+      rgba(3,6,10,.04) 100%
     );
 }
 
@@ -292,6 +298,7 @@ h2 span{
   height:4px;
   margin:16px auto 0;
   border-radius:999px;
+
   background:
     linear-gradient(
       90deg,
@@ -300,6 +307,7 @@ h2 span{
       var(--smf-teal) 82%,
       transparent
     );
+
   box-shadow:0 0 20px rgba(7,158,143,.32);
 }
 
@@ -309,9 +317,19 @@ h2 span{
 .mission-strip{
   position:relative;
   overflow:hidden;
+
   background:
-    radial-gradient(circle at 50% 30%,rgba(7,158,143,.14),transparent 44%),
-    linear-gradient(180deg,#020608 0%,#071214 48%,#03080a 100%);
+    radial-gradient(
+      circle at 50% 30%,
+      rgba(7,158,143,.14),
+      transparent 44%
+    ),
+    linear-gradient(
+      180deg,
+      #020608 0%,
+      #071214 48%,
+      #03080a 100%
+    );
 }
 
 .mission-strip::before{
@@ -320,6 +338,7 @@ h2 span{
   inset:8% auto 8% 0;
   width:6px;
   border-radius:0 999px 999px 0;
+
   background:
     linear-gradient(
       180deg,
@@ -398,9 +417,18 @@ h2 span{
 
 .section{
   padding:78px 0;
+
   background:
-    radial-gradient(circle at 50% 0%,rgba(7,158,143,.04),transparent 30%),
-    linear-gradient(180deg,#05090d,#04080b);
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(7,158,143,.04),
+      transparent 30%
+    ),
+    linear-gradient(
+      180deg,
+      #05090d,
+      #04080b
+    );
 }
 
 .section-dark{
@@ -441,7 +469,14 @@ h2 span{
   overflow:hidden;
   border:1px solid rgba(7,158,143,.16);
   border-radius:20px;
-  background:linear-gradient(145deg,rgba(9,20,22,.96),rgba(3,7,9,.98));
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(9,20,22,.96),
+      rgba(3,7,9,.98)
+    );
+
   box-shadow:0 14px 36px rgba(0,0,0,.24);
 }
 
@@ -507,7 +542,13 @@ h2 span{
   border-left:3px solid rgba(7,158,143,.78);
   padding:10px 12px;
   border-radius:0 10px 10px 0;
-  background:linear-gradient(90deg,rgba(7,158,143,.06),transparent);
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(7,158,143,.06),
+      transparent
+    );
 }
 
 .text-link{
@@ -551,7 +592,12 @@ h2 span{
 .media-card-shade{
   position:absolute;
   inset:0;
-  background:linear-gradient(180deg,rgba(2,5,7,.08),rgba(2,5,7,.92));
+  background:
+    linear-gradient(
+      180deg,
+      rgba(2,5,7,.08),
+      rgba(2,5,7,.92)
+    );
 }
 
 .media-play{
@@ -853,6 +899,7 @@ h2 span{
     width:min(100% - 28px,1160px);
   }
 
+
   /* STICKY MOBILE HEADER */
 
   .site-header{
@@ -905,16 +952,33 @@ h2 span{
   /* HERO */
 
   .hero{
-    min-height:560px;
+    min-height:590px;
     align-items:end;
+    background:#000;
   }
 
   .hero-media{
-    background-position:61% center;
+    background-image:url("brand/yoshi-hero.png");
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position:center top;
+    background-color:#000;
+  }
+
+  .hero-overlay{
+    background:
+      linear-gradient(
+        180deg,
+        rgba(3,6,10,.04) 0%,
+        rgba(3,6,10,.16) 25%,
+        rgba(3,6,10,.68) 48%,
+        rgba(3,6,10,.95) 68%,
+        rgba(3,6,10,.99) 100%
+      );
   }
 
   .hero-content{
-    padding-top:150px;
+    padding-top:235px;
     padding-bottom:30px;
   }
 
@@ -924,6 +988,7 @@ h2 span{
 
   .hero-actions{
     display:grid;
+    gap:10px;
   }
 
   .btn{
@@ -1127,4 +1192,4 @@ h2 span{
     animation-iteration-count:1!important;
     transition-duration:.01ms!important;
   }
-    }
+  }

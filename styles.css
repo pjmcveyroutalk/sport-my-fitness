@@ -1,4 +1,4 @@
-/* Sport My Fitness — mobile polish pass v3 */
+/* Sport My Fitness — mobile polish pass v4 */
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--smf-black);color:var(--smf-white);font-family:var(--smf-font-body);line-height:1.6;overflow-x:hidden}
@@ -106,13 +106,50 @@ h1 span,h2 span{color:var(--smf-teal)}
 @media (max-width:640px){
   .container{width:min(100% - 28px,1160px)}
 
-  .site-header{position:relative;top:auto;backdrop-filter:none}
-  .header-inner{min-height:66px;width:calc(100% - 24px);gap:10px}
-  .brand{width:210px;height:62px}
-  .brand img{object-fit:cover;object-position:center;transform:scale(1.06)}
-  .menu-toggle{width:46px;height:46px;padding:9px}
-  .site-nav{top:66px;max-height:calc(100vh - 66px);overflow:auto}
-  .site-nav a{min-height:48px;display:flex;align-items:center}
+  .site-header{
+    position:relative;
+    top:auto;
+    backdrop-filter:none;
+  }
+
+  .header-inner{
+    min-height:72px;
+    width:calc(100% - 18px);
+    gap:6px;
+  }
+
+  .brand{
+    width:285px;
+    height:66px;
+  }
+
+  .brand img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center;
+    transform:scale(1.08);
+  }
+
+  .menu-toggle{
+    width:44px;
+    height:44px;
+    padding:8px;
+    margin-left:auto;
+    margin-right:0;
+  }
+
+  .site-nav{
+    top:72px;
+    max-height:calc(100vh - 72px);
+    overflow:auto;
+  }
+
+  .site-nav a{
+    min-height:48px;
+    display:flex;
+    align-items:center;
+  }
 
   .hero{min-height:610px;align-items:end}
   .hero-media{background-position:61% center}
@@ -160,9 +197,12 @@ h1 span,h2 span{color:var(--smf-teal)}
   .footer-inner p{font-size:.78rem}
 }
 
-/* Accessibility / interaction */
+/* Accessibility */
 :focus-visible{outline:3px solid var(--smf-teal);outline-offset:3px}
-.btn,.site-nav a,.media-card,.text-link{transition:transform .18s ease,color .18s ease,border-color .18s ease,background-color .18s ease}
+
+.btn,.site-nav a,.media-card,.text-link{
+  transition:transform .18s ease,color .18s ease,border-color .18s ease,background-color .18s ease;
+}
 
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}

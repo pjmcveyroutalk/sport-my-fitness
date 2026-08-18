@@ -735,8 +735,12 @@ h2 span{
   object-position:center 24%;
 }
 
-.option-image-facility img{
-  object-position:center 62%;
+.option-image-youth img{
+  object-position:center 38%;
+}
+
+.option-image-packages img{
+  object-position:center 30%;
 }
 
 .option-content{
@@ -775,7 +779,7 @@ h2 span{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:10px;
-  margin:28px 0 24px;
+  margin:26px 0 22px;
 }
 
 .option-meta-single{
@@ -1172,12 +1176,12 @@ h2 span{
   }
 
   .options-section{
-    padding:36px 0 54px;
+    padding:30px 0 48px;
   }
 
   .options-grid{
     grid-template-columns:1fr;
-    gap:18px;
+    gap:14px;
   }
 
   .option-card{
@@ -1189,22 +1193,30 @@ h2 span{
   }
 
   .option-content{
-    padding:22px 20px 24px;
+    padding:20px 20px 22px;
+  }
+
+  .option-label{
+    margin-bottom:10px;
   }
 
   .option-card h2{
     font-size:clamp(2.15rem,9.5vw,3rem);
-    margin-bottom:14px;
+    margin-bottom:12px;
   }
 
   .option-description{
     font-size:.98rem;
-    line-height:1.65;
+    line-height:1.58;
   }
 
   .option-meta{
     gap:8px;
-    margin:22px 0 20px;
+    margin:18px 0 18px;
+  }
+
+  .option-meta span{
+    padding:12px;
   }
 
   .option-meta strong{
@@ -1212,11 +1224,11 @@ h2 span{
   }
 
   .options-help{
-    padding:54px 0;
+    padding:50px 0;
   }
 
   .options-help .section-title{
-    margin-bottom:30px;
+    margin-bottom:28px;
   }
 
   .options-help h2{
@@ -1227,7 +1239,7 @@ h2 span{
   .options-help-actions{
     display:grid;
     gap:10px;
-    margin-top:26px;
+    margin-top:24px;
   }
 
 
@@ -1293,4 +1305,4 @@ h2 span{
   .option-image img{
     transition:none;
   }
-  }
+    }

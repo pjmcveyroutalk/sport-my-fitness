@@ -1,1 +1,549 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 
+  <title>Training Options | Sport My Fitness Milwaukee</title>
+
+  <meta
+    name="description"
+    content="Explore Sport My Fitness training options, pricing, group fitness, online coaching, kids training and stretching in Milwaukee."
+  >
+
+  <meta name="theme-color" content="#03060A">
+
+  <meta property="og:title" content="Training Options | Sport My Fitness">
+
+  <meta
+    property="og:description"
+    content="Explore the ways you can train with Sport My Fitness."
+  >
+
+  <meta
+    property="og:image"
+    content="brand/og-card-1200x630.jpg"
+  >
+
+  <meta name="twitter:card" content="summary_large_image">
+
+  <meta
+    name="twitter:image"
+    content="brand/twitter-card-1200x630.jpg"
+  >
+
+  <link rel="icon" href="brand/favicon.ico">
+
+  <link
+    rel="apple-touch-icon"
+    href="brand/apple-touch-icon.png"
+  >
+
+  <link rel="manifest" href="site.webmanifest">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Rajdhani:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="brand.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <a class="skip-link" href="#main">
+    Skip to content
+  </a>
+
+  <header class="site-header" id="top">
+
+    <div class="header-inner">
+
+      <a
+        class="brand"
+        href="index.html"
+        aria-label="Sport My Fitness home"
+      >
+        <img
+          src="brand/sportmyfitness-logo-header.png"
+          alt="Sport My Fitness"
+        >
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-nav"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+
+        <span class="sr-only">
+          Open menu
+        </span>
+      </button>
+
+      <nav
+        class="site-nav"
+        id="site-nav"
+        aria-label="Primary"
+      >
+        <a href="index.html#programs">
+          Programs
+        </a>
+
+        <a href="index.html#yoshi">
+          About Yoshi
+        </a>
+
+        <a href="index.html#media">
+          Media
+        </a>
+
+        <a href="training-options.html">
+          Training Options
+        </a>
+
+        <a href="index.html#contact">
+          Contact
+        </a>
+
+        <a
+          class="nav-cta"
+          href="https://www.sportmyfitnessmke.com/book-online"
+        >
+          Book a Session
+        </a>
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <main id="main">
+
+    <section class="options-hero">
+
+      <div class="container options-hero-inner">
+
+        <p class="section-title">
+          Training Options
+        </p>
+
+        <h1>
+          Find the training that
+          <span>fits your goal.</span>
+        </h1>
+
+        <p>
+          Review the current Sport My Fitness options,
+          pricing and session lengths before choosing
+          what works best for you.
+        </p>
+
+        <a
+          class="text-link back-link"
+          href="index.html"
+        >
+          ← Back to Home
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <section class="options-section">
+
+      <div class="container">
+
+        <div class="options-grid">
+
+
+          <article
+            class="option-card"
+            id="semi-private"
+          >
+
+            <div class="option-card-top">
+
+              <p class="option-label">
+                Training
+              </p>
+
+              <h2>
+                Semi-Private Sessions
+              </h2>
+
+              <p class="option-description">
+                A training option for people who want
+                coaching in a shared session environment.
+              </p>
+
+            </div>
+
+            <div class="option-meta">
+
+              <span>
+                <strong>$50</strong>
+                Price
+              </span>
+
+              <span>
+                <strong>1 hr</strong>
+                Duration
+              </span>
+
+            </div>
+
+            <a
+              class="btn btn-primary"
+              href="https://www.sportmyfitnessmke.com/book-online"
+            >
+              Book Semi-Private
+            </a>
+
+          </article>
+
+
+          <article
+            class="option-card"
+            id="one-on-one"
+          >
+
+            <div class="option-card-top">
+
+              <p class="option-label">
+                Personal Training
+              </p>
+
+              <h2>
+                Private One-on-One
+              </h2>
+
+              <p class="option-description">
+                Individual training for clients who want
+                a private session with focused coaching.
+              </p>
+
+            </div>
+
+            <div class="option-meta">
+
+              <span>
+                <strong>$60</strong>
+                Price
+              </span>
+
+              <span>
+                <strong>1 hr</strong>
+                Duration
+              </span>
+
+            </div>
+
+            <a
+              class="btn btn-primary"
+              href="https://www.sportmyfitnessmke.com/book-online"
+            >
+              Book One-on-One
+            </a>
+
+          </article>
+
+
+          <article
+            class="option-card"
+            id="summer-group"
+          >
+
+            <div class="option-card-top">
+
+              <p class="option-label">
+                Group Training
+              </p>
+
+              <h2>
+                Summer Group Class
+              </h2>
+
+              <p class="option-description">
+                A current group-class option listed through
+                Sport My Fitness booking.
+              </p>
+
+            </div>
+
+            <div class="option-meta">
+
+              <span>
+                <strong>$10</strong>
+                Price
+              </span>
+
+              <span>
+                <strong>1 hr</strong>
+                Duration
+              </span>
+
+            </div>
+
+            <a
+              class="btn btn-primary"
+              href="https://www.sportmyfitnessmke.com/book-online"
+            >
+              View Group Availability
+            </a>
+
+          </article>
+
+
+          <article
+            class="option-card"
+            id="online-coaching"
+          >
+
+            <div class="option-card-top">
+
+              <p class="option-label">
+                Remote Training
+              </p>
+
+              <h2>
+                Online Fitness Coach
+              </h2>
+
+              <p class="option-description">
+                An online coaching option for clients who
+                want Sport My Fitness support remotely.
+              </p>
+
+            </div>
+
+            <div class="option-meta">
+
+              <span>
+                <strong>$50</strong>
+                Price
+              </span>
+
+              <span>
+                <strong>45 min</strong>
+                Duration
+              </span>
+
+            </div>
+
+            <a
+              class="btn btn-primary"
+              href="https://www.sportmyfitnessmke.com/book-online"
+            >
+              Book Online Coaching
+            </a>
+
+          </article>
+
+
+          <article
+            class="option-card"
+            id="kid-training"
+          >
+
+            <div class="option-card-top">
+
+              <p class="option-label">
+                Youth Fitness
+              </p>
+
+              <h2>
+                Kid Training Camp
+              </h2>
+
+              <p class="option-description">
+                A multi-class youth training option currently
+                offered through Sport My Fitness booking.
+              </p>
+
+            </div>
+
+            <div class="option-meta option-meta-single">
+
+              <span>
+                <strong>6 classes</strong>
+                $125
+              </span>
+
+            </div>
+
+            <a
+              class="btn btn-primary"
+              href="https://www.sportmyfitnessmke.com/book-online"
+            >
+              View Kid Training
+            </a>
+
+          </article>
+
+
+          <article
+            class="option-card"
+            id="packages"
+          >
+
+            <div class="option-card-top">
+
+              <p class="option-label">
+                Training Plans
+              </p>
+
+              <h2>
+                Packages
+              </h2>
+
+              <p class="option-description">
+                Explore the currently available Sport My Fitness
+                package choices through the booking system.
+              </p>
+
+            </div>
+
+            <div class="option-meta option-meta-single">
+
+              <span>
+                <strong>Options vary</strong>
+                See current booking
+              </span>
+
+            </div>
+
+            <a
+              class="btn btn-primary"
+              href="https://www.sportmyfitnessmke.com/book-online"
+            >
+              Explore Packages
+            </a>
+
+          </article>
+
+
+          <article
+            class="option-card"
+            id="rb-stretching"
+          >
+
+            <div class="option-card-top">
+
+              <p class="option-label">
+                Stretching
+              </p>
+
+              <h2>
+                R&amp;B Stretching Session
+              </h2>
+
+              <p class="option-description">
+                A dedicated stretching-session option available
+                through Sport My Fitness.
+              </p>
+
+            </div>
+
+            <div class="option-meta option-meta-single">
+
+              <span>
+                <strong>$20</strong>
+                Per session
+              </span>
+
+            </div>
+
+            <a
+              class="btn btn-primary"
+              href="https://www.sportmyfitnessmke.com/book-online"
+            >
+              Book Stretching
+            </a>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="options-help">
+
+      <div class="container options-help-inner">
+
+        <p class="section-title">
+          Not Sure Where to Start?
+        </p>
+
+        <h2>
+          Connect with
+          <span>Yoshi.</span>
+        </h2>
+
+        <p>
+          If you are unsure which option is the best fit,
+          reach out before booking and talk through your goals.
+        </p>
+
+        <div class="options-help-actions">
+
+          <a
+            class="btn btn-primary"
+            href="tel:+14147914526"
+          >
+            Call Sport My Fitness
+          </a>
+
+          <a
+            class="btn btn-secondary"
+            href="mailto:Yoshi_barnes@outlook.com"
+          >
+            Email Yoshi
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer class="site-footer">
+
+    <div class="container footer-inner">
+
+      <img
+        src="brand/sportmyfitness-logo-header.png"
+        alt="Sport My Fitness"
+        loading="lazy"
+      >
+
+      <p>
+        © <span id="year"></span>
+        Sport My Fitness. All rights reserved.
+      </p>
+
+    </div>
+
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

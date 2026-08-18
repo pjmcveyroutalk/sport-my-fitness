@@ -17,15 +17,9 @@
     content="Sport My Fitness provides personal training, semi-private training, life coaching and rehab-focused fitness support in Milwaukee."
   >
 
-  <meta
-    name="theme-color"
-    content="#03060A"
-  >
+  <meta name="theme-color" content="#03060A">
 
-  <meta
-    property="og:title"
-    content="Sport My Fitness"
-  >
+  <meta property="og:title" content="Sport My Fitness">
 
   <meta
     property="og:description"
@@ -48,11 +42,27 @@
   >
 
   <link rel="icon" href="brand/favicon.ico">
-  <link rel="apple-touch-icon" href="brand/apple-touch-icon.png">
-  <link rel="manifest" href="site.webmanifest">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    rel="apple-touch-icon"
+    href="brand/apple-touch-icon.png"
+  >
+
+  <link
+    rel="manifest"
+    href="site.webmanifest"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
 
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Rajdhani:wght@500;600;700&display=swap"
@@ -63,15 +73,17 @@
   <link rel="stylesheet" href="styles.css">
 
 
-  <!-- CRITICAL MISSION V2 CSS
-       Isolated from all old mission selectors -->
+  <!-- ISOLATED MISSION V2 -->
   <style>
+
     .smf-mission-v2{
       position:relative;
       width:100%;
       overflow:hidden;
+
       border-top:1px solid rgba(7,158,143,.34);
       border-bottom:1px solid rgba(7,158,143,.24);
+
       background:
         radial-gradient(
           circle at 4% 48%,
@@ -93,12 +105,16 @@
 
     .smf-mission-v2::before{
       content:"";
+
       position:absolute;
       top:7%;
       bottom:7%;
       left:0;
+
       width:5px;
+
       border-radius:0 999px 999px 0;
+
       background:
         linear-gradient(
           180deg,
@@ -107,37 +123,53 @@
           #079e8f 82%,
           transparent
         );
+
       box-shadow:
         0 0 24px rgba(7,158,143,.6);
     }
 
     .smf-mission-v2-inner{
       width:min(1160px,calc(100% - 32px));
+
       margin:0 auto;
+
       padding:38px 0 34px;
+
       display:block;
     }
 
     .smf-mission-v2-title{
       width:100%;
+
       margin:0 auto 28px;
+
       color:#079e8f;
+
       text-align:center;
+
       font-family:"Rajdhani",sans-serif;
       font-size:clamp(1.7rem,4vw,2.45rem);
       font-weight:700;
+
       line-height:1;
+
       letter-spacing:.12em;
+
       text-transform:uppercase;
     }
 
     .smf-mission-v2-title::after{
       content:"";
+
       display:block;
+
       width:86px;
       height:4px;
+
       margin:16px auto 0;
+
       border-radius:999px;
+
       background:
         linear-gradient(
           90deg,
@@ -146,6 +178,7 @@
           #079e8f 82%,
           transparent
         );
+
       box-shadow:
         0 0 20px rgba(7,158,143,.32);
     }
@@ -153,27 +186,40 @@
     .smf-mission-v2-points{
       width:100%;
       max-width:900px;
+
       display:grid;
+
       grid-template-columns:
         repeat(3,minmax(0,1fr));
+
       gap:0;
+
       margin:0 auto 24px;
       padding:0;
+
       list-style:none;
     }
 
     .smf-mission-v2-points li{
       min-width:0;
+
       display:flex;
+
       align-items:flex-start;
       justify-content:center;
+
       gap:10px;
+
       padding:4px 20px;
+
       color:#fff;
+
       font-family:"Rajdhani",sans-serif;
       font-size:clamp(.95rem,2vw,1.25rem);
       font-weight:700;
+
       line-height:1.15;
+
       text-transform:uppercase;
     }
 
@@ -184,55 +230,76 @@
 
     .smf-mission-v2-points li::before{
       content:"";
+
       width:11px;
       height:11px;
+
       flex:0 0 auto;
+
       margin-top:.12em;
+
       border-radius:50%;
+
       background:#12cabb;
+
       box-shadow:
         0 0 10px rgba(7,158,143,.5);
     }
 
     .smf-mission-v2-statement{
       width:min(760px,90%);
+
       margin:0 auto;
+
       color:#f0f3f3;
+
       text-align:center;
+
       font-family:"Montserrat",sans-serif;
       font-size:clamp(.95rem,1.7vw,1.15rem);
+
       line-height:1.55;
     }
+
 
     @media(max-width:760px){
 
       .smf-mission-v2-inner{
         width:calc(100% - 34px);
+
         padding:26px 0 25px;
       }
 
       .smf-mission-v2-title{
         margin-bottom:19px;
+
         font-size:1.45rem;
+
         letter-spacing:.13em;
       }
 
       .smf-mission-v2-title::after{
         width:48px;
         height:2px;
+
         margin-top:9px;
       }
 
       .smf-mission-v2-points{
         grid-template-columns:
           repeat(3,minmax(0,1fr));
+
         margin-bottom:17px;
       }
 
       .smf-mission-v2-points li{
         gap:7px;
+
         padding:2px 8px;
-        font-size:clamp(.67rem,3vw,.78rem);
+
+        font-size:
+          clamp(.67rem,3vw,.78rem);
+
         line-height:1.16;
       }
 
@@ -243,11 +310,14 @@
 
       .smf-mission-v2-statement{
         width:92%;
+
         font-size:.76rem;
+
         line-height:1.48;
       }
 
     }
+
   </style>
 </head>
 
@@ -258,8 +328,6 @@
     Skip to content
   </a>
 
-
-  <!-- HEADER -->
 
   <header class="site-header" id="top">
 
@@ -362,14 +430,10 @@
             Sport My Fitness · Milwaukee
           </p>
 
-
           <h1>
             To gain, maintain, or lose it all
-            <span>
-              takes work.
-            </span>
+            <span>takes work.</span>
           </h1>
-
 
           <p class="lead">
             Training, coaching and support built around
@@ -385,7 +449,6 @@
             >
               Book a Session
             </a>
-
 
             <a
               class="btn btn-secondary"
@@ -404,7 +467,7 @@
 
 
 
-    <!-- MISSION V2 -->
+    <!-- MISSION -->
 
     <section
       class="smf-mission-v2"
@@ -462,14 +525,10 @@
             Programs
           </p>
 
-
           <h2>
             Support built around
-            <span>
-              your goals.
-            </span>
+            <span>your goals.</span>
           </h2>
-
 
           <p>
             Sport My Fitness brings together fitness,
@@ -508,7 +567,6 @@
           </a>
 
 
-
           <a
             class="training-preview-card"
             href="programs.html#rehab-tech"
@@ -532,7 +590,6 @@
             </span>
 
           </a>
-
 
 
           <a
@@ -595,7 +652,6 @@
 
         <div class="split">
 
-
           <div class="split-media">
 
             <img
@@ -606,13 +662,11 @@
           </div>
 
 
-
           <div class="split-copy">
 
             <h2>
               Coaching with purpose.
             </h2>
-
 
             <p>
               Yoshi brings fitness training, strength and
@@ -675,18 +729,15 @@
             Local Media
           </p>
 
-
           <h2>
             Featured On
           </h2>
-
 
           <img
             class="tmj4-main-logo"
             src="https://ewscripps.brightspotcdn.com/dims4/default/4d1734c/2147483647/strip/true/crop/1120x630%2B40%2B0/resize/1280x720%21/quality/90/?url=http%3A%2F%2Fewscripps-brightspot.s3.amazonaws.com%2F4b%2Fa3%2Ffb5e317d4255a3a9e8e181f7f509%2Fdownload.png"
             alt="TMJ4"
           >
-
 
           <p>
             Yoshi Barnes has joined TMJ4 to share
@@ -769,11 +820,9 @@
             Training Options
           </p>
 
-
           <h2 class="training-heading-white">
             Choose how you want to move forward.
           </h2>
-
 
           <p>
             Sport My Fitness offers several ways to train.
@@ -785,7 +834,6 @@
 
 
         <div class="training-preview-grid">
-
 
           <a
             class="training-preview-card"
@@ -812,7 +860,6 @@
           </a>
 
 
-
           <a
             class="training-preview-card"
             href="training-options.html#summer-group"
@@ -836,7 +883,6 @@
             </span>
 
           </a>
-
 
 
           <a
@@ -883,63 +929,30 @@
 
 
 
-    <!-- FINAL CTA -->
+    <!-- CLEAN FINAL CTA -->
 
     <section
       class="final-cta"
       id="contact"
     >
 
-      <div class="container">
+      <div class="container final-cta-centered">
 
         <p class="section-title">
           Ready to Get Started?
         </p>
 
+        <h2 class="final-cta-heading">
+          Your strength. Your life.
+          <span>Your time is now.</span>
+        </h2>
 
-        <div class="final-grid">
-
-          <div>
-
-            <h2>
-              Your strength. Your life.
-              <span>
-                Your time is now.
-              </span>
-            </h2>
-
-            <a
-              class="btn btn-primary"
-              href="book.html"
-            >
-              Book a Session
-            </a>
-
-          </div>
-
-
-          <address class="contact-card">
-
-            <strong>
-              Sport My Fitness
-            </strong>
-
-            <a href="tel:+14147914526">
-              414-791-4526
-            </a>
-
-            <a href="mailto:Yoshi_barnes@outlook.com">
-              Yoshi_barnes@outlook.com
-            </a>
-
-            <span>
-              4722 W Vliet St<br>
-              Milwaukee, WI 53208
-            </span>
-
-          </address>
-
-        </div>
+        <a
+          class="btn btn-primary final-book-button"
+          href="book.html"
+        >
+          Book a Session
+        </a>
 
       </div>
 
@@ -949,7 +962,7 @@
 
 
 
-  <!-- FOOTER -->
+  <!-- STRUCTURED FOOTER -->
 
   <footer class="site-footer">
 
@@ -969,6 +982,7 @@
           >
 
         </a>
+
 
         <p class="footer-mission">
           Empowering the body.<br>
@@ -1025,7 +1039,7 @@
         </a>
 
         <a href="#contact">
-          Contact
+          Get Started
         </a>
 
       </div>
@@ -1056,7 +1070,6 @@
     </div>
 
 
-
     <div class="container footer-bottom">
 
       <p>
@@ -1068,4 +1081,24 @@
 
         <span>
           Terms of Use
-        </span
+        </span>
+
+        <span aria-hidden="true">
+          |
+        </span>
+
+        <span>
+          Privacy Policy
+        </span>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>

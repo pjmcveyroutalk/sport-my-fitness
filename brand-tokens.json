@@ -1,0 +1,29 @@
+{
+  "brand": {
+    "name": "Sport My Fitness",
+    "wordmark": "SPORTMYFITNESS",
+    "tagline": "TO GAIN, MAINTAIN, OR LOSE IT ALL TAKES WORK"
+  },
+  "colors": {
+    "teal_primary": "#079E8F",
+    "teal_deep": "#025C5E",
+    "teal_dark": "#037974",
+    "near_black": "#03060A",
+    "charcoal": "#111518",
+    "off_white": "#F5F7F8",
+    "muted_gray": "#A8B0B4",
+    "metal_light": "#D8DEE2",
+    "metal_mid": "#8C969D"
+  },
+  "typography": {
+    "display": "Rajdhani",
+    "body": "Montserrat",
+    "fallback_display": "Arial Narrow, sans-serif",
+    "fallback_body": "Arial, sans-serif"
+  },
+  "assets": {
+    "primary_logo": "/brand/sportmyfitness-logo-800w.png",
+    "icon": "/brand/sportmyfitness-icon-256.png",
+    "og": "/brand/og-card-1200x630.jpg"
+  }
+}

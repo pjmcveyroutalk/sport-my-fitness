@@ -1,0 +1,34 @@
+:root {
+  --smf-teal: #079E8F;
+  --smf-teal-deep: #025C5E;
+  --smf-teal-dark: #037974;
+  --smf-black: #03060A;
+  --smf-charcoal: #111518;
+  --smf-white: #F5F7F8;
+  --smf-muted: #A8B0B4;
+  --smf-metal-light: #D8DEE2;
+  --smf-metal-mid: #8C969D;
+
+  --smf-font-display: "Rajdhani", "Arial Narrow", sans-serif;
+  --smf-font-body: "Montserrat", Arial, sans-serif;
+
+  --smf-radius-sm: 6px;
+  --smf-radius-md: 12px;
+  --smf-shadow-teal: 0 0 28px rgba(7, 158, 143, 0.22);
+}
+
+.smf-btn-primary {
+  background: var(--smf-teal);
+  color: var(--smf-black);
+  border: 1px solid var(--smf-teal);
+  font-family: var(--smf-font-display);
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.smf-btn-secondary {
+  background: transparent;
+  color: var(--smf-white);
+  border: 1px solid var(--smf-teal);
+}

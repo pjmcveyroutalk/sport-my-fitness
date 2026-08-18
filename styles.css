@@ -1,4 +1,4 @@
-/* Sport My Fitness — mobile polish pass v4 */
+/* Sport My Fitness — mobile polish pass v5 */
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--smf-black);color:var(--smf-white);font-family:var(--smf-font-body);line-height:1.6;overflow-x:hidden}
@@ -10,15 +10,15 @@ a{color:inherit;text-decoration:none}
 .skip-link:focus{left:8px}
 
 /* Header */
-.site-header{position:sticky;top:0;z-index:50;background:rgba(3,6,10,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(7,158,143,.28)}
-.header-inner{width:min(1240px,calc(100% - 28px));margin:auto;min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-.brand{display:block;width:300px;height:68px;overflow:hidden;flex:0 0 auto}
-.brand img{width:100%;height:100%;object-fit:cover;object-position:center;transform:scale(1.03)}
+.site-header{position:sticky;top:0;z-index:50;background:#03060a;border-bottom:1px solid rgba(7,158,143,.28)}
+.header-inner{width:min(1240px,calc(100% - 28px));margin:auto;min-height:80px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{display:flex;align-items:center;width:320px;max-width:calc(100% - 70px);height:72px;overflow:visible;flex:0 1 auto}
+.brand img{width:100%;height:100%;object-fit:contain;object-position:left center;transform:none}
 .site-nav{display:flex;align-items:center;gap:24px;font-family:var(--smf-font-display);font-weight:700;text-transform:uppercase;letter-spacing:.04em}
 .site-nav a{font-size:.92rem}
 .site-nav a:hover,.site-nav a:focus{color:var(--smf-teal)}
 .nav-cta{border:1px solid var(--smf-teal);padding:10px 16px}
-.menu-toggle{display:none;background:none;border:0;width:44px;height:44px;padding:10px;cursor:pointer}
+.menu-toggle{display:none;background:none;border:0;width:44px;height:44px;padding:8px;cursor:pointer;flex:0 0 auto}
 .menu-toggle span:not(.sr-only){display:block;height:2px;background:var(--smf-white);margin:6px 0}
 
 /* Hero */
@@ -41,7 +41,7 @@ h1 span,h2 span{color:var(--smf-teal)}
 /* Mission */
 .mission-strip{border-block:1px solid rgba(7,158,143,.35);background:linear-gradient(90deg,#03060a,#0a1315,#03060a)}
 .mission-inner{display:grid;grid-template-columns:76px 1fr;gap:22px;align-items:center;padding-block:22px}
-.mission-mark{width:72px;height:72px;border-radius:50%;object-fit:cover;object-position:left center}
+.mission-mark{width:72px;height:72px;border-radius:50%;object-fit:contain}
 .mission-inner p{font-size:clamp(1rem,2vw,1.25rem);margin:0}
 .mission-inner strong{color:var(--smf-teal)}
 
@@ -85,15 +85,16 @@ h1 span,h2 span{color:var(--smf-teal)}
 .contact-card strong{font-family:var(--smf-font-display);font-size:1.5rem;text-transform:uppercase;color:var(--smf-teal)}
 .contact-card a:hover{color:var(--smf-teal)}
 
+/* Footer */
 .site-footer{border-top:1px solid #182328;background:#010305;padding:22px 0}
 .footer-inner{display:flex;align-items:center;justify-content:space-between;gap:24px}
-.footer-inner img{width:240px;height:76px;object-fit:cover;object-position:center}
+.footer-inner img{width:240px;height:76px;object-fit:contain;object-position:center}
 .footer-inner p{font-size:.84rem;color:var(--smf-muted);margin:0}
 
 /* Tablet */
 @media (max-width:980px){
   .menu-toggle{display:block}
-  .site-nav{position:absolute;top:76px;left:0;right:0;display:none;flex-direction:column;align-items:stretch;padding:22px;background:#03060a;border-bottom:1px solid rgba(7,158,143,.35)}
+  .site-nav{position:absolute;top:80px;left:0;right:0;display:none;flex-direction:column;align-items:stretch;padding:22px;background:#03060a;border-bottom:1px solid rgba(7,158,143,.35)}
   .site-nav.open{display:flex}
   .site-nav a{padding:10px 4px}
   .nav-cta{text-align:center}
@@ -113,35 +114,38 @@ h1 span,h2 span{color:var(--smf-teal)}
   }
 
   .header-inner{
-    min-height:72px;
+    min-height:80px;
     width:calc(100% - 18px);
-    gap:6px;
+    gap:8px;
   }
 
   .brand{
-    width:285px;
-    height:66px;
+    width:305px;
+    max-width:calc(100% - 58px);
+    height:74px;
+    overflow:visible;
   }
 
   .brand img{
     width:100%;
     height:100%;
-    object-fit:cover;
-    object-position:center;
-    transform:scale(1.08);
+    object-fit:contain;
+    object-position:left center;
+    transform:none;
   }
 
   .menu-toggle{
-    width:44px;
-    height:44px;
+    width:46px;
+    height:46px;
     padding:8px;
     margin-left:auto;
     margin-right:0;
+    flex:0 0 auto;
   }
 
   .site-nav{
-    top:72px;
-    max-height:calc(100vh - 72px);
+    top:80px;
+    max-height:calc(100vh - 80px);
     overflow:auto;
   }
 
@@ -175,7 +179,7 @@ h1 span,h2 span{color:var(--smf-teal)}
   .card-body{padding:20px}
   .card-body h3{font-size:1.6rem}
 
-  #yoshi{padding-top:52px;padding-bottom:58px}
+  #yoshi{padding-top:38px;padding-bottom:58px}
   #yoshi .split{gap:30px}
   #yoshi .split-media{height:340px;border:1px solid rgba(7,158,143,.35)}
   #yoshi .split-media img{width:100%;height:100%;max-height:none;border:0;object-fit:cover;object-position:center 24%}
@@ -193,7 +197,12 @@ h1 span,h2 span{color:var(--smf-teal)}
 
   .site-footer{padding:18px 0 24px}
   .footer-inner{flex-direction:column;text-align:center;gap:10px}
-  .footer-inner img{width:190px;height:58px;object-fit:cover;object-position:center}
+  .footer-inner img{
+    width:230px;
+    height:72px;
+    object-fit:contain;
+    object-position:center;
+  }
   .footer-inner p{font-size:.78rem}
 }
 

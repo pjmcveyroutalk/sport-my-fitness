@@ -85,6 +85,369 @@
     href="styles.css"
   >
 
+
+  <style>
+
+    /* ========================================
+       STANDARD MOBILE NAV
+    ======================================== */
+
+    @media(max-width:980px){
+
+      .site-nav{
+        position:fixed !important;
+
+        top:82px !important;
+        left:0 !important;
+        right:0 !important;
+        bottom:0 !important;
+
+        width:100% !important;
+
+        height:
+          calc(100dvh - 82px);
+
+        z-index:999 !important;
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+        gap:4px !important;
+
+        padding:
+          22px 22px 34px !important;
+
+        overflow-y:auto;
+
+        border:0 !important;
+
+        border-radius:0 !important;
+
+        background:
+          linear-gradient(
+            180deg,
+            #020609 0%,
+            #020609 72%,
+            #031011 100%
+          ) !important;
+
+        box-shadow:none !important;
+      }
+
+
+      .site-nav:not(.open){
+        display:none !important;
+      }
+
+
+      .site-nav.open{
+        display:flex !important;
+      }
+
+
+      .site-nav a{
+        display:flex;
+
+        align-items:center;
+
+        min-height:54px !important;
+
+        padding:
+          10px 12px !important;
+
+        border:0 !important;
+
+        border-radius:10px;
+
+        background:
+          transparent !important;
+
+        color:#fff;
+
+        font-size:1rem;
+
+        text-align:left !important;
+      }
+
+
+      .site-nav a:hover,
+      .site-nav a:focus{
+        color:
+          var(--smf-teal);
+
+        background:
+          rgba(7,158,143,.05) !important;
+      }
+
+
+      .site-nav .nav-cta,
+      .site-nav a[href="book.html"],
+      .site-nav a[href="./book.html"]{
+        display:none !important;
+      }
+
+    }
+
+
+    /* ========================================
+       STANDARD FOOTER
+    ======================================== */
+
+    .site-footer .footer-brand-column{
+      align-self:start;
+    }
+
+
+    .site-footer .footer-brand{
+      margin-bottom:0;
+    }
+
+
+    .site-footer .footer-contact a{
+      overflow-wrap:anywhere;
+
+      word-break:break-word;
+    }
+
+
+    /* ========================================
+       SOCIAL / BUSINESS ROW
+    ======================================== */
+
+    .footer-social{
+      width:
+        min(
+          1160px,
+          calc(100% - 34px)
+        );
+
+      margin:
+        0 auto;
+
+      padding:
+        4px 0 30px;
+    }
+
+
+    .footer-social-divider{
+      width:100%;
+
+      height:1px;
+
+      margin-bottom:26px;
+
+      background:
+        linear-gradient(
+          90deg,
+          transparent,
+          rgba(18,202,187,.25),
+          transparent
+        );
+    }
+
+
+    .footer-social-title{
+      margin:
+        0 0 18px;
+
+      color:#fff;
+
+      font-family:
+        "Rajdhani",
+        sans-serif;
+
+      font-size:1rem;
+
+      font-weight:700;
+
+      letter-spacing:.08em;
+
+      text-align:center;
+
+      text-transform:uppercase;
+    }
+
+
+    .footer-social-links{
+      display:flex;
+
+      align-items:flex-start;
+
+      justify-content:center;
+
+      flex-wrap:wrap;
+
+      gap:18px;
+    }
+
+
+    .footer-social-link{
+      width:72px;
+
+      display:flex;
+
+      flex-direction:column;
+
+      align-items:center;
+
+      gap:8px;
+
+      color:#cbd4d6;
+
+      text-align:center;
+
+      text-decoration:none;
+    }
+
+
+    .footer-social-link:hover,
+    .footer-social-link:focus{
+      color:#fff;
+    }
+
+
+    .footer-social-icon{
+      width:46px;
+
+      height:46px;
+
+      display:grid;
+
+      place-items:center;
+
+      border:
+        1px solid rgba(18,202,187,.34);
+
+      border-radius:13px;
+
+      background:
+        rgba(3,10,12,.78);
+
+      transition:
+        transform .2s ease,
+        border-color .2s ease,
+        box-shadow .2s ease;
+    }
+
+
+    .footer-social-link:hover .footer-social-icon,
+    .footer-social-link:focus .footer-social-icon{
+      transform:
+        translateY(-2px);
+
+      border-color:
+        rgba(18,202,187,.78);
+
+      box-shadow:
+        0 0 18px rgba(18,202,187,.13);
+    }
+
+
+    .footer-social-icon img{
+      width:25px;
+
+      height:25px;
+
+      display:block;
+
+      object-fit:contain;
+    }
+
+
+    .footer-social-label{
+      font-family:
+        "Montserrat",
+        sans-serif;
+
+      font-size:.68rem;
+
+      line-height:1.2;
+    }
+
+
+    /* ========================================
+       MOBILE
+    ======================================== */
+
+    @media(max-width:760px){
+
+      .site-nav{
+        top:85px !important;
+
+        height:
+          calc(100dvh - 85px);
+
+        padding:
+          18px 20px 34px !important;
+      }
+
+
+      .site-nav a{
+        min-height:55px !important;
+
+        padding:
+          9px 12px !important;
+
+        font-size:.95rem;
+      }
+
+
+      .footer-main{
+        padding-top:40px;
+      }
+
+
+      .footer-brand{
+        margin-bottom:0;
+      }
+
+
+      .footer-social{
+        padding-bottom:24px;
+      }
+
+
+      .footer-social-divider{
+        margin-bottom:22px;
+      }
+
+
+      .footer-social-links{
+        gap:
+          14px 12px;
+      }
+
+
+      .footer-social-link{
+        width:52px;
+      }
+
+
+      .footer-social-icon{
+        width:42px;
+
+        height:42px;
+
+        border-radius:12px;
+      }
+
+
+      .footer-social-icon img{
+        width:23px;
+
+        height:23px;
+      }
+
+
+      .footer-social-label{
+        display:none;
+      }
+
+    }
+
+  </style>
+
 </head>
 
 
@@ -97,7 +460,6 @@
   >
     Skip to content
   </a>
-
 
 
   <!-- ========================================
@@ -154,27 +516,24 @@
           Programs
         </a>
 
+
         <a href="index.html#yoshi">
           About Yoshi
         </a>
+
 
         <a href="media.html">
           Media
         </a>
 
+
         <a href="training-options.html">
           Training Options
         </a>
 
-        <a href="#footer-contact">
-          Contact
-        </a>
 
-        <a
-          class="nav-cta"
-          href="book.html"
-        >
-          Book a Session
+        <a href="#contact">
+          Contact Yoshi
         </a>
 
       </nav>
@@ -182,7 +541,6 @@
     </div>
 
   </header>
-
 
 
   <main id="main">
@@ -229,7 +587,6 @@
     </section>
 
 
-
     <!-- ========================================
          CHOOSE YOUR PATH
     ======================================== -->
@@ -264,11 +621,8 @@
         </div>
 
 
-
         <div class="training-preview-grid">
 
-
-          <!-- 01 PERSONAL TRAINING -->
 
           <a
             class="training-preview-card"
@@ -280,17 +634,14 @@
               01
             </span>
 
-
             <h3>
               Personal Training
             </h3>
-
 
             <p>
               Focused one-on-one coaching centered around
               your individual goals and progress.
             </p>
-
 
             <span class="training-preview-link">
               Ask About Personal Training →
@@ -298,9 +649,6 @@
 
           </a>
 
-
-
-          <!-- 02 SEMI-PRIVATE -->
 
           <a
             class="training-preview-card"
@@ -312,17 +660,14 @@
               02
             </span>
 
-
             <h3>
               Semi-Private
             </h3>
-
 
             <p>
               Smaller shared training with coaching,
               accountability and support.
             </p>
-
 
             <span class="training-preview-link">
               Ask About Semi-Private →
@@ -330,9 +675,6 @@
 
           </a>
 
-
-
-          <!-- 03 GROUP -->
 
           <a
             class="training-preview-card"
@@ -344,17 +686,14 @@
               03
             </span>
 
-
             <h3>
               Group &amp; Specialty
             </h3>
-
 
             <p>
               Group fitness and specialty sessions for
               different ways to stay active.
             </p>
-
 
             <span class="training-preview-link">
               Ask About Group Training →
@@ -362,9 +701,6 @@
 
           </a>
 
-
-
-          <!-- 04 ONLINE -->
 
           <a
             class="training-preview-card"
@@ -376,17 +712,14 @@
               04
             </span>
 
-
             <h3>
               Online Coaching
             </h3>
-
 
             <p>
               Stay connected to coaching when location
               or schedule calls for a remote option.
             </p>
-
 
             <span class="training-preview-link">
               Ask About Online Coaching →
@@ -394,9 +727,6 @@
 
           </a>
 
-
-
-          <!-- 05 YOUTH -->
 
           <a
             class="training-preview-card"
@@ -408,17 +738,14 @@
               05
             </span>
 
-
             <h3>
               Youth Fitness
             </h3>
-
 
             <p>
               Youth-focused fitness designed around
               movement, confidence and healthy habits.
             </p>
-
 
             <span class="training-preview-link">
               Ask About Youth Fitness →
@@ -426,9 +753,6 @@
 
           </a>
 
-
-
-          <!-- 06 R&B STRETCHING -->
 
           <a
             class="training-preview-card"
@@ -440,17 +764,14 @@
               06
             </span>
 
-
             <h3>
               R&amp;B Stretching
             </h3>
-
 
             <p>
               Dedicated stretching and mobility work
               in a focused Sport My Fitness session.
             </p>
-
 
             <span class="training-preview-link">
               Ask About Stretching →
@@ -458,9 +779,6 @@
 
           </a>
 
-
-
-          <!-- 07 PACKAGES -->
 
           <a
             class="training-preview-card"
@@ -472,17 +790,14 @@
               07
             </span>
 
-
             <h3>
               Training Packages
             </h3>
-
 
             <p>
               Ask about available package options when you
               want a more consistent training plan.
             </p>
-
 
             <span class="training-preview-link">
               Ask About Packages →
@@ -492,7 +807,6 @@
 
 
         </div>
-
 
 
         <div class="section-action">
@@ -506,14 +820,14 @@
 
         </div>
 
+
       </div>
 
     </section>
 
 
-
     <!-- ========================================
-         NOT SURE YET / INQUIRY
+         INQUIRY
     ======================================== -->
 
     <section
@@ -571,7 +885,6 @@
         </div>
 
 
-
         <form
           class="contact-form"
           action="mailto:Yoshi_barnes@outlook.com"
@@ -585,11 +898,9 @@
 
             <div class="form-field">
 
-
               <label for="booking-name">
                 Name
               </label>
-
 
               <input
                 id="booking-name"
@@ -599,18 +910,14 @@
                 required
               >
 
-
             </div>
-
 
 
             <div class="form-field">
 
-
               <label for="booking-email">
                 Email
               </label>
-
 
               <input
                 id="booking-email"
@@ -620,21 +927,20 @@
                 required
               >
 
-
             </div>
-
 
 
             <div class="form-field">
 
-
               <label for="booking-phone">
+
                 Phone
+
                 <span>
                   Optional
                 </span>
-              </label>
 
+              </label>
 
               <input
                 id="booking-phone"
@@ -643,13 +949,10 @@
                 autocomplete="tel"
               >
 
-
             </div>
 
 
-
             <div class="form-field">
-
 
               <label for="booking-interest">
                 Interested In
@@ -662,46 +965,37 @@
                 required
               >
 
-
                 <option value="Not sure yet">
                   Not sure yet
                 </option>
-
 
                 <option value="Personal Training">
                   Personal Training
                 </option>
 
-
                 <option value="Semi-Private Training">
                   Semi-Private Training
                 </option>
-
 
                 <option value="Group Training">
                   Group Training
                 </option>
 
-
                 <option value="Online Coaching">
                   Online Coaching
                 </option>
-
 
                 <option value="Youth Fitness">
                   Youth Fitness
                 </option>
 
-
                 <option value="Training Packages">
                   Training Packages
                 </option>
 
-
                 <option value="R&B Stretching">
                   R&amp;B Stretching
                 </option>
-
 
               </select>
 
@@ -712,14 +1006,13 @@
           </div>
 
 
-
-          <div class="form-field form-field-message">
-
+          <div
+            class="form-field form-field-message"
+          >
 
             <label for="booking-message">
               Tell Yoshi About Your Goals
             </label>
-
 
             <textarea
               id="booking-message"
@@ -728,13 +1021,10 @@
               required
             ></textarea>
 
-
           </div>
 
 
-
           <div class="contact-form-action">
-
 
             <button
               class="btn btn-primary"
@@ -743,9 +1033,7 @@
               Send Inquiry
             </button>
 
-
           </div>
-
 
 
           <p class="form-note">
@@ -765,9 +1053,8 @@
   </main>
 
 
-
   <!-- ========================================
-       STRUCTURED FOOTER
+       STANDARDIZED FOOTER
   ======================================== -->
 
   <footer class="site-footer">
@@ -782,27 +1069,18 @@
         <a
           href="index.html"
           class="footer-brand"
+          aria-label="Sport My Fitness home"
         >
-
 
           <img
             src="brand/sportmyfitness-logo-header.png"
             alt="Sport My Fitness"
           >
 
-
         </a>
 
 
-        <p class="footer-mission">
-          Empowering the body.<br>
-          Strengthening the mind.<br>
-          Changing lives.
-        </p>
-
-
       </div>
-
 
 
       <div class="footer-column">
@@ -841,7 +1119,6 @@
       </div>
 
 
-
       <div class="footer-column">
 
 
@@ -861,12 +1138,11 @@
 
 
         <a href="#contact">
-          Contact
+          Message Yoshi
         </a>
 
 
       </div>
-
 
 
       <div
@@ -902,6 +1178,149 @@
     </div>
 
 
+    <!-- ========================================
+         SOCIAL / BUSINESS LINKS
+    ======================================== -->
+
+    <div class="footer-social">
+
+
+      <div class="footer-social-divider"></div>
+
+
+      <p class="footer-social-title">
+        Follow Sport My Fitness
+      </p>
+
+
+      <div class="footer-social-links">
+
+
+        <a
+          class="footer-social-link"
+          href="https://www.facebook.com/share/1BisC7LXXg/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Sport My Fitness on Facebook"
+        >
+
+          <span class="footer-social-icon">
+
+            <img
+              src="https://cdn.simpleicons.org/facebook/1877F2"
+              alt=""
+            >
+
+          </span>
+
+          <span class="footer-social-label">
+            Facebook
+          </span>
+
+        </a>
+
+
+        <a
+          class="footer-social-link"
+          href="https://www.instagram.com/sportmyfitness.mke"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Sport My Fitness on Instagram"
+        >
+
+          <span class="footer-social-icon">
+
+            <img
+              src="https://cdn.simpleicons.org/instagram/E4405F"
+              alt=""
+            >
+
+          </span>
+
+          <span class="footer-social-label">
+            Instagram
+          </span>
+
+        </a>
+
+
+        <a
+          class="footer-social-link"
+          href="https://www.tiktok.com/@yoshibarnes"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Yoshi Barnes on TikTok"
+        >
+
+          <span class="footer-social-icon">
+
+            <img
+              src="https://cdn.simpleicons.org/tiktok/FFFFFF"
+              alt=""
+            >
+
+          </span>
+
+          <span class="footer-social-label">
+            TikTok
+          </span>
+
+        </a>
+
+
+        <a
+          class="footer-social-link"
+          href="https://www.linkedin.com/in/yoshi-%E2%80%9Cmyosha%E2%80%9D-barnes-64851776"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Yoshi Barnes on LinkedIn"
+        >
+
+          <span class="footer-social-icon">
+
+            <img
+              src="https://cdn.simpleicons.org/linkedin/0A66C2"
+              alt=""
+            >
+
+          </span>
+
+          <span class="footer-social-label">
+            LinkedIn
+          </span>
+
+        </a>
+
+
+        <a
+          class="footer-social-link"
+          href="https://www.google.com/maps/search/?api=1&query=Sport+My+Fitness+4722+W+Vliet+St+Milwaukee+WI+53208"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Sport My Fitness on Google Maps"
+        >
+
+          <span class="footer-social-icon">
+
+            <img
+              src="https://cdn.simpleicons.org/googlemaps/4285F4"
+              alt=""
+            >
+
+          </span>
+
+          <span class="footer-social-label">
+            Google
+          </span>
+
+        </a>
+
+
+      </div>
+
+
+    </div>
+
 
     <div class="container footer-bottom">
 
@@ -914,21 +1333,17 @@
 
       <div class="footer-legal">
 
-
         <span>
           Terms of Use
         </span>
-
 
         <span aria-hidden="true">
           |
         </span>
 
-
         <span>
           Privacy Policy
         </span>
-
 
       </div>
 

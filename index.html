@@ -38,9 +38,7 @@
 
   <style>
 
-    /* ========================================
-       HOMEPAGE-ONLY MENU FIX
-    ======================================== */
+    /* HOMEPAGE MOBILE MENU */
 
     @media(max-width:980px){
 
@@ -57,24 +55,17 @@
         border-radius:10px;
       }
 
-      .site-nav .nav-cta{
-        justify-content:center;
-        min-height:48px;
-        margin-top:5px;
-      }
-
     }
 
 
-    /* ========================================
-       MISSION
-    ======================================== */
+    /* MISSION */
 
     .smf-mission-v2{
       position:relative;
       overflow:hidden;
       border-top:1px solid rgba(7,158,143,.34);
       border-bottom:1px solid rgba(7,158,143,.24);
+
       background:
         radial-gradient(circle at 4% 48%,rgba(7,158,143,.20),transparent 35%),
         radial-gradient(circle at 96% 85%,rgba(7,158,143,.12),transparent 34%),
@@ -89,6 +80,7 @@
       left:0;
       width:5px;
       border-radius:0 999px 999px 0;
+
       background:
         linear-gradient(
           180deg,
@@ -97,6 +89,7 @@
           #079e8f 82%,
           transparent
         );
+
       box-shadow:0 0 24px rgba(7,158,143,.6);
     }
 
@@ -125,6 +118,7 @@
       height:4px;
       margin:16px auto 0;
       border-radius:999px;
+
       background:
         linear-gradient(
           90deg,
@@ -184,9 +178,7 @@
     }
 
 
-    /* ========================================
-       SINGLE HOMEPAGE PREVIEWS
-    ======================================== */
+    /* SINGLE HOMEPAGE PREVIEWS */
 
     .home-feature-card{
       width:min(720px,100%);
@@ -207,13 +199,12 @@
     }
 
 
-    /* ========================================
-       COLLAPSIBLE CONTACT
-    ======================================== */
+    /* COLLAPSIBLE CONTACT */
 
     .home-contact{
       padding:64px 0;
       border-top:1px solid rgba(7,158,143,.18);
+
       background:
         radial-gradient(circle at 15% 15%,rgba(7,158,143,.08),transparent 34%),
         linear-gradient(180deg,#040b0d,#020608);
@@ -241,6 +232,7 @@
       overflow:hidden;
       border:1px solid rgba(18,202,187,.20);
       border-radius:22px;
+
       background:
         linear-gradient(
           145deg,
@@ -293,10 +285,6 @@
     }
 
 
-    /* ========================================
-       MOBILE HOME
-    ======================================== */
-
     @media(max-width:760px){
 
       .site-nav{
@@ -311,11 +299,6 @@
         min-height:42px;
         padding:7px 10px;
         font-size:.9rem;
-      }
-
-      .site-nav .nav-cta{
-        min-height:46px;
-        margin-top:4px;
       }
 
       .smf-mission-v2-inner{
@@ -400,8 +383,6 @@
   </a>
 
 
-  <!-- HEADER -->
-
   <header class="site-header" id="top">
 
     <div class="header-inner">
@@ -456,15 +437,8 @@
           Training Options
         </a>
 
-        <a href="#footer-contact">
-          Contact
-        </a>
-
-        <a
-          class="nav-cta"
-          href="book.html"
-        >
-          Book a Session
+        <a href="#contact">
+          Contact Yoshi
         </a>
 
       </nav>
@@ -577,7 +551,7 @@
 
 
 
-    <!-- PROGRAMS PREVIEW -->
+    <!-- PROGRAMS -->
 
     <section
       class="section"
@@ -667,7 +641,6 @@
 
         <div class="split">
 
-
           <div class="split-media">
 
             <img
@@ -728,7 +701,7 @@
 
 
 
-    <!-- MEDIA PREVIEW -->
+    <!-- MEDIA -->
 
     <section
       class="section media-section"
@@ -736,7 +709,6 @@
     >
 
       <div class="container">
-
 
         <div class="section-heading">
 
@@ -823,7 +795,7 @@
 
 
 
-    <!-- TRAINING OPTIONS PREVIEW -->
+    <!-- TRAINING OPTIONS -->
 
     <section
       class="section section-dark"
@@ -831,7 +803,6 @@
     >
 
       <div class="container">
-
 
         <div class="section-heading">
 
@@ -932,7 +903,6 @@
 
       <div class="home-contact-inner">
 
-
         <p class="section-title">
           Have a Question?
         </p>
@@ -954,7 +924,6 @@
             Send Yoshi a Message
           </summary>
 
-
           <div class="contact-dropdown-body">
 
             <form
@@ -965,7 +934,6 @@
             >
 
               <div class="form-grid">
-
 
                 <div class="form-field">
 
@@ -1126,8 +1094,6 @@
 
 
 
-  <!-- FOOTER -->
-
   <footer class="site-footer">
 
     <div class="container footer-main">
@@ -1139,10 +1105,12 @@
           href="#top"
           class="footer-brand"
         >
+
           <img
             src="brand/sportmyfitness-logo-header.png"
             alt="Sport My Fitness"
           >
+
         </a>
 
         <p class="footer-mission">
@@ -1262,4 +1230,5 @@
   <script src="script.js"></script>
 
 </body>
+
 </html>

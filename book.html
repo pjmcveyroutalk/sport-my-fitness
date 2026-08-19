@@ -191,36 +191,34 @@
 
 
     /* ========================================
-       STANDARD FOOTER
+       COMPACT WATERMARK FOOTER
     ======================================== */
 
-    .site-footer .footer-brand-column{
-      align-self:start;
+    .site-footer{
+      position:relative;
+
+      overflow:hidden;
+
+      border-top:
+        1px solid rgba(18,202,187,.28);
+
+      background:
+        radial-gradient(
+          circle at 50% 38%,
+          rgba(7,158,143,.06),
+          transparent 45%
+        ),
+        linear-gradient(
+          180deg,
+          #020709,
+          #010405
+        );
     }
 
 
-    .site-footer .footer-brand{
-      margin-bottom:0;
-    }
+    .footer-watermark-area{
+      position:relative;
 
-
-    .site-footer .footer-contact a{
-      overflow-wrap:normal;
-
-      word-break:normal;
-    }
-
-
-    .footer-email{
-      white-space:nowrap;
-    }
-
-
-    /* ========================================
-       SOCIAL / BUSINESS ROW
-    ======================================== */
-
-    .footer-social{
       width:
         min(
           1160px,
@@ -231,32 +229,270 @@
         0 auto;
 
       padding:
-        4px 0 30px;
+        48px 0 36px;
+
+      isolation:isolate;
+    }
+
+
+    .footer-watermark-area::before{
+      content:"";
+
+      position:absolute;
+
+      top:50%;
+      left:50%;
+
+      width:
+        clamp(
+          520px,
+          58vw,
+          760px
+        );
+
+      aspect-ratio:1;
+
+      transform:
+        translate(
+          -50%,
+          -50%
+        );
+
+      z-index:0;
+
+      pointer-events:none;
+
+      background:
+        url("brand/sportmyfitness-icon-1024.png")
+        center /
+        contain
+        no-repeat;
+
+      opacity:.075;
+
+      filter:
+        saturate(.75)
+        brightness(.82);
+    }
+
+
+    .footer-information{
+      position:relative;
+
+      z-index:2;
+
+      display:grid;
+
+      grid-template-columns:
+        1.35fr 1fr 1.35fr;
+
+      gap:32px;
+
+      align-items:start;
+    }
+
+
+    .footer-group{
+      min-width:0;
+    }
+
+
+    .footer-group-title{
+      display:flex;
+
+      align-items:center;
+
+      gap:9px;
+
+      margin:
+        0 0 14px;
+
+      color:#12cabb;
+
+      font-family:
+        "Rajdhani",
+        sans-serif;
+
+      font-size:
+        clamp(
+          1.15rem,
+          2vw,
+          1.45rem
+        );
+
+      font-weight:700;
+
+      letter-spacing:.09em;
+
+      text-transform:uppercase;
+    }
+
+
+    .footer-group-icon{
+      width:22px;
+      height:22px;
+
+      flex:0 0 auto;
+
+      color:#12cabb;
+    }
+
+
+    .footer-inline-links{
+      display:flex;
+
+      flex-wrap:wrap;
+
+      align-items:center;
+
+      gap:
+        8px 0;
+    }
+
+
+    .footer-inline-links a{
+      color:#d5dbdc;
+
+      font-family:
+        "Montserrat",
+        sans-serif;
+
+      font-size:.94rem;
+
+      text-decoration:none;
+
+      white-space:nowrap;
+    }
+
+
+    .footer-inline-links a:hover,
+    .footer-inline-links a:focus{
+      color:#fff;
+    }
+
+
+    .footer-inline-links a:not(:last-child)::after{
+      content:"";
+
+      display:inline-block;
+
+      width:1px;
+      height:1em;
+
+      margin:
+        0 11px;
+
+      vertical-align:-.12em;
+
+      background:
+        rgba(18,202,187,.72);
+    }
+
+
+    .footer-contact-lines{
+      display:flex;
+
+      flex-direction:column;
+
+      gap:11px;
+    }
+
+
+    .footer-contact-item{
+      display:flex;
+
+      align-items:flex-start;
+
+      gap:10px;
+
+      color:#d5dbdc;
+
+      font-family:
+        "Montserrat",
+        sans-serif;
+
+      font-size:.92rem;
+
+      line-height:1.45;
+    }
+
+
+    .footer-contact-item svg{
+      width:19px;
+      height:19px;
+
+      flex:0 0 auto;
+
+      margin-top:1px;
+
+      color:#12cabb;
+    }
+
+
+    .footer-contact-item a{
+      color:inherit;
+
+      text-decoration:none;
+    }
+
+
+    .footer-contact-item a:hover,
+    .footer-contact-item a:focus{
+      color:#fff;
+    }
+
+
+    /* ========================================
+       SOCIAL ROW
+    ======================================== */
+
+    .footer-social{
+      position:relative;
+
+      z-index:3;
+
+      width:
+        min(
+          1160px,
+          calc(100% - 34px)
+        );
+
+      margin:
+        0 auto;
+
+      padding:
+        0 0 26px;
     }
 
 
     .footer-social-divider{
       width:100%;
-
       height:1px;
 
-      margin-bottom:26px;
+      margin-bottom:22px;
 
       background:
         linear-gradient(
           90deg,
           transparent,
-          rgba(18,202,187,.25),
+          rgba(18,202,187,.35),
+          #12cabb,
+          rgba(18,202,187,.35),
           transparent
         );
+
+      box-shadow:
+        0 0 8px rgba(18,202,187,.12);
     }
 
 
     .footer-social-title{
       margin:
-        0 0 18px;
+        0 0 17px;
 
       color:#fff;
+
+      text-align:center;
 
       font-family:
         "Rajdhani",
@@ -266,9 +502,7 @@
 
       font-weight:700;
 
-      letter-spacing:.08em;
-
-      text-align:center;
+      letter-spacing:.14em;
 
       text-transform:uppercase;
     }
@@ -277,44 +511,31 @@
     .footer-social-links{
       display:flex;
 
-      align-items:flex-start;
+      align-items:center;
 
       justify-content:center;
 
       flex-wrap:wrap;
 
-      gap:18px;
+      gap:16px;
     }
 
 
     .footer-social-link{
-      width:72px;
-
       display:flex;
 
       flex-direction:column;
 
       align-items:center;
 
-      gap:8px;
-
       color:#cbd4d6;
-
-      text-align:center;
 
       text-decoration:none;
     }
 
 
-    .footer-social-link:hover,
-    .footer-social-link:focus{
-      color:#fff;
-    }
-
-
     .footer-social-icon{
       width:46px;
-
       height:46px;
 
       display:grid;
@@ -322,12 +543,12 @@
       place-items:center;
 
       border:
-        1px solid rgba(18,202,187,.34);
+        1px solid rgba(18,202,187,.42);
 
       border-radius:13px;
 
       background:
-        rgba(3,10,12,.78);
+        rgba(3,10,12,.84);
 
       transition:
         transform .2s ease,
@@ -342,16 +563,15 @@
         translateY(-2px);
 
       border-color:
-        rgba(18,202,187,.78);
+        rgba(18,202,187,.82);
 
       box-shadow:
-        0 0 18px rgba(18,202,187,.13);
+        0 0 18px rgba(18,202,187,.14);
     }
 
 
     .footer-social-icon svg{
       width:25px;
-
       height:25px;
 
       display:block;
@@ -359,13 +579,7 @@
 
 
     .footer-social-label{
-      font-family:
-        "Montserrat",
-        sans-serif;
-
-      font-size:.68rem;
-
-      line-height:1.2;
+      display:none;
     }
 
 
@@ -380,7 +594,7 @@
 
 
     .tiktok-icon{
-      color:#ffffff;
+      color:#fff;
     }
 
 
@@ -391,6 +605,55 @@
 
     .google-icon{
       color:#4285f4;
+    }
+
+
+    .site-footer .footer-bottom{
+      position:relative;
+
+      z-index:3;
+    }
+
+
+    /* ========================================
+       TABLET
+    ======================================== */
+
+    @media(
+      min-width:761px
+    ) and (
+      max-width:980px
+    ){
+
+      .footer-watermark-area{
+        padding:
+          42px 0 34px;
+      }
+
+
+      .footer-watermark-area::before{
+        width:
+          min(
+            760px,
+            82vw
+          );
+      }
+
+
+      .footer-information{
+        grid-template-columns:
+          1.2fr 1fr;
+
+        gap:
+          28px 40px;
+      }
+
+
+      .footer-contact-group{
+        grid-column:
+          1 / -1;
+      }
+
     }
 
 
@@ -421,63 +684,143 @@
       }
 
 
-      .footer-main{
-        padding-top:40px;
+      .footer-watermark-area{
+        width:
+          calc(100% - 38px);
+
+        padding:
+          34px 0 28px;
       }
 
 
-      .footer-brand{
-        margin-bottom:0;
+      .footer-watermark-area::before{
+        top:50%;
+
+        width:
+          min(
+            122vw,
+            680px
+          );
+
+        opacity:.072;
       }
 
 
-      .footer-contact{
-        width:100%;
+      .footer-information{
+        display:flex;
+
+        flex-direction:column;
+
+        gap:23px;
       }
 
 
-      .footer-email{
-        display:inline-block;
-
-        max-width:100%;
-
-        white-space:normal;
-
-        overflow-wrap:anywhere;
+      .footer-group-title{
+        margin-bottom:10px;
 
         font-size:
           clamp(
-            .86rem,
-            4vw,
-            1rem
+            1.05rem,
+            5vw,
+            1.25rem
           );
       }
 
 
+      .footer-group-icon{
+        width:20px;
+        height:20px;
+      }
+
+
+      .footer-inline-links{
+        gap:
+          7px 0;
+      }
+
+
+      .footer-inline-links a{
+        font-size:
+          clamp(
+            .76rem,
+            3.5vw,
+            .9rem
+          );
+      }
+
+
+      .footer-inline-links a:not(:last-child)::after{
+        margin:
+          0 8px;
+      }
+
+
+      .footer-contact-lines{
+        gap:9px;
+      }
+
+
+      .footer-contact-item{
+        gap:9px;
+
+        font-size:
+          clamp(
+            .76rem,
+            3.5vw,
+            .9rem
+          );
+      }
+
+
+      .footer-contact-item svg{
+        width:18px;
+        height:18px;
+      }
+
+
       .footer-social{
-        padding-bottom:24px;
+        width:
+          calc(100% - 34px);
+
+        padding-bottom:22px;
       }
 
 
       .footer-social-divider{
-        margin-bottom:22px;
+        margin-bottom:19px;
+      }
+
+
+      .footer-social-title{
+        margin-bottom:15px;
+
+        font-size:.92rem;
       }
 
 
       .footer-social-links{
+        flex-wrap:nowrap;
+
         gap:
-          14px 12px;
+          clamp(
+            8px,
+            3vw,
+            13px
+          );
       }
 
 
       .footer-social-link{
-        width:52px;
+        width:
+          min(
+            52px,
+            16vw
+          );
       }
 
 
       .footer-social-icon{
         width:42px;
-
         height:42px;
 
         border-radius:12px;
@@ -486,13 +829,57 @@
 
       .footer-social-icon svg{
         width:23px;
-
         height:23px;
       }
 
+    }
 
-      .footer-social-label{
-        display:none;
+
+    @media(max-width:390px){
+
+      .footer-watermark-area{
+        width:
+          calc(100% - 30px);
+
+        padding:
+          30px 0 24px;
+      }
+
+
+      .footer-watermark-area::before{
+        width:132vw;
+      }
+
+
+      .footer-information{
+        gap:20px;
+      }
+
+
+      .footer-inline-links a{
+        font-size:.73rem;
+      }
+
+
+      .footer-inline-links a:not(:last-child)::after{
+        margin:
+          0 6px;
+      }
+
+
+      .footer-contact-item{
+        font-size:.75rem;
+      }
+
+
+      .footer-social-links{
+        gap:7px;
+      }
+
+
+      .footer-social-icon{
+        width:39px;
+        height:39px;
       }
 
     }
@@ -1105,125 +1492,197 @@
 
 
   <!-- ========================================
-       STANDARDIZED FOOTER
+       COMPACT WATERMARK FOOTER
   ======================================== -->
 
   <footer class="site-footer">
 
 
-    <div class="container footer-main">
+    <div class="footer-watermark-area">
 
 
-      <div class="footer-brand-column">
+      <div class="footer-information">
 
 
-        <a
-          href="index.html"
-          class="footer-brand"
-          aria-label="Sport My Fitness home"
-        >
-
-          <img
-            src="brand/sportmyfitness-logo-header.png"
-            alt="Sport My Fitness"
-          >
-
-        </a>
+        <section class="footer-group">
 
 
-      </div>
+          <h3 class="footer-group-title">
+
+            <svg
+              class="footer-group-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+              <path d="M10 13a5 5 0 0 0 7.07 0l2-2a5 5 0 0 0-7.07-7.07l-1.15 1.15"></path>
+              <path d="M14 11a5 5 0 0 0-7.07 0l-2 2A5 5 0 0 0 12 20.07l1.15-1.15"></path>
+            </svg>
+
+            Explore
+
+          </h3>
 
 
-      <div class="footer-column">
+          <div class="footer-inline-links">
+
+            <a href="index.html">
+              Home
+            </a>
+
+            <a href="programs.html">
+              Programs
+            </a>
+
+            <a href="training-options.html">
+              Training Options
+            </a>
+
+            <a href="media.html">
+              Media Gallery
+            </a>
+
+            <a href="book.html">
+              Book a Session
+            </a>
+
+          </div>
 
 
-        <h3>
-          Explore
-        </h3>
+        </section>
 
 
-        <a href="index.html">
-          Home
-        </a>
+        <section class="footer-group">
 
 
-        <a href="programs.html">
-          Programs
-        </a>
+          <h3 class="footer-group-title">
+
+            <svg
+              class="footer-group-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+              <circle cx="12" cy="8" r="4"></circle>
+              <path d="M4 21a8 8 0 0 1 16 0"></path>
+            </svg>
+
+            About
+
+          </h3>
 
 
-        <a href="training-options.html">
-          Training Options
-        </a>
+          <div class="footer-inline-links">
+
+            <a href="index.html#mission">
+              Our Mission
+            </a>
+
+            <a href="index.html#yoshi">
+              Meet Yoshi
+            </a>
+
+            <a href="#contact">
+              Message Yoshi
+            </a>
+
+          </div>
 
 
-        <a href="media.html">
-          Media Gallery
-        </a>
+        </section>
 
 
-        <a href="book.html">
-          Book a Session
-        </a>
+        <section class="footer-group footer-contact-group">
 
 
-      </div>
+          <h3 class="footer-group-title">
+
+            <svg
+              class="footer-group-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.63a2 2 0 0 1-.45 2.11L8 9.73a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.85.29 1.73.5 2.63.62A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+
+            Contact
+
+          </h3>
 
 
-      <div class="footer-column">
+          <div class="footer-contact-lines">
 
 
-        <h3>
-          About
-        </h3>
+            <div class="footer-contact-item">
+
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                aria-hidden="true"
+              >
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.63a2 2 0 0 1-.45 2.11L8 9.73a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.85.29 1.73.5 2.63.62A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+
+              <a href="tel:+14147914526">
+                414-791-4526
+              </a>
+
+            </div>
 
 
-        <a href="index.html#mission">
-          Our Mission
-        </a>
+            <div class="footer-contact-item">
+
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                aria-hidden="true"
+              >
+                <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                <path d="m3 7 9 6 9-6"></path>
+              </svg>
+
+              <a href="mailto:Yoshi_barnes@outlook.com">
+                Yoshi_barnes@outlook.com
+              </a>
+
+            </div>
 
 
-        <a href="index.html#yoshi">
-          Meet Yoshi
-        </a>
+            <div class="footer-contact-item">
+
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                aria-hidden="true"
+              >
+                <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0z"></path>
+                <circle cx="12" cy="10" r="2.5"></circle>
+              </svg>
+
+              <span>
+                4722 W Vliet St, Milwaukee, WI 53208
+              </span>
+
+            </div>
 
 
-        <a href="#contact">
-          Message Yoshi
-        </a>
+          </div>
 
 
-      </div>
-
-
-      <div
-        class="footer-column footer-contact"
-        id="footer-contact"
-      >
-
-
-        <h3>
-          Contact
-        </h3>
-
-
-        <a href="tel:+14147914526">
-          414-791-4526
-        </a>
-
-
-        <a
-          class="footer-email"
-          href="mailto:Yoshi_barnes@outlook.com"
-        >
-          Yoshi_barnes@outlook.com
-        </a>
-
-
-        <span>
-          4722 W Vliet St<br>
-          Milwaukee, WI 53208
-        </span>
+        </section>
 
 
       </div>
@@ -1233,7 +1692,7 @@
 
 
     <!-- ========================================
-         SOCIAL / BUSINESS LINKS
+         SOCIAL LINKS
     ======================================== -->
 
     <div class="footer-social">
@@ -1250,8 +1709,6 @@
       <div class="footer-social-links">
 
 
-        <!-- FACEBOOK -->
-
         <a
           class="footer-social-link"
           href="https://www.facebook.com/share/1BisC7LXXg/"
@@ -1262,10 +1719,7 @@
 
           <span class="footer-social-icon facebook-icon">
 
-            <svg
-              viewBox="0 0 24 24"
-              aria-hidden="true"
-            >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
 
               <circle
                 cx="12"
@@ -1283,14 +1737,8 @@
 
           </span>
 
-          <span class="footer-social-label">
-            Facebook
-          </span>
-
         </a>
 
-
-        <!-- INSTAGRAM -->
 
         <a
           class="footer-social-link"
@@ -1336,14 +1784,8 @@
 
           </span>
 
-          <span class="footer-social-label">
-            Instagram
-          </span>
-
         </a>
 
-
-        <!-- TIKTOK -->
 
         <a
           class="footer-social-link"
@@ -1369,14 +1811,8 @@
 
           </span>
 
-          <span class="footer-social-label">
-            TikTok
-          </span>
-
         </a>
 
-
-        <!-- LINKEDIN -->
 
         <a
           class="footer-social-link"
@@ -1388,34 +1824,11 @@
 
           <span class="footer-social-icon linkedin-icon">
 
-            <svg
-              viewBox="0 0 24 24"
-              aria-hidden="true"
-            >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
 
-              <rect
-                x="2"
-                y="2"
-                width="20"
-                height="20"
-                rx="3"
-                fill="currentColor"
-              ></rect>
-
-              <circle
-                cx="7"
-                cy="8"
-                r="1.5"
-                fill="#fff"
-              ></circle>
-
-              <rect
-                x="5.6"
-                y="10"
-                width="2.8"
-                height="8"
-                fill="#fff"
-              ></rect>
+              <rect x="2" y="2" width="20" height="20" rx="3" fill="currentColor"></rect>
+              <circle cx="7" cy="8" r="1.5" fill="#fff"></circle>
+              <rect x="5.6" y="10" width="2.8" height="8" fill="#fff"></rect>
 
               <path
                 d="M10.5 10h2.7v1.1c.7-.9 1.7-1.5 3.2-1.5 2.4 0 3.6 1.5 3.6 4.4v4h-2.9v-3.6c0-1.5-.5-2.4-1.7-2.4-1.4 0-2 1-2 2.7V18h-2.9v-8z"
@@ -1426,14 +1839,8 @@
 
           </span>
 
-          <span class="footer-social-label">
-            LinkedIn
-          </span>
-
         </a>
 
-
-        <!-- GOOGLE -->
 
         <a
           class="footer-social-link"
@@ -1445,17 +1852,9 @@
 
           <span class="footer-social-icon google-icon">
 
-            <svg
-              viewBox="0 0 24 24"
-              aria-hidden="true"
-            >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
 
-              <circle
-                cx="12"
-                cy="12"
-                r="10"
-                fill="#fff"
-              ></circle>
+              <circle cx="12" cy="12" r="10" fill="#fff"></circle>
 
               <path
                 d="M18.8 12.2c0-.5-.05-.96-.13-1.4H12v2.66h3.82a3.27 3.27 0 0 1-1.42 2.15v1.78h2.3c1.35-1.24 2.1-3.08 2.1-5.19z"
@@ -1481,10 +1880,6 @@
 
           </span>
 
-          <span class="footer-social-label">
-            Google
-          </span>
-
         </a>
 
 
@@ -1505,21 +1900,17 @@
 
       <div class="footer-legal">
 
-
         <span>
           Terms of Use
         </span>
-
 
         <span aria-hidden="true">
           |
         </span>
 
-
         <span>
           Privacy Policy
         </span>
-
 
       </div>
 

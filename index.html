@@ -101,32 +101,26 @@
 
       .site-nav{
         position:fixed !important;
-
         top:82px !important;
         left:0 !important;
         right:0 !important;
         bottom:0 !important;
 
         width:100% !important;
-
-        height:
-          calc(100dvh - 82px);
+        height:calc(100dvh - 82px);
 
         z-index:999 !important;
 
         flex-direction:column;
-
         align-items:stretch;
 
         gap:4px !important;
 
-        padding:
-          22px 22px 34px !important;
+        padding:22px 22px 34px !important;
 
         overflow-y:auto;
 
         border:0 !important;
-
         border-radius:0 !important;
 
         background:
@@ -158,15 +152,12 @@
 
         min-height:54px !important;
 
-        padding:
-          10px 12px !important;
+        padding:10px 12px !important;
 
         border:0 !important;
-
         border-radius:10px;
 
-        background:
-          transparent !important;
+        background:transparent !important;
 
         color:#fff;
 
@@ -178,8 +169,7 @@
 
       .site-nav a:hover,
       .site-nav a:focus{
-        color:
-          var(--smf-teal);
+        color:var(--smf-teal);
 
         background:
           rgba(7,158,143,.05) !important;
@@ -267,14 +257,12 @@
 
       margin:auto;
 
-      padding:
-        38px 0 34px;
+      padding:38px 0 34px;
     }
 
 
     .smf-mission-v2-title{
-      margin:
-        0 auto 28px;
+      margin:0 auto 28px;
 
       color:#079e8f;
 
@@ -309,8 +297,7 @@
       width:86px;
       height:4px;
 
-      margin:
-        16px auto 0;
+      margin:16px auto 0;
 
       border-radius:999px;
 
@@ -338,8 +325,7 @@
           minmax(0,1fr)
         );
 
-      margin:
-        0 auto 24px;
+      margin:0 auto 24px;
 
       padding:0;
 
@@ -356,8 +342,7 @@
 
       gap:10px;
 
-      padding:
-        4px 20px;
+      padding:4px 20px;
 
       color:#fff;
 
@@ -443,8 +428,7 @@
 
       min-height:0;
 
-      margin:
-        0 auto;
+      margin:0 auto;
     }
 
 
@@ -465,8 +449,7 @@
           100%
         );
 
-      margin:
-        0 auto;
+      margin:0 auto;
     }
 
 
@@ -482,8 +465,7 @@
     ========================================== */
 
     .home-contact{
-      padding:
-        64px 0;
+      padding:64px 0;
 
       border-top:
         1px solid rgba(7,158,143,.18);
@@ -530,8 +512,7 @@
     .home-contact-copy{
       max-width:620px;
 
-      margin:
-        0 auto 28px;
+      margin:0 auto 28px;
 
       color:#cbd4d6;
     }
@@ -567,8 +548,7 @@
 
       gap:18px;
 
-      padding:
-        16px 22px;
+      padding:16px 22px;
 
       color:#fff;
 
@@ -608,8 +588,7 @@
 
 
     .contact-dropdown-body{
-      padding:
-        6px 22px 24px;
+      padding:6px 22px 24px;
 
       border-top:
         1px solid rgba(18,202,187,.12);
@@ -617,8 +596,7 @@
 
 
     .home-contact .contact-form{
-      padding:
-        22px 0 0;
+      padding:22px 0 0;
 
       border:0;
 
@@ -631,16 +609,145 @@
 
 
     /* =========================================
-       FOOTER
+       FOOTER — APPROVED WATERMARK DESIGN
     ========================================== */
 
-    .site-footer .footer-brand-column{
-      align-self:start;
+    .site-footer{
+      position:relative;
+
+      overflow:hidden;
+
+      border-top:
+        1px solid rgba(18,202,187,.26);
+
+      background:
+        radial-gradient(
+          circle at 50% 28%,
+          rgba(0,188,174,.055),
+          transparent 38%
+        ),
+        linear-gradient(
+          180deg,
+          #020709 0%,
+          #010405 100%
+        );
     }
 
 
-    .site-footer .footer-brand{
-      margin-bottom:0;
+    .site-footer .footer-main{
+      position:relative;
+
+      width:
+        min(
+          1160px,
+          calc(100% - 40px)
+        );
+
+      display:grid;
+
+      grid-template-columns:
+        repeat(
+          3,
+          minmax(0,1fr)
+        );
+
+      gap:
+        34px 70px;
+
+      margin:0 auto;
+
+      padding:
+        66px 0 58px;
+
+      isolation:isolate;
+    }
+
+
+    /* Symbol-only Sport My Fitness watermark */
+
+    .site-footer .footer-main::before{
+      content:"";
+
+      position:absolute;
+
+      top:18px;
+      left:50%;
+
+      width:
+        clamp(
+          390px,
+          45vw,
+          610px
+        );
+
+      aspect-ratio:1;
+
+      transform:
+        translateX(-50%);
+
+      z-index:0;
+
+      pointer-events:none;
+
+      background:
+        url("brand/sportmyfitness-icon-1024.png")
+        center
+        center /
+        contain
+        no-repeat;
+
+      opacity:.085;
+
+      filter:
+        saturate(.82)
+        brightness(.92);
+
+      mix-blend-mode:screen;
+    }
+
+
+    .site-footer .footer-main > *{
+      position:relative;
+
+      z-index:1;
+    }
+
+
+    .site-footer .footer-column{
+      min-width:0;
+    }
+
+
+    .site-footer .footer-column h3{
+      margin:
+        0 0 22px;
+
+      color:#12cabb;
+
+      font-family:
+        "Rajdhani",
+        sans-serif;
+
+      font-size:
+        clamp(
+          1.2rem,
+          2vw,
+          1.55rem
+        );
+
+      font-weight:700;
+
+      letter-spacing:.08em;
+
+      text-transform:uppercase;
+    }
+
+
+    .site-footer .footer-column a,
+    .site-footer .footer-column span{
+      position:relative;
+
+      z-index:2;
     }
 
 
@@ -661,17 +768,19 @@
     ========================================== */
 
     .footer-social{
+      position:relative;
+
+      z-index:2;
+
       width:
         min(
           1160px,
           calc(100% - 34px)
         );
 
-      margin:
-        0 auto;
+      margin:0 auto;
 
-      padding:
-        4px 0 30px;
+      padding:0 0 30px;
     }
 
 
@@ -686,15 +795,19 @@
         linear-gradient(
           90deg,
           transparent,
-          rgba(18,202,187,.25),
+          rgba(18,202,187,.42),
+          #12cabb,
+          rgba(18,202,187,.42),
           transparent
         );
+
+      box-shadow:
+        0 0 9px rgba(18,202,187,.13);
     }
 
 
     .footer-social-title{
-      margin:
-        0 0 18px;
+      margin:0 0 18px;
 
       color:#fff;
 
@@ -706,7 +819,7 @@
 
       font-weight:700;
 
-      letter-spacing:.08em;
+      letter-spacing:.14em;
 
       text-align:center;
 
@@ -754,7 +867,6 @@
 
     .footer-social-icon{
       width:46px;
-
       height:46px;
 
       display:grid;
@@ -762,12 +874,15 @@
       place-items:center;
 
       border:
-        1px solid rgba(18,202,187,.34);
+        1px solid rgba(18,202,187,.42);
 
       border-radius:13px;
 
       background:
-        rgba(3,10,12,.78);
+        rgba(3,10,12,.84);
+
+      box-shadow:
+        inset 0 0 12px rgba(18,202,187,.025);
 
       transition:
         transform .2s ease,
@@ -782,16 +897,15 @@
         translateY(-2px);
 
       border-color:
-        rgba(18,202,187,.78);
+        rgba(18,202,187,.82);
 
       box-shadow:
-        0 0 18px rgba(18,202,187,.13);
+        0 0 18px rgba(18,202,187,.14);
     }
 
 
     .footer-social-icon svg{
       width:25px;
-
       height:25px;
 
       display:block;
@@ -831,6 +945,61 @@
 
     .google-icon{
       color:#4285f4;
+    }
+
+
+    .site-footer .footer-bottom{
+      position:relative;
+
+      z-index:2;
+    }
+
+
+    /* =========================================
+       TABLET FOOTER TRANSLATION
+    ========================================== */
+
+    @media(
+      min-width:761px
+    ) and (
+      max-width:980px
+    ){
+
+      .site-footer .footer-main{
+        grid-template-columns:
+          repeat(
+            2,
+            minmax(0,1fr)
+          );
+
+        gap:
+          42px 60px;
+
+        padding:
+          58px 0 50px;
+      }
+
+
+      .site-footer .footer-contact{
+        grid-column:
+          1 / -1;
+
+        max-width:520px;
+      }
+
+
+      .site-footer .footer-main::before{
+        top:55px;
+
+        width:
+          min(
+            560px,
+            74vw
+          );
+
+        opacity:.075;
+      }
+
     }
 
 
@@ -879,7 +1048,6 @@
 
       .smf-mission-v2-title::after{
         width:48px;
-
         height:2px;
 
         margin-top:9px;
@@ -908,7 +1076,6 @@
 
       .smf-mission-v2-points li::before{
         width:8px;
-
         height:8px;
       }
 
@@ -965,18 +1132,66 @@
       }
 
 
-      .footer-main{
-        padding-top:40px;
+      /* Approved mobile footer composition */
+
+      .site-footer .footer-main{
+        width:
+          calc(100% - 44px);
+
+        grid-template-columns:
+          repeat(
+            2,
+            minmax(0,1fr)
+          );
+
+        gap:
+          40px 32px;
+
+        padding:
+          54px 0 42px;
       }
 
 
-      .footer-brand{
-        margin-bottom:0;
+      .site-footer .footer-main::before{
+        top:88px;
+        left:50%;
+
+        width:
+          min(
+            108vw,
+            610px
+          );
+
+        transform:
+          translateX(-50%);
+
+        opacity:.09;
+
+        filter:
+          saturate(.78)
+          brightness(.86);
       }
 
 
-      .footer-contact{
+      .site-footer .footer-column h3{
+        margin-bottom:18px;
+
+        font-size:
+          clamp(
+            1.15rem,
+            5vw,
+            1.4rem
+          );
+      }
+
+
+      .site-footer .footer-contact{
+        grid-column:
+          1 / -1;
+
         width:100%;
+
+        padding-top:8px;
       }
 
 
@@ -1009,19 +1224,24 @@
 
 
       .footer-social-links{
+        flex-wrap:nowrap;
+
         gap:
           14px 12px;
       }
 
 
       .footer-social-link{
-        width:52px;
+        width:
+          min(
+            52px,
+            15vw
+          );
       }
 
 
       .footer-social-icon{
         width:42px;
-
         height:42px;
 
         border-radius:12px;
@@ -1030,13 +1250,54 @@
 
       .footer-social-icon svg{
         width:23px;
-
         height:23px;
       }
 
 
       .footer-social-label{
         display:none;
+      }
+
+    }
+
+
+    /* =========================================
+       VERY SMALL MOBILE
+    ========================================== */
+
+    @media(max-width:390px){
+
+      .site-footer .footer-main{
+        width:
+          calc(100% - 34px);
+
+        gap:
+          34px 18px;
+      }
+
+
+      .site-footer .footer-main::before{
+        top:96px;
+
+        width:118vw;
+
+        opacity:.075;
+      }
+
+
+      .footer-social-links{
+        gap:8px;
+      }
+
+
+      .footer-social-link{
+        width:48px;
+      }
+
+
+      .footer-social-icon{
+        width:39px;
+        height:39px;
       }
 
     }
@@ -1066,7 +1327,6 @@
     id="top"
   >
 
-
     <div class="header-inner">
 
 
@@ -1076,12 +1336,10 @@
         aria-label="Sport My Fitness home"
       >
 
-
         <img
           src="brand/sportmyfitness-logo-header.png"
           alt="Sport My Fitness"
         >
-
 
       </a>
 
@@ -1093,7 +1351,6 @@
         aria-controls="site-nav"
       >
 
-
         <span></span>
         <span></span>
         <span></span>
@@ -1103,7 +1360,6 @@
           Open menu
         </span>
 
-
       </button>
 
 
@@ -1112,7 +1368,6 @@
         id="site-nav"
         aria-label="Primary"
       >
-
 
         <a href="./programs.html">
           Programs
@@ -1138,12 +1393,9 @@
           Contact Yoshi
         </a>
 
-
       </nav>
 
-
     </div>
-
 
   </header>
 
@@ -1238,7 +1490,6 @@
       id="mission"
     >
 
-
       <div class="smf-mission-v2-inner">
 
 
@@ -1279,7 +1530,6 @@
 
       </div>
 
-
     </section>
 
 
@@ -1291,7 +1541,6 @@
       class="section"
       id="programs"
     >
-
 
       <div class="container">
 
@@ -1365,7 +1614,6 @@
 
       </div>
 
-
     </section>
 
 
@@ -1377,7 +1625,6 @@
       class="section section-dark"
       id="yoshi"
     >
-
 
       <div class="container">
 
@@ -1462,7 +1709,6 @@
 
       </div>
 
-
     </section>
 
 
@@ -1474,7 +1720,6 @@
       class="section media-section"
       id="media"
     >
-
 
       <div class="container">
 
@@ -1566,7 +1811,6 @@
 
       </div>
 
-
     </section>
 
 
@@ -1578,7 +1822,6 @@
       class="section section-dark"
       id="training-options"
     >
-
 
       <div class="container">
 
@@ -1644,7 +1887,6 @@
 
       </div>
 
-
     </section>
 
 
@@ -1686,7 +1928,6 @@
 
       </div>
 
-
     </section>
 
 
@@ -1698,7 +1939,6 @@
       class="home-contact"
       id="contact"
     >
-
 
       <div class="home-contact-inner">
 
@@ -1937,7 +2177,6 @@
 
       </div>
 
-
     </section>
 
 
@@ -1945,35 +2184,13 @@
 
 
   <!-- =========================================
-       STANDARDIZED FOOTER
+       WATERMARK FOOTER
   ========================================== -->
 
   <footer class="site-footer">
 
 
     <div class="container footer-main">
-
-
-      <div class="footer-brand-column">
-
-
-        <a
-          href="./index.html"
-          class="footer-brand"
-          aria-label="Sport My Fitness home"
-        >
-
-
-          <img
-            src="brand/sportmyfitness-logo-header.png"
-            alt="Sport My Fitness"
-          >
-
-
-        </a>
-
-
-      </div>
 
 
       <div class="footer-column">

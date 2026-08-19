@@ -1,1 +1,610 @@
+/*
+ * ==========================================================
+ * SPORT MY FITNESS — MASTER SITE THEME
+ * ==========================================================
+ *
+ * ONE SOURCE OF TRUTH FOR:
+ * - Site background
+ * - Shared section backgrounds
+ * - Dark/light visual rhythm
+ * - Subpage backgrounds
+ * - Background transitions
+ * - Shared surface atmosphere
+ *
+ * PAGE-SPECIFIC layout stays in styles.css / page HTML.
+ *
+ * IMPORTANT:
+ * Change the variables below and every connected page
+ * inherits the change automatically.
+ * ==========================================================
+ */
 
+
+/* ==========================================================
+   MASTER COLOR / BACKGROUND CONTROLS
+   ========================================================== */
+
+:root{
+
+  /* Base site surfaces */
+
+  --smf-bg-base:
+    #020507;
+
+  --smf-bg-deep:
+    #010405;
+
+  --smf-bg-dark:
+    #03070a;
+
+  --smf-bg-mid:
+    #050a0d;
+
+  --smf-bg-lift:
+    #071012;
+
+
+  /* Accent atmosphere */
+
+  --smf-theme-teal:
+    7,158,143;
+
+  --smf-theme-teal-bright:
+    18,202,187;
+
+
+  /* Global glow strengths */
+
+  --smf-glow-soft:
+    .035;
+
+  --smf-glow-medium:
+    .055;
+
+  --smf-glow-strong:
+    .08;
+
+
+  /* Shared borders */
+
+  --smf-theme-border:
+    rgba(
+      var(--smf-theme-teal-bright),
+      .16
+    );
+
+}
+
+
+/* ==========================================================
+   MASTER PAGE CANVAS
+   ========================================================== */
+
+html{
+  background:
+    var(--smf-bg-base);
+}
+
+
+body{
+  min-height:100vh;
+
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(
+        var(--smf-theme-teal),
+        .045
+      ),
+      transparent 34%
+    ),
+    linear-gradient(
+      180deg,
+      var(--smf-bg-mid) 0%,
+      var(--smf-bg-base) 34%,
+      var(--smf-bg-dark) 70%,
+      var(--smf-bg-deep) 100%
+    );
+
+  background-attachment:
+    fixed;
+}
+
+
+/* ==========================================================
+   MAIN CONTENT CANVAS
+   ========================================================== */
+
+main{
+  position:relative;
+
+  isolation:isolate;
+
+  background:
+    transparent;
+}
+
+
+/*
+ * Extremely subtle fixed atmosphere.
+ *
+ * This keeps the different pages feeling connected
+ * without putting a distracting pattern behind content.
+ */
+
+main::before{
+  content:"";
+
+  position:fixed;
+
+  inset:0;
+
+  z-index:-2;
+
+  pointer-events:none;
+
+  background:
+    radial-gradient(
+      circle at 8% 18%,
+      rgba(
+        var(--smf-theme-teal),
+        .045
+      ),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 92% 48%,
+      rgba(
+        var(--smf-theme-teal),
+        .035
+      ),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 32% 82%,
+      rgba(
+        var(--smf-theme-teal-bright),
+        .018
+      ),
+      transparent 32%
+    );
+}
+
+
+/* ==========================================================
+   MASTER STANDARD SECTION
+   ========================================================== */
+
+.section{
+  position:relative;
+
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(
+        var(--smf-theme-teal),
+        var(--smf-glow-soft)
+      ),
+      transparent 34%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(5,10,13,.97),
+      rgba(4,8,11,.97)
+    );
+}
+
+
+/*
+ * Gentle blend between adjoining sections.
+ */
+
+.section::before{
+  content:"";
+
+  position:absolute;
+
+  top:0;
+  left:0;
+  right:0;
+
+  height:1px;
+
+  pointer-events:none;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(
+        var(--smf-theme-teal-bright),
+        .10
+      ),
+      transparent
+    );
+}
+
+
+/* ==========================================================
+   MASTER DARK SECTION
+   ========================================================== */
+
+.section-dark{
+  background:
+    radial-gradient(
+      circle at 50% 100%,
+      rgba(
+        var(--smf-theme-teal),
+        var(--smf-glow-soft)
+      ),
+      transparent 32%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(2,5,7,.985),
+      rgba(3,7,10,.985)
+    );
+}
+
+
+/* ==========================================================
+   MEDIA SURFACE
+   ========================================================== */
+
+.media-section{
+  background:
+    radial-gradient(
+      circle at 82% 18%,
+      rgba(
+        var(--smf-theme-teal),
+        .052
+      ),
+      transparent 34%
+    ),
+    radial-gradient(
+      circle at 12% 88%,
+      rgba(
+        var(--smf-theme-teal),
+        .028
+      ),
+      transparent 32%
+    ),
+    linear-gradient(
+      180deg,
+      #041012,
+      #03070a
+    );
+}
+
+
+/* ==========================================================
+   SUBPAGE HERO
+   ========================================================== */
+
+.options-hero{
+  position:relative;
+
+  overflow:hidden;
+
+  background:
+    radial-gradient(
+      circle at 50% 8%,
+      rgba(
+        var(--smf-theme-teal),
+        .075
+      ),
+      transparent 37%
+    ),
+    radial-gradient(
+      circle at 8% 82%,
+      rgba(
+        var(--smf-theme-teal),
+        .035
+      ),
+      transparent 30%
+    ),
+    linear-gradient(
+      180deg,
+      #020507 0%,
+      #041012 58%,
+      #050c0f 100%
+    );
+}
+
+
+.options-hero::after{
+  content:"";
+
+  position:absolute;
+
+  left:0;
+  right:0;
+  bottom:0;
+
+  height:1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(
+        var(--smf-theme-teal-bright),
+        .25
+      ),
+      transparent
+    );
+}
+
+
+/* ==========================================================
+   SUBPAGE CONTENT AREA
+   ========================================================== */
+
+.options-section{
+  position:relative;
+
+  background:
+    radial-gradient(
+      circle at 90% 18%,
+      rgba(
+        var(--smf-theme-teal),
+        .04
+      ),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 10% 72%,
+      rgba(
+        var(--smf-theme-teal),
+        .025
+      ),
+      transparent 30%
+    ),
+    linear-gradient(
+      180deg,
+      #050a0d,
+      #03080a
+    );
+}
+
+
+/* ==========================================================
+   CONTACT AREAS
+   ========================================================== */
+
+.home-contact,
+.training-contact,
+.contact-section{
+  position:relative;
+
+  background:
+    radial-gradient(
+      circle at 14% 16%,
+      rgba(
+        var(--smf-theme-teal),
+        .065
+      ),
+      transparent 34%
+    ),
+    radial-gradient(
+      circle at 88% 84%,
+      rgba(
+        var(--smf-theme-teal),
+        .028
+      ),
+      transparent 28%
+    ),
+    linear-gradient(
+      180deg,
+      #040b0d,
+      #020608
+    );
+
+  border-top:
+    1px solid
+    rgba(
+      var(--smf-theme-teal-bright),
+      .13
+    );
+}
+
+
+/* ==========================================================
+   FINAL CTA / TRANSITION AREA
+   ========================================================== */
+
+.final-cta{
+  position:relative;
+
+  background:
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(
+        var(--smf-theme-teal),
+        .075
+      ),
+      transparent 42%
+    ),
+    linear-gradient(
+      180deg,
+      #020709,
+      #041012,
+      #020709
+    );
+}
+
+
+/* ==========================================================
+   MISSION SECTION
+   ========================================================== */
+
+.smf-mission-v2{
+  background:
+    radial-gradient(
+      circle at 4% 48%,
+      rgba(
+        var(--smf-theme-teal),
+        .18
+      ),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 96% 85%,
+      rgba(
+        var(--smf-theme-teal),
+        .10
+      ),
+      transparent 34%
+    ),
+    linear-gradient(
+      135deg,
+      #041214,
+      #061719 46%,
+      #020709
+    );
+}
+
+
+/* ==========================================================
+   MASTER CARD SURFACE
+   ========================================================== */
+
+.training-preview-card,
+.program-card,
+.option-card,
+.contact-dropdown,
+.contact-form{
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(
+        var(--smf-theme-teal),
+        .035
+      ),
+      transparent 38%
+    ),
+    linear-gradient(
+      145deg,
+      rgba(9,19,21,.96),
+      rgba(3,6,8,.985)
+    );
+}
+
+
+/* ==========================================================
+   MASTER FOOTER ATMOSPHERE
+   ========================================================== */
+
+.site-footer{
+  position:relative;
+
+  background:
+    radial-gradient(
+      circle at 50% 38%,
+      rgba(
+        var(--smf-theme-teal),
+        .055
+      ),
+      transparent 44%
+    ),
+    linear-gradient(
+      180deg,
+      #020709,
+      #010405
+    );
+
+  border-top:
+    1px solid
+    rgba(
+      var(--smf-theme-teal-bright),
+      .24
+    );
+}
+
+
+/* ==========================================================
+   HEADER
+   ========================================================== */
+
+.site-header{
+  background:
+    rgba(
+      2,
+      5,
+      7,
+      .97
+    );
+
+  border-bottom:
+    1px solid
+    rgba(
+      var(--smf-theme-teal),
+      .28
+    );
+
+  backdrop-filter:
+    blur(12px);
+
+  -webkit-backdrop-filter:
+    blur(12px);
+}
+
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media(max-width:980px){
+
+  /*
+   * Mobile keeps exactly the same master palette.
+   * Only background attachment changes for performance
+   * and mobile-browser compatibility.
+   */
+
+  body{
+    background-attachment:
+      scroll;
+  }
+
+
+  main::before{
+    position:absolute;
+  }
+
+
+  .site-nav{
+    background:
+      radial-gradient(
+        circle at 50% 100%,
+        rgba(
+          var(--smf-theme-teal),
+          .055
+        ),
+        transparent 32%
+      ),
+      linear-gradient(
+        180deg,
+        #020609 0%,
+        #020609 72%,
+        #031011 100%
+      ) !important;
+  }
+
+}
+
+
+/* ==========================================================
+   ACCESSIBILITY
+   ========================================================== */
+
+@media(
+  prefers-reduced-motion:
+  reduce
+){
+
+  html{
+    scroll-behavior:auto;
+  }
+
+}

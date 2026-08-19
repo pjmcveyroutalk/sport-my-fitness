@@ -90,6 +90,12 @@
     href="styles.css"
   >
 
+  <!-- MASTER BACKGROUND / VISUAL THEME -->
+  <link
+    rel="stylesheet"
+    href="site-theme.css"
+  >
+
 
   <style>
 
@@ -105,24 +111,24 @@
         left:0 !important;
         right:0 !important;
         bottom:0 !important;
+
         width:100% !important;
         height:calc(100dvh - 82px);
+
         z-index:999 !important;
+
         flex-direction:column;
         align-items:stretch;
+
         gap:4px !important;
-        padding:22px 22px 34px !important;
+
+        padding:
+          22px 22px 34px !important;
+
         overflow-y:auto;
+
         border:0 !important;
         border-radius:0 !important;
-
-        background:
-          linear-gradient(
-            180deg,
-            #020609 0%,
-            #020609 72%,
-            #031011 100%
-          ) !important;
 
         box-shadow:none !important;
       }
@@ -141,21 +147,33 @@
       .site-nav a{
         display:flex;
         align-items:center;
+
         min-height:54px !important;
-        padding:10px 12px !important;
+
+        padding:
+          10px 12px !important;
+
         border:0 !important;
         border-radius:10px;
-        background:transparent !important;
+
+        background:
+          transparent !important;
+
         color:#fff;
+
         font-size:1rem;
+
         text-align:left !important;
       }
 
 
       .site-nav a:hover,
       .site-nav a:focus{
-        color:var(--smf-teal);
-        background:rgba(7,158,143,.05) !important;
+        color:
+          var(--smf-teal);
+
+        background:
+          rgba(7,158,143,.05) !important;
       }
 
 
@@ -169,11 +187,13 @@
 
 
     /* =========================================
-       MISSION
+       MISSION — STRUCTURE ONLY
+       Background now comes from site-theme.css
     ========================================== */
 
     .smf-mission-v2{
       position:relative;
+
       overflow:hidden;
 
       border-top:
@@ -181,35 +201,22 @@
 
       border-bottom:
         1px solid rgba(7,158,143,.24);
-
-      background:
-        radial-gradient(
-          circle at 4% 48%,
-          rgba(7,158,143,.20),
-          transparent 35%
-        ),
-        radial-gradient(
-          circle at 96% 85%,
-          rgba(7,158,143,.12),
-          transparent 34%
-        ),
-        linear-gradient(
-          135deg,
-          #041214,
-          #061719 46%,
-          #020709
-        );
     }
 
 
     .smf-mission-v2::before{
       content:"";
+
       position:absolute;
+
       top:7%;
       bottom:7%;
       left:0;
+
       width:5px;
-      border-radius:0 999px 999px 0;
+
+      border-radius:
+        0 999px 999px 0;
 
       background:
         linear-gradient(
@@ -226,19 +233,25 @@
 
 
     .smf-mission-v2-inner{
-      width:min(
-        1160px,
-        calc(100% - 32px)
-      );
+      width:
+        min(
+          1160px,
+          calc(100% - 32px)
+        );
 
       margin:auto;
-      padding:38px 0 34px;
+
+      padding:
+        38px 0 34px;
     }
 
 
     .smf-mission-v2-title{
-      margin:0 auto 28px;
+      margin:
+        0 auto 28px;
+
       color:#079e8f;
+
       text-align:center;
 
       font-family:
@@ -253,18 +266,26 @@
         );
 
       font-weight:700;
+
       line-height:1;
+
       letter-spacing:.12em;
+
       text-transform:uppercase;
     }
 
 
     .smf-mission-v2-title::after{
       content:"";
+
       display:block;
+
       width:86px;
       height:4px;
-      margin:16px auto 0;
+
+      margin:
+        16px auto 0;
+
       border-radius:999px;
 
       background:
@@ -281,6 +302,7 @@
     .smf-mission-v2-points{
       width:100%;
       max-width:900px;
+
       display:grid;
 
       grid-template-columns:
@@ -289,18 +311,27 @@
           minmax(0,1fr)
         );
 
-      margin:0 auto 24px;
+      margin:
+        0 auto 24px;
+
       padding:0;
+
       list-style:none;
     }
 
 
     .smf-mission-v2-points li{
       display:flex;
+
       align-items:flex-start;
+
       justify-content:center;
+
       gap:10px;
-      padding:4px 20px;
+
+      padding:
+        4px 20px;
+
       color:#fff;
 
       font-family:
@@ -315,7 +346,9 @@
         );
 
       font-weight:700;
+
       line-height:1.15;
+
       text-transform:uppercase;
     }
 
@@ -328,23 +361,31 @@
 
     .smf-mission-v2-points li::before{
       content:"";
+
       width:11px;
       height:11px;
+
       flex:0 0 auto;
+
       margin-top:.12em;
+
       border-radius:50%;
+
       background:#12cabb;
     }
 
 
     .smf-mission-v2-statement{
-      width:min(
-        760px,
-        90%
-      );
+      width:
+        min(
+          760px,
+          90%
+        );
 
       margin:auto;
+
       color:#f0f3f3;
+
       text-align:center;
 
       font-family:
@@ -367,13 +408,16 @@
     ========================================== */
 
     .home-feature-card{
-      width:min(
-        720px,
-        100%
-      );
+      width:
+        min(
+          720px,
+          100%
+        );
 
       min-height:0;
-      margin:0 auto;
+
+      margin:
+        0 auto;
     }
 
 
@@ -388,52 +432,44 @@
 
 
     .home-media-preview{
-      width:min(
-        720px,
-        100%
-      );
+      width:
+        min(
+          720px,
+          100%
+        );
 
-      margin:0 auto;
+      margin:
+        0 auto;
     }
 
 
     .home-media-preview .media-card{
       min-height:360px;
+
       cursor:default;
     }
 
 
     /* =========================================
-       CONTACT
+       CONTACT — STRUCTURE ONLY
+       Background now comes from site-theme.css
     ========================================== */
 
     .home-contact{
-      padding:64px 0;
-
-      border-top:
-        1px solid rgba(7,158,143,.18);
-
-      background:
-        radial-gradient(
-          circle at 15% 15%,
-          rgba(7,158,143,.08),
-          transparent 34%
-        ),
-        linear-gradient(
-          180deg,
-          #040b0d,
-          #020608
-        );
+      padding:
+        64px 0;
     }
 
 
     .home-contact-inner{
-      width:min(
-        760px,
-        calc(100% - 34px)
-      );
+      width:
+        min(
+          760px,
+          calc(100% - 34px)
+        );
 
       margin:auto;
+
       text-align:center;
     }
 
@@ -452,36 +488,40 @@
 
     .home-contact-copy{
       max-width:620px;
-      margin:0 auto 28px;
+
+      margin:
+        0 auto 28px;
+
       color:#cbd4d6;
     }
 
 
     .contact-dropdown{
       width:100%;
+
       overflow:hidden;
 
       border:
         1px solid rgba(18,202,187,.20);
 
       border-radius:22px;
-
-      background:
-        linear-gradient(
-          145deg,
-          rgba(8,21,23,.84),
-          rgba(2,7,9,.96)
-        );
     }
 
 
     .contact-dropdown summary{
       min-height:64px;
+
       display:flex;
+
       align-items:center;
+
       justify-content:space-between;
+
       gap:18px;
-      padding:16px 22px;
+
+      padding:
+        16px 22px;
+
       color:#fff;
 
       font-family:
@@ -489,9 +529,13 @@
         sans-serif;
 
       font-weight:700;
+
       letter-spacing:.06em;
+
       text-transform:uppercase;
+
       cursor:pointer;
+
       list-style:none;
     }
 
@@ -503,7 +547,9 @@
 
     .contact-dropdown summary::after{
       content:"+";
+
       color:#12cabb;
+
       font-size:1.65rem;
     }
 
@@ -514,7 +560,8 @@
 
 
     .contact-dropdown-body{
-      padding:6px 22px 24px;
+      padding:
+        6px 22px 24px;
 
       border-top:
         1px solid rgba(18,202,187,.12);
@@ -522,56 +569,55 @@
 
 
     .home-contact .contact-form{
-      padding:22px 0 0;
+      padding:
+        22px 0 0;
+
       border:0;
+
       background:none;
+
       box-shadow:none;
+
       text-align:left;
     }
 
 
     /* =========================================
        COMPACT WATERMARK FOOTER
+       Background now comes from site-theme.css
     ========================================== */
 
     .site-footer{
       position:relative;
+
       overflow:hidden;
-
-      border-top:
-        1px solid rgba(18,202,187,.28);
-
-      background:
-        radial-gradient(
-          circle at 50% 38%,
-          rgba(7,158,143,.06),
-          transparent 45%
-        ),
-        linear-gradient(
-          180deg,
-          #020709,
-          #010405
-        );
     }
 
 
     .footer-watermark-area{
       position:relative;
 
-      width:min(
-        1160px,
-        calc(100% - 34px)
-      );
+      width:
+        min(
+          1160px,
+          calc(100% - 34px)
+        );
 
-      margin:0 auto;
-      padding:48px 0 36px;
+      margin:
+        0 auto;
+
+      padding:
+        48px 0 36px;
+
       isolation:isolate;
     }
 
 
     .footer-watermark-area::before{
       content:"";
+
       position:absolute;
+
       top:50%;
       left:50%;
 
@@ -591,6 +637,7 @@
         );
 
       z-index:0;
+
       pointer-events:none;
 
       background:
@@ -609,13 +656,16 @@
 
     .footer-information{
       position:relative;
+
       z-index:2;
+
       display:grid;
 
       grid-template-columns:
         1.35fr 1fr 1.35fr;
 
       gap:32px;
+
       align-items:start;
     }
 
@@ -627,9 +677,14 @@
 
     .footer-group-title{
       display:flex;
+
       align-items:center;
+
       gap:9px;
-      margin:0 0 14px;
+
+      margin:
+        0 0 14px;
+
       color:#12cabb;
 
       font-family:
@@ -644,7 +699,9 @@
         );
 
       font-weight:700;
+
       letter-spacing:.09em;
+
       text-transform:uppercase;
     }
 
@@ -652,16 +709,22 @@
     .footer-group-icon{
       width:22px;
       height:22px;
+
       flex:0 0 auto;
+
       color:#12cabb;
     }
 
 
     .footer-inline-links{
       display:flex;
+
       flex-wrap:wrap;
+
       align-items:center;
-      gap:8px 0;
+
+      gap:
+        8px 0;
     }
 
 
@@ -673,7 +736,9 @@
         sans-serif;
 
       font-size:.94rem;
+
       text-decoration:none;
+
       white-space:nowrap;
     }
 
@@ -686,10 +751,15 @@
 
     .footer-inline-links a:not(:last-child)::after{
       content:"";
+
       display:inline-block;
+
       width:1px;
       height:1em;
-      margin:0 11px;
+
+      margin:
+        0 11px;
+
       vertical-align:-.12em;
 
       background:
@@ -699,15 +769,20 @@
 
     .footer-contact-lines{
       display:flex;
+
       flex-direction:column;
+
       gap:11px;
     }
 
 
     .footer-contact-item{
       display:flex;
+
       align-items:flex-start;
+
       gap:10px;
+
       color:#d5dbdc;
 
       font-family:
@@ -715,6 +790,7 @@
         sans-serif;
 
       font-size:.92rem;
+
       line-height:1.45;
     }
 
@@ -722,14 +798,18 @@
     .footer-contact-item svg{
       width:19px;
       height:19px;
+
       flex:0 0 auto;
+
       margin-top:1px;
+
       color:#12cabb;
     }
 
 
     .footer-contact-item a{
       color:inherit;
+
       text-decoration:none;
     }
 
@@ -746,21 +826,27 @@
 
     .footer-social{
       position:relative;
+
       z-index:3;
 
-      width:min(
-        1160px,
-        calc(100% - 34px)
-      );
+      width:
+        min(
+          1160px,
+          calc(100% - 34px)
+        );
 
-      margin:0 auto;
-      padding:0 0 26px;
+      margin:
+        0 auto;
+
+      padding:
+        0 0 26px;
     }
 
 
     .footer-social-divider{
       width:100%;
       height:1px;
+
       margin-bottom:22px;
 
       background:
@@ -779,8 +865,11 @@
 
 
     .footer-social-title{
-      margin:0 0 17px;
+      margin:
+        0 0 17px;
+
       color:#fff;
+
       text-align:center;
 
       font-family:
@@ -788,26 +877,37 @@
         sans-serif;
 
       font-size:1rem;
+
       font-weight:700;
+
       letter-spacing:.14em;
+
       text-transform:uppercase;
     }
 
 
     .footer-social-links{
       display:flex;
+
       align-items:center;
+
       justify-content:center;
+
       flex-wrap:wrap;
+
       gap:16px;
     }
 
 
     .footer-social-link{
       display:flex;
+
       flex-direction:column;
+
       align-items:center;
+
       color:#cbd4d6;
+
       text-decoration:none;
     }
 
@@ -815,7 +915,9 @@
     .footer-social-icon{
       width:46px;
       height:46px;
+
       display:grid;
+
       place-items:center;
 
       border:
@@ -835,7 +937,8 @@
 
     .footer-social-link:hover .footer-social-icon,
     .footer-social-link:focus .footer-social-icon{
-      transform:translateY(-2px);
+      transform:
+        translateY(-2px);
 
       border-color:
         rgba(18,202,187,.82);
@@ -848,6 +951,7 @@
     .footer-social-icon svg{
       width:25px;
       height:25px;
+
       display:block;
     }
 
@@ -884,6 +988,7 @@
 
     .site-footer .footer-bottom{
       position:relative;
+
       z-index:3;
     }
 
@@ -899,15 +1004,17 @@
     ){
 
       .footer-watermark-area{
-        padding:42px 0 34px;
+        padding:
+          42px 0 34px;
       }
 
 
       .footer-watermark-area::before{
-        width:min(
-          760px,
-          82vw
-        );
+        width:
+          min(
+            760px,
+            82vw
+          );
       }
 
 
@@ -915,12 +1022,14 @@
         grid-template-columns:
           1.2fr 1fr;
 
-        gap:28px 40px;
+        gap:
+          28px 40px;
       }
 
 
       .footer-contact-group{
-        grid-column:1 / -1;
+        grid-column:
+          1 / -1;
       }
 
     }
@@ -934,26 +1043,37 @@
 
       .site-nav{
         top:85px !important;
-        height:calc(100dvh - 85px);
-        padding:18px 20px 34px !important;
+
+        height:
+          calc(100dvh - 85px);
+
+        padding:
+          18px 20px 34px !important;
       }
 
 
       .site-nav a{
         min-height:55px !important;
-        padding:9px 12px !important;
+
+        padding:
+          9px 12px !important;
+
         font-size:.95rem;
       }
 
 
       .smf-mission-v2-inner{
-        width:calc(100% - 34px);
-        padding:26px 0 25px;
+        width:
+          calc(100% - 34px);
+
+        padding:
+          26px 0 25px;
       }
 
 
       .smf-mission-v2-title{
         margin-bottom:19px;
+
         font-size:1.45rem;
       }
 
@@ -961,6 +1081,7 @@
       .smf-mission-v2-title::after{
         width:48px;
         height:2px;
+
         margin-top:9px;
       }
 
@@ -972,7 +1093,9 @@
 
       .smf-mission-v2-points li{
         gap:7px;
-        padding:2px 8px;
+
+        padding:
+          2px 8px;
 
         font-size:
           clamp(
@@ -991,6 +1114,7 @@
 
       .smf-mission-v2-statement{
         width:92%;
+
         font-size:.76rem;
       }
 
@@ -1001,7 +1125,8 @@
 
 
       .home-contact{
-        padding:46px 0 48px;
+        padding:
+          46px 0 48px;
       }
 
 
@@ -1022,12 +1147,15 @@
 
       .contact-dropdown summary{
         min-height:58px;
-        padding:14px 18px;
+
+        padding:
+          14px 18px;
       }
 
 
       .contact-dropdown-body{
-        padding:4px 18px 20px;
+        padding:
+          4px 18px 20px;
       }
 
 
@@ -1037,18 +1165,22 @@
 
 
       .footer-watermark-area{
-        width:calc(100% - 38px);
-        padding:34px 0 28px;
+        width:
+          calc(100% - 38px);
+
+        padding:
+          34px 0 28px;
       }
 
 
       .footer-watermark-area::before{
         top:50%;
 
-        width:min(
-          122vw,
-          680px
-        );
+        width:
+          min(
+            122vw,
+            680px
+          );
 
         opacity:.072;
       }
@@ -1056,7 +1188,9 @@
 
       .footer-information{
         display:flex;
+
         flex-direction:column;
+
         gap:23px;
       }
 
@@ -1080,7 +1214,8 @@
 
 
       .footer-inline-links{
-        gap:7px 0;
+        gap:
+          7px 0;
       }
 
 
@@ -1095,7 +1230,8 @@
 
 
       .footer-inline-links a:not(:last-child)::after{
-        margin:0 8px;
+        margin:
+          0 8px;
       }
 
 
@@ -1123,7 +1259,9 @@
 
 
       .footer-social{
-        width:calc(100% - 34px);
+        width:
+          calc(100% - 34px);
+
         padding-bottom:22px;
       }
 
@@ -1135,6 +1273,7 @@
 
       .footer-social-title{
         margin-bottom:15px;
+
         font-size:.92rem;
       }
 
@@ -1152,16 +1291,18 @@
 
 
       .footer-social-link{
-        width:min(
-          52px,
-          16vw
-        );
+        width:
+          min(
+            52px,
+            16vw
+          );
       }
 
 
       .footer-social-icon{
         width:42px;
         height:42px;
+
         border-radius:12px;
       }
 
@@ -1181,8 +1322,11 @@
     @media(max-width:390px){
 
       .footer-watermark-area{
-        width:calc(100% - 30px);
-        padding:30px 0 24px;
+        width:
+          calc(100% - 30px);
+
+        padding:
+          30px 0 24px;
       }
 
 
@@ -1202,7 +1346,8 @@
 
 
       .footer-inline-links a:not(:last-child)::after{
-        margin:0 6px;
+        margin:
+          0 6px;
       }
 
 
@@ -1232,7 +1377,7 @@
 
 
   <!-- =========================================
-       MASTER HEADER INJECTION
+       MASTER HEADER
   ========================================== -->
 
   <div data-site-header></div>
@@ -2021,22 +2166,35 @@
 
 
   <!-- =========================================
-       MASTER FOOTER INJECTION
+       MASTER FOOTER
   ========================================== -->
 
   <div data-site-footer></div>
 
 
   <!--
-    IMPORTANT:
-    site-shell.js now owns:
-    - header markup
-    - footer markup
-    - hamburger behavior
+    MASTER ARCHITECTURE
+
+    site-shell.js:
+    - header
+    - navigation
+    - hamburger
+    - footer
+    - social links
+    - shared contact info
     - copyright year
 
-    script.js is intentionally NOT loaded
-    on this first migrated page.
+    site-theme.css:
+    - master backgrounds
+    - shared atmosphere
+    - section visual rhythm
+
+    styles.css:
+    - shared layout
+    - typography
+    - cards
+    - forms
+    - components
   -->
 
   <script src="site-shell.js"></script>

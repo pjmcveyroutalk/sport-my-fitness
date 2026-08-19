@@ -37,35 +37,116 @@
 
   <style>
 
-    /* =========================
-       NAV
-    ========================== */
+    /* =========================================
+       HOMEPAGE MOBILE NAV
+    ========================================== */
 
     @media(max-width:980px){
+
       .site-nav{
-        gap:4px;
-        padding:12px 14px 14px;
+        position:fixed !important;
+
+        top:82px !important;
+        left:0 !important;
+        right:0 !important;
+        bottom:0 !important;
+
+        width:100% !important;
+        height:calc(100dvh - 82px);
+
+        z-index:999 !important;
+
+        flex-direction:column;
+        align-items:stretch;
+
+        gap:4px !important;
+
+        padding:22px 22px 34px !important;
+
+        overflow-y:auto;
+
+        border:0 !important;
+        border-radius:0 !important;
+
+        background:
+          linear-gradient(
+            180deg,
+            #020609 0%,
+            #020609 72%,
+            #031011 100%
+          ) !important;
+
+        box-shadow:none !important;
       }
+
+
+      .site-nav:not(.open){
+        display:none !important;
+      }
+
+
+      .site-nav.open{
+        display:flex !important;
+      }
+
 
       .site-nav a{
         display:flex;
+
         align-items:center;
-        min-height:44px;
-        padding:8px 12px;
+
+        min-height:54px !important;
+
+        padding:10px 12px !important;
+
+        border:0 !important;
         border-radius:10px;
+
+        background:transparent !important;
+
+        color:#fff;
+
+        font-size:1rem;
+
+        text-align:left !important;
       }
+
+
+      .site-nav a:hover,
+      .site-nav a:focus{
+        color:var(--smf-teal);
+        background:rgba(7,158,143,.05) !important;
+      }
+
+
+      /*
+       * Defensive protection:
+       * booking belongs in page CTAs, not hamburger.
+       */
+
+      .site-nav .nav-cta,
+      .site-nav a[href="./book.html"],
+      .site-nav a[href="book.html"]{
+        display:none !important;
+      }
+
     }
 
 
-    /* =========================
+    /* =========================================
        MISSION
-    ========================== */
+    ========================================== */
 
     .smf-mission-v2{
       position:relative;
+
       overflow:hidden;
-      border-top:1px solid rgba(7,158,143,.34);
-      border-bottom:1px solid rgba(7,158,143,.24);
+
+      border-top:
+        1px solid rgba(7,158,143,.34);
+
+      border-bottom:
+        1px solid rgba(7,158,143,.24);
 
       background:
         radial-gradient(
@@ -86,14 +167,20 @@
         );
     }
 
+
     .smf-mission-v2::before{
       content:"";
+
       position:absolute;
+
       top:7%;
       bottom:7%;
       left:0;
+
       width:5px;
-      border-radius:0 999px 999px 0;
+
+      border-radius:
+        0 999px 999px 0;
 
       background:
         linear-gradient(
@@ -104,33 +191,65 @@
           transparent
         );
 
-      box-shadow:0 0 24px rgba(7,158,143,.6);
+      box-shadow:
+        0 0 24px rgba(7,158,143,.6);
     }
+
 
     .smf-mission-v2-inner{
-      width:min(1160px,calc(100% - 32px));
+      width:
+        min(
+          1160px,
+          calc(100% - 32px)
+        );
+
       margin:auto;
-      padding:38px 0 34px;
+
+      padding:
+        38px 0 34px;
     }
 
+
     .smf-mission-v2-title{
-      margin:0 auto 28px;
+      margin:
+        0 auto 28px;
+
       color:#079e8f;
+
       text-align:center;
-      font-family:"Rajdhani",sans-serif;
-      font-size:clamp(1.7rem,4vw,2.45rem);
+
+      font-family:
+        "Rajdhani",
+        sans-serif;
+
+      font-size:
+        clamp(
+          1.7rem,
+          4vw,
+          2.45rem
+        );
+
       font-weight:700;
+
       line-height:1;
+
       letter-spacing:.12em;
+
       text-transform:uppercase;
     }
 
+
     .smf-mission-v2-title::after{
       content:"";
+
       display:block;
+
       width:86px;
       height:4px;
-      margin:16px auto 0;
+
+      margin:
+        16px auto 0;
+
       border-radius:999px;
 
       background:
@@ -143,96 +262,169 @@
         );
     }
 
+
     .smf-mission-v2-points{
       width:100%;
+
       max-width:900px;
+
       display:grid;
-      grid-template-columns:repeat(3,minmax(0,1fr));
-      margin:0 auto 24px;
+
+      grid-template-columns:
+        repeat(
+          3,
+          minmax(0,1fr)
+        );
+
+      margin:
+        0 auto 24px;
+
       padding:0;
+
       list-style:none;
     }
 
+
     .smf-mission-v2-points li{
       display:flex;
+
       align-items:flex-start;
+
       justify-content:center;
+
       gap:10px;
-      padding:4px 20px;
+
+      padding:
+        4px 20px;
+
       color:#fff;
-      font-family:"Rajdhani",sans-serif;
-      font-size:clamp(.95rem,2vw,1.25rem);
+
+      font-family:
+        "Rajdhani",
+        sans-serif;
+
+      font-size:
+        clamp(
+          .95rem,
+          2vw,
+          1.25rem
+        );
+
       font-weight:700;
+
       line-height:1.15;
+
       text-transform:uppercase;
     }
 
+
     .smf-mission-v2-points li + li{
-      border-left:1px solid rgba(7,158,143,.72);
+      border-left:
+        1px solid rgba(7,158,143,.72);
     }
+
 
     .smf-mission-v2-points li::before{
       content:"";
+
       width:11px;
       height:11px;
+
       flex:0 0 auto;
+
       margin-top:.12em;
+
       border-radius:50%;
+
       background:#12cabb;
     }
 
+
     .smf-mission-v2-statement{
-      width:min(760px,90%);
+      width:
+        min(
+          760px,
+          90%
+        );
+
       margin:auto;
+
       color:#f0f3f3;
+
       text-align:center;
-      font-family:"Montserrat",sans-serif;
-      font-size:clamp(.95rem,1.7vw,1.15rem);
+
+      font-family:
+        "Montserrat",
+        sans-serif;
+
+      font-size:
+        clamp(
+          .95rem,
+          1.7vw,
+          1.15rem
+        );
+
       line-height:1.55;
     }
 
 
-    /* =========================
-       HOME PREVIEW CARDS
-    ========================== */
+    /* =========================================
+       SINGLE HOMEPAGE PREVIEWS
+    ========================================== */
 
     .home-feature-card{
-      width:min(720px,100%);
+      width:
+        min(
+          720px,
+          100%
+        );
+
       min-height:0;
-      margin:0 auto;
+
+      margin:
+        0 auto;
     }
+
 
     .home-feature-card h3{
       margin-top:0;
     }
+
 
     .home-feature-card p:last-child{
       margin-bottom:0;
     }
 
 
-    /* =========================
-       MEDIA PREVIEW
-    ========================== */
-
     .home-media-preview{
-      width:min(720px,100%);
-      margin:0 auto;
+      width:
+        min(
+          720px,
+          100%
+        );
+
+      margin:
+        0 auto;
     }
+
 
     .home-media-preview .media-card{
       min-height:360px;
+
       cursor:default;
     }
 
 
-    /* =========================
+    /* =========================================
        CONTACT
-    ========================== */
+    ========================================== */
 
     .home-contact{
-      padding:64px 0;
-      border-top:1px solid rgba(7,158,143,.18);
+      padding:
+        64px 0;
+
+      border-top:
+        1px solid rgba(7,158,143,.18);
 
       background:
         radial-gradient(
@@ -247,27 +439,50 @@
         );
     }
 
+
     .home-contact-inner{
-      width:min(760px,calc(100% - 34px));
+      width:
+        min(
+          760px,
+          calc(100% - 34px)
+        );
+
       margin:auto;
+
       text-align:center;
     }
 
+
     .home-contact h2{
       margin-bottom:16px;
-      font-size:clamp(2.7rem,6vw,4.6rem);
+
+      font-size:
+        clamp(
+          2.7rem,
+          6vw,
+          4.6rem
+        );
     }
+
 
     .home-contact-copy{
       max-width:620px;
-      margin:0 auto 28px;
+
+      margin:
+        0 auto 28px;
+
       color:#cbd4d6;
     }
 
+
     .contact-dropdown{
       width:100%;
+
       overflow:hidden;
-      border:1px solid rgba(18,202,187,.20);
+
+      border:
+        1px solid rgba(18,202,187,.20);
+
       border-radius:22px;
 
       background:
@@ -278,134 +493,244 @@
         );
     }
 
+
     .contact-dropdown summary{
       min-height:64px;
+
       display:flex;
+
       align-items:center;
-      justify-content:space-between;
+
+      justify-content:
+        space-between;
+
       gap:18px;
-      padding:16px 22px;
+
+      padding:
+        16px 22px;
+
       color:#fff;
-      font-family:"Rajdhani",sans-serif;
+
+      font-family:
+        "Rajdhani",
+        sans-serif;
+
       font-weight:700;
+
       letter-spacing:.06em;
+
       text-transform:uppercase;
+
       cursor:pointer;
+
       list-style:none;
     }
+
 
     .contact-dropdown summary::-webkit-details-marker{
       display:none;
     }
 
+
     .contact-dropdown summary::after{
       content:"+";
+
       color:#12cabb;
+
       font-size:1.65rem;
     }
+
 
     .contact-dropdown[open] summary::after{
       content:"−";
     }
 
+
     .contact-dropdown-body{
-      padding:6px 22px 24px;
-      border-top:1px solid rgba(18,202,187,.12);
+      padding:
+        6px 22px 24px;
+
+      border-top:
+        1px solid rgba(18,202,187,.12);
     }
 
+
     .home-contact .contact-form{
-      padding:22px 0 0;
+      padding:
+        22px 0 0;
+
       border:0;
+
       background:none;
+
       box-shadow:none;
+
       text-align:left;
     }
 
 
-    /* =========================
+    /* =========================================
+       FOOTER HOMEPAGE CLEANUP
+    ========================================== */
+
+    .site-footer .footer-brand-column{
+      align-self:start;
+    }
+
+
+    .site-footer .footer-brand{
+      margin-bottom:0;
+    }
+
+
+    /*
+     * Homepage no longer repeats:
+     * Empowering the body.
+     * Strengthening the mind.
+     * Changing lives.
+     */
+
+
+    /* =========================================
        MOBILE
-    ========================== */
+    ========================================== */
 
     @media(max-width:760px){
 
       .site-nav{
-        top:85px;
-        left:10px;
-        right:10px;
-        gap:2px;
-        padding:10px 12px 12px;
+        top:85px !important;
+
+        height:
+          calc(100dvh - 85px);
+
+        padding:
+          18px 20px 34px !important;
       }
+
 
       .site-nav a{
-        min-height:42px;
-        padding:7px 10px;
-        font-size:.9rem;
+        min-height:55px !important;
+
+        padding:
+          9px 12px !important;
+
+        font-size:.95rem;
       }
 
+
       .smf-mission-v2-inner{
-        width:calc(100% - 34px);
-        padding:26px 0 25px;
+        width:
+          calc(100% - 34px);
+
+        padding:
+          26px 0 25px;
       }
+
 
       .smf-mission-v2-title{
         margin-bottom:19px;
+
         font-size:1.45rem;
       }
 
+
       .smf-mission-v2-title::after{
         width:48px;
+
         height:2px;
+
         margin-top:9px;
       }
+
 
       .smf-mission-v2-points{
         margin-bottom:17px;
       }
 
+
       .smf-mission-v2-points li{
         gap:7px;
-        padding:2px 8px;
-        font-size:clamp(.67rem,3vw,.78rem);
+
+        padding:
+          2px 8px;
+
+        font-size:
+          clamp(
+            .67rem,
+            3vw,
+            .78rem
+          );
       }
+
 
       .smf-mission-v2-points li::before{
         width:8px;
+
         height:8px;
       }
 
+
       .smf-mission-v2-statement{
         width:92%;
+
         font-size:.76rem;
       }
+
 
       .home-media-preview .media-card{
         min-height:285px;
       }
 
+
       .home-contact{
-        padding:46px 0 48px;
+        padding:
+          46px 0 48px;
       }
 
+
       .home-contact h2{
-        font-size:clamp(2.45rem,10vw,3.25rem);
+        font-size:
+          clamp(
+            2.45rem,
+            10vw,
+            3.25rem
+          );
       }
+
 
       .contact-dropdown{
         border-radius:20px;
       }
 
+
       .contact-dropdown summary{
         min-height:58px;
-        padding:14px 18px;
+
+        padding:
+          14px 18px;
       }
 
+
       .contact-dropdown-body{
-        padding:4px 18px 20px;
+        padding:
+          4px 18px 20px;
       }
+
 
       .home-contact .form-grid{
         grid-template-columns:1fr;
       }
+
+
+      .footer-main{
+        padding-top:40px;
+      }
+
+
+      .footer-brand{
+        margin-bottom:0;
+      }
+
     }
 
   </style>
@@ -414,26 +739,41 @@
 
 <body>
 
-  <a class="skip-link" href="#main">
+
+  <a
+    class="skip-link"
+    href="#main"
+  >
     Skip to content
   </a>
 
 
-  <!-- HEADER -->
+  <!-- =========================================
+       HEADER
+  ========================================== -->
 
-  <header class="site-header" id="top">
+  <header
+    class="site-header"
+    id="top"
+  >
+
 
     <div class="header-inner">
+
 
       <a
         class="brand"
         href="./index.html"
         aria-label="Sport My Fitness home"
       >
+
+
         <img
           src="brand/sportmyfitness-logo-header.png"
           alt="Sport My Fitness"
         >
+
+
       </a>
 
 
@@ -443,13 +783,18 @@
         aria-expanded="false"
         aria-controls="site-nav"
       >
+
+
         <span></span>
         <span></span>
         <span></span>
 
+
         <span class="sr-only">
           Open menu
         </span>
+
+
       </button>
 
 
@@ -459,29 +804,37 @@
         aria-label="Primary"
       >
 
+
         <a href="./programs.html">
           Programs
         </a>
+
 
         <a href="#yoshi">
           About Yoshi
         </a>
 
+
         <a href="./media.html">
           Media
         </a>
+
 
         <a href="./training-options.html">
           Training Options
         </a>
 
+
         <a href="#contact">
           Contact Yoshi
         </a>
 
+
       </nav>
 
+
     </div>
+
 
   </header>
 
@@ -489,9 +842,12 @@
   <main id="main">
 
 
-    <!-- HERO -->
+    <!-- =========================================
+         HERO
+    ========================================== -->
 
     <section class="hero">
+
 
       <div
         class="hero-media"
@@ -499,28 +855,42 @@
         aria-label="Yoshi Barnes training"
       ></div>
 
+
       <div class="hero-overlay"></div>
 
 
       <div class="container hero-content">
 
+
         <div class="hero-copy">
+
 
           <p class="eyebrow">
             Sport My Fitness · Milwaukee
           </p>
 
+
           <h1>
+
             To gain, maintain, or lose it all
-            <span>takes work.</span>
+
+            <span>
+              takes work.
+            </span>
+
           </h1>
 
+
           <p class="lead">
+
             Training, coaching and support built around
             your goals, your body and your life.
+
           </p>
 
+
           <div class="hero-actions">
+
 
             <a
               class="btn btn-primary"
@@ -529,6 +899,7 @@
               Book a Session
             </a>
 
+
             <a
               class="btn btn-secondary"
               href="./programs.html"
@@ -536,100 +907,141 @@
               View Programs
             </a>
 
+
           </div>
+
 
         </div>
 
+
       </div>
+
 
     </section>
 
 
-    <!-- MISSION -->
+    <!-- =========================================
+         MISSION
+    ========================================== -->
 
     <section
       class="smf-mission-v2"
       id="mission"
     >
 
+
       <div class="smf-mission-v2-inner">
+
 
         <p class="smf-mission-v2-title">
           Our Mission
         </p>
 
+
         <ul class="smf-mission-v2-points">
+
 
           <li>
             Empower the body.
           </li>
 
+
           <li>
             Strengthen the mind.
           </li>
+
 
           <li>
             We change lives.
           </li>
 
+
         </ul>
 
+
         <p class="smf-mission-v2-statement">
+
           My mission is to provide a positive and innovative
           environment that focuses on empowering, encouraging,
           and exercising the body mentally and physically.
+
         </p>
 
+
       </div>
+
 
     </section>
 
 
-    <!-- PROGRAMS PREVIEW -->
+    <!-- =========================================
+         PROGRAMS PREVIEW
+    ========================================== -->
 
     <section
       class="section"
       id="programs"
     >
 
+
       <div class="container">
 
+
         <div class="section-heading">
+
 
           <p class="section-title">
             Programs
           </p>
 
+
           <h2>
+
             Support built around
-            <span>your goals.</span>
+
+            <span>
+              your goals.
+            </span>
+
           </h2>
 
+
           <p>
+
             Explore focused coaching designed around
             strength, movement, accountability and
             sustainable progress.
+
           </p>
+
 
         </div>
 
 
-        <div class="training-preview-card home-feature-card">
+        <div
+          class="training-preview-card home-feature-card"
+        >
+
 
           <h3>
             Personal &amp; Semi-Private
           </h3>
 
+
           <p>
+
             Focused coaching with personal attention,
             structure and accountability built around
             your progress.
+
           </p>
+
 
         </div>
 
 
         <div class="section-action">
+
 
           <a
             class="btn btn-primary"
@@ -638,21 +1050,28 @@
             View All Programs
           </a>
 
+
         </div>
 
+
       </div>
+
 
     </section>
 
 
-    <!-- ABOUT YOSHI -->
+    <!-- =========================================
+         YOSHI
+    ========================================== -->
 
     <section
       class="section section-dark"
       id="yoshi"
     >
 
+
       <div class="container">
+
 
         <p class="section-title">
           Meet Yoshi Barnes
@@ -661,47 +1080,59 @@
 
         <div class="split">
 
+
           <div class="split-media">
+
 
             <img
               src="https://static.wixstatic.com/media/697b1a_72f6986ebf3146ad8ddd2fe2e44f8297~mv2.jpg/v1/fill/w_720%2Ch_1170%2Cal_c%2Cq_85%2Cenc_auto/website%20pic%20B_JPG.jpg"
               alt="Yoshi Barnes of Sport My Fitness"
             >
 
+
           </div>
 
 
           <div class="split-copy">
 
+
             <h2>
               Coaching with purpose.
             </h2>
 
+
             <p>
+
               Yoshi brings fitness training, strength and
               conditioning, and sports-management experience
               into a coaching approach centered on sustainable
               progress.
+
             </p>
 
 
             <div class="credential-list">
 
+
               <span>
                 Certified Fitness Trainer
               </span>
+
 
               <span>
                 Strength &amp; Conditioning Coach
               </span>
 
+
               <span>
                 International Sports Science Association
               </span>
 
+
               <span>
                 MBA · Sports Management
               </span>
+
 
             </div>
 
@@ -713,45 +1144,61 @@
               Connect with Yoshi →
             </a>
 
+
           </div>
+
 
         </div>
 
+
       </div>
+
 
     </section>
 
 
-    <!-- MEDIA PREVIEW -->
+    <!-- =========================================
+         MEDIA PREVIEW
+    ========================================== -->
 
     <section
       class="section media-section"
       id="media"
     >
 
+
       <div class="container">
 
+
         <div class="section-heading">
+
 
           <p class="section-title">
             Local Media
           </p>
 
+
           <h2>
             Featured On
           </h2>
 
+
           <p>
+
             Yoshi Barnes has joined TMJ4 to share
             practical fitness guidance with Milwaukee.
+
           </p>
+
 
         </div>
 
 
         <div class="home-media-preview">
 
+
           <div class="media-card">
+
 
             <img
               class="media-card-image"
@@ -760,7 +1207,9 @@
               loading="lazy"
             >
 
+
             <div class="media-card-shade"></div>
+
 
             <span
               class="media-play"
@@ -769,24 +1218,31 @@
               ▶
             </span>
 
+
             <div class="media-card-copy">
+
 
               <span class="media-kicker">
                 Fitness Friday
               </span>
 
+
               <h3>
                 All About Stretching
               </h3>
 
+
             </div>
 
+
           </div>
+
 
         </div>
 
 
         <div class="section-action">
+
 
           <a
             class="btn btn-primary"
@@ -795,55 +1251,76 @@
             View All Media
           </a>
 
+
         </div>
 
+
       </div>
+
 
     </section>
 
 
-    <!-- TRAINING OPTIONS PREVIEW -->
+    <!-- =========================================
+         TRAINING OPTIONS PREVIEW
+    ========================================== -->
 
     <section
       class="section section-dark"
       id="training-options"
     >
 
+
       <div class="container">
 
+
         <div class="section-heading">
+
 
           <p class="section-title">
             Training Options
           </p>
 
+
           <h2 class="training-heading-white">
             Choose how you want to move forward.
           </h2>
 
+
           <p>
+
             Compare current formats, pricing and
             specialty training options.
+
           </p>
+
 
         </div>
 
 
-        <div class="training-preview-card home-feature-card">
+        <div
+          class="training-preview-card home-feature-card"
+        >
+
 
           <h3>
             Personal Training
           </h3>
 
+
           <p>
+
             One-on-one coaching centered on your goals,
             movement, progress and accountability.
+
           </p>
+
 
         </div>
 
 
         <div class="section-action">
+
 
           <a
             class="btn btn-primary"
@@ -852,27 +1329,43 @@
             View All Training Options
           </a>
 
+
         </div>
 
+
       </div>
+
 
     </section>
 
 
-    <!-- FINAL BOOKING CTA -->
+    <!-- =========================================
+         FINAL BOOKING CTA
+    ========================================== -->
 
     <section class="final-cta">
 
-      <div class="container final-cta-centered">
+
+      <div
+        class="container final-cta-centered"
+      >
+
 
         <p class="section-title">
           Ready to Get Started?
         </p>
 
+
         <h2 class="final-cta-heading">
+
           Your strength. Your life.
-          <span>Your time is now.</span>
+
+          <span>
+            Your time is now.
+          </span>
+
         </h2>
+
 
         <a
           class="btn btn-primary final-book-button"
@@ -881,36 +1374,47 @@
           Book a Session
         </a>
 
+
       </div>
+
 
     </section>
 
 
-    <!-- CONTACT -->
+    <!-- =========================================
+         CONTACT
+    ========================================== -->
 
     <section
       class="home-contact"
       id="contact"
     >
 
+
       <div class="home-contact-inner">
+
 
         <p class="section-title">
           Have a Question?
         </p>
 
+
         <h2>
           Connect with Yoshi.
         </h2>
 
+
         <p class="home-contact-copy">
+
           Not sure which option fits your goals?
           Open the message form and tell Yoshi what
           you're working toward.
+
         </p>
 
 
         <details class="contact-dropdown">
+
 
           <summary>
             Send Yoshi a Message
@@ -919,6 +1423,7 @@
 
           <div class="contact-dropdown-body">
 
+
             <form
               class="contact-form"
               action="mailto:Yoshi_barnes@outlook.com"
@@ -926,14 +1431,17 @@
               enctype="text/plain"
             >
 
+
               <div class="form-grid">
 
 
                 <div class="form-field">
 
+
                   <label for="contact-name">
                     Name
                   </label>
+
 
                   <input
                     id="contact-name"
@@ -943,14 +1451,17 @@
                     required
                   >
 
+
                 </div>
 
 
                 <div class="form-field">
 
+
                   <label for="contact-email">
                     Email
                   </label>
+
 
                   <input
                     id="contact-email"
@@ -960,15 +1471,23 @@
                     required
                   >
 
+
                 </div>
 
 
                 <div class="form-field">
 
+
                   <label for="contact-phone">
+
                     Phone
-                    <span>Optional</span>
+
+                    <span>
+                      Optional
+                    </span>
+
                   </label>
+
 
                   <input
                     id="contact-phone"
@@ -977,14 +1496,17 @@
                     autocomplete="tel"
                   >
 
+
                 </div>
 
 
                 <div class="form-field">
 
+
                   <label for="contact-interest">
                     Interested In
                   </label>
+
 
                   <select
                     id="contact-interest"
@@ -992,58 +1514,75 @@
                     required
                   >
 
+
                     <option value="Not sure yet">
                       Not sure yet
                     </option>
+
 
                     <option value="Personal Training">
                       Personal Training
                     </option>
 
+
                     <option value="Semi-Private Training">
                       Semi-Private Training
                     </option>
+
 
                     <option value="Group Training">
                       Group Training
                     </option>
 
+
                     <option value="Online Coaching">
                       Online Coaching
                     </option>
+
 
                     <option value="Youth Fitness">
                       Youth Fitness
                     </option>
 
+
                     <option value="R&B Stretching">
                       R&amp;B Stretching
                     </option>
+
 
                     <option value="Training Packages">
                       Training Packages
                     </option>
 
+
                     <option value="Rehab Tech">
                       Rehab Tech
                     </option>
+
 
                     <option value="Life Coaching / Training">
                       Life Coaching / Training
                     </option>
 
+
                   </select>
 
+
                 </div>
+
 
               </div>
 
 
-              <div class="form-field form-field-message">
+              <div
+                class="form-field form-field-message"
+              >
+
 
                 <label for="contact-message">
                   Tell Yoshi What You’re Looking For
                 </label>
+
 
                 <textarea
                   id="contact-message"
@@ -1052,10 +1591,12 @@
                   required
                 ></textarea>
 
+
               </div>
 
 
               <div class="contact-form-action">
+
 
                 <button
                   class="btn btn-primary"
@@ -1064,21 +1605,29 @@
                   Send Message
                 </button>
 
+
               </div>
 
 
               <p class="form-note">
+
                 Sending will open your email app with your
                 information ready to send to Sport My Fitness.
+
               </p>
+
 
             </form>
 
+
           </div>
+
 
         </details>
 
+
       </div>
+
 
     </section>
 
@@ -1086,80 +1635,95 @@
   </main>
 
 
-  <!-- FOOTER -->
+  <!-- =========================================
+       FOOTER
+  ========================================== -->
 
   <footer class="site-footer">
+
 
     <div class="container footer-main">
 
 
       <div class="footer-brand-column">
 
+
         <a
           href="./index.html"
           class="footer-brand"
         >
+
+
           <img
             src="brand/sportmyfitness-logo-header.png"
             alt="Sport My Fitness"
           >
+
+
         </a>
 
-        <p class="footer-mission">
-          Empowering the body.<br>
-          Strengthening the mind.<br>
-          Changing lives.
-        </p>
 
       </div>
 
 
       <div class="footer-column">
+
 
         <h3>
           Explore
         </h3>
 
+
         <a href="./index.html">
           Home
         </a>
+
 
         <a href="./programs.html">
           Programs
         </a>
 
+
         <a href="./training-options.html">
           Training Options
         </a>
+
 
         <a href="./media.html">
           Media Gallery
         </a>
 
+
         <a href="./book.html">
           Book a Session
         </a>
+
 
       </div>
 
 
       <div class="footer-column">
 
+
         <h3>
           About
         </h3>
+
 
         <a href="#mission">
           Our Mission
         </a>
 
+
         <a href="#yoshi">
           Meet Yoshi
         </a>
 
+
         <a href="#contact">
           Message Yoshi
         </a>
+
 
       </div>
 
@@ -1169,57 +1733,76 @@
         id="footer-contact"
       >
 
+
         <h3>
           Contact
         </h3>
+
 
         <a href="tel:+14147914526">
           414-791-4526
         </a>
 
+
         <a href="mailto:Yoshi_barnes@outlook.com">
           Yoshi_barnes@outlook.com
         </a>
+
 
         <span>
           4722 W Vliet St<br>
           Milwaukee, WI 53208
         </span>
 
+
       </div>
+
 
     </div>
 
 
     <div class="container footer-bottom">
 
+
       <p>
-        © <span id="year">2026</span>
-        Sport My Fitness. All rights reserved.
+
+        ©
+        <span id="year"></span>
+        Sport My Fitness.
+        All rights reserved.
+
       </p>
 
+
       <div class="footer-legal">
+
 
         <span>
           Terms of Use
         </span>
 
+
         <span aria-hidden="true">
           |
         </span>
+
 
         <span>
           Privacy Policy
         </span>
 
+
       </div>
 
+
     </div>
+
 
   </footer>
 
 
   <script src="script.js"></script>
+
 
 </body>
 </html>

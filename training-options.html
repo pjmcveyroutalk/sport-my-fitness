@@ -1,58 +1,268 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
 
-  <title>Training Options | Sport My Fitness Milwaukee</title>
+<head>
+
+  <meta charset="utf-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <title>
+    Training Options | Sport My Fitness Milwaukee
+  </title>
 
   <meta
     name="description"
     content="Explore Sport My Fitness training options, pricing, group fitness, online coaching, kids training and stretching in Milwaukee."
   >
 
-  <meta name="theme-color" content="#03060A">
-  <meta property="og:title" content="Training Options | Sport My Fitness">
+  <meta
+    name="theme-color"
+    content="#03060A"
+  >
+
+  <meta
+    property="og:title"
+    content="Training Options | Sport My Fitness"
+  >
 
   <meta
     property="og:description"
     content="Explore the ways you can train with Sport My Fitness."
   >
 
-  <meta property="og:image" content="brand/og-card-1200x630.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="brand/twitter-card-1200x630.jpg">
+  <meta
+    property="og:image"
+    content="brand/og-card-1200x630.jpg"
+  >
 
-  <link rel="icon" href="brand/favicon.ico">
-  <link rel="apple-touch-icon" href="brand/apple-touch-icon.png">
-  <link rel="manifest" href="site.webmanifest">
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  >
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta
+    name="twitter:image"
+    content="brand/twitter-card-1200x630.jpg"
+  >
+
+  <link
+    rel="icon"
+    href="brand/favicon.ico"
+  >
+
+  <link
+    rel="apple-touch-icon"
+    href="brand/apple-touch-icon.png"
+  >
+
+  <link
+    rel="manifest"
+    href="site.webmanifest"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
 
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Rajdhani:wght@500;600;700&display=swap"
     rel="stylesheet"
   >
 
-  <link rel="stylesheet" href="brand.css">
-  <link rel="stylesheet" href="styles.css">
+  <link
+    rel="stylesheet"
+    href="brand.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="styles.css"
+  >
+
+  <style>
+
+    .contact-intro-simple{
+      max-width:760px;
+      margin:0 auto 28px;
+      text-align:center;
+    }
+
+    .contact-intro-simple .section-title{
+      text-align:center;
+    }
+
+    .contact-intro-simple .section-title::after{
+      margin-left:auto;
+      margin-right:auto;
+    }
+
+    .contact-intro-simple h2{
+      margin-bottom:16px;
+      color:#fff;
+      font-size:clamp(2.7rem,6vw,4.6rem);
+    }
+
+    .contact-intro-simple > p:not(.section-title){
+      max-width:620px;
+      margin:0 auto;
+      color:#cbd4d6;
+      line-height:1.6;
+    }
+
+    .contact-dropdown{
+      width:min(760px,100%);
+      margin:0 auto;
+      overflow:hidden;
+      border:1px solid rgba(18,202,187,.20);
+      border-radius:22px;
+      background:
+        linear-gradient(
+          145deg,
+          rgba(8,21,23,.84),
+          rgba(2,7,9,.96)
+        );
+      box-shadow:
+        0 20px 45px rgba(0,0,0,.20);
+    }
+
+    .contact-dropdown summary{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      min-height:64px;
+      padding:16px 22px;
+      color:#fff;
+      font-family:var(--smf-font-display);
+      font-size:1.05rem;
+      font-weight:700;
+      letter-spacing:.06em;
+      text-transform:uppercase;
+      cursor:pointer;
+      list-style:none;
+    }
+
+    .contact-dropdown summary::-webkit-details-marker{
+      display:none;
+    }
+
+    .contact-dropdown summary::after{
+      content:"+";
+      color:var(--smf-teal);
+      font-size:1.65rem;
+      line-height:1;
+    }
+
+    .contact-dropdown[open] summary::after{
+      content:"−";
+    }
+
+    .contact-dropdown-body{
+      padding:4px 22px 24px;
+      border-top:
+        1px solid rgba(18,202,187,.12);
+    }
+
+    .contact-dropdown .contact-form{
+      padding:22px 0 0;
+      border:0;
+      border-radius:0;
+      background:none;
+      box-shadow:none;
+    }
+
+    @media(max-width:760px){
+
+      .contact-intro-simple{
+        margin-bottom:22px;
+      }
+
+      .contact-intro-simple h2{
+        margin-bottom:14px;
+        font-size:
+          clamp(2.45rem,10vw,3.25rem);
+      }
+
+      .contact-intro-simple > p:not(.section-title){
+        font-size:.95rem;
+        line-height:1.55;
+      }
+
+      .contact-dropdown{
+        border-radius:20px;
+      }
+
+      .contact-dropdown summary{
+        min-height:58px;
+        padding:14px 18px;
+        font-size:.98rem;
+      }
+
+      .contact-dropdown-body{
+        padding:4px 18px 20px;
+      }
+
+      .contact-dropdown .form-grid{
+        grid-template-columns:1fr;
+        gap:17px;
+      }
+
+      .contact-dropdown .form-field textarea{
+        min-height:120px;
+      }
+
+    }
+
+  </style>
+
 </head>
+
 
 <body>
 
-  <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="site-header" id="top">
+  <a
+    class="skip-link"
+    href="#main"
+  >
+    Skip to content
+  </a>
+
+
+  <!-- HEADER -->
+
+  <header
+    class="site-header"
+    id="top"
+  >
 
     <div class="header-inner">
 
-      <a class="brand" href="index.html" aria-label="Sport My Fitness home">
+
+      <a
+        class="brand"
+        href="index.html"
+        aria-label="Sport My Fitness home"
+      >
+
         <img
           src="brand/sportmyfitness-logo-header.png"
           alt="Sport My Fitness"
         >
+
       </a>
+
 
       <button
         class="menu-toggle"
@@ -60,19 +270,51 @@
         aria-expanded="false"
         aria-controls="site-nav"
       >
+
         <span></span>
         <span></span>
         <span></span>
-        <span class="sr-only">Open menu</span>
+
+        <span class="sr-only">
+          Open menu
+        </span>
+
       </button>
 
-      <nav class="site-nav" id="site-nav" aria-label="Primary">
-        <a href="programs.html">Programs</a>
-        <a href="index.html#yoshi">About Yoshi</a>
-        <a href="media.html">Media</a>
-        <a href="training-options.html">Training Options</a>
-        <a href="#contact">Contact</a>
-        <a class="nav-cta" href="book.html">Book a Session</a>
+
+      <nav
+        class="site-nav"
+        id="site-nav"
+        aria-label="Primary"
+      >
+
+        <a href="programs.html">
+          Programs
+        </a>
+
+        <a href="index.html#yoshi">
+          About Yoshi
+        </a>
+
+        <a href="media.html">
+          Media
+        </a>
+
+        <a href="training-options.html">
+          Training Options
+        </a>
+
+        <a href="#footer-contact">
+          Contact
+        </a>
+
+        <a
+          class="nav-cta"
+          href="book.html"
+        >
+          Book a Session
+        </a>
+
       </nav>
 
     </div>
@@ -80,20 +322,29 @@
   </header>
 
 
+
   <main id="main">
+
+
+    <!-- HERO -->
 
     <section class="options-hero">
 
       <div class="container options-hero-inner">
 
+
         <p class="section-title">
           Training Options
         </p>
 
+
         <h1>
           Find the training that
-          <span>fits your goal.</span>
+          <span>
+            fits your goal.
+          </span>
         </h1>
+
 
         <p>
           From focused one-on-one coaching to group,
@@ -101,7 +352,11 @@
           the training experience that works for you.
         </p>
 
-        <a class="text-link back-link" href="index.html">
+
+        <a
+          class="text-link back-link"
+          href="index.html"
+        >
           ← Back to Home
         </a>
 
@@ -110,6 +365,9 @@
     </section>
 
 
+
+    <!-- TRAINING OPTIONS -->
+
     <section class="options-section">
 
       <div class="container">
@@ -117,17 +375,27 @@
         <div class="options-grid">
 
 
-          <article class="option-card" id="semi-private">
+          <!-- SEMI-PRIVATE -->
+
+          <article
+            class="option-card"
+            id="semi-private"
+          >
+
 
             <div class="option-image">
+
               <img
                 src="https://static.wixstatic.com/media/697b1a_b225f74f1bd44f6ebeb10c5293cf7ae7~mv2.jpg/v1/fill/w_900,h_700,al_c,q_90/697b1a_b225f74f1bd44f6ebeb10c5293cf7ae7~mv2.jpg"
                 alt="Sport My Fitness semi-private training clients"
                 loading="lazy"
               >
+
             </div>
 
+
             <div class="option-content">
+
 
               <div class="option-card-top">
 
@@ -147,6 +415,7 @@
 
               </div>
 
+
               <div class="option-meta">
 
                 <span>
@@ -161,6 +430,7 @@
 
               </div>
 
+
               <a
                 class="btn btn-primary"
                 href="book.html#semi-private"
@@ -173,7 +443,14 @@
           </article>
 
 
-          <article class="option-card" id="one-on-one">
+
+          <!-- ONE-ON-ONE -->
+
+          <article
+            class="option-card"
+            id="one-on-one"
+          >
+
 
             <div class="option-image option-image-focus-right">
 
@@ -185,7 +462,9 @@
 
             </div>
 
+
             <div class="option-content">
+
 
               <div class="option-card-top">
 
@@ -205,6 +484,7 @@
 
               </div>
 
+
               <div class="option-meta">
 
                 <span>
@@ -219,6 +499,7 @@
 
               </div>
 
+
               <a
                 class="btn btn-primary"
                 href="book.html#personal-training"
@@ -231,7 +512,14 @@
           </article>
 
 
-          <article class="option-card" id="summer-group">
+
+          <!-- GROUP TRAINING -->
+
+          <article
+            class="option-card"
+            id="summer-group"
+          >
+
 
             <div class="option-image">
 
@@ -243,7 +531,9 @@
 
             </div>
 
+
             <div class="option-content">
+
 
               <div class="option-card-top">
 
@@ -263,6 +553,7 @@
 
               </div>
 
+
               <div class="option-meta">
 
                 <span>
@@ -277,6 +568,7 @@
 
               </div>
 
+
               <a
                 class="btn btn-primary"
                 href="book.html#group-training"
@@ -289,7 +581,14 @@
           </article>
 
 
-          <article class="option-card" id="online-coaching">
+
+          <!-- ONLINE -->
+
+          <article
+            class="option-card"
+            id="online-coaching"
+          >
+
 
             <div class="option-image option-image-portrait">
 
@@ -301,7 +600,9 @@
 
             </div>
 
+
             <div class="option-content">
+
 
               <div class="option-card-top">
 
@@ -321,6 +622,7 @@
 
               </div>
 
+
               <div class="option-meta">
 
                 <span>
@@ -335,6 +637,7 @@
 
               </div>
 
+
               <a
                 class="btn btn-primary"
                 href="book.html#online-coaching"
@@ -347,7 +650,14 @@
           </article>
 
 
-          <article class="option-card" id="kid-training">
+
+          <!-- YOUTH -->
+
+          <article
+            class="option-card"
+            id="kid-training"
+          >
+
 
             <div class="option-image option-image-youth">
 
@@ -359,7 +669,9 @@
 
             </div>
 
+
             <div class="option-content">
+
 
               <div class="option-card-top">
 
@@ -379,6 +691,7 @@
 
               </div>
 
+
               <div class="option-meta option-meta-single">
 
                 <span>
@@ -387,6 +700,7 @@
                 </span>
 
               </div>
+
 
               <a
                 class="btn btn-primary"
@@ -400,7 +714,14 @@
           </article>
 
 
-          <article class="option-card" id="packages">
+
+          <!-- PACKAGES -->
+
+          <article
+            class="option-card"
+            id="packages"
+          >
+
 
             <div class="option-image option-image-packages">
 
@@ -412,7 +733,9 @@
 
             </div>
 
+
             <div class="option-content">
+
 
               <div class="option-card-top">
 
@@ -432,6 +755,7 @@
 
               </div>
 
+
               <div class="option-meta option-meta-single">
 
                 <span>
@@ -440,6 +764,7 @@
                 </span>
 
               </div>
+
 
               <a
                 class="btn btn-primary"
@@ -453,10 +778,14 @@
           </article>
 
 
+
+          <!-- R&B STRETCHING -->
+
           <article
             class="option-card option-card-featured"
             id="rb-stretching"
           >
+
 
             <div class="option-image">
 
@@ -468,7 +797,9 @@
 
             </div>
 
+
             <div class="option-content">
+
 
               <div class="option-card-top">
 
@@ -487,6 +818,7 @@
 
               </div>
 
+
               <div class="option-meta option-meta-single">
 
                 <span>
@@ -495,6 +827,7 @@
                 </span>
 
               </div>
+
 
               <a
                 class="btn btn-primary"
@@ -507,6 +840,7 @@
 
           </article>
 
+
         </div>
 
       </div>
@@ -514,25 +848,32 @@
     </section>
 
 
-    <!-- CONTACT / NOT SURE YET -->
+
+    <!-- CONTACT -->
 
     <section
       class="contact-section"
       id="contact"
     >
 
-      <div class="container contact-section-inner">
+      <div class="container">
 
-        <div class="contact-intro">
+
+        <div class="contact-intro-simple">
+
 
           <p class="section-title">
             Not Sure Yet?
           </p>
 
+
           <h2>
             Talk with
-            <span>Yoshi.</span>
+            <span>
+              Yoshi.
+            </span>
           </h2>
+
 
           <p>
             Tell Yoshi what you're working toward and she
@@ -540,312 +881,117 @@
             option is the best place to start.
           </p>
 
-          <div class="hero-actions">
-
-            <a
-              class="btn btn-primary"
-              href="tel:+14147914526"
-            >
-              Call Yoshi
-            </a>
-
-            <a
-              class="btn btn-secondary"
-              href="mailto:Yoshi_barnes@outlook.com?subject=Sport%20My%20Fitness%20Training%20Inquiry"
-            >
-              Email Yoshi
-            </a>
-
-          </div>
-
         </div>
 
 
-        <form
-          class="contact-form"
-          action="mailto:Yoshi_barnes@outlook.com"
-          method="post"
-          enctype="text/plain"
-        >
 
-          <div class="form-grid">
-
-            <div class="form-field">
-
-              <label for="training-name">
-                Name
-              </label>
-
-              <input
-                id="training-name"
-                name="Name"
-                type="text"
-                autocomplete="name"
-                required
-              >
-
-            </div>
+        <details class="contact-dropdown">
 
 
-            <div class="form-field">
-
-              <label for="training-email">
-                Email
-              </label>
-
-              <input
-                id="training-email"
-                name="Email"
-                type="email"
-                autocomplete="email"
-                required
-              >
-
-            </div>
+          <summary>
+            Send Yoshi a Message
+          </summary>
 
 
-            <div class="form-field">
-
-              <label for="training-phone">
-                Phone
-                <span>Optional</span>
-              </label>
-
-              <input
-                id="training-phone"
-                name="Phone"
-                type="tel"
-                autocomplete="tel"
-              >
-
-            </div>
+          <div class="contact-dropdown-body">
 
 
-            <div class="form-field">
-
-              <label for="training-interest">
-                Interested In
-              </label>
-
-              <select
-                id="training-interest"
-                name="Interested In"
-                required
-              >
-
-                <option value="Not sure yet">
-                  Not sure yet
-                </option>
-
-                <option value="Personal Training">
-                  Personal Training
-                </option>
-
-                <option value="Semi-Private Training">
-                  Semi-Private Training
-                </option>
-
-                <option value="Group Training">
-                  Group Training
-                </option>
-
-                <option value="Online Coaching">
-                  Online Coaching
-                </option>
-
-                <option value="Youth Fitness">
-                  Youth Fitness
-                </option>
-
-                <option value="Training Packages">
-                  Training Packages
-                </option>
-
-                <option value="R&B Stretching">
-                  R&amp;B Stretching
-                </option>
-
-              </select>
-
-            </div>
-
-          </div>
-
-
-          <div class="form-field form-field-message">
-
-            <label for="training-message">
-              Tell Yoshi About Your Goals
-            </label>
-
-            <textarea
-              id="training-message"
-              name="Goals / Message"
-              rows="6"
-              required
-            ></textarea>
-
-          </div>
-
-
-          <div class="contact-form-action">
-
-            <button
-              class="btn btn-primary"
-              type="submit"
+            <form
+              class="contact-form"
+              action="mailto:Yoshi_barnes@outlook.com"
+              method="post"
+              enctype="text/plain"
             >
-              Send Inquiry
-            </button>
-
-          </div>
-
-          <p class="form-note">
-            Sending will open your email app with your
-            information ready to send to Sport My Fitness.
-          </p>
-
-        </form>
-
-      </div>
-
-    </section>
-
-  </main>
 
 
-  <!-- STRUCTURED FOOTER -->
-
-  <footer class="site-footer">
-
-    <div class="container footer-main">
+              <div class="form-grid">
 
 
-      <div class="footer-brand-column">
+                <div class="form-field">
 
-        <a
-          href="index.html"
-          class="footer-brand"
-        >
+                  <label for="training-name">
+                    Name
+                  </label>
 
-          <img
-            src="brand/sportmyfitness-logo-header.png"
-            alt="Sport My Fitness"
-          >
+                  <input
+                    id="training-name"
+                    name="Name"
+                    type="text"
+                    autocomplete="name"
+                    required
+                  >
 
-        </a>
-
-        <p class="footer-mission">
-          Empowering the body.<br>
-          Strengthening the mind.<br>
-          Changing lives.
-        </p>
-
-      </div>
+                </div>
 
 
-      <div class="footer-column">
 
-        <h3>
-          Explore
-        </h3>
+                <div class="form-field">
 
-        <a href="index.html">
-          Home
-        </a>
+                  <label for="training-email">
+                    Email
+                  </label>
 
-        <a href="programs.html">
-          Programs
-        </a>
+                  <input
+                    id="training-email"
+                    name="Email"
+                    type="email"
+                    autocomplete="email"
+                    required
+                  >
 
-        <a href="training-options.html">
-          Training Options
-        </a>
-
-        <a href="media.html">
-          Media Gallery
-        </a>
-
-        <a href="book.html">
-          Book a Session
-        </a>
-
-      </div>
+                </div>
 
 
-      <div class="footer-column">
 
-        <h3>
-          About
-        </h3>
+                <div class="form-field">
 
-        <a href="index.html#mission">
-          Our Mission
-        </a>
+                  <label for="training-phone">
+                    Phone
+                    <span>
+                      Optional
+                    </span>
+                  </label>
 
-        <a href="index.html#yoshi">
-          Meet Yoshi
-        </a>
+                  <input
+                    id="training-phone"
+                    name="Phone"
+                    type="tel"
+                    autocomplete="tel"
+                  >
 
-        <a href="#contact">
-          Contact
-        </a>
-
-      </div>
-
-
-      <div class="footer-column footer-contact">
-
-        <h3>
-          Contact
-        </h3>
-
-        <a href="tel:+14147914526">
-          414-791-4526
-        </a>
-
-        <a href="mailto:Yoshi_barnes@outlook.com">
-          Yoshi_barnes@outlook.com
-        </a>
-
-        <span>
-          4722 W Vliet St<br>
-          Milwaukee, WI 53208
-        </span>
-
-      </div>
-
-    </div>
+                </div>
 
 
-    <div class="container footer-bottom">
 
-      <p>
-        © <span id="year"></span> Sport My Fitness.
-        All rights reserved.
-      </p>
+                <div class="form-field">
 
-      <div class="footer-legal">
-
-        <span>
-          Terms of Use
-        </span>
-
-        <span aria-hidden="true">
-          |
-        </span>
-
-        <span>
-          Privacy Policy
-        </span>
-
-      </div>
-
-    </div>
-
-  </footer>
+                  <label for="training-interest">
+                    Interested In
+                  </label>
 
 
-  <script src="script.js"></script>
+                  <select
+                    id="training-interest"
+                    name="Interested In"
+                    required
+                  >
 
-</body>
-</html>
+                    <option value="Not sure yet">
+                      Not sure yet
+                    </option>
+
+                    <option value="Personal Training">
+                      Personal Training
+                    </option>
+
+                    <option value="Semi-Private Training">
+                      Semi-Private Training
+                    </option>
+
+                    <option value="Group Training">
+                      Group Training
+                    </option>
+
+                    <option value="Online Coaching">
+                      Online Coaching
+                   

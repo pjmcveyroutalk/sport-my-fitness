@@ -3,8 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+
   <title>Sport My Fitness | Personal Training in Milwaukee</title>
-  <meta name="description" content="Sport My Fitness provides personal training, semi-private training, life coaching, youth fitness, online coaching, stretching and fitness support in Milwaukee.">
+
+  <meta
+    name="description"
+    content="Sport My Fitness provides personal training, semi-private training, life coaching, youth fitness, online coaching, stretching and fitness support in Milwaukee."
+  >
+
   <meta name="theme-color" content="#03060A">
 
   <meta property="og:title" content="Sport My Fitness">
@@ -20,12 +26,21 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Rajdhani:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
 
   <link rel="stylesheet" href="brand.css">
   <link rel="stylesheet" href="styles.css">
 
   <style>
+
+    /* =========================
+       NAV
+    ========================== */
+
     @media(max-width:980px){
       .site-nav{
         gap:4px;
@@ -41,15 +56,34 @@
       }
     }
 
+
+    /* =========================
+       MISSION
+    ========================== */
+
     .smf-mission-v2{
       position:relative;
       overflow:hidden;
       border-top:1px solid rgba(7,158,143,.34);
       border-bottom:1px solid rgba(7,158,143,.24);
+
       background:
-        radial-gradient(circle at 4% 48%,rgba(7,158,143,.20),transparent 35%),
-        radial-gradient(circle at 96% 85%,rgba(7,158,143,.12),transparent 34%),
-        linear-gradient(135deg,#041214,#061719 46%,#020709);
+        radial-gradient(
+          circle at 4% 48%,
+          rgba(7,158,143,.20),
+          transparent 35%
+        ),
+        radial-gradient(
+          circle at 96% 85%,
+          rgba(7,158,143,.12),
+          transparent 34%
+        ),
+        linear-gradient(
+          135deg,
+          #041214,
+          #061719 46%,
+          #020709
+        );
     }
 
     .smf-mission-v2::before{
@@ -60,13 +94,16 @@
       left:0;
       width:5px;
       border-radius:0 999px 999px 0;
-      background:linear-gradient(
-        180deg,
-        transparent,
-        #16d9c7 18%,
-        #079e8f 82%,
-        transparent
-      );
+
+      background:
+        linear-gradient(
+          180deg,
+          transparent,
+          #16d9c7 18%,
+          #079e8f 82%,
+          transparent
+        );
+
       box-shadow:0 0 24px rgba(7,158,143,.6);
     }
 
@@ -95,13 +132,15 @@
       height:4px;
       margin:16px auto 0;
       border-radius:999px;
-      background:linear-gradient(
-        90deg,
-        transparent,
-        #079e8f 18%,
-        #079e8f 82%,
-        transparent
-      );
+
+      background:
+        linear-gradient(
+          90deg,
+          transparent,
+          #079e8f 18%,
+          #079e8f 82%,
+          transparent
+        );
     }
 
     .smf-mission-v2-points{
@@ -152,15 +191,10 @@
       line-height:1.55;
     }
 
-    /*
-      HOME PAGE PREVIEWS
 
-      Each section intentionally contains ONE example only.
-
-      There are NO artificial 01 / 02 / 03 numbers.
-
-      There is ONE routing CTA per preview section.
-    */
+    /* =========================
+       HOME PREVIEW CARDS
+    ========================== */
 
     .home-feature-card{
       width:min(720px,100%);
@@ -176,6 +210,11 @@
       margin-bottom:0;
     }
 
+
+    /* =========================
+       MEDIA PREVIEW
+    ========================== */
+
     .home-media-preview{
       width:min(720px,100%);
       margin:0 auto;
@@ -186,24 +225,26 @@
       cursor:default;
     }
 
-    /*
-      CONTACT
 
-      Contact is an inquiry destination.
-
-      Booking is separate and routes to book.html.
-    */
+    /* =========================
+       CONTACT
+    ========================== */
 
     .home-contact{
       padding:64px 0;
       border-top:1px solid rgba(7,158,143,.18);
+
       background:
         radial-gradient(
           circle at 15% 15%,
           rgba(7,158,143,.08),
           transparent 34%
         ),
-        linear-gradient(180deg,#040b0d,#020608);
+        linear-gradient(
+          180deg,
+          #040b0d,
+          #020608
+        );
     }
 
     .home-contact-inner{
@@ -228,11 +269,13 @@
       overflow:hidden;
       border:1px solid rgba(18,202,187,.20);
       border-radius:22px;
-      background:linear-gradient(
-        145deg,
-        rgba(8,21,23,.84),
-        rgba(2,7,9,.96)
-      );
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(8,21,23,.84),
+          rgba(2,7,9,.96)
+        );
     }
 
     .contact-dropdown summary{
@@ -243,7 +286,7 @@
       gap:18px;
       padding:16px 22px;
       color:#fff;
-      font-family:var(--smf-font-display);
+      font-family:"Rajdhani",sans-serif;
       font-weight:700;
       letter-spacing:.06em;
       text-transform:uppercase;
@@ -257,7 +300,7 @@
 
     .contact-dropdown summary::after{
       content:"+";
-      color:var(--smf-teal);
+      color:#12cabb;
       font-size:1.65rem;
     }
 
@@ -277,6 +320,11 @@
       box-shadow:none;
       text-align:left;
     }
+
+
+    /* =========================
+       MOBILE
+    ========================== */
 
     @media(max-width:760px){
 
@@ -359,8 +407,10 @@
         grid-template-columns:1fr;
       }
     }
+
   </style>
 </head>
+
 
 <body>
 
@@ -369,9 +419,7 @@
   </a>
 
 
-  <!-- =========================
-       HEADER
-  ========================== -->
+  <!-- HEADER -->
 
   <header class="site-header" id="top">
 
@@ -379,7 +427,7 @@
 
       <a
         class="brand"
-        href="#top"
+        href="./index.html"
         aria-label="Sport My Fitness home"
       >
         <img
@@ -411,7 +459,7 @@
         aria-label="Primary"
       >
 
-        <a href="programs.html">
+        <a href="./programs.html">
           Programs
         </a>
 
@@ -419,11 +467,11 @@
           About Yoshi
         </a>
 
-        <a href="media.html">
+        <a href="./media.html">
           Media
         </a>
 
-        <a href="training-options.html">
+        <a href="./training-options.html">
           Training Options
         </a>
 
@@ -441,9 +489,7 @@
   <main id="main">
 
 
-    <!-- =========================
-         HERO
-    ========================== -->
+    <!-- HERO -->
 
     <section class="hero">
 
@@ -464,32 +510,28 @@
             Sport My Fitness · Milwaukee
           </p>
 
-
           <h1>
             To gain, maintain, or lose it all
             <span>takes work.</span>
           </h1>
-
 
           <p class="lead">
             Training, coaching and support built around
             your goals, your body and your life.
           </p>
 
-
           <div class="hero-actions">
 
             <a
               class="btn btn-primary"
-              href="book.html"
+              href="./book.html"
             >
               Book a Session
             </a>
 
-
             <a
               class="btn btn-secondary"
-              href="programs.html"
+              href="./programs.html"
             >
               View Programs
             </a>
@@ -503,9 +545,7 @@
     </section>
 
 
-    <!-- =========================
-         MISSION
-    ========================== -->
+    <!-- MISSION -->
 
     <section
       class="smf-mission-v2"
@@ -517,7 +557,6 @@
         <p class="smf-mission-v2-title">
           Our Mission
         </p>
-
 
         <ul class="smf-mission-v2-points">
 
@@ -535,7 +574,6 @@
 
         </ul>
 
-
         <p class="smf-mission-v2-statement">
           My mission is to provide a positive and innovative
           environment that focuses on empowering, encouraging,
@@ -547,9 +585,7 @@
     </section>
 
 
-    <!-- =========================
-         PROGRAMS PREVIEW
-    ========================== -->
+    <!-- PROGRAMS PREVIEW -->
 
     <section
       class="section"
@@ -558,19 +594,16 @@
 
       <div class="container">
 
-
         <div class="section-heading">
 
           <p class="section-title">
             Programs
           </p>
 
-
           <h2>
             Support built around
             <span>your goals.</span>
           </h2>
-
 
           <p>
             Explore focused coaching designed around
@@ -581,16 +614,11 @@
         </div>
 
 
-        <!-- ONE preview only.
-             No number.
-             No duplicate internal link. -->
-
         <div class="training-preview-card home-feature-card">
 
           <h3>
             Personal &amp; Semi-Private
           </h3>
-
 
           <p>
             Focused coaching with personal attention,
@@ -601,13 +629,11 @@
         </div>
 
 
-        <!-- ONE routing CTA -->
-
         <div class="section-action">
 
           <a
             class="btn btn-primary"
-            href="programs.html"
+            href="./programs.html"
           >
             View All Programs
           </a>
@@ -619,9 +645,7 @@
     </section>
 
 
-    <!-- =========================
-         YOSHI
-    ========================== -->
+    <!-- ABOUT YOSHI -->
 
     <section
       class="section section-dark"
@@ -630,14 +654,12 @@
 
       <div class="container">
 
-
         <p class="section-title">
           Meet Yoshi Barnes
         </p>
 
 
         <div class="split">
-
 
           <div class="split-media">
 
@@ -651,11 +673,9 @@
 
           <div class="split-copy">
 
-
             <h2>
               Coaching with purpose.
             </h2>
-
 
             <p>
               Yoshi brings fitness training, strength and
@@ -702,9 +722,7 @@
     </section>
 
 
-    <!-- =========================
-         MEDIA PREVIEW
-    ========================== -->
+    <!-- MEDIA PREVIEW -->
 
     <section
       class="section media-section"
@@ -713,25 +731,15 @@
 
       <div class="container">
 
-
         <div class="section-heading">
 
           <p class="section-title">
             Local Media
           </p>
 
-
           <h2>
             Featured On
           </h2>
-
-
-          <img
-            class="tmj4-main-logo"
-            src="https://ewscripps.brightspotcdn.com/dims4/default/4d1734c/2147483647/strip/true/crop/1120x630%2B40%2B0/resize/1280x720%21/quality/90/?url=http%3A%2F%2Fewscripps-brightspot.s3.amazonaws.com%2F4b%2Fa3%2Ffb5e317d4255a3a9e8e181f7f509%2Fdownload.png"
-            alt="TMJ4"
-          >
-
 
           <p>
             Yoshi Barnes has joined TMJ4 to share
@@ -741,12 +749,9 @@
         </div>
 
 
-        <!-- ONE media example only -->
-
         <div class="home-media-preview">
 
           <div class="media-card">
-
 
             <img
               class="media-card-image"
@@ -755,9 +760,7 @@
               loading="lazy"
             >
 
-
             <div class="media-card-shade"></div>
-
 
             <span
               class="media-play"
@@ -766,13 +769,11 @@
               ▶
             </span>
 
-
             <div class="media-card-copy">
 
               <span class="media-kicker">
                 Fitness Friday
               </span>
-
 
               <h3>
                 All About Stretching
@@ -785,13 +786,11 @@
         </div>
 
 
-        <!-- ONE routing CTA -->
-
         <div class="section-action">
 
           <a
             class="btn btn-primary"
-            href="media.html"
+            href="./media.html"
           >
             View All Media
           </a>
@@ -803,9 +802,7 @@
     </section>
 
 
-    <!-- =========================
-         TRAINING OPTIONS PREVIEW
-    ========================== -->
+    <!-- TRAINING OPTIONS PREVIEW -->
 
     <section
       class="section section-dark"
@@ -814,18 +811,15 @@
 
       <div class="container">
 
-
         <div class="section-heading">
 
           <p class="section-title">
             Training Options
           </p>
 
-
           <h2 class="training-heading-white">
             Choose how you want to move forward.
           </h2>
-
 
           <p>
             Compare current formats, pricing and
@@ -835,16 +829,11 @@
         </div>
 
 
-        <!-- ONE preview only.
-             No number.
-             No duplicate Explore link. -->
-
         <div class="training-preview-card home-feature-card">
 
           <h3>
             Personal Training
           </h3>
-
 
           <p>
             One-on-one coaching centered on your goals,
@@ -854,13 +843,11 @@
         </div>
 
 
-        <!-- ONE routing CTA -->
-
         <div class="section-action">
 
           <a
             class="btn btn-primary"
-            href="training-options.html"
+            href="./training-options.html"
           >
             View All Training Options
           </a>
@@ -872,34 +859,24 @@
     </section>
 
 
-    <!-- =========================
-         FINAL BOOKING CTA
-    ========================== -->
+    <!-- FINAL BOOKING CTA -->
 
     <section class="final-cta">
 
       <div class="container final-cta-centered">
 
-
         <p class="section-title">
           Ready to Get Started?
         </p>
 
-
         <h2 class="final-cta-heading">
-
           Your strength. Your life.
-
-          <span>
-            Your time is now.
-          </span>
-
+          <span>Your time is now.</span>
         </h2>
-
 
         <a
           class="btn btn-primary final-book-button"
-          href="book.html"
+          href="./book.html"
         >
           Book a Session
         </a>
@@ -909,9 +886,7 @@
     </section>
 
 
-    <!-- =========================
-         CONTACT / INQUIRY
-    ========================== -->
+    <!-- CONTACT -->
 
     <section
       class="home-contact"
@@ -920,16 +895,13 @@
 
       <div class="home-contact-inner">
 
-
         <p class="section-title">
           Have a Question?
         </p>
 
-
         <h2>
           Connect with Yoshi.
         </h2>
-
 
         <p class="home-contact-copy">
           Not sure which option fits your goals?
@@ -940,7 +912,6 @@
 
         <details class="contact-dropdown">
 
-
           <summary>
             Send Yoshi a Message
           </summary>
@@ -948,14 +919,12 @@
 
           <div class="contact-dropdown-body">
 
-
             <form
               class="contact-form"
               action="mailto:Yoshi_barnes@outlook.com"
               method="post"
               enctype="text/plain"
             >
-
 
               <div class="form-grid">
 
@@ -1016,7 +985,6 @@
                   <label for="contact-interest">
                     Interested In
                   </label>
-
 
                   <select
                     id="contact-interest"
@@ -1100,10 +1068,9 @@
 
 
               <p class="form-note">
-                Sending will open your email app with the
-                message ready to send to Sport My Fitness.
+                Sending will open your email app with your
+                information ready to send to Sport My Fitness.
               </p>
-
 
             </form>
 
@@ -1115,34 +1082,28 @@
 
     </section>
 
+
   </main>
 
 
-  <!-- =========================
-       FOOTER
-  ========================== -->
+  <!-- FOOTER -->
 
   <footer class="site-footer">
-
 
     <div class="container footer-main">
 
 
       <div class="footer-brand-column">
 
-
         <a
-          href="#top"
+          href="./index.html"
           class="footer-brand"
         >
-
           <img
             src="brand/sportmyfitness-logo-header.png"
             alt="Sport My Fitness"
           >
-
         </a>
-
 
         <p class="footer-mission">
           Empowering the body.<br>
@@ -1159,23 +1120,23 @@
           Explore
         </h3>
 
-        <a href="#top">
+        <a href="./index.html">
           Home
         </a>
 
-        <a href="programs.html">
+        <a href="./programs.html">
           Programs
         </a>
 
-        <a href="training-options.html">
+        <a href="./training-options.html">
           Training Options
         </a>
 
-        <a href="media.html">
+        <a href="./media.html">
           Media Gallery
         </a>
 
-        <a href="book.html">
+        <a href="./book.html">
           Book a Session
         </a>
 
@@ -1232,13 +1193,10 @@
 
     <div class="container footer-bottom">
 
-
       <p>
-        © <span id="year"></span>
-        Sport My Fitness.
-        All rights reserved.
+        © <span id="year">2026</span>
+        Sport My Fitness. All rights reserved.
       </p>
-
 
       <div class="footer-legal">
 

@@ -366,9 +366,14 @@
 
 
     .site-footer .footer-contact a{
-      overflow-wrap:anywhere;
+      overflow-wrap:normal;
 
-      word-break:break-word;
+      word-break:normal;
+    }
+
+
+    .footer-email{
+      white-space:nowrap;
     }
 
 
@@ -505,14 +510,12 @@
     }
 
 
-    .footer-social-icon img{
+    .footer-social-icon svg{
       width:25px;
 
       height:25px;
 
       display:block;
-
-      object-fit:contain;
     }
 
 
@@ -524,6 +527,31 @@
       font-size:.68rem;
 
       line-height:1.2;
+    }
+
+
+    .facebook-icon{
+      color:#1877f2;
+    }
+
+
+    .instagram-icon{
+      color:#e4405f;
+    }
+
+
+    .tiktok-icon{
+      color:#ffffff;
+    }
+
+
+    .linkedin-icon{
+      color:#0a66c2;
+    }
+
+
+    .google-icon{
+      color:#4285f4;
     }
 
 
@@ -608,6 +636,29 @@
       }
 
 
+      .footer-contact{
+        width:100%;
+      }
+
+
+      .footer-email{
+        display:inline-block;
+
+        max-width:100%;
+
+        white-space:normal;
+
+        overflow-wrap:anywhere;
+
+        font-size:
+          clamp(
+            .86rem,
+            4vw,
+            1rem
+          );
+      }
+
+
       .footer-social{
         padding-bottom:24px;
       }
@@ -638,7 +689,7 @@
       }
 
 
-      .footer-social-icon img{
+      .footer-social-icon svg{
         width:23px;
 
         height:23px;
@@ -1234,7 +1285,10 @@
         </a>
 
 
-        <a href="mailto:Yoshi_barnes@outlook.com">
+        <a
+          class="footer-email"
+          href="mailto:Yoshi_barnes@outlook.com"
+        >
           Yoshi_barnes@outlook.com
         </a>
 
@@ -1277,12 +1331,26 @@
           aria-label="Sport My Fitness on Facebook"
         >
 
-          <span class="footer-social-icon">
+          <span class="footer-social-icon facebook-icon">
 
-            <img
-              src="https://cdn.simpleicons.org/facebook/1877F2"
-              alt=""
+            <svg
+              viewBox="0 0 24 24"
+              aria-hidden="true"
             >
+
+              <circle
+                cx="12"
+                cy="12"
+                r="11"
+                fill="currentColor"
+              ></circle>
+
+              <path
+                d="M13.45 20v-7h2.35l.35-2.73h-2.7V8.53c0-.79.22-1.33 1.36-1.33h1.45V4.76c-.25-.03-1.11-.11-2.11-.11-2.09 0-3.52 1.27-3.52 3.62v2h-2.36V13h2.36v7h2.82z"
+                fill="#fff"
+              ></path>
+
+            </svg>
 
           </span>
 
@@ -1301,12 +1369,39 @@
           aria-label="Sport My Fitness on Instagram"
         >
 
-          <span class="footer-social-icon">
+          <span class="footer-social-icon instagram-icon">
 
-            <img
-              src="https://cdn.simpleicons.org/instagram/E4405F"
-              alt=""
+            <svg
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
             >
+
+              <rect
+                x="3"
+                y="3"
+                width="18"
+                height="18"
+                rx="5"
+              ></rect>
+
+              <circle
+                cx="12"
+                cy="12"
+                r="4"
+              ></circle>
+
+              <circle
+                cx="17.4"
+                cy="6.6"
+                r="1"
+                fill="currentColor"
+                stroke="none"
+              ></circle>
+
+            </svg>
 
           </span>
 
@@ -1325,12 +1420,19 @@
           aria-label="Yoshi Barnes on TikTok"
         >
 
-          <span class="footer-social-icon">
+          <span class="footer-social-icon tiktok-icon">
 
-            <img
-              src="https://cdn.simpleicons.org/tiktok/FFFFFF"
-              alt=""
+            <svg
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              fill="currentColor"
             >
+
+              <path
+                d="M14 3h3.2c.25 1.7 1.2 3.15 2.8 4.05V10c-1.1-.08-2.1-.4-3-.93V15a6 6 0 1 1-5-5.92v3.08A3 3 0 1 0 14 15V3z"
+              ></path>
+
+            </svg>
 
           </span>
 
@@ -1349,12 +1451,43 @@
           aria-label="Yoshi Barnes on LinkedIn"
         >
 
-          <span class="footer-social-icon">
+          <span class="footer-social-icon linkedin-icon">
 
-            <img
-              src="https://cdn.simpleicons.org/linkedin/0A66C2"
-              alt=""
+            <svg
+              viewBox="0 0 24 24"
+              aria-hidden="true"
             >
+
+              <rect
+                x="2"
+                y="2"
+                width="20"
+                height="20"
+                rx="3"
+                fill="currentColor"
+              ></rect>
+
+              <circle
+                cx="7"
+                cy="8"
+                r="1.5"
+                fill="#fff"
+              ></circle>
+
+              <rect
+                x="5.6"
+                y="10"
+                width="2.8"
+                height="8"
+                fill="#fff"
+              ></rect>
+
+              <path
+                d="M10.5 10h2.7v1.1c.7-.9 1.7-1.5 3.2-1.5 2.4 0 3.6 1.5 3.6 4.4v4h-2.9v-3.6c0-1.5-.5-2.4-1.7-2.4-1.4 0-2 1-2 2.7V18h-2.9v-8z"
+                fill="#fff"
+              ></path>
+
+            </svg>
 
           </span>
 
@@ -1370,15 +1503,44 @@
           href="https://www.google.com/maps/search/?api=1&query=Sport+My+Fitness+4722+W+Vliet+St+Milwaukee+WI+53208"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Sport My Fitness on Google Maps"
+          aria-label="Sport My Fitness on Google"
         >
 
-          <span class="footer-social-icon">
+          <span class="footer-social-icon google-icon">
 
-            <img
-              src="https://cdn.simpleicons.org/googlemaps/4285F4"
-              alt=""
+            <svg
+              viewBox="0 0 24 24"
+              aria-hidden="true"
             >
+
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+                fill="#fff"
+              ></circle>
+
+              <path
+                d="M18.8 12.2c0-.5-.05-.96-.13-1.4H12v2.66h3.82a3.27 3.27 0 0 1-1.42 2.15v1.78h2.3c1.35-1.24 2.1-3.08 2.1-5.19z"
+                fill="#4285F4"
+              ></path>
+
+              <path
+                d="M12 19c1.93 0 3.55-.64 4.73-1.74l-2.3-1.78c-.64.43-1.46.68-2.43.68-1.86 0-3.44-1.26-4-2.95H5.62v1.84A7.15 7.15 0 0 0 12 19z"
+                fill="#34A853"
+              ></path>
+
+              <path
+                d="M8 13.21A4.35 4.35 0 0 1 7.77 12c0-.42.08-.83.22-1.21V8.95H5.62A7 7 0 0 0 5 12c0 1.1.26 2.14.62 3.05L8 13.21z"
+                fill="#FBBC05"
+              ></path>
+
+              <path
+                d="M12 7.84c1.05 0 1.99.36 2.73 1.07l2.05-2.05C15.54 5.7 13.93 5 12 5a7.15 7.15 0 0 0-6.38 3.95L8 10.79c.56-1.69 2.14-2.95 4-2.95z"
+                fill="#EA4335"
+              ></path>
+
+            </svg>
 
           </span>
 

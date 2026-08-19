@@ -1,414 +1,1761 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Training Options | Sport My Fitness Milwaukee</title>
-<meta name="description" content="Explore Sport My Fitness training options, pricing, group fitness, online coaching, kids training and stretching in Milwaukee.">
-<meta name="theme-color" content="#03060A">
-<link rel="icon" href="brand/favicon.ico">
-<link rel="apple-touch-icon" href="brand/apple-touch-icon.png">
-<link rel="manifest" href="site.webmanifest">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="brand.css">
-<link rel="stylesheet" href="styles.css">
 
-<style>
-.training-contact{
-  padding:60px 0 64px;
-  border-top:1px solid rgba(7,158,143,.18);
-  background:radial-gradient(circle at 15% 15%,rgba(7,158,143,.08),transparent 34%),linear-gradient(180deg,#040b0d,#020608);
-}
-.training-contact-inner{
-  width:min(760px,calc(100% - 34px));
-  margin:auto;
-  text-align:center;
-}
-.training-contact h2{
-  font-size:clamp(2.7rem,6vw,4.6rem);
-}
-.training-contact-copy{
-  max-width:620px;
-  margin:0 auto 28px;
-  color:#cbd4d6;
-}
-.contact-dropdown{
-  overflow:hidden;
-  border:1px solid rgba(18,202,187,.20);
-  border-radius:22px;
-  background:linear-gradient(145deg,rgba(8,21,23,.84),rgba(2,7,9,.96));
-}
-.contact-dropdown summary{
-  min-height:64px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:16px 22px;
-  color:#fff;
-  font-family:var(--smf-font-display);
-  font-weight:700;
-  text-transform:uppercase;
-  cursor:pointer;
-  list-style:none;
-}
-.contact-dropdown summary::-webkit-details-marker{display:none}
-.contact-dropdown summary::after{
-  content:"+";
-  color:var(--smf-teal);
-  font-size:1.65rem;
-}
-.contact-dropdown[open] summary::after{content:"−"}
-.contact-dropdown-body{
-  padding:6px 22px 24px;
-  border-top:1px solid rgba(18,202,187,.12);
-}
-.training-contact .contact-form{
-  padding:22px 0 0;
-  border:0;
-  background:none;
-  box-shadow:none;
-  text-align:left;
-}
-@media(max-width:760px){
-  .training-contact{padding:46px 0 48px}
-  .training-contact h2{font-size:clamp(2.45rem,10vw,3.25rem)}
-  .contact-dropdown{border-radius:20px}
-  .contact-dropdown summary{min-height:58px;padding:14px 18px}
-  .contact-dropdown-body{padding:4px 18px 20px}
-  .training-contact .form-grid{grid-template-columns:1fr}
-}
-</style>
+<head>
+
+  <meta charset="utf-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width,initial-scale=1"
+  >
+
+  <title>
+    Training Options | Sport My Fitness Milwaukee
+  </title>
+
+  <meta
+    name="description"
+    content="Explore Sport My Fitness training options, pricing, group fitness, online coaching, kids training and stretching in Milwaukee."
+  >
+
+  <meta
+    name="theme-color"
+    content="#03060A"
+  >
+
+  <link
+    rel="icon"
+    href="brand/favicon.ico"
+  >
+
+  <link
+    rel="apple-touch-icon"
+    href="brand/apple-touch-icon.png"
+  >
+
+  <link
+    rel="manifest"
+    href="site.webmanifest"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Rajdhani:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="brand.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="styles.css"
+  >
+
+
+  <style>
+
+    /* ========================================
+       CONTACT SECTION
+    ======================================== */
+
+    .training-contact{
+      padding:
+        60px 0 64px;
+
+      border-top:
+        1px solid rgba(7,158,143,.18);
+
+      background:
+        radial-gradient(
+          circle at 15% 15%,
+          rgba(7,158,143,.08),
+          transparent 34%
+        ),
+        linear-gradient(
+          180deg,
+          #040b0d,
+          #020608
+        );
+    }
+
+
+    .training-contact-inner{
+      width:
+        min(
+          760px,
+          calc(100% - 34px)
+        );
+
+      margin:auto;
+
+      text-align:center;
+    }
+
+
+    .training-contact h2{
+      font-size:
+        clamp(
+          2.7rem,
+          6vw,
+          4.6rem
+        );
+    }
+
+
+    .training-contact-copy{
+      max-width:620px;
+
+      margin:
+        0 auto 28px;
+
+      color:#cbd4d6;
+    }
+
+
+    .contact-dropdown{
+      overflow:hidden;
+
+      border:
+        1px solid rgba(18,202,187,.20);
+
+      border-radius:22px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(8,21,23,.84),
+          rgba(2,7,9,.96)
+        );
+    }
+
+
+    .contact-dropdown summary{
+      min-height:64px;
+
+      display:flex;
+
+      align-items:center;
+
+      justify-content:space-between;
+
+      padding:
+        16px 22px;
+
+      color:#fff;
+
+      font-family:
+        var(--smf-font-display);
+
+      font-weight:700;
+
+      text-transform:uppercase;
+
+      cursor:pointer;
+
+      list-style:none;
+    }
+
+
+    .contact-dropdown summary::-webkit-details-marker{
+      display:none;
+    }
+
+
+    .contact-dropdown summary::after{
+      content:"+";
+
+      color:
+        var(--smf-teal);
+
+      font-size:1.65rem;
+    }
+
+
+    .contact-dropdown[open] summary::after{
+      content:"−";
+    }
+
+
+    .contact-dropdown-body{
+      padding:
+        6px 22px 24px;
+
+      border-top:
+        1px solid rgba(18,202,187,.12);
+    }
+
+
+    .training-contact .contact-form{
+      padding:
+        22px 0 0;
+
+      border:0;
+
+      background:none;
+
+      box-shadow:none;
+
+      text-align:left;
+    }
+
+
+    /* ========================================
+       STANDARD MOBILE NAV
+    ======================================== */
+
+    @media(max-width:980px){
+
+      .site-nav{
+        position:fixed !important;
+
+        top:82px !important;
+        left:0 !important;
+        right:0 !important;
+        bottom:0 !important;
+
+        width:100% !important;
+
+        height:
+          calc(100dvh - 82px);
+
+        z-index:999 !important;
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+        gap:4px !important;
+
+        padding:
+          22px 22px 34px !important;
+
+        overflow-y:auto;
+
+        border:0 !important;
+
+        border-radius:0 !important;
+
+        background:
+          linear-gradient(
+            180deg,
+            #020609 0%,
+            #020609 72%,
+            #031011 100%
+          ) !important;
+
+        box-shadow:none !important;
+      }
+
+
+      .site-nav:not(.open){
+        display:none !important;
+      }
+
+
+      .site-nav.open{
+        display:flex !important;
+      }
+
+
+      .site-nav a{
+        display:flex;
+
+        align-items:center;
+
+        min-height:54px !important;
+
+        padding:
+          10px 12px !important;
+
+        border:0 !important;
+
+        border-radius:10px;
+
+        background:
+          transparent !important;
+
+        color:#fff;
+
+        font-size:1rem;
+
+        text-align:left !important;
+      }
+
+
+      .site-nav a:hover,
+      .site-nav a:focus{
+        color:
+          var(--smf-teal);
+
+        background:
+          rgba(7,158,143,.05) !important;
+      }
+
+
+      .site-nav .nav-cta,
+      .site-nav a[href="book.html"],
+      .site-nav a[href="./book.html"]{
+        display:none !important;
+      }
+
+    }
+
+
+    /* ========================================
+       STANDARD FOOTER
+    ======================================== */
+
+    .site-footer .footer-brand-column{
+      align-self:start;
+    }
+
+
+    .site-footer .footer-brand{
+      margin-bottom:0;
+    }
+
+
+    .site-footer .footer-contact a{
+      overflow-wrap:anywhere;
+
+      word-break:break-word;
+    }
+
+
+    /* ========================================
+       SOCIAL / BUSINESS ROW
+    ======================================== */
+
+    .footer-social{
+      width:
+        min(
+          1160px,
+          calc(100% - 34px)
+        );
+
+      margin:
+        0 auto;
+
+      padding:
+        4px 0 30px;
+    }
+
+
+    .footer-social-divider{
+      width:100%;
+
+      height:1px;
+
+      margin-bottom:26px;
+
+      background:
+        linear-gradient(
+          90deg,
+          transparent,
+          rgba(18,202,187,.25),
+          transparent
+        );
+    }
+
+
+    .footer-social-title{
+      margin:
+        0 0 18px;
+
+      color:#fff;
+
+      font-family:
+        "Rajdhani",
+        sans-serif;
+
+      font-size:1rem;
+
+      font-weight:700;
+
+      letter-spacing:.08em;
+
+      text-align:center;
+
+      text-transform:uppercase;
+    }
+
+
+    .footer-social-links{
+      display:flex;
+
+      align-items:flex-start;
+
+      justify-content:center;
+
+      flex-wrap:wrap;
+
+      gap:18px;
+    }
+
+
+    .footer-social-link{
+      width:72px;
+
+      display:flex;
+
+      flex-direction:column;
+
+      align-items:center;
+
+      gap:8px;
+
+      color:#cbd4d6;
+
+      text-align:center;
+
+      text-decoration:none;
+    }
+
+
+    .footer-social-link:hover,
+    .footer-social-link:focus{
+      color:#fff;
+    }
+
+
+    .footer-social-icon{
+      width:46px;
+
+      height:46px;
+
+      display:grid;
+
+      place-items:center;
+
+      border:
+        1px solid rgba(18,202,187,.34);
+
+      border-radius:13px;
+
+      background:
+        rgba(3,10,12,.78);
+
+      transition:
+        transform .2s ease,
+        border-color .2s ease,
+        box-shadow .2s ease;
+    }
+
+
+    .footer-social-link:hover .footer-social-icon,
+    .footer-social-link:focus .footer-social-icon{
+      transform:
+        translateY(-2px);
+
+      border-color:
+        rgba(18,202,187,.78);
+
+      box-shadow:
+        0 0 18px rgba(18,202,187,.13);
+    }
+
+
+    .footer-social-icon img{
+      width:25px;
+
+      height:25px;
+
+      display:block;
+
+      object-fit:contain;
+    }
+
+
+    .footer-social-label{
+      font-family:
+        "Montserrat",
+        sans-serif;
+
+      font-size:.68rem;
+
+      line-height:1.2;
+    }
+
+
+    /* ========================================
+       MOBILE
+    ======================================== */
+
+    @media(max-width:760px){
+
+      .site-nav{
+        top:85px !important;
+
+        height:
+          calc(100dvh - 85px);
+
+        padding:
+          18px 20px 34px !important;
+      }
+
+
+      .site-nav a{
+        min-height:55px !important;
+
+        padding:
+          9px 12px !important;
+
+        font-size:.95rem;
+      }
+
+
+      .training-contact{
+        padding:
+          46px 0 48px;
+      }
+
+
+      .training-contact h2{
+        font-size:
+          clamp(
+            2.45rem,
+            10vw,
+            3.25rem
+          );
+      }
+
+
+      .contact-dropdown{
+        border-radius:20px;
+      }
+
+
+      .contact-dropdown summary{
+        min-height:58px;
+
+        padding:
+          14px 18px;
+      }
+
+
+      .contact-dropdown-body{
+        padding:
+          4px 18px 20px;
+      }
+
+
+      .training-contact .form-grid{
+        grid-template-columns:1fr;
+      }
+
+
+      .footer-main{
+        padding-top:40px;
+      }
+
+
+      .footer-brand{
+        margin-bottom:0;
+      }
+
+
+      .footer-social{
+        padding-bottom:24px;
+      }
+
+
+      .footer-social-divider{
+        margin-bottom:22px;
+      }
+
+
+      .footer-social-links{
+        gap:
+          14px 12px;
+      }
+
+
+      .footer-social-link{
+        width:52px;
+      }
+
+
+      .footer-social-icon{
+        width:42px;
+
+        height:42px;
+
+        border-radius:12px;
+      }
+
+
+      .footer-social-icon img{
+        width:23px;
+
+        height:23px;
+      }
+
+
+      .footer-social-label{
+        display:none;
+      }
+
+    }
+
+  </style>
+
 </head>
+
 
 <body>
 
-<a class="skip-link" href="#main">Skip to content</a>
 
-<header class="site-header" id="top">
-  <div class="header-inner">
-
-    <a class="brand" href="index.html" aria-label="Sport My Fitness home">
-      <img src="brand/sportmyfitness-logo-header.png" alt="Sport My Fitness">
-    </a>
-
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-      <span></span><span></span><span></span>
-      <span class="sr-only">Open menu</span>
-    </button>
-
-    <nav class="site-nav" id="site-nav" aria-label="Primary">
-      <a href="programs.html">Programs</a>
-      <a href="index.html#yoshi">About Yoshi</a>
-      <a href="media.html">Media</a>
-      <a href="training-options.html">Training Options</a>
-      <a href="#footer-contact">Contact</a>
-      <a class="nav-cta" href="book.html">Book a Session</a>
-    </nav>
-
-  </div>
-</header>
-
-<main id="main">
-
-<section class="options-hero">
-  <div class="container options-hero-inner">
-
-    <p class="section-title">Training Options</p>
-
-    <h1>
-      Find the training that
-      <span>fits your goal.</span>
-    </h1>
-
-    <p>
-      From focused one-on-one coaching to group, online,
-      youth and specialty sessions, choose the training
-      experience that works for you.
-    </p>
-
-    <a class="text-link back-link" href="index.html">← Back to Home</a>
-
-  </div>
-</section>
+  <a
+    class="skip-link"
+    href="#main"
+  >
+    Skip to content
+  </a>
 
 
-<section class="options-section">
-<div class="container">
-<div class="options-grid">
+  <!-- ========================================
+       HEADER
+  ======================================== -->
 
-<article class="option-card" id="semi-private">
-  <div class="option-image">
-    <img src="https://static.wixstatic.com/media/697b1a_b225f74f1bd44f6ebeb10c5293cf7ae7~mv2.jpg/v1/fill/w_900,h_700,al_c,q_90/697b1a_b225f74f1bd44f6ebeb10c5293cf7ae7~mv2.jpg" alt="Sport My Fitness semi-private training clients">
-  </div>
-  <div class="option-content">
-    <p class="option-label">Train Together</p>
-    <h2>Semi-Private Sessions</h2>
-    <p>Focused coaching in a smaller shared training environment with accountability and support.</p>
-    <div class="option-meta">
-      <span><strong>$50</strong>Price</span>
-      <span><strong>1 hr</strong>Duration</span>
-    </div>
-    <a class="btn btn-primary" href="book.html#semi-private">Start Semi-Private</a>
-  </div>
-</article>
+  <header
+    class="site-header"
+    id="top"
+  >
+
+    <div class="header-inner">
 
 
-<article class="option-card" id="one-on-one">
-  <div class="option-image">
-    <img src="https://static.wixstatic.com/media/697b1a_d7e253c37e9644fda7ae22ce0ba9102a~mv2.jpg/v1/crop/x_43,y_24,w_606,h_515/fill/w_1000,h_760,al_c,q_90/website%20pic%20C_edited.jpg" alt="Yoshi Barnes coaching a client">
-  </div>
-  <div class="option-content">
-    <p class="option-label">Personal Training</p>
-    <h2>Private One-on-One</h2>
-    <p>Individual coaching centered on your goals, movement, progress and accountability.</p>
-    <div class="option-meta">
-      <span><strong>$60</strong>Price</span>
-      <span><strong>1 hr</strong>Duration</span>
-    </div>
-    <a class="btn btn-primary" href="book.html#personal-training">Start One-on-One</a>
-  </div>
-</article>
-
-
-<article class="option-card" id="summer-group">
-  <div class="option-image">
-    <img src="https://static.wixstatic.com/media/697b1a_78a666c4bf1b4ebea1c7963cae0c7f7c~mv2.jpg/v1/fill/w_1000,h_700,al_c,q_90/SMF%20web%20pic%202.jpg" alt="Sport My Fitness group training">
-  </div>
-  <div class="option-content">
-    <p class="option-label">Group Training</p>
-    <h2>Summer Group Class</h2>
-    <p>Train alongside others with movement, encouragement and consistency.</p>
-    <div class="option-meta">
-      <span><strong>$10</strong>Price</span>
-      <span><strong>1 hr</strong>Duration</span>
-    </div>
-    <a class="btn btn-primary" href="book.html#group-training">Ask About Group Training</a>
-  </div>
-</article>
-
-
-<article class="option-card" id="online-coaching">
-  <div class="option-image">
-    <img src="https://static.wixstatic.com/media/697b1a_72f6986ebf3146ad8ddd2fe2e44f8297~mv2.jpg/v1/fill/w_900,h_760,al_c,q_90/website%20pic%20B_JPG.jpg" alt="Yoshi Barnes">
-  </div>
-  <div class="option-content">
-    <p class="option-label">Train Anywhere</p>
-    <h2>Online Fitness Coach</h2>
-    <p>Stay connected to Sport My Fitness coaching when schedule or location calls for a remote option.</p>
-    <div class="option-meta">
-      <span><strong>$50</strong>Price</span>
-      <span><strong>45 min</strong>Duration</span>
-    </div>
-    <a class="btn btn-primary" href="book.html#online-coaching">Start Online Coaching</a>
-  </div>
-</article>
-
-
-<article class="option-card" id="kid-training">
-  <div class="option-image">
-    <img src="https://static.wixstatic.com/media/697b1a_b225f74f1bd44f6ebeb10c5293cf7ae7~mv2.jpg/v1/fill/w_1000,h_760,al_c,q_90/697b1a_b225f74f1bd44f6ebeb10c5293cf7ae7~mv2.jpg" alt="Sport My Fitness youth fitness">
-  </div>
-  <div class="option-content">
-    <p class="option-label">Youth Fitness</p>
-    <h2>Kid Training Camp</h2>
-    <p>Youth-focused training built around movement, confidence, discipline and healthy habits.</p>
-    <div class="option-meta option-meta-single">
-      <span><strong>6 classes</strong>$125</span>
-    </div>
-    <a class="btn btn-primary" href="book.html#youth-fitness">Ask About Youth Training</a>
-  </div>
-</article>
-
-
-<article class="option-card" id="packages">
-  <div class="option-image">
-    <img src="https://static.wixstatic.com/media/697b1a_72f6986ebf3146ad8ddd2fe2e44f8297~mv2.jpg/v1/fill/w_1000,h_760,al_c,q_90/website%20pic%20B_JPG.jpg" alt="Sport My Fitness training packages">
-  </div>
-  <div class="option-content">
-    <p class="option-label">Training Plans</p>
-    <h2>Packages</h2>
-    <p>Explore available package options for a more consistent training plan.</p>
-    <div class="option-meta option-meta-single">
-      <span><strong>Options vary</strong>Ask Yoshi about current packages</span>
-    </div>
-    <a class="btn btn-primary" href="book.html#packages">Ask About Packages</a>
-  </div>
-</article>
-
-
-<article class="option-card option-card-featured" id="rb-stretching">
-  <div class="option-image">
-    <img src="https://static.wixstatic.com/media/697b1a_018fd75abace463ab0a1bac0d3cfdd82~mv2.jpeg/v1/crop/x_134,y_430,w_1020,h_932/fill/w_1000,h_760,al_c,q_90/website%20pic.jpeg" alt="Mobility and stretching training">
-  </div>
-  <div class="option-content">
-    <p class="option-label">Mobility &amp; Recovery</p>
-    <h2>R&amp;B Stretching Session</h2>
-    <p>Dedicated stretching and mobility work in a focused Sport My Fitness session.</p>
-    <div class="option-meta option-meta-single">
-      <span><strong>$20</strong>Per session</span>
-    </div>
-    <a class="btn btn-primary" href="book.html#stretching">Start Stretching</a>
-  </div>
-</article>
-
-</div>
-</div>
-</section>
-
-
-<section class="training-contact" id="contact">
-<div class="training-contact-inner">
-
-  <p class="section-title">Not Sure Yet?</p>
-
-  <h2>
-    Talk with <span>Yoshi.</span>
-  </h2>
-
-  <p class="training-contact-copy">
-    Tell Yoshi what you're working toward and she can
-    help you determine the best place to start.
-  </p>
-
-  <details class="contact-dropdown">
-
-    <summary>Send Yoshi a Message</summary>
-
-    <div class="contact-dropdown-body">
-
-      <form
-        class="contact-form"
-        action="mailto:Yoshi_barnes@outlook.com"
-        method="post"
-        enctype="text/plain"
+      <a
+        class="brand"
+        href="index.html"
+        aria-label="Sport My Fitness home"
       >
 
-        <div class="form-grid">
+        <img
+          src="brand/sportmyfitness-logo-header.png"
+          alt="Sport My Fitness"
+        >
 
-          <div class="form-field">
-            <label for="training-name">Name</label>
-            <input id="training-name" name="Name" type="text" required>
-          </div>
+      </a>
 
-          <div class="form-field">
-            <label for="training-email">Email</label>
-            <input id="training-email" name="Email" type="email" required>
-          </div>
 
-          <div class="form-field">
-            <label for="training-phone">Phone <span>Optional</span></label>
-            <input id="training-phone" name="Phone" type="tel">
-          </div>
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-nav"
+      >
 
-          <div class="form-field">
-            <label for="training-interest">Interested In</label>
+        <span></span>
+        <span></span>
+        <span></span>
 
-            <select id="training-interest" name="Interested In" required>
-              <option value="Not sure yet">Not sure yet</option>
-              <option value="Personal Training">Personal Training</option>
-              <option value="Semi-Private Training">Semi-Private Training</option>
-              <option value="Group Training">Group Training</option>
-              <option value="Online Coaching">Online Coaching</option>
-              <option value="Youth Fitness">Youth Fitness</option>
-              <option value="Training Packages">Training Packages</option>
-              <option value="R&B Stretching">R&amp;B Stretching</option>
-              <option value="Rehab Tech">Rehab Tech</option>
-              <option value="Life Coaching / Training">Life Coaching / Training</option>
-            </select>
-          </div>
+        <span class="sr-only">
+          Open menu
+        </span>
 
-        </div>
+      </button>
 
-        <div class="form-field form-field-message">
-          <label for="training-message">Tell Yoshi About Your Goals</label>
-          <textarea id="training-message" name="Goals / Message" rows="6" required></textarea>
-        </div>
 
-        <div class="contact-form-action">
-          <button class="btn btn-primary" type="submit">Send Inquiry</button>
-        </div>
+      <nav
+        class="site-nav"
+        id="site-nav"
+        aria-label="Primary"
+      >
 
-        <p class="form-note">
-          Sending will open your email app with your
-          information ready to send to Sport My Fitness.
-        </p>
+        <a href="programs.html">
+          Programs
+        </a>
 
-      </form>
+
+        <a href="index.html#yoshi">
+          About Yoshi
+        </a>
+
+
+        <a href="media.html">
+          Media
+        </a>
+
+
+        <a href="training-options.html">
+          Training Options
+        </a>
+
+
+        <a href="#contact">
+          Contact Yoshi
+        </a>
+
+      </nav>
 
     </div>
-  </details>
 
-</div>
-</section>
-
-</main>
+  </header>
 
 
-<footer class="site-footer">
-
-<div class="container footer-main">
-
-  <div class="footer-brand-column">
-    <a href="index.html" class="footer-brand">
-      <img src="brand/sportmyfitness-logo-header.png" alt="Sport My Fitness">
-    </a>
-
-    <p class="footer-mission">
-      Empowering the body.<br>
-      Strengthening the mind.<br>
-      Changing lives.
-    </p>
-  </div>
+  <main id="main">
 
 
-  <div class="footer-column">
-    <h3>Explore</h3>
-    <a href="index.html">Home</a>
-    <a href="programs.html">Programs</a>
-    <a href="training-options.html">Training Options</a>
-    <a href="media.html">Media Gallery</a>
-    <a href="book.html">Book a Session</a>
-  </div>
+    <!-- ========================================
+         HERO
+    ======================================== -->
+
+    <section class="options-hero">
+
+      <div
+        class="container options-hero-inner"
+      >
 
 
-  <div class="footer-column">
-    <h3>About</h3>
-    <a href="index.html#mission">Our Mission</a>
-    <a href="index.html#yoshi">Meet Yoshi</a>
-    <a href="#contact">Message Yoshi</a>
-  </div>
+        <p class="section-title">
+          Training Options
+        </p>
 
 
-  <div class="footer-column footer-contact" id="footer-contact">
-    <h3>Contact</h3>
-    <a href="tel:+14147914526">414-791-4526</a>
-    <a href="mailto:Yoshi_barnes@outlook.com">Yoshi_barnes@outlook.com</a>
-    <span>4722 W Vliet St<br>Milwaukee, WI 53208</span>
-  </div>
+        <h1>
 
-</div>
+          Find the training that
+
+          <span>
+            fits your goal.
+          </span>
+
+        </h1>
 
 
-<div class="container footer-bottom">
+        <p>
 
-  <p>
-    © <span id="year"></span>
-    Sport My Fitness. All rights reserved.
-  </p>
+          From focused one-on-one coaching to group, online,
+          youth and specialty sessions, choose the training
+          experience that works for you.
 
-  <div class="footer-legal">
-    <span>Terms of Use</span>
-    <span aria-hidden="true">|</span>
-    <span>Privacy Policy</span>
-  </div>
+        </p>
 
-</div>
 
-</footer>
+        <a
+          class="text-link back-link"
+          href="index.html"
+        >
+          ← Back to Home
+        </a>
 
-<script src="script.js"></script>
+
+      </div>
+
+    </section>
+
+
+    <!-- ========================================
+         TRAINING OPTIONS
+    ======================================== -->
+
+    <section class="options-section">
+
+      <div class="container">
+
+        <div class="options-grid">
+
+
+          <!-- SEMI-PRIVATE -->
+
+          <article
+            class="option-card"
+            id="semi-private"
+          >
+
+            <div class="option-image">
+
+              <img
+                src="https://static.wixstatic.com/media/697b1a_b225f74f1bd44f6ebeb10c5293cf7ae7~mv2.jpg/v1/fill/w_900,h_700,al_c,q_90/697b1a_b225f74f1bd44f6ebeb10c5293cf7ae7~mv2.jpg"
+                alt="Sport My Fitness semi-private training clients"
+              >
+
+            </div>
+
+
+            <div class="option-content">
+
+              <p class="option-label">
+                Train Together
+              </p>
+
+
+              <h2>
+                Semi-Private Sessions
+              </h2>
+
+
+              <p>
+
+                Focused coaching in a smaller shared training
+                environment with accountability and support.
+
+              </p>
+
+
+              <div class="option-meta">
+
+                <span>
+                  <strong>$50</strong>
+                  Price
+                </span>
+
+                <span>
+                  <strong>1 hr</strong>
+                  Duration
+                </span>
+
+              </div>
+
+
+              <a
+                class="btn btn-primary"
+                href="book.html#semi-private"
+              >
+                Start Semi-Private
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- ONE-ON-ONE -->
+
+          <article
+            class="option-card"
+            id="one-on-one"
+          >
+
+            <div class="option-image">
+
+              <img
+                src="https://static.wixstatic.com/media/697b1a_d7e253c37e9644fda7ae22ce0ba9102a~mv2.jpg/v1/crop/x_43,y_24,w_606,h_515/fill/w_1000,h_760,al_c,q_90/website%20pic%20C_edited.jpg"
+                alt="Yoshi Barnes coaching a client"
+              >
+
+            </div>
+
+
+            <div class="option-content">
+
+              <p class="option-label">
+                Personal Training
+              </p>
+
+
+              <h2>
+                Private One-on-One
+              </h2>
+
+
+              <p>
+
+                Individual coaching centered on your goals,
+                movement, progress and accountability.
+
+              </p>
+
+
+              <div class="option-meta">
+
+                <span>
+                  <strong>$60</strong>
+                  Price
+                </span>
+
+                <span>
+                  <strong>1 hr</strong>
+                  Duration
+                </span>
+
+              </div>
+
+
+              <a
+                class="btn btn-primary"
+                href="book.html#personal-training"
+              >
+                Start One-on-One
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- GROUP TRAINING -->
+
+          <article
+            class="option-card"
+            id="summer-group"
+          >
+
+            <div class="option-image">
+
+              <img
+                src="https://static.wixstatic.com/media/697b1a_78a666c4bf1b4ebea1c7963cae0c7f7c~mv2.jpg/v1/fill/w_1000,h_700,al_c,q_90/SMF%20web%20pic%202.jpg"
+                alt="Sport My Fitness group training"
+              >
+
+            </div>
+
+
+            <div class="option-content">
+
+              <p class="option-label">
+                Group Training
+              </p>
+
+
+              <h2>
+                Summer Group Class
+              </h2>
+
+
+              <p>
+
+                Train alongside others with movement,
+                encouragement and consistency.
+
+              </p>
+
+
+              <div class="option-meta">
+
+                <span>
+                  <strong>$10</strong>
+                  Price
+                </span>
+
+                <span>
+                  <strong>1 hr</strong>
+                  Duration
+                </span>
+
+              </div>
+
+
+              <a
+                class="btn btn-primary"
+                href="book.html#group-training"
+              >
+                Ask About Group Training
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- ONLINE COACHING -->
+
+          <article
+            class="option-card"
+            id="online-coaching"
+          >
+
+            <div class="option-image">
+
+              <img
+                src="https://static.wixstatic.com/media/697b1a_72f6986ebf3146ad8ddd2fe2e44f8297~mv2.jpg/v1/fill/w_900,h_760,al_c,q_90/website%20pic%20B_JPG.jpg"
+                alt="Yoshi Barnes"
+              >
+
+            </div>
+
+
+            <div class="option-content">
+
+              <p class="option-label">
+                Train Anywhere
+              </p>
+
+
+              <h2>
+                Online Fitness Coach
+              </h2>
+
+
+              <p>
+
+                Stay connected to Sport My Fitness coaching
+                when schedule or location calls for a remote
+                option.
+
+              </p>
+
+
+              <div class="option-meta">
+
+                <span>
+                  <strong>$50</strong>
+                  Price
+                </span>
+
+                <span>
+                  <strong>45 min</strong>
+                  Duration
+                </span>
+
+              </div>
+
+
+              <a
+                class="btn btn-primary"
+                href="book.html#online-coaching"
+              >
+                Start Online Coaching
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- YOUTH FITNESS -->
+
+          <article
+            class="option-card"
+            id="kid-training"
+          >
+
+            <div class="option-image">
+
+              <img
+                src="https://static.wixstatic.com/media/697b1a_b225f74f1bd44f6ebeb10c5293cf7ae7~mv2.jpg/v1/fill/w_1000,h_760,al_c,q_90/697b1a_b225f74f1bd44f6ebeb10c5293cf7ae7~mv2.jpg"
+                alt="Sport My Fitness youth fitness"
+              >
+
+            </div>
+
+
+            <div class="option-content">
+
+              <p class="option-label">
+                Youth Fitness
+              </p>
+
+
+              <h2>
+                Kid Training Camp
+              </h2>
+
+
+              <p>
+
+                Youth-focused training built around movement,
+                confidence, discipline and healthy habits.
+
+              </p>
+
+
+              <div
+                class="option-meta option-meta-single"
+              >
+
+                <span>
+                  <strong>6 classes</strong>
+                  $125
+                </span>
+
+              </div>
+
+
+              <a
+                class="btn btn-primary"
+                href="book.html#youth-fitness"
+              >
+                Ask About Youth Training
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- PACKAGES -->
+
+          <article
+            class="option-card"
+            id="packages"
+          >
+
+            <div class="option-image">
+
+              <img
+                src="https://static.wixstatic.com/media/697b1a_72f6986ebf3146ad8ddd2fe2e44f8297~mv2.jpg/v1/fill/w_1000,h_760,al_c,q_90/website%20pic%20B_JPG.jpg"
+                alt="Sport My Fitness training packages"
+              >
+
+            </div>
+
+
+            <div class="option-content">
+
+              <p class="option-label">
+                Training Plans
+              </p>
+
+
+              <h2>
+                Packages
+              </h2>
+
+
+              <p>
+
+                Explore available package options for a
+                more consistent training plan.
+
+              </p>
+
+
+              <div
+                class="option-meta option-meta-single"
+              >
+
+                <span>
+                  <strong>Options vary</strong>
+                  Ask Yoshi about current packages
+                </span>
+
+              </div>
+
+
+              <a
+                class="btn btn-primary"
+                href="book.html#packages"
+              >
+                Ask About Packages
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- R&B STRETCHING -->
+
+          <article
+            class="option-card option-card-featured"
+            id="rb-stretching"
+          >
+
+            <div class="option-image">
+
+              <img
+                src="https://static.wixstatic.com/media/697b1a_018fd75abace463ab0a1bac0d3cfdd82~mv2.jpeg/v1/crop/x_134,y_430,w_1020,h_932/fill/w_1000,h_760,al_c,q_90/website%20pic.jpeg"
+                alt="Mobility and stretching training"
+              >
+
+            </div>
+
+
+            <div class="option-content">
+
+              <p class="option-label">
+                Mobility &amp; Recovery
+              </p>
+
+
+              <h2>
+                R&amp;B Stretching Session
+              </h2>
+
+
+              <p>
+
+                Dedicated stretching and mobility work
+                in a focused Sport My Fitness session.
+
+              </p>
+
+
+              <div
+                class="option-meta option-meta-single"
+              >
+
+                <span>
+                  <strong>$20</strong>
+                  Per session
+                </span>
+
+              </div>
+
+
+              <a
+                class="btn btn-primary"
+                href="book.html#stretching"
+              >
+                Start Stretching
+              </a>
+
+            </div>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ========================================
+         CONTACT
+    ======================================== -->
+
+    <section
+      class="training-contact"
+      id="contact"
+    >
+
+      <div class="training-contact-inner">
+
+
+        <p class="section-title">
+          Not Sure Yet?
+        </p>
+
+
+        <h2>
+          Talk with
+          <span>
+            Yoshi.
+          </span>
+        </h2>
+
+
+        <p class="training-contact-copy">
+
+          Tell Yoshi what you're working toward and she can
+          help you determine the best place to start.
+
+        </p>
+
+
+        <details class="contact-dropdown">
+
+
+          <summary>
+            Send Yoshi a Message
+          </summary>
+
+
+          <div class="contact-dropdown-body">
+
+
+            <form
+              class="contact-form"
+              action="mailto:Yoshi_barnes@outlook.com"
+              method="post"
+              enctype="text/plain"
+            >
+
+
+              <div class="form-grid">
+
+
+                <div class="form-field">
+
+                  <label for="training-name">
+                    Name
+                  </label>
+
+                  <input
+                    id="training-name"
+                    name="Name"
+                    type="text"
+                    required
+                  >
+
+                </div>
+
+
+                <div class="form-field">
+
+                  <label for="training-email">
+                    Email
+                  </label>
+
+                  <input
+                    id="training-email"
+                    name="Email"
+                    type="email"
+                    required
+                  >
+
+                </div>
+
+
+                <div class="form-field">
+
+                  <label for="training-phone">
+
+                    Phone
+
+                    <span>
+                      Optional
+                    </span>
+
+                  </label>
+
+                  <input
+                    id="training-phone"
+                    name="Phone"
+                    type="tel"
+                  >
+
+                </div>
+
+
+                <div class="form-field">
+
+                  <label for="training-interest">
+                    Interested In
+                  </label>
+
+
+                  <select
+                    id="training-interest"
+                    name="Interested In"
+                    required
+                  >
+
+                    <option value="Not sure yet">
+                      Not sure yet
+                    </option>
+
+                    <option value="Personal Training">
+                      Personal Training
+                    </option>
+
+                    <option value="Semi-Private Training">
+                      Semi-Private Training
+                    </option>
+
+                    <option value="Group Training">
+                      Group Training
+                    </option>
+
+                    <option value="Online Coaching">
+                      Online Coaching
+                    </option>
+
+                    <option value="Youth Fitness">
+                      Youth Fitness
+                    </option>
+
+                    <option value="Training Packages">
+                      Training Packages
+                    </option>
+
+                    <option value="R&B Stretching">
+                      R&amp;B Stretching
+                    </option>
+
+                    <option value="Rehab Tech">
+                      Rehab Tech
+                    </option>
+
+                    <option value="Life Coaching / Training">
+                      Life Coaching / Training
+                    </option>
+
+                  </select>
+
+                </div>
+
+
+              </div>
+
+
+              <div
+                class="form-field form-field-message"
+              >
+
+                <label for="training-message">
+                  Tell Yoshi About Your Goals
+                </label>
+
+                <textarea
+                  id="training-message"
+                  name="Goals / Message"
+                  rows="6"
+                  required
+                ></textarea>
+
+              </div>
+
+
+              <div class="contact-form-action">
+
+                <button
+                  class="btn btn-primary"
+                  type="submit"
+                >
+                  Send Inquiry
+                </button>
+
+              </div>
+
+
+              <p class="form-note">
+
+                Sending will open your email app with your
+                information ready to send to Sport My Fitness.
+
+              </p>
+
+
+            </form>
+
+
+          </div>
+
+        </details>
+
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+  <!-- ========================================
+       STANDARDIZED FOOTER
+  ======================================== -->
+
+  <footer class="site-footer">
+
+
+    <div class="container footer-main">
+
+
+      <div class="footer-brand-column">
+
+        <a
+          href="index.html"
+          class="footer-brand"
+          aria-label="Sport My Fitness home"
+        >
+
+          <img
+            src="brand/sportmyfitness-logo-header.png"
+            alt="Sport My Fitness"
+          >
+
+        </a>
+
+      </div>
+
+
+      <div class="footer-column">
+
+
+        <h3>
+          Explore
+        </h3>
+
+
+        <a href="index.html">
+          Home
+        </a>
+
+
+        <a href="programs.html">
+          Programs
+        </a>
+
+
+        <a href="training-options.html">
+          Training Options
+        </a>
+
+
+        <a href="media.html">
+          Media Gallery
+        </a>
+
+
+        <a href="book.html">
+          Book a Session
+        </a>
+
+
+      </div>
+
+
+      <div class="footer-column">
+
+
+        <h3>
+          About
+        </h3>
+
+
+        <a href="index.html#mission">
+          Our Mission
+        </a>
+
+
+        <a href="index.html#yoshi">
+          Meet Yoshi
+        </a>
+
+
+        <a href="#contact">
+          Message Yoshi
+        </a>
+
+
+      </div>
+
+
+      <div
+        class="footer-column footer-contact"
+        id="footer-contact"
+      >
+
+
+        <h3>
+          Contact
+        </h3>
+
+
+        <a href="tel:+14147914526">
+          414-791-4526
+        </a>
+
+
+        <a href="mailto:Yoshi_barnes@outlook.com">
+          Yoshi_barnes@outlook.com
+        </a>
+
+
+        <span>
+          4722 W Vliet St<br>
+          Milwaukee, WI 53208
+        </span>
+
+
+      </div>
+
+
+    </div>
+
+
+    <!-- ========================================
+         SOCIAL / BUSINESS LINKS
+    ======================================== -->
+
+    <div class="footer-social">
+
+
+      <div class="footer-social-divider"></div>
+
+
+      <p class="footer-social-title">
+        Follow Sport My Fitness
+      </p>
+
+
+      <div class="footer-social-links">
+
+
+        <a
+          class="footer-social-link"
+          href="https://www.facebook.com/share/1BisC7LXXg/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Sport My Fitness on Facebook"
+        >
+
+          <span class="footer-social-icon">
+
+            <img
+              src="https://cdn.simpleicons.org/facebook/1877F2"
+              alt=""
+            >
+
+          </span>
+
+
+          <span class="footer-social-label">
+            Facebook
+          </span>
+
+        </a>
+
+
+        <a
+          class="footer-social-link"
+          href="https://www.instagram.com/sportmyfitness.mke"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Sport My Fitness on Instagram"
+        >
+
+          <span class="footer-social-icon">
+
+            <img
+              src="https://cdn.simpleicons.org/instagram/E4405F"
+              alt=""
+            >
+
+          </span>
+
+
+          <span class="footer-social-label">
+            Instagram
+          </span>
+
+        </a>
+
+
+        <a
+          class="footer-social-link"
+          href="https://www.tiktok.com/@yoshibarnes"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Yoshi Barnes on TikTok"
+        >
+
+          <span class="footer-social-icon">
+
+            <img
+              src="https://cdn.simpleicons.org/tiktok/FFFFFF"
+              alt=""
+            >
+
+          </span>
+
+
+          <span class="footer-social-label">
+            TikTok
+          </span>
+
+        </a>
+
+
+        <a
+          class="footer-social-link"
+          href="https://www.linkedin.com/in/yoshi-%E2%80%9Cmyosha%E2%80%9D-barnes-64851776"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Yoshi Barnes on LinkedIn"
+        >
+
+          <span class="footer-social-icon">
+
+            <img
+              src="https://cdn.simpleicons.org/linkedin/0A66C2"
+              alt=""
+            >
+
+          </span>
+
+
+          <span class="footer-social-label">
+            LinkedIn
+          </span>
+
+        </a>
+
+
+        <a
+          class="footer-social-link"
+          href="https://www.google.com/maps/search/?api=1&query=Sport+My+Fitness+4722+W+Vliet+St+Milwaukee+WI+53208"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Sport My Fitness on Google Maps"
+        >
+
+          <span class="footer-social-icon">
+
+            <img
+              src="https://cdn.simpleicons.org/googlemaps/4285F4"
+              alt=""
+            >
+
+          </span>
+
+
+          <span class="footer-social-label">
+            Google
+          </span>
+
+        </a>
+
+
+      </div>
+
+
+    </div>
+
+
+    <div class="container footer-bottom">
+
+
+      <p>
+
+        ©
+        <span id="year"></span>
+        Sport My Fitness.
+        All rights reserved.
+
+      </p>
+
+
+      <div class="footer-legal">
+
+
+        <span>
+          Terms of Use
+        </span>
+
+
+        <span aria-hidden="true">
+          |
+        </span>
+
+
+        <span>
+          Privacy Policy
+        </span>
+
+
+      </div>
+
+
+    </div>
+
+
+  </footer>
+
+
+  <script src="script.js"></script>
+
 
 </body>
-      </html>
+
+</html>

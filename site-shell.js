@@ -10,7 +10,8 @@
  * - Social links
  * - Footer legal links
  *
- * Page-specific content remains inside each HTML page.
+ * Page-specific content remains
+ * inside each HTML page.
  */
 
 (() => {
@@ -76,14 +77,12 @@
       Skip to content
     </a>
 
-
     <header
       class="site-header"
       id="top"
     >
 
       <div class="header-inner">
-
 
         <a
           class="brand"
@@ -107,9 +106,7 @@
         >
 
           <span></span>
-
           <span></span>
-
           <span></span>
 
           <span class="sr-only">
@@ -129,28 +126,23 @@
             Programs
           </a>
 
-
           <a href="${yoshiHref}">
             About Yoshi
           </a>
-
 
           <a href="media.html">
             Media
           </a>
 
-
           <a href="training-options.html">
             Training Options
           </a>
-
 
           <a href="${contactHref}">
             Contact Yoshi
           </a>
 
         </nav>
-
 
       </div>
 
@@ -181,7 +173,6 @@
 
             <h3 class="footer-group-title">
 
-
               <svg
                 class="footer-group-icon"
                 viewBox="0 0 24 24"
@@ -201,7 +192,6 @@
 
               </svg>
 
-
               Explore
 
             </h3>
@@ -209,31 +199,25 @@
 
             <div class="footer-inline-links">
 
-
               <a href="index.html">
                 Home
               </a>
-
 
               <a href="programs.html">
                 Programs
               </a>
 
-
               <a href="training-options.html">
                 Training Options
               </a>
-
 
               <a href="media.html">
                 Media Gallery
               </a>
 
-
               <a href="book.html">
                 Book a Session
               </a>
-
 
             </div>
 
@@ -247,7 +231,6 @@
 
 
             <h3 class="footer-group-title">
-
 
               <svg
                 class="footer-group-icon"
@@ -270,7 +253,6 @@
 
               </svg>
 
-
               About
 
             </h3>
@@ -278,21 +260,17 @@
 
             <div class="footer-inline-links">
 
-
               <a href="${missionHref}">
                 Our Mission
               </a>
-
 
               <a href="${yoshiHref}">
                 Meet Yoshi
               </a>
 
-
               <a href="${contactHref}">
                 Message Yoshi
               </a>
-
 
             </div>
 
@@ -303,15 +281,11 @@
           <!-- CONTACT -->
 
           <section
-            class="
-              footer-group
-              footer-contact-group
-            "
+            class="footer-group footer-contact-group"
           >
 
 
             <h3 class="footer-group-title">
-
 
               <svg
                 class="footer-group-icon"
@@ -328,7 +302,6 @@
 
               </svg>
 
-
               Contact
 
             </h3>
@@ -338,7 +311,6 @@
 
 
               <div class="footer-contact-item">
-
 
                 <svg
                   viewBox="0 0 24 24"
@@ -354,17 +326,14 @@
 
                 </svg>
 
-
                 <a href="tel:+14147914526">
                   414-791-4526
                 </a>
-
 
               </div>
 
 
               <div class="footer-contact-item">
-
 
                 <svg
                   viewBox="0 0 24 24"
@@ -388,21 +357,14 @@
 
                 </svg>
 
-
-                <a
-                  href="
-                    mailto:Yoshi_barnes@outlook.com
-                  "
-                >
+                <a href="mailto:Yoshi_barnes@outlook.com">
                   Yoshi_barnes@outlook.com
                 </a>
-
 
               </div>
 
 
               <div class="footer-contact-item">
-
 
                 <svg
                   viewBox="0 0 24 24"
@@ -424,12 +386,9 @@
 
                 </svg>
 
-
                 <span>
-                  4722 W Vliet St,
-                  Milwaukee, WI 53208
+                  4722 W Vliet St, Milwaukee, WI 53208
                 </span>
-
 
               </div>
 
@@ -450,13 +409,10 @@
            SOCIAL LINKS
       ===================================== -->
 
-
       <div class="footer-social">
 
 
-        <div
-          class="footer-social-divider"
-        ></div>
+        <div class="footer-social-divider"></div>
 
 
         <p class="footer-social-title">
@@ -467,25 +423,16 @@
         <div class="footer-social-links">
 
 
-          <!-- FACEBOOK -->
-
           <a
             class="footer-social-link"
-            href="
-              https://www.facebook.com/share/1BisC7LXXg/
-            "
+            href="https://www.facebook.com/share/1BisC7LXXg/"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="
-              Sport My Fitness on Facebook
-            "
+            aria-label="Sport My Fitness on Facebook"
           >
 
             <span
-              class="
-                footer-social-icon
-                facebook-icon
-              "
+              class="footer-social-icon facebook-icon"
             >
 
               <svg
@@ -509,29 +456,19 @@
 
             </span>
 
-
           </a>
 
 
-          <!-- INSTAGRAM -->
-
           <a
             class="footer-social-link"
-            href="
-              https://www.instagram.com/sportmyfitness.mke
-            "
+            href="https://www.instagram.com/sportmyfitness.mke"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="
-              Sport My Fitness on Instagram
-            "
+            aria-label="Sport My Fitness on Instagram"
           >
 
             <span
-              class="
-                footer-social-icon
-                instagram-icon
-              "
+              class="footer-social-icon instagram-icon"
             >
 
               <svg
@@ -568,29 +505,19 @@
 
             </span>
 
-
           </a>
 
 
-          <!-- TIKTOK -->
-
           <a
             class="footer-social-link"
-            href="
-              https://www.tiktok.com/@yoshibarnes
-            "
+            href="https://www.tiktok.com/@yoshibarnes"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="
-              Yoshi Barnes on TikTok
-            "
+            aria-label="Yoshi Barnes on TikTok"
           >
 
             <span
-              class="
-                footer-social-icon
-                tiktok-icon
-              "
+              class="footer-social-icon tiktok-icon"
             >
 
               <svg
@@ -607,29 +534,19 @@
 
             </span>
 
-
           </a>
 
 
-          <!-- LINKEDIN -->
-
           <a
             class="footer-social-link"
-            href="
-              https://www.linkedin.com/in/yoshi-%E2%80%9Cmyosha%E2%80%9D-barnes-64851776
-            "
+            href="https://www.linkedin.com/in/yoshi-%E2%80%9Cmyosha%E2%80%9D-barnes-64851776"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="
-              Yoshi Barnes on LinkedIn
-            "
+            aria-label="Yoshi Barnes on LinkedIn"
           >
 
             <span
-              class="
-                footer-social-icon
-                linkedin-icon
-              "
+              class="footer-social-icon linkedin-icon"
             >
 
               <svg
@@ -670,29 +587,19 @@
 
             </span>
 
-
           </a>
 
 
-          <!-- GOOGLE -->
-
           <a
             class="footer-social-link"
-            href="
-              https://www.google.com/maps/search/?api=1&query=Sport+My+Fitness+4722+W+Vliet+St+Milwaukee+WI+53208
-            "
+            href="https://www.google.com/maps/search/?api=1&query=Sport+My+Fitness+4722+W+Vliet+St+Milwaukee+WI+53208"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="
-              Sport My Fitness on Google
-            "
+            aria-label="Sport My Fitness on Google"
           >
 
             <span
-              class="
-                footer-social-icon
-                google-icon
-              "
+              class="footer-social-icon google-icon"
             >
 
               <svg
@@ -731,7 +638,6 @@
 
             </span>
 
-
           </a>
 
 
@@ -745,44 +651,29 @@
            COPYRIGHT / LEGAL
       ===================================== -->
 
-
       <div
-        class="
-          container
-          footer-bottom
-        "
+        class="container footer-bottom"
       >
 
-
         <p>
-
-          ©
-
-          <span id="year"></span>
-
-          Sport My Fitness.
-          All rights reserved.
-
+          © <span id="year"></span>
+          Sport My Fitness. All rights reserved.
         </p>
 
 
         <div class="footer-legal">
 
-
           <span>
             Terms of Use
           </span>
-
 
           <span aria-hidden="true">
             |
           </span>
 
-
           <span>
             Privacy Policy
           </span>
-
 
         </div>
 
@@ -796,21 +687,32 @@
 
 
   /* ========================================
-     INSERT MASTER COMPONENTS
+     REPLACE PLACEHOLDERS
+     IMPORTANT:
+     Do NOT nest sticky header inside a
+     temporary wrapper.
   ======================================== */
 
   if (headerTarget) {
 
-    headerTarget.innerHTML =
-      headerMarkup;
+    headerTarget.insertAdjacentHTML(
+      'beforebegin',
+      headerMarkup
+    );
+
+    headerTarget.remove();
 
   }
 
 
   if (footerTarget) {
 
-    footerTarget.innerHTML =
-      footerMarkup;
+    footerTarget.insertAdjacentHTML(
+      'beforebegin',
+      footerMarkup
+    );
+
+    footerTarget.remove();
 
   }
 
@@ -853,7 +755,6 @@
 
   if (toggle && nav) {
 
-
     toggle.addEventListener(
       'click',
       () => {
@@ -887,7 +788,6 @@
         );
 
       });
-
 
   }
 

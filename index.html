@@ -94,33 +94,39 @@
   <style>
 
     /* =========================================
-       HOMEPAGE MOBILE NAV
+       MOBILE NAV
     ========================================== */
 
     @media(max-width:980px){
 
       .site-nav{
         position:fixed !important;
+
         top:82px !important;
         left:0 !important;
         right:0 !important;
         bottom:0 !important;
 
         width:100% !important;
-        height:calc(100dvh - 82px);
+
+        height:
+          calc(100dvh - 82px);
 
         z-index:999 !important;
 
         flex-direction:column;
+
         align-items:stretch;
 
         gap:4px !important;
 
-        padding:22px 22px 34px !important;
+        padding:
+          22px 22px 34px !important;
 
         overflow-y:auto;
 
         border:0 !important;
+
         border-radius:0 !important;
 
         background:
@@ -152,12 +158,15 @@
 
         min-height:54px !important;
 
-        padding:10px 12px !important;
+        padding:
+          10px 12px !important;
 
         border:0 !important;
+
         border-radius:10px;
 
-        background:transparent !important;
+        background:
+          transparent !important;
 
         color:#fff;
 
@@ -169,7 +178,8 @@
 
       .site-nav a:hover,
       .site-nav a:focus{
-        color:var(--smf-teal);
+        color:
+          var(--smf-teal);
 
         background:
           rgba(7,158,143,.05) !important;
@@ -257,12 +267,14 @@
 
       margin:auto;
 
-      padding:38px 0 34px;
+      padding:
+        38px 0 34px;
     }
 
 
     .smf-mission-v2-title{
-      margin:0 auto 28px;
+      margin:
+        0 auto 28px;
 
       color:#079e8f;
 
@@ -297,7 +309,8 @@
       width:86px;
       height:4px;
 
-      margin:16px auto 0;
+      margin:
+        16px auto 0;
 
       border-radius:999px;
 
@@ -325,7 +338,8 @@
           minmax(0,1fr)
         );
 
-      margin:0 auto 24px;
+      margin:
+        0 auto 24px;
 
       padding:0;
 
@@ -342,7 +356,8 @@
 
       gap:10px;
 
-      padding:4px 20px;
+      padding:
+        4px 20px;
 
       color:#fff;
 
@@ -416,7 +431,7 @@
 
 
     /* =========================================
-       SINGLE HOMEPAGE PREVIEWS
+       HOMEPAGE PREVIEWS
     ========================================== */
 
     .home-feature-card{
@@ -428,7 +443,8 @@
 
       min-height:0;
 
-      margin:0 auto;
+      margin:
+        0 auto;
     }
 
 
@@ -449,7 +465,8 @@
           100%
         );
 
-      margin:0 auto;
+      margin:
+        0 auto;
     }
 
 
@@ -465,7 +482,8 @@
     ========================================== */
 
     .home-contact{
-      padding:64px 0;
+      padding:
+        64px 0;
 
       border-top:
         1px solid rgba(7,158,143,.18);
@@ -512,7 +530,8 @@
     .home-contact-copy{
       max-width:620px;
 
-      margin:0 auto 28px;
+      margin:
+        0 auto 28px;
 
       color:#cbd4d6;
     }
@@ -548,7 +567,8 @@
 
       gap:18px;
 
-      padding:16px 22px;
+      padding:
+        16px 22px;
 
       color:#fff;
 
@@ -588,7 +608,8 @@
 
 
     .contact-dropdown-body{
-      padding:6px 22px 24px;
+      padding:
+        6px 22px 24px;
 
       border-top:
         1px solid rgba(18,202,187,.12);
@@ -596,7 +617,8 @@
 
 
     .home-contact .contact-form{
-      padding:22px 0 0;
+      padding:
+        22px 0 0;
 
       border:0;
 
@@ -609,7 +631,7 @@
 
 
     /* =========================================
-       FOOTER — APPROVED WATERMARK DESIGN
+       COMPACT WATERMARK FOOTER
     ========================================== */
 
     .site-footer{
@@ -618,72 +640,63 @@
       overflow:hidden;
 
       border-top:
-        1px solid rgba(18,202,187,.26);
+        1px solid rgba(18,202,187,.28);
 
       background:
         radial-gradient(
-          circle at 50% 28%,
-          rgba(0,188,174,.055),
-          transparent 38%
+          circle at 50% 38%,
+          rgba(7,158,143,.06),
+          transparent 45%
         ),
         linear-gradient(
           180deg,
-          #020709 0%,
-          #010405 100%
+          #020709,
+          #010405
         );
     }
 
 
-    .site-footer .footer-main{
+    .footer-watermark-area{
       position:relative;
 
       width:
         min(
           1160px,
-          calc(100% - 40px)
+          calc(100% - 34px)
         );
 
-      display:grid;
-
-      grid-template-columns:
-        repeat(
-          3,
-          minmax(0,1fr)
-        );
-
-      gap:
-        34px 70px;
-
-      margin:0 auto;
+      margin:
+        0 auto;
 
       padding:
-        66px 0 58px;
+        48px 0 36px;
 
       isolation:isolate;
     }
 
 
-    /* Symbol-only Sport My Fitness watermark */
-
-    .site-footer .footer-main::before{
+    .footer-watermark-area::before{
       content:"";
 
       position:absolute;
 
-      top:18px;
+      top:50%;
       left:50%;
 
       width:
         clamp(
-          390px,
-          45vw,
-          610px
+          520px,
+          58vw,
+          760px
         );
 
       aspect-ratio:1;
 
       transform:
-        translateX(-50%);
+        translate(
+          -50%,
+          -50%
+        );
 
       z-index:0;
 
@@ -691,36 +704,48 @@
 
       background:
         url("brand/sportmyfitness-icon-1024.png")
-        center
         center /
         contain
         no-repeat;
 
-      opacity:.085;
+      opacity:.075;
 
       filter:
-        saturate(.82)
-        brightness(.92);
-
-      mix-blend-mode:screen;
+        saturate(.75)
+        brightness(.82);
     }
 
 
-    .site-footer .footer-main > *{
+    .footer-information{
       position:relative;
 
-      z-index:1;
+      z-index:2;
+
+      display:grid;
+
+      grid-template-columns:
+        1.35fr 1fr 1.35fr;
+
+      gap:32px;
+
+      align-items:start;
     }
 
 
-    .site-footer .footer-column{
+    .footer-group{
       min-width:0;
     }
 
 
-    .site-footer .footer-column h3{
+    .footer-group-title{
+      display:flex;
+
+      align-items:center;
+
+      gap:9px;
+
       margin:
-        0 0 22px;
+        0 0 14px;
 
       color:#12cabb;
 
@@ -730,47 +755,141 @@
 
       font-size:
         clamp(
-          1.2rem,
+          1.15rem,
           2vw,
-          1.55rem
+          1.45rem
         );
 
       font-weight:700;
 
-      letter-spacing:.08em;
+      letter-spacing:.09em;
 
       text-transform:uppercase;
     }
 
 
-    .site-footer .footer-column a,
-    .site-footer .footer-column span{
-      position:relative;
+    .footer-group-icon{
+      width:22px;
+      height:22px;
 
-      z-index:2;
+      flex:0 0 auto;
+
+      color:#12cabb;
     }
 
 
-    .site-footer .footer-contact a{
-      overflow-wrap:normal;
+    .footer-inline-links{
+      display:flex;
 
-      word-break:normal;
+      flex-wrap:wrap;
+
+      align-items:center;
+
+      gap:
+        8px 0;
     }
 
 
-    .footer-email{
+    .footer-inline-links a{
+      color:#d5dbdc;
+
+      font-family:
+        "Montserrat",
+        sans-serif;
+
+      font-size:.94rem;
+
+      text-decoration:none;
+
       white-space:nowrap;
     }
 
 
+    .footer-inline-links a:hover,
+    .footer-inline-links a:focus{
+      color:#fff;
+    }
+
+
+    .footer-inline-links a:not(:last-child)::after{
+      content:"";
+
+      display:inline-block;
+
+      width:1px;
+      height:1em;
+
+      margin:
+        0 11px;
+
+      vertical-align:-.12em;
+
+      background:
+        rgba(18,202,187,.72);
+    }
+
+
+    .footer-contact-lines{
+      display:flex;
+
+      flex-direction:column;
+
+      gap:11px;
+    }
+
+
+    .footer-contact-item{
+      display:flex;
+
+      align-items:flex-start;
+
+      gap:10px;
+
+      color:#d5dbdc;
+
+      font-family:
+        "Montserrat",
+        sans-serif;
+
+      font-size:.92rem;
+
+      line-height:1.45;
+    }
+
+
+    .footer-contact-item svg{
+      width:19px;
+      height:19px;
+
+      flex:0 0 auto;
+
+      margin-top:1px;
+
+      color:#12cabb;
+    }
+
+
+    .footer-contact-item a{
+      color:inherit;
+
+      text-decoration:none;
+    }
+
+
+    .footer-contact-item a:hover,
+    .footer-contact-item a:focus{
+      color:#fff;
+    }
+
+
     /* =========================================
-       SOCIAL / BUSINESS ROW
+       SOCIAL ROW
     ========================================== */
 
     .footer-social{
       position:relative;
 
-      z-index:2;
+      z-index:3;
 
       width:
         min(
@@ -778,38 +897,42 @@
           calc(100% - 34px)
         );
 
-      margin:0 auto;
+      margin:
+        0 auto;
 
-      padding:0 0 30px;
+      padding:
+        0 0 26px;
     }
 
 
     .footer-social-divider{
       width:100%;
-
       height:1px;
 
-      margin-bottom:26px;
+      margin-bottom:22px;
 
       background:
         linear-gradient(
           90deg,
           transparent,
-          rgba(18,202,187,.42),
+          rgba(18,202,187,.35),
           #12cabb,
-          rgba(18,202,187,.42),
+          rgba(18,202,187,.35),
           transparent
         );
 
       box-shadow:
-        0 0 9px rgba(18,202,187,.13);
+        0 0 8px rgba(18,202,187,.12);
     }
 
 
     .footer-social-title{
-      margin:0 0 18px;
+      margin:
+        0 0 17px;
 
       color:#fff;
+
+      text-align:center;
 
       font-family:
         "Rajdhani",
@@ -821,8 +944,6 @@
 
       letter-spacing:.14em;
 
-      text-align:center;
-
       text-transform:uppercase;
     }
 
@@ -830,38 +951,26 @@
     .footer-social-links{
       display:flex;
 
-      align-items:flex-start;
+      align-items:center;
 
       justify-content:center;
 
       flex-wrap:wrap;
 
-      gap:18px;
+      gap:16px;
     }
 
 
     .footer-social-link{
-      width:72px;
-
       display:flex;
 
       flex-direction:column;
 
       align-items:center;
 
-      gap:8px;
-
       color:#cbd4d6;
 
-      text-align:center;
-
       text-decoration:none;
-    }
-
-
-    .footer-social-link:hover,
-    .footer-social-link:focus{
-      color:#fff;
     }
 
 
@@ -880,9 +989,6 @@
 
       background:
         rgba(3,10,12,.84);
-
-      box-shadow:
-        inset 0 0 12px rgba(18,202,187,.025);
 
       transition:
         transform .2s ease,
@@ -913,13 +1019,7 @@
 
 
     .footer-social-label{
-      font-family:
-        "Montserrat",
-        sans-serif;
-
-      font-size:.68rem;
-
-      line-height:1.2;
+      display:none;
     }
 
 
@@ -934,7 +1034,7 @@
 
 
     .tiktok-icon{
-      color:#ffffff;
+      color:#fff;
     }
 
 
@@ -951,12 +1051,12 @@
     .site-footer .footer-bottom{
       position:relative;
 
-      z-index:2;
+      z-index:3;
     }
 
 
     /* =========================================
-       TABLET FOOTER TRANSLATION
+       TABLET
     ========================================== */
 
     @media(
@@ -965,39 +1065,33 @@
       max-width:980px
     ){
 
-      .site-footer .footer-main{
-        grid-template-columns:
-          repeat(
-            2,
-            minmax(0,1fr)
-          );
-
-        gap:
-          42px 60px;
-
+      .footer-watermark-area{
         padding:
-          58px 0 50px;
+          42px 0 34px;
       }
 
 
-      .site-footer .footer-contact{
-        grid-column:
-          1 / -1;
-
-        max-width:520px;
-      }
-
-
-      .site-footer .footer-main::before{
-        top:55px;
-
+      .footer-watermark-area::before{
         width:
           min(
-            560px,
-            74vw
+            760px,
+            82vw
           );
+      }
 
-        opacity:.075;
+
+      .footer-information{
+        grid-template-columns:
+          1.2fr 1fr;
+
+        gap:
+          28px 40px;
+      }
+
+
+      .footer-contact-group{
+        grid-column:
+          1 / -1;
       }
 
     }
@@ -1132,94 +1226,119 @@
       }
 
 
-      /* Approved mobile footer composition */
+      /* Compact footer */
 
-      .site-footer .footer-main{
+      .footer-watermark-area{
         width:
-          calc(100% - 44px);
-
-        grid-template-columns:
-          repeat(
-            2,
-            minmax(0,1fr)
-          );
-
-        gap:
-          40px 32px;
+          calc(100% - 38px);
 
         padding:
-          54px 0 42px;
+          34px 0 28px;
       }
 
 
-      .site-footer .footer-main::before{
-        top:88px;
-        left:50%;
+      .footer-watermark-area::before{
+        top:50%;
 
         width:
           min(
-            108vw,
-            610px
+            122vw,
+            680px
           );
 
-        transform:
-          translateX(-50%);
-
-        opacity:.09;
-
-        filter:
-          saturate(.78)
-          brightness(.86);
+        opacity:.072;
       }
 
 
-      .site-footer .footer-column h3{
-        margin-bottom:18px;
+      .footer-information{
+        display:flex;
+
+        flex-direction:column;
+
+        gap:23px;
+      }
+
+
+      .footer-group-title{
+        margin-bottom:10px;
 
         font-size:
           clamp(
-            1.15rem,
+            1.05rem,
             5vw,
-            1.4rem
+            1.25rem
           );
       }
 
 
-      .site-footer .footer-contact{
-        grid-column:
-          1 / -1;
-
-        width:100%;
-
-        padding-top:8px;
+      .footer-group-icon{
+        width:20px;
+        height:20px;
       }
 
 
-      .footer-email{
-        display:inline-block;
+      .footer-inline-links{
+        gap:
+          7px 0;
+      }
 
-        max-width:100%;
 
-        white-space:normal;
+      .footer-inline-links a{
+        font-size:
+          clamp(
+            .76rem,
+            3.5vw,
+            .9rem
+          );
+      }
 
-        overflow-wrap:anywhere;
+
+      .footer-inline-links a:not(:last-child)::after{
+        margin:
+          0 8px;
+      }
+
+
+      .footer-contact-lines{
+        gap:9px;
+      }
+
+
+      .footer-contact-item{
+        gap:9px;
 
         font-size:
           clamp(
-            .86rem,
-            4vw,
-            1rem
+            .76rem,
+            3.5vw,
+            .9rem
           );
+      }
+
+
+      .footer-contact-item svg{
+        width:18px;
+        height:18px;
       }
 
 
       .footer-social{
-        padding-bottom:24px;
+        width:
+          calc(100% - 34px);
+
+        padding-bottom:22px;
       }
 
 
       .footer-social-divider{
-        margin-bottom:22px;
+        margin-bottom:19px;
+      }
+
+
+      .footer-social-title{
+        margin-bottom:15px;
+
+        font-size:.92rem;
       }
 
 
@@ -1227,7 +1346,11 @@
         flex-wrap:nowrap;
 
         gap:
-          14px 12px;
+          clamp(
+            8px,
+            3vw,
+            13px
+          );
       }
 
 
@@ -1235,7 +1358,7 @@
         width:
           min(
             52px,
-            15vw
+            16vw
           );
       }
 
@@ -1253,11 +1376,6 @@
         height:23px;
       }
 
-
-      .footer-social-label{
-        display:none;
-      }
-
     }
 
 
@@ -1267,31 +1385,43 @@
 
     @media(max-width:390px){
 
-      .site-footer .footer-main{
+      .footer-watermark-area{
         width:
-          calc(100% - 34px);
+          calc(100% - 30px);
 
-        gap:
-          34px 18px;
+        padding:
+          30px 0 24px;
       }
 
 
-      .site-footer .footer-main::before{
-        top:96px;
+      .footer-watermark-area::before{
+        width:132vw;
+      }
 
-        width:118vw;
 
-        opacity:.075;
+      .footer-information{
+        gap:20px;
+      }
+
+
+      .footer-inline-links a{
+        font-size:.73rem;
+      }
+
+
+      .footer-inline-links a:not(:last-child)::after{
+        margin:
+          0 6px;
+      }
+
+
+      .footer-contact-item{
+        font-size:.75rem;
       }
 
 
       .footer-social-links{
-        gap:8px;
-      }
-
-
-      .footer-social-link{
-        width:48px;
+        gap:7px;
       }
 
 
@@ -1534,7 +1664,7 @@
 
 
     <!-- =========================================
-         PROGRAMS PREVIEW
+         PROGRAMS
     ========================================== -->
 
     <section
@@ -1579,7 +1709,6 @@
         <div
           class="training-preview-card home-feature-card"
         >
-
 
           <h3>
             Personal &amp; Semi-Private
@@ -1713,7 +1842,7 @@
 
 
     <!-- =========================================
-         MEDIA PREVIEW
+         MEDIA
     ========================================== -->
 
     <section
@@ -1815,7 +1944,7 @@
 
 
     <!-- =========================================
-         TRAINING OPTIONS PREVIEW
+         TRAINING OPTIONS
     ========================================== -->
 
     <section
@@ -1891,7 +2020,7 @@
 
 
     <!-- =========================================
-         FINAL BOOKING CTA
+         CTA
     ========================================== -->
 
     <section class="final-cta">
@@ -2184,105 +2313,272 @@
 
 
   <!-- =========================================
-       WATERMARK FOOTER
+       COMPACT WATERMARK FOOTER
   ========================================== -->
 
   <footer class="site-footer">
 
 
-    <div class="container footer-main">
+    <div class="footer-watermark-area">
 
 
-      <div class="footer-column">
+      <div class="footer-information">
 
 
-        <h3>
-          Explore
-        </h3>
+        <!-- EXPLORE -->
+
+        <section class="footer-group">
 
 
-        <a href="./index.html">
-          Home
-        </a>
+          <h3 class="footer-group-title">
 
 
-        <a href="./programs.html">
-          Programs
-        </a>
+            <svg
+              class="footer-group-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+
+              <path
+                d="M10 13a5 5 0 0 0 7.07 0l2-2a5 5 0 0 0-7.07-7.07l-1.15 1.15"
+              ></path>
+
+              <path
+                d="M14 11a5 5 0 0 0-7.07 0l-2 2A5 5 0 0 0 12 20.07l1.15-1.15"
+              ></path>
+
+            </svg>
 
 
-        <a href="./training-options.html">
-          Training Options
-        </a>
+            Explore
+
+          </h3>
 
 
-        <a href="./media.html">
-          Media Gallery
-        </a>
+          <div class="footer-inline-links">
 
 
-        <a href="./book.html">
-          Book a Session
-        </a>
+            <a href="./index.html">
+              Home
+            </a>
 
 
-      </div>
+            <a href="./programs.html">
+              Programs
+            </a>
 
 
-      <div class="footer-column">
+            <a href="./training-options.html">
+              Training Options
+            </a>
 
 
-        <h3>
-          About
-        </h3>
+            <a href="./media.html">
+              Media Gallery
+            </a>
 
 
-        <a href="#mission">
-          Our Mission
-        </a>
+            <a href="./book.html">
+              Book a Session
+            </a>
 
 
-        <a href="#yoshi">
-          Meet Yoshi
-        </a>
+          </div>
 
 
-        <a href="#contact">
-          Message Yoshi
-        </a>
+        </section>
 
 
-      </div>
+        <!-- ABOUT -->
+
+        <section class="footer-group">
 
 
-      <div
-        class="footer-column footer-contact"
-        id="footer-contact"
-      >
+          <h3 class="footer-group-title">
 
 
-        <h3>
-          Contact
-        </h3>
+            <svg
+              class="footer-group-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+
+              <circle
+                cx="12"
+                cy="8"
+                r="4"
+              ></circle>
+
+              <path
+                d="M4 21a8 8 0 0 1 16 0"
+              ></path>
+
+            </svg>
 
 
-        <a href="tel:+14147914526">
-          414-791-4526
-        </a>
+            About
+
+          </h3>
 
 
-        <a
-          class="footer-email"
-          href="mailto:Yoshi_barnes@outlook.com"
-        >
-          Yoshi_barnes@outlook.com
-        </a>
+          <div class="footer-inline-links">
 
 
-        <span>
-          4722 W Vliet St<br>
-          Milwaukee, WI 53208
-        </span>
+            <a href="#mission">
+              Our Mission
+            </a>
+
+
+            <a href="#yoshi">
+              Meet Yoshi
+            </a>
+
+
+            <a href="#contact">
+              Message Yoshi
+            </a>
+
+
+          </div>
+
+
+        </section>
+
+
+        <!-- CONTACT -->
+
+        <section class="footer-group footer-contact-group">
+
+
+          <h3 class="footer-group-title">
+
+
+            <svg
+              class="footer-group-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.63a2 2 0 0 1-.45 2.11L8 9.73a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.85.29 1.73.5 2.63.62A2 2 0 0 1 22 16.92z"
+              ></path>
+
+            </svg>
+
+
+            Contact
+
+          </h3>
+
+
+          <div class="footer-contact-lines">
+
+
+            <div class="footer-contact-item">
+
+
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                aria-hidden="true"
+              >
+
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.63a2 2 0 0 1-.45 2.11L8 9.73a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.85.29 1.73.5 2.63.62A2 2 0 0 1 22 16.92z"
+                ></path>
+
+              </svg>
+
+
+              <a href="tel:+14147914526">
+                414-791-4526
+              </a>
+
+
+            </div>
+
+
+            <div class="footer-contact-item">
+
+
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                aria-hidden="true"
+              >
+
+                <rect
+                  x="3"
+                  y="5"
+                  width="18"
+                  height="14"
+                  rx="2"
+                ></rect>
+
+                <path
+                  d="m3 7 9 6 9-6"
+                ></path>
+
+              </svg>
+
+
+              <a href="mailto:Yoshi_barnes@outlook.com">
+                Yoshi_barnes@outlook.com
+              </a>
+
+
+            </div>
+
+
+            <div class="footer-contact-item">
+
+
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                aria-hidden="true"
+              >
+
+                <path
+                  d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0z"
+                ></path>
+
+                <circle
+                  cx="12"
+                  cy="10"
+                  r="2.5"
+                ></circle>
+
+              </svg>
+
+
+              <span>
+                4722 W Vliet St, Milwaukee, WI 53208
+              </span>
+
+
+            </div>
+
+
+          </div>
+
+
+        </section>
 
 
       </div>
@@ -2562,12 +2858,8 @@
 
 
       <p>
-
-        ©
-        <span id="year"></span>
-        Sport My Fitness.
-        All rights reserved.
-
+        © <span id="year"></span>
+        Sport My Fitness. All rights reserved.
       </p>
 
 

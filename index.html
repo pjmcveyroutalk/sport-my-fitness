@@ -102,8 +102,11 @@
       width:100%;
       overflow:hidden;
 
-      border-top:1px solid rgba(7,158,143,.34);
-      border-bottom:1px solid rgba(7,158,143,.24);
+      border-top:
+        1px solid rgba(7,158,143,.34);
+
+      border-bottom:
+        1px solid rgba(7,158,143,.24);
 
       background:
         radial-gradient(
@@ -314,31 +317,47 @@
 
 
     /* ========================================
-       CONTACT DROPDOWN
+       COLLAPSIBLE CONTACT
     ======================================== */
 
-    .contact-intro-simple{
-      max-width:760px;
+    .home-contact{
+      padding:
+        64px 0;
+
+      border-top:
+        1px solid rgba(7,158,143,.18);
+
+      background:
+        radial-gradient(
+          circle at 15% 15%,
+          rgba(7,158,143,.08),
+          transparent 34%
+        ),
+        linear-gradient(
+          180deg,
+          #040b0d,
+          #020608
+        );
+    }
+
+
+    .home-contact-inner{
+      width:
+        min(760px,calc(100% - 34px));
 
       margin:
-        0 auto 28px;
+        0 auto;
 
       text-align:center;
     }
 
 
-    .contact-intro-simple .section-title{
-      text-align:center;
+    .home-contact .section-title{
+      margin-bottom:30px;
     }
 
 
-    .contact-intro-simple .section-title::after{
-      margin-left:auto;
-      margin-right:auto;
-    }
-
-
-    .contact-intro-simple h2{
+    .home-contact h2{
       margin-bottom:16px;
 
       color:#fff;
@@ -348,21 +367,22 @@
     }
 
 
-    .contact-intro-simple > p:not(.section-title){
+    .home-contact-copy{
       max-width:620px;
 
       margin:
-        0 auto;
+        0 auto 28px;
 
       color:#cbd4d6;
+
+      font-size:1rem;
 
       line-height:1.6;
     }
 
 
     .contact-dropdown{
-      width:
-        min(760px,100%);
+      width:100%;
 
       margin:
         0 auto;
@@ -392,7 +412,7 @@
       align-items:center;
       justify-content:space-between;
 
-      gap:18px;
+      gap:20px;
 
       min-height:64px;
 
@@ -426,6 +446,8 @@
     .contact-dropdown summary::after{
       content:"+";
 
+      flex:0 0 auto;
+
       color:
         var(--smf-teal);
 
@@ -442,14 +464,14 @@
 
     .contact-dropdown-body{
       padding:
-        4px 22px 24px;
+        6px 22px 24px;
 
       border-top:
         1px solid rgba(18,202,187,.12);
     }
 
 
-    .contact-dropdown .contact-form{
+    .home-contact .contact-form{
       padding:
         22px 0 0;
 
@@ -460,6 +482,8 @@
       background:none;
 
       box-shadow:none;
+
+      text-align:left;
     }
 
 
@@ -524,16 +548,31 @@
       }
 
 
-      .contact-intro-simple{
-        margin-bottom:22px;
+      .home-contact{
+        padding:
+          46px 0 48px;
       }
 
 
-      .contact-intro-simple h2{
+      .home-contact .section-title{
+        margin-bottom:24px;
+      }
+
+
+      .home-contact h2{
         margin-bottom:14px;
 
         font-size:
           clamp(2.45rem,10vw,3.25rem);
+      }
+
+
+      .home-contact-copy{
+        margin-bottom:22px;
+
+        font-size:.95rem;
+
+        line-height:1.55;
       }
 
 
@@ -558,14 +597,14 @@
       }
 
 
-      .contact-dropdown .form-grid{
+      .home-contact .form-grid{
         grid-template-columns:1fr;
 
         gap:17px;
       }
 
 
-      .contact-dropdown .form-field textarea{
+      .home-contact .form-field textarea{
         min-height:120px;
       }
 
@@ -585,6 +624,7 @@
   >
     Skip to content
   </a>
+
 
 
   <!-- ========================================
@@ -725,7 +765,6 @@
               Book a Session
             </a>
 
-
             <a
               class="btn btn-secondary"
               href="programs.html"
@@ -818,9 +857,9 @@
 
 
           <p>
-            Strength, movement, accountability and coaching
-            come together to support sustainable progress
-            inside and outside the gym.
+            Different goals call for different kinds of
+            support. Explore the coaching options built
+            around how you want to move forward.
           </p>
 
         </div>
@@ -843,9 +882,9 @@
             </h3>
 
             <p>
-              One-on-one and smaller shared training
-              environments with focused coaching,
-              structure and accountability.
+              Focused coaching with personal attention,
+              structure and accountability built around
+              your progress.
             </p>
 
             <span class="training-preview-link">
@@ -870,9 +909,9 @@
             </h3>
 
             <p>
-              Movement and therapy support designed
-              to help you move better, rebuild confidence
-              and feel stronger.
+              Movement-focused support designed to help
+              you move with more confidence and build
+              usable strength.
             </p>
 
             <span class="training-preview-link">
@@ -897,9 +936,9 @@
             </h3>
 
             <p>
-              Build habits, mindset and discipline that
-              support lasting change both inside and
-              outside the gym.
+              Fitness, habits and mindset brought together
+              to support progress that carries beyond
+              the gym.
             </p>
 
             <span class="training-preview-link">
@@ -956,7 +995,6 @@
             >
 
           </div>
-
 
 
           <div class="split-copy">
@@ -1038,11 +1076,15 @@
 
 
           <h2>
-            Featured on
-            <span>
-              TMJ4
-            </span>
+            Featured On
           </h2>
+
+
+          <img
+            class="tmj4-main-logo"
+            src="https://ewscripps.brightspotcdn.com/dims4/default/4d1734c/2147483647/strip/true/crop/1120x630%2B40%2B0/resize/1280x720%21/quality/90/?url=http%3A%2F%2Fewscripps-brightspot.s3.amazonaws.com%2F4b%2Fa3%2Ffb5e317d4255a3a9e8e181f7f509%2Fdownload.png"
+            alt="TMJ4"
+          >
 
 
           <p>
@@ -1058,62 +1100,16 @@
 
           <a
             class="media-card"
-            href="https://www.tmj4.com/on-air/ask-the-expert-resistance-training"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="media.html"
           >
 
             <img
               class="media-card-image"
-              src="https://static.wixstatic.com/media/697b1a_d7e253c37e9644fda7ae22ce0ba9102a~mv2.jpg/v1/crop/x_43%2Cy_24%2Cw_606%2Ch_515/fill/w_900%2Ch_650%2Cal_c%2Cq_88%2Cenc_auto/website%20pic%20C_edited.jpg"
-              alt="Yoshi Barnes resistance training"
+              src="https://ewscripps.brightspotcdn.com/dims4/default/ace7964/2147483647/strip/false/crop/1280x714%2B0%2B3/resize/1280x714%21/quality/90/?url=https%3A%2F%2Fcf.cdn.uplynk.com%2Fausw%2Fslices%2Fb3c%2F44c3f81cadf84cf5a6f4e6d100388208%2Fb3cd004db46d4018bf3896690dedd5a7%2Fposter_a909944f21d04995bd0378b7e3c62321.jpg"
+              alt="TMJ4 Fitness Friday"
               loading="lazy"
             >
 
-            <div class="media-card-shade"></div>
-
-
-            <span
-              class="media-play"
-              aria-hidden="true"
-            >
-              ▶
-            </span>
-
-
-            <div class="media-card-copy">
-
-              <span class="media-kicker">
-                Ask the Expert
-              </span>
-
-              <h3>
-                Resistance Training
-              </h3>
-
-              <span class="media-watch">
-                Watch Appearance →
-              </span>
-
-            </div>
-
-          </a>
-
-
-
-          <a
-            class="media-card"
-            href="https://www.tmj4.com/on-air/fitness-friday-all-about-stretching"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-
-            <img
-              class="media-card-image"
-              src="https://static.wixstatic.com/media/697b1a_018fd75abace463ab0a1bac0d3cfdd82~mv2.jpeg/v1/crop/x_134%2Cy_430%2Cw_1020%2Ch_932/fill/w_900%2Ch_650%2Cal_c%2Cq_88%2Cenc_auto/website%20pic.jpeg"
-              alt="Sport My Fitness stretching"
-              loading="lazy"
-            >
 
             <div class="media-card-shade"></div>
 
@@ -1133,52 +1129,87 @@
               </span>
 
               <h3>
-                All About Stretching
+                Yoshi on TMJ4
               </h3>
 
               <span class="media-watch">
-                Watch Appearance →
+                View All Media →
               </span>
 
             </div>
 
           </a>
 
+        </div>
+
+
+        <div class="section-action">
+
+          <a
+            class="btn btn-primary"
+            href="media.html"
+          >
+            View All Media
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ========================================
+         TRAINING OPTIONS
+    ======================================== -->
+
+    <section
+      class="section section-dark"
+      id="training-options"
+    >
+
+      <div class="container">
+
+
+        <div class="section-heading">
+
+
+          <p class="section-title">
+            Training Options
+          </p>
+
+
+          <h2 class="training-heading-white">
+            Choose how you want to move forward.
+          </h2>
+
+
+          <p>
+            Whether you want focused personal coaching,
+            a shared training environment or more flexible
+            support, there is a path designed to meet you
+            where you are.
+          </p>
+
+        </div>
+
+
+        <div class="training-preview-grid">
 
 
           <a
-            class="media-card"
-            href="https://www.tmj4.com/on-air/fitness-friday-fitness-for-kids"
-            target="_blank"
-            rel="noopener noreferrer"
+            class="training-preview-card"
+            href="training-options.html#one-on-one"
           >
 
-            <img
-              class="media-card-image"
-              src="https://static.wixstatic.com/media/697b1a_78a666c4bf1b4ebea1c7963cae0c7f7c~mv2.jpg/v1/fill/w_900%2Ch_650%2Cal_c%2Cq_88%2Cenc_auto/SMF%20web%20pic%202.jpg"
-              alt="Sport My Fitness youth fitness"
-              loading="lazy"
-            >
-
-            <div class="media-card-shade"></div>
-
-
-            <span
-              class="media-play"
-              aria-hidden="true"
-            >
-              ▶
+            <span class="training-preview-number">
+              01
             </span>
 
+            <h3>
+              Personal Training
+            </h3>
 
-            <div class="media-card-copy">
-
-              <span class="media-kicker">
-                Fitness Friday
-              </span>
-
-              <h3>
-                Fitness for Kids
-              </h3>
-
-        
+            <p>
+    

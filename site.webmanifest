@@ -1,6 +1,7 @@
 {
   "name": "Sport My Fitness",
   "short_name": "SMF",
+  "description": "Personal training, coaching and fitness support in Milwaukee.",
   "icons": [
     {
       "src": "brand/android-chrome-192x192.png",

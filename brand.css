@@ -32,3 +32,9 @@
   color: var(--smf-white);
   border: 1px solid var(--smf-teal);
 }
+
+.smf-btn-primary:focus-visible,
+.smf-btn-secondary:focus-visible {
+  outline: 3px solid var(--smf-white);
+  outline-offset: 3px;
+}

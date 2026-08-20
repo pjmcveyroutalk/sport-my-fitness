@@ -1,0 +1,4 @@
+ChatGPT Drive Bridge end-to-end test.
+
+This file was created automatically from the Google Drive command queue.
+It is safe to delete after the bridge is verified.

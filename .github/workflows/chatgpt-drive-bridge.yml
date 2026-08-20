@@ -192,12 +192,11 @@ jobs:
               return normalized
 
 
-          def remote_branch_exists(branch):
+          def remote_branch_sha(branch):
               result = run(
                   [
                       "git",
                       "ls-remote",
-                      "--exit-code",
                       "--heads",
                       "origin",
                       branch,
@@ -205,7 +204,115 @@ jobs:
                   check=False,
               )
 
-              return result.returncode == 0
+              if result.returncode != 0:
+                  return None
+
+              output = (
+                  result.stdout or ""
+              ).strip()
+
+              if not output:
+                  return None
+
+              return output.split()[0]
+
+
+          def remote_branch_exists(branch):
+              return remote_branch_sha(branch) is not None
+
+
+          def cleanup_merged_branch(branch, command_id):
+              validate_branch(branch)
+
+              remote_sha = remote_branch_sha(branch)
+
+              if not remote_sha:
+                  return False
+
+              result = run(
+                  [
+                      "gh",
+                      "pr",
+                      "list",
+                      "--head",
+                      branch,
+                      "--base",
+                      "main",
+                      "--state",
+                      "merged",
+                      "--limit",
+                      "20",
+                      "--json",
+                      "number,mergedAt,headRefName,headRefOid",
+                  ],
+                  check=False,
+              )
+
+              if result.returncode != 0:
+                  print(
+                      f"[WARN] {command_id}: "
+                      "could not inspect merged PRs for "
+                      f"{branch}"
+                  )
+                  return False
+
+              try:
+                  prs = json.loads(
+                      result.stdout or "[]"
+                  )
+
+              except Exception:
+                  print(
+                      f"[WARN] {command_id}: "
+                      "could not parse merged PR data for "
+                      f"{branch}"
+                  )
+                  return False
+
+              matching = []
+
+              for pr in prs:
+                  if (
+                      pr.get("mergedAt")
+                      and pr.get("headRefName") == branch
+                      and pr.get("headRefOid") == remote_sha
+                  ):
+                      matching.append(pr)
+
+              if not matching:
+                  return False
+
+              delete = run(
+                  [
+                      "git",
+                      "push",
+                      "origin",
+                      "--delete",
+                      branch,
+                  ],
+                  check=False,
+              )
+
+              if delete.returncode != 0:
+                  print(
+                      f"[WARN] {command_id}: "
+                      "merged branch cleanup failed for "
+                      f"{branch}\n"
+                      f"{delete.stderr}"
+                  )
+                  return False
+
+              pr_number = matching[0].get(
+                  "number"
+              )
+
+              print(
+                  f"[CLEANUP] {command_id}: "
+                  f"deleted merged branch {branch} "
+                  f"from PR #{pr_number}"
+              )
+
+              return True
 
 
           def apply_command(row):
@@ -225,11 +332,17 @@ jobs:
               validate_branch(branch)
 
               if remote_branch_exists(branch):
-                  print(
-                      f"[SKIP] {command_id}: "
-                      f"branch already exists: {branch}"
+                  cleaned = cleanup_merged_branch(
+                      branch,
+                      command_id,
                   )
-                  return
+
+                  if not cleaned:
+                      print(
+                          f"[SKIP] {command_id}: "
+                          f"branch already exists: {branch}"
+                      )
+                      return
 
               commit_message = decode_b64(
                   row.get("commit_message_b64"),
@@ -473,6 +586,18 @@ jobs:
               )
 
               if info.get("mergedAt"):
+                  head_branch = str(
+                      info.get("headRefName", "")
+                  )
+
+                  if head_branch.startswith(
+                      "chatgpt/"
+                  ):
+                      cleanup_merged_branch(
+                          head_branch,
+                          command_id,
+                      )
+
                   print(
                       f"[SKIP] {command_id}: "
                       f"PR #{pr_number} already merged"
@@ -519,6 +644,11 @@ jobs:
                       f"stdout: {result.stdout}\n"
                       f"stderr: {result.stderr}"
                   )
+
+              cleanup_merged_branch(
+                  head_branch,
+                  command_id,
+              )
 
               print(
                   f"[OK] {command_id}: "

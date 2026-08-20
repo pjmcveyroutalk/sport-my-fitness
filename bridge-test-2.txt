@@ -1,0 +1,4 @@
+ChatGPT Drive Bridge second end-to-end test.
+
+This file verifies branch creation and draft pull request creation after enabling GitHub Actions pull request permissions.
+It is safe to delete after verification.

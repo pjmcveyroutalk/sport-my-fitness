@@ -1,5 +1,451 @@
+/*
+ * ==========================================================
+ * SPORT MY FITNESS — MASTER SITE THEME
+ * ==========================================================
+ */
+
+:root{
+
+  --smf-bg-base:#020507;
+  --smf-bg-deep:#010405;
+  --smf-bg-dark:#03070a;
+  --smf-bg-mid:#050a0d;
+  --smf-bg-lift:#071012;
+
+  --smf-theme-teal:7,158,143;
+  --smf-theme-teal-bright:18,202,187;
+
+  --smf-glow-soft:.035;
+  --smf-glow-medium:.055;
+  --smf-glow-strong:.08;
+
+  --smf-theme-border:
+    rgba(
+      var(--smf-theme-teal-bright),
+      .16
+    );
+}
+
+
 /* ==========================================================
-   HUMAN FOOTER — SPORT MY FITNESS
+   MASTER PAGE CANVAS
+   ========================================================== */
+
+html{
+  background:
+    var(--smf-bg-base);
+}
+
+
+body{
+  min-height:100vh;
+
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(
+        var(--smf-theme-teal),
+        .045
+      ),
+      transparent 34%
+    ),
+    linear-gradient(
+      180deg,
+      var(--smf-bg-mid) 0%,
+      var(--smf-bg-base) 34%,
+      var(--smf-bg-dark) 70%,
+      var(--smf-bg-deep) 100%
+    );
+
+  background-attachment:fixed;
+}
+
+
+main{
+  position:relative;
+  isolation:isolate;
+  background:transparent;
+}
+
+
+main::before{
+  content:"";
+
+  position:fixed;
+  inset:0;
+
+  z-index:-2;
+
+  pointer-events:none;
+
+  background:
+    radial-gradient(
+      circle at 8% 18%,
+      rgba(
+        var(--smf-theme-teal),
+        .045
+      ),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 92% 48%,
+      rgba(
+        var(--smf-theme-teal),
+        .035
+      ),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 32% 82%,
+      rgba(
+        var(--smf-theme-teal-bright),
+        .018
+      ),
+      transparent 32%
+    );
+}
+
+
+/* ==========================================================
+   STANDARD SECTION
+   ========================================================== */
+
+.section{
+  position:relative;
+
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(
+        var(--smf-theme-teal),
+        var(--smf-glow-soft)
+      ),
+      transparent 34%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(5,10,13,.97),
+      rgba(4,8,11,.97)
+    );
+}
+
+
+.section::before{
+  content:"";
+
+  position:absolute;
+
+  top:0;
+  left:0;
+  right:0;
+
+  height:1px;
+
+  pointer-events:none;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(
+        var(--smf-theme-teal-bright),
+        .10
+      ),
+      transparent
+    );
+}
+
+
+/* ==========================================================
+   DARK SECTION
+   ========================================================== */
+
+.section-dark{
+  background:
+    radial-gradient(
+      circle at 50% 100%,
+      rgba(
+        var(--smf-theme-teal),
+        var(--smf-glow-soft)
+      ),
+      transparent 32%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(2,5,7,.985),
+      rgba(3,7,10,.985)
+    );
+}
+
+
+/* ==========================================================
+   MEDIA
+   ========================================================== */
+
+.media-section{
+  background:
+    radial-gradient(
+      circle at 82% 18%,
+      rgba(
+        var(--smf-theme-teal),
+        .052
+      ),
+      transparent 34%
+    ),
+    radial-gradient(
+      circle at 12% 88%,
+      rgba(
+        var(--smf-theme-teal),
+        .028
+      ),
+      transparent 32%
+    ),
+    linear-gradient(
+      180deg,
+      #041012,
+      #03070a
+    );
+}
+
+
+/* ==========================================================
+   SUBPAGE HERO
+   ========================================================== */
+
+.options-hero{
+  position:relative;
+  overflow:hidden;
+
+  background:
+    radial-gradient(
+      circle at 50% 8%,
+      rgba(
+        var(--smf-theme-teal),
+        .075
+      ),
+      transparent 37%
+    ),
+    radial-gradient(
+      circle at 8% 82%,
+      rgba(
+        var(--smf-theme-teal),
+        .035
+      ),
+      transparent 30%
+    ),
+    linear-gradient(
+      180deg,
+      #020507 0%,
+      #041012 58%,
+      #050c0f 100%
+    );
+}
+
+
+.options-hero::after{
+  content:"";
+
+  position:absolute;
+
+  left:0;
+  right:0;
+  bottom:0;
+
+  height:1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(
+        var(--smf-theme-teal-bright),
+        .25
+      ),
+      transparent
+    );
+}
+
+
+/* ==========================================================
+   SUBPAGE CONTENT
+   ========================================================== */
+
+.options-section{
+  position:relative;
+
+  background:
+    radial-gradient(
+      circle at 90% 18%,
+      rgba(
+        var(--smf-theme-teal),
+        .04
+      ),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 10% 72%,
+      rgba(
+        var(--smf-theme-teal),
+        .025
+      ),
+      transparent 30%
+    ),
+    linear-gradient(
+      180deg,
+      #050a0d,
+      #03080a
+    );
+}
+
+
+/* ==========================================================
+   CONTACT AREAS
+   ========================================================== */
+
+.home-contact,
+.training-contact,
+.contact-section{
+  position:relative;
+
+  background:
+    radial-gradient(
+      circle at 14% 16%,
+      rgba(
+        var(--smf-theme-teal),
+        .065
+      ),
+      transparent 34%
+    ),
+    radial-gradient(
+      circle at 88% 84%,
+      rgba(
+        var(--smf-theme-teal),
+        .028
+      ),
+      transparent 28%
+    ),
+    linear-gradient(
+      180deg,
+      #040b0d,
+      #020608
+    );
+
+  border-top:
+    1px solid
+    rgba(
+      var(--smf-theme-teal-bright),
+      .13
+    );
+}
+
+
+/* ==========================================================
+   FINAL CTA
+   ========================================================== */
+
+.final-cta{
+  position:relative;
+
+  background:
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(
+        var(--smf-theme-teal),
+        .075
+      ),
+      transparent 42%
+    ),
+    linear-gradient(
+      180deg,
+      #020709,
+      #041012,
+      #020709
+    );
+}
+
+
+/* ==========================================================
+   MISSION
+   ========================================================== */
+
+.smf-mission-v2{
+  background:
+    radial-gradient(
+      circle at 4% 48%,
+      rgba(
+        var(--smf-theme-teal),
+        .18
+      ),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 96% 85%,
+      rgba(
+        var(--smf-theme-teal),
+        .10
+      ),
+      transparent 34%
+    ),
+    linear-gradient(
+      135deg,
+      #041214,
+      #061719 46%,
+      #020709
+    );
+}
+
+
+/* ==========================================================
+   MASTER CARD SURFACES
+   ========================================================== */
+
+.training-preview-card,
+.program-card,
+.option-card,
+.contact-dropdown,
+.contact-form{
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(
+        var(--smf-theme-teal),
+        .035
+      ),
+      transparent 38%
+    ),
+    linear-gradient(
+      145deg,
+      rgba(9,19,21,.96),
+      rgba(3,6,8,.985)
+    );
+}
+
+
+/* ==========================================================
+   HEADER
+   ========================================================== */
+
+.site-header{
+  background:
+    rgba(2,5,7,.97);
+
+  border-bottom:
+    1px solid
+    rgba(
+      var(--smf-theme-teal),
+      .28
+    );
+
+  backdrop-filter:
+    blur(12px);
+
+  -webkit-backdrop-filter:
+    blur(12px);
+}
+
+
+/* ==========================================================
+   HUMAN FOOTER
    ========================================================== */
 
 .site-footer{
@@ -18,10 +464,6 @@
 }
 
 
-/* ==========================================================
-   MAIN FOOTER AREA
-   ========================================================== */
-
 .footer-human-wrap{
   position:relative;
 
@@ -34,7 +476,7 @@
   margin:0 auto;
 
   padding:
-    54px 0 36px;
+    44px 0 26px;
 
   overflow:hidden;
 
@@ -42,22 +484,19 @@
 }
 
 
-/* ==========================================================
-   WATERMARK
-   intentionally offset — not perfectly centered
-   ========================================================== */
+/* offset intentionally */
 
 .footer-watermark{
   position:absolute;
 
-  right:-70px;
-  bottom:-120px;
+  right:-105px;
+  bottom:-135px;
 
   width:
     clamp(
       390px,
-      46vw,
-      650px
+      44vw,
+      620px
     );
 
   aspect-ratio:1;
@@ -72,7 +511,7 @@
     contain
     no-repeat;
 
-  opacity:.055;
+  opacity:.05;
 
   filter:
     saturate(.72)
@@ -83,13 +522,8 @@
 }
 
 
-/* ==========================================================
-   BRAND / BUSINESS INFORMATION
-   ========================================================== */
-
 .footer-brand-block{
   position:relative;
-
   max-width:700px;
 }
 
@@ -105,14 +539,14 @@
 
   font-size:
     clamp(
-      2rem,
-      4vw,
-      3.1rem
+      1.85rem,
+      3.5vw,
+      2.8rem
     );
 
   font-weight:700;
 
-  line-height:.95;
+  line-height:.96;
 
   letter-spacing:.035em;
 
@@ -122,7 +556,7 @@
 
 .footer-brand-location{
   margin:
-    8px 0 0;
+    6px 0 0;
 
   color:#12cabb;
 
@@ -130,7 +564,7 @@
     "Rajdhani",
     sans-serif;
 
-  font-size:1rem;
+  font-size:.92rem;
 
   font-weight:700;
 
@@ -144,7 +578,7 @@
   max-width:520px;
 
   margin:
-    18px 0 0;
+    13px 0 0;
 
   color:#d6dddd;
 
@@ -154,18 +588,14 @@
 
   font-size:
     clamp(
-      .94rem,
-      1.5vw,
-      1.05rem
+      .9rem,
+      1.4vw,
+      1rem
     );
 
-  line-height:1.6;
+  line-height:1.5;
 }
 
-
-/* ==========================================================
-   CONTACT
-   ========================================================== */
 
 .footer-contact-row{
   display:flex;
@@ -176,7 +606,7 @@
 
   gap:8px;
 
-  margin-top:22px;
+  margin-top:15px;
 
   color:#718083;
 
@@ -184,13 +614,12 @@
     "Montserrat",
     sans-serif;
 
-  font-size:.91rem;
+  font-size:.88rem;
 }
 
 
 .footer-contact-row a{
   color:#fff;
-
   text-decoration:none;
 }
 
@@ -203,7 +632,7 @@
 
 .footer-address{
   margin:
-    8px 0 0;
+    6px 0 0;
 
   color:#9ca8aa;
 
@@ -211,14 +640,14 @@
     "Montserrat",
     sans-serif;
 
-  font-size:.86rem;
+  font-size:.82rem;
 
-  line-height:1.5;
+  line-height:1.45;
 }
 
 
 /* ==========================================================
-   SIMPLE NAVIGATION
+   SIMPLE NAV
    ========================================================== */
 
 .footer-simple-nav{
@@ -227,11 +656,11 @@
   flex-wrap:wrap;
 
   gap:
-    9px 24px;
+    8px 22px;
 
-  margin-top:34px;
+  margin-top:24px;
 
-  padding-top:24px;
+  padding-top:18px;
 
   border-top:
     1px solid rgba(255,255,255,.08);
@@ -247,7 +676,7 @@
     "Montserrat",
     sans-serif;
 
-  font-size:.88rem;
+  font-size:.84rem;
 
   font-weight:500;
 
@@ -261,33 +690,8 @@
 }
 
 
-.footer-simple-nav a::after{
-  content:"";
-
-  position:absolute;
-
-  left:0;
-  bottom:-5px;
-
-  width:0;
-  height:1px;
-
-  background:#12cabb;
-
-  transition:
-    width .2s ease;
-}
-
-
-.footer-simple-nav a:hover::after,
-.footer-simple-nav a:focus::after{
-  width:100%;
-}
-
-
 /* ==========================================================
-   SOCIAL LINKS
-   intentionally plain — no matching icon boxes
+   SOCIALS — LOGOS WITHOUT BOXES
    ========================================================== */
 
 .footer-social-text{
@@ -295,38 +699,84 @@
 
   flex-wrap:wrap;
 
-  gap:
-    8px 19px;
+  align-items:center;
 
-  margin-top:19px;
+  gap:
+    10px 20px;
+
+  margin-top:17px;
 }
 
 
 .footer-social-text a{
-  color:#778487;
+  display:inline-flex;
+
+  align-items:center;
+
+  gap:7px;
+
+  color:#8c989a;
 
   font-family:
     "Montserrat",
     sans-serif;
 
-  font-size:.78rem;
+  font-size:.76rem;
 
   font-weight:500;
 
-  letter-spacing:.025em;
-
   text-decoration:none;
+
+  transition:
+    color .18s ease,
+    opacity .18s ease;
 }
 
 
 .footer-social-text a:hover,
 .footer-social-text a:focus{
-  color:#12cabb;
+  color:#fff;
+}
+
+
+.footer-social-logo{
+  width:19px;
+  height:19px;
+
+  flex:0 0 auto;
+
+  display:block;
+}
+
+
+.facebook-logo{
+  color:#1877f2;
+}
+
+
+.instagram-logo{
+  color:#e4405f;
+}
+
+
+.tiktok-logo{
+  color:#fff;
+}
+
+
+.linkedin-logo{
+  color:#0a66c2;
+}
+
+
+.google-logo{
+  width:20px;
+  height:20px;
 }
 
 
 /* ==========================================================
-   BOTTOM STRIP
+   FOOTER BOTTOM
    ========================================================== */
 
 .footer-bottom-simple{
@@ -347,7 +797,7 @@
   margin:0 auto;
 
   padding:
-    18px 0 22px;
+    14px 0 18px;
 
   border-top:
     1px solid rgba(18,202,187,.12);
@@ -358,7 +808,7 @@
     "Montserrat",
     sans-serif;
 
-  font-size:.72rem;
+  font-size:.7rem;
 }
 
 
@@ -377,24 +827,47 @@
 
 
 /* ==========================================================
-   TABLET
+   MOBILE MASTER THEME
    ========================================================== */
 
 @media(max-width:980px){
 
-  .footer-human-wrap{
-    padding-top:46px;
+  body{
+    background-attachment:scroll;
+  }
+
+
+  main::before{
+    position:absolute;
+  }
+
+
+  .site-nav{
+    background:
+      radial-gradient(
+        circle at 50% 100%,
+        rgba(
+          var(--smf-theme-teal),
+          .055
+        ),
+        transparent 32%
+      ),
+      linear-gradient(
+        180deg,
+        #020609 0%,
+        #020609 72%,
+        #031011 100%
+      ) !important;
   }
 
 
   .footer-watermark{
-    right:-120px;
-
-    bottom:-100px;
+    right:-140px;
+    bottom:-110px;
 
     width:
       min(
-        620px,
+        600px,
         70vw
       );
   }
@@ -403,7 +876,7 @@
 
 
 /* ==========================================================
-   MOBILE
+   MOBILE FOOTER
    ========================================================== */
 
 @media(max-width:760px){
@@ -413,49 +886,48 @@
       calc(100% - 38px);
 
     padding:
-      38px 0 28px;
+      31px 0 22px;
   }
 
 
   .footer-watermark{
-    right:-150px;
-    bottom:-70px;
+    right:-190px;
+    bottom:-80px;
 
     width:
       min(
-        570px,
-        125vw
+        560px,
+        120vw
       );
 
-    opacity:.05;
+    opacity:.045;
   }
 
 
   .footer-brand-name{
     font-size:
       clamp(
-        2rem,
-        10vw,
-        2.65rem
+        1.8rem,
+        8.5vw,
+        2.3rem
       );
   }
 
 
   .footer-brand-location{
-    margin-top:6px;
-
-    font-size:.82rem;
+    margin-top:5px;
+    font-size:.78rem;
   }
 
 
   .footer-brand-line{
-    max-width:310px;
+    max-width:300px;
 
-    margin-top:15px;
+    margin-top:11px;
 
-    font-size:.88rem;
+    font-size:.84rem;
 
-    line-height:1.55;
+    line-height:1.45;
   }
 
 
@@ -464,11 +936,11 @@
 
     align-items:flex-start;
 
-    gap:6px;
+    gap:4px;
 
-    margin-top:20px;
+    margin-top:14px;
 
-    font-size:.83rem;
+    font-size:.81rem;
   }
 
 
@@ -478,39 +950,47 @@
 
 
   .footer-address{
-    margin-top:9px;
+    margin-top:6px;
 
-    max-width:280px;
+    max-width:290px;
 
-    font-size:.79rem;
+    font-size:.76rem;
   }
 
 
   .footer-simple-nav{
     gap:
-      11px 18px;
+      9px 17px;
 
-    margin-top:27px;
+    margin-top:20px;
 
-    padding-top:21px;
+    padding-top:16px;
   }
 
 
   .footer-simple-nav a{
-    font-size:.82rem;
+    font-size:.79rem;
   }
 
 
   .footer-social-text{
     gap:
-      9px 16px;
+      10px 17px;
 
-    margin-top:20px;
+    margin-top:16px;
   }
 
 
   .footer-social-text a{
-    font-size:.75rem;
+    gap:6px;
+
+    font-size:.72rem;
+  }
+
+
+  .footer-social-logo{
+    width:18px;
+    height:18px;
   }
 
 
@@ -522,12 +1002,12 @@
 
     align-items:flex-start;
 
-    gap:7px;
+    gap:6px;
 
     padding:
-      16px 0 20px;
+      12px 0 17px;
 
-    font-size:.68rem;
+    font-size:.66rem;
   }
 
 }
@@ -546,19 +1026,41 @@
 
 
   .footer-watermark{
-    right:-165px;
+    right:-205px;
   }
 
 
   .footer-simple-nav{
     gap:
-      10px 15px;
+      8px 14px;
+  }
+
+
+  .footer-social-text{
+    gap:
+      9px 14px;
   }
 
 
   .footer-bottom-simple{
     width:
       calc(100% - 30px);
+  }
+
+}
+
+
+/* ==========================================================
+   ACCESSIBILITY
+   ========================================================== */
+
+@media(
+  prefers-reduced-motion:
+  reduce
+){
+
+  html{
+    scroll-behavior:auto;
   }
 
 }

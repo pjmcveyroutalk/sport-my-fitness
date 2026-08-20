@@ -35,13 +35,17 @@ jobs:
         run: |
           set -euo pipefail
 
-          URL="https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=${SHEET_GID}"
+          CACHE_BUSTER="$(date +%s)"
+
+          URL="https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=${SHEET_GID}&cb=${CACHE_BUSTER}"
 
           curl \
             --fail \
             --silent \
             --show-error \
             --location \
+            --header "Cache-Control: no-cache" \
+            --header "Pragma: no-cache" \
             "$URL" \
             -o /tmp/chatgpt-commands.csv
 

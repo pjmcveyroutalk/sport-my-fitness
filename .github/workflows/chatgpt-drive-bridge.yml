@@ -1,6 +1,6 @@
 name: ChatGPT Drive Bridge
 
-on:
+"on":
   workflow_dispatch:
   schedule:
     - cron: "*/5 * * * *"
@@ -16,6 +16,7 @@ concurrency:
 jobs:
   process-commands:
     runs-on: ubuntu-latest
+
     env:
       SHEET_ID: "1vYoz54luAe6i9O6T-CRWRDDAtCsKSXAYyeN4Upt4wlk"
       SHEET_NAME: "Commands"
@@ -32,24 +33,34 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+
           URL="https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv&sheet=${SHEET_NAME}"
-          curl --fail --silent --show-error --location "$URL" -o /tmp/chatgpt-commands.csv
+
+          curl \
+            --fail \
+            --silent \
+            --show-error \
+            --location \
+            "$URL" \
+            -o /tmp/chatgpt-commands.csv
+
           test -s /tmp/chatgpt-commands.csv
 
       - name: Process ready commands
         shell: bash
         run: |
           set -euo pipefail
+
           python3 <<'PY'
           import base64
           import csv
           import json
-          import os
           import re
           import subprocess
           from pathlib import Path
 
           CSV_PATH = "/tmp/chatgpt-commands.csv"
+
 
           def run(args, check=True):
               result = subprocess.run(
@@ -58,43 +69,52 @@ jobs:
                   capture_output=True,
                   check=False,
               )
+
               if check and result.returncode != 0:
                   raise RuntimeError(
                       f"Command failed: {' '.join(args)}\n"
                       f"stdout: {result.stdout}\n"
                       f"stderr: {result.stderr}"
                   )
+
               return result
+
 
           def decode_b64(value, field):
               value = (value or "").strip()
+
               if not value:
                   return ""
+
               try:
                   return base64.b64decode(
                       value,
-                      validate=True
+                      validate=True,
                   ).decode("utf-8")
+
               except Exception as exc:
                   raise ValueError(
                       f"Invalid Base64 in {field}: {exc}"
                   )
 
+
           def validate_command_id(command_id):
               if not re.fullmatch(
                   r"[A-Za-z0-9._-]{1,80}",
-                  command_id or ""
+                  command_id or "",
               ):
                   raise ValueError("Invalid command_id")
+
 
           def validate_branch(branch):
               if not re.fullmatch(
                   r"chatgpt/[A-Za-z0-9._/-]{1,120}",
-                  branch or ""
+                  branch or "",
               ):
                   raise ValueError(
                       "Branch must start with chatgpt/"
                   )
+
               if (
                   ".." in branch
                   or branch.endswith("/")
@@ -102,16 +122,17 @@ jobs:
               ):
                   raise ValueError("Unsafe branch name")
 
+
           def validate_target(path_text):
               path_text = (path_text or "").strip()
-              p = Path(path_text)
+              path = Path(path_text)
 
-              if not path_text or p.is_absolute():
+              if not path_text or path.is_absolute():
                   raise ValueError(
-                      "Target file must be repo-relative"
+                      "Target file must be a repo-relative path"
                   )
 
-              if ".." in p.parts:
+              if ".." in path.parts:
                   raise ValueError(
                       "Path traversal is not allowed"
                   )
@@ -124,12 +145,16 @@ jobs:
                       "Bridge cannot modify workflow files"
                   )
 
-              if lowered.startswith(".git/") or lowered == ".git":
+              if (
+                  lowered.startswith(".git/")
+                  or lowered == ".git"
+              ):
                   raise ValueError(
                       "Bridge cannot modify Git internals"
                   )
 
               return normalized
+
 
           def remote_branch_exists(branch):
               result = run(
@@ -143,7 +168,9 @@ jobs:
                   ],
                   check=False,
               )
+
               return result.returncode == 0
+
 
           def apply_command(row):
               command_id = (
@@ -206,6 +233,7 @@ jobs:
                       content_b64,
                       validate=True,
                   )
+
               except Exception as exc:
                   raise ValueError(
                       f"Invalid Base64 file content: {exc}"
@@ -226,7 +254,12 @@ jobs:
                       f"ChatGPT change: {command_id}"
                   )
 
-              run(["git", "fetch", "origin", "main"])
+              run([
+                  "git",
+                  "fetch",
+                  "origin",
+                  "main",
+              ])
 
               run([
                   "git",
@@ -236,12 +269,16 @@ jobs:
                   "origin/main",
               ])
 
-              dest = Path(target)
-              dest.parent.mkdir(
+              destination = Path(target)
+
+              destination.parent.mkdir(
                   parents=True,
-                  exist_ok=True
+                  exist_ok=True,
               )
-              dest.write_bytes(file_bytes)
+
+              destination.write_bytes(
+                  file_bytes
+              )
 
               run([
                   "git",
@@ -258,7 +295,12 @@ jobs:
                   "@users.noreply.github.com",
               ])
 
-              run(["git", "add", "--", target])
+              run([
+                  "git",
+                  "add",
+                  "--",
+                  target,
+              ])
 
               diff = run(
                   [
@@ -297,7 +339,7 @@ jobs:
                   + "\n\n---\n"
                   + f"Bridge command: `{command_id}`\n"
                   + "Created automatically from the "
-                  "ChatGPT Drive command queue."
+                  + "ChatGPT Drive command queue."
               ).strip()
 
               result = run(
@@ -340,6 +382,7 @@ jobs:
                       found = json.loads(
                           existing.stdout or "[]"
                       )
+
                   except Exception:
                       found = []
 
@@ -353,11 +396,13 @@ jobs:
                       f"[OK] {command_id}: "
                       f"existing PR {found[0]}"
                   )
+
               else:
                   print(
                       f"[OK] {command_id}: "
                       f"{result.stdout.strip()}"
                   )
+
 
           def merge_command(row):
               command_id = (
@@ -372,33 +417,35 @@ jobs:
 
               if not raw_pr.isdigit():
                   raise ValueError(
-                      "merge command requires numeric pr_number"
+                      "Merge command requires numeric pr_number"
                   )
 
-              pr = int(raw_pr)
+              pr_number = int(raw_pr)
 
               result = run([
                   "gh",
                   "pr",
                   "view",
-                  str(pr),
+                  str(pr_number),
                   "--json",
                   "number,state,mergedAt,"
                   "headRefName,baseRefName,url",
               ])
 
-              info = json.loads(result.stdout)
+              info = json.loads(
+                  result.stdout
+              )
 
               if info.get("mergedAt"):
                   print(
                       f"[SKIP] {command_id}: "
-                      f"PR #{pr} already merged"
+                      f"PR #{pr_number} already merged"
                   )
                   return
 
               if info.get("state") != "OPEN":
                   raise ValueError(
-                      f"PR #{pr} is not open"
+                      f"PR #{pr_number} is not open"
                   )
 
               if info.get("baseRefName") != "main":
@@ -406,9 +453,13 @@ jobs:
                       "Bridge only merges PRs targeting main"
                   )
 
-              if not str(
+              head_branch = str(
                   info.get("headRefName", "")
-              ).startswith("chatgpt/"):
+              )
+
+              if not head_branch.startswith(
+                  "chatgpt/"
+              ):
                   raise ValueError(
                       "Bridge only merges chatgpt/* branches"
                   )
@@ -418,7 +469,7 @@ jobs:
                       "gh",
                       "pr",
                       "merge",
-                      str(pr),
+                      str(pr_number),
                       "--squash",
                       "--delete-branch",
                   ],
@@ -427,7 +478,7 @@ jobs:
 
               if result.returncode != 0:
                   raise RuntimeError(
-                      f"Merge failed for PR #{pr}. "
+                      f"Merge failed for PR #{pr_number}. "
                       "It may be waiting on checks.\n"
                       f"stdout: {result.stdout}\n"
                       f"stderr: {result.stderr}"
@@ -435,15 +486,18 @@ jobs:
 
               print(
                   f"[OK] {command_id}: "
-                  f"merged PR #{pr}"
+                  f"merged PR #{pr_number}"
               )
+
 
           with open(
               CSV_PATH,
               newline="",
               encoding="utf-8-sig",
-          ) as fh:
-              rows = list(csv.DictReader(fh))
+          ) as file:
+              rows = list(
+                  csv.DictReader(file)
+              )
 
           ready_rows = [
               row
@@ -454,13 +508,15 @@ jobs:
           ]
 
           if not ready_rows:
-              print("No READY commands found.")
+              print(
+                  "No READY commands found."
+              )
               raise SystemExit(0)
 
           failures = []
 
           for row in ready_rows:
-              cid = (
+              command_id = (
                   row.get("command_id") or ""
               ).strip() or "<missing>"
 
@@ -471,32 +527,50 @@ jobs:
               try:
                   if action == "apply":
                       apply_command(row)
+
                   elif action == "merge":
                       merge_command(row)
+
                   else:
                       raise ValueError(
                           f"Unsupported action: {action}"
                       )
+
               except Exception as exc:
                   failures.append(
-                      f"{cid}: {exc}"
+                      f"{command_id}: {exc}"
                   )
+
                   print(
-                      f"[ERROR] {cid}: {exc}"
+                      f"[ERROR] "
+                      f"{command_id}: {exc}"
                   )
 
               run(
-                  ["git", "reset", "--hard"],
+                  [
+                      "git",
+                      "reset",
+                      "--hard",
+                  ],
                   check=False,
               )
+
               run(
-                  ["git", "checkout", "main"],
+                  [
+                      "git",
+                      "checkout",
+                      "main",
+                  ],
                   check=False,
               )
 
           if failures:
               print("\nFailures:")
+
               for failure in failures:
-                  print(f" - {failure}")
+                  print(
+                      f" - {failure}"
+                  )
+
               raise SystemExit(1)
           PY

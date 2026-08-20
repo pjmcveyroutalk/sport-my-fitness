@@ -20,6 +20,7 @@ jobs:
     env:
       SHEET_ID: "1vYoz54luAe6i9O6T-CRWRDDAtCsKSXAYyeN4Upt4wlk"
       SHEET_NAME: "Commands"
+      SHEET_GID: "1010314347"
       GH_TOKEN: ${{ github.token }}
 
     steps:
@@ -34,7 +35,7 @@ jobs:
         run: |
           set -euo pipefail
 
-          URL="https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv&sheet=${SHEET_NAME}"
+          URL="https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=${SHEET_GID}"
 
           curl \
             --fail \
@@ -45,6 +46,41 @@ jobs:
             -o /tmp/chatgpt-commands.csv
 
           test -s /tmp/chatgpt-commands.csv
+
+          python3 <<'PY'
+          import csv
+
+          path = "/tmp/chatgpt-commands.csv"
+
+          with open(
+              path,
+              newline="",
+              encoding="utf-8-sig",
+          ) as file:
+              reader = csv.reader(file)
+              header = next(reader, [])
+
+          required = {
+              "command_id",
+              "action",
+              "branch",
+              "target_file",
+              "ready",
+          }
+
+          missing = required - set(header)
+
+          if missing:
+              raise SystemExit(
+                  "Downloaded CSV is missing required headers: "
+                  + ", ".join(sorted(missing))
+              )
+
+          print(
+              "Command queue CSV verified. Headers: "
+              + ", ".join(header)
+          )
+          PY
 
       - name: Process ready commands
         shell: bash

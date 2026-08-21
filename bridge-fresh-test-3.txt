@@ -1,4 +1,0 @@
-ChatGPT Drive Bridge fresh test 3.
-
-This file exists only to verify a brand-new command creates a branch and draft pull request.
-It is safe to delete after testing.

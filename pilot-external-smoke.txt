@@ -1,0 +1,1 @@
+Routalk Pilot external repository smoke test.\nThis file is harmless and can be removed after verification.\n

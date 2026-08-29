@@ -1,34 +1,12 @@
 const crypto = require("node:crypto");
 
-function safeEqual(left, right) {
-  const a = Buffer.from(left || "");
-  const b = Buffer.from(right || "");
-  return a.length === b.length && crypto.timingSafeEqual(a, b);
-}
-
-function validSha(value) {
-  return /^[a-f0-9]{40}$/i.test(value || "");
-}
-
-function forwardedValue(value) {
-  if (typeof value !== "string") return "";
-  return value.split(",")[0].trim();
-}
-
-function resolveOrigin(request) {
-  const forwardedHost = forwardedValue(request.headers["x-forwarded-host"]);
-  const host = forwardedHost || forwardedValue(request.headers.host);
-  const forwardedProto = forwardedValue(request.headers["x-forwarded-proto"]);
-  const protocol = forwardedProto === "http" ? "http" : "https";
-
-  if (!host || !/^[A-Za-z0-9.-]+(?::\d{1,5})?$/.test(host)) return null;
-  return `${protocol}://${host}`;
-}
-
-function observedRevision() {
-  const revision = process.env.VERCEL_GIT_COMMIT_SHA || "";
-  return validSha(revision) ? revision : null;
-}
+const VERIFY_TIMEOUT_MS = 8_000;
+const EXPECTED_OWNER_ID = "team_jC9jlJ9GZ9GSjrbYoD0pin3U";
+const EXPECTED_SOURCE_PROJECT_ID = "prj_TFPz6WWm29FNKxK4kRZdTMKH2PBi";
+const EXPECTED_SOURCE_ENVIRONMENT = "production";
+const OIDC_ISSUER = "https://oidc.vercel.com/routalk-builder";
+const OIDC_AUDIENCE = "https://vercel.com/routalk-builder";
+const OIDC_JWKS = new URL(`${OIDC_ISSUER}/.well-known/jwks`);
 
 function setSecurityHeaders(response, requestId) {
   response.setHeader("Cache-Control", "no-store, max-age=0");
@@ -37,6 +15,102 @@ function setSecurityHeaders(response, requestId) {
   response.setHeader("X-Content-Type-Options", "nosniff");
   response.setHeader("X-Frame-Options", "DENY");
   response.setHeader("X-Pilot-Request-Id", requestId);
+}
+
+function validSha(value) {
+  return /^[a-f0-9]{40}$/i.test(value || "");
+}
+
+function base64urlToBuffer(value) {
+  const normalized = value.replace(/-/g, "+").replace(/_/g, "/");
+  const padding = "=".repeat((4 - (normalized.length % 4)) % 4);
+  return Buffer.from(normalized + padding, "base64");
+}
+
+function parseJwt(token) {
+  const parts = String(token || "").split(".");
+  if (parts.length !== 3) throw new Error("INVALID_TOKEN");
+  const header = JSON.parse(base64urlToBuffer(parts[0]).toString("utf8"));
+  const payload = JSON.parse(base64urlToBuffer(parts[1]).toString("utf8"));
+  return {
+    header,
+    payload,
+    signingInput: `${parts[0]}.${parts[1]}`,
+    signature: base64urlToBuffer(parts[2]),
+  };
+}
+
+async function fetchSigningKey(kid) {
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), VERIFY_TIMEOUT_MS);
+  try {
+    const result = await fetch(OIDC_JWKS, {
+      headers: { Accept: "application/json" },
+      cache: "no-store",
+      signal: controller.signal,
+    });
+    if (!result.ok) throw new Error("JWKS_UNAVAILABLE");
+    const data = await result.json();
+    const jwk = Array.isArray(data.keys)
+      ? data.keys.find((key) => key && key.kid === kid && key.kty === "RSA")
+      : null;
+    if (!jwk) throw new Error("SIGNING_KEY_NOT_FOUND");
+    return crypto.createPublicKey({ key: jwk, format: "jwk" });
+  } finally {
+    clearTimeout(timeout);
+  }
+}
+
+async function verifyPilotIdentity(token) {
+  const parsed = parseJwt(token);
+  if (parsed.header.alg !== "RS256" || typeof parsed.header.kid !== "string") {
+    throw new Error("INVALID_TOKEN_HEADER");
+  }
+
+  const key = await fetchSigningKey(parsed.header.kid);
+  const validSignature = crypto.verify(
+    "RSA-SHA256",
+    Buffer.from(parsed.signingInput),
+    key,
+    parsed.signature,
+  );
+  if (!validSignature) throw new Error("INVALID_TOKEN_SIGNATURE");
+
+  const now = Math.floor(Date.now() / 1000);
+  const payload = parsed.payload;
+  if (
+    payload.iss !== OIDC_ISSUER ||
+    payload.aud !== OIDC_AUDIENCE ||
+    payload.owner_id !== EXPECTED_OWNER_ID ||
+    payload.project_id !== EXPECTED_SOURCE_PROJECT_ID ||
+    payload.environment !== EXPECTED_SOURCE_ENVIRONMENT ||
+    typeof payload.exp !== "number" ||
+    typeof payload.iat !== "number" ||
+    payload.exp <= now ||
+    payload.iat > now + 60
+  ) {
+    throw new Error("INVALID_TOKEN_CLAIMS");
+  }
+
+  return payload;
+}
+
+function requestBearer(request) {
+  const authorization = request.headers.authorization || "";
+  return authorization.startsWith("Bearer ") ? authorization.slice(7).trim() : "";
+}
+
+function resolveOrigin(request) {
+  const forwardedHost = String(request.headers["x-forwarded-host"] || "")
+    .split(",")[0]
+    .trim();
+  const host = forwardedHost || String(request.headers.host || "").split(",")[0].trim();
+  const forwardedProto = String(request.headers["x-forwarded-proto"] || "")
+    .split(",")[0]
+    .trim();
+  const protocol = forwardedProto === "http" ? "http" : "https";
+  if (!host || !/^[A-Za-z0-9.-]+(?::\d{1,5})?$/.test(host)) return null;
+  return `${protocol}://${host}`;
 }
 
 module.exports = async function handler(request, response) {
@@ -48,101 +122,79 @@ module.exports = async function handler(request, response) {
     return response.status(405).json({ error: "Method not allowed", request_id: requestId });
   }
 
-  const verifierSecret = process.env.PILOT_PRODUCTION_VERIFY_SECRET;
-  if (!verifierSecret) {
-    return response.status(503).json({
-      error: "Production verification is not configured",
-      request_id: requestId,
-    });
-  }
-
-  const authorization = request.headers.authorization || "";
-  const suppliedSecret = authorization.startsWith("Bearer ")
-    ? authorization.slice(7)
-    : "";
-
-  if (!safeEqual(suppliedSecret, verifierSecret)) {
-    return response.status(401).json({ error: "Unauthorized", request_id: requestId });
-  }
-
-  const expectedValue = Array.isArray(request.query.expected_revision)
+  const expectedRevisionValue = Array.isArray(request.query.expected_revision)
     ? request.query.expected_revision[0]
     : request.query.expected_revision;
-  const expectedRevision = typeof expectedValue === "string" ? expectedValue : "";
+  const expectedRevision =
+    typeof expectedRevisionValue === "string" ? expectedRevisionValue.trim() : "";
 
   if (!validSha(expectedRevision)) {
     return response.status(400).json({
+      state: "FAILED",
       error: "Invalid expected_revision",
       request_id: requestId,
     });
   }
 
-  const origin = resolveOrigin(request);
-  if (!origin) {
-    return response.status(400).json({
-      error: "Verification origin is invalid",
-      request_id: requestId,
-    });
+  try {
+    await verifyPilotIdentity(requestBearer(request));
+  } catch {
+    return response.status(401).json({ error: "Unauthorized", request_id: requestId });
   }
 
-  const observed = observedRevision();
-  const revisionMatch = Boolean(
-    observed && observed.toLowerCase() === expectedRevision.toLowerCase()
-  );
-
-  const controller = new AbortController();
-  const timeout = setTimeout(() => controller.abort(), 8000);
-
-  try {
-    const result = await fetch(new URL("/", origin), {
-      method: "GET",
-      redirect: "follow",
-      cache: "no-store",
-      signal: controller.signal,
-    });
-    const body = await result.text();
-    const healthReady =
-      result.ok &&
-      body.includes("Sport My Fitness") &&
-      body.includes("<title>");
-
-    const ready = healthReady && revisionMatch;
-
-    return response.status(ready ? 200 : 503).json({
-      state: ready
-        ? "READY"
-        : healthReady
-          ? "WAITING_FOR_REVISION"
-          : "FAILED",
+  const observedRevision = process.env.VERCEL_GIT_COMMIT_SHA || "";
+  const origin = resolveOrigin(request);
+  if (!origin) {
+    return response.status(503).json({
+      state: "FAILED",
       expected_revision: expectedRevision,
-      observed_revision: observed,
-      revision_match: revisionMatch,
-      health_ready: healthReady,
+      observed_revision: validSha(observedRevision) ? observedRevision : null,
+      revision_match: false,
+      health_ready: false,
       verified_at: new Date().toISOString(),
       request_id: requestId,
     });
-  } catch (error) {
-    return response.status(504).json({
-      state: "FAILED",
-      expected_revision: expectedRevision,
-      observed_revision: observed,
-      revision_match: false,
-      health_ready: false,
-      error:
-        error?.name === "AbortError"
-          ? "Verification timed out"
-          : "Verification request failed",
-      request_id: requestId,
+  }
+
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), VERIFY_TIMEOUT_MS);
+  let healthReady = false;
+  try {
+    const result = await fetch(`${origin}/`, {
+      method: "GET",
+      headers: { Accept: "text/html" },
+      cache: "no-store",
+      redirect: "follow",
+      signal: controller.signal,
     });
+    const body = await result.text();
+    healthReady =
+      result.ok &&
+      body.includes("Sport My Fitness") &&
+      body.includes("<title>");
+  } catch {
+    healthReady = false;
   } finally {
     clearTimeout(timeout);
   }
+
+  const revisionMatch =
+    validSha(observedRevision) &&
+    observedRevision.toLowerCase() === expectedRevision.toLowerCase();
+
+  return response.status(healthReady ? 200 : 503).json({
+    state: healthReady && revisionMatch ? "READY" : "WAITING_FOR_REVISION",
+    expected_revision: expectedRevision,
+    observed_revision: validSha(observedRevision) ? observedRevision : null,
+    revision_match: revisionMatch,
+    health_ready: healthReady,
+    verified_at: new Date().toISOString(),
+    request_id: requestId,
+  });
 };
 
 module.exports._test = {
-  forwardedValue,
-  observedRevision,
-  resolveOrigin,
-  safeEqual,
+  parseJwt,
   validSha,
+  verifyPilotIdentity,
 };

@@ -49,3 +49,7 @@ brand-tokens.json
 ```
 
 Use `/brand/sportmyfitness-logo-800w.png` for the normal site header.
+
+## Pilot lifecycle proof
+
+Phase 25C validated Sport My Fitness as a verifier-ready Pilot target through the normal guarded phone-first lifecycle.

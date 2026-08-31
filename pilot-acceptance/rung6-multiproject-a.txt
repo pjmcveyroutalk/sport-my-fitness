@@ -1,0 +1,3 @@
+Routalk Pilot final multi-project acceptance
+Target A: pjmcveyroutalk/sport-my-fitness
+Purpose: prove the finished Pilot lifecycle on an existing external target after baseline and approval contracts were added.

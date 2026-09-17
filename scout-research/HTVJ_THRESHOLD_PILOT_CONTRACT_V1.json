@@ -1,0 +1,48 @@
+{
+  "schema": "scout_htvj_fee_cover_threshold_pilot_v1",
+  "frozen_at_utc": "2026-09-17T16:31:00Z",
+  "purpose": "Held-out test of whether favorable one-sided HTvj-Orca state movement produces a raw round trip strictly above 5000 lamports.",
+  "source_pair": {
+    "meteora_pool": "HTvjzsfX3yU6BUodCjZ5vZkUrAxMDTrBs3CJaq43ashR",
+    "orca_pool": "83v8iPyZihDEjDdY8RdZddyZNyUtXngz69Lgo9Kt5d6d"
+  },
+  "state_witness": {
+    "confirmed_polls": 60,
+    "target_interval_ms": 1000,
+    "automatic_retries": 0,
+    "account_union": "unchanged corrected final-plan witness v2"
+  },
+  "economic_selection_rule": {
+    "controls": [
+      "poll 1",
+      "poll 60"
+    ],
+    "candidates": "Before opening any exact quote output, rank distinct one-sided HTvj-Orca pricing states by favorable_move_score_bps and select at most four.",
+    "favorable_move_score_bps": {
+      "orca_primary_only": "negative of the observed Orca price move in basis points",
+      "htvj_only": "observed HTvj active-bin price move in basis points",
+      "other_change_class": "ineligible"
+    },
+    "minimum_candidate_score_bps": 3.0,
+    "tie_break": "earlier poll first",
+    "substitution_after_quote_output": false
+  },
+  "quote_contract": {
+    "pair": "HTvj-Orca only",
+    "sizes": "existing frozen 16-size Scout grid",
+    "directions": 2,
+    "maximum_pair_states": 6,
+    "maximum_quote_rows": 192,
+    "strict_nomination": "raw_delta_lamports > 5000",
+    "policy_formula_unchanged": true,
+    "separate_confirmation_required_after_nomination": true
+  },
+  "authority": {
+    "read_only": true,
+    "execution_authority": false,
+    "transaction_submission_authority": false,
+    "signing_authority": false,
+    "quote_suppression_authority": false,
+    "capital_authority": false
+  }
+}

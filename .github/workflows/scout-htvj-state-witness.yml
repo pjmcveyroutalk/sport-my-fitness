@@ -1,0 +1,78 @@
+name: Scout HTvj Public State Witness
+
+"on":
+  push:
+    branches:
+      - scout-htvj-state-witness-v1
+    paths:
+      - ".github/scout-htvj-state-witness.trigger"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: scout-htvj-state-witness-v1
+  cancel-in-progress: false
+
+jobs:
+  bounded-state-witness:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout isolated witness branch
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Verify frozen public witness source
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo "9b0569ec5784325fd32c57949845ffd35871e9e273d7baa758dc2e8bfdc2a63d  scout-research/htvj_state_witness.py" | sha256sum -c -
+          python3 -m py_compile scout-research/htvj_state_witness.py
+
+      - name: Run one bounded 60-poll coherent state witness
+        shell: bash
+        run: |
+          set -uo pipefail
+          mkdir -p artifacts
+          python3 scout-research/htvj_state_witness.py \
+            --output artifacts/htvj-state-witness \
+            2>&1 | tee artifacts/htvj-state-witness.console.log
+          status=${PIPESTATUS[0]}
+          printf '%s\n' "${status}" > artifacts/htvj-state-witness.status
+          exit 0
+
+      - name: Seal evidence hashes
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p artifacts/htvj-state-witness
+          find artifacts/htvj-state-witness -type f ! -name SHA256SUMS -print0 \
+            | sort -z \
+            | xargs -0 sha256sum \
+            > artifacts/htvj-state-witness/SHA256SUMS
+          sha256sum artifacts/htvj-state-witness.console.log artifacts/htvj-state-witness.status \
+            >> artifacts/htvj-state-witness/SHA256SUMS
+
+      - name: Upload complete raw-state evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: scout-htvj-state-witness-${{ github.run_id }}-${{ github.run_attempt }}
+          path: artifacts
+          if-no-files-found: error
+          retention-days: 3
+
+      - name: Preserve witness failure as red after upload
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          status="$(cat artifacts/htvj-state-witness.status 2>/dev/null || printf '99')"
+          if [[ "${status}" != "0" ]]; then
+            echo "Bounded public state witness failed closed with status ${status}; evidence was uploaded." >&2
+            exit "${status}"
+          fi

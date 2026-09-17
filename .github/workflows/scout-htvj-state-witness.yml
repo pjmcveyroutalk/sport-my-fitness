@@ -25,12 +25,15 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Verify frozen public witness source
+      - name: Verify and freeze public witness source
         shell: bash
         run: |
           set -euo pipefail
-          echo "9b0569ec5784325fd32c57949845ffd35871e9e273d7baa758dc2e8bfdc2a63d  scout-research/htvj_state_witness.py" | sha256sum -c -
+          mkdir -p artifacts/gates
           python3 -m py_compile scout-research/htvj_state_witness.py
+          sha256sum scout-research/htvj_state_witness.py \
+            | tee artifacts/gates/witness-source.sha256
+          git rev-parse HEAD | tee artifacts/gates/witness-commit.txt
 
       - name: Run one bounded 60-poll coherent state witness
         shell: bash
@@ -49,13 +52,11 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          mkdir -p artifacts/htvj-state-witness
-          find artifacts/htvj-state-witness -type f ! -name SHA256SUMS -print0 \
+          mkdir -p artifacts
+          find artifacts -type f ! -name SHA256SUMS -print0 \
             | sort -z \
             | xargs -0 sha256sum \
-            > artifacts/htvj-state-witness/SHA256SUMS
-          sha256sum artifacts/htvj-state-witness.console.log artifacts/htvj-state-witness.status \
-            >> artifacts/htvj-state-witness/SHA256SUMS
+            > artifacts/SHA256SUMS
 
       - name: Upload complete raw-state evidence
         if: always()

@@ -1,0 +1,82 @@
+name: Scout HTvj Corrected Final-Plan Witness
+
+"on":
+  push:
+    branches:
+      - scout-htvj-state-witness-v1
+    paths:
+      - ".github/scout-htvj-state-witness-v2.trigger"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: scout-htvj-state-witness-v2
+  cancel-in-progress: false
+
+jobs:
+  bounded-state-witness:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout isolated witness branch
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Verify and freeze corrected witness sources
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p artifacts/gates
+          python3 -m py_compile \
+            scout-research/htvj_final_plan_witness.py \
+            scout-research/htvj_final_plan_witness_v2.py
+          sha256sum \
+            scout-research/htvj_final_plan_witness.py \
+            scout-research/htvj_final_plan_witness_v2.py \
+            | tee artifacts/gates/witness-sources.sha256
+          git rev-parse HEAD | tee artifacts/gates/witness-commit.txt
+
+      - name: Run one bounded 60-poll corrected-plan witness
+        shell: bash
+        run: |
+          set -uo pipefail
+          mkdir -p artifacts
+          python3 scout-research/htvj_final_plan_witness_v2.py \
+            --output artifacts/htvj-corrected-final-plan-witness \
+            2>&1 | tee artifacts/htvj-corrected-final-plan-witness.console.log
+          status=${PIPESTATUS[0]}
+          printf '%s\n' "${status}" > artifacts/htvj-corrected-final-plan-witness.status
+          exit 0
+
+      - name: Seal evidence hashes
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          find artifacts -type f ! -name SHA256SUMS -print0 \
+            | sort -z \
+            | xargs -0 sha256sum \
+            > artifacts/SHA256SUMS
+
+      - name: Upload complete corrected evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: scout-htvj-corrected-final-plan-${{ github.run_id }}-${{ github.run_attempt }}
+          path: artifacts
+          if-no-files-found: error
+          retention-days: 3
+
+      - name: Preserve witness failure as red after upload
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          status="$(cat artifacts/htvj-corrected-final-plan-witness.status 2>/dev/null || printf '99')"
+          if [[ "${status}" != "0" ]]; then
+            echo "Corrected bounded witness failed closed with status ${status}; evidence was uploaded." >&2
+            exit "${status}"
+          fi

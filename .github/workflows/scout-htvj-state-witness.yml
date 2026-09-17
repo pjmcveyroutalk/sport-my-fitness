@@ -1,4 +1,4 @@
-name: Scout HTvj Public State Witness
+name: Scout HTvj Current-Plan State Witness
 
 "on":
   push:
@@ -25,26 +25,26 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Verify and freeze public witness source
+      - name: Verify and freeze corrected witness source
         shell: bash
         run: |
           set -euo pipefail
           mkdir -p artifacts/gates
-          python3 -m py_compile scout-research/htvj_state_witness.py
-          sha256sum scout-research/htvj_state_witness.py \
+          python3 -m py_compile scout-research/htvj_final_plan_witness.py
+          sha256sum scout-research/htvj_final_plan_witness.py \
             | tee artifacts/gates/witness-source.sha256
           git rev-parse HEAD | tee artifacts/gates/witness-commit.txt
 
-      - name: Run one bounded 60-poll coherent state witness
+      - name: Run one bounded 60-poll current-plan witness
         shell: bash
         run: |
           set -uo pipefail
           mkdir -p artifacts
-          python3 scout-research/htvj_state_witness.py \
-            --output artifacts/htvj-state-witness \
-            2>&1 | tee artifacts/htvj-state-witness.console.log
+          python3 scout-research/htvj_final_plan_witness.py \
+            --output artifacts/htvj-final-plan-witness \
+            2>&1 | tee artifacts/htvj-final-plan-witness.console.log
           status=${PIPESTATUS[0]}
-          printf '%s\n' "${status}" > artifacts/htvj-state-witness.status
+          printf '%s\n' "${status}" > artifacts/htvj-final-plan-witness.status
           exit 0
 
       - name: Seal evidence hashes
@@ -58,11 +58,11 @@ jobs:
             | xargs -0 sha256sum \
             > artifacts/SHA256SUMS
 
-      - name: Upload complete raw-state evidence
+      - name: Upload complete corrected-plan evidence
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: scout-htvj-state-witness-${{ github.run_id }}-${{ github.run_attempt }}
+          name: scout-htvj-final-plan-witness-${{ github.run_id }}-${{ github.run_attempt }}
           path: artifacts
           if-no-files-found: error
           retention-days: 3
@@ -72,8 +72,8 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          status="$(cat artifacts/htvj-state-witness.status 2>/dev/null || printf '99')"
+          status="$(cat artifacts/htvj-final-plan-witness.status 2>/dev/null || printf '99')"
           if [[ "${status}" != "0" ]]; then
-            echo "Bounded public state witness failed closed with status ${status}; evidence was uploaded." >&2
+            echo "Bounded corrected-plan witness failed closed with status ${status}; evidence was uploaded." >&2
             exit "${status}"
           fi

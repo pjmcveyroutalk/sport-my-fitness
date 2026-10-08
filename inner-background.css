@@ -120,9 +120,19 @@
    Contain the original square portrait rather than trimming it to the hero box. */
 .smf-inner-page .yoshi-story-art{display:none}
 .smf-inner-page .yoshi-story-portrait{object-fit:contain;object-position:center}
+/* Separate Home's training choices from their heading at every breakpoint. */
+.smf-home-page .training-section h2{margin-bottom:clamp(32px,3vw,54px)}
 /* Give the compact Home training heading breathing room below the motto. */
 @media(min-width:801px){
  .smf-home-page .training-section{padding-top:clamp(48px,4vw,72px)}
+ /* Natural 3:2 and square photo frames share a height in 3:2 columns.
+    Proportional bleed keeps that height equal and aligns both captions. */
+ .smf-inner-page .trainer-moments{grid-template-columns:minmax(0,3fr) minmax(0,2fr)}
+ .smf-inner-page .trainer-moments .blended-photo{
+  --smf-photo-bleed:2%;
+  aspect-ratio:auto;
+  object-fit:contain;
+ }
 }
 /* Existing pale teal panels, dark surfaces and opaque inputs remain intact. */
 @media(max-width:800px){

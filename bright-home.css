@@ -223,6 +223,29 @@ h2>span,
 /* The black play symbol shares a row with teal text; keep its original treatment. */
 .video-row-action .film-play{ text-shadow:none; }
 
+/* Light grain inside the shared teal display lettering; retain the teal fill,
+   original type and fine edge. Reuse the site's low-opacity athletic texture. */
+@supports ((background-clip:text) or (-webkit-background-clip:text)){
+ .teal,h2>span,.story-chapter h3,.film-poster-title>span,.brand-name>span,.footer-name>span{
+  background-color:var(--headline-teal);
+  background-image:url("assets/athletic-grain.svg");
+  background-repeat:repeat;
+  background-size:180px 180px;
+  background-clip:text;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+ }
+ .brand-name>span,.footer-name>span,.film-poster-title>span{background-color:var(--teal)}
+ /* The quiet archive title inherits its original neutral text color. */
+ .media-press h2>span{background:none;-webkit-text-fill-color:currentColor}
+}
+@media(forced-colors:active){
+ .teal,h2>span,.story-chapter h3,.film-poster-title>span,.brand-name>span,.footer-name>span{
+  background:none;
+  -webkit-text-fill-color:currentColor;
+ }
+}
+
 /* One centered page ending, based on the approved Training composition. */
 .page-step{border-top:4px solid var(--teal);background:#f5fbfa;padding-block:clamp(35px,3.8vw,65px)}
 .page-step-inner{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;text-align:center}

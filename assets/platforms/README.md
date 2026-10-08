@@ -14,3 +14,14 @@ Retrieved from the platforms’ official brand resource pages on 2026-10-08. Ins
   - Official pack member: `YouTube_Icon/Digital/01 Red/yt_icon_red_digital.ai`
   - Source vector SHA-256: `b5958b5f28b494b9e3e3962bdf5619c69c6733e409cc23845c6910af84d80c22`
   - SVG SHA-256: `cc1173c038e5759673b2a57f44274f40f40445a23bd19ca2bd62d28234869b86`
+
+## TMJ4 station mark
+
+- SVG distributed by Wikimedia Commons, credited to E. W. Scripps Company:
+  https://commons.wikimedia.org/wiki/File:TMJ_4_2020_gradient.svg
+- Exact vector file:
+  https://upload.wikimedia.org/wikipedia/commons/5/50/TMJ_4_2020_gradient.svg
+- Compared with TMJ4's official station header mark:
+  https://ewscripps.brightspotcdn.com/68/50/2eddbd2f41b4967e3d8c76e2e884/web-main-logo-wtmj.png
+- Retrieved 2026-10-08; vector geometry and colors retained. The SVG is the gradient variant of the TMJ4 mark; the station header reference uses a flat-color variant.
+- This is a third-party distribution of the Scripps-attributed mark, not a download of a publisher-provided SVG brand pack. It contains vector paths and gradients, with no embedded raster images, scripts or external resources. CSS preserves its aspect ratio and provides clear space.

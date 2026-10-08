@@ -68,8 +68,8 @@
  z-index:-1;
  pointer-events:none;
  top:-12px;
- left:-30px;
- right:-30px;
+ left:calc(-1 * min(30px,5.2vw));
+ right:calc(-1 * min(30px,5.2vw));
  aspect-ratio:2500 / 1667;
  background:linear-gradient(112deg,transparent 8%,var(--teal) 8%,var(--teal) 13%,transparent 13%,transparent 18%,var(--teal) 18%,var(--teal) 21%,transparent 21%,transparent 76%,var(--teal) 76%,var(--teal) 81%,transparent 81%,transparent 86%,var(--teal) 86%,var(--teal) 89%,transparent 89%),linear-gradient(90deg,var(--teal),transparent 26%,transparent 74%,var(--teal));
  mask-image:url("assets/smf-photo-brush-mask.svg");

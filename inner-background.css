@@ -91,6 +91,22 @@
  inset:-8px -12px -8px calc(-1 * min(30px,5.2vw));
  aspect-ratio:auto;
 }
+/* Preserve the young people's faces and bodies at the bottom of this photo.
+   Retain the painted top/side texture; the lower subject area is fully visible. */
+.smf-inner-page .trainer-recent-photo .blended-photo{
+ mask-image:var(--smf-photo-paint),linear-gradient(to bottom,transparent 57%,#000 70%);
+ -webkit-mask-image:var(--smf-photo-paint),linear-gradient(to bottom,transparent 57%,#000 70%);
+ mask-composite:add;
+ -webkit-mask-composite:source-over;
+}
+/* Keep all three public platforms centered in the existing social group. */
+.smf-inner-page .trainer-social-links{align-items:center}
+/* Place the gym artwork's transparent top rim above the hero boundary.
+   The ceiling is opaque there and the full teal banner remains below it. */
+.smf-inner-page .media-gym{top:-9.8vw}
+@media(max-width:800px){
+ .smf-inner-page .media-gym{top:-14vw}
+}
 /* Existing pale teal panels, dark surfaces and opaque inputs remain intact. */
 @media(max-width:800px){
  .smf-inner-page{--smf-plate-label-size:clamp(11px,2.75vw,18px)}

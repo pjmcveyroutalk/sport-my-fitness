@@ -3,12 +3,12 @@
     <linearGradient id="tread-relief" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0" stop-color="#ffffff" stop-opacity="0.82" />
       <stop offset="0.38" stop-color="#f1f5f5" stop-opacity="0.55" />
-      <stop offset="0.68" stop-color="#d6e0e0" stop-opacity="0.30" />
-      <stop offset="1" stop-color="#bbcaca" stop-opacity="0.20" />
+      <stop offset="0.68" stop-color="#d6e0e0" stop-opacity="0.72" />
+      <stop offset="1" stop-color="#bbcaca" stop-opacity="0.80" />
     </linearGradient>
     <path id="tread" d="M 0 -11 C 2.2 -8 2.2 8 0 11 C -2.2 8 -2.2 -8 0 -11 Z" />
   </defs>
-  <g fill="url(#tread-relief)" stroke="#b9c8c8" stroke-opacity="0.18" stroke-width="0.45" opacity="0.8">
+  <g fill="url(#tread-relief)" stroke="#b9c8c8" stroke-opacity="0.48" stroke-width="0.45" opacity="0.8">
     <use href="#tread" transform="translate(16 16) rotate(45)" />
     <use href="#tread" transform="translate(48 16) rotate(-45)" />
     <use href="#tread" transform="translate(16 48) rotate(-45)" />

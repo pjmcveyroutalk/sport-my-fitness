@@ -223,25 +223,31 @@ h2>span,
 /* The black play symbol shares a row with teal text; keep its original treatment. */
 .video-row-action .film-play{ text-shadow:none; }
 
-/* Light grain inside the shared teal display lettering; retain the teal fill,
-   original type and fine edge. Reuse the site's low-opacity athletic texture. */
+/* Faint diamond-plate relief inside the bright teal display lettering.
+   A composited edge stays behind the fill; text-shadow would cover it. */
 @supports ((background-clip:text) or (-webkit-background-clip:text)){
  .teal,h2>span,.story-chapter h3,.film-poster-title>span,.brand-name>span,.footer-name>span{
   background-color:var(--headline-teal);
-  background-image:url("assets/athletic-grain.svg");
+  background-image:url("assets/smf-teal-letter-tread.svg");
   background-repeat:repeat;
-  background-size:180px 180px;
+  background-size:28px 28px;
   background-clip:text;
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
+  text-shadow:none;
+  filter:drop-shadow(0.5px 0.5px 0 rgba(0,0,0,.8));
  }
  .brand-name>span,.footer-name>span,.film-poster-title>span{background-color:var(--teal)}
+ .brand-name>span,.footer-name>span{
+  filter:drop-shadow(0.25px 0.25px 0 rgba(0,0,0,.6));
+ }
  /* The quiet archive title inherits its original neutral text color. */
- .media-press h2>span{background:none;-webkit-text-fill-color:currentColor}
+ .media-press h2>span{background:none;filter:none;-webkit-text-fill-color:currentColor}
 }
 @media(forced-colors:active){
  .teal,h2>span,.story-chapter h3,.film-poster-title>span,.brand-name>span,.footer-name>span{
   background:none;
+  filter:none;
   -webkit-text-fill-color:currentColor;
  }
 }

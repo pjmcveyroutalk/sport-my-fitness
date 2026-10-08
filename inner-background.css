@@ -32,6 +32,19 @@
  -webkit-mask-image:var(--smf-photo-side-mask);
 }
 .smf-inner-page :is(.training-hero-art,.yoshi-story-art,.media-hero-art,.contact-hero-art):after{background:none}
+/* Lower photographs bleed beyond their columns and fade into the same page
+   texture. Keep their subjects, existing crops, captions and credits intact. */
+.smf-inner-page .blended-photo{
+ --smf-photo-bleed:12px;
+ width:calc(100% + 2 * var(--smf-photo-bleed));
+ max-width:none;
+ margin-inline:calc(-1 * var(--smf-photo-bleed));
+ --smf-photo-edge-mask:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent),linear-gradient(180deg,transparent,#000 4%,#000 88%,transparent);
+ mask-image:var(--smf-photo-edge-mask);
+ -webkit-mask-image:var(--smf-photo-edge-mask);
+ mask-composite:intersect;
+ -webkit-mask-composite:source-in;
+}
 /* Existing pale teal panels, dark surfaces and opaque inputs remain intact. */
 @media(max-width:800px){
  .smf-inner-page{--smf-plate-label-size:clamp(11px,2.75vw,18px)}
@@ -81,3 +94,4 @@
  }
 }
 @media(max-width:370px){.smf-inner-page{--smf-plate-label-size:10px}.yoshi-page .smf-inner-page,.media-page .smf-inner-page{--smf-plate-label-size:10px}}
+

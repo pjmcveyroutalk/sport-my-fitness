@@ -20,11 +20,10 @@
 .trainer-copy blockquote p{font:italic 700 clamp(25px,2.35vw,38px)/1.15 var(--display)}
 .trainer-copy cite{display:block;margin-top:11px;font:700 14px/1.4 var(--label);font-style:normal;letter-spacing:.12em}
 .trainer-story>p{margin-top:14px;color:var(--muted);line-height:1.7;max-width:490px}
-.trainer-social-links{display:flex;flex-wrap:wrap;gap:24px;margin-top:25px}
+.trainer-social-links{display:flex;flex-wrap:wrap;justify-content:center;gap:24px;margin-top:25px}
 .trainer-social-links .text-link{font-size:18px;letter-spacing:.08em;gap:20px}
 .trainer-social-links .text-link>span{font-size:25px}
 .trainer-photography{position:relative;isolation:isolate;min-width:0}
-.trainer-photography:before{content:"";position:absolute;z-index:-1;inset:3% -3% 12% 7%;background:var(--teal);transform:skewY(-3deg)}
 .trainer-main-photo{background:#fff}
 .trainer-main-photo img{width:100%;height:auto;aspect-ratio:1;object-fit:contain}
 .trainer-section figcaption{padding-block:13px 0;display:flex;flex-direction:column;gap:4px;line-height:1.4}
@@ -35,7 +34,7 @@
 .trainer-moments img{width:100%;height:auto;aspect-ratio:2500 / 1667;object-fit:cover}
 .trainer-recent-photo img{object-position:center bottom}
 .trainer-next{border-top:4px solid var(--teal);background:#f5fbfa;padding-block:clamp(35px,3.8vw,65px)}
-.trainer-next-inner{display:flex;align-items:center;justify-content:space-between;gap:35px}
+.trainer-next-inner{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;text-align:center}
 .trainer-next .eyebrow{font-size:14px;letter-spacing:.18em;color:#186467;margin-bottom:10px}
 .trainer-next h2{font-size:clamp(46px,4.9vw,78px);margin-bottom:10px}
 .trainer-next p:not(.eyebrow){color:var(--muted)}
@@ -70,7 +69,8 @@
  .trainer-story blockquote{margin-top:0}
  .trainer-photography{width:100%;max-width:570px;margin-inline:auto}
  .trainer-moments{gap:28px;grid-template-columns:1fr;padding-top:28px}
- .trainer-next-inner{align-items:flex-start;flex-direction:column;gap:24px}
+ .trainer-next-inner{align-items:center;flex-direction:column;gap:24px}
  .trainer-next .button{font-size:25px;max-width:100%}
 }
 @media(max-width:370px){.training-hero .hero-eyebrow{font-size:10px;letter-spacing:.13em}.training-hero .hero-actions{gap:10px}.training-hero .hero-button{font-size:4.6vw;padding-inline:10px}.training-hero .hero-actions>.text-link{font-size:3.15vw;gap:5px}.training-hero .hero-actions>.text-link>span{font-size:21px}}
+

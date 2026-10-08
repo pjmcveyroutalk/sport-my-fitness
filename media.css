@@ -104,3 +104,11 @@
 }
 @media(max-width:370px){.media-hero .hero-eyebrow{font-size:10px;letter-spacing:.13em}.media-hero .hero-button{width:70%;font-size:18px}.film-poster{padding:18px}.film-poster-title{font-size:43px}.film-poster-top{font-size:11px}}
 
+
+/* Keep desktop video controls beside their titles and balance the archive link. */
+@media(min-width:801px){
+ .media-video-row{align-items:flex-end;gap:24px}
+ .video-row-action{margin-left:0}
+ .media-press .text-link{font-size:22px;gap:16px}
+ .media-press .press-logo{width:64px;height:40px}
+}

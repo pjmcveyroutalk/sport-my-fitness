@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" preserveAspectRatio="none">
+  <!-- Static alpha mask: ragged painted edges, fully opaque central subjects. -->
+  <defs>
+    <linearGradient id="horizontal" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="white" stop-opacity="0"/>
+      <stop offset=".02" stop-color="white" stop-opacity="0"/>
+      <stop offset=".055" stop-color="white" stop-opacity=".5"/>
+      <stop offset=".09" stop-color="white"/>
+      <stop offset=".91" stop-color="white"/>
+      <stop offset=".945" stop-color="white" stop-opacity=".5"/>
+      <stop offset=".98" stop-color="white" stop-opacity="0"/>
+      <stop offset="1" stop-color="white" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="vertical" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="white" stop-opacity="0"/>
+      <stop offset=".02" stop-color="white" stop-opacity="0"/>
+      <stop offset=".055" stop-color="white" stop-opacity=".5"/>
+      <stop offset=".09" stop-color="white"/>
+      <stop offset=".91" stop-color="white"/>
+      <stop offset=".945" stop-color="white" stop-opacity=".5"/>
+      <stop offset=".98" stop-color="white" stop-opacity="0"/>
+      <stop offset="1" stop-color="white" stop-opacity="0"/>
+    </linearGradient>
+    <mask id="perimeter" x="0" y="0" width="1200" height="800" maskUnits="userSpaceOnUse" style="mask-type:alpha">
+      <rect width="1200" height="800" fill="url(#horizontal)"/>
+    </mask>
+    <filter id="paint" x="0" y="0" width="1200" height="800" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency=".018 .027" numOctaves="3" seed="8" result="edgeNoise"/>
+      <feDisplacementMap in="SourceGraphic" in2="edgeNoise" scale="160" xChannelSelector="R" yChannelSelector="G" result="ragged"/>
+      <feTurbulence type="fractalNoise" baseFrequency=".11 .15" numOctaves="3" seed="21" result="grain"/>
+      <feColorMatrix in="grain" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  .333 .333 .334 0 0" result="grainAlpha"/>
+      <feComposite in="ragged" in2="grainAlpha" operator="arithmetic" k1="0" k2="2" k3="1" k4="-1"/>
+    </filter>
+  </defs>
+  <g filter="url(#paint)">
+    <rect width="1200" height="800" fill="url(#vertical)" mask="url(#perimeter)"/>
+  </g>
+</svg>

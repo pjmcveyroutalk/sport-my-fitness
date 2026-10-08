@@ -50,13 +50,14 @@
 .media-photo-pair figure{min-width:0}
 .media-photo-pair img{width:100%;height:auto;aspect-ratio:2500 / 1667;object-fit:contain}
 .media-photo-pair figcaption{font:700 17px/1.4 var(--label);letter-spacing:.07em;margin-top:14px}
-.media-press{position:relative;isolation:isolate;overflow:hidden;background:#f5fbfa;border-block:1px solid #b8e6e3;padding-block:clamp(34px,3.7vw,63px)}
-.media-press:before{content:"";position:absolute;z-index:-1;inset:0;background:linear-gradient(112deg,transparent 69%,#02c4c31a 69%,#02c4c31a 74%,transparent 74%,transparent 78%,#02c4c309 78%),url("assets/athletic-grain.svg")}
-.media-press-inner{display:flex;align-items:center;justify-content:space-between;gap:40px}
-.media-press .eyebrow{font-size:14px;color:#186467;letter-spacing:.16em;margin-bottom:12px}
-.media-press h2{font-size:clamp(43px,4vw,68px)}
-.media-press p:not(.eyebrow){color:var(--muted);margin-top:13px;font-size:17px}
-.media-press .text-link{font-size:19px;gap:28px;white-space:nowrap}
+/* Keep Fitness Friday as a quiet archive reference. */
+.media-press{padding-block:0 32px}
+.media-press-inner{display:flex;align-items:center;justify-content:space-between;gap:40px;border-top:1px solid var(--line);padding-top:24px}
+.media-press .eyebrow{font-size:12px;color:var(--muted);letter-spacing:.08em;margin-bottom:6px}
+.media-press h2{font:700 20px/1.3 var(--body);letter-spacing:0}
+.media-press h2>span{color:inherit;text-shadow:none}
+.media-press p:not(.eyebrow){color:var(--muted);margin-top:6px;font-size:16px}
+.media-press .text-link{font-size:17px;gap:20px;white-space:nowrap}
 @media(min-width:1800px){.media-hero-inner{padding-top:72px}.media-hero .hero-eyebrow{margin-bottom:18px}.media-hero h1{margin-top:-8px;margin-bottom:21px;padding-block:5px}.media-hero .hero-description{max-width:576px}}
 @media(max-width:1100px) and (min-width:801px){.media-hero-credit{font-size:10px;margin-top:12px}.media-hero .hero-button{font-size:2vw;min-height:4vw;padding:1vw 2vw}.film-poster-title{font-size:4.6vw}.film-caption{font-size:14px}.film-caption>span:last-child{font-size:12px}}
 @media(max-width:800px){
@@ -97,8 +98,8 @@
  .media-community-intro>p{font-size:17px;max-width:none}
  .media-photo-pair{grid-template-columns:1fr;gap:30px}
  .media-photo-pair figcaption{font-size:15px}
- .media-press-inner{align-items:flex-start;flex-direction:column;gap:24px}
- .media-press h2{font-size:clamp(41px,8.8vw,63px)}
+ .media-press-inner{align-items:flex-start;flex-direction:column;gap:16px}
  .media-press p:not(.eyebrow){font-size:16px}
 }
 @media(max-width:370px){.media-hero .hero-eyebrow{font-size:10px;letter-spacing:.13em}.media-hero .hero-button{width:70%;font-size:18px}.film-poster{padding:18px}.film-poster-title{font-size:43px}.film-poster-top{font-size:11px}}
+

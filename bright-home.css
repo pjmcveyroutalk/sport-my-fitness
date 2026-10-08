@@ -62,6 +62,8 @@ h1>span{display:block;white-space:nowrap}
 h2{font:italic 900 clamp(44px,3.9vw,70px)/.98 var(--display);letter-spacing:-.005em;text-transform:uppercase}
 .training-section{padding:1.25vw 0 70px;background:#fff}
 .training-section h2{font-size:clamp(44px,3.8vw,68px);transform:scaleX(1.24);transform-origin:left;margin-bottom:14px}
+/* Keep the stretched heading inside its existing wrap without changing the type. */
+@media(min-width:801px){.training-section h2{width:calc(100% / 1.24)}}
 .training-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));padding-top:0}
 .training-option{padding:0 2.4vw 0 4.05vw;position:relative;display:flex;flex-direction:column}
 .training-option+.training-option{border-left:1px solid #929b9b}
@@ -230,3 +232,4 @@ h2>span,
  .primary-nav{max-height:calc(100vh - 100px);max-height:calc(100dvh - 100px);overflow-y:auto;overscroll-behavior:contain}
  .next-page-button{width:100%}
 }
+

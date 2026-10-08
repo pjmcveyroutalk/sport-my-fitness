@@ -55,6 +55,34 @@
  max-width:none;
  margin-inline:calc(-1 * var(--smf-photo-bleed));
 }
+/* Carry the site's bright teal and diagonal strokes into the painted bleed.
+   Decoration sits behind the image; the opaque center protects its colors. */
+.smf-inner-page :is(.trainer-main-photo,.trainer-moments figure,.story-community-photo,.media-photo-pair figure){
+ position:relative;
+ isolation:isolate;
+}
+.smf-inner-page :is(.yoshi-portrait-wrap,.media-hero-moment){isolation:isolate}
+.smf-inner-page :is(.trainer-main-photo,.trainer-moments figure,.story-community-photo,.media-photo-pair figure,.yoshi-portrait-wrap,.media-hero-moment):before{
+ content:"";
+ position:absolute;
+ z-index:-1;
+ pointer-events:none;
+ top:-12px;
+ left:-30px;
+ right:-30px;
+ aspect-ratio:2500 / 1667;
+ background:linear-gradient(112deg,transparent 8%,var(--teal) 8%,var(--teal) 13%,transparent 13%,transparent 18%,var(--teal) 18%,var(--teal) 21%,transparent 21%,transparent 76%,var(--teal) 76%,var(--teal) 81%,transparent 81%,transparent 86%,var(--teal) 86%,var(--teal) 89%,transparent 89%),linear-gradient(90deg,var(--teal),transparent 26%,transparent 74%,var(--teal));
+ mask-image:url("assets/smf-photo-brush-mask.svg");
+ -webkit-mask-image:url("assets/smf-photo-brush-mask.svg");
+ mask-mode:alpha;
+ mask-size:100% 100%;
+ -webkit-mask-size:100% 100%;
+ mask-repeat:no-repeat;
+ -webkit-mask-repeat:no-repeat;
+ opacity:.8;
+}
+.smf-inner-page .trainer-main-photo:before{aspect-ratio:1}
+.smf-inner-page :is(.yoshi-portrait-wrap,.media-hero-moment):before{inset:-12px -18px;aspect-ratio:auto}
 /* Existing pale teal panels, dark surfaces and opaque inputs remain intact. */
 @media(max-width:800px){
  .smf-inner-page{--smf-plate-label-size:clamp(11px,2.75vw,18px)}

@@ -17,6 +17,8 @@
 .contact-direct .contact-arrow{position:absolute;right:0;top:50%;transform:translateY(-50%);font:400 28px/1 Arial,sans-serif}
 .contact-direct>a:hover{color:var(--teal)}
 .contact-page .inquiry-panel{grid-area:form;min-width:0;border:0;padding:0}
+.inquiry-guide{margin-bottom:24px;color:var(--muted);line-height:1.65}
+.inquiry-guide a{text-decoration:underline;text-underline-offset:3px}
 .contact-honeypot{display:none}
 .contact-page .field-row{gap:18px}
 .contact-page .form-button{min-height:58px;font-size:clamp(24px,2vw,30px);gap:16px}

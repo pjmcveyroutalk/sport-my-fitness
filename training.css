@@ -33,6 +33,20 @@
 .trainer-moments{grid-column:1 / -1;display:grid;grid-template-columns:1fr 1fr;gap:4%;padding-top:clamp(16px,1.8vw,30px);border-top:1px solid var(--line);align-items:start}
 .trainer-moments img{width:100%;height:auto;aspect-ratio:2500 / 1667;object-fit:cover}
 .trainer-recent-photo img{object-position:center bottom}
+/* Genuine client reviews use the same open, ruled layout as the page. */
+.client-reviews{padding-bottom:clamp(44px,4.8vw,82px)}
+.client-reviews .eyebrow{margin-bottom:16px}
+.client-reviews h2{font-size:clamp(40px,4.5vw,72px);line-height:1;margin-bottom:28px}
+.client-review-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(28px,4vw,64px)}
+.client-review{min-width:0;border-top:1px solid var(--line);padding-top:22px}
+.review-rating{font:700 18px/1.3 var(--body);letter-spacing:.12em;margin-bottom:14px}
+.client-review blockquote{margin:0}
+.client-review blockquote p{font-size:clamp(18px,1.35vw,22px);line-height:1.65;color:var(--muted)}
+.client-review figcaption{display:flex;flex-direction:column;gap:3px;margin-top:18px}
+.client-review cite{font:700 17px/1.4 var(--label);font-style:normal;letter-spacing:.03em}
+.client-review figcaption>span{font-size:13px;color:var(--muted)}
+.client-reviews .text-link{font-size:17px;margin-top:28px}
+@media(max-width:800px){.client-review-list{grid-template-columns:1fr}}
 @media(min-width:1800px){.training-hero-inner{padding-top:90px}.training-hero .hero-eyebrow{margin-bottom:18px}.training-hero h1{margin-top:-8px;margin-bottom:21px;padding-block:5px}}
 @media(min-width:801px) and (max-width:1100px){.training-hero .hero-subline{font-size:1.96vw}.training-hero .hero-description{font-size:1.56vw}.training-hero .hero-actions{gap:1.9vw}.training-hero .hero-button{font-size:2vw;min-height:4vw;padding:1vw 2vw}.training-hero .hero-actions>.text-link{font-size:1.42vw;gap:.8vw}}
 @media(max-width:800px){

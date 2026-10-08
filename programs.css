@@ -3,6 +3,7 @@
 .programs-section{padding-block:clamp(44px,4.8vw,82px);background:#fff}
 .programs-section .eyebrow{color:var(--teal);margin-bottom:16px}
 .programs-section h2{font-size:clamp(48px,5vw,84px);line-height:1;margin-bottom:28px}
+.programs-intro{max-width:720px;margin-bottom:28px;color:var(--muted);line-height:1.65}
 .programs-list{border-top:2px solid var(--ink)}
 .program-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:28px;align-items:center;padding-block:26px;border-bottom:1px solid var(--line)}
 .program-copy{min-width:0}

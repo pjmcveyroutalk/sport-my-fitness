@@ -59,9 +59,9 @@
  }
 }
 
-/* Shared CTAs and independently sized video controls keep their dimensions.
-   Texture/emboss belong to the surface; labels and play icons stay dark. */
-:is(.button,.film-play){
+/* Shared teal CTAs keep their dimensions. YouTube play links use brand SVGs.
+   Texture/emboss belong to the surface; button labels and icons stay dark. */
+.button{
  position:relative;
  isolation:isolate;
  background-color:var(--smf-teal-main);
@@ -77,7 +77,7 @@
  transition:background-color var(--smf-teal-transition),color var(--smf-teal-transition),box-shadow var(--smf-teal-transition);
 }
 /* Animate only the face wash; the dark label and icon retain their contrast. */
-:is(.button,.film-play):after{
+.button:after{
  content:"";
  position:absolute;
  z-index:-1;
@@ -88,10 +88,8 @@
  pointer-events:none;
  transition:opacity var(--smf-teal-transition);
 }
-.button:where(:not(:disabled):not([aria-disabled="true"])):hover:after,
-:is(.media-feature-film,.media-video-row):where(:not([aria-disabled="true"])):hover .film-play:after{opacity:1}
-.button:where(:not(:disabled):not([aria-disabled="true"])):active,
-:is(.media-feature-film,.media-video-row):where(:not([aria-disabled="true"])):active .film-play{
+.button:where(:not(:disabled):not([aria-disabled="true"])):hover:after{opacity:1}
+.button:where(:not(:disabled):not([aria-disabled="true"])):active{
  --smf-teal-button-depth:1px;
 }
 .button:disabled,.button[aria-disabled="true"]{cursor:default}
@@ -102,7 +100,7 @@
 
 /* Preserve the user's accessibility settings and existing disabled controls. */
 @media(prefers-reduced-motion:reduce){
- :is(.button,.film-play,.teal-letter,.teal-hover-label){transition:none}
+ :is(.button,.teal-letter,.teal-hover-label){transition:none}
 }
 @media(forced-colors:active){
  :is(.teal-letter,.teal-hover-label,.text-link>span,.trainer-section figcaption>a>span,.media-links strong,.contact-direct>a>span,.contact-direct>a>strong){
@@ -112,13 +110,13 @@
   text-shadow:none!important;
   filter:none!important;
  }
- :is(.button,.film-play){
+ .button{
   background:ButtonFace;
   color:ButtonText;
   -webkit-text-fill-color:ButtonText;
   box-shadow:none;
   outline:1px solid ButtonText;
  }
- :is(.button,.film-play):after{content:none}
+ .button:after{content:none}
  :focus-visible{outline:3px solid Highlight!important;outline-offset:5px}
 }

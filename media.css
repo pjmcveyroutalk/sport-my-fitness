@@ -29,8 +29,8 @@
 .film-poster-bottom{font-size:14px}
 .film-poster-title{display:block;font:italic 900 clamp(45px,4.6vw,78px)/.95 var(--display);letter-spacing:-.01em;padding-block:12px}
 .film-poster-title>span{color:var(--teal);font-size:.72em}
-.film-play{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;width:48px;height:48px;background:var(--teal);color:var(--ink)}
-.film-play svg{width:26px;height:26px;fill:currentColor}
+.film-play{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;width:48px;height:48px;background:none}
+.film-play img{display:block;width:100%;height:auto;max-width:100%;object-fit:contain}
 .film-caption{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:14px;font:700 16px/1.4 var(--label);letter-spacing:.04em}
 .film-caption>span+span{color:var(--teal);font-size:14px;white-space:nowrap}
 .film-caption>span+span>span{font:400 23px/1 Arial,sans-serif;padding-left:6px}

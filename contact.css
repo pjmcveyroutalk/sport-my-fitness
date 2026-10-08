@@ -15,7 +15,7 @@
 .contact-direct .contact-phone strong{display:block;font:700 clamp(30px,2.5vw,39px)/1.2 var(--label);margin-top:4px;letter-spacing:.02em}
 .contact-direct .contact-email strong{display:block;font:400 clamp(16px,1.25vw,21px)/1.5 var(--body);margin-top:5px;overflow-wrap:anywhere}
 .contact-direct .contact-arrow{position:absolute;right:0;top:50%;transform:translateY(-50%);font:400 28px/1 Arial,sans-serif}
-.contact-direct>a:hover{color:#007c7b}
+.contact-direct>a:hover{color:var(--teal)}
 .contact-page .inquiry-panel{grid-area:form;min-width:0;border:0;padding:0}
 .contact-honeypot{display:none}
 .contact-page .field-row{gap:18px}

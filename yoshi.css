@@ -18,16 +18,16 @@
 .yoshi-story-hero .hero-actions>.text-link{font-size:min(1.46vw,26px)}
 .yoshi-story-section{padding-block:clamp(48px,5vw,85px)}
 .story-intro{display:grid;grid-template-columns:1.1fr .9fr;gap:8%;align-items:end;margin-bottom:clamp(32px,3.3vw,56px)}
-.story-intro .eyebrow{color:#186467;margin-bottom:18px}
+.story-intro .eyebrow{color:var(--teal);margin-bottom:18px}
 .story-intro h2{font-size:clamp(50px,4.8vw,86px);line-height:1}
 .story-lead{font-size:clamp(18px,1.45vw,23px);line-height:1.6;max-width:550px;color:var(--muted);border-left:2px solid var(--teal);padding-left:25px}
 .story-grid{display:grid;grid-template-columns:1fr 1fr;gap:8%;align-items:center}
 .story-chapter{padding-block:23px 24px;border-top:1px solid var(--line)}
 .story-chapter:first-child{border-top:2px solid var(--ink)}
-.chapter-label{font:700 14px/1.4 var(--label);letter-spacing:.15em;color:#186467;margin-bottom:8px}
+.chapter-label{font:700 14px/1.4 var(--label);letter-spacing:.15em;color:var(--teal);margin-bottom:8px}
 .story-chapter h3{font-size:clamp(29px,2.45vw,42px);margin-bottom:12px;color:var(--headline-teal)}
 .story-chapter>p:not(.chapter-label){color:var(--muted);line-height:1.65;font-size:16px;max-width:560px}
-.story-chapter .chapter-history{margin-top:11px;font-size:13px!important;line-height:1.5!important;color:#186467!important}
+.story-chapter .chapter-history{margin-top:11px;font-size:13px!important;line-height:1.5!important;color:var(--teal)!important}
 .story-community-photo{min-width:0}
 .story-community-photo img{width:100%;height:auto;aspect-ratio:2500 / 1667;object-fit:contain}
 .story-community-photo figcaption{display:flex;flex-direction:column;gap:4px;padding-top:14px;line-height:1.4}
@@ -35,13 +35,13 @@
 .story-community-photo figcaption a,.quote-source{width:fit-content;font-size:12px;color:var(--muted);text-decoration:underline;text-underline-offset:3px}
 .story-words{position:relative;isolation:isolate;overflow:hidden;background:#f5fbfa;border-block:1px solid #b8e6e3;padding-block:clamp(40px,4.6vw,78px)}
 .story-words:before{content:"";position:absolute;z-index:-1;inset:0;background:linear-gradient(112deg,transparent 65%,#02c4c322 65%,#02c4c322 69%,transparent 69%,transparent 73%,#02c4c30d 73%),url("assets/athletic-grain.svg");opacity:.7}
-.story-words .eyebrow{color:#186467;font-size:14px;letter-spacing:.18em}
+.story-words .eyebrow{color:var(--teal);font-size:14px;letter-spacing:.18em}
 .story-words blockquote{margin:18px 0 15px;padding-left:25px;border-left:3px solid var(--teal)}
 .story-words blockquote p{font:italic 700 clamp(30px,3.2vw,52px)/1.15 var(--display);max-width:1050px}
 .story-words cite{display:block;font:700 15px/1.4 var(--label);font-style:normal;letter-spacing:.12em;margin-top:17px}
 .story-connect{padding-block:clamp(36px,4vw,65px);background:#fff}
 .story-connect-inner{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;text-align:center}
-.story-connect .eyebrow{font-size:14px;color:#186467;letter-spacing:.16em;margin-bottom:10px}
+.story-connect .eyebrow{font-size:14px;color:var(--teal);letter-spacing:.16em;margin-bottom:10px}
 .story-connect h2{font-size:clamp(43px,3.9vw,67px)}
 .story-personal-links{display:flex;flex-direction:column;align-items:center;width:100%;max-width:360px;gap:16px}
 .story-personal-links .text-link{width:100%;grid-template-columns:28px 1fr 24px;font-size:19px;letter-spacing:.025em;gap:18px}

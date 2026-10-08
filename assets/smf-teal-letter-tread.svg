@@ -1,16 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
-  <defs>
-    <linearGradient id="letter-relief" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#ffffff" stop-opacity="0.14" />
-      <stop offset="0.4" stop-color="#e4ffff" stop-opacity="0.09" />
-      <stop offset="0.7" stop-color="#00a1a1" stop-opacity="0.04" />
-      <stop offset="1" stop-color="#004b4b" stop-opacity="0.08" />
-    </linearGradient>
-  </defs>
-  <g fill="url(#letter-relief)" stroke="#003c3c" stroke-opacity="0.06" stroke-width="0.45">
-    <path d="M 0 -11 C 2.2 -8 2.2 8 0 11 C -2.2 8 -2.2 -8 0 -11 Z" transform="translate(16 16) rotate(45)" />
-    <path d="M 0 -11 C 2.2 -8 2.2 8 0 11 C -2.2 8 -2.2 -8 0 -11 Z" transform="translate(48 16) rotate(-45)" />
-    <path d="M 0 -11 C 2.2 -8 2.2 8 0 11 C -2.2 8 -2.2 -8 0 -11 Z" transform="translate(16 48) rotate(-45)" />
-    <path d="M 0 -11 C 2.2 -8 2.2 8 0 11 C -2.2 8 -2.2 -8 0 -11 Z" transform="translate(48 48) rotate(45)" />
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+ <title>Restrained paired teal diamond-plate ridges</title>
+ <g transform="translate(8 8) rotate(45)">
+  <path d="M0-5.5C-1.1-4-1.1 4 0 5.5Z" fill="#4BCBD0" opacity=".28"/>
+  <path d="M0-5.5C1.1-4 1.1 4 0 5.5Z" fill="#005F63" opacity=".20"/>
+ </g>
+ <g transform="translate(24 8) rotate(-45)">
+  <path d="M0-5.5C-1.1-4-1.1 4 0 5.5Z" fill="#4BCBD0" opacity=".28"/>
+  <path d="M0-5.5C1.1-4 1.1 4 0 5.5Z" fill="#005F63" opacity=".20"/>
+ </g>
+ <g transform="translate(8 24) rotate(-45)">
+  <path d="M0-5.5C-1.1-4-1.1 4 0 5.5Z" fill="#4BCBD0" opacity=".28"/>
+  <path d="M0-5.5C1.1-4 1.1 4 0 5.5Z" fill="#005F63" opacity=".20"/>
+ </g>
+ <g transform="translate(24 24) rotate(45)">
+  <path d="M0-5.5C-1.1-4-1.1 4 0 5.5Z" fill="#4BCBD0" opacity=".28"/>
+  <path d="M0-5.5C1.1-4 1.1 4 0 5.5Z" fill="#005F63" opacity=".20"/>
+ </g>
 </svg>

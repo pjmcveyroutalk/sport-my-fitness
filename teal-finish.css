@@ -1,0 +1,124 @@
+/* Shared teal finish. Loaded after the six pages' composition styles. */
+:root{
+ --smf-teal-main:#00A4A8;
+ --smf-teal-upper:#14B3B6;
+ --smf-teal-lower:#008B8F;
+ --smf-teal-edge:#005F63;
+ --smf-teal-highlight:#4BCBD0;
+ --smf-button-ink:#101414;
+ --teal:var(--smf-teal-main);
+ --headline-teal:var(--smf-teal-main);
+ --smf-teal-tile:url("assets/smf-teal-letter-tread.svg");
+ --smf-teal-face:linear-gradient(180deg,var(--smf-teal-upper) 0%,var(--smf-teal-main) 46%,var(--smf-teal-lower) 100%);
+ --smf-teal-surface:var(--smf-teal-tile),var(--smf-teal-face);
+ --smf-teal-text-depth:clamp(.35px,.017em,3px);
+ --smf-teal-text-step:calc(var(--smf-teal-text-depth) / 3);
+ --smf-teal-text-edge:clamp(.2px,.0035em,.65px);
+ --smf-teal-text-emboss:drop-shadow(calc(-1 * var(--smf-teal-text-edge)) calc(-1 * var(--smf-teal-text-edge)) 0 var(--smf-teal-highlight)) drop-shadow(var(--smf-teal-text-step) var(--smf-teal-text-step) 0 var(--smf-teal-lower)) drop-shadow(var(--smf-teal-text-step) var(--smf-teal-text-step) 0 var(--smf-teal-edge)) drop-shadow(var(--smf-teal-text-step) var(--smf-teal-text-step) 0 var(--smf-teal-edge));
+ --smf-teal-button-depth:3px;
+ --smf-teal-hover-wash:rgb(255 255 255 / 6%);
+ --smf-teal-transition:120ms;
+}
+
+/* Label wrappers inherit the original type; legacy span rules size arrows. */
+.teal-hover-label{font:inherit!important}
+
+/* One lettering treatment, including small labels and interactive link text.
+   Composited shadows sit behind the glyph face, never over its teal fill. */
+:is(.teal-letter,
+ .primary-nav a:is(:hover,:focus-visible,[aria-current="page"],[aria-current="location"]):not(.button)>.teal-hover-label,
+ .footer-links a:is(:hover,:focus-visible)>.teal-hover-label,
+ .text-link:is(:hover,:focus-visible)>.teal-hover-label,
+ .text-link:is(:hover,:focus-visible)>span[aria-hidden="true"],
+ .trainer-section figcaption>a:is(:hover,:focus-visible)>span,
+ .media-links>a:is(:hover,:focus-visible) strong,
+ .contact-direct>a:is(:hover,:focus-visible)>span,
+ .contact-direct>a:is(:hover,:focus-visible)>strong){
+ color:var(--smf-teal-main);
+ text-shadow:none;
+ filter:var(--smf-teal-text-emboss);
+ transition:color var(--smf-teal-transition),filter var(--smf-teal-transition);
+}
+@supports ((background-clip:text) or (-webkit-background-clip:text)){
+ :is(.teal-letter,
+  .primary-nav a:is(:hover,:focus-visible,[aria-current="page"],[aria-current="location"]):not(.button)>.teal-hover-label,
+  .footer-links a:is(:hover,:focus-visible)>.teal-hover-label,
+  .text-link:is(:hover,:focus-visible)>.teal-hover-label,
+  .text-link:is(:hover,:focus-visible)>span[aria-hidden="true"],
+  .trainer-section figcaption>a:is(:hover,:focus-visible)>span,
+  .media-links>a:is(:hover,:focus-visible) strong,
+  .contact-direct>a:is(:hover,:focus-visible)>span,
+  .contact-direct>a:is(:hover,:focus-visible)>strong){
+  background-color:var(--smf-teal-main);
+  background-image:var(--smf-teal-surface);
+  background-repeat:repeat,no-repeat;
+  background-size:32px 32px,100% 100%;
+  background-clip:text;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+ }
+}
+
+/* Shared CTAs and independently sized video controls keep their dimensions.
+   Texture/emboss belong to the surface; labels and play icons stay dark. */
+:is(.button,.film-play){
+ position:relative;
+ isolation:isolate;
+ background-color:var(--smf-teal-main);
+ background-image:var(--smf-teal-surface);
+ background-repeat:repeat,no-repeat;
+ background-size:32px 32px,100% 100%;
+ color:var(--smf-button-ink);
+ -webkit-text-fill-color:var(--smf-button-ink);
+ text-shadow:none;
+ filter:none;
+ /* Resolve depth locally so :active can change the inherited token. */
+ box-shadow:inset 0 2px 0 var(--smf-teal-highlight),inset 0 -3px 0 var(--smf-teal-lower),0 var(--smf-teal-button-depth) 0 var(--smf-teal-edge),0 calc(var(--smf-teal-button-depth) + 2px) 3px rgb(16 20 20 / 18%);
+ transition:background-color var(--smf-teal-transition),color var(--smf-teal-transition),box-shadow var(--smf-teal-transition);
+}
+/* Animate only the face wash; the dark label and icon retain their contrast. */
+:is(.button,.film-play):after{
+ content:"";
+ position:absolute;
+ z-index:-1;
+ inset:0;
+ border-radius:inherit;
+ background:var(--smf-teal-hover-wash);
+ opacity:0;
+ pointer-events:none;
+ transition:opacity var(--smf-teal-transition);
+}
+.button:where(:not(:disabled):not([aria-disabled="true"])):hover:after,
+:is(.media-feature-film,.media-video-row):where(:not([aria-disabled="true"])):hover .film-play:after{opacity:1}
+.button:where(:not(:disabled):not([aria-disabled="true"])):active,
+:is(.media-feature-film,.media-video-row):where(:not([aria-disabled="true"])):active .film-play{
+ --smf-teal-button-depth:1px;
+}
+.button:disabled,.button[aria-disabled="true"]{cursor:default}
+
+:focus-visible{outline:3px solid var(--smf-teal-edge);outline-offset:5px}
+:is(.site-header,.site-footer) :focus-visible{outline-color:var(--smf-teal-highlight)}
+.field :is(input,select,textarea):focus{outline-color:var(--smf-teal-edge)}
+
+/* Preserve the user's accessibility settings and existing disabled controls. */
+@media(prefers-reduced-motion:reduce){
+ :is(.button,.film-play,.teal-letter,.teal-hover-label){transition:none}
+}
+@media(forced-colors:active){
+ :is(.teal-letter,.teal-hover-label,.text-link>span,.trainer-section figcaption>a>span,.media-links strong,.contact-direct>a>span,.contact-direct>a>strong){
+  background:none!important;
+  color:inherit!important;
+  -webkit-text-fill-color:currentColor!important;
+  text-shadow:none!important;
+  filter:none!important;
+ }
+ :is(.button,.film-play){
+  background:ButtonFace;
+  color:ButtonText;
+  -webkit-text-fill-color:ButtonText;
+  box-shadow:none;
+  outline:1px solid ButtonText;
+ }
+ :is(.button,.film-play):after{content:none}
+ :focus-visible{outline:3px solid Highlight!important;outline-offset:5px}
+}

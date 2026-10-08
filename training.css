@@ -1,0 +1,76 @@
+/* Training inherits the locked homepage identity. Running artwork stays on home. */
+.training-page .primary-nav a[aria-current="page"]{color:var(--teal)}
+.training-hero{position:relative;isolation:isolate;overflow:hidden;height:min(42.24vw,760px);background:#fff}
+.training-hero-art{position:absolute;z-index:0;inset:0;pointer-events:none}
+.training-gym{position:absolute;left:0;top:-6.5vw;width:100%;height:auto;max-width:none}
+.training-hero-art:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#fff 0%,#fff 35%,#ffffffdc 40%,#ffffff00 49%)}
+.training-hero-inner{position:relative;z-index:1;height:100%;padding-top:5vw}
+.training-hero-copy{width:48%;max-width:865px}
+.training-hero .hero-eyebrow{margin-bottom:1vw}
+.training-hero h1{font:italic 900 min(10.5vw,189px)/.86 var(--display);letter-spacing:-.005em;margin:-.45vw 0 1.15vw -.28vw;padding-block:.3vw;transform:scaleX(1.13);transform-origin:left center;width:88.5%}
+.training-hero .hero-actions{gap:2.2vw}
+.training-hero .hero-actions>.text-link{font-size:min(1.46vw,26px);letter-spacing:0}
+.trainer-section{padding-block:clamp(48px,5.7vw,100px);background:#fff}
+.trainer-intro{display:grid;grid-template-columns:.9fr 1fr;column-gap:8%;row-gap:clamp(35px,4vw,70px);align-items:center}
+.trainer-copy{max-width:580px}
+.trainer-heading-copy>.eyebrow{color:#186467;margin-bottom:17px}
+.trainer-copy h2{font-size:clamp(70px,7.5vw,130px);line-height:.86;margin:0 0 23px -.02em;padding-block:.05em}
+.trainer-role{font-size:clamp(19px,1.6vw,26px);font-weight:700;line-height:1.35;letter-spacing:-.025em}
+.trainer-copy blockquote{margin:28px 0 23px;border-left:3px solid var(--teal);padding-left:22px}
+.trainer-copy blockquote p{font:italic 700 clamp(25px,2.35vw,38px)/1.15 var(--display)}
+.trainer-copy cite{display:block;margin-top:11px;font:700 14px/1.4 var(--label);font-style:normal;letter-spacing:.12em}
+.trainer-story>p{margin-top:14px;color:var(--muted);line-height:1.7;max-width:490px}
+.trainer-social-links{display:flex;flex-wrap:wrap;gap:24px;margin-top:25px}
+.trainer-social-links .text-link{font-size:18px;letter-spacing:.08em;gap:20px}
+.trainer-social-links .text-link>span{font-size:25px}
+.trainer-photography{position:relative;isolation:isolate;min-width:0}
+.trainer-photography:before{content:"";position:absolute;z-index:-1;inset:3% -3% 12% 7%;background:var(--teal);transform:skewY(-3deg)}
+.trainer-main-photo{background:#fff}
+.trainer-main-photo img{width:100%;height:auto;aspect-ratio:1;object-fit:contain}
+.trainer-section figcaption{padding-block:13px 0;display:flex;flex-direction:column;gap:4px;line-height:1.4}
+.trainer-section figcaption>span{font:700 clamp(15px,1.12vw,20px)/1.35 var(--label);letter-spacing:.09em}
+.trainer-section figcaption>a{width:fit-content;font-size:12px;color:var(--muted);text-decoration:underline;text-underline-offset:3px}
+.trainer-section figcaption>a:hover{color:#007c7b}
+.trainer-moments{grid-column:1 / -1;display:grid;grid-template-columns:1fr 1fr;gap:4%;padding-top:clamp(16px,1.8vw,30px);border-top:1px solid var(--line);align-items:start}
+.trainer-moments img{width:100%;height:auto;aspect-ratio:2500 / 1667;object-fit:cover}
+.trainer-recent-photo img{object-position:center bottom}
+.trainer-next{border-top:4px solid var(--teal);background:#f5fbfa;padding-block:clamp(35px,3.8vw,65px)}
+.trainer-next-inner{display:flex;align-items:center;justify-content:space-between;gap:35px}
+.trainer-next .eyebrow{font-size:14px;letter-spacing:.18em;color:#186467;margin-bottom:10px}
+.trainer-next h2{font-size:clamp(46px,4.9vw,78px);margin-bottom:10px}
+.trainer-next p:not(.eyebrow){color:var(--muted)}
+.trainer-next .button{flex-shrink:0}
+@media(min-width:1800px){.training-hero-inner{padding-top:90px}.training-hero .hero-eyebrow{margin-bottom:18px}.training-hero h1{margin-top:-8px;margin-bottom:21px;padding-block:5px}}
+@media(min-width:801px) and (max-width:1100px){.training-hero .hero-subline{font-size:1.96vw}.training-hero .hero-description{font-size:1.56vw}.training-hero .hero-actions{gap:1.9vw}.training-hero .hero-button{font-size:2vw;min-height:4vw;padding:1vw 2vw}.training-hero .hero-actions>.text-link{font-size:1.42vw;gap:.8vw}}
+@media(max-width:800px){
+ .training-hero{height:auto;min-height:0}
+ .training-hero-inner{height:auto;padding-block:24px 27px}
+ .training-hero-copy{width:100%;max-width:none}
+ .training-hero .hero-eyebrow{font-size:clamp(11px,2.75vw,18px);letter-spacing:.16em;line-height:1.4;margin-bottom:16px;white-space:nowrap}
+ .training-hero h1{font-size:11.5vw;line-height:.86;transform:scaleX(1.1);width:45%;margin:0 0 0 -2px;padding-block:0 8px}
+ .training-gym{left:-31vw;top:-6vw;width:143vw}
+ .training-hero-art:after{background:linear-gradient(90deg,#fff 0%,#fff 38%,#ffffffd9 47%,#ffffff00 60%)}
+ .training-hero-details{position:relative;isolation:isolate;padding-top:clamp(38px,calc(22vw - 45px),110px)}
+ .training-hero-details:before{content:"";position:absolute;z-index:-1;inset:calc(clamp(38px,calc(22vw - 45px),110px) - 14px) -7vw -28px;background:linear-gradient(to bottom,#ffffff00,#fff 28px,#fff 100%)}
+ .training-hero .hero-subline{font-size:clamp(20px,5.1vw,29px);line-height:1.2}
+ .training-hero .hero-description{font-size:clamp(14px,3.55vw,19px);line-height:1.45;white-space:normal;max-width:100%;margin-top:5px}
+ .training-hero .hero-actions{display:flex;align-items:center;flex-wrap:nowrap;gap:14px;margin-top:20px;white-space:nowrap}
+ .training-hero .hero-button{width:48%;max-width:none;min-height:48px;font-size:clamp(18px,4.65vw,28px);padding:12px 12px;gap:7px}
+ .training-hero .hero-button>span{font-size:24px}
+ .training-hero .hero-actions>.text-link{font-size:clamp(13px,3.2vw,21px);min-height:44px;gap:7px;letter-spacing:0;padding-block:5px 3px}
+ .training-hero .hero-actions>.text-link>span{font-size:24px}
+ .trainer-intro{grid-template-columns:1fr;gap:35px}
+ .trainer-copy{display:contents}
+ .trainer-heading-copy{order:0}
+ .trainer-photography{order:1}
+ .trainer-story{order:2}
+ .trainer-moments{order:3}
+ .trainer-copy h2{font-size:clamp(68px,15vw,105px)}
+ .trainer-story>p{max-width:none}
+ .trainer-story blockquote{margin-top:0}
+ .trainer-photography{width:100%;max-width:570px;margin-inline:auto}
+ .trainer-moments{gap:28px;grid-template-columns:1fr;padding-top:28px}
+ .trainer-next-inner{align-items:flex-start;flex-direction:column;gap:24px}
+ .trainer-next .button{font-size:25px;max-width:100%}
+}
+@media(max-width:370px){.training-hero .hero-eyebrow{font-size:10px;letter-spacing:.13em}.training-hero .hero-actions{gap:10px}.training-hero .hero-button{font-size:4.6vw;padding-inline:10px}.training-hero .hero-actions>.text-link{font-size:3.15vw;gap:5px}.training-hero .hero-actions>.text-link>span{font-size:21px}}

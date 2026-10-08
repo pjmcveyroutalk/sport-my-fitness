@@ -1,0 +1,83 @@
+/* Approved matte diamond plate. The opaque Milwaukee hero stays unchanged;
+   Home's lower white content now shares the inner-page background treatment. */
+.smf-inner-page,.smf-home-page{
+ --smf-inner-plate-base:#fafbfb;
+ --smf-inner-plate-tile:48px;
+ --smf-inner-plate-wash:rgba(255,255,255,.15);
+ --smf-inner-plate-pattern:linear-gradient(var(--smf-inner-plate-wash),var(--smf-inner-plate-wash)),url("assets/smf-light-diamond-plate.svg");
+ background-color:var(--smf-inner-plate-base);
+ background-image:var(--smf-inner-plate-pattern);
+ background-repeat:no-repeat,repeat;
+ background-position:0 0,0 0;
+ background-size:100% 100%,var(--smf-inner-plate-tile) var(--smf-inner-plate-tile);
+}
+/* One continuous underlying layer; retain Home's hero, teal/tinted sections,
+   dark surfaces, photographs and opaque fields. */
+.smf-home-page :is(.training-section,.media-section){background-color:transparent}
+.smf-home-page>.mission-strip+section{background-image:linear-gradient(to bottom,rgba(255,255,255,.85),transparent 24px)}
+/* Open white page surfaces reveal the same underlying pattern, without tile resets. */
+.smf-inner-page :is(.training-hero,.trainer-section,.trainer-main-photo,.yoshi-story-hero,.story-connect,.media-hero,.contact-hero,.contact-inquiry,.programs-section){background-color:transparent}
+.smf-inner-page :is(.training-hero,.yoshi-story-hero,.media-hero,.contact-hero){background-image:linear-gradient(to top,rgba(255,255,255,.85),transparent 24px)}
+.smf-inner-page>.mission-strip+section{background-image:linear-gradient(to bottom,rgba(255,255,255,.85),transparent 24px)}
+/* Translate the existing white photo fades into equal-opacity masks. The original
+   images, dimensions, cropping and foreground portrait masks are untouched. */
+.smf-inner-page :is(.training-hero-art,.contact-hero-art){
+ --smf-photo-side-mask:linear-gradient(90deg,transparent 0%,transparent 35%,#00000023 40%,#000 49%);
+ mask-image:var(--smf-photo-side-mask);
+ -webkit-mask-image:var(--smf-photo-side-mask);
+}
+.smf-inner-page :is(.yoshi-story-art,.media-hero-art){
+ --smf-photo-side-mask:linear-gradient(90deg,transparent 0%,transparent 35%,#00000012 40%,#000 55%);
+ mask-image:var(--smf-photo-side-mask);
+ -webkit-mask-image:var(--smf-photo-side-mask);
+}
+.smf-inner-page :is(.training-hero-art,.yoshi-story-art,.media-hero-art,.contact-hero-art):after{background:none}
+/* Existing pale teal panels, dark surfaces and opaque inputs remain intact. */
+@media(max-width:800px){
+ .smf-inner-page{--smf-plate-label-size:clamp(11px,2.75vw,18px)}
+ .training-page .smf-inner-page{
+  --smf-hero-fade-start:calc(34px + 1.4 * var(--smf-plate-label-size) + 19.78vw + clamp(38px,calc(22vw - 45px),110px));
+  --smf-hero-fade-end:calc(var(--smf-hero-fade-start) + 28px);
+ }
+ .contact-page .smf-inner-page{
+  --smf-hero-fade-start:calc(34px + 1.4 * var(--smf-plate-label-size) + 27.52vw + clamp(38px,calc(18vw - 30px),95px));
+  --smf-hero-fade-end:calc(var(--smf-hero-fade-start) + 28px);
+ }
+ .programs-page .smf-inner-page{
+  --smf-hero-fade-start:calc(34px + 1.4 * var(--smf-plate-label-size) + 23.22vw + clamp(38px,calc(18vw - 30px),95px));
+  --smf-hero-fade-end:calc(var(--smf-hero-fade-start) + 28px);
+ }
+ .yoshi-page .smf-inner-page{
+  --smf-plate-label-size:clamp(11px,2.65vw,18px);
+  --smf-hero-fade-start:calc(35px + 1.4 * var(--smf-plate-label-size) + 35.088vw + clamp(62px,16vw,122px));
+  --smf-hero-fade-end:calc(var(--smf-hero-fade-start) + 29px);
+ }
+ .media-page .smf-inner-page{
+  --smf-plate-label-size:clamp(11px,2.65vw,18px);
+  --smf-hero-fade-start:calc(35px + 1.4 * var(--smf-plate-label-size) + 28.8vw + clamp(62px,16vw,122px));
+  --smf-hero-fade-end:calc(var(--smf-hero-fade-start) + 29px);
+ }
+ .smf-inner-page :is(.training-hero-art,.contact-hero-art){--smf-photo-side-mask:linear-gradient(90deg,transparent 0%,transparent 38%,#00000026 47%,#000 60%)}
+ .smf-inner-page .yoshi-story-art{--smf-photo-side-mask:linear-gradient(90deg,transparent 0%,transparent 32%,#00000023 42%,#000 67%)}
+ .smf-inner-page .media-hero-art{--smf-photo-side-mask:linear-gradient(90deg,transparent 0%,transparent 35%,#00000023 48%,#000 69%)}
+ .smf-inner-page :is(.training-hero-art,.contact-hero-art){
+  mask-image:var(--smf-photo-side-mask),linear-gradient(to bottom,#000 var(--smf-hero-fade-start),transparent var(--smf-hero-fade-end));
+  -webkit-mask-image:var(--smf-photo-side-mask),linear-gradient(to bottom,#000 var(--smf-hero-fade-start),transparent var(--smf-hero-fade-end));
+  mask-composite:intersect;
+  -webkit-mask-composite:source-in;
+ }
+ .smf-inner-page :is(.training-hero-details,.contact-hero-details):before{background:none}
+ /* Yoshi and Media retain one original foreground fade over the combined art.
+    Its plate is phase-matched to main: wrap starts at 5.7vw, inset is -7vw.
+    This avoids separately fading overlapping gym and portrait pixels twice. */
+ .smf-inner-page :is(.yoshi-story-hero-details,.media-hero-details):before{
+  background-color:var(--smf-inner-plate-base);
+  background-image:linear-gradient(to top,rgba(255,255,255,.85) 2px,transparent 26px),var(--smf-inner-plate-pattern);
+  background-repeat:no-repeat,no-repeat,repeat;
+  background-position:0 0,0 0,1.3vw calc(-1 * var(--smf-hero-fade-start));
+  background-size:100% 100%,100% 100%,var(--smf-inner-plate-tile) var(--smf-inner-plate-tile);
+  mask-image:linear-gradient(to bottom,transparent,#000 29px);
+  -webkit-mask-image:linear-gradient(to bottom,transparent,#000 29px);
+ }
+}
+@media(max-width:370px){.smf-inner-page{--smf-plate-label-size:10px}.yoshi-page .smf-inner-page,.media-page .smf-inner-page{--smf-plate-label-size:10px}}

@@ -1,0 +1,43 @@
+/* Contact keeps the approved gym identity with a compact, direct form. */
+.contact-hero{position:relative;isolation:isolate;overflow:hidden;height:min(42.24vw,760px);background:#fff}
+.contact-hero-art{position:absolute;z-index:0;inset:0;pointer-events:none}
+.contact-gym{position:absolute;left:0;top:-6.5vw;width:100%;height:auto;max-width:none}
+.contact-hero-art:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#fff 0%,#fff 35%,#ffffffdc 40%,#ffffff00 49%)}
+.contact-hero-inner{position:relative;z-index:1;height:100%;padding-top:5vw}
+.contact-hero-copy{width:48%;max-width:865px}
+.contact-hero .hero-eyebrow{margin-bottom:1vw}
+.contact-hero h1{font:italic 900 min(10.5vw,189px)/.86 var(--display);letter-spacing:-.005em;margin:-.45vw 0 1.15vw -.28vw;padding-block:.3vw;transform:scaleX(1.13);transform-origin:left center;width:88.5%}
+.contact-inquiry{position:relative;isolation:isolate;background:#fff;padding-block:clamp(28px,3.5vw,60px)}
+.contact-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);grid-template-areas:"direct form";gap:8%;align-items:start}
+.contact-direct{grid-area:direct;min-width:0;margin:0;max-width:470px;border-top:2px solid var(--ink)}
+.contact-direct>a{display:block;position:relative;width:100%;margin:0;padding:18px 38px 18px 0;border-bottom:1px solid var(--line)}
+.contact-direct>a>span:first-child{display:block;font:700 15px/1.4 var(--label);letter-spacing:.1em}
+.contact-direct .contact-phone strong{display:block;font:700 clamp(30px,2.5vw,39px)/1.2 var(--label);margin-top:4px;letter-spacing:.02em}
+.contact-direct .contact-email strong{display:block;font:400 clamp(16px,1.25vw,21px)/1.5 var(--body);margin-top:5px;overflow-wrap:anywhere}
+.contact-direct .contact-arrow{position:absolute;right:0;top:50%;transform:translateY(-50%);font:400 28px/1 Arial,sans-serif}
+.contact-direct>a:hover{color:#007c7b}
+.contact-page .inquiry-panel{grid-area:form;min-width:0;border:0;padding:0}
+.contact-honeypot{display:none}
+.contact-page .field-row{gap:18px}
+.contact-page .form-button{min-height:58px;font-size:clamp(24px,2vw,30px);gap:16px}
+@media(min-width:1800px){.contact-hero-inner{padding-top:90px}.contact-hero .hero-eyebrow{margin-bottom:18px}.contact-hero h1{margin-top:-8px;margin-bottom:21px;padding-block:5px}}
+@media(min-width:801px) and (max-width:1100px){.contact-hero .hero-subline{font-size:1.96vw}.contact-grid{gap:6%}.contact-page .field-row{gap:0}}
+@media(max-width:800px){
+ .contact-hero{height:auto;min-height:0}
+ .contact-hero-inner{height:auto;padding-block:24px 27px}
+ .contact-hero-copy{width:100%;max-width:none}
+ .contact-hero .hero-eyebrow{font-size:clamp(11px,2.75vw,18px);letter-spacing:.16em;line-height:1.4;margin-bottom:16px;white-space:nowrap}
+ .contact-hero h1{font-size:16vw;line-height:.86;transform:scaleX(1.1);width:56%;margin:0 0 0 -2px;padding-block:0 8px}
+ .contact-gym{left:-31vw;top:-6vw;width:143vw}
+ .contact-hero-art:after{background:linear-gradient(90deg,#fff 0%,#fff 38%,#ffffffd9 47%,#ffffff00 60%)}
+ .contact-hero-details{position:relative;isolation:isolate;padding-top:clamp(38px,calc(18vw - 30px),95px)}
+ .contact-hero-details:before{content:"";position:absolute;z-index:-1;inset:calc(clamp(38px,calc(18vw - 30px),95px) - 14px) -7vw -28px;background:linear-gradient(to bottom,#ffffff00,#fff 28px,#fff 100%)}
+ .contact-hero .hero-subline{font-size:clamp(20px,5.1vw,29px);line-height:1.2}
+ .contact-grid{grid-template-columns:1fr;grid-template-areas:"form" "direct";gap:28px}
+ .contact-direct{max-width:none;border-top:1px solid var(--line)}
+ .contact-direct>a{padding-block:15px}
+ .contact-direct .contact-phone strong{font-size:28px}
+ .contact-page .field-row{gap:0}
+ .contact-page .form-button{font-size:26px}
+}
+@media(max-width:370px){.contact-hero .hero-eyebrow{font-size:10px;letter-spacing:.13em}.contact-page .form-button{font-size:25px;padding-inline:20px}}

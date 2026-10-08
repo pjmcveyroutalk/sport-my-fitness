@@ -91,13 +91,22 @@
  inset:-8px -12px -8px calc(-1 * min(30px,5.2vw));
  aspect-ratio:auto;
 }
-/* Preserve the young people's faces and bodies at the bottom of this photo.
-   Retain the painted top/side texture; the lower subject area is fully visible. */
+/* Show the complete square youth photograph. Its subjects sit at the bottom:
+   keep them clear and use only a narrow fade there, with the wide painted
+   transition restricted to the empty upper/side background. */
+.smf-inner-page .trainer-recent-photo{--smf-photo-ratio:1}
 .smf-inner-page .trainer-recent-photo .blended-photo{
- mask-image:var(--smf-photo-paint),linear-gradient(to bottom,transparent 57%,#000 70%);
- -webkit-mask-image:var(--smf-photo-paint),linear-gradient(to bottom,transparent 57%,#000 70%);
- mask-composite:add;
- -webkit-mask-composite:source-over;
+ aspect-ratio:1;
+ object-fit:contain;
+ object-position:center;
+ mask-image:var(--smf-photo-paint),linear-gradient(to bottom,#000 99%,transparent),linear-gradient(to right,#000 98%,transparent);
+ -webkit-mask-image:var(--smf-photo-paint),linear-gradient(to bottom,#000 99%,transparent),linear-gradient(to right,#000 98%,transparent);
+ mask-size:180% 140%,100% 100%,100% 100%;
+ -webkit-mask-size:180% 140%,100% 100%,100% 100%;
+ mask-position:right top,center,center;
+ -webkit-mask-position:right top,center,center;
+ mask-composite:intersect;
+ -webkit-mask-composite:source-in;
 }
 /* Keep all three public platforms centered in the existing social group. */
 .smf-inner-page .trainer-social-links{align-items:center}
@@ -106,6 +115,14 @@
 .smf-inner-page .media-gym{top:-9.8vw}
 @media(max-width:800px){
  .smf-inner-page .media-gym{top:-14vw}
+}
+/* Yoshi's portrait stands on the page itself; no gym shows through its edge.
+   Contain the original square portrait rather than trimming it to the hero box. */
+.smf-inner-page .yoshi-story-art{display:none}
+.smf-inner-page .yoshi-story-portrait{object-fit:contain;object-position:center}
+/* Give the compact Home training heading breathing room below the motto. */
+@media(min-width:801px){
+ .smf-home-page .training-section{padding-top:clamp(48px,4vw,72px)}
 }
 /* Existing pale teal panels, dark surfaces and opaque inputs remain intact. */
 @media(max-width:800px){

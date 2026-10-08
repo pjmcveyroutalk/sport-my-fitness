@@ -26,10 +26,10 @@
     </mask>
     <filter id="paint" x="0" y="0" width="1200" height="800" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
       <feTurbulence type="fractalNoise" baseFrequency=".018 .027" numOctaves="3" seed="8" result="edgeNoise"/>
-      <feDisplacementMap in="SourceGraphic" in2="edgeNoise" scale="160" xChannelSelector="R" yChannelSelector="G" result="ragged"/>
+      <feDisplacementMap in="SourceGraphic" in2="edgeNoise" scale="110" xChannelSelector="R" yChannelSelector="G" result="ragged"/>
       <feTurbulence type="fractalNoise" baseFrequency=".11 .15" numOctaves="3" seed="21" result="grain"/>
       <feColorMatrix in="grain" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  .333 .333 .334 0 0" result="grainAlpha"/>
-      <feComposite in="ragged" in2="grainAlpha" operator="arithmetic" k1="0" k2="2" k3="1" k4="-1"/>
+      <feComposite in="ragged" in2="grainAlpha" operator="arithmetic" k1="0" k2="1.6" k3=".6" k4="-.6"/>
     </filter>
   </defs>
   <g filter="url(#paint)">

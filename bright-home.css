@@ -195,7 +195,7 @@ h2>span,
 .media-copy .eyebrow,
 .start-copy .eyebrow,
 .trainer-heading-copy>.eyebrow,
-.trainer-next .eyebrow,
+.page-step .eyebrow,
 .story-intro .eyebrow,
 .chapter-label,
 .story-chapter .chapter-history,
@@ -223,14 +223,20 @@ h2>span,
 /* The black play symbol shares a row with teal text; keep its original treatment. */
 .video-row-action .film-play{ text-shadow:none; }
 
-/* Shared continuation buttons and sticky header while the hamburger menu is shown. */
-.page-next{display:flex;justify-content:center;padding-bottom:24px}
-.next-page-button{min-height:52px;max-width:360px;font-size:24px;padding:12px 24px;gap:24px}
+/* One centered page ending, based on the approved Training composition. */
+.page-step{border-top:4px solid var(--teal);background:#f5fbfa;padding-block:clamp(35px,3.8vw,65px)}
+.page-step-inner{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;text-align:center}
+.page-step .eyebrow{font-size:14px;letter-spacing:.18em;color:#186467;margin-bottom:10px}
+.page-step h2{font-size:clamp(46px,4.9vw,78px);margin-bottom:10px}
+.page-step p:not(.eyebrow){color:var(--muted)}
+.page-step .button{width:320px;max-width:100%;flex-shrink:0}
+@media(max-width:800px){.page-step .button{font-size:25px}}
+
+/* Sticky header while the hamburger menu is shown. */
 @media(max-width:900px){
  html{scroll-padding-top:98px}
  .site-header{position:sticky;top:0;z-index:50}
  .primary-nav{max-height:calc(100vh - 100px);max-height:calc(100dvh - 100px);overflow-y:auto;overscroll-behavior:contain}
- .next-page-button{width:100%}
 }
 
 /* Keep the shared footer centered at every breakpoint. */
@@ -239,5 +245,6 @@ h2>span,
 /* Official platform artwork stays separate from the readable link label. */
 .social-link{display:inline-grid;grid-template-columns:28px auto 24px;align-items:center;gap:18px;min-height:44px;text-align:center}
 .platform-icon{width:28px;height:28px;object-fit:contain;flex-shrink:0}
+
 
 

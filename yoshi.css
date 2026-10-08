@@ -45,9 +45,6 @@
 .story-connect h2{font-size:clamp(43px,3.9vw,67px)}
 .story-personal-links{display:flex;flex-direction:column;align-items:center;width:100%;max-width:360px;gap:16px}
 .story-personal-links .text-link{width:100%;grid-template-columns:28px 1fr 24px;font-size:19px;letter-spacing:.025em;gap:18px}
-.story-training-action{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;border-top:1px solid var(--line);padding-top:26px;margin-top:32px;text-align:center}
-.story-training-action p{font-size:20px;font-weight:700}
-.story-training-action .button{font-size:25px;min-height:52px}
 @media(min-width:1800px){.yoshi-story-hero-inner{padding-top:72px}.yoshi-story-hero .hero-eyebrow{margin-bottom:18px}.yoshi-story-hero h1{margin-top:-8px;margin-bottom:21px;padding-block:5px}}
 @media(max-width:1100px) and (min-width:801px){.yoshi-story-hero .hero-subline{font-size:1.88vw}.yoshi-story-hero .hero-description{font-size:1.45vw}.yoshi-story-hero .hero-actions{gap:1.8vw}.yoshi-story-hero .hero-button{font-size:2vw;min-height:4vw;padding:1vw 2vw}.story-grid{gap:6%}.story-intro{gap:6%}}
 @media(max-width:800px){
@@ -86,7 +83,7 @@
  .story-connect h2{font-size:clamp(42px,9vw,61px)}
  .story-personal-links{width:100%;gap:18px}
  .story-personal-links .text-link{font-size:19px}
- .story-training-action{align-items:center;flex-direction:column;gap:18px;margin-top:28px}
 }
 @media(max-width:370px){.yoshi-story-hero .hero-eyebrow{font-size:10px;letter-spacing:.13em}.yoshi-story-hero .hero-actions{gap:14px}.yoshi-story-hero .hero-button{font-size:4.6vw;padding-inline:10px}.yoshi-story-hero .hero-actions>.text-link{font-size:13px;gap:6px}}
+
 

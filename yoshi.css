@@ -27,7 +27,7 @@
 .chapter-label{font:700 14px/1.4 var(--label);letter-spacing:.15em;color:var(--teal);margin-bottom:8px}
 .story-chapter h3{font-size:clamp(29px,2.45vw,42px);margin-bottom:12px;color:var(--headline-teal)}
 .story-chapter>p:not(.chapter-label){color:var(--muted);line-height:1.65;font-size:16px;max-width:560px}
-.story-chapter .chapter-history{margin-top:11px;font-size:13px!important;line-height:1.5!important;color:var(--teal)!important}
+.story-chapter .chapter-history{margin-top:11px;font-size:13px!important;line-height:1.5!important;color:var(--teal)}
 .story-community-photo{min-width:0}
 .story-community-photo img{width:100%;height:auto;aspect-ratio:2500 / 1667;object-fit:contain}
 .story-community-photo figcaption{display:flex;flex-direction:column;gap:4px;padding-top:14px;line-height:1.4}

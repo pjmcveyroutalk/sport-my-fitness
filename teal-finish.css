@@ -11,6 +11,14 @@
  --smf-teal-tile:url("assets/smf-teal-letter-tread.svg");
  --smf-teal-face:linear-gradient(180deg,var(--smf-teal-upper) 0%,var(--smf-teal-main) 46%,var(--smf-teal-lower) 100%);
  --smf-teal-surface:var(--smf-teal-tile),var(--smf-teal-face);
+ /* Informative small text needs a darker face on the pale plate. These
+    variants mix the same palette and leave the large display face intact. */
+ --smf-teal-readable-tile:url("assets/smf-teal-readable-tread.svg");
+ --smf-teal-readable-upper:color-mix(in srgb,var(--smf-teal-main) 2%,var(--smf-teal-edge));
+ --smf-teal-readable-face:linear-gradient(180deg,var(--smf-teal-readable-upper),var(--smf-teal-edge));
+ --smf-teal-button-tile:url("assets/smf-teal-button-tread.svg");
+ /* Keep the darkest shade in the bottom inset, clear of dark labels. */
+ --smf-teal-button-face:linear-gradient(180deg,var(--smf-teal-upper) 0%,var(--smf-teal-main) 46%,color-mix(in srgb,var(--smf-teal-main) 80%,var(--smf-teal-lower)) 100%);
  --smf-teal-text-depth:clamp(.35px,.017em,3px);
  /* One soft bevel from the original glyph alpha. Chaining hard shadows
     repeatedly copies their edges and exaggerates stretched italic type. */
@@ -59,13 +67,28 @@
  }
 }
 
+/* Small light-surface labels and link states share the readable teal variant.
+   Header/footer lettering keeps its approved bright face on dark surfaces. */
+:is(.smf-home-page,.smf-inner-page) :is(.eyebrow.teal-letter,.chapter-label.teal-letter,.chapter-history.teal-letter,.video-category.teal-letter),
+.smf-inner-page :is(.text-link:is(:hover,:focus-visible)>.teal-hover-label,
+ .text-link:is(:hover,:focus-visible)>span[aria-hidden="true"],
+ .trainer-section figcaption>a:is(:hover,:focus-visible)>span,
+ .media-links>a:is(:hover,:focus-visible) strong,
+ .contact-direct>a:is(:hover,:focus-visible)>span,
+ .contact-direct>a:is(:hover,:focus-visible)>strong),
+.smf-home-page .text-link:is(:hover,:focus-visible)>.teal-hover-label{
+ color:var(--smf-teal-edge);
+ --smf-teal-main:var(--smf-teal-edge);
+ --smf-teal-surface:var(--smf-teal-readable-tile),var(--smf-teal-readable-face);
+}
+
 /* Shared teal CTAs keep their dimensions. YouTube play links use brand SVGs.
    Texture/emboss belong to the surface; button labels and icons stay dark. */
 .button{
  position:relative;
  isolation:isolate;
  background-color:var(--smf-teal-main);
- background-image:var(--smf-teal-surface);
+ background-image:var(--smf-teal-button-tile),var(--smf-teal-button-face);
  background-repeat:repeat,no-repeat;
  background-size:32px 32px,100% 100%;
  color:var(--smf-button-ink);

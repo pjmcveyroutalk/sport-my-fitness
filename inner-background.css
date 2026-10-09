@@ -35,7 +35,7 @@
 /* Reuse the approved gym artwork's alpha as the painted photo transition.
    The wide splattered left/bottom edge is the actual hero texture, not a frame. */
 .smf-inner-page :is(.blended-photo,.yoshi-story-portrait,.media-hero-moment img){
- --smf-photo-paint:url("assets/training-gym-background.png");
+ --smf-photo-paint:url("assets/training-gym-background-lossless.webp");
  mask-image:var(--smf-photo-paint),linear-gradient(to right,#000 94%,transparent);
  -webkit-mask-image:var(--smf-photo-paint),linear-gradient(to right,#000 94%,transparent);
  mask-composite:intersect;
@@ -45,6 +45,31 @@
  -webkit-mask-size:156% 112%,100% 100%;
  mask-position:right center,center;
  -webkit-mask-position:right center,center;
+ mask-repeat:no-repeat;
+ -webkit-mask-repeat:no-repeat;
+}
+/* Original, previously unused coaching photos occupy the same hero slots.
+   The gym alpha is reused only as a paint mask, never as another photograph. */
+.smf-inner-page .unique-hero-photo-wrap{
+ position:absolute;
+ isolation:isolate;
+ inset:0 0 0 auto;
+ width:58%;
+}
+.smf-inner-page .unique-hero-photo{
+ --smf-photo-paint:url("assets/training-gym-background-lossless.webp");
+ width:100%;
+ height:100%;
+ max-width:none;
+ object-fit:contain;
+ object-position:right center;
+ mask-image:var(--smf-photo-paint);
+ -webkit-mask-image:var(--smf-photo-paint);
+ mask-mode:alpha;
+ mask-size:156% 112%;
+ -webkit-mask-size:156% 112%;
+ mask-position:right center;
+ -webkit-mask-position:right center;
  mask-repeat:no-repeat;
  -webkit-mask-repeat:no-repeat;
 }
@@ -64,7 +89,7 @@
 .smf-inner-page :is(.yoshi-portrait-wrap,.media-hero-moment){isolation:isolate}
 /* One broad teal wash and the hero's paired diagonal strokes run through
    the splattered transition. The photograph remains clear at its center. */
-.smf-inner-page :is(.trainer-main-photo,.trainer-moments figure,.story-community-photo,.media-photo-pair figure,.yoshi-portrait-wrap,.media-hero-moment):before{
+.smf-inner-page :is(.trainer-main-photo,.trainer-moments figure,.story-community-photo,.media-photo-pair figure,.yoshi-portrait-wrap,.media-hero-moment,.unique-hero-photo-wrap):before{
  content:"";
  position:absolute;
  z-index:-1;
@@ -77,8 +102,8 @@
   linear-gradient(126deg,transparent 12%,var(--teal) 12%,var(--teal) 19%,transparent 19%,transparent 22%,var(--teal) 22%,var(--teal) 27%,transparent 27%),
   radial-gradient(ellipse at 4% 65%,var(--teal) 0%,color-mix(in srgb,var(--teal) 72%,transparent) 25%,transparent 54%),
   linear-gradient(0deg,color-mix(in srgb,var(--teal) 68%,transparent),transparent 25%);
- mask-image:url("assets/training-gym-background.png");
- -webkit-mask-image:url("assets/training-gym-background.png");
+ mask-image:url("assets/training-gym-background-lossless.webp");
+ -webkit-mask-image:url("assets/training-gym-background-lossless.webp");
  mask-mode:alpha;
  mask-size:156% 112%,100% 100%;
  -webkit-mask-size:156% 112%,100% 100%;
@@ -87,10 +112,12 @@
  mask-repeat:no-repeat;
  -webkit-mask-repeat:no-repeat;
 }
-.smf-inner-page :is(.yoshi-portrait-wrap,.media-hero-moment):before{
+.smf-inner-page :is(.yoshi-portrait-wrap,.media-hero-moment,.unique-hero-photo-wrap):before{
  inset:-8px -12px -8px calc(-1 * min(30px,5.2vw));
  aspect-ratio:auto;
 }
+.smf-inner-page .media-hero-moment{top:0;height:100%}
+.contact-page .unique-hero-photo{object-fit:cover;object-position:center 20%}
 /* Show the complete square youth photograph. Its subjects sit at the bottom:
    keep them clear and use only a narrow fade there, with the wide painted
    transition restricted to the empty upper/side background. */
@@ -136,6 +163,10 @@
 }
 /* Existing pale teal panels, dark surfaces and opaque inputs remain intact. */
 @media(max-width:800px){
+ .smf-inner-page .unique-hero-photo-wrap{top:0;right:0;width:52vw;height:40vw;bottom:auto}
+ .smf-inner-page .unique-hero-photo{object-position:right top}
+ .contact-page .unique-hero-photo-wrap{height:58vw}
+ .contact-page .unique-hero-photo{object-position:center 20%}
  .smf-inner-page{--smf-plate-label-size:clamp(11px,2.75vw,18px)}
  .training-page .smf-inner-page{
   --smf-hero-fade-start:calc(34px + 1.4 * var(--smf-plate-label-size) + 19.78vw + clamp(38px,calc(22vw - 45px),110px));

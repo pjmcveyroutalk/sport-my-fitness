@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sport-my-fitness.vercel.app/sitemap.xml

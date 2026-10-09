@@ -1,0 +1,25 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/book.html",
+      "destination": "/contact.html",
+      "permanent": true
+    },
+    {
+      "source": "/book",
+      "destination": "/contact.html",
+      "permanent": true
+    },
+    {
+      "source": "/training-options.html",
+      "destination": "/programs.html",
+      "permanent": true
+    },
+    {
+      "source": "/training-options",
+      "destination": "/programs.html",
+      "permanent": true
+    }
+  ]
+}

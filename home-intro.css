@@ -2,6 +2,11 @@
    Only opacity and the photo's temporary translation change; layout, lettering
    finish, image crop, header and working controls keep their existing styles. */
 @media(prefers-reduced-motion:no-preference){
+ /* Reserve the approved layout while waiting for the first visible paint. */
+ html.smf-intro-pending .smf-home-page :is(
+  .yoshi-hero,.hero-eyebrow,.hero h1>span,.hero-subline,
+  .hero-description,.hero-actions,.mission-strip,.training-section>.wrap
+ ){opacity:0}
  html.smf-intro-playing .smf-home-page :is(
   .yoshi-hero,.hero-eyebrow,.hero h1>span,.hero-subline,
   .hero-description,.hero-actions,.mission-strip,.training-section>.wrap

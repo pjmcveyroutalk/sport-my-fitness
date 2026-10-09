@@ -9,13 +9,27 @@ const source = fs.readFileSync(path.join(__dirname, '..', 'home-intro.js'), 'utf
 function visit(options = {}) {
   const classes = new Set();
   const timers = new Map();
+  const frames = new Map();
   const saved = new Map(options.seen ? [['smf-home-intro-seen-v1', '1']] : []);
   const preference = new EventTarget();
   preference.matches = Boolean(options.reduced);
+  const image = new EventTarget();
+  image.complete = !options.imageLoading;
+  let decode;
+  image.decode = () => options.decodeLoading
+    ? new Promise(resolve => { decode = resolve; }) : Promise.resolve();
+  let fonts;
   const document = new EventTarget();
   document.hidden = Boolean(options.hidden);
+  document.readyState = options.domLoading ? 'loading' : 'complete';
+  document.fonts = { ready: options.fontsLoading
+    ? new Promise(resolve => { fonts = resolve; }) : Promise.resolve() };
+  document.querySelector = () => image;
   document.documentElement = {
-    classList: { add: name => classes.add(name), remove: name => classes.delete(name) }
+    classList: {
+      add: (...names) => names.forEach(name => classes.add(name)),
+      remove: (...names) => names.forEach(name => classes.delete(name))
+    }
   };
   const window = new EventTarget();
   window.location = { hash: options.hash || '' };
@@ -27,92 +41,232 @@ function visit(options = {}) {
       if (options.blockedStorage) throw new Error('Storage unavailable');
       return saved.get(key) || null;
     },
-    setItem: (key, value) => {
-      if (options.blockedStorage) throw new Error('Storage unavailable');
-      saved.set(key, value);
-    }
+    setItem: (key, value) => saved.set(key, value)
   };
   const navigator = { connection: { saveData: Boolean(options.saveData) } };
-  let nextTimer = 0;
+  let nextId = 0;
+  let now = 0;
+  const setTimeout = (fn, delay) => {
+    const id = ++nextId;
+    timers.set(id, { fn, at: now + delay });
+    return id;
+  };
+  const clearTimeout = id => timers.delete(id);
+  const requestAnimationFrame = fn => {
+    const id = ++nextId;
+    frames.set(id, fn);
+    return id;
+  };
+  const cancelAnimationFrame = id => frames.delete(id);
+  Object.assign(window, { setTimeout, clearTimeout, requestAnimationFrame, cancelAnimationFrame });
   vm.runInNewContext(source, {
-    document, window, navigator,
-    setTimeout: (fn, delay) => { const id = ++nextTimer; timers.set(id, { fn, delay }); return id; },
-    clearTimeout: id => timers.delete(id)
+    document, window, navigator, setTimeout, clearTimeout,
+    requestAnimationFrame, cancelAnimationFrame
   });
+  async function settle() {
+    for (let i = 0; i < 16; i++) await Promise.resolve();
+  }
+  function paint() {
+    const callbacks = [...frames.values()];
+    frames.clear();
+    callbacks.forEach(fn => fn(now));
+  }
+  function tick(milliseconds) {
+    const end = now + milliseconds;
+    while (true) {
+      const next = [...timers].filter(([, value]) => value.at <= end)
+        .sort((a, b) => a[1].at - b[1].at)[0];
+      if (!next) break;
+      now = next[1].at;
+      timers.delete(next[0]);
+      next[1].fn();
+    }
+    now = end;
+  }
   return {
-    classes, timers, saved, document, window, preference,
+    classes, timers, frames, saved, image, document, window, preference,
+    settle, paint, tick,
     playing: () => classes.has('smf-intro-playing'),
-    finishTime: () => { for (const timer of [...timers.values()]) timer.fn(); }
+    pending: () => classes.has('smf-intro-pending'),
+    async ready() { await settle(); paint(); paint(); await settle(); },
+    domReady() {
+      document.readyState = 'interactive';
+      document.dispatchEvent(new Event('DOMContentLoaded'));
+    },
+    loadImage() { image.complete = true; image.dispatchEvent(new Event('load')); },
+    decodeImage() { decode(); },
+    loadFonts() { fonts(); },
+    visible() { document.hidden = false; document.dispatchEvent(new Event('visibilitychange')); }
   };
 }
 
-test('a first home visit receives a finite entrance and returns to the normal page', () => {
-  const state = visit();
-  assert.equal(state.playing(), true);
-  assert.equal(state.saved.get('smf-home-intro-seen-v1'), '1');
-  assert.equal(state.timers.size, 1);
-  assert.ok([...state.timers.values()][0].delay <= 3800);
-  state.finishTime();
+test('an initially hidden tab plays its entrance when the user first sees it', async () => {
+  const state = visit({ hidden: true });
+  await state.ready();
   assert.equal(state.playing(), false);
-  assert.equal(state.timers.size, 0);
+  state.visible();
+  await state.ready();
+  assert.equal(state.playing(), true);
+});
+
+test('a reload replays even when the old session flag is already present', async () => {
+  const state = visit({ seen: true });
+  await state.ready();
+  assert.equal(state.playing(), true);
+});
+
+test('CSS-only motion still runs with data saving enabled', async () => {
+  const state = visit({ saveData: true });
+  await state.ready();
+  assert.equal(state.playing(), true);
+});
+
+test('the clock waits for the DOM, photo decode, fonts and a painted page', async () => {
+  const state = visit({ domLoading: true, imageLoading: true, decodeLoading: true, fontsLoading: true });
+  assert.equal(state.playing(), false);
+  state.domReady();
+  await state.ready();
+  assert.equal(state.playing(), false);
+  state.loadImage();
+  await state.ready();
+  assert.equal(state.playing(), false);
+  state.decodeImage();
+  await state.ready();
+  assert.equal(state.playing(), false);
+  state.loadFonts();
+  await state.settle();
+  assert.equal(state.playing(), false);
+  state.paint();
+  assert.equal(state.playing(), false);
+  state.paint();
+  assert.equal(state.playing(), true);
+  state.tick(3799);
+  assert.equal(state.playing(), true);
+  state.tick(1);
+  assert.equal(state.playing(), false);
+  assert.equal(state.classes.size, 0);
+});
+
+test('initial focus and a zero-position scroll event do not consume the entrance', async () => {
+  const state = visit();
+  await state.ready();
+  state.document.dispatchEvent(new Event('focusin'));
+  state.window.dispatchEvent(new Event('scroll'));
+  assert.equal(state.playing(), true);
+});
+
+test('a slow asset cannot leave the entrance content hidden indefinitely', async () => {
+  const state = visit({ imageLoading: true, fontsLoading: true });
+  await state.settle();
+  assert.equal(state.pending(), true);
+  state.tick(2000);
+  state.paint();
+  state.paint();
+  assert.equal(state.playing(), true);
+  state.tick(3800);
+  assert.equal(state.classes.size, 0);
+  state.loadImage();
+  state.loadFonts();
+  await state.ready();
+  assert.equal(state.classes.size, 0);
 });
 
 for (const [label, options] of [
   ['reduced motion', { reduced: true }],
-  ['data saving', { saveData: true }],
-  ['a repeat visit in the same tab', { seen: true }],
   ['back/forward navigation', { navigation: 'back_forward' }],
   ['a restored scroll position', { scrollY: 200 }],
-  ['a background tab', { hidden: true }],
   ['a direct section link', { hash: '#training' }],
   ['a browser without the motion preference API', { noMatchMedia: true }]
 ]) {
-  test(`${label} shows the existing page immediately`, () => {
+  test(label + ' shows the existing page immediately', async () => {
     const state = visit(options);
-    assert.equal(state.playing(), false);
+    await state.ready();
+    assert.equal(state.classes.size, 0);
+    assert.equal(state.timers.size, 0);
+    assert.equal(state.frames.size, 0);
+  });
+}
+
+for (const [label, options] of [
+  ['the home top link', { hash: '#top' }],
+  ['blocked session storage', { blockedStorage: true }]
+]) {
+  test(label + ' remains eligible', async () => {
+    const state = visit(options);
+    await state.ready();
+    assert.equal(state.playing(), true);
+    state.tick(3800);
+    assert.equal(state.classes.size, 0);
     assert.equal(state.timers.size, 0);
   });
 }
 
-test('the home top link remains eligible', () => {
-  assert.equal(visit({ hash: '#top' }).playing(), true);
-});
-
 for (const [target, type] of [
-  ['document', 'pointerdown'], ['document', 'keydown'], ['document', 'focusin'],
-  ['window', 'wheel'], ['window', 'touchstart'], ['window', 'scroll'],
+  ['document', 'pointerdown'], ['document', 'keydown'],
+  ['window', 'wheel'], ['window', 'touchstart'],
   ['window', 'hashchange'], ['window', 'pagehide']
 ]) {
-  test(`${type} ends the entrance without cancelling the user's action`, () => {
+  test(type + " restores the page without cancelling the user's action", async () => {
     const state = visit();
+    await state.ready();
     const event = new Event(type, { cancelable: true });
     state[target].dispatchEvent(event);
-    assert.equal(state.playing(), false);
+    assert.equal(state.classes.size, 0);
     assert.equal(state.timers.size, 0);
     assert.equal(event.defaultPrevented, false);
   });
 }
 
-test('enabling reduced motion while the entrance runs ends it immediately', () => {
+test('actual scrolling ends the entrance', async () => {
   const state = visit();
-  state.preference.matches = true;
-  const change = new Event('change');
-  Object.defineProperty(change, 'matches', { value: true });
-  state.preference.dispatchEvent(change);
-  assert.equal(state.playing(), false);
+  await state.ready();
+  state.window.scrollY = 10;
+  state.window.dispatchEvent(new Event('scroll'));
+  assert.equal(state.classes.size, 0);
 });
 
-test('hiding the tab ends the entrance and clears its timer', () => {
-  const state = visit();
+test('input while loading restores the page and prevents a late replay', async () => {
+  const state = visit({ imageLoading: true });
+  state.document.dispatchEvent(new Event('keydown'));
+  state.loadImage();
+  await state.ready();
+  assert.equal(state.classes.size, 0);
+  assert.equal(state.timers.size, 0);
+  assert.equal(state.frames.size, 0);
+});
+
+test('enabling reduced motion while waiting or playing restores the page', async () => {
+  for (const options of [{ imageLoading: true }, {}]) {
+    const state = visit(options);
+    await state.ready();
+    state.preference.matches = true;
+    const change = new Event('change');
+    Object.defineProperty(change, 'matches', { value: true });
+    state.preference.dispatchEvent(change);
+    assert.equal(state.classes.size, 0);
+    assert.equal(state.timers.size, 0);
+    assert.equal(state.frames.size, 0);
+  }
+});
+
+test('assets ready in a hidden tab cannot start the animation clock', async () => {
+  const state = visit({ imageLoading: true });
   state.document.hidden = true;
   state.document.dispatchEvent(new Event('visibilitychange'));
+  state.loadImage();
+  await state.ready();
+  state.tick(10000);
   assert.equal(state.playing(), false);
-  assert.equal(state.timers.size, 0);
+  state.visible();
+  await state.ready();
+  assert.equal(state.playing(), true);
 });
 
-test('blocked session storage still leaves a finite, usable page', () => {
-  const state = visit({ blockedStorage: true });
-  assert.equal(state.playing(), true);
-  state.finishTime();
-  assert.equal(state.playing(), false);
+test('hiding a playing tab ends it and clears the clock', async () => {
+  const state = visit();
+  await state.ready();
+  state.document.hidden = true;
+  state.document.dispatchEvent(new Event('visibilitychange'));
+  assert.equal(state.classes.size, 0);
+  assert.equal(state.timers.size, 0);
 });

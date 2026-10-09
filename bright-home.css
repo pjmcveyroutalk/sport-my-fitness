@@ -186,10 +186,10 @@ h3{font:italic 900 clamp(25px,1.92vw,35px)/1.05 var(--display);letter-spacing:.0
 .page-step .button{width:320px;max-width:100%;flex-shrink:0}
 @media(max-width:800px){.page-step .button{font-size:25px}}
 
-/* Sticky header while the hamburger menu is shown. */
+/* Keep the mobile sticky header on its own layer to avoid scroll repaint stutter. */
 @media(max-width:900px){
  html{scroll-padding-top:98px}
- .site-header{position:sticky;top:0;z-index:50}
+ .site-header{position:sticky;top:0;z-index:50;will-change:transform}
  .primary-nav{max-height:calc(100vh - 100px);max-height:calc(100dvh - 100px);overflow-y:auto;overscroll-behavior:contain}
 }
 

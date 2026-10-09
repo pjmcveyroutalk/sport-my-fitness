@@ -1,0 +1,45 @@
+/* The supplied intro's entrance sequence, using the approved live composition.
+   Only opacity and the photo's temporary translation change; layout, lettering
+   finish, image crop, header and working controls keep their existing styles. */
+@media(prefers-reduced-motion:no-preference){
+ html.smf-intro-playing .smf-home-page :is(
+  .yoshi-hero,.hero-eyebrow,.hero h1>span,.hero-subline,
+  .hero-description,.hero-actions,.mission-strip,.training-section>.wrap
+ ){
+  animation-name:smf-intro-fade;
+  animation-duration:520ms;
+  animation-timing-function:cubic-bezier(.22,1,.36,1);
+  /* Delayed entrances start at zero, then yield to the original styles.
+     No forwards fill or permanent compositing layer softens the final text. */
+  animation-fill-mode:backwards;
+  animation-iteration-count:1;
+ }
+ html.smf-intro-playing .smf-home-page .yoshi-hero{
+  animation-name:smf-intro-photo;
+  animation-duration:880ms;
+  animation-delay:80ms;
+ }
+ html.smf-intro-playing .smf-home-page .hero-eyebrow{animation-delay:120ms}
+ html.smf-intro-playing .smf-home-page .hero h1>span:nth-child(1){animation-delay:250ms}
+ html.smf-intro-playing .smf-home-page .hero h1>span:nth-child(2){animation-delay:550ms}
+ html.smf-intro-playing .smf-home-page .hero h1>span:nth-child(3){animation-delay:850ms}
+ html.smf-intro-playing .smf-home-page .hero-subline{animation-delay:1130ms}
+ html.smf-intro-playing .smf-home-page .hero-description{animation-delay:1260ms}
+ html.smf-intro-playing .smf-home-page .hero-actions{animation-delay:1480ms}
+ html.smf-intro-playing .smf-home-page .mission-strip{
+  animation-duration:580ms;
+  animation-delay:1780ms;
+ }
+ html.smf-intro-playing .smf-home-page .training-section>.wrap{
+  animation-duration:600ms;
+  animation-delay:2100ms;
+ }
+ @keyframes smf-intro-fade{
+  from{opacity:0}
+  to{opacity:1}
+ }
+ @keyframes smf-intro-photo{
+  from{opacity:0;transform:translateX(16px)}
+  to{opacity:1;transform:none}
+ }
+}

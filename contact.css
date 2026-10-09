@@ -7,6 +7,8 @@
 .contact-hero-copy{width:48%;max-width:865px}
 .contact-hero .hero-eyebrow{margin-bottom:1vw}
 .contact-hero h1{font:italic 900 min(10.5vw,189px)/.86 var(--display);letter-spacing:-.005em;margin:-.45vw 0 1.15vw -.28vw;padding-block:.3vw;transform:scaleX(1.13);transform-origin:left center;width:88.5%}
+.contact-hero-credit{font-size:clamp(10px,.85vw,12px);line-height:1.4;color:var(--muted);margin-top:16px}
+.contact-hero-credit a{text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}
 .contact-inquiry{position:relative;isolation:isolate;background:#fff;padding-block:clamp(28px,3.5vw,60px)}
 .contact-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);grid-template-areas:"direct form";gap:8%;align-items:start}
 .contact-direct{grid-area:direct;min-width:0;margin:0;max-width:470px;border-top:2px solid var(--ink)}

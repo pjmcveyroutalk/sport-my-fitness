@@ -166,7 +166,7 @@
  .smf-inner-page .unique-hero-photo-wrap{top:0;right:0;width:52vw;height:40vw;bottom:auto}
  .smf-inner-page .unique-hero-photo{object-position:right top}
  .contact-page .unique-hero-photo-wrap{height:58vw}
- .contact-page .unique-hero-photo{object-position:center 20%}
+ .contact-page .unique-hero-photo{object-position:65% center}
  .smf-inner-page{--smf-plate-label-size:clamp(11px,2.75vw,18px)}
  .training-page .smf-inner-page{
   --smf-hero-fade-start:calc(34px + 1.4 * var(--smf-plate-label-size) + 19.78vw + clamp(38px,calc(22vw - 45px),110px));

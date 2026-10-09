@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+ <title>Raised teal diamond plate for button surfaces</title>
+ <defs>
+  <g id="ridge">
+   <path d="M0-8C-2.6-5.5-2.6 5.5 0 8Z" fill="#4BCBD0" opacity=".4"/>
+   <path d="M0-8C2.6-5.5 2.6 5.5 0 8Z" fill="#005F63" opacity=".2"/>
+   <path d="M0-7.3V7.3" fill="none" stroke="#4BCBD0" stroke-width=".5" stroke-linecap="round" opacity=".3"/>
+  </g>
+ </defs>
+ <use href="#ridge" transform="translate(8 8) rotate(45)"/>
+ <use href="#ridge" transform="translate(24 8) rotate(-45)"/>
+ <use href="#ridge" transform="translate(8 24) rotate(-45)"/>
+ <use href="#ridge" transform="translate(24 24) rotate(45)"/>
+</svg>

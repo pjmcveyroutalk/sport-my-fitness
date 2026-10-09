@@ -1,19 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
- <title>Readable small-label diamond-plate ridges</title>
- <g transform="translate(8 8) rotate(45)">
-  <path d="M0-5.5C-1.1-4-1.1 4 0 5.5Z" fill="#4BCBD0" opacity=".08"/>
-  <path d="M0-5.5C1.1-4 1.1 4 0 5.5Z" fill="#005F63" opacity=".24"/>
- </g>
- <g transform="translate(24 8) rotate(-45)">
-  <path d="M0-5.5C-1.1-4-1.1 4 0 5.5Z" fill="#4BCBD0" opacity=".08"/>
-  <path d="M0-5.5C1.1-4 1.1 4 0 5.5Z" fill="#005F63" opacity=".24"/>
- </g>
- <g transform="translate(8 24) rotate(-45)">
-  <path d="M0-5.5C-1.1-4-1.1 4 0 5.5Z" fill="#4BCBD0" opacity=".08"/>
-  <path d="M0-5.5C1.1-4 1.1 4 0 5.5Z" fill="#005F63" opacity=".24"/>
- </g>
- <g transform="translate(24 24) rotate(45)">
-  <path d="M0-5.5C-1.1-4-1.1 4 0 5.5Z" fill="#4BCBD0" opacity=".08"/>
-  <path d="M0-5.5C1.1-4 1.1 4 0 5.5Z" fill="#005F63" opacity=".24"/>
- </g>
+ <title>Soft diamond plate for readable small teal lettering</title>
+ <defs>
+  <g id="ridge">
+   <path d="M0-8C-2.6-5.5-2.6 5.5 0 8Z" fill="#4BCBD0" opacity=".08"/>
+   <path d="M0-8C2.6-5.5 2.6 5.5 0 8Z" fill="#005F63" opacity=".12"/>
+  </g>
+ </defs>
+ <use href="#ridge" transform="translate(8 8) rotate(45)"/>
+ <use href="#ridge" transform="translate(24 8) rotate(-45)"/>
+ <use href="#ridge" transform="translate(8 24) rotate(-45)"/>
+ <use href="#ridge" transform="translate(24 24) rotate(45)"/>
 </svg>

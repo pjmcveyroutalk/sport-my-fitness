@@ -186,12 +186,16 @@ h3{font:italic 900 clamp(25px,1.92vw,35px)/1.05 var(--display);letter-spacing:.0
 .page-step .button{width:320px;max-width:100%;flex-shrink:0}
 @media(max-width:800px){.page-step .button{font-size:25px}}
 
-/* Keep the mobile sticky header on its own layer to avoid scroll repaint stutter. */
+/* Anchor the mobile header to the viewport and preserve its original flow space. */
 @media(max-width:900px){
+ :root{--smf-mobile-header-height:82px}
  html{scroll-padding-top:98px}
- .site-header{position:sticky;top:0;z-index:50;will-change:transform}
- .primary-nav{max-height:calc(100vh - 100px);max-height:calc(100dvh - 100px);overflow-y:auto;overscroll-behavior:contain}
+ body{padding-top:var(--smf-mobile-header-height)}
+ .site-header{position:fixed;top:0;inset-inline:0;z-index:50;will-change:transform}
+ .header-inner{min-height:var(--smf-mobile-header-height)}
+ .primary-nav{max-height:calc(100vh - 100px);max-height:calc(100svh - 100px);overflow-y:auto;overscroll-behavior:contain}
 }
+@media(max-width:800px){:root{--smf-mobile-header-height:78px}}
 
 /* Keep the shared footer centered at every breakpoint. */
 @media(max-width:800px){.footer-top{align-items:center}.footer-links{justify-content:center;gap:12px 23px}.footer-bottom{align-items:center}}

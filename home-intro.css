@@ -1,0 +1,13 @@
+/* Blender supplies the moving pixels; all approved composition styles stay. */
+.smf-blender-art{
+ position:absolute;top:0;left:0;width:100%;height:auto;
+ aspect-ratio:1586 / 992;pointer-events:none;
+}
+.smf-blender-source{
+ position:absolute;width:1px;height:1px;overflow:hidden;
+ opacity:0;pointer-events:none;clip-path:inset(100%);
+}
+html.smf-blender-playing .smf-home-page{overflow-x:clip}
+@media(prefers-reduced-motion:reduce){
+ .smf-blender-art,.smf-blender-source{display:none}
+}

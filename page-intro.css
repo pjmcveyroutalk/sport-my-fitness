@@ -1,0 +1,3 @@
+/* Only the temporary entrance has overflow containment/compositor hints. */
+html.smf-inner-blender-playing .smf-inner-page{overflow-x:clip}
+html.smf-inner-blender-playing .smf-inner-page :is(#hero-heading,.mission-strip,.training-hero-art,.contact-hero-art,.yoshi-portrait-wrap,.media-hero-moment){will-change:translate}

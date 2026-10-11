@@ -1,0 +1,465 @@
+[
+  {
+    "page": "index",
+    "path": "assets/yoshi-hero-milwaukee-natural-2026-10-08-lossless.webp",
+    "width": 1586,
+    "height": 992,
+    "mode": "RGBA",
+    "bytes": 1299516,
+    "alt": "Artwork of Yoshi Barnes in a turquoise running pose, with Milwaukee blended into the background",
+    "source_sha256": "cb3f8e78666b9edb0660e6cd3256ce4d897f0607be80fb5c5772ddc0903c7914",
+    "files": [
+      {
+        "path": "assets/photos/yoshi-hero-milwaukee-natural-480.webp",
+        "width": 480,
+        "bytes": 53318
+      },
+      {
+        "path": "assets/photos/yoshi-hero-milwaukee-natural-800.webp",
+        "width": 800,
+        "bytes": 135590
+      },
+      {
+        "path": "assets/photos/yoshi-hero-milwaukee-natural-1200.webp",
+        "width": 1200,
+        "bytes": 290726
+      },
+      {
+        "path": "assets/photos/yoshi-hero-milwaukee-natural-1586.webp",
+        "width": 1586,
+        "bytes": 461770
+      }
+    ],
+    "native_bytes": 461770,
+    "alpha_preserved": true,
+    "max_correction_before_encoding": 5,
+    "mean_correction_before_encoding": 0.62
+  },
+  {
+    "page": "training",
+    "path": "assets/training-gym-background-lossless.webp",
+    "width": 1586,
+    "height": 992,
+    "mode": "RGBA",
+    "bytes": 1066990,
+    "alt": "",
+    "source_sha256": "ce4ddff1473f093261fd011da83c8b600ed91986b34a468919b44453f049d6da",
+    "files": [
+      {
+        "path": "assets/photos/training-gym-background-480.webp",
+        "width": 480,
+        "bytes": 48738
+      },
+      {
+        "path": "assets/photos/training-gym-background-800.webp",
+        "width": 800,
+        "bytes": 123352
+      },
+      {
+        "path": "assets/photos/training-gym-background-1200.webp",
+        "width": 1200,
+        "bytes": 263322
+      },
+      {
+        "path": "assets/photos/training-gym-background-1586.webp",
+        "width": 1586,
+        "bytes": 431810
+      }
+    ],
+    "native_bytes": 431810,
+    "alpha_preserved": true,
+    "max_correction_before_encoding": 5,
+    "mean_correction_before_encoding": 0.621
+  },
+  {
+    "page": "training",
+    "path": "assets/yoshi-fitness-facebook-clarity-2026-10-07.webp",
+    "width": 1254,
+    "height": 1254,
+    "mode": "RGB",
+    "bytes": 140134,
+    "alt": "Yoshi Barnes in black training clothes, flexing her arms",
+    "source_sha256": "8cf8ec8c9f7906323e98b671fa846fcfc4827bee877c432d4b6b8bb848603614",
+    "files": [
+      {
+        "path": "assets/photos/yoshi-fitness-facebook-clarity-480.webp",
+        "width": 480,
+        "bytes": 26260
+      },
+      {
+        "path": "assets/photos/yoshi-fitness-facebook-clarity-800.webp",
+        "width": 800,
+        "bytes": 59806
+      },
+      {
+        "path": "assets/photos/yoshi-fitness-facebook-clarity-1200.webp",
+        "width": 1200,
+        "bytes": 108740
+      },
+      {
+        "path": "assets/photos/yoshi-fitness-facebook-clarity-1254.webp",
+        "width": 1254,
+        "bytes": 118908
+      }
+    ],
+    "native_bytes": 118908,
+    "alpha_preserved": true,
+    "max_correction_before_encoding": 5,
+    "mean_correction_before_encoding": 0.222
+  },
+  {
+    "page": "training",
+    "path": "assets/yoshi-leading-session-socialx-clarity-2026-10-07.webp",
+    "width": 1536,
+    "height": 1024,
+    "mode": "RGB",
+    "bytes": 382962,
+    "alt": "Yoshi leading a seated group movement session at Sport My Fitness",
+    "source_sha256": "cd8580679bbb5983752ec74882e11fb24ec493e8e9d0232d8b9d7dddb2af6b6d",
+    "files": [
+      {
+        "path": "assets/photos/yoshi-leading-session-socialx-clarity-480.webp",
+        "width": 480,
+        "bytes": 48922
+      },
+      {
+        "path": "assets/photos/yoshi-leading-session-socialx-clarity-800.webp",
+        "width": 800,
+        "bytes": 123504
+      },
+      {
+        "path": "assets/photos/yoshi-leading-session-socialx-clarity-1200.webp",
+        "width": 1200,
+        "bytes": 242594
+      },
+      {
+        "path": "assets/photos/yoshi-leading-session-socialx-clarity-1536.webp",
+        "width": 1536,
+        "bytes": 365648
+      }
+    ],
+    "native_bytes": 365648,
+    "alpha_preserved": true,
+    "max_correction_before_encoding": 5,
+    "mean_correction_before_encoding": 0.833
+  },
+  {
+    "page": "training",
+    "path": "assets/yoshi-youth-coaching-2026-09-02-clarity-2026-10-07.webp",
+    "width": 1254,
+    "height": 1254,
+    "mode": "RGB",
+    "bytes": 337624,
+    "alt": "Yoshi guiding young people through movement in a school gym",
+    "source_sha256": "90217eaef46430fafaf9ce301d3548c9293aabf4962fe59c7b92be15fc643f02",
+    "files": [
+      {
+        "path": "assets/photos/yoshi-youth-coaching-2026-09-02-clarity-480.webp",
+        "width": 480,
+        "bytes": 81994
+      },
+      {
+        "path": "assets/photos/yoshi-youth-coaching-2026-09-02-clarity-800.webp",
+        "width": 800,
+        "bytes": 184274
+      },
+      {
+        "path": "assets/photos/yoshi-youth-coaching-2026-09-02-clarity-1200.webp",
+        "width": 1200,
+        "bytes": 307800
+      },
+      {
+        "path": "assets/photos/yoshi-youth-coaching-2026-09-02-clarity-1254.webp",
+        "width": 1254,
+        "bytes": 324010
+      }
+    ],
+    "native_bytes": 324010,
+    "alpha_preserved": true,
+    "max_correction_before_encoding": 5,
+    "mean_correction_before_encoding": 1.174
+  },
+  {
+    "page": "programs",
+    "path": "assets/yoshi-coaching.jpg",
+    "width": 1000,
+    "height": 760,
+    "mode": "RGB",
+    "bytes": 159234,
+    "alt": "Yoshi coaching a seated participant using a cable machine",
+    "source_sha256": "616ad03f9f3d0c59844769dbb9051a2addfa3c1e30ddfae84ba792cbae154ed2",
+    "files": [
+      {
+        "path": "assets/photos/yoshi-coaching-480.webp",
+        "width": 480,
+        "bytes": 46242
+      },
+      {
+        "path": "assets/photos/yoshi-coaching-800.webp",
+        "width": 800,
+        "bytes": 90372
+      },
+      {
+        "path": "assets/photos/yoshi-coaching-1000.webp",
+        "width": 1000,
+        "bytes": 126126
+      }
+    ],
+    "native_bytes": 126126,
+    "alpha_preserved": true,
+    "max_correction_before_encoding": 5,
+    "mean_correction_before_encoding": 0.765
+  },
+  {
+    "page": "yoshi",
+    "path": "assets/yoshi-smiling-facebook-clarity-2026-10-07.webp",
+    "width": 1254,
+    "height": 1254,
+    "mode": "RGB",
+    "bytes": 137942,
+    "alt": "Yoshi Barnes smiling, in a black-and-white portrait",
+    "source_sha256": "34213ee5316fe5cd22b31a6cbb4832b9aee63d4569b8b8ed307a62e5fc7fad30",
+    "files": [
+      {
+        "path": "assets/photos/yoshi-smiling-facebook-clarity-480.webp",
+        "width": 480,
+        "bytes": 34536
+      },
+      {
+        "path": "assets/photos/yoshi-smiling-facebook-clarity-800.webp",
+        "width": 800,
+        "bytes": 68822
+      },
+      {
+        "path": "assets/photos/yoshi-smiling-facebook-clarity-1200.webp",
+        "width": 1200,
+        "bytes": 118086
+      },
+      {
+        "path": "assets/photos/yoshi-smiling-facebook-clarity-1254.webp",
+        "width": 1254,
+        "bytes": 126442
+      }
+    ],
+    "native_bytes": 126442,
+    "alpha_preserved": true,
+    "max_correction_before_encoding": 5,
+    "mean_correction_before_encoding": 0.864
+  },
+  {
+    "page": "yoshi",
+    "path": "assets/yoshi-community-socialx-clarity-2026-10-07.webp",
+    "width": 1536,
+    "height": 1024,
+    "mode": "RGB",
+    "bytes": 248724,
+    "alt": "Yoshi Barnes smiling with two members of the Sport My Fitness community",
+    "source_sha256": "90a0a073d7f3327a7f8af07bf17002c42a5d0a3b7a165bc686ab3bf0c20a20a8",
+    "files": [
+      {
+        "path": "assets/photos/yoshi-community-socialx-clarity-480.webp",
+        "width": 480,
+        "bytes": 32690
+      },
+      {
+        "path": "assets/photos/yoshi-community-socialx-clarity-800.webp",
+        "width": 800,
+        "bytes": 74498
+      },
+      {
+        "path": "assets/photos/yoshi-community-socialx-clarity-1200.webp",
+        "width": 1200,
+        "bytes": 133224
+      },
+      {
+        "path": "assets/photos/yoshi-community-socialx-clarity-1536.webp",
+        "width": 1536,
+        "bytes": 209112
+      }
+    ],
+    "native_bytes": 209112,
+    "alpha_preserved": true,
+    "max_correction_before_encoding": 5,
+    "mean_correction_before_encoding": 0.559
+  },
+  {
+    "page": "media",
+    "path": "assets/yoshi-group-squats-polished-lossless.webp",
+    "width": 1536,
+    "height": 1024,
+    "mode": "RGB",
+    "bytes": 1555858,
+    "alt": "Yoshi leading a group squat session in the Sport My Fitness gym",
+    "source_sha256": "fe9783ccb9afac4e25386ae837331cf28b7b2d76c9d065b02bcf9dbb573d5e58",
+    "files": [
+      {
+        "path": "assets/photos/yoshi-group-squats-polished-480.webp",
+        "width": 480,
+        "bytes": 50900
+      },
+      {
+        "path": "assets/photos/yoshi-group-squats-polished-800.webp",
+        "width": 800,
+        "bytes": 115156
+      },
+      {
+        "path": "assets/photos/yoshi-group-squats-polished-1200.webp",
+        "width": 1200,
+        "bytes": 219472
+      },
+      {
+        "path": "assets/photos/yoshi-group-squats-polished-1536.webp",
+        "width": 1536,
+        "bytes": 329374
+      }
+    ],
+    "native_bytes": 329374,
+    "alpha_preserved": true,
+    "max_correction_before_encoding": 5,
+    "mean_correction_before_encoding": 0.793
+  },
+  {
+    "page": "media",
+    "path": "assets/community-floor-work-polished-lossless.webp",
+    "width": 1536,
+    "height": 1024,
+    "mode": "RGB",
+    "bytes": 1723638,
+    "alt": "Participants doing floor exercises together in the Sport My Fitness gym",
+    "source_sha256": "39c3bf38527f87ba78f1ccff751966a9d4692e0098d343271cac7d547f3115c4",
+    "files": [
+      {
+        "path": "assets/photos/community-floor-work-polished-480.webp",
+        "width": 480,
+        "bytes": 53560
+      },
+      {
+        "path": "assets/photos/community-floor-work-polished-800.webp",
+        "width": 800,
+        "bytes": 137688
+      },
+      {
+        "path": "assets/photos/community-floor-work-polished-1200.webp",
+        "width": 1200,
+        "bytes": 284038
+      },
+      {
+        "path": "assets/photos/community-floor-work-polished-1536.webp",
+        "width": 1536,
+        "bytes": 447368
+      }
+    ],
+    "native_bytes": 447368,
+    "alpha_preserved": true,
+    "max_correction_before_encoding": 5,
+    "mean_correction_before_encoding": 0.914
+  },
+  {
+    "page": "media",
+    "path": "assets/community-strength-polished-lossless.webp",
+    "width": 1536,
+    "height": 1024,
+    "mode": "RGB",
+    "bytes": 1548362,
+    "alt": "Two participants lifting weights in the Sport My Fitness gym",
+    "source_sha256": "f5aab1e282bc122f650f3a528ecaac3ca69d80559973ba602118d5eb05843396",
+    "files": [
+      {
+        "path": "assets/photos/community-strength-polished-480.webp",
+        "width": 480,
+        "bytes": 46456
+      },
+      {
+        "path": "assets/photos/community-strength-polished-800.webp",
+        "width": 800,
+        "bytes": 112050
+      },
+      {
+        "path": "assets/photos/community-strength-polished-1200.webp",
+        "width": 1200,
+        "bytes": 231490
+      },
+      {
+        "path": "assets/photos/community-strength-polished-1536.webp",
+        "width": 1536,
+        "bytes": 363828
+      }
+    ],
+    "native_bytes": 363828,
+    "alpha_preserved": true,
+    "max_correction_before_encoding": 5,
+    "mean_correction_before_encoding": 0.728
+  },
+  {
+    "page": "contact",
+    "path": "assets/smf-storefront-maps-clarity-2026-10-09.webp",
+    "width": 1448,
+    "height": 1086,
+    "mode": "RGB",
+    "bytes": 446566,
+    "alt": "The Sport My Fitness storefront with teal window logos and its entrance on West Vliet Street",
+    "source_sha256": "e7662393c4e02ac065cc5cc78dda1ffe61b7cd031f498d80ad6b91c785821f2a",
+    "files": [
+      {
+        "path": "assets/photos/smf-storefront-maps-clarity-480.webp",
+        "width": 480,
+        "bytes": 69620
+      },
+      {
+        "path": "assets/photos/smf-storefront-maps-clarity-800.webp",
+        "width": 800,
+        "bytes": 182206
+      },
+      {
+        "path": "assets/photos/smf-storefront-maps-clarity-1200.webp",
+        "width": 1200,
+        "bytes": 369444
+      },
+      {
+        "path": "assets/photos/smf-storefront-maps-clarity-1448.webp",
+        "width": 1448,
+        "bytes": 479538
+      }
+    ],
+    "native_bytes": 479538,
+    "alpha_preserved": true,
+    "max_correction_before_encoding": 5,
+    "mean_correction_before_encoding": 1.27
+  },
+  {
+    "page": "community",
+    "path": "assets/community-body-camp.jpg",
+    "width": 1246,
+    "height": 1536,
+    "mode": "RGB",
+    "bytes": 312435,
+    "alt": "Five smiling Body Camp participants together in the Sport My Fitness gym, with a dog in front",
+    "source_sha256": "8061b4d07daa050f6c461c5973260ab4d353e19959e867a59479c1b8c234156a",
+    "files": [
+      {
+        "path": "assets/photos/community-body-camp-480.webp",
+        "width": 480,
+        "bytes": 77796
+      },
+      {
+        "path": "assets/photos/community-body-camp-800.webp",
+        "width": 800,
+        "bytes": 158080
+      },
+      {
+        "path": "assets/photos/community-body-camp-1200.webp",
+        "width": 1200,
+        "bytes": 258936
+      },
+      {
+        "path": "assets/photos/community-body-camp-1246.webp",
+        "width": 1246,
+        "bytes": 268246
+      }
+    ],
+    "native_bytes": 268246,
+    "alpha_preserved": true,
+    "max_correction_before_encoding": 5,
+    "mean_correction_before_encoding": 0.889
+  }
+]

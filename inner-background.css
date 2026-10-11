@@ -35,7 +35,7 @@
 /* Reuse the approved gym artwork's alpha as the painted photo transition.
    The wide splattered left/bottom edge is the actual hero texture, not a frame. */
 .smf-inner-page :is(.blended-photo,.yoshi-story-portrait,.media-hero-moment img){
- --smf-photo-paint:url("assets/training-gym-background-lossless.webp");
+ --smf-photo-paint:url("assets/smf-photo-alpha-mask.webp");
  mask-image:var(--smf-photo-paint),linear-gradient(to right,#000 94%,transparent);
  -webkit-mask-image:var(--smf-photo-paint),linear-gradient(to right,#000 94%,transparent);
  mask-composite:intersect;
@@ -57,7 +57,7 @@
  width:58%;
 }
 .smf-inner-page .unique-hero-photo{
- --smf-photo-paint:url("assets/training-gym-background-lossless.webp");
+ --smf-photo-paint:url("assets/smf-photo-alpha-mask.webp");
  width:100%;
  height:100%;
  max-width:none;
@@ -102,8 +102,8 @@
   linear-gradient(126deg,transparent 12%,var(--teal) 12%,var(--teal) 19%,transparent 19%,transparent 22%,var(--teal) 22%,var(--teal) 27%,transparent 27%),
   radial-gradient(ellipse at 4% 65%,var(--teal) 0%,color-mix(in srgb,var(--teal) 72%,transparent) 25%,transparent 54%),
   linear-gradient(0deg,color-mix(in srgb,var(--teal) 68%,transparent),transparent 25%);
- mask-image:url("assets/training-gym-background-lossless.webp");
- -webkit-mask-image:url("assets/training-gym-background-lossless.webp");
+ mask-image:url("assets/smf-photo-alpha-mask.webp");
+ -webkit-mask-image:url("assets/smf-photo-alpha-mask.webp");
  mask-mode:alpha;
  mask-size:156% 112%,100% 100%;
  -webkit-mask-size:156% 112%,100% 100%;

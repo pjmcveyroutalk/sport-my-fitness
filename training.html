@@ -30,8 +30,24 @@
   <link rel="stylesheet" href="training.css">
   <link rel="stylesheet" href="inner-background.css">
   <link rel="stylesheet" href="teal-finish.css">
-  <link rel="stylesheet" href="page-intro.css">
-  <script src="page-intro.js" defer></script>
+  <script>
+  // Set the first pose before paint, with a short, fail-open deadline.
+  (()=>{const r=document.documentElement;
+    if(!matchMedia('(prefers-reduced-motion: reduce)').matches &&
+       (!location.hash||location.hash==='#top') &&
+       performance.getEntriesByType('navigation')[0]?.type!=='back_forward' &&
+       !document.hidden && Element.prototype.animate){
+      r.classList.add('smf-motion-boot');
+      window.smfMotionBootTimer=setTimeout(()=>r.classList.remove('smf-motion-boot'),2200);
+      const abort=new AbortController();
+      const stop=()=>{r.classList.remove('smf-motion-boot');abort.abort();};
+      ['pointerdown','touchstart','wheel','keydown'].forEach(name=>addEventListener(name,stop,{once:true,passive:true,signal:abort.signal}));
+      setTimeout(()=>abort.abort(),2200);
+    }
+  })();
+  </script>
+  <link rel="stylesheet" href="site-motion.css?v=polish-1">
+  <script src="site-motion.js?v=polish-1" defer></script>
 </head>
 <body class="training-page">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -51,7 +67,7 @@
   </header>
   <main id="main" class="smf-inner-page">
     <section class="training-hero" id="top" aria-labelledby="hero-heading">
-      <div class="training-hero-art" aria-hidden="true"><img class="training-gym" src="assets/training-gym-background-lossless.webp" width="1586" height="992" alt="" fetchpriority="high"></div>
+      <div class="training-hero-art" aria-hidden="true"><img class="training-gym" src="assets/photos/training-gym-background-1586.webp" srcset="assets/photos/training-gym-background-480.webp 480w, assets/photos/training-gym-background-800.webp 800w, assets/photos/training-gym-background-1200.webp 1200w, assets/photos/training-gym-background-1586.webp 1586w" sizes="100vw" width="1586" height="992" alt="" fetchpriority="high" decoding="async" style="aspect-ratio: 1586 / 992"></div>
       <div class="wrap training-hero-inner">
         <div class="training-hero-copy">
           <p class="eyebrow hero-eyebrow">MILWAUKEE · SPORT MY FITNESS</p>
@@ -81,17 +97,17 @@
         </div>
         <div class="trainer-photography">
           <figure class="trainer-main-photo">
-            <img class="blended-photo" src="assets/yoshi-fitness-facebook-clarity-2026-10-07.webp" width="1254" height="1254" alt="Yoshi Barnes in black training clothes, flexing her arms" loading="lazy">
+            <img class="blended-photo" src="assets/photos/yoshi-fitness-facebook-clarity-1254.webp" srcset="assets/photos/yoshi-fitness-facebook-clarity-480.webp 480w, assets/photos/yoshi-fitness-facebook-clarity-800.webp 800w, assets/photos/yoshi-fitness-facebook-clarity-1200.webp 1200w, assets/photos/yoshi-fitness-facebook-clarity-1254.webp 1254w" sizes="(max-width: 700px) 100vw, 50vw" width="1254" height="1254" alt="Yoshi Barnes in black training clothes, flexing her arms" loading="lazy" decoding="async" style="aspect-ratio: 1254 / 1254">
             <figcaption><span>YOUR COACH · SPORT MY FITNESS</span><a href="https://www.facebook.com/sportmyfitness/" target="_blank" rel="noopener noreferrer"><span class="teal-hover-label">From her business Facebook profile</span> <span aria-hidden="true">↗</span></a></figcaption>
           </figure>
         </div>
         <div class="trainer-moments">
             <figure>
-              <img class="blended-photo" src="assets/yoshi-leading-session-socialx-clarity-2026-10-07.webp" width="1536" height="1024" alt="Yoshi leading a seated group movement session at Sport My Fitness" loading="lazy">
+              <img class="blended-photo" src="assets/photos/yoshi-leading-session-socialx-clarity-1536.webp" srcset="assets/photos/yoshi-leading-session-socialx-clarity-480.webp 480w, assets/photos/yoshi-leading-session-socialx-clarity-800.webp 800w, assets/photos/yoshi-leading-session-socialx-clarity-1200.webp 1200w, assets/photos/yoshi-leading-session-socialx-clarity-1536.webp 1536w" sizes="(max-width: 700px) 100vw, 50vw" width="1536" height="1024" alt="Yoshi leading a seated group movement session at Sport My Fitness" loading="lazy" decoding="async" style="aspect-ratio: 1536 / 1024">
               <figcaption><span>TRAINING TOGETHER</span><a href="https://socialxmke.com/events/sxfit24" target="_blank" rel="noopener noreferrer"><span class="teal-hover-label">Photo: Social X · 2024 event archive</span> <span aria-hidden="true">↗</span></a></figcaption>
             </figure>
             <figure class="trainer-recent-photo">
-              <img class="blended-photo" src="assets/yoshi-youth-coaching-2026-09-02-clarity-2026-10-07.webp" width="1254" height="1254" alt="Yoshi guiding young people through movement in a school gym" loading="lazy">
+              <img class="blended-photo" src="assets/photos/yoshi-youth-coaching-2026-09-02-clarity-1254.webp" srcset="assets/photos/yoshi-youth-coaching-2026-09-02-clarity-480.webp 480w, assets/photos/yoshi-youth-coaching-2026-09-02-clarity-800.webp 800w, assets/photos/yoshi-youth-coaching-2026-09-02-clarity-1200.webp 1200w, assets/photos/yoshi-youth-coaching-2026-09-02-clarity-1254.webp 1254w" sizes="(max-width: 700px) 100vw, 50vw" width="1254" height="1254" alt="Yoshi guiding young people through movement in a school gym" loading="lazy" decoding="async" style="aspect-ratio: 1254 / 1254">
               <figcaption><span>WORKING WITH YOUNG PEOPLE</span><a href="https://www.instagram.com/p/DczDPPPDx-r/" target="_blank" rel="noopener noreferrer"><span class="teal-hover-label">From her September 2026 post</span> <span aria-hidden="true">↗</span></a></figcaption>
             </figure>
         </div>

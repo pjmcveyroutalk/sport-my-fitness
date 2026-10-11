@@ -1,0 +1,310 @@
+{
+  "testedAt": "2026-10-11T23:49:21.300Z",
+  "pass": true,
+  "rows": [
+    {
+      "test": "approved-composition",
+      "pass": true,
+      "page": "index",
+      "width": 390,
+      "wordsSame": true,
+      "linksSame": true,
+      "differences": []
+    },
+    {
+      "test": "reduced-motion",
+      "pass": true,
+      "page": "index",
+      "width": 390
+    },
+    {
+      "test": "approved-composition",
+      "pass": true,
+      "page": "training",
+      "width": 390,
+      "wordsSame": true,
+      "linksSame": true,
+      "differences": []
+    },
+    {
+      "test": "reduced-motion",
+      "pass": true,
+      "page": "training",
+      "width": 390
+    },
+    {
+      "test": "approved-composition",
+      "pass": true,
+      "page": "programs",
+      "width": 390,
+      "wordsSame": true,
+      "linksSame": true,
+      "differences": []
+    },
+    {
+      "test": "reduced-motion",
+      "pass": true,
+      "page": "programs",
+      "width": 390
+    },
+    {
+      "test": "approved-composition",
+      "pass": true,
+      "page": "yoshi",
+      "width": 390,
+      "wordsSame": true,
+      "linksSame": true,
+      "differences": []
+    },
+    {
+      "test": "reduced-motion",
+      "pass": true,
+      "page": "yoshi",
+      "width": 390
+    },
+    {
+      "test": "approved-composition",
+      "pass": true,
+      "page": "media",
+      "width": 390,
+      "wordsSame": true,
+      "linksSame": true,
+      "differences": []
+    },
+    {
+      "test": "reduced-motion",
+      "pass": true,
+      "page": "media",
+      "width": 390
+    },
+    {
+      "test": "approved-composition",
+      "pass": true,
+      "page": "contact",
+      "width": 390,
+      "wordsSame": true,
+      "linksSame": true,
+      "differences": []
+    },
+    {
+      "test": "reduced-motion",
+      "pass": true,
+      "page": "contact",
+      "width": 390
+    },
+    {
+      "test": "approved-composition",
+      "pass": true,
+      "page": "community",
+      "width": 390,
+      "wordsSame": true,
+      "linksSame": true,
+      "differences": []
+    },
+    {
+      "test": "reduced-motion",
+      "pass": true,
+      "page": "community",
+      "width": 390
+    },
+    {
+      "test": "approved-composition",
+      "pass": true,
+      "page": "index",
+      "width": 1334,
+      "wordsSame": true,
+      "linksSame": true,
+      "differences": []
+    },
+    {
+      "test": "reduced-motion",
+      "pass": true,
+      "page": "index",
+      "width": 1334
+    },
+    {
+      "test": "approved-composition",
+      "pass": true,
+      "page": "training",
+      "width": 1334,
+      "wordsSame": true,
+      "linksSame": true,
+      "differences": []
+    },
+    {
+      "test": "reduced-motion",
+      "pass": true,
+      "page": "training",
+      "width": 1334
+    },
+    {
+      "test": "approved-composition",
+      "pass": true,
+      "page": "programs",
+      "width": 1334,
+      "wordsSame": true,
+      "linksSame": true,
+      "differences": []
+    },
+    {
+      "test": "reduced-motion",
+      "pass": true,
+      "page": "programs",
+      "width": 1334
+    },
+    {
+      "test": "approved-composition",
+      "pass": true,
+      "page": "yoshi",
+      "width": 1334,
+      "wordsSame": true,
+      "linksSame": true,
+      "differences": []
+    },
+    {
+      "test": "reduced-motion",
+      "pass": true,
+      "page": "yoshi",
+      "width": 1334
+    },
+    {
+      "test": "approved-composition",
+      "pass": true,
+      "page": "media",
+      "width": 1334,
+      "wordsSame": true,
+      "linksSame": true,
+      "differences": []
+    },
+    {
+      "test": "reduced-motion",
+      "pass": true,
+      "page": "media",
+      "width": 1334
+    },
+    {
+      "test": "approved-composition",
+      "pass": true,
+      "page": "contact",
+      "width": 1334,
+      "wordsSame": true,
+      "linksSame": true,
+      "differences": []
+    },
+    {
+      "test": "reduced-motion",
+      "pass": true,
+      "page": "contact",
+      "width": 1334
+    },
+    {
+      "test": "approved-composition",
+      "pass": true,
+      "page": "community",
+      "width": 1334,
+      "wordsSame": true,
+      "linksSame": true,
+      "differences": []
+    },
+    {
+      "test": "reduced-motion",
+      "pass": true,
+      "page": "community",
+      "width": 1334
+    },
+    {
+      "test": "javascript-disabled",
+      "pass": true
+    },
+    {
+      "test": "timeline-failed",
+      "pass": true
+    },
+    {
+      "test": "timeline-slow",
+      "pass": true
+    },
+    {
+      "test": "controller-failed",
+      "pass": true
+    },
+    {
+      "test": "early-keyboard",
+      "pass": true
+    },
+    {
+      "test": "interrupt-on-scroll",
+      "pass": true
+    },
+    {
+      "test": "scroll-reveal",
+      "pass": true
+    },
+    {
+      "test": "deep-link",
+      "pass": true
+    },
+    {
+      "test": "keyboard-focus",
+      "pass": true
+    },
+    {
+      "test": "main-cta-action",
+      "pass": true
+    },
+    {
+      "test": "empty-form-validation",
+      "pass": true
+    },
+    {
+      "test": "back-navigation",
+      "pass": true
+    },
+    {
+      "test": "preference-change",
+      "pass": true
+    },
+    {
+      "test": "webkit-mobile",
+      "pass": true,
+      "page": "index",
+      "errors": []
+    },
+    {
+      "test": "webkit-mobile",
+      "pass": true,
+      "page": "training",
+      "errors": []
+    },
+    {
+      "test": "webkit-mobile",
+      "pass": true,
+      "page": "programs",
+      "errors": []
+    },
+    {
+      "test": "webkit-mobile",
+      "pass": true,
+      "page": "yoshi",
+      "errors": []
+    },
+    {
+      "test": "webkit-mobile",
+      "pass": true,
+      "page": "media",
+      "errors": []
+    },
+    {
+      "test": "webkit-mobile",
+      "pass": true,
+      "page": "contact",
+      "errors": []
+    },
+    {
+      "test": "webkit-mobile",
+      "pass": true,
+      "page": "community",
+      "errors": []
+    }
+  ]
+}

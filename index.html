@@ -29,7 +29,24 @@
   <link rel="stylesheet" href="bright-home.css?v=community-1">
   <link rel="stylesheet" href="inner-background.css">
   <link rel="stylesheet" href="teal-finish.css">
-  <link rel="stylesheet" href="home-intro.css">
+  <script>
+  // Set the first pose before paint, with a short, fail-open deadline.
+  (()=>{const r=document.documentElement;
+    if(!matchMedia('(prefers-reduced-motion: reduce)').matches &&
+       (!location.hash||location.hash==='#top') &&
+       performance.getEntriesByType('navigation')[0]?.type!=='back_forward' &&
+       !document.hidden && Element.prototype.animate){
+      r.classList.add('smf-motion-boot');
+      window.smfMotionBootTimer=setTimeout(()=>r.classList.remove('smf-motion-boot'),2200);
+      const abort=new AbortController();
+      const stop=()=>{r.classList.remove('smf-motion-boot');abort.abort();};
+      ['pointerdown','touchstart','wheel','keydown'].forEach(name=>addEventListener(name,stop,{once:true,passive:true,signal:abort.signal}));
+      setTimeout(()=>abort.abort(),2200);
+    }
+  })();
+  </script>
+  <link rel="stylesheet" href="site-motion.css?v=polish-1">
+  <script src="site-motion.js?v=polish-1" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -61,7 +78,7 @@
           </div>
         </div>
       </div>
-      <div class="yoshi-stage"><img class="yoshi-hero" src="assets/yoshi-hero-milwaukee-natural-2026-10-08-lossless.webp" width="1586" height="992" alt="Artwork of Yoshi Barnes in a turquoise running pose, with Milwaukee blended into the background" fetchpriority="high"></div>
+      <div class="yoshi-stage"><img class="yoshi-hero" src="assets/photos/yoshi-hero-milwaukee-natural-1586.webp" srcset="assets/photos/yoshi-hero-milwaukee-natural-480.webp 480w, assets/photos/yoshi-hero-milwaukee-natural-800.webp 800w, assets/photos/yoshi-hero-milwaukee-natural-1200.webp 1200w, assets/photos/yoshi-hero-milwaukee-natural-1586.webp 1586w" sizes="100vw" width="1586" height="992" alt="Artwork of Yoshi Barnes in a turquoise running pose, with Milwaukee blended into the background" fetchpriority="high" decoding="async" style="aspect-ratio: 1586 / 992"></div>
     </section>
     <div class="mission-strip"><div class="wrap mission-inner"><span aria-hidden="true"></span><p>EMPOWER THE BODY. STRENGTHEN THE MIND.</p><span aria-hidden="true"></span></div></div>
     <section class="training-section" id="training" aria-labelledby="training-heading">
@@ -83,7 +100,6 @@
   </main>
   <footer class="site-footer"><div class="wrap footer-top"><a class="footer-name" href="#top">SPORTMY<span class="teal-letter">FITNESS</span></a><nav class="footer-links" aria-label="Footer"><a href="training.html"><span class="teal-hover-label">Training</span></a><a href="yoshi.html"><span class="teal-hover-label">About</span></a><a href="media.html"><span class="teal-hover-label">Media</span></a><a href="community.html"><span class="teal-hover-label">Community</span></a><a href="contact.html"><span class="teal-hover-label">Let’s train</span></a></nav></div><div class="wrap footer-bottom"><span>© <span id="year">2026</span> Sport My Fitness · Milwaukee</span><span>To gain, maintain, or lose it all takes work.</span></div></footer>
   <script src="bright-home.js"></script>
-  <script src="home-intro.js" defer></script>
 </body>
 </html>
 

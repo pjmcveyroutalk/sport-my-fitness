@@ -1,0 +1,839 @@
+{
+  "browser": "151.0.7922.34",
+  "cases": [
+    {
+      "page": "index",
+      "width": 360,
+      "samples": 89,
+      "states": [
+        "loading",
+        "playing",
+        "complete"
+      ],
+      "motion": true,
+      "overflowDuring": false,
+      "cls": 0,
+      "resting": {
+        "state": "complete",
+        "active": 0,
+        "overflow": false,
+        "photos": true
+      },
+      "errors": [],
+      "failed": [],
+      "pass": true,
+      "fixedHeader": true,
+      "menuOpens": true,
+      "menuCloses": true
+    },
+    {
+      "page": "training",
+      "width": 360,
+      "samples": 90,
+      "states": [
+        "loading",
+        "playing",
+        "complete"
+      ],
+      "motion": true,
+      "overflowDuring": false,
+      "cls": 0,
+      "resting": {
+        "state": "complete",
+        "active": 0,
+        "overflow": false,
+        "photos": true
+      },
+      "errors": [],
+      "failed": [],
+      "pass": true,
+      "fixedHeader": true,
+      "menuOpens": true,
+      "menuCloses": true
+    },
+    {
+      "page": "programs",
+      "width": 360,
+      "samples": 90,
+      "states": [
+        "loading",
+        "playing",
+        "complete"
+      ],
+      "motion": true,
+      "overflowDuring": false,
+      "cls": 0,
+      "resting": {
+        "state": "complete",
+        "active": 0,
+        "overflow": false,
+        "photos": true
+      },
+      "errors": [],
+      "failed": [],
+      "pass": true,
+      "fixedHeader": true,
+      "menuOpens": true,
+      "menuCloses": true
+    },
+    {
+      "page": "yoshi",
+      "width": 360,
+      "samples": 91,
+      "states": [
+        "loading",
+        "playing",
+        "complete"
+      ],
+      "motion": true,
+      "overflowDuring": false,
+      "cls": 0,
+      "resting": {
+        "state": "complete",
+        "active": 0,
+        "overflow": false,
+        "photos": true
+      },
+      "errors": [],
+      "failed": [],
+      "pass": true,
+      "fixedHeader": true,
+      "menuOpens": true,
+      "menuCloses": true
+    },
+    {
+      "page": "media",
+      "width": 360,
+      "samples": 91,
+      "states": [
+        "loading",
+        "playing",
+        "complete"
+      ],
+      "motion": true,
+      "overflowDuring": false,
+      "cls": 0,
+      "resting": {
+        "state": "complete",
+        "active": 0,
+        "overflow": false,
+        "photos": true
+      },
+      "errors": [],
+      "failed": [],
+      "pass": true,
+      "fixedHeader": true,
+      "menuOpens": true,
+      "menuCloses": true
+    },
+    {
+      "page": "contact",
+      "width": 360,
+      "samples": 91,
+      "states": [
+        "loading",
+        "playing",
+        "complete"
+      ],
+      "motion": true,
+      "overflowDuring": false,
+      "cls": 0,
+      "resting": {
+        "state": "complete",
+        "active": 0,
+        "overflow": false,
+        "photos": true
+      },
+      "errors": [],
+      "failed": [],
+      "pass": true,
+      "fixedHeader": true,
+      "menuOpens": true,
+      "menuCloses": true
+    },
+    {
+      "page": "community",
+      "width": 360,
+      "samples": 91,
+      "states": [
+        "loading",
+        "playing",
+        "complete"
+      ],
+      "motion": true,
+      "overflowDuring": false,
+      "cls": 0,
+      "resting": {
+        "state": "complete",
+        "active": 0,
+        "overflow": false,
+        "photos": true
+      },
+      "errors": [],
+      "failed": [],
+      "pass": true,
+      "fixedHeader": true,
+      "menuOpens": true,
+      "menuCloses": true
+    },
+    {
+      "page": "index",
+      "width": 390,
+      "samples": 90,
+      "states": [
+        "loading",
+        "playing",
+        "complete"
+      ],
+      "motion": true,
+      "overflowDuring": false,
+      "cls": 0,
+      "resting": {
+        "state": "complete",
+        "active": 0,
+        "overflow": false,
+        "photos": true
+      },
+      "errors": [],
+      "failed": [],
+      "pass": true,
+      "fixedHeader": true,
+      "menuOpens": true,
+      "menuCloses": true
+    },
+    {
+      "page": "training",
+      "width": 390,
+      "samples": 92,
+      "states": [
+        "loading",
+        "playing",
+        "complete"
+      ],
+      "motion": true,
+      "overflowDuring": false,
+      "cls": 0,
+      "resting": {
+        "state": "complete",
+        "active": 0,
+        "overflow": false,
+        "photos": true
+      },
+      "errors": [],
+      "failed": [],
+      "pass": true,
+      "fixedHeader": true,
+      "menuOpens": true,
+      "menuCloses": true
+    },
+    {
+      "page": "programs",
+      "width": 390,
+      "samples": 91,
+      "states": [
+        "loading",
+        "playing",
+        "complete"
+      ],
+      "motion": true,
+      "overflowDuring": false,
+      "cls": 0,
+      "resting": {
+        "state": "complete",
+        "active": 0,
+        "overflow": false,
+        "photos": true
+      },
+      "errors": [],
+      "failed": [],
+      "pass": true,
+      "fixedHeader": true,
+      "menuOpens": true,
+      "menuCloses": true
+    },
+    {
+      "page": "yoshi",
+      "width": 390,
+      "samples": 91,
+      "states": [
+        "loading",
+        "playing",
+        "complete"
+      ],
+      "motion": true,
+      "overflowDuring": false,
+      "cls": 0,
+      "resting": {
+        "state": "complete",
+        "active": 0,
+        "overflow": false,
+        "photos": true
+      },
+      "errors": [],
+      "failed": [],
+      "pass": true,
+      "fixedHeader": true,
+      "menuOpens": true,
+      "menuCloses": true
+    },
+    {
+      "page": "media",
+      "width": 390,
+      "samples": 91,
+      "states": [
+        "loading",
+        "playing",
+        "complete"
+      ],
+      "motion": true,
+      "overflowDuring": false,
+      "cls": 0,
+      "resting": {
+        "state": "complete",
+        "active": 0,
+        "overflow": false,
+        "photos": true
+      },
+      "errors": [],
+      "failed": [],
+      "pass": true,
+      "fixedHeader": true,
+      "menuOpens": true,
+      "menuCloses": true
+    },
+    {
+      "page": "contact",
+      "width": 390,
+      "samples": 91,
+      "states": [
+        "loading",
+        "playing",
+        "complete"
+      ],
+      "motion": true,
+      "overflowDuring": false,
+      "cls": 0,
+      "resting": {
+        "state": "complete",
+        "active": 0,
+        "overflow": false,
+        "photos": true
+      },
+      "errors": [],
+      "failed": [],
+      "pass": true,
+      "fixedHeader": true,
+      "menuOpens": true,
+      "menuCloses": true
+    },
+    {
+      "page": "community",
+      "width": 390,
+      "samples": 91,
+      "states": [
+        "loading",
+        "playing",
+        "complete"
+      ],
+      "motion": true,
+      "overflowDuring": false,
+      "cls": 0,
+      "resting": {
+        "state": "complete",
+        "active": 0,
+        "overflow": false,
+        "photos": true
+      },
+      "errors": [],
+      "failed": [],
+      "pass": true,
+      "fixedHeader": true,
+      "menuOpens": true,
+      "menuCloses": true
+    },
+    {
+      "page": "index",
+      "width": 430,
+      "samples": 89,
+      "states": [
+        "loading",
+        "playing",
+        "complete"
+      ],
+      "motion": true,
+      "overflowDuring": false,
+      "cls": 0,
+      "resting": {
+        "state": "complete",
+        "active": 0,
+        "overflow": false,
+        "photos": true
+      },
+      "errors": [],
+      "failed": [],
+      "pass": true,
+      "fixedHeader": true,
+      "menuOpens": true,
+      "menuCloses": true
+    },
+    {
+      "page": "training",
+      "width": 430,
+      "samples": 91,
+      "states": [
+        "loading",
+        "playing",
+        "complete"
+      ],
+      "motion": true,
+      "overflowDuring": false,
+      "cls": 0,
+      "resting": {
+        "state": "complete",
+        "active": 0,
+        "overflow": false,
+        "photos": true
+      },
+      "errors": [],
+      "failed": [],
+      "pass": true,
+      "fixedHeader": true,
+      "menuOpens": true,
+      "menuCloses": true
+    },
+    {
+      "page": "programs",
+      "width": 430,
+      "samples": 91,
+      "states": [
+        "loading",
+        "playing",
+        "complete"
+      ],
+      "motion": true,
+      "overflowDuring": false,
+      "cls": 0,
+      "resting": {
+        "state": "complete",
+        "active": 0,
+        "overflow": false,
+        "photos": true
+      },
+      "errors": [],
+      "failed": [],
+      "pass": true,
+      "fixedHeader": true,
+      "menuOpens": true,
+      "menuCloses": true
+    },
+    {
+      "page": "yoshi",
+      "width": 430,
+      "samples": 91,
+      "states": [
+        "loading",
+        "playing",
+        "complete"
+      ],
+      "motion": true,
+      "overflowDuring": false,
+      "cls": 0,
+      "resting": {
+        "state": "complete",
+        "active": 0,
+        "overflow": false,
+        "photos": true
+      },
+      "errors": [],
+      "failed": [],
+      "pass": true,
+      "fixedHeader": true,
+      "menuOpens": true,
+      "menuCloses": true
+    },
+    {
+      "page": "media",
+      "width": 430,
+      "samples": 92,
+      "states": [
+        "loading",
+        "playing",
+        "complete"
+      ],
+      "motion": true,
+      "overflowDuring": false,
+      "cls": 0,
+      "resting": {
+        "state": "complete",
+        "active": 0,
+        "overflow": false,
+        "photos": true
+      },
+      "errors": [],
+      "failed": [],
+      "pass": true,
+      "fixedHeader": true,
+      "menuOpens": true,
+      "menuCloses": true
+    },
+    {
+      "page": "contact",
+      "width": 430,
+      "samples": 91,
+      "states": [
+        "loading",
+        "playing",
+        "complete"
+      ],
+      "motion": true,
+      "overflowDuring": false,
+      "cls": 0,
+      "resting": {
+        "state": "complete",
+        "active": 0,
+        "overflow": false,
+        "photos": true
+      },
+      "errors": [],
+      "failed": [],
+      "pass": true,
+      "fixedHeader": true,
+      "menuOpens": true,
+      "menuCloses": true
+    },
+    {
+      "page": "community",
+      "width": 430,
+      "samples": 91,
+      "states": [
+        "loading",
+        "playing",
+        "complete"
+      ],
+      "motion": true,
+      "overflowDuring": false,
+      "cls": 0,
+      "resting": {
+        "state": "complete",
+        "active": 0,
+        "overflow": false,
+        "photos": true
+      },
+      "errors": [],
+      "failed": [],
+      "pass": true,
+      "fixedHeader": true,
+      "menuOpens": true,
+      "menuCloses": true
+    },
+    {
+      "page": "index",
+      "width": 901,
+      "samples": 91,
+      "states": [
+        "loading",
+        "playing",
+        "complete"
+      ],
+      "motion": true,
+      "overflowDuring": false,
+      "cls": 0.004119071660487675,
+      "resting": {
+        "state": "complete",
+        "active": 0,
+        "overflow": false,
+        "photos": true
+      },
+      "errors": [],
+      "failed": [],
+      "pass": true
+    },
+    {
+      "page": "training",
+      "width": 901,
+      "samples": 92,
+      "states": [
+        "loading",
+        "playing",
+        "complete"
+      ],
+      "motion": true,
+      "overflowDuring": false,
+      "cls": 0.0034854103843388546,
+      "resting": {
+        "state": "complete",
+        "active": 0,
+        "overflow": false,
+        "photos": true
+      },
+      "errors": [],
+      "failed": [],
+      "pass": true
+    },
+    {
+      "page": "programs",
+      "width": 901,
+      "samples": 91,
+      "states": [
+        "loading",
+        "playing",
+        "complete"
+      ],
+      "motion": true,
+      "overflowDuring": false,
+      "cls": 0.003888897892361141,
+      "resting": {
+        "state": "complete",
+        "active": 0,
+        "overflow": false,
+        "photos": true
+      },
+      "errors": [],
+      "failed": [],
+      "pass": true
+    },
+    {
+      "page": "yoshi",
+      "width": 901,
+      "samples": 91,
+      "states": [
+        "loading",
+        "playing",
+        "complete"
+      ],
+      "motion": true,
+      "overflowDuring": false,
+      "cls": 0.0034854103843388546,
+      "resting": {
+        "state": "complete",
+        "active": 0,
+        "overflow": false,
+        "photos": true
+      },
+      "errors": [],
+      "failed": [],
+      "pass": true
+    },
+    {
+      "page": "media",
+      "width": 901,
+      "samples": 91,
+      "states": [
+        "loading",
+        "playing",
+        "complete"
+      ],
+      "motion": true,
+      "overflowDuring": false,
+      "cls": 0.0037839255325504647,
+      "resting": {
+        "state": "complete",
+        "active": 0,
+        "overflow": false,
+        "photos": true
+      },
+      "errors": [],
+      "failed": [],
+      "pass": true
+    },
+    {
+      "page": "contact",
+      "width": 901,
+      "samples": 91,
+      "states": [
+        "loading",
+        "playing",
+        "complete"
+      ],
+      "motion": true,
+      "overflowDuring": false,
+      "cls": 0.0035528924781648044,
+      "resting": {
+        "state": "complete",
+        "active": 0,
+        "overflow": false,
+        "photos": true
+      },
+      "errors": [],
+      "failed": [],
+      "pass": true
+    },
+    {
+      "page": "community",
+      "width": 901,
+      "samples": 91,
+      "states": [
+        "loading",
+        "playing",
+        "complete"
+      ],
+      "motion": true,
+      "overflowDuring": false,
+      "cls": 0.0034854103843388546,
+      "resting": {
+        "state": "complete",
+        "active": 0,
+        "overflow": false,
+        "photos": true
+      },
+      "errors": [],
+      "failed": [],
+      "pass": true
+    },
+    {
+      "page": "index",
+      "width": 1334,
+      "samples": 92,
+      "states": [
+        "loading",
+        "playing",
+        "complete"
+      ],
+      "motion": true,
+      "overflowDuring": false,
+      "cls": 0.002677940530609258,
+      "resting": {
+        "state": "complete",
+        "active": 0,
+        "overflow": false,
+        "photos": true
+      },
+      "errors": [],
+      "failed": [],
+      "pass": true
+    },
+    {
+      "page": "training",
+      "width": 1334,
+      "samples": 91,
+      "states": [
+        "loading",
+        "playing",
+        "complete"
+      ],
+      "motion": true,
+      "overflowDuring": false,
+      "cls": 0.002677940530609258,
+      "resting": {
+        "state": "complete",
+        "active": 0,
+        "overflow": false,
+        "photos": true
+      },
+      "errors": [],
+      "failed": [],
+      "pass": true
+    },
+    {
+      "page": "programs",
+      "width": 1334,
+      "samples": 92,
+      "states": [
+        "loading",
+        "playing",
+        "complete"
+      ],
+      "motion": true,
+      "overflowDuring": false,
+      "cls": 0.002677940530609258,
+      "resting": {
+        "state": "complete",
+        "active": 0,
+        "overflow": false,
+        "photos": true
+      },
+      "errors": [],
+      "failed": [],
+      "pass": true
+    },
+    {
+      "page": "yoshi",
+      "width": 1334,
+      "samples": 92,
+      "states": [
+        "loading",
+        "playing",
+        "complete"
+      ],
+      "motion": true,
+      "overflowDuring": false,
+      "cls": 0.002677940530609258,
+      "resting": {
+        "state": "complete",
+        "active": 0,
+        "overflow": false,
+        "photos": true
+      },
+      "errors": [],
+      "failed": [],
+      "pass": true
+    },
+    {
+      "page": "media",
+      "width": 1334,
+      "samples": 91,
+      "states": [
+        "loading",
+        "playing",
+        "complete"
+      ],
+      "motion": true,
+      "overflowDuring": false,
+      "cls": 0.002677940530609258,
+      "resting": {
+        "state": "complete",
+        "active": 0,
+        "overflow": false,
+        "photos": true
+      },
+      "errors": [],
+      "failed": [],
+      "pass": true
+    },
+    {
+      "page": "contact",
+      "width": 1334,
+      "samples": 91,
+      "states": [
+        "loading",
+        "playing",
+        "complete"
+      ],
+      "motion": true,
+      "overflowDuring": false,
+      "cls": 0.00382458883002277,
+      "resting": {
+        "state": "complete",
+        "active": 0,
+        "overflow": false,
+        "photos": true
+      },
+      "errors": [],
+      "failed": [],
+      "pass": true
+    },
+    {
+      "page": "community",
+      "width": 1334,
+      "samples": 92,
+      "states": [
+        "loading",
+        "playing",
+        "complete"
+      ],
+      "motion": true,
+      "overflowDuring": false,
+      "cls": 0.002677940530609258,
+      "resting": {
+        "state": "complete",
+        "active": 0,
+        "overflow": false,
+        "photos": true
+      },
+      "errors": [],
+      "failed": [],
+      "pass": true
+    }
+  ],
+  "pass": true
+}

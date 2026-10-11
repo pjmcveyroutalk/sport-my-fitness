@@ -30,8 +30,24 @@
   <link rel="stylesheet" href="contact.css">
   <link rel="stylesheet" href="inner-background.css">
   <link rel="stylesheet" href="teal-finish.css">
-  <link rel="stylesheet" href="page-intro.css">
-  <script src="page-intro.js" defer></script>
+  <script>
+  // Set the first pose before paint, with a short, fail-open deadline.
+  (()=>{const r=document.documentElement;
+    if(!matchMedia('(prefers-reduced-motion: reduce)').matches &&
+       (!location.hash||location.hash==='#top') &&
+       performance.getEntriesByType('navigation')[0]?.type!=='back_forward' &&
+       !document.hidden && Element.prototype.animate){
+      r.classList.add('smf-motion-boot');
+      window.smfMotionBootTimer=setTimeout(()=>r.classList.remove('smf-motion-boot'),2200);
+      const abort=new AbortController();
+      const stop=()=>{r.classList.remove('smf-motion-boot');abort.abort();};
+      ['pointerdown','touchstart','wheel','keydown'].forEach(name=>addEventListener(name,stop,{once:true,passive:true,signal:abort.signal}));
+      setTimeout(()=>abort.abort(),2200);
+    }
+  })();
+  </script>
+  <link rel="stylesheet" href="site-motion.css?v=polish-1">
+  <script src="site-motion.js?v=polish-1" defer></script>
 </head>
 <body class="contact-page">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -51,7 +67,7 @@
   </header>
   <main id="main" class="smf-inner-page">
     <section class="contact-hero" id="top" aria-labelledby="hero-heading">
-      <div class="contact-hero-art unique-hero-art"><div class="unique-hero-photo-wrap"><img class="unique-hero-photo" src="assets/smf-storefront-maps-clarity-2026-10-09.webp" width="1448" height="1086" alt="The Sport My Fitness storefront with teal window logos and its entrance on West Vliet Street" fetchpriority="high"></div></div>
+      <div class="contact-hero-art unique-hero-art"><div class="unique-hero-photo-wrap"><img class="unique-hero-photo" src="assets/photos/smf-storefront-maps-clarity-1448.webp" srcset="assets/photos/smf-storefront-maps-clarity-480.webp 480w, assets/photos/smf-storefront-maps-clarity-800.webp 800w, assets/photos/smf-storefront-maps-clarity-1200.webp 1200w, assets/photos/smf-storefront-maps-clarity-1448.webp 1448w" sizes="(max-width: 900px) 100vw, 56vw" width="1448" height="1086" alt="The Sport My Fitness storefront with teal window logos and its entrance on West Vliet Street" fetchpriority="high" decoding="async" style="aspect-ratio: 1448 / 1086"></div></div>
       <div class="wrap contact-hero-inner">
         <div class="contact-hero-copy">
           <p class="eyebrow hero-eyebrow">MILWAUKEE · SPORT MY FITNESS</p>

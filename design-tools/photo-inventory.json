@@ -1,0 +1,119 @@
+[
+  {
+    "page": "index",
+    "path": "assets/yoshi-hero-milwaukee-natural-2026-10-08-lossless.webp",
+    "width": 1586,
+    "height": 992,
+    "mode": "RGBA",
+    "bytes": 1299516,
+    "alt": "Artwork of Yoshi Barnes in a turquoise running pose, with Milwaukee blended into the background"
+  },
+  {
+    "page": "training",
+    "path": "assets/training-gym-background-lossless.webp",
+    "width": 1586,
+    "height": 992,
+    "mode": "RGBA",
+    "bytes": 1066990,
+    "alt": ""
+  },
+  {
+    "page": "training",
+    "path": "assets/yoshi-fitness-facebook-clarity-2026-10-07.webp",
+    "width": 1254,
+    "height": 1254,
+    "mode": "RGB",
+    "bytes": 140134,
+    "alt": "Yoshi Barnes in black training clothes, flexing her arms"
+  },
+  {
+    "page": "training",
+    "path": "assets/yoshi-leading-session-socialx-clarity-2026-10-07.webp",
+    "width": 1536,
+    "height": 1024,
+    "mode": "RGB",
+    "bytes": 382962,
+    "alt": "Yoshi leading a seated group movement session at Sport My Fitness"
+  },
+  {
+    "page": "training",
+    "path": "assets/yoshi-youth-coaching-2026-09-02-clarity-2026-10-07.webp",
+    "width": 1254,
+    "height": 1254,
+    "mode": "RGB",
+    "bytes": 337624,
+    "alt": "Yoshi guiding young people through movement in a school gym"
+  },
+  {
+    "page": "programs",
+    "path": "assets/yoshi-coaching.jpg",
+    "width": 1000,
+    "height": 760,
+    "mode": "RGB",
+    "bytes": 159234,
+    "alt": "Yoshi coaching a seated participant using a cable machine"
+  },
+  {
+    "page": "yoshi",
+    "path": "assets/yoshi-smiling-facebook-clarity-2026-10-07.webp",
+    "width": 1254,
+    "height": 1254,
+    "mode": "RGB",
+    "bytes": 137942,
+    "alt": "Yoshi Barnes smiling, in a black-and-white portrait"
+  },
+  {
+    "page": "yoshi",
+    "path": "assets/yoshi-community-socialx-clarity-2026-10-07.webp",
+    "width": 1536,
+    "height": 1024,
+    "mode": "RGB",
+    "bytes": 248724,
+    "alt": "Yoshi Barnes smiling with two members of the Sport My Fitness community"
+  },
+  {
+    "page": "media",
+    "path": "assets/yoshi-group-squats-polished-lossless.webp",
+    "width": 1536,
+    "height": 1024,
+    "mode": "RGB",
+    "bytes": 1555858,
+    "alt": "Yoshi leading a group squat session in the Sport My Fitness gym"
+  },
+  {
+    "page": "media",
+    "path": "assets/community-floor-work-polished-lossless.webp",
+    "width": 1536,
+    "height": 1024,
+    "mode": "RGB",
+    "bytes": 1723638,
+    "alt": "Participants doing floor exercises together in the Sport My Fitness gym"
+  },
+  {
+    "page": "media",
+    "path": "assets/community-strength-polished-lossless.webp",
+    "width": 1536,
+    "height": 1024,
+    "mode": "RGB",
+    "bytes": 1548362,
+    "alt": "Two participants lifting weights in the Sport My Fitness gym"
+  },
+  {
+    "page": "contact",
+    "path": "assets/smf-storefront-maps-clarity-2026-10-09.webp",
+    "width": 1448,
+    "height": 1086,
+    "mode": "RGB",
+    "bytes": 446566,
+    "alt": "The Sport My Fitness storefront with teal window logos and its entrance on West Vliet Street"
+  },
+  {
+    "page": "community",
+    "path": "assets/community-body-camp.jpg",
+    "width": 1246,
+    "height": 1536,
+    "mode": "RGB",
+    "bytes": 312435,
+    "alt": "Five smiling Body Camp participants together in the Sport My Fitness gym, with a dog in front"
+  }
+]

@@ -206,3 +206,6 @@ h3{font:italic 900 clamp(25px,1.92vw,35px)/1.05 var(--display);letter-spacing:.0
 
 
 
+
+/* Make room for Community within the established desktop navigation. */
+@media(min-width:901px){.primary-nav:has(a[href="community.html"]){gap:clamp(14px,2.2vw,38px)}.primary-nav:has(a[href="community.html"]) .nav-button:before{left:calc(-1 * clamp(7px,1.1vw,19px))}}

@@ -1,0 +1,1923 @@
+{
+  "checkedAt": "2026-10-16T22:21:25.223508+00:00",
+  "repository": "pjmcveyroutalk/sport-my-fitness",
+  "production": {
+    "branch": "main",
+    "commit": "c6b209895aa01b7d419fa445d4c31d39ef90b920",
+    "url": "https://sport-my-fitness.vercel.app/",
+    "deployment": "dpl_8XuYEN2TEATtxgWPoddf7qq53qp7",
+    "htmlMatches": [
+      {
+        "page": "index.html",
+        "status": 200,
+        "bytes": 7128,
+        "matches_main": true,
+        "sha256": "afca5596b902c632d873a5319e506b5cbd959608cbd8cda7580d06561bbad7af",
+        "content_type": "text/html; charset=utf-8"
+      },
+      {
+        "page": "training.html",
+        "status": 200,
+        "bytes": 10383,
+        "matches_main": true,
+        "sha256": "a5bcac08339b2f30bbdcebb88dd0906a19f385a1bb526f364e66d01e34ac929a",
+        "content_type": "text/html; charset=utf-8"
+      },
+      {
+        "page": "programs.html",
+        "status": 200,
+        "bytes": 8786,
+        "matches_main": true,
+        "sha256": "9912c187f380960c855f89acbcb87645988333b3d2ba50fed421588260bf2c9b",
+        "content_type": "text/html; charset=utf-8"
+      },
+      {
+        "page": "yoshi.html",
+        "status": 200,
+        "bytes": 10740,
+        "matches_main": true,
+        "sha256": "8d7cb842b269ea0407b39bef67857dc564d273fe7bf3bb69317b9e5770e66f4f",
+        "content_type": "text/html; charset=utf-8"
+      },
+      {
+        "page": "media.html",
+        "status": 200,
+        "bytes": 10286,
+        "matches_main": true,
+        "sha256": "6f39cbff4da7cf8c01b96114f8cc3e2a70334d1772349326c3f3c3f99e586bac",
+        "content_type": "text/html; charset=utf-8"
+      },
+      {
+        "page": "contact.html",
+        "status": 200,
+        "bytes": 10207,
+        "matches_main": true,
+        "sha256": "8ff983d83580f90d8ccb9f62aef1fc2b43170870e59080edd154023c2a76e873",
+        "content_type": "text/html; charset=utf-8"
+      },
+      {
+        "page": "community.html",
+        "status": 200,
+        "bytes": 8191,
+        "matches_main": true,
+        "sha256": "66943eddf51f0289ae650f1895ade9539ceafcd78f0445801252418cafc02b0d",
+        "content_type": "text/html; charset=utf-8"
+      }
+    ]
+  },
+  "technicalBaseline": {
+    "branch": "review/motion-photo-polish-20261011",
+    "commit": "03a1796faeadd8aa49ae221d2e5e81cc2196c638",
+    "tree": "514a5c5e410e7a8f43b20b94e15a77874273f376",
+    "aheadOfProduction": 1,
+    "changedPaths": 71,
+    "deletedPaths": 0
+  },
+  "continuationBranch": "review/cinematic-recovery-20261016",
+  "verdict": {
+    "recoveryAndInstructionReconciliation": "complete",
+    "testedCandidateFunctionality": "pass within measured checks",
+    "cinematicSpecification": "fail - redesign unfinished",
+    "productionReleaseReadiness": "not established"
+  },
+  "sourceAudit": {
+    "date": "2026-10-16T22:09:21.133754+00:00",
+    "files": 173,
+    "blob_mismatches": [],
+    "syntax": [
+      {
+        "file": "api/pilot-verify-production.js",
+        "exit": 0,
+        "stderr": ""
+      },
+      {
+        "file": "bright-home.js",
+        "exit": 0,
+        "stderr": ""
+      },
+      {
+        "file": "contact.js",
+        "exit": 0,
+        "stderr": ""
+      },
+      {
+        "file": "home-intro.js",
+        "exit": 0,
+        "stderr": ""
+      },
+      {
+        "file": "page-intro.js",
+        "exit": 0,
+        "stderr": ""
+      },
+      {
+        "file": "pwa-register.js",
+        "exit": 0,
+        "stderr": ""
+      },
+      {
+        "file": "script.js",
+        "exit": 0,
+        "stderr": ""
+      },
+      {
+        "file": "service-worker.js",
+        "exit": 0,
+        "stderr": ""
+      },
+      {
+        "file": "site-motion.js",
+        "exit": 0,
+        "stderr": ""
+      },
+      {
+        "file": "site-shell.js",
+        "exit": 0,
+        "stderr": ""
+      },
+      {
+        "file": "test/pilot-verify-production.test.js",
+        "exit": 0,
+        "stderr": ""
+      }
+    ],
+    "json": [
+      {
+        "file": "assets/smf-home-blender-timeline.json",
+        "pass": true
+      },
+      {
+        "file": "assets/smf-motion-curves.json",
+        "pass": true
+      },
+      {
+        "file": "assets/smf-page-blender-timeline.json",
+        "pass": true
+      },
+      {
+        "file": "brand-tokens.json",
+        "pass": true
+      },
+      {
+        "file": "design-tools/photo-enhancement-report.json",
+        "pass": true
+      },
+      {
+        "file": "design-tools/photo-inventory.json",
+        "pass": true
+      },
+      {
+        "file": "vercel.json",
+        "pass": true
+      },
+      {
+        "file": "verification/motion-polish-all-pages.json",
+        "pass": true
+      },
+      {
+        "file": "verification/motion-polish-safeguards.json",
+        "pass": true
+      }
+    ],
+    "merge_markers": [],
+    "runtime_js": [],
+    "diff": [
+      "A\tassets/photos/community-body-camp-1200.webp",
+      "A\tassets/photos/community-body-camp-1246.webp",
+      "A\tassets/photos/community-body-camp-480.webp",
+      "A\tassets/photos/community-body-camp-800.webp",
+      "A\tassets/photos/community-floor-work-polished-1200.webp",
+      "A\tassets/photos/community-floor-work-polished-1536.webp",
+      "A\tassets/photos/community-floor-work-polished-480.webp",
+      "A\tassets/photos/community-floor-work-polished-800.webp",
+      "A\tassets/photos/community-strength-polished-1200.webp",
+      "A\tassets/photos/community-strength-polished-1536.webp",
+      "A\tassets/photos/community-strength-polished-480.webp",
+      "A\tassets/photos/community-strength-polished-800.webp",
+      "A\tassets/photos/smf-storefront-maps-clarity-1200.webp",
+      "A\tassets/photos/smf-storefront-maps-clarity-1448.webp",
+      "A\tassets/photos/smf-storefront-maps-clarity-480.webp",
+      "A\tassets/photos/smf-storefront-maps-clarity-800.webp",
+      "A\tassets/photos/training-gym-background-1200.webp",
+      "A\tassets/photos/training-gym-background-1586.webp",
+      "A\tassets/photos/training-gym-background-480.webp",
+      "A\tassets/photos/training-gym-background-800.webp",
+      "A\tassets/photos/yoshi-coaching-1000.webp",
+      "A\tassets/photos/yoshi-coaching-480.webp",
+      "A\tassets/photos/yoshi-coaching-800.webp",
+      "A\tassets/photos/yoshi-community-socialx-clarity-1200.webp",
+      "A\tassets/photos/yoshi-community-socialx-clarity-1536.webp",
+      "A\tassets/photos/yoshi-community-socialx-clarity-480.webp",
+      "A\tassets/photos/yoshi-community-socialx-clarity-800.webp",
+      "A\tassets/photos/yoshi-fitness-facebook-clarity-1200.webp",
+      "A\tassets/photos/yoshi-fitness-facebook-clarity-1254.webp",
+      "A\tassets/photos/yoshi-fitness-facebook-clarity-480.webp",
+      "A\tassets/photos/yoshi-fitness-facebook-clarity-800.webp",
+      "A\tassets/photos/yoshi-group-squats-polished-1200.webp",
+      "A\tassets/photos/yoshi-group-squats-polished-1536.webp",
+      "A\tassets/photos/yoshi-group-squats-polished-480.webp",
+      "A\tassets/photos/yoshi-group-squats-polished-800.webp",
+      "A\tassets/photos/yoshi-hero-milwaukee-natural-1200.webp",
+      "A\tassets/photos/yoshi-hero-milwaukee-natural-1586.webp",
+      "A\tassets/photos/yoshi-hero-milwaukee-natural-480.webp",
+      "A\tassets/photos/yoshi-hero-milwaukee-natural-800.webp",
+      "A\tassets/photos/yoshi-leading-session-socialx-clarity-1200.webp",
+      "A\tassets/photos/yoshi-leading-session-socialx-clarity-1536.webp",
+      "A\tassets/photos/yoshi-leading-session-socialx-clarity-480.webp",
+      "A\tassets/photos/yoshi-leading-session-socialx-clarity-800.webp",
+      "A\tassets/photos/yoshi-smiling-facebook-clarity-1200.webp",
+      "A\tassets/photos/yoshi-smiling-facebook-clarity-1254.webp",
+      "A\tassets/photos/yoshi-smiling-facebook-clarity-480.webp",
+      "A\tassets/photos/yoshi-smiling-facebook-clarity-800.webp",
+      "A\tassets/photos/yoshi-youth-coaching-2026-09-02-clarity-1200.webp",
+      "A\tassets/photos/yoshi-youth-coaching-2026-09-02-clarity-1254.webp",
+      "A\tassets/photos/yoshi-youth-coaching-2026-09-02-clarity-480.webp",
+      "A\tassets/photos/yoshi-youth-coaching-2026-09-02-clarity-800.webp",
+      "A\tassets/smf-motion-curves.json",
+      "A\tassets/smf-photo-alpha-mask.webp",
+      "M\tcommunity.html",
+      "M\tcontact.html",
+      "A\tdesign-tools/README.md",
+      "A\tdesign-tools/author-motion.py",
+      "A\tdesign-tools/enhance-photos.py",
+      "A\tdesign-tools/photo-enhancement-report.json",
+      "A\tdesign-tools/photo-inventory.json",
+      "A\tdesign-tools/sport-my-fitness-motion.blend",
+      "M\tindex.html",
+      "M\tinner-background.css",
+      "M\tmedia.html",
+      "M\tprograms.html",
+      "A\tsite-motion.css",
+      "A\tsite-motion.js",
+      "M\ttraining.html",
+      "A\tverification/motion-polish-all-pages.json",
+      "A\tverification/motion-polish-safeguards.json",
+      "M\tyoshi.html"
+    ],
+    "candidate_sha": "03a1796faeadd8aa49ae221d2e5e81cc2196c638",
+    "candidate_tree": "514a5c5e410e7a8f43b20b94e15a77874273f376",
+    "main_sha": "c6b209895aa01b7d419fa445d4c31d39ef90b920",
+    "worktree_status": "",
+    "agents": []
+  },
+  "browserAudit": {
+    "harnessRevision": 2,
+    "harnessCorrection": "Use #hero-heading across the seven distinct hero section classes; prior generic .hero selector failures were a test defect.",
+    "date": "2026-10-16T22:15:39.842Z",
+    "target": "03a1796faeadd8aa49ae221d2e5e81cc2196c638",
+    "baseline": "c6b209895aa01b7d419fa445d4c31d39ef90b920",
+    "responsive": [
+      {
+        "name": "index@360",
+        "status": "pass",
+        "maxOverflow": 0,
+        "headingMoved": true,
+        "photoMoved": true,
+        "initial": {
+          "time": 0.09999999997671694,
+          "heading": "0px 54px",
+          "photo": "46.8px",
+          "overflow": 0
+        },
+        "last": {
+          "time": 2036.8000000000466,
+          "heading": "none",
+          "photo": "none",
+          "overflow": 0
+        },
+        "headerStable": true,
+        "controllers": [
+          "site-motion.js?v=polish-1"
+        ],
+        "errors": [],
+        "badAssets": []
+      },
+      {
+        "name": "training@360",
+        "status": "pass",
+        "maxOverflow": 0,
+        "headingMoved": true,
+        "photoMoved": true,
+        "initial": {
+          "time": 0,
+          "heading": "none",
+          "photo": "none",
+          "overflow": 0
+        },
+        "last": {
+          "time": 2038.6999999999534,
+          "heading": "none",
+          "photo": "none",
+          "overflow": 0
+        },
+        "headerStable": true,
+        "controllers": [
+          "site-motion.js?v=polish-1"
+        ],
+        "errors": [],
+        "badAssets": []
+      },
+      {
+        "name": "programs@360",
+        "status": "pass",
+        "maxOverflow": 0,
+        "headingMoved": true,
+        "photoMoved": true,
+        "initial": {
+          "time": 0,
+          "heading": "none",
+          "photo": "none",
+          "overflow": 0
+        },
+        "last": {
+          "time": 2042.1999999999534,
+          "heading": "none",
+          "photo": "none",
+          "overflow": 0
+        },
+        "headerStable": true,
+        "controllers": [
+          "site-motion.js?v=polish-1"
+        ],
+        "errors": [],
+        "badAssets": []
+      },
+      {
+        "name": "yoshi@360",
+        "status": "pass",
+        "maxOverflow": 0,
+        "headingMoved": true,
+        "photoMoved": true,
+        "initial": {
+          "time": 0.09999999997671694,
+          "heading": "none",
+          "photo": "none",
+          "overflow": 0
+        },
+        "last": {
+          "time": 2038.8999999999069,
+          "heading": "none",
+          "photo": "none",
+          "overflow": 0
+        },
+        "headerStable": true,
+        "controllers": [
+          "site-motion.js?v=polish-1"
+        ],
+        "errors": [],
+        "badAssets": []
+      },
+      {
+        "name": "media@360",
+        "status": "pass",
+        "maxOverflow": 0,
+        "headingMoved": true,
+        "photoMoved": true,
+        "initial": {
+          "time": 0,
+          "heading": "none",
+          "photo": "none",
+          "overflow": 0
+        },
+        "last": {
+          "time": 2048.29999999993,
+          "heading": "none",
+          "photo": "none",
+          "overflow": 0
+        },
+        "headerStable": true,
+        "controllers": [
+          "site-motion.js?v=polish-1"
+        ],
+        "errors": [],
+        "badAssets": []
+      },
+      {
+        "name": "contact@360",
+        "status": "pass",
+        "maxOverflow": 0,
+        "headingMoved": true,
+        "photoMoved": true,
+        "initial": {
+          "time": 0.09999999997671694,
+          "heading": "none",
+          "photo": "none",
+          "overflow": 0
+        },
+        "last": {
+          "time": 2039.7999999999302,
+          "heading": "none",
+          "photo": "none",
+          "overflow": 0
+        },
+        "headerStable": true,
+        "controllers": [
+          "site-motion.js?v=polish-1"
+        ],
+        "errors": [],
+        "badAssets": []
+      },
+      {
+        "name": "community@360",
+        "status": "pass",
+        "maxOverflow": 0,
+        "headingMoved": true,
+        "photoMoved": true,
+        "initial": {
+          "time": 0,
+          "heading": "none",
+          "photo": "none",
+          "overflow": 0
+        },
+        "last": {
+          "time": 2037.6999999999534,
+          "heading": "none",
+          "photo": "none",
+          "overflow": 0
+        },
+        "headerStable": true,
+        "controllers": [
+          "site-motion.js?v=polish-1"
+        ],
+        "errors": [],
+        "badAssets": []
+      },
+      {
+        "name": "index@390",
+        "status": "pass",
+        "maxOverflow": 0,
+        "headingMoved": true,
+        "photoMoved": true,
+        "initial": {
+          "time": 0,
+          "heading": "none",
+          "photo": "none",
+          "overflow": 0
+        },
+        "last": {
+          "time": 2042.0999999999767,
+          "heading": "none",
+          "photo": "none",
+          "overflow": 0
+        },
+        "headerStable": true,
+        "controllers": [
+          "site-motion.js?v=polish-1"
+        ],
+        "errors": [],
+        "badAssets": []
+      },
+      {
+        "name": "training@390",
+        "status": "pass",
+        "maxOverflow": 0,
+        "headingMoved": true,
+        "photoMoved": true,
+        "initial": {
+          "time": 0,
+          "heading": "none",
+          "photo": "none",
+          "overflow": 0
+        },
+        "last": {
+          "time": 2035.4000000000233,
+          "heading": "none",
+          "photo": "none",
+          "overflow": 0
+        },
+        "headerStable": true,
+        "controllers": [
+          "site-motion.js?v=polish-1"
+        ],
+        "errors": [],
+        "badAssets": []
+      },
+      {
+        "name": "programs@390",
+        "status": "pass",
+        "maxOverflow": 0,
+        "headingMoved": true,
+        "photoMoved": true,
+        "initial": {
+          "time": 0,
+          "heading": "none",
+          "photo": "none",
+          "overflow": 0
+        },
+        "last": {
+          "time": 2049.70000000007,
+          "heading": "none",
+          "photo": "none",
+          "overflow": 0
+        },
+        "headerStable": true,
+        "controllers": [
+          "site-motion.js?v=polish-1"
+        ],
+        "errors": [],
+        "badAssets": []
+      },
+      {
+        "name": "yoshi@390",
+        "status": "pass",
+        "maxOverflow": 0,
+        "headingMoved": true,
+        "photoMoved": true,
+        "initial": {
+          "time": 0,
+          "heading": "none",
+          "photo": "none",
+          "overflow": 0
+        },
+        "last": {
+          "time": 2038.6999999999534,
+          "heading": "none",
+          "photo": "none",
+          "overflow": 0
+        },
+        "headerStable": true,
+        "controllers": [
+          "site-motion.js?v=polish-1"
+        ],
+        "errors": [],
+        "badAssets": []
+      },
+      {
+        "name": "media@390",
+        "status": "pass",
+        "maxOverflow": 0,
+        "headingMoved": true,
+        "photoMoved": true,
+        "initial": {
+          "time": 0.09999999997671694,
+          "heading": "none",
+          "photo": "none",
+          "overflow": 0
+        },
+        "last": {
+          "time": 2047.9000000000233,
+          "heading": "none",
+          "photo": "none",
+          "overflow": 0
+        },
+        "headerStable": true,
+        "controllers": [
+          "site-motion.js?v=polish-1"
+        ],
+        "errors": [],
+        "badAssets": []
+      },
+      {
+        "name": "contact@390",
+        "status": "pass",
+        "maxOverflow": 0,
+        "headingMoved": true,
+        "photoMoved": true,
+        "initial": {
+          "time": 0,
+          "heading": "none",
+          "photo": "none",
+          "overflow": 0
+        },
+        "last": {
+          "time": 2041.5999999999767,
+          "heading": "none",
+          "photo": "none",
+          "overflow": 0
+        },
+        "headerStable": true,
+        "controllers": [
+          "site-motion.js?v=polish-1"
+        ],
+        "errors": [],
+        "badAssets": []
+      },
+      {
+        "name": "community@390",
+        "status": "pass",
+        "maxOverflow": 0,
+        "headingMoved": true,
+        "photoMoved": true,
+        "initial": {
+          "time": 0,
+          "heading": "none",
+          "photo": "none",
+          "overflow": 0
+        },
+        "last": {
+          "time": 2036.9000000000233,
+          "heading": "none",
+          "photo": "none",
+          "overflow": 0
+        },
+        "headerStable": true,
+        "controllers": [
+          "site-motion.js?v=polish-1"
+        ],
+        "errors": [],
+        "badAssets": []
+      },
+      {
+        "name": "index@430",
+        "status": "pass",
+        "maxOverflow": 0,
+        "headingMoved": true,
+        "photoMoved": true,
+        "initial": {
+          "time": 0,
+          "heading": "none",
+          "photo": "none",
+          "overflow": 0
+        },
+        "last": {
+          "time": 2043.4000000000233,
+          "heading": "none",
+          "photo": "none",
+          "overflow": 0
+        },
+        "headerStable": true,
+        "controllers": [
+          "site-motion.js?v=polish-1"
+        ],
+        "errors": [],
+        "badAssets": []
+      },
+      {
+        "name": "training@430",
+        "status": "pass",
+        "maxOverflow": 0,
+        "headingMoved": true,
+        "photoMoved": true,
+        "initial": {
+          "time": 0,
+          "heading": "none",
+          "photo": "none",
+          "overflow": 0
+        },
+        "last": {
+          "time": 2036.6000000000931,
+          "heading": "none",
+          "photo": "none",
+          "overflow": 0
+        },
+        "headerStable": true,
+        "controllers": [
+          "site-motion.js?v=polish-1"
+        ],
+        "errors": [],
+        "badAssets": []
+      },
+      {
+        "name": "programs@430",
+        "status": "pass",
+        "maxOverflow": 0,
+        "headingMoved": true,
+        "photoMoved": true,
+        "initial": {
+          "time": 0,
+          "heading": "0px 54px",
+          "photo": "55.9px",
+          "overflow": 0
+        },
+        "last": {
+          "time": 2049.8000000000466,
+          "heading": "none",
+          "photo": "none",
+          "overflow": 0
+        },
+        "headerStable": true,
+        "controllers": [
+          "site-motion.js?v=polish-1"
+        ],
+        "errors": [],
+        "badAssets": []
+      },
+      {
+        "name": "yoshi@430",
+        "status": "pass",
+        "maxOverflow": 0,
+        "headingMoved": true,
+        "photoMoved": true,
+        "initial": {
+          "time": 0,
+          "heading": "0px 54px",
+          "photo": "55.9px",
+          "overflow": 0
+        },
+        "last": {
+          "time": 2039.7999999999302,
+          "heading": "none",
+          "photo": "none",
+          "overflow": 0
+        },
+        "headerStable": true,
+        "controllers": [
+          "site-motion.js?v=polish-1"
+        ],
+        "errors": [],
+        "badAssets": []
+      },
+      {
+        "name": "media@430",
+        "status": "pass",
+        "maxOverflow": 0,
+        "headingMoved": true,
+        "photoMoved": true,
+        "initial": {
+          "time": 0,
+          "heading": "none",
+          "photo": "none",
+          "overflow": 0
+        },
+        "last": {
+          "time": 2037.4000000000233,
+          "heading": "none",
+          "photo": "none",
+          "overflow": 0
+        },
+        "headerStable": true,
+        "controllers": [
+          "site-motion.js?v=polish-1"
+        ],
+        "errors": [],
+        "badAssets": []
+      },
+      {
+        "name": "contact@430",
+        "status": "pass",
+        "maxOverflow": 0,
+        "headingMoved": true,
+        "photoMoved": true,
+        "initial": {
+          "time": 0,
+          "heading": "none",
+          "photo": "none",
+          "overflow": 0
+        },
+        "last": {
+          "time": 2039.8000000000466,
+          "heading": "none",
+          "photo": "none",
+          "overflow": 0
+        },
+        "headerStable": true,
+        "controllers": [
+          "site-motion.js?v=polish-1"
+        ],
+        "errors": [],
+        "badAssets": []
+      },
+      {
+        "name": "community@430",
+        "status": "pass",
+        "maxOverflow": 0,
+        "headingMoved": true,
+        "photoMoved": true,
+        "initial": {
+          "time": 0,
+          "heading": "none",
+          "photo": "none",
+          "overflow": 0
+        },
+        "last": {
+          "time": 2037.1000000000931,
+          "heading": "none",
+          "photo": "none",
+          "overflow": 0
+        },
+        "headerStable": true,
+        "controllers": [
+          "site-motion.js?v=polish-1"
+        ],
+        "errors": [],
+        "badAssets": []
+      },
+      {
+        "name": "index@901",
+        "status": "pass",
+        "maxOverflow": 0,
+        "headingMoved": true,
+        "photoMoved": true,
+        "initial": {
+          "time": 0.09999999997671694,
+          "heading": "none",
+          "photo": "none",
+          "overflow": 0
+        },
+        "last": {
+          "time": 2039.1999999999534,
+          "heading": "none",
+          "photo": "none",
+          "overflow": 0
+        },
+        "headerStable": true,
+        "controllers": [
+          "site-motion.js?v=polish-1"
+        ],
+        "errors": [],
+        "badAssets": []
+      },
+      {
+        "name": "training@901",
+        "status": "pass",
+        "maxOverflow": 0,
+        "headingMoved": true,
+        "photoMoved": true,
+        "initial": {
+          "time": 0,
+          "heading": "none",
+          "photo": "none",
+          "overflow": 0
+        },
+        "last": {
+          "time": 2034.6999999999534,
+          "heading": "none",
+          "photo": "none",
+          "overflow": 0
+        },
+        "headerStable": true,
+        "controllers": [
+          "site-motion.js?v=polish-1"
+        ],
+        "errors": [],
+        "badAssets": []
+      },
+      {
+        "name": "programs@901",
+        "status": "pass",
+        "maxOverflow": 0,
+        "headingMoved": true,
+        "photoMoved": true,
+        "initial": {
+          "time": 0,
+          "heading": "none",
+          "photo": "none",
+          "overflow": 0
+        },
+        "last": {
+          "time": 2046.8000000000466,
+          "heading": "none",
+          "photo": "none",
+          "overflow": 0
+        },
+        "headerStable": true,
+        "controllers": [
+          "site-motion.js?v=polish-1"
+        ],
+        "errors": [],
+        "badAssets": []
+      },
+      {
+        "name": "yoshi@901",
+        "status": "pass",
+        "maxOverflow": 0,
+        "headingMoved": true,
+        "photoMoved": true,
+        "initial": {
+          "time": 0.09999999997671694,
+          "heading": "0px 54px",
+          "photo": "110px",
+          "overflow": 0
+        },
+        "last": {
+          "time": 2043.0999999999767,
+          "heading": "none",
+          "photo": "none",
+          "overflow": 0
+        },
+        "headerStable": true,
+        "controllers": [
+          "site-motion.js?v=polish-1"
+        ],
+        "errors": [],
+        "badAssets": []
+      },
+      {
+        "name": "media@901",
+        "status": "pass",
+        "maxOverflow": 0,
+        "headingMoved": true,
+        "photoMoved": true,
+        "initial": {
+          "time": 0,
+          "heading": "none",
+          "photo": "none",
+          "overflow": 0
+        },
+        "last": {
+          "time": 2040.8000000000466,
+          "heading": "none",
+          "photo": "none",
+          "overflow": 0
+        },
+        "headerStable": true,
+        "controllers": [
+          "site-motion.js?v=polish-1"
+        ],
+        "errors": [],
+        "badAssets": []
+      },
+      {
+        "name": "contact@901",
+        "status": "pass",
+        "maxOverflow": 0,
+        "headingMoved": true,
+        "photoMoved": true,
+        "initial": {
+          "time": 0,
+          "heading": "none",
+          "photo": "none",
+          "overflow": 0
+        },
+        "last": {
+          "time": 2043,
+          "heading": "none",
+          "photo": "none",
+          "overflow": 0
+        },
+        "headerStable": true,
+        "controllers": [
+          "site-motion.js?v=polish-1"
+        ],
+        "errors": [],
+        "badAssets": []
+      },
+      {
+        "name": "community@901",
+        "status": "pass",
+        "maxOverflow": 0,
+        "headingMoved": true,
+        "photoMoved": true,
+        "initial": {
+          "time": 0,
+          "heading": "0px 54px",
+          "photo": "110px",
+          "overflow": 0
+        },
+        "last": {
+          "time": 2036.7999999999302,
+          "heading": "none",
+          "photo": "none",
+          "overflow": 0
+        },
+        "headerStable": true,
+        "controllers": [
+          "site-motion.js?v=polish-1"
+        ],
+        "errors": [],
+        "badAssets": []
+      },
+      {
+        "name": "index@1334",
+        "status": "pass",
+        "maxOverflow": 0,
+        "headingMoved": true,
+        "photoMoved": true,
+        "initial": {
+          "time": 0,
+          "heading": "none",
+          "photo": "none",
+          "overflow": 0
+        },
+        "last": {
+          "time": 2044.3000000000466,
+          "heading": "none",
+          "photo": "none",
+          "overflow": 0
+        },
+        "headerStable": true,
+        "controllers": [
+          "site-motion.js?v=polish-1"
+        ],
+        "errors": [],
+        "badAssets": []
+      },
+      {
+        "name": "training@1334",
+        "status": "pass",
+        "maxOverflow": 0,
+        "headingMoved": true,
+        "photoMoved": true,
+        "initial": {
+          "time": 0,
+          "heading": "none",
+          "photo": "none",
+          "overflow": 0
+        },
+        "last": {
+          "time": 2038.8000000000466,
+          "heading": "none",
+          "photo": "none",
+          "overflow": 0
+        },
+        "headerStable": true,
+        "controllers": [
+          "site-motion.js?v=polish-1"
+        ],
+        "errors": [],
+        "badAssets": []
+      },
+      {
+        "name": "programs@1334",
+        "status": "pass",
+        "maxOverflow": 0,
+        "headingMoved": true,
+        "photoMoved": true,
+        "initial": {
+          "time": 0,
+          "heading": "none",
+          "photo": "none",
+          "overflow": 0
+        },
+        "last": {
+          "time": 2048,
+          "heading": "none",
+          "photo": "none",
+          "overflow": 0
+        },
+        "headerStable": true,
+        "controllers": [
+          "site-motion.js?v=polish-1"
+        ],
+        "errors": [],
+        "badAssets": []
+      },
+      {
+        "name": "yoshi@1334",
+        "status": "pass",
+        "maxOverflow": 0,
+        "headingMoved": true,
+        "photoMoved": true,
+        "initial": {
+          "time": 0,
+          "heading": "none",
+          "photo": "none",
+          "overflow": 0
+        },
+        "last": {
+          "time": 2048.0999999999767,
+          "heading": "none",
+          "photo": "none",
+          "overflow": 0
+        },
+        "headerStable": true,
+        "controllers": [
+          "site-motion.js?v=polish-1"
+        ],
+        "errors": [],
+        "badAssets": []
+      },
+      {
+        "name": "media@1334",
+        "status": "pass",
+        "maxOverflow": 0,
+        "headingMoved": true,
+        "photoMoved": true,
+        "initial": {
+          "time": 0,
+          "heading": "none",
+          "photo": "none",
+          "overflow": 0
+        },
+        "last": {
+          "time": 2039.5,
+          "heading": "none",
+          "photo": "none",
+          "overflow": 0
+        },
+        "headerStable": true,
+        "controllers": [
+          "site-motion.js?v=polish-1"
+        ],
+        "errors": [],
+        "badAssets": []
+      },
+      {
+        "name": "contact@1334",
+        "status": "pass",
+        "maxOverflow": 0,
+        "headingMoved": true,
+        "photoMoved": true,
+        "initial": {
+          "time": 0,
+          "heading": "none",
+          "photo": "none",
+          "overflow": 0
+        },
+        "last": {
+          "time": 2040.7000000000698,
+          "heading": "none",
+          "photo": "none",
+          "overflow": 0
+        },
+        "headerStable": true,
+        "controllers": [
+          "site-motion.js?v=polish-1"
+        ],
+        "errors": [],
+        "badAssets": []
+      },
+      {
+        "name": "community@1334",
+        "status": "pass",
+        "maxOverflow": 0,
+        "headingMoved": true,
+        "photoMoved": true,
+        "initial": {
+          "time": 0,
+          "heading": "none",
+          "photo": "none",
+          "overflow": 0
+        },
+        "last": {
+          "time": 2037.5,
+          "heading": "none",
+          "photo": "none",
+          "overflow": 0
+        },
+        "headerStable": true,
+        "controllers": [
+          "site-motion.js?v=polish-1"
+        ],
+        "errors": [],
+        "badAssets": []
+      }
+    ],
+    "content": [
+      {
+        "name": "index",
+        "status": "pass",
+        "protectedFields": [
+          "text",
+          "blocks",
+          "links",
+          "forms",
+          "meta"
+        ],
+        "structure": {
+          "duplicates": [],
+          "h1": 1,
+          "community": 2,
+          "images": [
+            {
+              "src": "assets/sportmyfitness-mark.svg",
+              "alt": ""
+            },
+            {
+              "src": "assets/photos/yoshi-hero-milwaukee-natural-1586.webp",
+              "alt": "Artwork of Yoshi Barnes in a turquoise running pose, with Milwaukee blended into the background"
+            }
+          ],
+          "headings": [
+            "IT ALLTAKESWORK.",
+            "FIND YOUR TRAINING.",
+            "PERSONAL TRAINING",
+            "SEMI-PRIVATE & GROUP",
+            "ONLINE COACHING",
+            "LET\u2019S MOVE."
+          ]
+        }
+      },
+      {
+        "name": "training",
+        "status": "pass",
+        "protectedFields": [
+          "text",
+          "blocks",
+          "links",
+          "forms",
+          "meta"
+        ],
+        "structure": {
+          "duplicates": [],
+          "h1": 1,
+          "community": 2,
+          "images": [
+            {
+              "src": "assets/sportmyfitness-mark.svg",
+              "alt": ""
+            },
+            {
+              "src": "assets/photos/training-gym-background-1586.webp",
+              "alt": ""
+            },
+            {
+              "src": "assets/photos/yoshi-fitness-facebook-clarity-1254.webp",
+              "alt": "Yoshi Barnes in black training clothes, flexing her arms"
+            },
+            {
+              "src": "assets/photos/yoshi-leading-session-socialx-clarity-1536.webp",
+              "alt": "Yoshi leading a seated group movement session at Sport My Fitness"
+            },
+            {
+              "src": "assets/photos/yoshi-youth-coaching-2026-09-02-clarity-1254.webp",
+              "alt": "Yoshi guiding young people through movement in a school gym"
+            }
+          ],
+          "headings": [
+            "FIND YOURTRAINING.",
+            "YOSHIBARNES.",
+            "WHAT CLIENTS SAY.",
+            "FIND YOUR FIT."
+          ]
+        }
+      },
+      {
+        "name": "programs",
+        "status": "pass",
+        "protectedFields": [
+          "text",
+          "blocks",
+          "links",
+          "forms",
+          "meta"
+        ],
+        "structure": {
+          "duplicates": [],
+          "h1": 1,
+          "community": 2,
+          "images": [
+            {
+              "src": "assets/sportmyfitness-mark.svg",
+              "alt": ""
+            },
+            {
+              "src": "assets/photos/yoshi-coaching-1000.webp",
+              "alt": "Yoshi coaching a seated participant using a cable machine"
+            }
+          ],
+          "headings": [
+            "YOUROPTIONS.",
+            "SESSIONS & CLASSES.",
+            "PERSONAL TRAINING",
+            "SEMI-PRIVATE SESSIONS",
+            "ONLINE COACHING",
+            "SUMMER GROUP CLASS",
+            "KIDS\u2019 CAMP",
+            "R&B STRETCHING",
+            "COACHING & SUPPORT",
+            "HER STORY."
+          ]
+        }
+      },
+      {
+        "name": "yoshi",
+        "status": "pass",
+        "protectedFields": [
+          "text",
+          "blocks",
+          "links",
+          "forms",
+          "meta"
+        ],
+        "structure": {
+          "duplicates": [],
+          "h1": 1,
+          "community": 2,
+          "images": [
+            {
+              "src": "assets/sportmyfitness-mark.svg",
+              "alt": ""
+            },
+            {
+              "src": "assets/photos/yoshi-smiling-facebook-clarity-1254.webp",
+              "alt": "Yoshi Barnes smiling, in a black-and-white portrait"
+            },
+            {
+              "src": "assets/photos/yoshi-community-socialx-clarity-1536.webp",
+              "alt": "Yoshi Barnes smiling with two members of the Sport My Fitness community"
+            },
+            {
+              "src": "assets/platforms/instagram.svg",
+              "alt": ""
+            },
+            {
+              "src": "assets/platforms/facebook.svg",
+              "alt": ""
+            },
+            {
+              "src": "assets/platforms/youtube.svg",
+              "alt": ""
+            }
+          ],
+          "headings": [
+            "MEETYOSHI.",
+            "FROM THE COURT.TO THE COMMUNITY.",
+            "ON THE COURT.",
+            "BUILDING IN MILWAUKEE.",
+            "SHOWING UP.",
+            "KEEP CONNECTING.",
+            "IN MOTION."
+          ]
+        }
+      },
+      {
+        "name": "media",
+        "status": "pass",
+        "protectedFields": [
+          "text",
+          "blocks",
+          "links",
+          "forms",
+          "meta"
+        ],
+        "structure": {
+          "duplicates": [],
+          "h1": 1,
+          "community": 2,
+          "images": [
+            {
+              "src": "assets/sportmyfitness-mark.svg",
+              "alt": ""
+            },
+            {
+              "src": "assets/photos/yoshi-group-squats-polished-1536.webp",
+              "alt": "Yoshi leading a group squat session in the Sport My Fitness gym"
+            },
+            {
+              "src": "assets/platforms/youtube.svg",
+              "alt": ""
+            },
+            {
+              "src": "assets/photos/community-floor-work-polished-1536.webp",
+              "alt": "Participants doing floor exercises together in the Sport My Fitness gym"
+            },
+            {
+              "src": "assets/photos/community-strength-polished-1536.webp",
+              "alt": "Two participants lifting weights in the Sport My Fitness gym"
+            },
+            {
+              "src": "assets/platforms/tmj4.svg",
+              "alt": ""
+            }
+          ],
+          "headings": [
+            "INMOTION.",
+            "WATCHTHE WORK.",
+            "TOGETHERIN THE GYM.",
+            "FITNESS FRIDAY.",
+            "LET\u2019S TRAIN."
+          ]
+        }
+      },
+      {
+        "name": "contact",
+        "status": "pass",
+        "protectedFields": [
+          "text",
+          "blocks",
+          "links",
+          "forms",
+          "meta"
+        ],
+        "structure": {
+          "duplicates": [],
+          "h1": 1,
+          "community": 2,
+          "images": [
+            {
+              "src": "assets/sportmyfitness-mark.svg",
+              "alt": ""
+            },
+            {
+              "src": "assets/photos/smf-storefront-maps-clarity-1448.webp",
+              "alt": "The Sport My Fitness storefront with teal window logos and its entrance on West Vliet Street"
+            }
+          ],
+          "headings": [
+            "LET\u2019STRAIN.",
+            "KEEP MOVING."
+          ]
+        }
+      },
+      {
+        "name": "community",
+        "status": "pass",
+        "protectedFields": [
+          "text",
+          "blocks",
+          "links",
+          "forms",
+          "meta"
+        ],
+        "structure": {
+          "duplicates": [],
+          "h1": 1,
+          "community": 2,
+          "images": [
+            {
+              "src": "assets/sportmyfitness-mark.svg",
+              "alt": ""
+            },
+            {
+              "src": "assets/photos/community-body-camp-1246.webp",
+              "alt": "Five smiling Body Camp participants together in the Sport My Fitness gym, with a dog in front"
+            }
+          ],
+          "headings": [
+            "STRONGERTOGETHER.",
+            "GET INVOLVED.",
+            "BODY CAMP",
+            "FROMTHE GYM.",
+            "SHOWING UP FOR OURSELVES.",
+            "LET\u2019S MOVE."
+          ]
+        }
+      }
+    ],
+    "safeguards": [
+      {
+        "name": "reduced-motion:index@390",
+        "status": "pass",
+        "boot": false,
+        "animations": 0,
+        "visible": "visible",
+        "opacity": "1"
+      },
+      {
+        "name": "reduced-motion:training@390",
+        "status": "pass",
+        "boot": false,
+        "animations": 0,
+        "visible": "visible",
+        "opacity": "1"
+      },
+      {
+        "name": "reduced-motion:programs@390",
+        "status": "pass",
+        "boot": false,
+        "animations": 0,
+        "visible": "visible",
+        "opacity": "1"
+      },
+      {
+        "name": "reduced-motion:yoshi@390",
+        "status": "pass",
+        "boot": false,
+        "animations": 0,
+        "visible": "visible",
+        "opacity": "1"
+      },
+      {
+        "name": "reduced-motion:media@390",
+        "status": "pass",
+        "boot": false,
+        "animations": 0,
+        "visible": "visible",
+        "opacity": "1"
+      },
+      {
+        "name": "reduced-motion:contact@390",
+        "status": "pass",
+        "boot": false,
+        "animations": 0,
+        "visible": "visible",
+        "opacity": "1"
+      },
+      {
+        "name": "reduced-motion:community@390",
+        "status": "pass",
+        "boot": false,
+        "animations": 0,
+        "visible": "visible",
+        "opacity": "1"
+      },
+      {
+        "name": "reduced-motion:index@1334",
+        "status": "pass",
+        "boot": false,
+        "animations": 0,
+        "visible": "visible",
+        "opacity": "1"
+      },
+      {
+        "name": "reduced-motion:training@1334",
+        "status": "pass",
+        "boot": false,
+        "animations": 0,
+        "visible": "visible",
+        "opacity": "1"
+      },
+      {
+        "name": "reduced-motion:programs@1334",
+        "status": "pass",
+        "boot": false,
+        "animations": 0,
+        "visible": "visible",
+        "opacity": "1"
+      },
+      {
+        "name": "reduced-motion:yoshi@1334",
+        "status": "pass",
+        "boot": false,
+        "animations": 0,
+        "visible": "visible",
+        "opacity": "1"
+      },
+      {
+        "name": "reduced-motion:media@1334",
+        "status": "pass",
+        "boot": false,
+        "animations": 0,
+        "visible": "visible",
+        "opacity": "1"
+      },
+      {
+        "name": "reduced-motion:contact@1334",
+        "status": "pass",
+        "boot": false,
+        "animations": 0,
+        "visible": "visible",
+        "opacity": "1"
+      },
+      {
+        "name": "reduced-motion:community@1334",
+        "status": "pass",
+        "boot": false,
+        "animations": 0,
+        "visible": "visible",
+        "opacity": "1"
+      },
+      {
+        "name": "no-js",
+        "status": "pass",
+        "boot": false,
+        "playing": false,
+        "opacity": 1,
+        "visible": "visible",
+        "overflow": 0,
+        "scrollY": 0
+      },
+      {
+        "name": "failed-curves",
+        "status": "pass",
+        "boot": false,
+        "playing": false,
+        "opacity": 1,
+        "visible": "visible",
+        "overflow": 0,
+        "scrollY": 0
+      },
+      {
+        "name": "failed-controller",
+        "status": "pass",
+        "boot": false,
+        "playing": false,
+        "opacity": 1,
+        "visible": "visible",
+        "overflow": 0,
+        "scrollY": 0
+      },
+      {
+        "name": "slow-curves",
+        "status": "pass",
+        "boot": false,
+        "playing": false,
+        "opacity": 1,
+        "visible": "visible",
+        "overflow": 0,
+        "scrollY": 0
+      },
+      {
+        "name": "keyboard",
+        "status": "pass",
+        "boot": false,
+        "playing": false,
+        "opacity": 1,
+        "visible": "visible",
+        "overflow": 0,
+        "scrollY": 0
+      },
+      {
+        "name": "scroll",
+        "status": "pass",
+        "boot": false,
+        "playing": false,
+        "opacity": 1,
+        "visible": "visible",
+        "overflow": 0,
+        "scrollY": 300
+      },
+      {
+        "name": "deep-link",
+        "status": "pass",
+        "boot": false,
+        "playing": false,
+        "opacity": 1,
+        "visible": "visible",
+        "overflow": 0,
+        "scrollY": 405
+      },
+      {
+        "name": "reduced-during-motion",
+        "status": "pass",
+        "boot": false,
+        "playing": false,
+        "opacity": 1,
+        "visible": "visible",
+        "overflow": 0,
+        "scrollY": 0
+      },
+      {
+        "name": "resize",
+        "status": "pass",
+        "boot": false,
+        "playing": false,
+        "opacity": 1,
+        "visible": "visible",
+        "overflow": 0,
+        "scrollY": 0
+      },
+      {
+        "name": "contact-validation",
+        "status": "pass",
+        "action": "https://formsubmit.co/Yoshi_barnes@outlook.com",
+        "method": "post",
+        "required": [
+          "name",
+          "email",
+          "goals"
+        ],
+        "fields": [
+          {
+            "name": "_subject",
+            "type": "hidden"
+          },
+          {
+            "name": "_template",
+            "type": "hidden"
+          },
+          {
+            "name": "_honey",
+            "type": "text"
+          },
+          {
+            "name": "name",
+            "type": "text"
+          },
+          {
+            "name": "email",
+            "type": "email"
+          },
+          {
+            "name": "interest",
+            "type": "select-one"
+          },
+          {
+            "name": "goals",
+            "type": "textarea"
+          }
+        ],
+        "submitted": false
+      },
+      {
+        "name": "internal-links-and-anchors",
+        "status": "pass",
+        "uniquePages": 7,
+        "errors": []
+      }
+    ],
+    "failures": [],
+    "chromium": "151.0.7922.34",
+    "webkit": "not run in this pass",
+    "summary": {
+      "responsive": 35,
+      "content": 7,
+      "safeguards": 25,
+      "failures": 0
+    }
+  },
+  "webkit": {
+    "version": "26.5",
+    "motionLayoutPassed": 7,
+    "initialRows": [
+      {
+        "page": "index",
+        "headingPositions": 2,
+        "overflow": 0,
+        "boot": false,
+        "brokenImages": [],
+        "state": "complete",
+        "errors": [],
+        "pass": true
+      },
+      {
+        "page": "training",
+        "headingPositions": 3,
+        "overflow": 0,
+        "boot": false,
+        "brokenImages": [
+          "http://127.0.0.1:42863/assets/photos/yoshi-youth-coaching-2026-09-02-clarity-1254.webp"
+        ],
+        "state": "complete",
+        "errors": [],
+        "pass": false
+      },
+      {
+        "page": "programs",
+        "headingPositions": 22,
+        "overflow": 0,
+        "boot": false,
+        "brokenImages": [],
+        "state": "complete",
+        "errors": [],
+        "pass": true
+      },
+      {
+        "page": "yoshi",
+        "headingPositions": 29,
+        "overflow": 0,
+        "boot": false,
+        "brokenImages": [
+          "http://127.0.0.1:42863/assets/photos/yoshi-community-socialx-clarity-1536.webp"
+        ],
+        "state": "complete",
+        "errors": [],
+        "pass": false
+      },
+      {
+        "page": "media",
+        "headingPositions": 20,
+        "overflow": 0,
+        "boot": false,
+        "brokenImages": [
+          "http://127.0.0.1:42863/assets/photos/community-floor-work-polished-1536.webp",
+          "http://127.0.0.1:42863/assets/photos/community-strength-polished-1536.webp"
+        ],
+        "state": "complete",
+        "errors": [],
+        "pass": false
+      },
+      {
+        "page": "contact",
+        "headingPositions": 31,
+        "overflow": 0,
+        "boot": false,
+        "brokenImages": [],
+        "state": "complete",
+        "errors": [],
+        "pass": true
+      },
+      {
+        "page": "community",
+        "headingPositions": 20,
+        "overflow": 0,
+        "boot": false,
+        "brokenImages": [],
+        "state": "complete",
+        "errors": [],
+        "pass": true
+      }
+    ],
+    "lazyImageFollowups": [
+      {
+        "kind": "webkit-lazy-image-followup",
+        "page": "training",
+        "images": 5,
+        "errors": [],
+        "pass": true
+      },
+      {
+        "kind": "webkit-lazy-image-followup",
+        "page": "yoshi",
+        "images": 6,
+        "errors": [],
+        "pass": true
+      },
+      {
+        "kind": "webkit-lazy-image-followup",
+        "page": "media",
+        "images": 6,
+        "errors": [],
+        "pass": true
+      }
+    ],
+    "interpretation": "Offscreen naturalWidth=0 did not establish broken assets. All affected images decoded after scrolling into view."
+  },
+  "navigationBoundary": {
+    "harnessCorrection": "Wait for the media-query change event after resizing; earlier immediate assertions raced that event.",
+    "rows": [
+      {
+        "page": "index",
+        "desktopVisible": true,
+        "closedAfterRoundTrip": true,
+        "overflow": 0
+      },
+      {
+        "page": "training",
+        "desktopVisible": true,
+        "closedAfterRoundTrip": true,
+        "overflow": 0
+      },
+      {
+        "page": "programs",
+        "desktopVisible": true,
+        "closedAfterRoundTrip": true,
+        "overflow": 0
+      },
+      {
+        "page": "yoshi",
+        "desktopVisible": true,
+        "closedAfterRoundTrip": true,
+        "overflow": 0
+      },
+      {
+        "page": "media",
+        "desktopVisible": true,
+        "closedAfterRoundTrip": true,
+        "overflow": 0
+      },
+      {
+        "page": "contact",
+        "desktopVisible": true,
+        "closedAfterRoundTrip": true,
+        "overflow": 0
+      },
+      {
+        "page": "community",
+        "desktopVisible": true,
+        "closedAfterRoundTrip": true,
+        "overflow": 0
+      }
+    ]
+  },
+  "testHarnessCorrections": [
+    "Use #hero-heading across the seven distinct section classes; earlier .hero selectors missed inner headings.",
+    "Wait for the media-query event after resizing.",
+    "Use established root browser execution and PLAYWRIGHT_BROWSERS_PATH for WebKit.",
+    "Test lazy images after scrolling them into view."
+  ],
+  "prototypeDiagnostic": {
+    "state": "rejected; not production",
+    "path": "/workspace/smf-left-entry-hero.html",
+    "eyeBox": [
+      908,
+      111,
+      941,
+      129
+    ],
+    "samplePixels": 594,
+    "nonOpaque": 112,
+    "fullyTransparent": 11,
+    "laterBacking": "Dark SVG rectangles and polygon, not accepted as authentic repair.",
+    "treatment": "Preserve original RGB and make subject interior opaque; no synthetic face patches."
+  },
+  "designAuthority": {
+    "visual": "Corrected cinematic brief revision 2 and four references, selected October 12",
+    "motion": "Later instruction: enter from left, settle, then headline drops from above",
+    "protected": "Seven-page content, facts, prices, schedules, reviews, credits, original subjects, destinations and forms",
+    "superseded": "Old diamond/emboss/brush styling, fixed geometry and previous choreography"
+  },
+  "limits": [
+    "No real inquiry, booking or payment.",
+    "No contact provider activation or mailbox delivery claim.",
+    "No physical device test.",
+    "Returning-visitor legacy service worker unverified.",
+    "No new Lighthouse/performance score.",
+    "Earlier candidate tests do not establish cinematic visual acceptance.",
+    "No deep penetration or third-party business/availability audit."
+  ],
+  "nextTask": "Home foreground matte and cinematic desktop/mobile composition; then exact entrance sequence.",
+  "tasks": [
+    {
+      "id": "S0",
+      "task": "Recover source, reconcile authorities, audit and centralize",
+      "state": "complete"
+    },
+    {
+      "id": "S1",
+      "task": "Prepare authentic Home foreground matte and source-derived background",
+      "state": "next"
+    },
+    {
+      "id": "S2",
+      "task": "Build cinematic Home at desktop and mobile with full source content",
+      "state": "pending"
+    },
+    {
+      "id": "S3",
+      "task": "Yoshi enters from left, settles, then headline drops; record playback",
+      "state": "pending"
+    },
+    {
+      "id": "S4",
+      "task": "Implement Training and Programs against references",
+      "state": "pending"
+    },
+    {
+      "id": "S5",
+      "task": "Apply design to About, Media, Contact and Community",
+      "state": "pending"
+    },
+    {
+      "id": "S6",
+      "task": "Verify content, responsive behavior, accessibility, fallbacks and returning visitors",
+      "state": "pending"
+    },
+    {
+      "id": "S7",
+      "task": "Reference/result review, motion evidence and authorized release",
+      "state": "pending"
+    }
+  ]
+}

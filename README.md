@@ -1,55 +1,30 @@
-# Sport My Fitness — GitHub Brand Assets
+# Sport My Fitness
 
-This folder is ready to copy into the Sport My Fitness website repository.
+Seven-page static website for Sport My Fitness and Coach Yoshi Barnes.
 
-## Structure
+Start with [the current project state](docs/PROJECT_STATE.md). It resolves the older handoffs, identifies the verified source revisions, records the audit evidence, and gives the next task.
 
-```text
-public/
-  brand/
-    sportmyfitness-logo-master.png
-    sportmyfitness-logo-1600w.png
-    sportmyfitness-logo-1200w.png
-    sportmyfitness-logo-800w.png
-    sportmyfitness-logo-600w.png
-    sportmyfitness-logo-400w.png
-    sportmyfitness-icon-1024.png
-    sportmyfitness-icon-256.png
-    sportmyfitness-icon-64.png
-    android-chrome-192x192.png
-    android-chrome-512x512.png
-    apple-touch-icon.png
-    favicon-32x32.png
-    favicon.ico
-    og-card-1200x630.jpg
-    twitter-card-1200x630.jpg
-    social-profile-1080x1080.jpg
-  site.webmanifest
+## Current work
 
-docs/
-  BRAND-GUIDELINES.md
-  sportmyfitness-brand-guide-reference.jpg
+The approved target is the cinematic redesign, using the four supplied references. The existing seven-page content, authentic photographic subjects, destinations, and form behavior remain protected.
 
-brand.css
-brand-tokens.json
-```
+The technical starting point is `review/motion-photo-polish-20261011` at `03a1796faeadd8aa49ae221d2e5e81cc2196c638`. It is reusable motion/photo work in the older composition, not a completed cinematic redesign.
 
-## HTML metadata example
+Production is [sport-my-fitness.vercel.app](https://sport-my-fitness.vercel.app/) at `c6b209895aa01b7d419fa445d4c31d39ef90b920`, verified October 16, 2026.
 
-```html
-<link rel="icon" href="/brand/favicon.ico">
-<link rel="apple-touch-icon" href="/brand/apple-touch-icon.png">
-<link rel="manifest" href="/site.webmanifest">
+## Routes
 
-<meta property="og:title" content="Sport My Fitness">
-<meta property="og:description" content="To gain, maintain, or lose it all takes work.">
-<meta property="og:image" content="/brand/og-card-1200x630.jpg">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="/brand/twitter-card-1200x630.jpg">
-```
+Home (`index.html`), Training (`training.html`), Programs (`programs.html`), About (`yoshi.html`), Media (`media.html`), Contact (`contact.html`), and Community (`community.html`).
 
-Use `/brand/sportmyfitness-logo-800w.png` for the normal site header.
+Keep the existing static HTML/CSS/JavaScript and GitHub/Vercel workflow. No framework or hosting migration is needed.
 
-## Pilot lifecycle proof
+## Working locally
 
-Phase 25C validated Sport My Fitness as a verifier-ready Pilot target through the normal guarded phone-first lifecycle.
+Serve the repository over HTTP, for example `python3 -m http.server 8000`. Motion fetches its data over HTTP; opening an HTML file directly is not a complete runtime check.
+
+The existing API contract check is `node --test test/pilot-verify-production.test.js`. It covers the isolated production verifier, not visitor journeys or cinematic visual acceptance.
+
+See [launch gates](LAUNCH.md), [the corrected cinematic brief](docs/CINEMATIC_BRIEF.md), and [asset/motion authoring](design-tools/README.md).
+
+Older prototype documentation is historical. It does not override the current project state.
+

@@ -1,3 +1,5 @@
+> Historical reference for the October 11 motion/photo candidate. Start at [docs/PROJECT_STATE.md](../docs/PROJECT_STATE.md) for the cinematic design and current Home sequence. The older composition preserved below is not the current visual specification.
+
 # Sport My Fitness motion and photography
 
 This pass keeps the existing seven-page composition, wording, links, photographs,
@@ -51,3 +53,4 @@ photograph for masking.
 Browser verification compares the resting layout, words and actions with release
 `c6b209895aa01b7d419fa445d4c31d39ef90b920`. Reports in `verification/` record the
 responsive and fallback checks. No valid contact inquiry was submitted.
+

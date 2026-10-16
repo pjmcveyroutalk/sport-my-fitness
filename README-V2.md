@@ -1,3 +1,5 @@
+> Historical prototype documentation. For the current seven-page website, source revisions, cinematic direction, and task order, read [docs/PROJECT_STATE.md](docs/PROJECT_STATE.md). The prototype file map below is not the active build specification.
+
 # Sport My Fitness Homepage — V2
 
 Static, GitHub-ready homepage prototype.
@@ -18,3 +20,4 @@ Open `index.html` directly, or serve the folder with any static server.
 This package does not require a framework or build command. It can be deployed as a static site on GitHub Pages, Vercel, or Netlify.
 
 The existing Sport My Fitness Wix site should remain untouched while this prototype is tested.
+

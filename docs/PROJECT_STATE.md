@@ -14,6 +14,14 @@ changes only; the form delivery service, layout, logo, images, map and movement
 remain unchanged. This explicit correction supersedes the earlier instruction
 to preserve the former booking URL.
 
+This fix is published as `8e6f9dcc5036aac4ac4cb1f30a3073c138b8458b`
+(successful Production deployment `7143573780`). Both public HTML files match
+the corrected source. Live browser clicks followed Contact's packages link to
+`programs.html`, then the session action to `contact.html#inquiry`, in the same
+tab. No former-site links remain in HTML; the other 16 checked runtime files and
+the form contract are unchanged. See `verification/booking-link-fix-20261017.json`
+and the saved Contact screenshot for this focused post-release check.
+
 The current refinement adds one clean Google business map, exact-place directions,
 collapsible published hours and a short accessible-parking note to Contact. The
 previous mobile spacing, background and landing-page cleanup remain intact.

@@ -1,0 +1,37 @@
+{
+  "status": "published_and_verified",
+  "request": "Fix the final Contact link that redirects to the old website.",
+  "fix_commit": "8e6f9dcc5036aac4ac4cb1f30a3073c138b8458b",
+  "production_deployment": {
+    "github_id": 7143573780,
+    "state": "success",
+    "url": "https://sport-my-fitness-otjvj00pp-routalk-builder.vercel.app"
+  },
+  "public_url": "https://sport-my-fitness.vercel.app/",
+  "changes": {
+    "contact.html": "Sessions & packages opens programs.html in the same tab, labeled Programs & Rates.",
+    "programs.html": "One Ask about a session action opens contact.html#inquiry; obsolete booking-page copy updated."
+  },
+  "checks": {
+    "legacy_website_links_in_html": 0,
+    "local_anchor_exists": true,
+    "form_contract_unchanged": true,
+    "other_verified_runtime_files_unchanged": 16,
+    "public_source_matches": {
+      "contact.html": "83e3a330c4fb71dcf7004769fee1a85bc217dec5425a832083417e1ca13ff64e",
+      "programs.html": "1135a3c6a2cbb54091849506cddd06c2c68c8bdc580f7fc8641615430185ec43"
+    },
+    "live_browser_clicks": [
+      "https://sport-my-fitness.vercel.app/contact.html \u2192 https://sport-my-fitness.vercel.app/programs.html",
+      "https://sport-my-fitness.vercel.app/programs.html \u2192 https://sport-my-fitness.vercel.app/contact.html#inquiry"
+    ],
+    "same_tab": true,
+    "inquiry_form_present": true,
+    "real_form_submissions": 0
+  },
+  "screenshot": {
+    "path": "verification/booking-link-fix-20261017.jpg",
+    "sha256": "d65fdcab33734621d12893ac5126a5a3b1b60f8555e21e753ae5365f889418b9"
+  },
+  "checked_utc": "2026-10-17T18:03:46.626476+00:00"
+}

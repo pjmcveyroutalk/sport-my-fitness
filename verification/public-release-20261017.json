@@ -1,0 +1,366 @@
+{
+  "status": "published_and_publicly_verified",
+  "user_authorization": "Let\u2019s fully apply the finished preview to the public site please.",
+  "production_commit": "cb0786118740c8b146978a1d6aac3304ac5245b2",
+  "reviewed_checkpoint": "084e60f8d625806b11ea2b431d4aee8854beb8f2",
+  "verified_runtime": "3f39e6b9a95b4abe7427cb4686bcad4212a425ec",
+  "released_tree": "edae3e2535255f4e9bca4f10b608b3cc66281ea3",
+  "public_url": "https://sport-my-fitness.vercel.app/",
+  "review_preview": "https://sport-my-fitness-naghhevku-routalk-builder.vercel.app",
+  "deployment": {
+    "github_id": 7142304892,
+    "environment": "Production",
+    "state": "success",
+    "environment_url": "https://sport-my-fitness-35y50aqfw-routalk-builder.vercel.app",
+    "team_slug": "routalk-builder",
+    "integration": "Existing GitHub main to Vercel production deployment"
+  },
+  "rollback": {
+    "previous_production_commit": "c6b209895aa01b7d419fa445d4c31d39ef90b920",
+    "previous_github_deployment_id": 7003108712,
+    "previous_deployment_url": "https://sport-my-fitness-abz3l5vbw-routalk-builder.vercel.app"
+  },
+  "pre_release_verification": {
+    "run_id": 39047504190,
+    "url": "https://github.com/pjmcveyroutalk/sport-my-fitness/actions/runs/39047504190",
+    "layouts": 70,
+    "image_checks": 210,
+    "navigation_journeys": 28,
+    "original_motion_runs": 14,
+    "native_map_checks": 4,
+    "safeguards": 22,
+    "failures": 0,
+    "engines": [
+      "Chromium",
+      "WebKit"
+    ]
+  },
+  "public_http_checks": {
+    "checked_utc": "2026-10-17T16:19:05.292200+00:00",
+    "public_url": "https://sport-my-fitness.vercel.app/",
+    "production_commit": "cb0786118740c8b146978a1d6aac3304ac5245b2",
+    "reviewed_runtime": "3f39e6b9a95b4abe7427cb4686bcad4212a425ec",
+    "root": {
+      "path": "",
+      "status": 200,
+      "url": "https://sport-my-fitness.vercel.app/",
+      "bytes": 6903,
+      "expected_sha256": "b2dfa6081f5e3b52c6c9315bb31fa8ab94d4ac97112e48124aa66cfc058eaf63",
+      "actual_sha256": "b2dfa6081f5e3b52c6c9315bb31fa8ab94d4ac97112e48124aa66cfc058eaf63",
+      "matches_approved": true
+    },
+    "files": [
+      {
+        "path": "index.html",
+        "status": 200,
+        "url": "https://sport-my-fitness.vercel.app/index.html",
+        "bytes": 6903,
+        "expected_sha256": "b2dfa6081f5e3b52c6c9315bb31fa8ab94d4ac97112e48124aa66cfc058eaf63",
+        "actual_sha256": "b2dfa6081f5e3b52c6c9315bb31fa8ab94d4ac97112e48124aa66cfc058eaf63",
+        "matches_approved": true
+      },
+      {
+        "path": "training.html",
+        "status": 200,
+        "url": "https://sport-my-fitness.vercel.app/training.html",
+        "bytes": 11212,
+        "expected_sha256": "bb0eb2bc2c11c95ab86a81593c075df058a812049d499cd513968c8b6406deba",
+        "actual_sha256": "bb0eb2bc2c11c95ab86a81593c075df058a812049d499cd513968c8b6406deba",
+        "matches_approved": true
+      },
+      {
+        "path": "programs.html",
+        "status": 200,
+        "url": "https://sport-my-fitness.vercel.app/programs.html",
+        "bytes": 8699,
+        "expected_sha256": "b33cd357441b90d765eb156fb45f777cf2e48de6d87f5da937928601f63df680",
+        "actual_sha256": "b33cd357441b90d765eb156fb45f777cf2e48de6d87f5da937928601f63df680",
+        "matches_approved": true
+      },
+      {
+        "path": "yoshi.html",
+        "status": 200,
+        "url": "https://sport-my-fitness.vercel.app/yoshi.html",
+        "bytes": 10691,
+        "expected_sha256": "c505cbb564a4b7618ae716ff10e75a94466c95e5e2473d8bcff81e4c6fa4cc75",
+        "actual_sha256": "c505cbb564a4b7618ae716ff10e75a94466c95e5e2473d8bcff81e4c6fa4cc75",
+        "matches_approved": true
+      },
+      {
+        "path": "media.html",
+        "status": 200,
+        "url": "https://sport-my-fitness.vercel.app/media.html",
+        "bytes": 10683,
+        "expected_sha256": "10f9dc1d9baab94eca42f1895e2040a06b47db5f9e0fa9107e7a5d4f44b080f6",
+        "actual_sha256": "10f9dc1d9baab94eca42f1895e2040a06b47db5f9e0fa9107e7a5d4f44b080f6",
+        "matches_approved": true
+      },
+      {
+        "path": "community.html",
+        "status": 200,
+        "url": "https://sport-my-fitness.vercel.app/community.html",
+        "bytes": 8141,
+        "expected_sha256": "fbd8d77a1d59f70124c634fc3be82ac98d0c749ec8014749c6b09161562e4340",
+        "actual_sha256": "fbd8d77a1d59f70124c634fc3be82ac98d0c749ec8014749c6b09161562e4340",
+        "matches_approved": true
+      },
+      {
+        "path": "contact.html",
+        "status": 200,
+        "url": "https://sport-my-fitness.vercel.app/contact.html",
+        "bytes": 11604,
+        "expected_sha256": "79b736109ba7c72223e24ebdc3680368f7205bbf865a6a52d4a3f75914eb5377",
+        "actual_sha256": "79b736109ba7c72223e24ebdc3680368f7205bbf865a6a52d4a3f75914eb5377",
+        "matches_approved": true
+      },
+      {
+        "path": "site-design.css",
+        "status": 200,
+        "url": "https://sport-my-fitness.vercel.app/site-design.css",
+        "bytes": 31771,
+        "expected_sha256": "8947b8b16abbae3810ca1827525c9e73fd039117a5d652d971b65a7802b098c0",
+        "actual_sha256": "8947b8b16abbae3810ca1827525c9e73fd039117a5d652d971b65a7802b098c0",
+        "matches_approved": true
+      },
+      {
+        "path": "site-menu.js",
+        "status": 200,
+        "url": "https://sport-my-fitness.vercel.app/site-menu.js",
+        "bytes": 3442,
+        "expected_sha256": "3d4310160d4cea432a6cf780be279c95bf5a6fe4d8aa1cac71bcd6d350a272d7",
+        "actual_sha256": "3d4310160d4cea432a6cf780be279c95bf5a6fe4d8aa1cac71bcd6d350a272d7",
+        "matches_approved": true
+      },
+      {
+        "path": "site-motion.css",
+        "status": 200,
+        "url": "https://sport-my-fitness.vercel.app/site-motion.css",
+        "bytes": 1462,
+        "expected_sha256": "b2c4c1eebeddd76ebb7f6f5eda27ac91d82b16783df3619186217d2ad3143022",
+        "actual_sha256": "b2c4c1eebeddd76ebb7f6f5eda27ac91d82b16783df3619186217d2ad3143022",
+        "matches_approved": true
+      },
+      {
+        "path": "site-motion.js",
+        "status": 200,
+        "url": "https://sport-my-fitness.vercel.app/site-motion.js",
+        "bytes": 8080,
+        "expected_sha256": "cff14d42c5d743dcc5bbee2bcafba6780c77bb58a40944e8700292c9ab94cc56",
+        "actual_sha256": "cff14d42c5d743dcc5bbee2bcafba6780c77bb58a40944e8700292c9ab94cc56",
+        "matches_approved": true
+      },
+      {
+        "path": "contact.js",
+        "status": 200,
+        "url": "https://sport-my-fitness.vercel.app/contact.js",
+        "bytes": 1569,
+        "expected_sha256": "d791c23847564472ef02a741094da4338e6cdf4df15aef489dbb5beab693e065",
+        "actual_sha256": "d791c23847564472ef02a741094da4338e6cdf4df15aef489dbb5beab693e065",
+        "matches_approved": true
+      },
+      {
+        "path": "assets/smf-motion-curves.json",
+        "status": 200,
+        "url": "https://sport-my-fitness.vercel.app/assets/smf-motion-curves.json",
+        "bytes": 2750,
+        "expected_sha256": "d9197bbfa766676178103ef8834491b804a50d6468047a22f4a5d660c21ce619",
+        "actual_sha256": "d9197bbfa766676178103ef8834491b804a50d6468047a22f4a5d660c21ce619",
+        "matches_approved": true
+      },
+      {
+        "path": "assets/brand/sport-my-fitness-original-lockup.png",
+        "status": 200,
+        "url": "https://sport-my-fitness.vercel.app/assets/brand/sport-my-fitness-original-lockup.png",
+        "bytes": 302009,
+        "expected_sha256": "202f885d450df6330d8b0809f0c61f43a7ce940f7c870004c9bf6683178aad63",
+        "actual_sha256": "202f885d450df6330d8b0809f0c61f43a7ce940f7c870004c9bf6683178aad63",
+        "matches_approved": true
+      },
+      {
+        "path": "assets/photos/smf-waterfront-hero-800.webp",
+        "status": 200,
+        "url": "https://sport-my-fitness.vercel.app/assets/photos/smf-waterfront-hero-800.webp",
+        "bytes": 70026,
+        "expected_sha256": "ba56966cefcfb98383034c3bad78e714abab6cb058b8d9364c14aed3dcbd4344",
+        "actual_sha256": "ba56966cefcfb98383034c3bad78e714abab6cb058b8d9364c14aed3dcbd4344",
+        "matches_approved": true
+      },
+      {
+        "path": "assets/photos/smf-waterfront-hero-1200.webp",
+        "status": 200,
+        "url": "https://sport-my-fitness.vercel.app/assets/photos/smf-waterfront-hero-1200.webp",
+        "bytes": 127952,
+        "expected_sha256": "83b36d9b11976b6217fcf0691c8720d58cf2d926a27d3cd5da1c695d5ca433b2",
+        "actual_sha256": "83b36d9b11976b6217fcf0691c8720d58cf2d926a27d3cd5da1c695d5ca433b2",
+        "matches_approved": true
+      },
+      {
+        "path": "assets/photos/smf-waterfront-hero-1585.webp",
+        "status": 200,
+        "url": "https://sport-my-fitness.vercel.app/assets/photos/smf-waterfront-hero-1585.webp",
+        "bytes": 184424,
+        "expected_sha256": "b34ee59f501384a00aa5b053475fbe2b9ef2ed5a6edd09018a73d8c87f39e22e",
+        "actual_sha256": "b34ee59f501384a00aa5b053475fbe2b9ef2ed5a6edd09018a73d8c87f39e22e",
+        "matches_approved": true
+      },
+      {
+        "path": "assets/athletic-grain.svg",
+        "status": 200,
+        "url": "https://sport-my-fitness.vercel.app/assets/athletic-grain.svg",
+        "bytes": 324,
+        "expected_sha256": "72e360fee6053ed4acc88818415edb5736b9a771ac8f3e00543fe54b8be649c0",
+        "actual_sha256": "72e360fee6053ed4acc88818415edb5736b9a771ac8f3e00543fe54b8be649c0",
+        "matches_approved": true
+      }
+    ],
+    "redirects": [
+      {
+        "from": "book.html",
+        "destination": "https://sport-my-fitness.vercel.app/contact.html",
+        "status": 200,
+        "correct": true
+      },
+      {
+        "from": "book",
+        "destination": "https://sport-my-fitness.vercel.app/contact.html",
+        "status": 200,
+        "correct": true
+      },
+      {
+        "from": "training-options.html",
+        "destination": "https://sport-my-fitness.vercel.app/programs.html",
+        "status": 200,
+        "correct": true
+      },
+      {
+        "from": "training-options",
+        "destination": "https://sport-my-fitness.vercel.app/programs.html",
+        "status": 200,
+        "correct": true
+      }
+    ]
+  },
+  "public_browser_checks": {
+    "checked_utc": "2026-10-17T16:20:18.853Z",
+    "public_url": "https://sport-my-fitness.vercel.app/",
+    "browser": "Chrome cloud browser",
+    "viewport": {
+      "width": 1363,
+      "height": 936
+    },
+    "pages": [
+      {
+        "page": "contact.html",
+        "mapRendered": true,
+        "keyboardHoursObserved": true,
+        "singleDirectionsLink": true
+      },
+      {
+        "design": [
+          "site-design.css?v=studio-map-1"
+        ],
+        "heading": "FIND YOURTRAINING.",
+        "headingCount": 1,
+        "logoPresent": true,
+        "overflow": false,
+        "page": "/training.html",
+        "url": "https://sport-my-fitness.vercel.app/training.html",
+        "width": 1363
+      },
+      {
+        "design": [
+          "site-design.css?v=studio-map-1"
+        ],
+        "heading": "YOUROPTIONS.",
+        "headingCount": 1,
+        "logoPresent": true,
+        "overflow": false,
+        "page": "/programs.html",
+        "url": "https://sport-my-fitness.vercel.app/programs.html",
+        "width": 1363
+      },
+      {
+        "design": [
+          "site-design.css?v=studio-map-1"
+        ],
+        "heading": "MEETYOSHI.",
+        "headingCount": 1,
+        "logoPresent": true,
+        "overflow": false,
+        "page": "/yoshi.html",
+        "url": "https://sport-my-fitness.vercel.app/yoshi.html",
+        "width": 1363
+      },
+      {
+        "design": [
+          "site-design.css?v=studio-map-1"
+        ],
+        "heading": "INMOTION.",
+        "headingCount": 1,
+        "logoPresent": true,
+        "overflow": false,
+        "page": "/media.html",
+        "url": "https://sport-my-fitness.vercel.app/media.html",
+        "width": 1363
+      },
+      {
+        "design": [
+          "site-design.css?v=studio-map-1"
+        ],
+        "heading": "STRONGERTOGETHER.",
+        "headingCount": 1,
+        "logoPresent": true,
+        "overflow": false,
+        "page": "/community.html",
+        "url": "https://sport-my-fitness.vercel.app/community.html",
+        "width": 1363
+      },
+      {
+        "design": [
+          "site-design.css?v=studio-map-1"
+        ],
+        "heading": "IT ALLTAKESWORK.",
+        "headingCount": 1,
+        "logoPresent": true,
+        "overflow": false,
+        "page": "/index.html",
+        "url": "https://sport-my-fitness.vercel.app/index.html",
+        "width": 1363
+      }
+    ],
+    "home_motion": {
+      "state": "complete",
+      "reason": "complete",
+      "image_loaded": true
+    },
+    "screenshots": {
+      "home": "smf-public-finished-20261017.jpg",
+      "map": "smf-public-map-20261017.jpg"
+    },
+    "limits": [
+      "No physical-device test or real inquiry, email, booking or payment submission."
+    ]
+  },
+  "runtime_changes_during_release": "none; the release commit uses the exact reviewed checkpoint tree",
+  "settings_changes": "none",
+  "google_profile_changes": "none",
+  "preserved": [
+    "Exact original logo and source photographs",
+    "Original page motion and Blender curves",
+    "Contact form, phone, email and external booking destinations",
+    "Existing redirects"
+  ],
+  "screenshots": [
+    {
+      "path": "verification/public-release-20261017-home.jpg",
+      "sha256": "14568ee7e6168bd0608143fd51809deba9cdfc0eddb40892ec2592f1170832da",
+      "bytes": 190697
+    },
+    {
+      "path": "verification/public-release-20261017-map.jpg",
+      "sha256": "986040f13085acb62c976af024e940199526e795e6edebfeeff2cefddc4edb88",
+      "bytes": 88156
+    }
+  ],
+  "completed_utc": "2026-10-17T16:20:49.666128+00:00"
+}

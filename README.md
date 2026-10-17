@@ -6,7 +6,7 @@ Start with [the current project state](docs/PROJECT_STATE.md). It resolves the o
 
 ## Current work
 
-Use the [current review preview](https://sport-my-fitness-naghhevku-routalk-builder.vercel.app) on `review/approved-glass-20261017`; existing Vercel sign-in protection remains.
+The finished design is live at [sport-my-fitness.vercel.app](https://sport-my-fitness.vercel.app/), released from `main` at `cb0786118740c8b146978a1d6aac3304ac5245b2` after PJ's explicit publishing request. The [review preview](https://sport-my-fitness-naghhevku-routalk-builder.vercel.app) remains a historical reference with its existing sign-in protection.
 Mobile inner heroes now end naturally after their copy, removing the large empty
 bands. Layered charcoal, turquoise directional light, background planes and fine
 grain add depth throughout the site. The redundant Home “Find your training” link
@@ -21,8 +21,11 @@ map checks, navigation, motion and map-failure safeguards. Native mobile/desktop
 map renders and the Contact layout were inspected. See
 [current project state](docs/PROJECT_STATE.md), [the reference comparison](docs/design/background-comparison-20261017.md)
 and [current evidence](verification/studio-map-verification-20261017.json).
-PJ's visual review is the next step. Production remains
-[sport-my-fitness.vercel.app](https://sport-my-fitness.vercel.app/).
+The public release matches all 18 approved runtime hashes and the root page.
+Live checks followed all seven menu destinations, rendered the Google business
+map, operated Studio hours and observed the original Home entrance complete.
+All four existing redirects also pass. See the
+[public release receipt](verification/public-release-20261017.json) and its saved screenshots.
 Earlier design reports are historical checkpoints, not current acceptance.
 
 ## Routes

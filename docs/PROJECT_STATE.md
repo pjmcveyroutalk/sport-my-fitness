@@ -1,6 +1,6 @@
 # Sport My Fitness — Current Project State
 
-Updated October 17, 2026 (UTC); final browser run completed 2026-10-17T16:04:05.549Z.
+Updated October 17, 2026 (UTC); approved design published and publicly verified.
 
 ## Current checkpoint
 
@@ -8,12 +8,23 @@ The current refinement adds one clean Google business map, exact-place direction
 collapsible published hours and a short accessible-parking note to Contact. The
 previous mobile spacing, background and landing-page cleanup remain intact.
 
-- Branch: `review/approved-glass-20261017`
+- Production branch: `main`; review branch retained as `review/approved-glass-20261017`.
+- Released commit: `cb0786118740c8b146978a1d6aac3304ac5245b2`.
 - Verified runtime: `3f39e6b9a95b4abe7427cb4686bcad4212a425ec`
 - Review preview: https://sport-my-fitness-naghhevku-routalk-builder.vercel.app
 - Visual authority: PJ's approved board, exact original brand and later refinement requests.
-- Production remains `main` at `c6b209895aa01b7d419fa445d4c31d39ef90b920`.
+- Previous production / rollback source: `c6b209895aa01b7d419fa445d4c31d39ef90b920`.
 - Public site: https://sport-my-fitness.vercel.app/
+
+PJ explicitly requested publishing the finished preview. The production release
+uses the exact reviewed checkpoint tree, with no runtime edits during release.
+The existing GitHub/Vercel integration deployed it successfully as Production
+deployment `7142304892`. All 18 checked public runtime files and the root page
+match their approved SHA-256 hashes; all four existing redirects resolve correctly.
+Live browser checks followed all seven menu destinations, confirmed the correct
+logo and shared design, checked the real Google business map and keyboard hours,
+and observed Home's original entrance finish. Public desktop screenshots and the
+release receipt are saved under `verification/public-release-20261017*`.
 
 ## Location refinement
 
@@ -70,13 +81,16 @@ Native map-component renders were inspected on mobile and desktop in both
 engines, plus the full Contact desktop layout. The pin and street remain clear
 in the compact map. Full-page captures can show a blank offscreen lazy Google
 frame after scrolling to the hero; the native component captures record its
-actual visible rendering. PJ visual approval remains pending.
+actual visible rendering. PJ subsequently authorized applying the finished preview
+to the public site; the release checks above confirm its published source.
 
 - `verification/studio-map-browser-results-20261017.json`: full current results.
 - `verification/studio-map-verification-20261017.json`: exact source hashes,
   preview, artifact, source preservation, visual review and limits.
 - `verification/google-business-listing-20261017.json`: primary listing observations.
 - CI artifact `12105534538`: screenshots and motion recordings.
+- `verification/public-release-20261017.json`: production identity, exact public
+  source comparisons, live browser checks, screenshots and rollback baseline.
 
 The first map test expected the painted business label as DOM text. Inspection of
 Google's own live embed identified that test error; the corrected check retains
@@ -90,9 +104,9 @@ reports are historical, not current acceptance.
 
 ## Next step
 
-PJ reviews the preview above. If publishing is requested, recheck `main` and
-release the reviewed branch through the existing GitHub/Vercel workflow.
-No production promotion, merge, domain, environment or protection setting changed.
+The finished preview is live. Continue from `main` and this release receipt for
+future requests. No domain, environment, protection setting or Google profile was
+changed. The blank Google listing website field remains a separate owner follow-up.
 
 Keep the existing static HTML/CSS/JavaScript architecture. Historical handoffs and
 studies cannot override PJ's board or later removal and refinement requests.

@@ -2,6 +2,14 @@
 
 Start at [the current project state](../docs/PROJECT_STATE.md).
 
+The finished preview was published at PJ's request on October 17, 2026. See
+`public-release-20261017.json` for the successful Production deployment, exact
+public comparisons of 18 runtime files and the root page, four redirect checks,
+all seven live menu destinations, native Google map and hours checks, original
+Home motion completion and saved public screenshots. Runtime files remain
+identical to the reviewed source below. Earlier ready-for-review receipts retain
+their historical status; the public-release receipt records current publication.
+
 recovery-audit-20261016.json contains fresh source, production HTTP, Chromium, WebKit and follow-up evidence. cinematic-content-baseline-20261016.json captures protected seven-page text and attributes.
 
 October 11 motion-polish reports are historical checks of the older composition. Their exact geometry is not the current cinematic visual specification. Retain functional safeguards and test the redesigned appearance against the corrected references.

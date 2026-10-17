@@ -17,12 +17,15 @@
   --hero-floor: clamp(720px, 64vw, 980px);
   --hero-kicker-slot: 34px;
   --hero-photo-min: 0px;
-  --canvas-color: #081115;
-  --canvas-image: url("assets/athletic-grain.svg"), repeating-linear-gradient(135deg, #ffffff05 0 1px, transparent 1px 5px), radial-gradient(ellipse at 85% 12%, #17434b55, transparent 62%);
+  --canvas-color: #101a21;
+  --canvas-panels: linear-gradient(122deg, transparent 0 48%, #90c6d126 48.05%, #28475366 48.2%, #09131b33 82%, transparent 82.15%);
+  --canvas-light: radial-gradient(ellipse at 100% 0, #16636d80, transparent 66%);
+  --canvas-image: url("assets/athletic-grain.svg"), var(--canvas-panels), var(--canvas-light), linear-gradient(120deg, #1a2c35, #101a21 58%, #132c34);
+  --canvas-size: 180px 180px, 100% 100%, 100% 100%, 100% 100%;
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 28px; scrollbar-gutter: stable; }
-body { margin: 0; padding-left: var(--rail-width); color: var(--ink); background-color: var(--canvas-color); background-image: var(--canvas-image); font: 17px/1.6 var(--body); }
+body { margin: 0; padding-left: var(--rail-width); color: var(--ink); background-color: var(--canvas-color); background-image: var(--canvas-image); background-size: var(--canvas-size); font: 17px/1.6 var(--body); }
 main { min-height: 65vh; }
 a { color: inherit; text-decoration: none; }
 button, input, select, textarea { font: inherit; }
@@ -79,15 +82,15 @@ h3 { font: 700 clamp(24px, 2.3vw, 36px)/1.15 var(--label); letter-spacing: .02em
 .menu-fallback summary::-webkit-details-marker { display: none; }
 .menu-fallback[open] { width: min(304px, calc(100vw - 36px)); max-height: calc(100dvh - 64px); overflow: auto; padding: 18px; border: 1px solid #54747e; border-radius: 16px; }
 .menu-fallback[open] summary { margin-bottom: 12px; }
-.site-footer { border-top: 1px solid var(--line); background: url("assets/athletic-grain.svg"), #061013; }
+.site-footer { border-top: 1px solid #48636c; background: url("assets/athletic-grain.svg"), linear-gradient(100deg, #0c171e, #18343d, #0c171e); }
 .footer-bottom { display: flex; align-items: center; justify-content: center; gap: 22px; padding-block: 26px; color: var(--muted); font-size: 12px; }
 .footer-tagline { color: var(--teal); font: 700 14px/1.4 var(--label); letter-spacing: .18em; }
 
 /* Reference composition: one continuous waterfront image, live type over it.
    Never stack the image above the headline on mobile. */
-:is(.hero, .page-hero) { position: relative; isolation: isolate; overflow: hidden; min-height: var(--hero-floor); background-color: var(--canvas-color); background-image: var(--canvas-image); border-bottom: 1px solid var(--line); }
-/* One canvas, copy origin and type scale for all seven hero sections. */
-.hero-art { position: absolute; z-index: 2; inset: 0; pointer-events: none; background-image: url('assets/athletic-grain.svg'), linear-gradient(90deg, #081115ed 0%, #081115c9 25%, #08111555 45%, #08111500 67%), linear-gradient(0deg, #081115 0%, #08111500 36%); background-size: 180px 180px, 100% 100%, 100% 100%; background-repeat: repeat, no-repeat, no-repeat; }
+:is(.hero, .page-hero) { position: relative; isolation: isolate; overflow: hidden; min-height: var(--hero-floor); background-color: var(--canvas-color); background-image: var(--canvas-image); background-size: var(--canvas-size); border-bottom: 1px solid #48636c; }
+/* Shared type and alignment; short mobile heroes end with their actual copy. */
+.hero-art { position: absolute; z-index: 2; inset: 0; pointer-events: none; background-image: url('assets/athletic-grain.svg'), var(--canvas-panels), linear-gradient(90deg, #101a21ed 0%, #101a21c9 25%, #101a2155 45%, #101a2100 67%), linear-gradient(0deg, #101a21f2 0%, #101a2100 42%); background-size: var(--canvas-size); background-repeat: repeat, no-repeat, no-repeat, no-repeat; }
 .hero-inner, .page-hero-inner { display: block; position: relative; z-index: 3; padding-block: calc(var(--header-height) + 24px) 40px; }
 .hero-copy, .page-hero-copy { position: relative; width: 51%; max-width: 650px; padding-top: var(--hero-kicker-slot); min-width: 0; }
 .hero-eyebrow { position: absolute; left: 0; top: 0; color: var(--teal); margin: 0; }
@@ -113,7 +116,7 @@ h1 > span { display: block; }
 .mission-inner { display: flex; align-items: center; justify-content: center; gap: 24px; }
 .mission-inner > span { flex: 1; max-width: 120px; height: 1px; background: #326775; }
 .mission-inner p { color: var(--teal); font: 700 clamp(13px, 1.35vw, 21px)/1.5 var(--label); letter-spacing: .18em; text-align: center; }
-.training-section { padding-block: 25px 38px; background: var(--canvas-image), linear-gradient(135deg, #112329b3, #08111540); }
+.training-section { padding-block: 25px 38px; }
 .training-section h2 { margin-bottom: 22px; font-size: clamp(32px, 3.2vw, 52px); }
 .training-section h2::after { content: ''; display: inline-block; vertical-align: middle; width: 26%; height: 1px; margin-left: 24px; background: var(--teal); }
 .training-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -126,7 +129,7 @@ h1 > span { display: block; }
 
 /* Original photos sit in the shared hero canvas; their own ratios remain intact. */
 .page-hero .hero-visual { position: absolute; top: 0; right: 0; width: min(64%, calc(var(--hero-floor) * var(--hero-photo-ratio, var(--photo-ratio, 1.5)))); max-width: none; overflow: hidden; }
-.page-hero .hero-visual::after { content: ''; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(90deg, #081115b3, #08111500 34%), linear-gradient(0deg, #081115, #08111500 34%); }
+.page-hero .hero-visual::after { content: ''; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(90deg, #101a21b3, #101a2100 34%), linear-gradient(0deg, #101a21, #101a2100 38%); }
 .hero-visual img { position: relative; left: 50%; width: max(100%, calc(var(--hero-photo-min) * var(--photo-ratio, 1.5))); max-width: none; height: auto; transform: translateX(-50%); border-radius: 0; }
 .unique-hero-photo-wrap { width: 100%; }
 /* Use only the real gym portion of the former painted composition. This is a
@@ -137,6 +140,9 @@ h1 > span { display: block; }
 .hero-credit a, .contact-hero-credit a, .media-hero-credit a { text-decoration: underline; text-underline-offset: 3px; }
 
 /* Original page content, now in the same black, turquoise and smoked-glass system. */
+/* Broad tonal planes create depth; grain stays a finishing detail. No animation. */
+main > section:not(.hero):not(.page-hero):not(.mission-strip) { background-color: var(--canvas-color); background-image: var(--canvas-image); background-size: var(--canvas-size); }
+main > section:nth-of-type(odd):not(.hero):not(.page-hero):not(.mission-strip) { --canvas-light: radial-gradient(ellipse at 0 0, #14596570, transparent 66%); }
 .trainer-section, .programs-section, .yoshi-story-section, .media-community, .community-programs { padding-block: clamp(48px, 5vw, 90px); }
 .trainer-intro, .story-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 52px 7%; align-items: center; }
 .trainer-heading-copy > .eyebrow, .programs-section > .wrap > .eyebrow, .story-intro .eyebrow, .media-feature-copy .eyebrow, .media-community .eyebrow, .community-section-intro .eyebrow, .community-notices .eyebrow { margin-bottom: 16px; }
@@ -185,7 +191,7 @@ figcaption a, .quote-source { color: var(--muted); font-size: 12px; text-decorat
 .chapter-label { font: 700 13px/1.5 var(--label); letter-spacing: .13em; margin-bottom: 10px; }
 .story-chapter h3 { margin-bottom: 12px; }
 .story-chapter .chapter-history { margin-top: 14px; color: var(--teal); font-size: 13px; }
-.story-words { padding-block: 48px; background: var(--canvas-image), #0b1c22; border-block: 1px solid var(--line); }
+.story-words { padding-block: 48px; border-block: 1px solid var(--line); }
 .story-words blockquote { margin: 20px 0; padding-left: 24px; border-left: 3px solid var(--teal); }
 .story-words blockquote p { font: 700 clamp(29px, 3.3vw, 48px)/1.2 var(--label); max-width: 1050px; }
 .story-connect { padding-block: 46px; }
@@ -287,8 +293,10 @@ figcaption a, .quote-source { color: var(--muted); font-size: 12px; text-decorat
 @media (max-width: 800px) {
   :root { --hero-floor: clamp(600px, 160vw, 900px); --hero-title: clamp(58px, 16.4vw, 96px); --hero-kicker-slot: calc(clamp(11px, 3.5vw, 16px) * 1.45 + 6px); --hero-photo-min: clamp(280px, 82vw, 390px); }
   .hero-inner, .page-hero-inner { padding-top: min(56vw, 390px); padding-bottom: 14px; }
+  .page-hero { min-height: 0; }
+  .page-hero-inner { padding-bottom: 32px; }
   .hero-copy, .page-hero-copy { width: 100%; max-width: none; }
-  .hero-art { background-image: url("assets/athletic-grain.svg"), linear-gradient(to bottom, #08111500 0%, #08111500 43vw, #08111588 66vw, #081115ed 108vw, #081115 149vw); background-size: 180px 180px, 100% 100%; background-repeat: repeat, no-repeat; }
+  .hero-art { background-image: url("assets/athletic-grain.svg"), var(--canvas-panels), radial-gradient(ellipse at 100% 100%, #12657344, transparent 65%), linear-gradient(to bottom, #101a2100 0%, #101a2100 43vw, #101a2188 66vw, #101a21ed 108vw, #101a21 149vw); background-size: var(--canvas-size); background-repeat: repeat, no-repeat, no-repeat, no-repeat; }
   .yoshi-stage { inset: 0; width: 100%; overflow: visible; }
   .yoshi-hero { position: absolute; top: calc(-1 * min(12vw, 60px)); left: 66%; right: auto; width: auto; height: calc(100% + min(12vw, 60px)); transform: translateX(-73%); }
   .hero-eyebrow { font-size: clamp(11px, 3.5vw, 16px); letter-spacing: .12em; margin-bottom: 0; }
@@ -338,6 +346,7 @@ figcaption a, .quote-source { color: var(--muted); font-size: 12px; text-decorat
   .story-personal-links { min-width: 0; }
   .story-words blockquote br { display: none; }
   .story-lead { padding-left: 18px; }
+  .media-films { padding-top: 48px; }
   .film-poster { padding: 20px; }
   .film-poster-title { font-size: clamp(36px, 8.9vw, 61px); }
   .film-poster-top, .film-poster-bottom { font-size: 12px; }

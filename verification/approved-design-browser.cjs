@@ -55,7 +55,12 @@ async function layout(page, route, width, engine) {
     const primary = document.querySelector('main > section .hero-actions .button');
     const buttonStyle = primary ? getComputedStyle(primary) : null;
     const heroStyle = {font: titleStyle.fontFamily, size: titleStyle.fontSize, line: titleStyle.lineHeight, weight: titleStyle.fontWeight, titleOffset: h1.getBoundingClientRect().top - hero.top, height: hero.height, texture: getComputedStyle(document.body).backgroundImage, overlay: !!document.querySelector('main > section > .hero-art'), button: buttonStyle ? {font: buttonStyle.fontSize, minHeight: buttonStyle.minHeight, radius: buttonStyle.borderRadius} : null};
-    return {heroStyle, width: innerWidth, scrollWidth: document.documentElement.scrollWidth, overflow, headline, hero: hero.toJSON(), h1: h1.getBoundingClientRect().toJSON(), subline: subline.toJSON()};
+    const copy = document.querySelector('.hero-copy,.page-hero-copy').getBoundingClientRect();
+    const nextSection = document.querySelector('main > section + section');
+    const nextContent = nextSection?.querySelector('.wrap');
+    const transition = {afterCopy: hero.bottom - copy.bottom, nextContent: nextContent ? nextContent.getBoundingClientRect().top - copy.bottom : null};
+    const sectionSurface = nextSection ? getComputedStyle(nextSection).backgroundImage : null;
+    return {heroStyle, transition, sectionSurface, width: innerWidth, scrollWidth: document.documentElement.scrollWidth, overflow, headline, hero: hero.toJSON(), h1: h1.getBoundingClientRect().toJSON(), subline: subline.toJSON()};
   });
   const sharedKey = `${engine}-${width}`;
   const appearance = geometry.heroStyle;
@@ -66,8 +71,12 @@ async function layout(page, route, width, engine) {
     assert(reference, 'Home hero reference has not been checked');
     for (const key of ['font', 'size', 'line', 'weight']) assert.equal(appearance[key], reference[key], `inconsistent hero ${key} on ${route} ${width}`);
     assert(Math.abs(appearance.titleOffset - reference.titleOffset) < 1, `hero title origin differs on ${route} ${width}`);
-    assert(Math.abs(appearance.height - reference.height) < 1, `hero canvas height differs on ${route} ${width}`);
+    if (width > 800) assert(Math.abs(appearance.height - reference.height) < 1, `hero canvas height differs on ${route} ${width}`);
     if (appearance.button) assert.deepEqual(appearance.button, reference.button, `hero action styling differs on ${route}`);
+    if (width <= 800) {
+      assert(geometry.transition.afterCopy >= 24 && geometry.transition.afterCopy <= 40, `empty mobile hero band on ${route} ${width}: ${JSON.stringify(geometry.transition)}`);
+      assert(geometry.transition.nextContent <= 96, `next mobile section is separated by excess blank space on ${route} ${width}: ${JSON.stringify(geometry.transition)}`);
+    }
   }
   assert(geometry.scrollWidth <= geometry.width, 'horizontal overflow: ' + JSON.stringify(geometry));
   assert(geometry.headline.every(r => r.left >= geometry.hero.left - 2 && r.right <= geometry.hero.right - 6), 'headline clipped at viewport edge: ' + JSON.stringify(geometry));

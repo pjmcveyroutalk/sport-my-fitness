@@ -92,7 +92,13 @@ async function navigation(page, route, width) {
   await trigger.click();
   assert(await page.locator('#site-menu').isVisible(), 'menu unavailable at bottom of page');
   await page.keyboard.press('Escape');
-  report.navigation.push({route, width, sevenDestinations: true, keyboard: true, close: true, stablePage: true, bottomAccess: true});
+  const next = routes[(routes.indexOf(route) + 1) % routes.length];
+  await trigger.click();
+  const destination = page.waitForURL(url => url.pathname.endsWith('/' + next + '.html'));
+  await page.locator(`#primary-nav a[href="${next}.html"]`).click();
+  await destination;
+  assert.equal(await page.locator('h1').count(), 1, 'menu destination did not load');
+  report.navigation.push({route, width, sevenDestinations: true, keyboard: true, close: true, stablePage: true, bottomAccess: true, navigatedTo: next});
 }
 async function motion(browser, route, width, record) {
   const context = await browser.newContext({viewport: {width, height: 900}, reducedMotion: 'no-preference', ...(record ? {recordVideo: {dir: path.join(out, 'motion'), size: {width, height: 900}}} : {})});

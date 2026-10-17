@@ -18,10 +18,18 @@
   panel.append(navigation);
   fallback.hidden = true;
 
-  function closeMenu() { if (panel.open) panel.close(); }
+  function closeMenu() {
+    if (!panel.open) return;
+    panel.close();
+    // Native close events can arrive on a later task. Keep the control's
+    // accessible state and page scroll in sync with the visible closed panel.
+    restore();
+  }
   function restore() {
+    const wasOpen = toggle.getAttribute('aria-expanded') === 'true';
     toggle.setAttribute('aria-expanded', 'false');
     document.body.style.overflow = scrollOverflow;
+    if (wasOpen && document.visibilityState !== 'hidden') toggle.focus({preventScroll: true});
   }
   toggle.hidden = false;
   toggle.addEventListener('click', () => {
@@ -33,6 +41,7 @@
     close.focus({preventScroll: true});
   });
   close.addEventListener('click', closeMenu);
+  panel.addEventListener('cancel', event => { event.preventDefault(); closeMenu(); });
   panel.addEventListener('close', restore);
   panel.addEventListener('keydown', event => {
     if (event.key !== 'Tab' || !panel.open) return;

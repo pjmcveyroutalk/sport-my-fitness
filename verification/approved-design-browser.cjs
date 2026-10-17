@@ -60,11 +60,13 @@ async function layout(page, route, width, engine) {
       const rect = selector => document.querySelector(selector).getBoundingClientRect().toJSON();
       return {header: rect('.site-header'), photo: rect('.yoshi-hero'), heading: rect('h1'), actions: rect('.hero-actions'), mission: rect('.mission-strip')};
     });
+    await page.evaluate(() => scrollTo({top: 0, behavior: 'instant'}));
+    await page.screenshot({path: path.join(out, `${engine}-${route}-${width}.png`), fullPage: true});
     assert(composition.header.height <= 90, 'mobile header is taller than the approved composition');
     assert(composition.heading.top < composition.photo.bottom - 70, 'mobile headline has been stacked below the photograph');
     assert(composition.heading.height < width * .48, 'mobile title is oversized against the reference');
     assert(composition.mission.top - composition.header.bottom < width * 1.75, 'mobile hero is too tall against the approved reference');
-    assert(composition.photo.bottom >= composition.actions.bottom - 10, 'waterfront does not fill the hero behind the actions');
+    assert(composition.photo.bottom >= composition.actions.bottom - 10, 'waterfront does not fill the hero behind the actions: ' + JSON.stringify(composition));
     report.safeguards.push({test: 'approved-mobile-composition', width, composition, pass: true});
   }
   assert.deepEqual(errors, []);

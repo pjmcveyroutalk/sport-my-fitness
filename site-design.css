@@ -11,7 +11,7 @@
   --label: Rajdhani, "Arial Narrow", sans-serif;
   --body: Arial, Helvetica, sans-serif;
   --rail-width: 76px;
-  --header-height: 156px;
+  --header-height: 176px;
   --gutter: clamp(24px, 4vw, 64px);
 }
 * { box-sizing: border-box; }
@@ -45,9 +45,10 @@ h3 { font: 700 clamp(24px, 2.3vw, 36px)/1.15 var(--label); letter-spacing: .02em
 
 /* The rail stays available at the bottom of every page. The drawer overlays
    content instead of changing its width or interrupting the page choreography. */
-.site-header { position: absolute; top: 0; left: var(--rail-width); right: 0; z-index: 30; height: var(--header-height); background: linear-gradient(90deg, #000 0%, #000 17%, #0000 50%); }
+.site-header { position: absolute; top: 0; left: var(--rail-width); right: 0; z-index: 30; height: var(--header-height); background: linear-gradient(90deg, #000 0%, #000 22%, #0000 50%); }
+.site-header::after { content: ''; position: absolute; left: 0; bottom: 0; width: 38%; height: 1px; background: linear-gradient(90deg, var(--line), #29414900); }
 .header-inner { display: flex; align-items: center; justify-content: space-between; height: 100%; }
-.brand { display: block; width: 216px; flex-shrink: 0; }
+.brand { display: block; width: 254px; flex-shrink: 0; }
 .brand-logo { display: block; width: 100%; height: auto; aspect-ratio: 1100 / 725; }
 .menu-rail { position: fixed; z-index: 20; inset: 0 auto 0 0; width: var(--rail-width); border-right: 1px solid #2a555f; background: linear-gradient(140deg, #0d2028e6, #061014e6 55%, #0b2028e6); box-shadow: inset -1px 0 18px #00d9e009; -webkit-backdrop-filter: blur(18px); backdrop-filter: blur(18px); }
 .menu-toggle { position: fixed; z-index: 85; left: 12px; top: 32px; display: flex; align-items: center; justify-content: center; flex-direction: column-reverse; gap: 11px; min-width: 52px; min-height: 65px; padding: 10px 6px; border: 1px solid transparent; border-radius: 9px; background: transparent; color: var(--ink); }
@@ -93,7 +94,7 @@ h1 > span { display: block; }
 .hero-actions .button, .hero-actions .text-link { min-width: 180px; }
 .yoshi-stage { position: absolute; z-index: 1; inset: 0; width: 100%; overflow: hidden; pointer-events: none; }
 .yoshi-hero { position: absolute; right: -5%; top: 0; max-width: none; width: auto; height: 100%; }
-.mission-strip { position: relative; z-index: 2; padding-block: 17px; border-block: 1px solid #35616d; background: linear-gradient(#001018d9, #001018e6), url('assets/photos/smf-waterfront-hero-1200.webp') center 88% / cover; }
+.mission-strip { position: relative; z-index: 2; padding-block: 17px; border-block: 1px solid #35616d; background: linear-gradient(#001018d9, #001018e6), url('assets/photos/smf-waterfront-hero-1200.webp') left 90% / 200% auto; }
 .mission-inner { display: flex; align-items: center; justify-content: center; gap: 24px; }
 .mission-inner > span { flex: 1; max-width: 120px; height: 1px; background: #326775; }
 .mission-inner p { color: var(--teal); font: 700 clamp(13px, 1.35vw, 21px)/1.5 var(--label); letter-spacing: .18em; text-align: center; }
@@ -268,6 +269,7 @@ figcaption a, .quote-source { color: var(--muted); font-size: 12px; text-decorat
   html { scroll-padding-top: 108px; }
   body { padding-top: var(--header-height); }
   .site-header { position: fixed; left: 0; height: var(--header-height); background: #000000f5; border-bottom: 1px solid #25444d; -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px); }
+  .site-header::after { display: none; }
   .brand { width: 116px; }
   .menu-rail { display: none; }
   .menu-toggle { position: static; flex-direction: row; min-height: 44px; min-width: 76px; gap: 10px; padding: 8px 0 8px 8px; border: 0; border-radius: 0; }
@@ -285,8 +287,8 @@ figcaption a, .quote-source { color: var(--muted); font-size: 12px; text-decorat
   .hero-inner { padding-top: min(60vw, 390px); padding-bottom: 14px; }
   .hero-copy { width: 100%; max-width: none; }
   .hero-art { background: linear-gradient(to bottom, #0000 0%, #0000 43vw, #00101888 66vw, #000d 108vw, #000 149vw); }
-  .yoshi-stage { top: -12vw; bottom: auto; left: auto; width: 286%; max-width: none; right: -44%; aspect-ratio: 1585 / 992; overflow: visible; }
-  .yoshi-hero { position: static; width: 100%; height: auto; }
+  .yoshi-stage { inset: 0; width: 100%; overflow: visible; }
+  .yoshi-hero { position: absolute; top: calc(-1 * min(12vw, 60px)); left: 66%; right: auto; width: auto; height: calc(100% + min(12vw, 60px)); transform: translateX(-73%); }
   .hero-eyebrow { font-size: clamp(11px, 3.1vw, 16px); letter-spacing: .12em; margin-bottom: 6px; }
   .hero h1 { font-size: clamp(58px, 16.4vw, 96px); line-height: .86; margin-bottom: 8px; }
   .hero h1 > span { transform: scaleX(1.12); }

@@ -34,6 +34,16 @@
   });
   close.addEventListener('click', closeMenu);
   panel.addEventListener('close', restore);
+  panel.addEventListener('keydown', event => {
+    if (event.key !== 'Tab' || !panel.open) return;
+    const controls = [...panel.querySelectorAll('a[href],button:not(:disabled),[tabindex]:not([tabindex="-1"])')].filter(el => el.getClientRects().length);
+    const first = controls[0], last = controls[controls.length - 1];
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault(); last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault(); first.focus();
+    }
+  });
   panel.addEventListener('click', event => {
     if (event.target.closest('a')) closeMenu();
     if (event.target === panel) {

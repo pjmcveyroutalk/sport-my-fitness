@@ -55,7 +55,7 @@ h3 { font: 700 clamp(24px, 2.3vw, 36px)/1.15 var(--label); letter-spacing: .02em
 .menu-label { font: 700 10px/1.2 var(--body); letter-spacing: .08em; text-transform: uppercase; }
 .menu-lines { position: relative; width: 21px; height: 16px; border-block: 2px solid currentColor; }
 .menu-lines::after { content: ""; position: absolute; left: 0; right: 0; top: 5px; border-top: 2px solid currentColor; }
-.menu-panel { position: fixed; z-index: 80; top: 14px; left: 90px; width: 304px; max-height: calc(100dvh - 28px); overflow-y: auto; overscroll-behavior: contain; padding: 24px 22px 26px; border: 1px solid #59828c; border-radius: 20px; background: linear-gradient(140deg, #122c36eb, #061014f5 45%, #0d252eeb); box-shadow: 0 18px 60px #000b, inset 0 0 30px #03d6df07; -webkit-backdrop-filter: blur(24px); backdrop-filter: blur(24px); }
+.menu-panel { position: fixed; z-index: 80; top: 14px; left: 90px; right: auto; bottom: auto; margin: 0; width: 304px; max-height: calc(100dvh - 28px); overflow-y: auto; overscroll-behavior: contain; padding: 24px 22px 26px; border: 1px solid #59828c; border-radius: 20px; background: linear-gradient(140deg, #122c36eb, #061014f5 45%, #0d252eeb); box-shadow: 0 18px 60px #000b, inset 0 0 30px #03d6df07; -webkit-backdrop-filter: blur(24px); backdrop-filter: blur(24px); }
 .menu-panel:not([open]) { display: none; }
 .menu-panel::backdrop { background: #0005; }
 .menu-heading { display: flex; align-items: center; gap: 16px; padding: 20px 22px; margin: -24px -22px 6px; background: #000; border-bottom: 1px solid var(--line); }
@@ -116,6 +116,11 @@ h1 > span { display: block; }
 .hero-visual img { width: 100%; height: auto; object-fit: contain; border-radius: 12px; }
 .hero-visual figcaption { padding-top: 12px; color: var(--muted); font-size: 12px; }
 .unique-hero-photo-wrap { width: 100%; }
+/* The gym artwork includes a large transparent area reserved for the old
+   headline. Crop that empty canvas in the layout, keeping the photo itself at
+   its original scale ratio; otherwise it appears half the intended size. */
+.training-page .training-hero-art { position: relative; aspect-ratio: 1016 / 850; overflow: hidden; }
+.training-page .training-hero-art img { position: absolute; width: 156.1024%; max-width: none; height: auto; left: -56.1024%; top: -5.8824%; border-radius: 0; }
 .hero-visual figcaption a, .contact-hero-credit a, .media-hero-credit a { text-decoration: underline; text-underline-offset: 3px; }
 .contact-hero-credit, .media-hero-credit { color: var(--muted); font-size: 12px; line-height: 1.6; margin-top: 22px; }
 .page-hero .hero-actions .button { min-width: 175px; }

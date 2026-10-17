@@ -69,11 +69,14 @@ async function navigation(page, route, width) {
   assert.equal(await trigger.getAttribute('aria-expanded'), 'true');
   assert(await page.locator('#site-menu').isVisible());
   assert.equal(await page.locator('#site-menu #primary-nav a:visible').count(), 7);
+  const menuBox = await page.locator('#site-menu').boundingBox();
+  assert(Math.abs(menuBox.y - (width > 900 ? 14 : 12)) < 10, 'menu is not anchored near the top');
+  if (width > 900) assert(Math.abs(menuBox.x - 90) < 1, 'desktop menu is not anchored beside the rail');
   const during = await page.locator('h1').boundingBox();
   assert(Math.abs(initial.x - during.x) < 1 && Math.abs(initial.width - during.width) < 1, 'menu changes page geometry');
-  for (let i = 0; i < 12; i++) {
-    await page.keyboard.press('Tab');
-    assert(await page.evaluate(() => document.querySelector('#site-menu').contains(document.activeElement)), 'modal focus escaped');
+  for (const key of ['Tab', 'Shift+Tab']) for (let i = 0; i < 12; i++) {
+    await page.keyboard.press(key);
+    assert(await page.evaluate(() => document.querySelector('#site-menu').contains(document.activeElement)), 'modal focus escaped after ' + key + ' ' + i);
   }
   if (route === 'index') await page.screenshot({path: path.join(out, `menu-${width}.png`)});
   await page.keyboard.press('Escape');

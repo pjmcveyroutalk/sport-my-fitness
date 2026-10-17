@@ -55,6 +55,11 @@ async function layout(page, route, width, engine) {
   assert(geometry.scrollWidth <= geometry.width, 'horizontal overflow: ' + JSON.stringify(geometry));
   assert(geometry.headline.every(r => r.left >= geometry.hero.left - 2 && r.right <= geometry.hero.right - 6), 'headline clipped at viewport edge: ' + JSON.stringify(geometry));
   assert(geometry.h1.bottom <= geometry.subline.top + 2, 'headline overlaps supporting copy');
+  if (route === 'index' && width >= 1200) {
+    const actions = await page.locator('.hero-actions > a').evaluateAll(links => links.map(link => link.getBoundingClientRect().toJSON()));
+    assert(Math.abs(actions[0].top - actions[1].top) < 1, 'desktop hero actions must share a row, as in the approved reference');
+    assert(Math.abs(actions[0].width - actions[1].width) < 1, 'desktop hero actions must have equal widths');
+  }
   if (route === 'index' && width <= 430) {
     const composition = await page.evaluate(() => {
       const rect = selector => document.querySelector(selector).getBoundingClientRect().toJSON();

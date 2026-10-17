@@ -90,8 +90,8 @@ h1 > span { display: block; }
 .hero h1 > span { width: fit-content; transform: scaleX(1.2); transform-origin: left center; }
 .hero .hero-subline { font-size: clamp(22px, 2.3vw, 36px); }
 .hero .hero-description { font-size: clamp(17px, 1.65vw, 26px); line-height: 1.35; }
-.hero .hero-actions { gap: 20px; }
-.hero .hero-actions .button, .hero .hero-actions .text-link { min-width: clamp(180px, 21vw, 310px); min-height: 64px; padding: 14px 28px; font-size: 20px; }
+.hero .hero-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.hero .hero-actions .button, .hero .hero-actions .text-link { min-width: 0; min-height: 64px; padding: 14px 28px; font-size: 20px; }
 .hero-subline { font-size: clamp(20px, 1.9vw, 30px); line-height: 1.25; font-weight: 700; }
 .hero-description { max-width: 38ch; color: #e1ebed; margin-top: 10px; line-height: 1.5; font-size: clamp(16px, 1.4vw, 22px); }
 .hero-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 14px; margin-top: 27px; }
@@ -260,6 +260,8 @@ figcaption a, .quote-source { color: var(--muted); font-size: 12px; text-decorat
   .hero-copy { width: 58%; }
   .hero h1 { font-size: 112px; }
   .hero-actions { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .hero .hero-actions { grid-template-columns: 1fr; justify-items: start; }
+  .hero .hero-actions .button, .hero .hero-actions .text-link { width: min(100%, 310px); }
   .page-hero { gap: 30px; min-height: 620px; }
   .page-hero h1 { font-size: 85px; }
   .training-page .page-hero h1 { font-size: 67px; }
@@ -300,7 +302,7 @@ figcaption a, .quote-source { color: var(--muted); font-size: 12px; text-decorat
   .hero-description, .hero .hero-description { font-size: 16px; line-height: 1.25; max-width: 36ch; margin-top: 4px; }
   .hero-actions { flex-direction: column; align-items: stretch; gap: 8px; margin-top: 14px; }
   .hero-actions .button, .hero-actions .text-link { width: 100%; min-width: 0; justify-content: center; }
-  .hero .hero-actions { gap: 8px; }
+  .hero .hero-actions { grid-template-columns: 1fr; gap: 8px; }
   .hero .hero-actions .button, .hero .hero-actions .text-link { min-width: 0; min-height: 48px; padding: 10px 22px; font-size: 18px; }
   .hero .hero-actions .text-link { min-height: 44px; padding-block: 8px; font-size: 16px; font-weight: 400; }
   .hero .hero-actions .text-link > span[aria-hidden] { font-size: 22px; }

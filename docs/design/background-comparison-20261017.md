@@ -36,6 +36,7 @@ planes, a restrained edge highlight and turquoise directional light. Keep the
 existing grain as a finishing layer. Apply the shared treatment to content
 sections and the footer so the design continues beyond the hero. No extra
 animation, generated pictures, icons, text or duplicate actions are added.
+Keep the angled planes behind the hero photography, not as stripes over people.
 
 PJ also requested removal of the redundant landing-page link group in the later
 screenshot. The entire “Find your training” section and its three service links

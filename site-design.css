@@ -91,7 +91,7 @@ h3 { font: 700 clamp(24px, 2.3vw, 36px)/1.15 var(--label); letter-spacing: .02em
    Never stack the image above the headline on mobile. */
 :is(.hero, .page-hero) { position: relative; isolation: isolate; overflow: hidden; min-height: var(--hero-floor); background-color: var(--canvas-color); background-image: var(--canvas-image); background-size: var(--canvas-size); border-bottom: 1px solid #48636c; }
 /* Shared type and alignment; short mobile heroes end with their actual copy. */
-.hero-art { position: absolute; z-index: 2; inset: 0; pointer-events: none; background-image: url('assets/athletic-grain.svg'), var(--canvas-panels), linear-gradient(90deg, #101a21ed 0%, #101a21c9 25%, #101a2155 45%, #101a2100 67%), linear-gradient(0deg, #101a21f2 0%, #101a2100 42%); background-size: var(--canvas-size); background-repeat: repeat, no-repeat, no-repeat, no-repeat; }
+.hero-art { position: absolute; z-index: 2; inset: 0; pointer-events: none; background-image: url('assets/athletic-grain.svg'), linear-gradient(90deg, #101a21ed 0%, #101a21c9 25%, #101a2155 45%, #101a2100 67%), linear-gradient(0deg, #101a21f2 0%, #101a2100 42%); background-size: 180px 180px, 100% 100%, 100% 100%; background-repeat: repeat, no-repeat, no-repeat; }
 .hero-inner, .page-hero-inner { display: block; position: relative; z-index: 3; padding-block: calc(var(--header-height) + 24px) 40px; }
 .hero-copy, .page-hero-copy { position: relative; width: 51%; max-width: 650px; padding-top: var(--hero-kicker-slot); min-width: 0; }
 .hero-eyebrow { position: absolute; left: 0; top: 0; color: var(--teal); margin: 0; }
@@ -287,7 +287,7 @@ figcaption a, .quote-source { color: var(--muted); font-size: 12px; text-decorat
   .page-hero { min-height: 0; }
   .page-hero-inner { padding-bottom: 32px; }
   .hero-copy, .page-hero-copy { width: 100%; max-width: none; }
-  .hero-art { background-image: url("assets/athletic-grain.svg"), var(--canvas-panels), radial-gradient(ellipse at 100% 100%, #12657344, transparent 65%), linear-gradient(to bottom, #101a2100 0%, #101a2100 43vw, #101a2188 66vw, #101a21ed 108vw, #101a21 149vw); background-size: var(--canvas-size); background-repeat: repeat, no-repeat, no-repeat, no-repeat; }
+  .hero-art { background-image: url("assets/athletic-grain.svg"), radial-gradient(ellipse at 100% 100%, #12657344, transparent 65%), linear-gradient(to bottom, #101a2100 0%, #101a2100 43vw, #101a2188 66vw, #101a21ed 108vw, #101a21 149vw); background-size: 180px 180px, 100% 100%, 100% 100%; background-repeat: repeat, no-repeat, no-repeat; }
   .yoshi-stage { inset: 0; width: 100%; overflow: visible; }
   .yoshi-hero { position: absolute; top: calc(-1 * min(12vw, 60px)); left: 66%; right: auto; width: auto; height: calc(100% + min(12vw, 60px)); transform: translateX(-73%); }
   .hero-eyebrow { font-size: clamp(11px, 3.5vw, 16px); letter-spacing: .12em; margin-bottom: 0; }

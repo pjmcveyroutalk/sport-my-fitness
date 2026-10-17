@@ -13,11 +13,11 @@ Start at [docs/PROJECT_STATE.md](docs/PROJECT_STATE.md). The October 16 black/tu
 7. Verify keyboard focus in both directions, Escape, close control, actual backdrop taps, current-page labels, all seven destinations, real link following and access from the bottom of the page. The menu must remain usable with JavaScript disabled or its script unavailable.
 8. Verify input interruption, history/deep links, width boundaries and failed/late motion assets. A late response must never hide content or replay an abandoned entrance.
 9. Verify returning visitors with the retained legacy service worker and old cached HTML/JavaScript. Changed active assets use versioned/new URLs; never assume old cached menu code is harmless.
-10. Keep the inquiry/booking services and current redirects. Automated validation must not send a real inquiry, email or booking. Client validation and preserved configuration do not prove mailbox delivery or external booking completion.
+10. Keep the inquiry service and current redirects. Contact's sessions/packages link opens this site's Programs page; its session-request action opens `contact.html#inquiry`. Do not restore the former website's booking URL. Automated validation must not send a real inquiry, email or booking. Client validation and preserved configuration do not prove mailbox delivery.
 11. Record the exact checked commit, browser evidence and preview URL. Preserve the production baseline and rollback identifiers. Merge/promote production only under the user's release authorization after the review build passes.
 
 ## Infrastructure and destinations
 
-Keep the GitHub repository, Vercel project, `https://www.sportmyfitnessmke.com/book-online`, the existing FormSubmit action for `Yoshi_barnes@outlook.com`, direct contact/social/media destinations and existing redirects.
+Keep the GitHub repository, Vercel project, the existing FormSubmit action for `Yoshi_barnes@outlook.com`, direct contact/social/media destinations and existing redirects. PJ's October 17 post-release correction replaces the former site's booking links with the current Programs page and inquiry form.
 
 Do not change domain/DNS, access/protection, environment variables, unrelated API integrations or the external booking provider during presentation work. No framework or hosting migration is required.

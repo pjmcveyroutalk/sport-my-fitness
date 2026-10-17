@@ -4,6 +4,16 @@ Updated October 17, 2026 (UTC); approved design published and publicly verified.
 
 ## Current checkpoint
 
+Post-release correction, October 17: PJ identified the Contact page's final
+“Sessions & packages” link as an unwanted exit to the old website. Contact now
+opens `programs.html` in the same tab. The same obsolete booking URL on Programs
+is replaced with one “Ask about a session” action to `contact.html#inquiry`;
+the duplicate Help me choose action is consolidated into it. Package copy points
+visitors to an inquiry rather than a separate booking page. These are link/copy
+changes only; the form delivery service, layout, logo, images, map and movement
+remain unchanged. This explicit correction supersedes the earlier instruction
+to preserve the former booking URL.
+
 The current refinement adds one clean Google business map, exact-place directions,
 collapsible published hours and a short accessible-parking note to Contact. The
 previous mobile spacing, background and landing-page cleanup remain intact.

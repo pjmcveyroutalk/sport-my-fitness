@@ -15,13 +15,17 @@ remaining copy, rates, credits and useful actions are preserved.
 
 Contact now has one compact Google business map, a single directions link,
 expandable published hours and verified parking information.
+Its “Sessions & packages” link opens the current Programs page, whose single
+session-request action opens the existing inquiry form. Both stay on this site;
+the former website's booking links were removed at PJ's request.
 
 Runtime `3f39e6b` passes 70 Chromium/WebKit layouts, 210 image checks, four native
 map checks, navigation, motion and map-failure safeguards. Native mobile/desktop
 map renders and the Contact layout were inspected. See
 [current project state](docs/PROJECT_STATE.md), [the reference comparison](docs/design/background-comparison-20261017.md)
 and [current evidence](verification/studio-map-verification-20261017.json).
-The public release matches all 18 approved runtime hashes and the root page.
+The original design release matched all 18 approved runtime hashes and the root page;
+the subsequent booking-link correction changes only Contact and Programs HTML.
 Live checks followed all seven menu destinations, rendered the Google business
 map, operated Studio hours and observed the original Home entrance complete.
 All four existing redirects also pass. See the

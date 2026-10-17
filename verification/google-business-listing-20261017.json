@@ -1,0 +1,32 @@
+{
+  "checked_date": "2026-10-17",
+  "source": "Live Google Maps business profile, opened from the existing website's Google Maps link",
+  "source_link": "https://maps.app.goo.gl/kS3fLe1KqUSzdWFj7",
+  "observed_name": "Sportmyfitness",
+  "place_identity": "0x88051b078d37901b:0x135b560b8b18b6b8",
+  "category": "Fitness center",
+  "address": "4722 W Vliet St, Milwaukee, WI 53208",
+  "phone": "+1 414-791-4526",
+  "coordinates": {"latitude": 43.0489075, "longitude": -87.9732069},
+  "hours": {
+    "Monday": "7 AM–6 PM",
+    "Tuesday": "7 AM–7 PM",
+    "Wednesday": "9 AM–5 PM",
+    "Thursday": "7 AM–7 PM",
+    "Friday": "6 AM–2 PM",
+    "Saturday": "10:30 AM–12:30 PM",
+    "Sunday": "Closed"
+  },
+  "about": {"wheelchair_accessible_parking_lot": true, "restroom": true},
+  "rating_at_check": {"score": 5.0, "reviews": 3},
+  "website_field": "Not populated; Google displayed Add website",
+  "existing_site_comparison": {
+    "address_and_phone": "Already correct; address presentation expanded to include St",
+    "new_useful_content": ["Exact-place map", "Single Get directions action", "Collapsible published hours", "Wheelchair-accessible parking lot"],
+    "not_duplicated": ["Existing testimonials", "Rating badge", "Existing phone and email actions", "Basic restroom amenity"]
+  },
+  "embed_source": "Copied from Google's Share > Embed a map UI for this exact business, standard road-map view",
+  "embed_instructions": "https://support.google.com/maps/answer/7101463?hl=en",
+  "listing_changes": "None. No profile edits, website suggestion, review or message submitted.",
+  "owner_follow_up": "Add the approved public website to the business profile after the new website is published."
+}

@@ -10,7 +10,7 @@ const out = process.env.SMF_EVIDENCE_DIR || '/tmp/smf-design-evidence';
 const routes = ['index', 'training', 'programs', 'yoshi', 'media', 'community', 'contact'];
 const widths = [360, 390, 430, 768, 900, 901, 1334, 1920];
 const heroReferences = new Map();
-const report = {started: new Date().toISOString(), layouts: [], navigation: [], motion: [], safeguards: [], failures: []};
+const report = {started: new Date().toISOString(), layouts: [], navigation: [], motion: [], locations: [], safeguards: [], failures: []};
 fs.mkdirSync(out, {recursive: true});
 function save() { fs.writeFileSync(path.join(out, 'results.json'), JSON.stringify(report, null, 2)); }
 async function check(name, fn) {
@@ -33,11 +33,43 @@ async function allPhotos(page) {
       valid: i.complete && i.naturalWidth > 0 && r.width > 0 && r.height > 0 && Math.abs((r.width / r.height) / (i.naturalWidth / i.naturalHeight) - 1) < .015};
   }));
 }
+async function contactLocation(page, width, engine) {
+  const location = page.locator('.contact-location');
+  const map = location.locator('iframe');
+  assert.equal(await map.count(), 1, 'location must have one map');
+  assert.match(await map.getAttribute('src'), /^https:\/\/www\.google\.com\/maps\/embed\?pb=/);
+  assert((await map.getAttribute('src')).includes('0x135b560b8b18b6b8'), 'map points to another business');
+  assert.equal(await map.getAttribute('loading'), 'lazy');
+  assert.match(await map.getAttribute('title'), /4722 W Vliet St/);
+  assert.equal(await map.evaluate(el => getComputedStyle(el).filter), 'none', 'Google map colors or attribution were filtered');
+  assert.equal(await page.locator('.contact-map').count(), 0, 'the old duplicate location link remains');
+  const directions = location.getByRole('link', {name: 'Get directions'});
+  assert.equal(await directions.count(), 1);
+  assert((await directions.getAttribute('href')).includes('/maps/dir//Sportmyfitness,'));
+  assert((await directions.getAttribute('href')).includes('0x135b560b8b18b6b8'));
+  assert.match(await location.locator('address').innerText(), /4722 W Vliet St\s+Milwaukee, WI 53208/);
+  const hours = location.locator('.location-hours');
+  assert.equal(await hours.getAttribute('open'), null, 'hours should start collapsed');
+  await hours.locator('summary').press('Enter');
+  assert.notEqual(await hours.getAttribute('open'), null, 'hours do not expand with a keyboard');
+  assert.deepEqual(await hours.locator('tr').allTextContents(), [
+    'Monday7 AM–6 PM', 'Tuesday7 AM–7 PM', 'Wednesday9 AM–5 PM',
+    'Thursday7 AM–7 PM', 'Friday6 AM–2 PM', 'Saturday10:30 AM–12:30 PM', 'SundayClosed'
+  ], 'hours differ from the verified Google listing');
+  await hours.locator('summary').press('Enter');
+  assert.equal(await hours.getAttribute('open'), null);
+  await map.scrollIntoViewIfNeeded();
+  await page.frameLocator('iframe.studio-map').getByText('Sportmyfitness', {exact: true}).first().waitFor({state: 'visible', timeout: 25000});
+  await location.screenshot({path: path.join(out, `${engine}-location-${width}.png`)});
+  report.locations.push({engine, width, googleBusinessRendered: true, correctPlace: true, singleDirectionsLink: true, keyboardHours: true, lazy: true});
+  save();
+}
 async function layout(page, route, width, engine) {
   const errors = [];
   page.on('pageerror', error => errors.push(error.message));
   await load(page, route);
   const photos = await allPhotos(page);
+  if (route === 'contact' && (width === 390 || width === 1334)) await contactLocation(page, width, engine);
   assert(photos.every(i => i.valid), 'image ratio/decode failure: ' + JSON.stringify(photos.filter(i => !i.valid)));
   assert(photos.every(i => i.mask === 'none'), 'an image is using a decorative alpha mask');
   assert.equal(await page.locator('.page-step,.footer-links,.footer-name').count(), 0, 'redundant page ending remains');
@@ -293,6 +325,19 @@ async function motion(browser, route, width, record) {
       assert.equal(await page.locator('#inquiry-name').evaluate(i => i.validity.customError), true);
       report.safeguards.push({test: 'legacy-worker-stale-contact-html-and-js', pass: true}); await context.close();
     });
+    await check('map unavailable keeps location and directions usable', async () => {
+      const page = await browser.newPage({viewport: {width: 390, height: 900}, reducedMotion: 'reduce'});
+      await page.route(/^https:\/\/www\.google\.com\/maps\/embed\?/, route => route.abort());
+      await load(page, 'contact');
+      await page.locator('.contact-location').scrollIntoViewIfNeeded();
+      assert(await page.locator('.contact-location address').isVisible());
+      assert(await page.getByRole('link', {name: 'Get directions'}).isVisible());
+      await page.locator('.location-hours summary').click();
+      assert.equal(await page.locator('.location-hours tr:visible').count(), 7);
+      assert.equal(await page.locator('.contact-phone').getAttribute('href'), 'tel:+14147914526');
+      report.safeguards.push({test: 'blocked-map-address-directions-hours-available', pass: true});
+      await page.close();
+    });
     await check('late motion data stays static', async () => {
       const page = await browser.newPage({viewport: {width: 390, height: 900}, reducedMotion: 'no-preference'});
       await page.route('**/smf-motion-curves.json', async route => {
@@ -323,5 +368,5 @@ async function motion(browser, route, width, record) {
     });
   } finally { await safari.close(); }
   report.completed = new Date().toISOString(); save();
-  console.log(JSON.stringify({layouts: report.layouts.length, navigation: report.navigation.length, motion: report.motion.length, safeguards: report.safeguards.length, failures: report.failures.length, chromium: report.chromiumVersion, webkit: report.webkitVersion}));
+  console.log(JSON.stringify({layouts: report.layouts.length, navigation: report.navigation.length, motion: report.motion.length, locations: report.locations.length, safeguards: report.safeguards.length, failures: report.failures.length, chromium: report.chromiumVersion, webkit: report.webkitVersion}));
 })().catch(error => { save(); console.error(error.stack); process.exit(1); });

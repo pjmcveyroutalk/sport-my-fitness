@@ -1,0 +1,85 @@
+{
+  "baseline": "44a68c32abcf51e4bc5f8225efddeefff5d71487",
+  "pages": [
+    {
+      "page": "index",
+      "content": "exact after approved duplicate removals",
+      "photos": "unchanged original source paths",
+      "links": "all contextual destinations unchanged",
+      "forms": "unchanged",
+      "metadata": "unchanged",
+      "menu": "all seven routes, one current page",
+      "duplicate_ids": 0
+    },
+    {
+      "page": "training",
+      "content": "exact after approved duplicate removals",
+      "photos": "unchanged original source paths",
+      "links": "all contextual destinations unchanged",
+      "forms": "unchanged",
+      "metadata": "unchanged",
+      "menu": "all seven routes, one current page",
+      "duplicate_ids": 0
+    },
+    {
+      "page": "programs",
+      "content": "exact after approved duplicate removals",
+      "photos": "unchanged original source paths",
+      "links": "all contextual destinations unchanged",
+      "forms": "unchanged",
+      "metadata": "unchanged",
+      "menu": "all seven routes, one current page",
+      "duplicate_ids": 0
+    },
+    {
+      "page": "yoshi",
+      "content": "exact after approved duplicate removals",
+      "photos": "unchanged original source paths",
+      "links": "all contextual destinations unchanged",
+      "forms": "unchanged",
+      "metadata": "unchanged",
+      "menu": "all seven routes, one current page",
+      "duplicate_ids": 0
+    },
+    {
+      "page": "media",
+      "content": "exact after approved duplicate removals",
+      "photos": "unchanged original source paths",
+      "links": "all contextual destinations unchanged",
+      "forms": "unchanged",
+      "metadata": "unchanged",
+      "menu": "all seven routes, one current page",
+      "duplicate_ids": 0
+    },
+    {
+      "page": "community",
+      "content": "exact after approved duplicate removals",
+      "photos": "unchanged original source paths",
+      "links": "all contextual destinations unchanged",
+      "forms": "unchanged",
+      "metadata": "unchanged",
+      "menu": "all seven routes, one current page",
+      "duplicate_ids": 0
+    },
+    {
+      "page": "contact",
+      "content": "exact after approved duplicate removals",
+      "photos": "unchanged original source paths",
+      "links": "all contextual destinations unchanged",
+      "forms": "unchanged",
+      "metadata": "unchanged",
+      "menu": "all seven routes, one current page",
+      "duplicate_ids": 0
+    }
+  ],
+  "approved_removals": [
+    "All seven page-step navigation panels",
+    "All seven repeated footer menus and footer wordmarks/taglines",
+    "Repeated inner-page mission bands and brand eyebrows; retained on Home",
+    "Duplicate mobile portrait attribution; one responsive caption retained",
+    "Duplicate featured-film caption and brand label",
+    "Repeated inline booking link on Contact; booking action retained in direct-contact list",
+    "Platform pictograms; readable destination labels retained"
+  ],
+  "original_photo_and_curve_changes": []
+}

@@ -6,11 +6,9 @@ Start with [the current project state](docs/PROJECT_STATE.md). It resolves the o
 
 ## Current work
 
-The approved target is the cinematic redesign, using the four supplied references. The existing seven-page content, authentic photographic subjects, destinations, and form behavior remain protected.
+The approved black/turquoise design with a restrained glass menu is implemented on `review/approved-glass-20261017`, based on the verified recovery commit. The original logo artwork and photographs are preserved. Redundant page-end panels and footer navigation are removed; contextual actions and original motion remain.
 
-The technical starting point is `review/motion-photo-polish-20261011` at `03a1796faeadd8aa49ae221d2e5e81cc2196c638`. It is reusable motion/photo work in the older composition, not a completed cinematic redesign.
-
-Production is [sport-my-fitness.vercel.app](https://sport-my-fitness.vercel.app/) at `c6b209895aa01b7d419fa445d4c31d39ef90b920`, verified October 16, 2026.
+See [the current project state](docs/PROJECT_STATE.md) for the controlling October 16 decisions, verification status and release boundary. Production remains [sport-my-fitness.vercel.app](https://sport-my-fitness.vercel.app/) until release authorization.
 
 ## Routes
 

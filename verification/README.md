@@ -7,3 +7,17 @@ recovery-audit-20261016.json contains fresh source, production HTTP, Chromium, W
 October 11 motion-polish reports are historical checks of the older composition. Their exact geometry is not the current cinematic visual specification. Retain functional safeguards and test the redesigned appearance against the corrected references.
 
 No real inquiry or booking was sent. Browser-engine checks do not establish physical-device coverage or mailbox delivery.
+
+## Approved design implementation
+
+`approved-design-content-check.json` records the fresh semantic comparison against the recovery parent and the intentionally removed duplicates. `approved-design-browser.cjs` exercises actual visitor behavior without submitting an inquiry or completing a booking. The `Approved design review` GitHub Actions workflow installs isolated Playwright 1.62.1 Chrome/WebKit tools, serves this static repository, and uploads screenshots, motion recordings and `results.json`.
+
+Local reproduction with an installed Playwright package and browsers:
+
+```sh
+python3 -m http.server 8080
+# In another terminal, with the development dependency resolvable:
+SMF_BASE_URL=http://127.0.0.1:8080 SMF_EVIDENCE_DIR=/tmp/smf-evidence node verification/approved-design-browser.cjs
+```
+
+The workflow is the assistant-operated verification path for this revision. PJ does not need to install dependencies or debug tests. Fresh browser results are required before visual acceptance; source-level checks alone do not establish responsive or motion quality.

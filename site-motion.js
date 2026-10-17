@@ -44,7 +44,9 @@
    offset:index/(source.progress.length-1),
    translate:`${x*(1-progress)}px ${y*(1-progress)}px`,
    ...(scale !== 1 ? {scale:1+(scale-1)*(1-progress)} : {}),
-   opacity:Math.min(1, progress*1.55),
+   // Move the source photograph as one opaque layer. Never fade a person's
+   // interior into the background while the photo enters.
+   opacity:track === 'photo' ? 1 : Math.min(1, progress*1.55),
   }));
   const animation = element.animate(keyframes, {duration:source.duration,delay,easing:'linear',fill:'both'});
   running.set(element, animation);
@@ -69,7 +71,7 @@
    '.story-community-photo','.story-words','.story-connect','.media-feature-copy',
    '.media-feature-film','.media-video-row','.media-community-intro','.media-photo-pair>figure','.media-press',
    '.inquiry-guide','#inquiry-form','.contact-direct','.community-section-intro',
-   '.community-program','.community-regular','.community-notices-inner','.page-step-inner',
+   '.community-program','.community-regular','.community-notices-inner',
   ];
   const candidates = [...main.querySelectorAll(selectors.join(','))];
   const targets = candidates.filter(el => !candidates.some(parent => parent !== el && parent.contains(el)));
@@ -124,13 +126,18 @@
    const parts = [...heading.children];
    const list = [];
    const add = (el,track,settings)=>{const animation=animate(el,track,{...settings,intro:true}); if(animation)list.push(animation.finished.catch(()=>{}));};
-   add(hero.querySelector('.hero-eyebrow'),'support',{y:12});
-   (parts.length ? parts : [heading]).forEach((el,i)=>add(el,'headline',{y:54,delay:80+i*95}));
-   add(photo,'photo',{x:Math.min(110,innerWidth*.13),scale:1.025,delay:80});
-   add(hero.querySelector('.hero-subline'),'support',{y:20,delay:390});
-   add(hero.querySelector('.hero-description'),'support',{y:20,delay:440});
-   add(hero.querySelector('.hero-actions'),'support',{y:20,delay:500});
-   add(main.querySelector('.mission-strip'),'band',{x:-32,delay:470});
+   // Keep the original Blender curves on every page. Home's approved sequence
+   // is photo from the left, settle, then headline lines dropping from above.
+   // The other six pages retain their original entrance timing and direction.
+   const photoDelay = 80;
+   const textDelay = isHome ? photoDelay + curves.tracks.photo.duration + 70 : 80;
+   add(photo,'photo',{x:(isHome ? -1 : 1)*Math.min(110,innerWidth*.13),scale:isHome ? 1 : 1.025,delay:photoDelay});
+   add(hero.querySelector('.hero-eyebrow'),'support',{y:12,delay:isHome ? textDelay : 0});
+   (parts.length ? parts : [heading]).forEach((el,i)=>add(el,'headline',{y:isHome ? -54 : 54,delay:textDelay+i*95}));
+   add(hero.querySelector('.hero-subline'),'support',{y:20,delay:textDelay+310});
+   add(hero.querySelector('.hero-description'),'support',{y:20,delay:textDelay+360});
+   add(hero.querySelector('.hero-actions'),'support',{y:20,delay:textDelay+420});
+   add(main.querySelector('.mission-strip'),'band',{x:-32,delay:textDelay+390});
    clearBoot(); state('playing');
    startReveals();
    await Promise.all(list);

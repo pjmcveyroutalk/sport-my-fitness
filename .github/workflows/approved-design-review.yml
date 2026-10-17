@@ -1,0 +1,49 @@
+name: Approved design review
+on:
+  push:
+    branches: ['review/approved-glass-*']
+  pull_request:
+    paths: ['*.html', '*.css', '*.js', 'assets/**', 'verification/approved-design-browser.cjs', '.github/workflows/approved-design-review.yml']
+permissions:
+  contents: read
+jobs:
+  visitor-checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Syntax and existing contract check
+        run: |
+          for file in *.js api/*.js; do node --check "$file"; done
+          node --test test/pilot-verify-production.test.js
+          git diff --check
+      - name: Install isolated browser test tools
+        run: |
+          npm install --prefix "$RUNNER_TEMP/smf-browser" --no-package-lock --no-save playwright@1.62.1
+          "$RUNNER_TEMP/smf-browser/node_modules/.bin/playwright" install --with-deps chromium webkit
+      - name: Check all pages, menu, photographs, motion, and fallbacks
+        env:
+          SMF_BASE_URL: http://127.0.0.1:8080
+          SMF_EVIDENCE_DIR: ${{ runner.temp }}/smf-evidence
+        run: |
+          python3 -m http.server 8080 --bind 127.0.0.1 > "$RUNNER_TEMP/smf-http.log" 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid" 2>/dev/null || true' EXIT
+          for attempt in $(seq 1 30); do
+            if curl --fail --silent http://127.0.0.1:8080/index.html > /dev/null; then break; fi
+            sleep 1
+          done
+          NODE_PATH="$RUNNER_TEMP/smf-browser/node_modules" node verification/approved-design-browser.cjs
+      - name: Save browser evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: approved-design-browser-evidence
+          path: ${{ runner.temp }}/smf-evidence
+          retention-days: 30
+          if-no-files-found: warn

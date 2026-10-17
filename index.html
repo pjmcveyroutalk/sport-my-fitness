@@ -23,12 +23,11 @@
   <meta name="twitter:image" content="https://sport-my-fitness.vercel.app/assets/yoshi-hero-milwaukee-natural-2026-10-08-lossless.webp">
   <meta name="twitter:image:alt" content="Artwork of Yoshi Barnes in a turquoise running pose with Milwaukee in the background">
   <meta name="theme-color" content="#101313">
-  <link rel="icon" href="assets/sportmyfitness-mark.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/brand/sport-my-fitness-original-lockup.png" type="image/png">
   <link rel="preload" href="assets/barlow-condensed-900-italic.woff" as="font" type="font/woff" crossorigin>
   <link rel="stylesheet" href="assets/fonts.css">
-  <link rel="stylesheet" href="bright-home.css?v=community-1">
-  <link rel="stylesheet" href="inner-background.css">
-  <link rel="stylesheet" href="teal-finish.css">
+  <link rel="stylesheet" href="site-design.css?v=approved-glass-1">
+  <script src="site-menu.js?v=approved-glass-1" defer></script>
   <script>
   // Set the first pose before paint, with a short, fail-open deadline.
   (()=>{const r=document.documentElement;
@@ -45,25 +44,33 @@
     }
   })();
   </script>
-  <link rel="stylesheet" href="site-motion.css?v=polish-1">
-  <script src="site-motion.js?v=polish-1" defer></script>
+  <link rel="stylesheet" href="site-motion.css?v=approved-glass-1">
+  <script src="site-motion.js?v=approved-glass-1" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="wrap header-inner">
-      <a class="brand" href="#top" aria-label="Sport My Fitness home">
-        <img class="brand-mark" src="assets/sportmyfitness-mark.svg" width="76" height="92" alt="">
-        <span class="brand-type"><span class="brand-name">SPORTMY<span class="teal-letter">FITNESS</span></span><span class="brand-tagline">TO GAIN, MAINTAIN, OR LOSE IT ALL TAKES WORK</span></span>
-      </a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav"><span class="menu-label">Menu</span><span class="menu-lines" aria-hidden="true"></span></button>
-      <nav id="primary-nav" class="primary-nav" aria-label="Primary">
-        <a href="training.html"><span class="teal-hover-label">Training</span></a><a href="yoshi.html"><span class="teal-hover-label">About</span></a><a href="media.html"><span class="teal-hover-label">Media</span></a>
-        <a href="community.html"><span class="teal-hover-label">Community</span></a>
-        <a class="button nav-button" href="contact.html">Let’s train</a>
-      </nav>
+      <a class="brand" href="index.html" aria-label="Sport My Fitness home"><img class="brand-logo" src="assets/brand/sport-my-fitness-original-lockup.png" width="1100" height="725" alt="Sport My Fitness — Sport your best self." decoding="async"></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-haspopup="dialog" hidden><span class="menu-label">Menu</span><span class="menu-lines" aria-hidden="true"></span></button>
     </div>
   </header>
+  <div class="menu-rail" aria-hidden="true"></div>
+  <details class="menu-fallback"><summary>Menu</summary>
+    <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="training.html">Training</a>
+        <a href="programs.html">Programs &amp; Rates</a>
+        <a href="yoshi.html">About Yoshi</a>
+        <a href="media.html">Media</a>
+        <a href="community.html">Community</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+  </details>
+  <dialog class="menu-panel" id="site-menu" aria-labelledby="menu-title">
+    <h2 class="sr-only" id="menu-title">Site menu</h2>
+    <div class="menu-heading"><a class="brand" href="index.html" aria-label="Sport My Fitness home"><img class="brand-logo" src="assets/brand/sport-my-fitness-original-lockup.png" width="1100" height="725" alt="Sport My Fitness — Sport your best self." decoding="async"></a><button class="menu-close" type="button" aria-label="Close menu"><span aria-hidden="true">‹</span></button></div>
+  </dialog>
   <main id="main" class="smf-home-page">
     <section class="hero" id="top" aria-labelledby="hero-heading">
       <div class="hero-art" aria-hidden="true"></div>
@@ -91,15 +98,8 @@
         </div>
       </div>
     </section>
-    <section class="page-step" aria-labelledby="page-step-heading">
-      <div class="wrap page-step-inner">
-        <div><p class="eyebrow teal-letter">YOUR NEXT STEP</p><h2 id="page-step-heading">LET’S <span class="teal-letter">MOVE.</span></h2><p>Explore sessions, classes and coaching.</p></div>
-        <a class="button" href="training.html">Explore training <span aria-hidden="true">→</span></a>
-      </div>
-    </section>
   </main>
-  <footer class="site-footer"><div class="wrap footer-top"><a class="footer-name" href="#top">SPORTMY<span class="teal-letter">FITNESS</span></a><nav class="footer-links" aria-label="Footer"><a href="training.html"><span class="teal-hover-label">Training</span></a><a href="yoshi.html"><span class="teal-hover-label">About</span></a><a href="media.html"><span class="teal-hover-label">Media</span></a><a href="community.html"><span class="teal-hover-label">Community</span></a><a href="contact.html"><span class="teal-hover-label">Let’s train</span></a></nav></div><div class="wrap footer-bottom"><span>© <span id="year">2026</span> Sport My Fitness · Milwaukee</span><span>To gain, maintain, or lose it all takes work.</span></div></footer>
-  <script src="bright-home.js"></script>
+  <footer class="site-footer"><div class="wrap footer-bottom"><span>© <span id="year">2026</span> Sport My Fitness · Milwaukee</span></div></footer>
 </body>
 </html>
 

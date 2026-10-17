@@ -1,3 +1,5 @@
+> Historical design reference. The approved October 16 glass-menu design and latest duplicate-removal instructions in [PROJECT_STATE.md](PROJECT_STATE.md) supersede conflicting appearance and next-step-panel requirements below.
+
 > Current continuation note: Yoshi enters from the left, settles, then the headline drops from above. Read [PROJECT_STATE.md](PROJECT_STATE.md) for verified source and ordered tasks.
 
 # Sport My Fitness Cinematic Redesign Handoff Corrected

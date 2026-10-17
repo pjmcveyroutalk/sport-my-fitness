@@ -30,3 +30,7 @@ logo file is reused unchanged; it was not passed through image generation.
 Visual acceptance requires inspecting the actual rendered desktop and mobile
 pages alongside the board. Geometry checks catch the former stacking/scale
 regression but do not replace that comparison or PJ's review.
+
+The current rendered correction and fresh evidence are recorded in
+`verification/reference-match-verification-20261017.json`. PJ review remains the
+next acceptance step.

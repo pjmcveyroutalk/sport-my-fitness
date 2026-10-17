@@ -6,9 +6,18 @@ Start with [the current project state](docs/PROJECT_STATE.md). It resolves the o
 
 ## Current work
 
-The approved black/turquoise design with a restrained glass menu is implemented on `review/approved-glass-20261017`, based on the verified recovery commit. The original logo artwork and photographs are preserved. Redundant page-end panels and footer navigation are removed; contextual actions and original motion remain.
+The corrected black/turquoise waterfront design is on `review/approved-glass-20261017`.
+Use the [corrected review preview](https://sport-my-fitness-kxolu0xcn-routalk-builder.vercel.app); it retains existing Vercel sign-in protection.
+Actual Home desktop/mobile renders were compared with [PJ's approved board](docs/design/approved-concept.webp).
+The original logo, inner-page photographs, substantive content and motion remain intact.
+Home uses a new full-bleed background edit with live overlaid text. Redundant page-end
+panels and footer navigation remain removed.
 
-The verified [review preview](https://sport-my-fitness-378k0v1tj-routalk-builder.vercel.app) uses the project’s existing Vercel sign-in protection. Chrome/WebKit verification passes across all seven pages. See [the current project state](docs/PROJECT_STATE.md) for the October 16 decisions, evidence and release boundary. Production remains [sport-my-fitness.vercel.app](https://sport-my-fitness.vercel.app/) until release authorization.
+The first implemented preview was rejected for visual mismatch; its earlier technical
+passes are historical. The corrected runtime `ada5a43` passes Chromium/WebKit checks
+and is ready for PJ's visual review. See [current project state](docs/PROJECT_STATE.md)
+and [current evidence](verification/reference-match-verification-20261017.json).
+Production remains [sport-my-fitness.vercel.app](https://sport-my-fitness.vercel.app/).
 
 ## Routes
 

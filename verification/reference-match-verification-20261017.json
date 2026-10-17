@@ -1,0 +1,65 @@
+{
+  "status": "ready_for_user_visual_review",
+  "checked_commit": "ada5a43fd2e1e8c4adc313735001786f7e098524",
+  "branch": "review/approved-glass-20261017",
+  "supersedes_rejected_visual_checkpoint": "e80dbf6cd28564d78b59f48c066a2d8c96fe0539",
+  "visual_authority": "docs/design/approved-concept.webp",
+  "preview": "https://sport-my-fitness-kxolu0xcn-routalk-builder.vercel.app",
+  "deployment_id": 7134578096,
+  "production_changed": false,
+  "production_main": "c6b209895aa01b7d419fa445d4c31d39ef90b920",
+  "workflow_run_id": 39001442859,
+  "workflow_url": "https://github.com/pjmcveyroutalk/sport-my-fitness/actions/runs/39001442859",
+  "artifact_id": 12089097293,
+  "artifact_digest": "sha256:1d25ca14ebbcd36502fabd32b3e581602c6b4f3924790dee1003e4b52b3508f7",
+  "completed_utc": "2026-10-17T04:11:57.425Z",
+  "browsers": {
+    "chromium": "151.0.7922.34",
+    "webkit": "26.5"
+  },
+  "results": {
+    "layouts": 70,
+    "image_checks": 210,
+    "navigation": 28,
+    "motion": 14,
+    "safeguards": 21,
+    "failures": 0
+  },
+  "visual_review": [
+    "Actual Home desktop/mobile renders compared with the approved board.",
+    "Desktop hero actions inspected in one equal-width row after the grid correction.",
+    "Desktop/mobile glass menus inspected; stronger opacity preserves readable labels in both engines.",
+    "Six inner-page mobile hero views inspected; original photo ratios, credits and copy retained.",
+    "Home mobile entrance recording sampled: full opaque image, then live headline entrance."
+  ],
+  "source_contract": {
+    "all_seven_page_text_and_contextual_links": "unchanged",
+    "inner_page_photos": "unchanged",
+    "logo_motion_menu_form_sources": "unchanged",
+    "home_artwork": "new continuous waterfront background edit, proportional responsive encodings"
+  },
+  "active_source_sha256": {
+    "index.html": "4a37528fe47fb1bb0f0cd423e540d5bc3b9cda2a3f7d7fb1eff471299fdfd12c",
+    "training.html": "fca84b3cb9a837c397d47b29b5c3242d54dbc648ef9333715f4fd0d0afae46cb",
+    "programs.html": "2668363fcf9b543a949e2f660c6cb25ebf115ffa8014b238eaec8e9487f9a2b1",
+    "yoshi.html": "018dd25d52eaf71f32a1316d0fac726ebe2ec60e12c81dee128b3253abc8f68f",
+    "media.html": "1c0cc0e28dcc62e8dbf670d8b77ce95e7e896a6b2bb07a06aedc1c151a55718c",
+    "community.html": "3fd257485702536bd13355cbe90cce5efeebf2c5e157f59084ead3e2f0db09c0",
+    "contact.html": "55978336277f074b7953db08d9922c008de435f6e75c4fd4532def8a9e625399",
+    "site-design.css": "9e71ea16bc8b62891574457937d4ce300344e6b28ec5ba404ac72fd0fee867d1",
+    "site-menu.js": "3d4310160d4cea432a6cf780be279c95bf5a6fe4d8aa1cac71bcd6d350a272d7",
+    "site-motion.css": "b2c4c1eebeddd76ebb7f6f5eda27ac91d82b16783df3619186217d2ad3143022",
+    "site-motion.js": "cff14d42c5d743dcc5bbee2bcafba6780c77bb58a40944e8700292c9ab94cc56",
+    "contact.js": "d791c23847564472ef02a741094da4338e6cdf4df15aef489dbb5beab693e065",
+    "assets/smf-motion-curves.json": "d9197bbfa766676178103ef8834491b804a50d6468047a22f4a5d660c21ce619",
+    "assets/brand/sport-my-fitness-original-lockup.png": "202f885d450df6330d8b0809f0c61f43a7ce940f7c870004c9bf6683178aad63",
+    "assets/photos/smf-waterfront-hero-800.webp": "ba56966cefcfb98383034c3bad78e714abab6cb058b8d9364c14aed3dcbd4344",
+    "assets/photos/smf-waterfront-hero-1200.webp": "83b36d9b11976b6217fcf0691c8720d58cf2d926a27d3cd5da1c695d5ca433b2",
+    "assets/photos/smf-waterfront-hero-1585.webp": "b34ee59f501384a00aa5b053475fbe2b9ef2ed5a6edd09018a73d8c87f39e22e"
+  },
+  "limits": [
+    "PJ visual approval remains pending.",
+    "No physical-device run, new Lighthouse score or real form/email/booking/payment submission.",
+    "Preview retains the project's existing Vercel sign-in protection."
+  ]
+}

@@ -37,5 +37,10 @@ existing grain as a finishing layer. Apply the shared treatment to content
 sections and the footer so the design continues beyond the hero. No extra
 animation, generated pictures, icons, text or duplicate actions are added.
 
+PJ also requested removal of the redundant landing-page link group in the later
+screenshot. The entire “Find your training” section and its three service links
+are removed. The main menu and two useful hero actions remain; full service
+information remains on the existing Training and Programs pages.
+
 The exact original logo, all source photographs, original motion scripts, menu
-behavior, substantive copy, rates, credits and destination links are preserved.
+behavior, rates, credits and remaining substantive copy and destinations are preserved.

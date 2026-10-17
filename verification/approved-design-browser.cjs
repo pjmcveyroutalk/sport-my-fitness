@@ -41,6 +41,10 @@ async function layout(page, route, width, engine) {
   assert(photos.every(i => i.valid), 'image ratio/decode failure: ' + JSON.stringify(photos.filter(i => !i.valid)));
   assert(photos.every(i => i.mask === 'none'), 'an image is using a decorative alpha mask');
   assert.equal(await page.locator('.page-step,.footer-links,.footer-name').count(), 0, 'redundant page ending remains');
+  if (route === 'index') {
+    assert.equal(await page.locator('.training-section,.training-option').count(), 0, 'redundant landing-page training link group remains');
+    assert.deepEqual(await page.locator('.hero-actions > a').evaluateAll(links => links.map(link => link.getAttribute('href'))), ['contact.html', 'training.html'], 'landing-page hero actions changed');
+  }
   assert.equal(await page.locator('#primary-nav a').count(), 7);
   const current = page.locator('#primary-nav a[aria-current="page"]');
   assert.equal(await current.count(), 1);
@@ -75,7 +79,7 @@ async function layout(page, route, width, engine) {
     if (appearance.button) assert.deepEqual(appearance.button, reference.button, `hero action styling differs on ${route}`);
     if (width <= 800) {
       assert(geometry.transition.afterCopy >= 24 && geometry.transition.afterCopy <= 40, `empty mobile hero band on ${route} ${width}: ${JSON.stringify(geometry.transition)}`);
-      assert(geometry.transition.nextContent <= 96, `next mobile section is separated by excess blank space on ${route} ${width}: ${JSON.stringify(geometry.transition)}`);
+      assert(typeof geometry.transition.nextContent === 'number' && geometry.transition.nextContent <= 96, `next mobile section is separated by excess blank space on ${route} ${width}: ${JSON.stringify(geometry.transition)}`);
     }
   }
   assert(geometry.scrollWidth <= geometry.width, 'horizontal overflow: ' + JSON.stringify(geometry));

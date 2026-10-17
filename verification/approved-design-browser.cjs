@@ -49,7 +49,8 @@ async function layout(page, route, width, engine) {
     const h1 = document.querySelector('h1');
     const headline = [...h1.children].map(el => { const r = document.createRange(); r.selectNodeContents(el); return r.getBoundingClientRect().toJSON(); });
     const subline = document.querySelector('.hero-subline').getBoundingClientRect();
-    return {width: innerWidth, scrollWidth: document.documentElement.scrollWidth, headline, hero: hero.toJSON(), h1: h1.getBoundingClientRect().toJSON(), subline: subline.toJSON()};
+    const overflow = [...document.querySelectorAll('main *')].map(el => ({tag: el.tagName, classes: el.className, rect: el.getBoundingClientRect().toJSON()})).filter(el => el.rect.width && (el.rect.right > innerWidth + 1 || el.rect.left < -1));
+    return {width: innerWidth, scrollWidth: document.documentElement.scrollWidth, overflow, headline, hero: hero.toJSON(), h1: h1.getBoundingClientRect().toJSON(), subline: subline.toJSON()};
   });
   assert(geometry.scrollWidth <= geometry.width, 'horizontal overflow: ' + JSON.stringify(geometry));
   assert(geometry.headline.every(r => r.left >= geometry.hero.left - 2 && r.right <= geometry.hero.right - 6), 'headline clipped at viewport edge: ' + JSON.stringify(geometry));
@@ -118,7 +119,10 @@ async function motion(browser, route, width, record) {
     assert(parseFloat(photo.frames[0].translate) > 0, 'original inner-page photo direction changed');
   }
   report.motion.push({route, width, photo: photo.options, photoFirstFrame: photo.frames[0], headlines: headline.map(c => c.options), final: 'complete'});
-  await context.close(); save();
+  const video = record ? page.video() : null;
+  await context.close();
+  if (video) fs.renameSync(await video.path(), path.join(out, 'motion', `${route}-${width}.webm`));
+  save();
 }
 (async () => {
   const browser = await chromium.launch({...(process.env.CHROME_PATH ? {executablePath: process.env.CHROME_PATH} : {}), args: ['--no-sandbox', '--disable-dev-shm-usage']});

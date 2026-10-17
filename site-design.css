@@ -45,11 +45,11 @@ h3 { font: 700 clamp(24px, 2.3vw, 36px)/1.15 var(--label); letter-spacing: .02em
 
 /* The rail stays available at the bottom of every page. The drawer overlays
    content instead of changing its width or interrupting the page choreography. */
-.site-header { position: absolute; top: 0; left: var(--rail-width); right: 0; z-index: 30; height: var(--header-height); background: linear-gradient(90deg, #020708 0%, #020708e6 28%, #02070820 100%); }
+.site-header { position: absolute; top: 0; left: var(--rail-width); right: 0; z-index: 30; height: var(--header-height); background: linear-gradient(90deg, #000 0%, #000 17%, #0000 50%); }
 .header-inner { display: flex; align-items: center; justify-content: space-between; height: 100%; }
 .brand { display: block; width: 166px; flex-shrink: 0; }
 .brand-logo { display: block; width: 100%; height: auto; aspect-ratio: 1100 / 725; }
-.menu-rail { position: fixed; z-index: 60; inset: 0 auto 0 0; width: var(--rail-width); border-right: 1px solid #2a555f; background: linear-gradient(140deg, #0d2028e6, #061014e6 55%, #0b2028e6); box-shadow: inset -1px 0 18px #00d9e009; -webkit-backdrop-filter: blur(18px); backdrop-filter: blur(18px); }
+.menu-rail { position: fixed; z-index: 20; inset: 0 auto 0 0; width: var(--rail-width); border-right: 1px solid #2a555f; background: linear-gradient(140deg, #0d2028e6, #061014e6 55%, #0b2028e6); box-shadow: inset -1px 0 18px #00d9e009; -webkit-backdrop-filter: blur(18px); backdrop-filter: blur(18px); }
 .menu-toggle { position: fixed; z-index: 85; left: 12px; top: 32px; display: flex; align-items: center; justify-content: center; flex-direction: column-reverse; gap: 11px; min-width: 52px; min-height: 65px; padding: 10px 6px; border: 1px solid transparent; border-radius: 9px; background: transparent; color: var(--ink); }
 .menu-toggle:hover, .menu-toggle[aria-expanded="true"] { background: #1c3a4480; border-color: #4c7680; }
 .menu-label { font: 700 10px/1.2 var(--body); letter-spacing: .08em; text-transform: uppercase; }
@@ -58,7 +58,7 @@ h3 { font: 700 clamp(24px, 2.3vw, 36px)/1.15 var(--label); letter-spacing: .02em
 .menu-panel { position: fixed; z-index: 80; top: 14px; left: 90px; width: 304px; max-height: calc(100dvh - 28px); overflow-y: auto; overscroll-behavior: contain; padding: 24px 22px 26px; border: 1px solid #59828c; border-radius: 20px; background: linear-gradient(140deg, #122c36eb, #061014f5 45%, #0d252eeb); box-shadow: 0 18px 60px #000b, inset 0 0 30px #03d6df07; -webkit-backdrop-filter: blur(24px); backdrop-filter: blur(24px); }
 .menu-panel:not([open]) { display: none; }
 .menu-panel::backdrop { background: #0005; }
-.menu-heading { display: flex; align-items: center; gap: 16px; padding-bottom: 22px; }
+.menu-heading { display: flex; align-items: center; gap: 16px; padding: 20px 22px; margin: -24px -22px 6px; background: #000; border-bottom: 1px solid var(--line); }
 .menu-heading .brand { width: 183px; }
 .menu-close { display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; flex-shrink: 0; margin-left: auto; border: 1px solid #5a808d; border-radius: 50%; color: var(--ink); background: #193741a6; font: 400 29px/1 var(--body); }
 .primary-nav { display: flex; flex-direction: column; }
@@ -77,8 +77,8 @@ h3 { font: 700 clamp(24px, 2.3vw, 36px)/1.15 var(--label); letter-spacing: .02em
 .footer-tagline { color: var(--teal); font: 700 14px/1.4 var(--label); letter-spacing: .18em; }
 
 /* Home: the original Milwaukee/Yoshi artwork remains a single, undistorted image. */
-.hero { position: relative; isolation: isolate; overflow: hidden; min-height: clamp(700px, 57vw, 920px); background: #020708; }
-.hero-art { position: absolute; z-index: 2; inset: 0; pointer-events: none; background: linear-gradient(90deg, #020708 0%, #020708f5 22%, #020708ba 35%, #02070800 58%), linear-gradient(0deg, #020708 0%, #02070800 19%); }
+.hero { position: relative; isolation: isolate; overflow: hidden; min-height: clamp(700px, 57vw, 920px); background: #000; }
+.hero-art { position: absolute; z-index: 2; inset: 0; pointer-events: none; background: linear-gradient(90deg, #000 0%, #000000f5 22%, #000b 35%, #0000 58%), linear-gradient(0deg, #000 0%, #0000 19%); }
 .hero-inner { position: relative; z-index: 3; padding-block: calc(var(--header-height) + 28px) 60px; }
 .hero-copy { width: 51%; max-width: 650px; }
 .hero-eyebrow { color: var(--teal); margin-bottom: 17px; }
@@ -259,7 +259,7 @@ figcaption a, .quote-source { color: var(--muted); font-size: 12px; text-decorat
   :root { --rail-width: 0px; --header-height: 100px; --gutter: 24px; }
   html { scroll-padding-top: 120px; }
   body { padding-top: var(--header-height); }
-  .site-header { position: fixed; left: 0; height: var(--header-height); background: #020708f5; border-bottom: 1px solid #25444d; -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px); }
+  .site-header { position: fixed; left: 0; height: var(--header-height); background: #000000f5; border-bottom: 1px solid #25444d; -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px); }
   .brand { width: 133px; }
   .menu-rail { display: none; }
   .menu-toggle { position: static; flex-direction: row; min-height: 48px; min-width: 86px; gap: 12px; padding: 12px; border-color: #35545e; }
@@ -273,9 +273,9 @@ figcaption a, .quote-source { color: var(--muted); font-size: 12px; text-decorat
 }
 @media (max-width: 800px) {
   .hero { min-height: 0; }
-  .hero-inner { padding-top: clamp(240px, 67vw, 510px); padding-bottom: 32px; }
+  .hero-inner { padding-top: clamp(270px, 88vw, 660px); padding-bottom: 32px; }
   .hero-copy { width: 100%; max-width: none; }
-  .hero-art { background: linear-gradient(0deg, #020708 0%, #020708 28%, #020708db 42%, #02070800 70%); }
+  .hero-art { background: linear-gradient(to bottom, #0000 0%, #0000 40vw, #000a 70vw, #000 90vw); }
   .yoshi-stage { top: -2vw; bottom: auto; width: 148%; max-width: none; right: -8%; }
   .hero-eyebrow { font-size: clamp(11px, 2.8vw, 16px); letter-spacing: .13em; margin-bottom: 14px; }
   .hero h1 { font-size: clamp(78px, 21.5vw, 157px); line-height: .86; margin-bottom: 22px; }
@@ -311,7 +311,6 @@ figcaption a, .quote-source { color: var(--muted); font-size: 12px; text-decorat
   .trainer-story { order: 2; }
   .trainer-moments { order: 3; grid-template-columns: minmax(0, 1fr); gap: 32px; }
   .trainer-copy h2 { font-size: 72px; }
-  .trainer-copy h2 br { display: none; }
   .trainer-story blockquote { margin-top: 0; }
   .client-review-list { grid-template-columns: minmax(0, 1fr); gap: 30px; }
   .programs-support dl { grid-template-columns: minmax(0, 1fr); gap: 8px; }

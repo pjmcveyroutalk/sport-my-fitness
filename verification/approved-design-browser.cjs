@@ -59,9 +59,18 @@ async function contactLocation(page, width, engine) {
   await hours.locator('summary').press('Enter');
   assert.equal(await hours.getAttribute('open'), null);
   await map.scrollIntoViewIfNeeded();
-  await page.frameLocator('iframe.studio-map').getByText('Sportmyfitness', {exact: true}).first().waitFor({state: 'visible', timeout: 25000});
+  // Google's embed paints the business label inside its map. Its attribution
+  // controls remain DOM text; the exact business identity is checked above.
+  const nativeMap = page.frameLocator('iframe.studio-map');
+  try {
+    await nativeMap.getByText('Report a map error', {exact: true}).waitFor({state: 'visible', timeout: 25000});
+  } catch (error) {
+    console.error('MAP_FRAME_RESPONSE ' + await nativeMap.locator('body').innerText({timeout: 3000}).catch(() => 'frame unavailable'));
+    await location.screenshot({path: path.join(out, `${engine}-location-failed-${width}.png`)});
+    throw error;
+  }
   await location.screenshot({path: path.join(out, `${engine}-location-${width}.png`)});
-  report.locations.push({engine, width, googleBusinessRendered: true, correctPlace: true, singleDirectionsLink: true, keyboardHours: true, lazy: true});
+  report.locations.push({engine, width, googleMapRendered: true, correctPlace: true, singleDirectionsLink: true, keyboardHours: true, lazy: true});
   save();
 }
 async function layout(page, route, width, engine) {

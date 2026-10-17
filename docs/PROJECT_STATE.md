@@ -2,6 +2,18 @@
 
 Updated October 16, 2026 (America/Chicago). This is the current continuation point.
 
+## Current correction — supersedes the completion claim below
+
+PJ rejected the first implemented preview for failing to match the approved
+composition. Its passing behavior/layout checks did not prove design fidelity.
+Use `docs/design/approved-concept.webp` as the visual authority. The active
+correction replaces the brush-edged Home hero with continuous waterfront art,
+layers live type over that image on mobile, reduces mobile headline scale and
+section spacing, and uses a smaller, plain mobile Menu control. The exact logo
+and Blender motion data remain unchanged. Desktop/mobile screenshots and a
+corrected preview are the pending acceptance evidence. Earlier verification
+results below describe the rejected implementation and are historical only.
+
 ## Controlling decisions
 
 PJ approved the black/turquoise desktop, expanded glass menu and mobile mockup on October 16, then authorized implementation. The supplied Sport My Fitness ad is the logo authority. Use its original stacked symbol/wordmark/“SPORT YOUR BEST SELF.” artwork, without redrawing or rearranging it.

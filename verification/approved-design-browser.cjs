@@ -55,6 +55,18 @@ async function layout(page, route, width, engine) {
   assert(geometry.scrollWidth <= geometry.width, 'horizontal overflow: ' + JSON.stringify(geometry));
   assert(geometry.headline.every(r => r.left >= geometry.hero.left - 2 && r.right <= geometry.hero.right - 6), 'headline clipped at viewport edge: ' + JSON.stringify(geometry));
   assert(geometry.h1.bottom <= geometry.subline.top + 2, 'headline overlaps supporting copy');
+  if (route === 'index' && width <= 430) {
+    const composition = await page.evaluate(() => {
+      const rect = selector => document.querySelector(selector).getBoundingClientRect().toJSON();
+      return {header: rect('.site-header'), photo: rect('.yoshi-hero'), heading: rect('h1'), actions: rect('.hero-actions'), mission: rect('.mission-strip')};
+    });
+    assert(composition.header.height <= 90, 'mobile header is taller than the approved composition');
+    assert(composition.heading.top < composition.photo.bottom - 70, 'mobile headline has been stacked below the photograph');
+    assert(composition.heading.height < width * .48, 'mobile title is oversized against the reference');
+    assert(composition.mission.top - composition.header.bottom < width * 1.75, 'mobile hero is too tall against the approved reference');
+    assert(composition.photo.bottom >= composition.actions.bottom - 10, 'waterfront does not fill the hero behind the actions');
+    report.safeguards.push({test: 'approved-mobile-composition', width, composition, pass: true});
+  }
   assert.deepEqual(errors, []);
   await page.evaluate(() => scrollTo({top: 0, behavior: 'instant'}));
   if (width === 390 || width === 1334) await page.screenshot({path: path.join(out, `${engine}-${route}-${width}.png`), fullPage: true});

@@ -63,6 +63,13 @@ async function layout(page, route, width, engine) {
 }
 async function navigation(page, route, width) {
   await load(page, route);
+  await page.evaluate(() => {
+    window.menuEvents = [];
+    for (const type of ['pointerdown', 'pointerup', 'click', 'cancel', 'close']) document.addEventListener(type, event => {
+      const panel = document.getElementById('site-menu');
+      window.menuEvents.push({type, target: event.target.tagName, id: event.target.id, classes: event.target.className, x: event.clientX, y: event.clientY, open: panel.open, rect: panel.getBoundingClientRect().toJSON()});
+    }, true);
+  });
   const trigger = page.locator('.menu-toggle');
   const initial = await page.locator('h1').boundingBox();
   await trigger.click();
@@ -90,6 +97,11 @@ async function navigation(page, route, width) {
   // Tap the actual backdrop, rather than the non-interactive scrollbar gutter.
   const backdropPoint = await page.evaluate(() => ({x: document.documentElement.clientWidth - 4, y: innerHeight - 4}));
   await page.mouse.click(backdropPoint.x, backdropPoint.y);
+  if (await trigger.getAttribute('aria-expanded') !== 'false') {
+    const trace = await page.evaluate(point => ({point, client: [document.documentElement.clientWidth, document.documentElement.clientHeight], hit: document.elementFromPoint(point.x, point.y)?.outerHTML.slice(0, 200), events: window.menuEvents}), backdropPoint);
+    console.log('MENU_EVENT_TRACE ' + JSON.stringify(trace));
+    await page.screenshot({path: path.join(out, `menu-backdrop-failure-${width}.png`)});
+  }
   assert.equal(await trigger.getAttribute('aria-expanded'), 'false', 'backdrop did not close');
   await page.evaluate(() => scrollTo({top: document.body.scrollHeight, behavior: 'instant'}));
   await trigger.click();
@@ -140,13 +152,13 @@ async function motion(browser, route, width, record) {
   const browser = await chromium.launch({...(process.env.CHROME_PATH ? {executablePath: process.env.CHROME_PATH} : {}), args: ['--no-sandbox', '--disable-dev-shm-usage']});
   report.chromiumVersion = browser.version();
   try {
-    for (const route of routes) for (const width of widths) await check(`layout ${route} ${width}`, async () => {
-      const page = await browser.newPage({viewport: {width, height: 900}, reducedMotion: 'reduce'});
-      try { await layout(page, route, width, 'chromium'); } finally { await page.close(); }
-    });
     for (const route of routes) for (const width of [390, 1334]) await check(`navigation ${route} ${width}`, async () => {
       const page = await browser.newPage({viewport: {width, height: 900}, reducedMotion: 'reduce'});
       try { await navigation(page, route, width); } finally { await page.close(); }
+    });
+    for (const route of routes) for (const width of widths) await check(`layout ${route} ${width}`, async () => {
+      const page = await browser.newPage({viewport: {width, height: 900}, reducedMotion: 'reduce'});
+      try { await layout(page, route, width, 'chromium'); } finally { await page.close(); }
     });
     for (const route of routes) for (const width of [390, 1334]) await check(`motion ${route} ${width}`, () => motion(browser, route, width, width === 390 || route === 'index'));
     for (const route of routes) await check(`native menu without JS ${route}`, async () => {

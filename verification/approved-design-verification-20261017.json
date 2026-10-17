@@ -1,0 +1,56 @@
+{
+  "checked_commit": "816330afffb09aa034ac228a8250720d1578248a",
+  "branch": "review/approved-glass-20261017",
+  "parent_recovery": "44a68c32abcf51e4bc5f8225efddeefff5d71487",
+  "production_main": "c6b209895aa01b7d419fa445d4c31d39ef90b920",
+  "production_changed": false,
+  "preview": "https://sport-my-fitness-378k0v1tj-routalk-builder.vercel.app",
+  "preview_access": "Existing Vercel SSO protection; HTTP 302 to /sso-api. Protection was not changed.",
+  "workflow_run_id": 38996388020,
+  "workflow_url": "https://github.com/pjmcveyroutalk/sport-my-fitness/actions/runs/38996388020",
+  "artifact_id": 12087232488,
+  "artifact_digest": "sha256:18da85cd5ac86a6dbf88c5a5c5d2ae75335cf87ec2a1c767cdccf66d95b300e9",
+  "completed_utc": "2026-10-17T02:52:20.654Z",
+  "browsers": {
+    "chromium": "151.0.7922.34",
+    "webkit": "26.5"
+  },
+  "results": {
+    "layouts": 70,
+    "image_checks": 210,
+    "navigation_journeys": 28,
+    "motion_runs": 14,
+    "safeguards": 17,
+    "failures": 0
+  },
+  "manual_review": {
+    "desktop_and_mobile_screenshots": "All seven pages reviewed; corrected the trainer headline break and transparent gym canvas sizing.",
+    "menu_screenshots": "Desktop and mobile reviewed; original artwork retained, seven destinations, readable glass panel.",
+    "recordings": "Eight recordings inspected with FFmpeg frame sampling: Home desktop/mobile and all six inner pages on mobile.",
+    "home_sequence": "Photo moves from the left and settles before the headline drops.",
+    "other_pages": "Original Blender timing/direction retained; intact original subjects and uniform scaling.",
+    "logo": "Original ad crop and repository asset have zero differing decoded pixels."
+  },
+  "active_source_sha256": {
+    "index.html": "a1fbdd3281f0800653ae8ebf523b8fadc5e771976a8bf57f1a0d7d770fecdc3e",
+    "training.html": "53e2ebd14d43eff58c66cd490d8755674f38e90be21343f2500c424755bfcf23",
+    "programs.html": "a98fb2a2cdfa91028ef196c631d5169255ac16134d6d6f25c7e597d2442df2cc",
+    "yoshi.html": "43f4a6217153df89dc159ad59371b3bbd5fb1f4757679fb9ddd1dfbed4d5dd4b",
+    "media.html": "64161d88dba51a3080569731466094c64ff17839878d90846d82f3cf5f6f07ba",
+    "community.html": "554627243a8ea55d352b1b3a74d837352b5ad22c3f2f9f6c9c3ed30d3a4d9a09",
+    "contact.html": "fe9d454baa705a4fddeb9a22f97f6d0f5dfc94d0950e3a26be16455ca57fc013",
+    "site-design.css": "3283e1fbcd26b6d5ee0aafdf1ba1abe5dbbba45278739638977558056f0bf393",
+    "site-menu.js": "3d4310160d4cea432a6cf780be279c95bf5a6fe4d8aa1cac71bcd6d350a272d7",
+    "site-motion.css": "b2c4c1eebeddd76ebb7f6f5eda27ac91d82b16783df3619186217d2ad3143022",
+    "site-motion.js": "cff14d42c5d743dcc5bbee2bcafba6780c77bb58a40944e8700292c9ab94cc56",
+    "contact.js": "d791c23847564472ef02a741094da4338e6cdf4df15aef489dbb5beab693e065",
+    "assets/smf-motion-curves.json": "d9197bbfa766676178103ef8834491b804a50d6468047a22f4a5d660c21ce619",
+    "assets/brand/sport-my-fitness-original-lockup.png": "202f885d450df6330d8b0809f0c61f43a7ce940f7c870004c9bf6683178aad63"
+  },
+  "limits": [
+    "No physical-device run.",
+    "No real inquiry, email, booking or payment submitted.",
+    "No new Lighthouse score asserted.",
+    "Hosted preview uses existing Vercel sign-in protection; visitor checks ran against the exact same static source in CI."
+  ]
+}

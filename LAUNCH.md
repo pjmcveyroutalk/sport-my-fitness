@@ -1,27 +1,23 @@
-# Cinematic release gates
+# Approved design release gates
 
-Current project state and task order: [docs/PROJECT_STATE.md](docs/PROJECT_STATE.md).
+Start at [docs/PROJECT_STATE.md](docs/PROJECT_STATE.md). The October 16 black/turquoise glass-menu design and latest duplicate-removal instructions supersede earlier visual references and the requirement to preserve redundant page-step panels.
 
-The live release has seven pages, including Community. Contact uses the storefront photograph. Earlier six-page launch notes and the older Contact portrait assignment are superseded.
+## Required before release
 
-## Required before cinematic release
+1. Apply the approved identity to all seven pages. Use the original logo asset intact, scaled proportionally; no generated, traced, simplified or rearranged substitute.
+2. Preserve substantive information, prices, durations, schedules, reviews, attributions, media destinations, inquiry fields and useful contextual actions. The approved removal list is in `verification/approved-design-content-check.json`.
+3. Use one active presentation layer (`site-design.css`) and one menu controller (`site-menu.js`). Keep the former white/diamond/emboss/brush styling inactive. Original photographic artwork remains intact, including its native content; do not generate replacement people or scenes.
+4. Keep each image's proportions and authentic subjects. Remove empty transparent canvas in layout where needed, rather than distorting the picture. No decorative face masks, rejected cutouts or SVG patches; photographs remain opaque during their entrance.
+5. Retain the original Blender motion curves. Home's photo enters from the left and settles before the headline drops from above. The other six pages retain their original timing/direction. Verify real recordings, static fallbacks and reduced motion.
+6. Verify all seven pages on desktop and narrow/mobile widths, including 360, 390, 430, 768, 900, 901, 1334 and 1920 px. Check no page overflow, clipped headlines, content collisions, missing images or unstable header/menu geometry.
+7. Verify keyboard focus in both directions, Escape, close control, actual backdrop taps, current-page labels, all seven destinations, real link following and access from the bottom of the page. The menu must remain usable with JavaScript disabled or its script unavailable.
+8. Verify input interruption, history/deep links, width boundaries and failed/late motion assets. A late response must never hide content or replay an abandoned entrance.
+9. Verify returning visitors with the retained legacy service worker and old cached HTML/JavaScript. Changed active assets use versioned/new URLs; never assume old cached menu code is harmless.
+10. Keep the inquiry/booking services and current redirects. Automated validation must not send a real inquiry, email or booking. Client validation and preserved configuration do not prove mailbox delivery or external booking completion.
+11. Record the exact checked commit, browser evidence and preview URL. Preserve the production baseline and rollback identifiers. Merge/promote production only under the user's release authorization after the review build passes.
 
-1. Complete Home against the desktop and mobile references, then Training and Programs, then About, Media, Contact, and Community.
-2. Preserve every existing word, business fact, review, credit, price, duration, schedule, link destination, field, and working action. Preserve the unique original photo assignments.
-3. Replace the old dominant diamond texture, embossed controls, brush frames, and white hero composition with the approved cinematic visual system.
-4. Use an authentic, opaque subject interior for the Home foreground. No background may show through the face, eyes, clothing, or body. Do not use the rejected cutout or dark SVG face patches.
-5. Home motion: Yoshi enters from the left and settles before the first headline line drops from above. Verify this in an actual recording.
-6. Verify each page at desktop and 360, 390, and 430 px; include navigation-boundary checks. Verify no overflow, clipped lettering, face collisions, missing content, broken images, or unstable mobile header.
-7. Verify reduced motion, keyboard/input interruption, history and deep links, width changes, failed/slow motion assets, no-JavaScript content, menus, anchors, media destinations, and inquiry validation.
-8. Check returning visitors with an older service worker. The seven current pages do not load its registration script; retained legacy files do not establish compatibility. Version changed assets or provide a narrowly scoped worker transition if verification requires it.
-9. Verify intended external booking and contact delivery separately. The audit does not send a real inquiry or booking. Do not claim email delivery from client validation or HTTP configuration.
-10. Retain source and deployment rollback identifiers. Publish the cinematic result only under the user's current release authorization, after its visual and functional acceptance criteria pass.
+## Infrastructure and destinations
 
-## Existing destinations and infrastructure
+Keep the GitHub repository, Vercel project, `https://www.sportmyfitnessmke.com/book-online`, the existing FormSubmit action for `Yoshi_barnes@outlook.com`, direct contact/social/media destinations and existing redirects.
 
-Keep `https://www.sportmyfitnessmke.com/book-online`, the existing FormSubmit action for `Yoshi_barnes@outlook.com`, direct contact and social destinations, and current redirects.
-
-Keep the GitHub repository and Vercel project. Do not change domain/DNS, protection, access, unrelated API integration, environment variables, or the legacy external booking provider during presentation work.
-
-The October 16 audit verifies current production HTML and the reusable candidate. It is not visual acceptance of a future cinematic build.
-
+Do not change domain/DNS, access/protection, environment variables, unrelated API integrations or the external booking provider during presentation work. No framework or hosting migration is required.

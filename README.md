@@ -8,7 +8,7 @@ Start with [the current project state](docs/PROJECT_STATE.md). It resolves the o
 
 The approved black/turquoise design with a restrained glass menu is implemented on `review/approved-glass-20261017`, based on the verified recovery commit. The original logo artwork and photographs are preserved. Redundant page-end panels and footer navigation are removed; contextual actions and original motion remain.
 
-See [the current project state](docs/PROJECT_STATE.md) for the controlling October 16 decisions, verification status and release boundary. Production remains [sport-my-fitness.vercel.app](https://sport-my-fitness.vercel.app/) until release authorization.
+The verified [review preview](https://sport-my-fitness-378k0v1tj-routalk-builder.vercel.app) uses the project’s existing Vercel sign-in protection. Chrome/WebKit verification passes across all seven pages. See [the current project state](docs/PROJECT_STATE.md) for the October 16 decisions, evidence and release boundary. Production remains [sport-my-fitness.vercel.app](https://sport-my-fitness.vercel.app/) until release authorization.
 
 ## Routes
 

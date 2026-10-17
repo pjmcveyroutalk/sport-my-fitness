@@ -86,7 +86,10 @@ async function navigation(page, route, width) {
   await page.locator('.menu-close').click();
   assert.equal(await trigger.getAttribute('aria-expanded'), 'false');
   await trigger.click();
-  await page.mouse.click(width - 2, 898);
+  // scrollbar-gutter reserves a strip outside the document's painted area.
+  // Tap the actual backdrop, rather than the non-interactive scrollbar gutter.
+  const backdropPoint = await page.evaluate(() => ({x: document.documentElement.clientWidth - 4, y: innerHeight - 4}));
+  await page.mouse.click(backdropPoint.x, backdropPoint.y);
   assert.equal(await trigger.getAttribute('aria-expanded'), 'false', 'backdrop did not close');
   await page.evaluate(() => scrollTo({top: document.body.scrollHeight, behavior: 'instant'}));
   await trigger.click();
@@ -203,6 +206,50 @@ async function motion(browser, route, width, record) {
       assert.equal(await page.locator('#inquiry-name').evaluate(i => i.validity.customError), true);
       assert.equal(submissions, 0);
       report.safeguards.push({test: 'empty-and-whitespace-form', externalPosts: submissions, pass: true}); await page.close();
+    });
+    await check('returning visitor with the legacy service worker', async () => {
+      const context = await browser.newContext({viewport: {width: 390, height: 900}, reducedMotion: 'reduce'});
+      const page = await context.newPage();
+      await load(page, 'index');
+      await page.evaluate(async () => {
+        await navigator.serviceWorker.register('/service-worker.js');
+        await navigator.serviceWorker.ready;
+        const cache = await caches.open('smf-v1-runtime');
+        await cache.put('/contact.js', new Response('window.legacyMenuScriptWasUsed = true;', {headers: {'content-type': 'application/javascript'}}));
+        await cache.put('/contact.html', new Response('<!doctype html><html><body>OLD CONTACT PAGE</body></html>', {headers: {'content-type': 'text/html'}}));
+      });
+      await page.waitForFunction(() => navigator.serviceWorker.controller);
+      await load(page, 'contact');
+      assert.equal(await page.locator('#primary-nav a').count(), 7);
+      assert.equal(await page.locator('body').evaluate(el => getComputedStyle(el).backgroundColor), 'rgb(2, 7, 8)');
+      assert.equal(await page.evaluate(() => !!window.legacyMenuScriptWasUsed), false, 'stale unversioned menu code was used');
+      await page.locator('.menu-toggle').click(); await page.locator('.menu-close').click();
+      assert.equal(await page.locator('.menu-toggle').getAttribute('aria-expanded'), 'false');
+      await page.locator('#inquiry-name').fill('   '); await page.locator('#inquiry-email').fill('test@example.invalid');
+      await page.locator('#inquiry-goals').fill('   '); await page.locator('.form-button').click();
+      assert.equal(await page.locator('#inquiry-name').evaluate(i => i.validity.customError), true);
+      report.safeguards.push({test: 'legacy-worker-stale-contact-html-and-js', pass: true}); await context.close();
+    });
+    await check('late motion data stays static', async () => {
+      const page = await browser.newPage({viewport: {width: 390, height: 900}, reducedMotion: 'no-preference'});
+      await page.route('**/smf-motion-curves.json', async route => {
+        await new Promise(resolve => setTimeout(resolve, 2600));
+        await route.fulfill({path: path.join(process.cwd(), 'assets/smf-motion-curves.json'), contentType: 'application/json'}).catch(() => {});
+      });
+      await page.goto(`${base}/index.html`);
+      await page.waitForTimeout(3000);
+      assert.equal(await page.evaluate(() => document.documentElement.dataset.smfMotionState), 'static');
+      assert.equal(await page.locator('h1').evaluate(el => getComputedStyle(el).opacity), '1');
+      assert.equal(await page.evaluate(() => document.documentElement.classList.contains('smf-motion-boot')), false);
+      report.safeguards.push({test: 'late-motion-data-no-replay', pass: true}); await page.close();
+    });
+    await check('history return keeps content stable', async () => {
+      const page = await browser.newPage({viewport: {width: 390, height: 900}, reducedMotion: 'no-preference'});
+      await load(page, 'training'); await page.waitForFunction(() => document.documentElement.dataset.smfMotionState === 'complete');
+      await load(page, 'programs'); await page.goBack({waitUntil: 'networkidle'});
+      await page.waitForFunction(() => document.documentElement.dataset.smfMotionState === 'static');
+      assert.equal(await page.locator('h1').evaluate(el => getComputedStyle(el).opacity), '1');
+      report.safeguards.push({test: 'history-return-no-replay', pass: true}); await page.close();
     });
   } finally { await browser.close(); save(); }
   const safari = await webkit.launch(); report.webkitVersion = safari.version();

@@ -1,0 +1,145 @@
+{
+  "status": "prelaunch_prepared_and_locally_verified",
+  "checked_utc": "2026-10-17T22:30:53.508856+00:00",
+  "branch": "prep/seo-aeo-20261017",
+  "production_baseline": "afe221bdfe36887eb3acdbecb8b03d3df5f32697",
+  "planned_official_origin": "https://sportmyfitness.com",
+  "current_public_review_url": "https://sport-my-fitness.vercel.app/",
+  "scope": "Seven page heads, planned canonical sitemap/robots reference, identity data, answer drafts and integration/launch handoff. No visible page changes.",
+  "verification": {
+    "command": "python3 verification/seo-aeo-check.py",
+    "exit_code": 0,
+    "tests": 17,
+    "passed": 17,
+    "failures": 0,
+    "test_names": [
+      "test_seven_distinct_page_intents",
+      "test_official_domain_and_home_canonical",
+      "test_every_prelaunch_page_is_noindex",
+      "test_encoding_and_viewport_stay_before_generated_data",
+      "test_sitemap_has_only_the_seven_canonical_pages",
+      "test_original_bodies_are_byte_identical",
+      "test_executable_scripts_are_unchanged",
+      "test_logo_photographs_styles_and_runtime_are_unchanged",
+      "test_schema_entity_identity_is_consistent",
+      "test_local_business_matches_visible_location",
+      "test_coach_has_own_identity_and_actual_profile_links",
+      "test_no_unconfirmed_ratings_rights_or_undelivered_logo",
+      "test_sharing_images_have_real_sizes",
+      "test_metadata_does_not_send_visitors_to_old_booking_site",
+      "test_data_cannot_close_the_json_script",
+      "test_preparation_is_repeatable_without_rewriting_files",
+      "test_launch_is_blocked_until_origin_and_real_master_arrive"
+    ],
+    "python": "3.12.14",
+    "pillow": "12.3.0",
+    "diff_check": "passed"
+  },
+  "preservation": {
+    "body_sha256": {
+      "index.html": {
+        "sha256": "2351ce8b18efd8a5de75e10e0ad9957a80f0c6c081901c296238f92b7e651c04",
+        "matches_public_body": true
+      },
+      "training.html": {
+        "sha256": "e7ab96e52505bab631ef690f39d9ec1c065ab1d3a4f546b482f66eb69bef2b7f",
+        "matches_public_body": true
+      },
+      "programs.html": {
+        "sha256": "0eaa0f5f0c9f47ee144dc49ffd4f6dda386ae5dd6cd369a9df8fd2ec00b32480",
+        "matches_public_body": true
+      },
+      "yoshi.html": {
+        "sha256": "9c41bf470e0291f35ef6713e45fe6f1325e1007b5f3a3d915be1a5ced5b9b7f6",
+        "matches_public_body": true
+      },
+      "media.html": {
+        "sha256": "16dfeeb48b86d26a5f506427f14f4dbc93cc8237f3030955affc95b50c0f2891",
+        "matches_public_body": true
+      },
+      "community.html": {
+        "sha256": "b6a319fb0a9be1bc51704a3ef660e549fb104284ec08e55050edb2e009ac1751",
+        "matches_public_body": true
+      },
+      "contact.html": {
+        "sha256": "a4da71e6bb9c5098e6dd615cabb3e39b3232ccbee715c098f49ce5f862608429",
+        "matches_public_body": true
+      }
+    },
+    "executable_scripts": "byte-identical to baseline",
+    "logo_photos_styles_runtime_and_vercel_configuration": "unchanged",
+    "asset_tree_sha": "5d5f30bbfe834349a1dac869c6ff566f6383559a"
+  },
+  "production_http_guard": [
+    {
+      "path": "/",
+      "status": 200,
+      "matches_public_baseline": true,
+      "preparation_noindex_leaked": false,
+      "sha256": "b2dfa6081f5e3b52c6c9315bb31fa8ab94d4ac97112e48124aa66cfc058eaf63"
+    },
+    {
+      "path": "programs.html",
+      "status": 200,
+      "matches_public_baseline": true,
+      "preparation_noindex_leaked": false,
+      "sha256": "1135a3c6a2cbb54091849506cddd06c2c68c8bdc580f7fc8641615430185ec43"
+    },
+    {
+      "path": "robots.txt",
+      "status": 200,
+      "matches_public_baseline": true,
+      "preparation_noindex_leaked": false,
+      "sha256": "6a7545771e8ace02cdaaf82ba489452355c962d8be0c95cfcc7c2319b12d5b7d"
+    }
+  ],
+  "prelaunch_protection": "All seven prepared pages have noindex,follow. Public main is unchanged. Domain-launch mode requires selecting the official origin and the exact approved JPEG.",
+  "smartbrand": {
+    "handoff": "SMARTBRAND_SOL61_HANDOFF_2026-10-17.md",
+    "expected_master_sha256": "0349a132474c265497fad5d884fd89adcb32bdeeb6ba6ef26baba2e27cf79487",
+    "master_imported_here": false,
+    "rights_confirmation": false,
+    "provenance_status": "Expected identity taken from supplied handoff; latest final kit bytes not independently checked in this website workstream."
+  },
+  "source_sha256": {
+    "index.html": "0d9322f7fa0b197a1351cae656be717074548cd7839a3b1a1d737779477a29c1",
+    "training.html": "0f0cc2a9560119c92c2ce75552448e37b2db7d72677afd47f4496d3ea82f2fdb",
+    "programs.html": "3a12c17ff02f913435ffd92e4ccd22d9e58c6058fc90bf47354ecafee99e6226",
+    "yoshi.html": "8fbe0d57f998b87155e3a2738e08b0b8be4a88902215cbfb5141a8da29ece4e2",
+    "media.html": "0ceab5e21ef0e6d2373a329125c4e900b49647def64b2226e9ebcedf9edc2c1e",
+    "community.html": "cd868db2b79ec1ec8ba13f9047eabcd299b2fc827c20d07c9124c5193f5b0917",
+    "contact.html": "b676bb6983c5d9414c268b41d43995b301934de8178a456e1045e7b0f154e644",
+    "robots.txt": "a30ff31c8ecc242995483f6bfcd25f428654058ccb9620bed4ae6e23caa36007",
+    "sitemap.xml": "61609f8963695345f3516ee3b30e89bee486feebd55928bf3769cdbefee91d3b",
+    "seo/site-identity.json": "c7652d00b6b272f1a83d840537326eb9c729d547c15b3c56ef4eb520e1245a9b",
+    "seo/page-metadata.json": "e84530fe7f59d0e1f9cdace037757c7b4356a4ec21171126d8e9ac225b5deeec",
+    "design-tools/prepare-search.py": "c65855fa130deaef5eab1454dedd6ab33c2219004863eab8a92cd5678aff4bc8",
+    "verification/seo-aeo-check.py": "70fadeaf30779977c0e134ded7597420462117fd7f95abbaf9d0caf16840717a",
+    "docs/LAUNCH_TASKS.md": "b5b7d6ef3bb8575677ac54a408783b0981dc24a54d8bcc7a978647db37b389be",
+    "docs/seo-aeo/AEO_ANSWER_DRAFT.md": "8591569916893a3a75416c714df5c29b74f45a324113a6a02b4ed7d88320e52a",
+    "docs/seo-aeo/SMARTBRAND_WEBSITE_HANDOFF.md": "e6c36a84779913e40ccefe2969a25cf56b296bbfe824bae4011b6eba7f1041ff"
+  },
+  "remaining": [
+    "Yoshi content/fact review and change requests",
+    "Latest branding-kit import and approved visual application",
+    "Final domain DNS/HTTPS and launch authorization",
+    "Authorized inquiry-delivery verification",
+    "Official Google structured-data and URL Inspection checks",
+    "Search Console and Business Profile owner access/actions",
+    "Confirmed Google indexing and dated AI citation observations"
+  ],
+  "not_claimed": [
+    "New Google indexing",
+    "Ranking lift",
+    "AI citations caused by metadata",
+    "Validated final-domain HTTP delivery",
+    "Completed real inquiry or booking",
+    "Google Rich Results validation"
+  ],
+  "references": [
+    "https://developers.google.com/search/docs/appearance/structured-data/organization",
+    "https://developers.google.com/search/docs/appearance/structured-data/local-business",
+    "https://developers.google.com/search/docs/appearance/structured-data/image-license-metadata",
+    "https://developers.google.com/search/docs/appearance/ai-features"
+  ]
+}

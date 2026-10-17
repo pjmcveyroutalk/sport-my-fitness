@@ -1,0 +1,44 @@
+{
+  "index.html": {
+    "title": "Personal Training in Milwaukee | Sport My Fitness",
+    "description": "Personal, semi-private, group and online training with Yoshi Barnes in Milwaukee. Explore training options and ask about your first session.",
+    "page_type": "WebPage",
+    "image": {"path": "assets/photos/smf-waterfront-hero-1585.webp", "type": "image/webp", "width": 1585, "height": 992, "alt": "Yoshi Barnes running against the Milwaukee waterfront in Sport My Fitness artwork"}
+  },
+  "training.html": {
+    "title": "Training with Yoshi Barnes in Milwaukee | Sport My Fitness",
+    "description": "Meet Yoshi Barnes and explore personal, semi-private, group and online training at Sport My Fitness in Milwaukee. Start with your training goals.",
+    "page_type": "WebPage",
+    "image": {"path": "assets/training-gym-background-lossless.webp", "type": "image/webp", "width": 1586, "height": 992, "alt": "Sport My Fitness gym interior"}
+  },
+  "programs.html": {
+    "title": "Training Programs & Rates in Milwaukee | Sport My Fitness",
+    "description": "View personal training, semi-private sessions, online coaching and class rates at Sport My Fitness in Milwaukee. Ask Yoshi about availability.",
+    "page_type": "CollectionPage",
+    "image": {"path": "assets/yoshi-coaching.jpg", "type": "image/jpeg", "width": 1000, "height": 760, "alt": "Yoshi coaching a participant using a cable machine"}
+  },
+  "yoshi.html": {
+    "title": "About Yoshi Barnes | Sport My Fitness, Milwaukee",
+    "description": "Meet Yoshi Barnes, the coach behind Sport My Fitness in Milwaukee. Learn about her basketball background, training approach and community work.",
+    "page_type": "AboutPage",
+    "image": {"path": "assets/yoshi-smiling-facebook-clarity-2026-10-07.webp", "type": "image/webp", "width": 1254, "height": 1254, "alt": "Yoshi Barnes smiling in a black-and-white portrait"}
+  },
+  "media.html": {
+    "title": "Training Videos & Media | Sport My Fitness Milwaukee",
+    "description": "Watch Yoshi Barnes and Sport My Fitness videos, see training and community photos, and explore Milwaukee media appearances.",
+    "page_type": "CollectionPage",
+    "image": {"path": "assets/yoshi-group-squats-polished-lossless.webp", "type": "image/webp", "width": 1536, "height": 1024, "alt": "A group squat session at Sport My Fitness"}
+  },
+  "community.html": {
+    "title": "Community & Body Camp | Sport My Fitness Milwaukee",
+    "description": "Explore Body Camp, community news and limited-time programs at Sport My Fitness in Milwaukee. Contact Yoshi for upcoming dates and details.",
+    "page_type": "CollectionPage",
+    "image": {"path": "assets/community-body-camp.jpg", "type": "image/jpeg", "width": 1246, "height": 1536, "alt": "Body Camp participants together in the Sport My Fitness gym"}
+  },
+  "contact.html": {
+    "title": "Contact Sport My Fitness | Personal Training in Milwaukee",
+    "description": "Contact Yoshi Barnes about training at Sport My Fitness, 4722 W Vliet St, Milwaukee. Find studio hours, directions and the training inquiry form.",
+    "page_type": "ContactPage",
+    "image": {"path": "assets/smf-storefront-maps-clarity-2026-10-09.webp", "type": "image/webp", "width": 1448, "height": 1086, "alt": "The Sport My Fitness storefront and entrance on West Vliet Street"}
+  }
+}

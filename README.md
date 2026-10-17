@@ -4,6 +4,14 @@ Seven-page static website for Sport My Fitness and Coach Yoshi Barnes.
 
 Start with [the current project state](docs/PROJECT_STATE.md). It resolves the older handoffs, identifies the verified source revisions, records the audit evidence, and gives the next task.
 
+This branch is **SEO/AEO prelaunch preparation**, not the current public release.
+See [the launch task list](docs/LAUNCH_TASKS.md),
+[SmartBrand website handoff](docs/seo-aeo/SMARTBRAND_WEBSITE_HANDOFF.md), and
+[answer-copy draft](docs/seo-aeo/AEO_ANSWER_DRAFT.md). The official domain is planned
+as `sportmyfitness.com`; all prepared pages deliberately carry `noindex` until an
+authorized final-domain launch. Do not merge this preparation branch as-is.
+The current public website and original logo/image/motion assets remain unchanged.
+
 ## Current work
 
 The finished design is live at [sport-my-fitness.vercel.app](https://sport-my-fitness.vercel.app/), released from `main` at `cb0786118740c8b146978a1d6aac3304ac5245b2` after PJ's explicit publishing request. The [review preview](https://sport-my-fitness-naghhevku-routalk-builder.vercel.app) remains a historical reference with its existing sign-in protection.

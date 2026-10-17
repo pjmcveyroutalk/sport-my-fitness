@@ -54,3 +54,21 @@ Browser verification compares the resting layout, words and actions with release
 `c6b209895aa01b7d419fa445d4c31d39ef90b920`. Reports in `verification/` record the
 responsive and fallback checks. No valid contact inquiry was submitted.
 
+# Search metadata preparation
+
+`prepare-search.py` reads `seo/site-identity.json` and `seo/page-metadata.json`
+and renders static metadata and JSON-LD into the seven existing pages. It never
+changes a page body, publishes a site, submits a form or contacts Google.
+
+The preparation branch defaults to `noindex,follow` with the planned official
+domain. `python3 design-tools/prepare-search.py` checks generated files without
+writing them; `--apply` updates local files. Focused checks run with
+`python3 verification/seo-aeo-check.py` (Pillow is used only by the image-size check).
+
+The later `--mode launch --approved-origin https://sportmyfitness.com --apply`
+transition is for an explicitly authorized domain launch. It requires the exact
+approved SmartBrand master at the agreed path; it does not itself deploy or verify
+DNS, ownership, HTTPS, rights, final client approval, Google indexing or mailbox
+delivery. Use `docs/LAUNCH_TASKS.md` and the SmartBrand website handoff for those
+remaining steps. The existing SmartBrand engine remains in its own workstream.
+

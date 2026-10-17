@@ -2,6 +2,13 @@
 
 Start at [the current project state](../docs/PROJECT_STATE.md).
 
+Current preparation evidence is `seo-aeo-prep-20261017.json`. The focused
+`seo-aeo-check.py` checks static metadata, structured-data identity, noindex,
+local facts, exact body/runtime preservation, image dimensions, safe embedding,
+repeatability and the pending-master launch guard. Seventeen checks passed locally.
+This is separate from the earlier public browser evidence below; it is not
+Google structured-data validation, domain activation or indexing confirmation.
+
 The finished preview was published at PJ's request on October 17, 2026. See
 `public-release-20261017.json` for the successful Production deployment, exact
 public comparisons of 18 runtime files and the root page, four redirect checks,

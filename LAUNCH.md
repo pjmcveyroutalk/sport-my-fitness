@@ -2,6 +2,12 @@
 
 Start at [docs/PROJECT_STATE.md](docs/PROJECT_STATE.md). The October 16 black/turquoise glass-menu design and latest duplicate-removal instructions supersede earlier visual references and the requirement to preserve redundant page-step panels.
 
+The official-domain SEO/AEO preparation lives on `prep/seo-aeo-20261017`. Start
+its remaining work at [docs/LAUNCH_TASKS.md](docs/LAUNCH_TASKS.md). The prepared
+pages are intentionally `noindex,follow` and must not replace the current public
+site unchanged. Local metadata checks do not authorize a domain launch or prove
+Google indexing.
+
 ## Required before release
 
 1. Apply the approved identity to all seven pages. Use the original logo asset intact, scaled proportionally; no generated, traced, simplified or rearranged substitute.
@@ -15,6 +21,13 @@ Start at [docs/PROJECT_STATE.md](docs/PROJECT_STATE.md). The October 16 black/tu
 9. Verify returning visitors with the retained legacy service worker and old cached HTML/JavaScript. Changed active assets use versioned/new URLs; never assume old cached menu code is harmless.
 10. Keep the inquiry service and current redirects. Contact's sessions/packages link opens this site's Programs page; its session-request action opens `contact.html#inquiry`. Do not restore the former website's booking URL. Automated validation must not send a real inquiry, email or booking. Client validation and preserved configuration do not prove mailbox delivery.
 11. Record the exact checked commit, browser evidence and preview URL. Preserve the production baseline and rollback identifiers. Merge/promote production only under the user's release authorization after the review build passes.
+12. For the later authorized `sportmyfitness.com` launch, integrate the exact
+    delivered SmartBrand JPEG and approved branding/client changes first. Confirm
+    DNS/HTTPS, real asset URLs, actual form delivery and the relevant redirect map.
+    Regenerate launch metadata with `design-tools/prepare-search.py` only after
+    confirming the official origin and master file. Check the emitted HTML,
+    Google structured-data results, canonical/OG URLs, sitemap and absence of
+    accidental noindex on the actual public host before requesting indexing.
 
 ## Infrastructure and destinations
 

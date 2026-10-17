@@ -4,6 +4,30 @@ Updated October 17, 2026 (UTC); approved design published and publicly verified.
 
 ## Current checkpoint
 
+SEO/AEO preparation is now on `prep/seo-aeo-20261017`, based on public checkpoint
+`afe221bdfe36887eb3acdbecb8b03d3df5f32697`. The intended official domain is
+`https://sportmyfitness.com/`, identified in the SmartBrand handoff as purchased
+and prelaunch. This supersedes the earlier unknown-domain planning assumption;
+DNS/HTTPS, final client changes and domain-launch authorization are still pending.
+
+Start the next website task at [the launch checklist](LAUNCH_TASKS.md).
+Seven page heads, the sitemap and robots reference are prepared for that official
+domain. All preparation pages are `noindex,follow`; do not merge this branch into
+public production unchanged. The public Vercel site remains on `main`.
+Organization, local business, coach and webpage identities are connected without
+new visible sections, unsupported ratings or unverified rights claims. The latest
+SmartBrand kit is not yet imported; its expected JPEG identity is recorded, not
+claimed as independently verified. Read
+[the website/branding handoff](seo-aeo/SMARTBRAND_WEBSITE_HANDOFF.md) and
+[the answer-copy draft](seo-aeo/AEO_ANSWER_DRAFT.md).
+
+Seventeen focused preparation checks passed locally. All seven visible page bodies,
+executable scripts, original logo, source images, styles and movement are unchanged
+from the public checkpoint. Current preparation evidence is
+`verification/seo-aeo-prep-20261017.json`. Google's Rich Results validation,
+domain HTTP checks, Search Console ownership/indexing and AI citations remain
+separate pending launch steps, not results of these local checks.
+
 Post-release correction, October 17: PJ identified the Contact page's final
 “Sessions & packages” link as an unwanted exit to the old website. Contact now
 opens `programs.html` in the same tab. The same obsolete booking URL on Programs
@@ -122,9 +146,12 @@ reports are historical, not current acceptance.
 
 ## Next step
 
-The finished preview is live. Continue from `main` and this release receipt for
-future requests. No domain, environment, protection setting or Google profile was
-changed. The blank Google listing website field remains a separate owner follow-up.
+Continue the preparation branch using `docs/LAUNCH_TASKS.md`. Receive Yoshi's
+changes and the latest approved branding kit, then combine them for review. The
+public Vercel review site remains live on `main`. Official-domain activation,
+inquiry delivery confirmation, Business Profile updates and Search Console setup
+are still pending. No domain, environment, protection setting or Google profile
+was changed during this preparation.
 
 Keep the existing static HTML/CSS/JavaScript architecture. Historical handoffs and
 studies cannot override PJ's board or later removal and refinement requests.

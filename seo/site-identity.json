@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "status": "prelaunch",
+  "origin": "https://sportmyfitness.com",
+  "current_public_review_url": "https://sport-my-fitness.vercel.app/",
+  "name": "Sport My Fitness",
+  "alternate_name": "Sportmyfitness",
+  "tagline": "Sport your best self.",
+  "description": "Personal, semi-private, group and online training with Yoshi Barnes in Milwaukee, Wisconsin.",
+  "telephone": "+14147914526",
+  "email": "Yoshi_barnes@outlook.com",
+  "address": {
+    "streetAddress": "4722 W Vliet St",
+    "addressLocality": "Milwaukee",
+    "addressRegion": "WI",
+    "postalCode": "53208",
+    "addressCountry": "US"
+  },
+  "geo": {"latitude": 43.0489075, "longitude": -87.9732069},
+  "maps_url": "https://maps.app.goo.gl/kS3fLe1KqUSzdWFj7",
+  "business_profiles": ["https://www.facebook.com/sportmyfitness/"],
+  "hours": {
+    "Monday": ["07:00", "18:00"],
+    "Tuesday": ["07:00", "19:00"],
+    "Wednesday": ["09:00", "17:00"],
+    "Thursday": ["07:00", "19:00"],
+    "Friday": ["06:00", "14:00"],
+    "Saturday": ["10:30", "12:30"],
+    "Sunday": null
+  },
+  "coach": {
+    "name": "Yoshi Barnes",
+    "alternate_name": "Myosha Barnes",
+    "role": "Fitness coach",
+    "profiles": [
+      "https://www.instagram.com/yoshibarnes/",
+      "https://www.facebook.com/yoshi.barnes/",
+      "https://www.youtube.com/@yoshibarnes"
+    ]
+  },
+  "smartbrand": {
+    "handoff": "SMARTBRAND_SOL61_HANDOFF_2026-10-17.md",
+    "expected_asset_path": "assets/brand/sport-my-fitness-smart.jpg",
+    "expected_profile_path": "/brand-assets/",
+    "expected_sha256": "0349a132474c265497fad5d884fd89adcb32bdeeb6ba6ef26baba2e27cf79487",
+    "expected_bytes": 109884,
+    "width": 1248,
+    "height": 884,
+    "credit_text": "Sport My Fitness",
+    "creator": null,
+    "copyright_notice": null,
+    "license_url": null,
+    "rights_confirmed": false,
+    "integration_status": "awaiting_final_kit_from_branding_session"
+  },
+  "evidence": {
+    "domain": "Owner-supplied prelaunch domain in the SmartBrand handoff; DNS, HTTPS and launch authorization not verified here.",
+    "business_facts": "Current Contact page and verification/google-business-listing-20261017.json; final owner confirmation pending.",
+    "coach": "Current Yoshi biography and personal profile links.",
+    "services": "Current Home and Programs pages; prices, dates and availability await Yoshi's final review.",
+    "logo": "Expected bytes and hash copied from the SmartBrand handoff, not independently verified against a delivered final kit in this session."
+  }
+}

@@ -271,7 +271,7 @@ async function motion(browser, route, width, record) {
       await page.waitForFunction(() => navigator.serviceWorker.controller);
       await load(page, 'contact');
       assert.equal(await page.locator('#primary-nav a').count(), 7);
-      assert.equal(await page.locator('body').evaluate(el => getComputedStyle(el).backgroundColor), 'rgb(2, 7, 8)');
+      assert((await page.locator('body').evaluate(el => getComputedStyle(el).backgroundImage)).includes('athletic-grain.svg'), 'returning visitor did not load the current textured theme');
       assert.equal(await page.evaluate(() => !!window.legacyMenuScriptWasUsed), false, 'stale unversioned menu code was used');
       await page.locator('.menu-toggle').click(); await page.locator('.menu-close').click();
       assert.equal(await page.locator('.menu-toggle').getAttribute('aria-expanded'), 'false');

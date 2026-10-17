@@ -9,6 +9,7 @@ const base = process.env.SMF_BASE_URL || 'http://127.0.0.1:8080';
 const out = process.env.SMF_EVIDENCE_DIR || '/tmp/smf-design-evidence';
 const routes = ['index', 'training', 'programs', 'yoshi', 'media', 'community', 'contact'];
 const widths = [360, 390, 430, 768, 900, 901, 1334, 1920];
+const heroReferences = new Map();
 const report = {started: new Date().toISOString(), layouts: [], navigation: [], motion: [], safeguards: [], failures: []};
 fs.mkdirSync(out, {recursive: true});
 function save() { fs.writeFileSync(path.join(out, 'results.json'), JSON.stringify(report, null, 2)); }
@@ -50,8 +51,24 @@ async function layout(page, route, width, engine) {
     const headline = [...h1.children].map(el => { const r = document.createRange(); r.selectNodeContents(el); return r.getBoundingClientRect().toJSON(); });
     const subline = document.querySelector('.hero-subline').getBoundingClientRect();
     const overflow = [...document.querySelectorAll('main *')].map(el => ({tag: el.tagName, classes: el.className, rect: el.getBoundingClientRect().toJSON()})).filter(el => el.rect.width && (el.rect.right > innerWidth + 1 || el.rect.left < -1));
-    return {width: innerWidth, scrollWidth: document.documentElement.scrollWidth, overflow, headline, hero: hero.toJSON(), h1: h1.getBoundingClientRect().toJSON(), subline: subline.toJSON()};
+    const titleStyle = getComputedStyle(h1);
+    const primary = document.querySelector('main > section .hero-actions .button');
+    const buttonStyle = primary ? getComputedStyle(primary) : null;
+    const heroStyle = {font: titleStyle.fontFamily, size: titleStyle.fontSize, line: titleStyle.lineHeight, weight: titleStyle.fontWeight, titleOffset: h1.getBoundingClientRect().top - hero.top, height: hero.height, texture: getComputedStyle(document.body).backgroundImage, overlay: !!document.querySelector('main > section > .hero-art'), button: buttonStyle ? {font: buttonStyle.fontSize, minHeight: buttonStyle.minHeight, radius: buttonStyle.borderRadius} : null};
+    return {heroStyle, width: innerWidth, scrollWidth: document.documentElement.scrollWidth, overflow, headline, hero: hero.toJSON(), h1: h1.getBoundingClientRect().toJSON(), subline: subline.toJSON()};
   });
+  const sharedKey = `${engine}-${width}`;
+  const appearance = geometry.heroStyle;
+  assert(appearance.overlay && appearance.texture.includes('url('), 'hero overlay or textured canvas is missing');
+  if (route === 'index') heroReferences.set(sharedKey, appearance);
+  else {
+    const reference = heroReferences.get(sharedKey);
+    assert(reference, 'Home hero reference has not been checked');
+    for (const key of ['font', 'size', 'line', 'weight']) assert.equal(appearance[key], reference[key], `inconsistent hero ${key} on ${route} ${width}`);
+    assert(Math.abs(appearance.titleOffset - reference.titleOffset) < 1, `hero title origin differs on ${route} ${width}`);
+    assert(Math.abs(appearance.height - reference.height) < 1, `hero canvas height differs on ${route} ${width}`);
+    if (appearance.button) assert.deepEqual(appearance.button, reference.button, `hero action styling differs on ${route}`);
+  }
   assert(geometry.scrollWidth <= geometry.width, 'horizontal overflow: ' + JSON.stringify(geometry));
   assert(geometry.headline.every(r => r.left >= geometry.hero.left - 2 && r.right <= geometry.hero.right - 6), 'headline clipped at viewport edge: ' + JSON.stringify(geometry));
   assert(geometry.h1.bottom <= geometry.subline.top + 2, 'headline overlaps supporting copy');

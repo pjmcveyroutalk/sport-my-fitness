@@ -55,11 +55,19 @@
   });
   panel.addEventListener('click', event => {
     if (event.target.closest('a')) closeMenu();
-    if (event.target === panel) {
-      const box = panel.getBoundingClientRect();
-      if (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom) closeMenu();
-    }
   });
+  // The backdrop normally retargets clicks to the dialog, but the reserved
+  // scrollbar edge can target the document root. Handle both at capture time.
+  // Actual controls inside the dialog keep native pointer/keyboard activation.
+  document.addEventListener('click', event => {
+    if (!panel.open || (event.target !== panel && panel.contains(event.target))) return;
+    const box = panel.getBoundingClientRect();
+    if (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom) {
+      event.preventDefault();
+      event.stopPropagation();
+      closeMenu();
+    }
+  }, true);
   mobile.addEventListener('change', closeMenu);
   addEventListener('pagehide', () => { closeMenu(); restore(); });
 })();

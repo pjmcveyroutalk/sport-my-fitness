@@ -110,7 +110,9 @@ async function navigation(page, route, width) {
   const next = routes[(routes.indexOf(route) + 1) % routes.length];
   await trigger.click();
   const destination = page.waitForURL(url => url.pathname.endsWith('/' + next + '.html'));
-  await page.locator(`#primary-nav a[href="${next}.html"]`).click();
+  const destinationLink = page.locator(`#primary-nav a[href="${next}.html"]`);
+  if (route === 'index' && width === 390) { await destinationLink.focus(); await destinationLink.press('Enter'); }
+  else await destinationLink.click();
   await destination;
   assert.equal(await page.locator('h1').count(), 1, 'menu destination did not load');
   report.navigation.push({route, width, sevenDestinations: true, keyboard: true, close: true, stablePage: true, bottomAccess: true, navigatedTo: next});

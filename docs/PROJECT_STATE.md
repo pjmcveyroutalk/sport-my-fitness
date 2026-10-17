@@ -1,67 +1,77 @@
 # Sport My Fitness — Current Project State
 
-Updated October 17, 2026 (UTC); browser run completed 2026-10-17T04:35:51.509Z.
+Updated October 17, 2026 (UTC); final browser run completed 2026-10-17T05:01:40.340Z.
 
 ## Current checkpoint
 
-The current request extends the corrected waterfront design to a uniform hero system
-across all seven pages and replaces the flat-black canvas with subtle texture.
+The current refinement removes the empty mobile hero bands, strengthens the dark
+background treatment and removes the redundant landing-page training link group.
 
 - Branch: `review/approved-glass-20261017`
-- Verified runtime: `7f397692bfcf4e91bc7a4135df11e0c8530f6829`
-- Review preview: https://sport-my-fitness-3foglprnk-routalk-builder.vercel.app
-- Visual authority: PJ's `docs/design/approved-concept.webp`, original branding and latest uniformity/texture request.
-- Exact logo authority: the original source-ad crop in `assets/brand/`.
+- Verified runtime: `38445de6578ab0c9e22d05358e895fe0bca7e1af`
+- Review preview: https://sport-my-fitness-6t7000gh4-routalk-builder.vercel.app
+- Visual authority: PJ's approved board, exact original brand and later refinement requests.
 - Production remains `main` at `c6b209895aa01b7d419fa445d4c31d39ef90b920`.
 - Public site: https://sport-my-fitness.vercel.app/
 
 ## Current design
 
-Home and all six inner heroes now share the same responsive headline scale, title
-origin, canvas height, photographic overlay and action styling. Inner photographs
-blend into the canvas instead of sitting in separate cards. Images retain their
-native proportions. The Training photograph is cropped with CSS to the real gym
-area within its existing source artwork.
+All seven heroes retain the shared responsive type, title origin, buttons and
+photo treatment. Mobile inner heroes now end with their actual content instead
+of inheriting Home's minimum height. There is 32px of breathing room after the
+copy; browser geometry reads 33px including the hero border. Programs previously
+left about 237px after its supporting line at 390px. The next section now follows
+naturally on all six inner pages. Desktop hero geometry remains unchanged.
 
-The charcoal canvas uses the existing athletic grain, a fine diagonal weave and
-restrained turquoise glow. Texture continues through content sections and the
-footer. No new imagery was generated for this request.
+The dark canvas now uses lighter layered charcoal, directional turquoise light,
+broad angled background planes and the existing subtle grain. Content sections
+and the footer share the finish. Angled planes stay behind the hero photography.
+No new images, icons or animation were added.
 
-The original logo, source photographs, menu code, motion code, Blender curves and
-form code are unchanged. Substantive copy, rates, contextual links and contracts
-remain intact. Yoshi's original photograph credit appears once beneath the hero
-action. Redundant next-page panels and footer navigation remain removed.
+The entire Home “Find your training” section and its three service links are
+removed at PJ's request. The menu and useful hero actions remain. Service details
+and rates remain on Training and Programs; repeated page-end panels and footer
+navigation remain removed.
 
-## Evidence
+The original logo, every source photograph and texture, menu code, motion code,
+Blender curves and form code are unchanged. Inner-page HTML changes only the CSS
+cache key. Home changes that key and removes the requested section. Remaining
+copy, credits, prices, destinations and contracts are intact.
 
-[Browser run 39002930461](https://github.com/pjmcveyroutalk/sport-my-fitness/actions/runs/39002930461)
-passed on the exact runtime above: 70 layouts, 210 image checks, 28 navigation
-journeys, 14 motion runs, 21 safeguards and zero failures in Chromium 151.0.7922.34
-and WebKit 26.5. Every viewport/engine group compares all six inner heroes with
-Home for typography, title origin, hero height and primary action styling.
+## Research and evidence
 
-Actual desktop and mobile renders of all seven heroes were inspected in both
-engines. The texture, image proportions, hero continuity and content continuation
-were reviewed. These checks support review readiness; PJ's visual approval remains
-pending.
+[The comparison](design/background-comparison-20261017.md) records official
+Equinox, Nike Training Club and Les Mills references, Carbon dark-surface guidance,
+the root cause and the chosen treatment. This is an interpretation for the
+existing Sport My Fitness brand, not a replacement brand or site architecture.
 
-- `verification/uniform-hero-texture-browser-results-20261017.json`: full browser results.
-- `verification/uniform-hero-texture-verification-20261017.json`: source hashes,
-  preview, artifact identity, hero measurements, preservation and limits.
-- CI artifact `12089633789`: screenshots and motion recordings.
+[Browser run 39004509768](https://github.com/pjmcveyroutalk/sport-my-fitness/actions/runs/39004509768)
+passed: 70 layouts, 210 image checks, 28 navigation journeys, 14 motion runs,
+21 safeguards, zero failures, Chromium 151.0.7922.34 and WebKit 26.5. All 30 mobile
+inner-hero cases have 33px after the actual copy. Regression checks also enforce
+removal of the Home link group and preservation of both Home hero actions.
 
-The preceding `reference-match-*` reports describe the Home composition correction
-before this uniformity request. The earlier `approved-design-*` reports describe the
-rejected first visual implementation. Retain these as history, not current acceptance.
-Local Chrome cannot run in this container; repository CI is the working browser
-environment. Do not repeat successful verification without a new change or finding.
+Final renders of all seven mobile pages, WebKit Contact mobile, Programs desktop
+and WebKit Home desktop were inspected. These checks establish review readiness;
+PJ's visual approval remains pending.
+
+- `verification/charcoal-depth-browser-results-20261017.json`: full current results.
+- `verification/charcoal-depth-verification-20261017.json`: exact source hashes,
+  unchanged asset tree, preview, artifact digest, spacing and visual review.
+- CI artifact `12090711297`: final screenshots and motion recordings.
+
+The preceding `uniform-hero-texture-*` reports capture the first uniform-hero pass
+before the mobile-gap and background feedback. `reference-match-*` records the
+Home composition correction; `approved-design-*` records the rejected first
+visual implementation. Preserve these as history, not current acceptance.
 
 ## Next step
 
-PJ reviews the current preview above. If publishing is requested, recheck `main`
-and release the reviewed branch through the existing GitHub/Vercel workflow.
+PJ reviews the preview above. If publishing is requested, recheck `main` and
+release the reviewed branch through the existing GitHub/Vercel workflow.
 No production promotion, merge, domain, environment or protection setting changed.
 
-Keep this static HTML/CSS/JavaScript architecture. Historical handoffs and studies
-cannot override PJ's supplied board, exact source logo, duplicate-removal decision
-or latest uniformity and texture request.
+Keep the existing static HTML/CSS/JavaScript architecture. Historical handoffs and
+studies cannot override PJ's board or later removal and refinement requests.
+Repository CI is the working browser environment. Do not repeat successful
+verification without a new change or finding.

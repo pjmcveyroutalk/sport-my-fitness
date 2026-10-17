@@ -1,0 +1,294 @@
+{
+  "status": "ready_for_user_visual_review",
+  "checked_commit": "38445de6578ab0c9e22d05358e895fe0bca7e1af",
+  "branch": "review/approved-glass-20261017",
+  "supersedes_checkpoint": "a3e786cad2b09d08b84646bc6660e5022c926f30",
+  "requests": [
+    "Remove the empty mobile hero bands shown on Programs and Contact.",
+    "Research and compare professional fitness references, and give the dark canvas visible depth.",
+    "Remove the redundant Find your training link group from the landing page."
+  ],
+  "preview": "https://sport-my-fitness-6t7000gh4-routalk-builder.vercel.app",
+  "deployment_id": 7135032955,
+  "production_changed": false,
+  "production_main": "c6b209895aa01b7d419fa445d4c31d39ef90b920",
+  "workflow_run_id": 39004509768,
+  "workflow_url": "https://github.com/pjmcveyroutalk/sport-my-fitness/actions/runs/39004509768",
+  "artifact_id": 12090711297,
+  "artifact_digest": "sha256:1b3f5c07f253545cc4e31db27908228be400a9dcb66fde0948ce48986378a8e0",
+  "started_utc": "2026-10-17T04:58:55.101Z",
+  "completed_utc": "2026-10-17T05:01:40.340Z",
+  "browsers": {
+    "chromium": "151.0.7922.34",
+    "webkit": "26.5"
+  },
+  "results": {
+    "layouts": 70,
+    "image_checks": 210,
+    "navigation": 28,
+    "motion": 14,
+    "safeguards": 21,
+    "failures": 0
+  },
+  "mobile_spacing": {
+    "previous_programs_space_after_subline_at_390": 237,
+    "current_space_after_actual_copy_including_hero_border": 33,
+    "css_breathing_room": 32,
+    "cases_checked": 30,
+    "measurements": [
+      {
+        "engine": "chromium",
+        "route": "training",
+        "width": 360,
+        "afterCopy": 33,
+        "nextContent": 81
+      },
+      {
+        "engine": "chromium",
+        "route": "training",
+        "width": 390,
+        "afterCopy": 33,
+        "nextContent": 81
+      },
+      {
+        "engine": "chromium",
+        "route": "training",
+        "width": 430,
+        "afterCopy": 33,
+        "nextContent": 81
+      },
+      {
+        "engine": "chromium",
+        "route": "training",
+        "width": 768,
+        "afterCopy": 33,
+        "nextContent": 81
+      },
+      {
+        "engine": "chromium",
+        "route": "programs",
+        "width": 360,
+        "afterCopy": 33,
+        "nextContent": 81
+      },
+      {
+        "engine": "chromium",
+        "route": "programs",
+        "width": 390,
+        "afterCopy": 33,
+        "nextContent": 81
+      },
+      {
+        "engine": "chromium",
+        "route": "programs",
+        "width": 430,
+        "afterCopy": 33,
+        "nextContent": 81
+      },
+      {
+        "engine": "chromium",
+        "route": "programs",
+        "width": 768,
+        "afterCopy": 33,
+        "nextContent": 81
+      },
+      {
+        "engine": "chromium",
+        "route": "yoshi",
+        "width": 360,
+        "afterCopy": 33,
+        "nextContent": 81
+      },
+      {
+        "engine": "chromium",
+        "route": "yoshi",
+        "width": 390,
+        "afterCopy": 33,
+        "nextContent": 81
+      },
+      {
+        "engine": "chromium",
+        "route": "yoshi",
+        "width": 430,
+        "afterCopy": 33,
+        "nextContent": 81
+      },
+      {
+        "engine": "chromium",
+        "route": "yoshi",
+        "width": 768,
+        "afterCopy": 33,
+        "nextContent": 81
+      },
+      {
+        "engine": "chromium",
+        "route": "media",
+        "width": 360,
+        "afterCopy": 33,
+        "nextContent": 81
+      },
+      {
+        "engine": "chromium",
+        "route": "media",
+        "width": 390,
+        "afterCopy": 33,
+        "nextContent": 81
+      },
+      {
+        "engine": "chromium",
+        "route": "media",
+        "width": 430,
+        "afterCopy": 33,
+        "nextContent": 81
+      },
+      {
+        "engine": "chromium",
+        "route": "media",
+        "width": 768,
+        "afterCopy": 33,
+        "nextContent": 81
+      },
+      {
+        "engine": "chromium",
+        "route": "community",
+        "width": 360,
+        "afterCopy": 33,
+        "nextContent": 81
+      },
+      {
+        "engine": "chromium",
+        "route": "community",
+        "width": 390,
+        "afterCopy": 33,
+        "nextContent": 81
+      },
+      {
+        "engine": "chromium",
+        "route": "community",
+        "width": 430,
+        "afterCopy": 33,
+        "nextContent": 81
+      },
+      {
+        "engine": "chromium",
+        "route": "community",
+        "width": 768,
+        "afterCopy": 33,
+        "nextContent": 81
+      },
+      {
+        "engine": "chromium",
+        "route": "contact",
+        "width": 360,
+        "afterCopy": 33,
+        "nextContent": 71
+      },
+      {
+        "engine": "chromium",
+        "route": "contact",
+        "width": 390,
+        "afterCopy": 33,
+        "nextContent": 71
+      },
+      {
+        "engine": "chromium",
+        "route": "contact",
+        "width": 430,
+        "afterCopy": 33,
+        "nextContent": 71
+      },
+      {
+        "engine": "chromium",
+        "route": "contact",
+        "width": 768,
+        "afterCopy": 33,
+        "nextContent": 71
+      },
+      {
+        "engine": "webkit",
+        "route": "training",
+        "width": 390,
+        "afterCopy": 33,
+        "nextContent": 81
+      },
+      {
+        "engine": "webkit",
+        "route": "programs",
+        "width": 390,
+        "afterCopy": 33,
+        "nextContent": 81
+      },
+      {
+        "engine": "webkit",
+        "route": "yoshi",
+        "width": 390,
+        "afterCopy": 33,
+        "nextContent": 81
+      },
+      {
+        "engine": "webkit",
+        "route": "media",
+        "width": 390,
+        "afterCopy": 33,
+        "nextContent": 81
+      },
+      {
+        "engine": "webkit",
+        "route": "community",
+        "width": 390,
+        "afterCopy": 33,
+        "nextContent": 81
+      },
+      {
+        "engine": "webkit",
+        "route": "contact",
+        "width": 390,
+        "afterCopy": 33,
+        "nextContent": 71
+      }
+    ]
+  },
+  "research_comparison": "docs/design/background-comparison-20261017.md",
+  "visual_review": [
+    "All seven final Chromium mobile hero/content transitions inspected.",
+    "Final WebKit Contact mobile inspected for spacing, photo credit, background and form continuation.",
+    "Final Chromium Programs desktop inspected for typography, original coaching photo, rates and dimensional background.",
+    "Final WebKit Home desktop inspected for the clean waterfront photograph, original logo, equal-width hero actions and absence of the removed link group."
+  ],
+  "source_contract": {
+    "baseline": "a3e786cad2b09d08b84646bc6660e5022c926f30",
+    "assets_tree_sha": "5d5f30bbfe834349a1dac869c6ff566f6383559a",
+    "all_original_photo_logo_texture_assets": "byte-identical asset tree",
+    "motion_menu_form_sources": "byte-identical to preceding checkpoint",
+    "inner_html": "CSS cache key only",
+    "home_html": "CSS cache key plus requested training link section removal only",
+    "hero_motion_ratios_contextual_actions": "preserved",
+    "background": "CSS-only charcoal layers, directional turquoise light, broad background planes and existing grain; no planes over hero portraits"
+  },
+  "active_source_sha256": {
+    "index.html": "80f42096ae8914889e6b9ca6fb5450ffdda6665d1d97b8a54fa88f64f0925f07",
+    "training.html": "0fd2d56ce6713855b913f6773de9d32092717f029ba5595099f7e861a786cf32",
+    "programs.html": "2bbc578d8c95af906048980db8237a59597b7695cc701f861a7f915c0158bbdc",
+    "yoshi.html": "ab34e9ed5ebbb6009d58738c8e8063094e2f927b2556e4f758621b281d27c7b3",
+    "media.html": "05355bcad9c73c8d7c44759a6f63adc6bb3e3d6dc5ec66f653feda08bb015886",
+    "community.html": "473c34f5fd055efc9ac3f1ffa6f1dbe76a5dd2a67f63fa8733494bb01d433dff",
+    "contact.html": "4cabfaa69de5b9f99a72707b3e2285e96eb5a0071ebb298b68744ecf0a41dcbf",
+    "site-design.css": "d4770013247a1ec181353f3284140f3e3202f190320c95cbdba779424a3355b7",
+    "site-menu.js": "3d4310160d4cea432a6cf780be279c95bf5a6fe4d8aa1cac71bcd6d350a272d7",
+    "site-motion.css": "b2c4c1eebeddd76ebb7f6f5eda27ac91d82b16783df3619186217d2ad3143022",
+    "site-motion.js": "cff14d42c5d743dcc5bbee2bcafba6780c77bb58a40944e8700292c9ab94cc56",
+    "contact.js": "d791c23847564472ef02a741094da4338e6cdf4df15aef489dbb5beab693e065",
+    "assets/smf-motion-curves.json": "d9197bbfa766676178103ef8834491b804a50d6468047a22f4a5d660c21ce619",
+    "assets/brand/sport-my-fitness-original-lockup.png": "202f885d450df6330d8b0809f0c61f43a7ce940f7c870004c9bf6683178aad63",
+    "assets/photos/smf-waterfront-hero-800.webp": "ba56966cefcfb98383034c3bad78e714abab6cb058b8d9364c14aed3dcbd4344",
+    "assets/photos/smf-waterfront-hero-1200.webp": "83b36d9b11976b6217fcf0691c8720d58cf2d926a27d3cd5da1c695d5ca433b2",
+    "assets/photos/smf-waterfront-hero-1585.webp": "b34ee59f501384a00aa5b053475fbe2b9ef2ed5a6edd09018a73d8c87f39e22e",
+    "assets/athletic-grain.svg": "72e360fee6053ed4acc88818415edb5736b9a771ac8f3e00543fe54b8be649c0"
+  },
+  "limits": [
+    "PJ visual approval remains pending.",
+    "Browser-engine emulation; no physical-device run or new Lighthouse score.",
+    "No real inquiry, email, booking or payment submitted.",
+    "Preview retains existing Vercel sign-in protection."
+  ]
+}

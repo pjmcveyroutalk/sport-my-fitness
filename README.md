@@ -6,21 +6,20 @@ Start with [the current project state](docs/PROJECT_STATE.md). It resolves the o
 
 ## Current work
 
-The current seven-page hero and texture refinement is on `review/approved-glass-20261017`.
-Use the [updated review preview](https://sport-my-fitness-3foglprnk-routalk-builder.vercel.app); it retains existing Vercel sign-in protection.
-All seven heroes share a responsive type scale, title alignment, canvas height and
-photo treatment. Charcoal grain, fine weave and subtle turquoise depth continue
-through the page backgrounds. The exact original logo, source photographs,
-substantive content and original motion remain intact. Repeated page-end panels
-and footer navigation remain removed.
+Use the [current review preview](https://sport-my-fitness-6t7000gh4-routalk-builder.vercel.app) on `review/approved-glass-20261017`; existing Vercel sign-in protection remains.
+Mobile inner heroes now end naturally after their copy, removing the large empty
+bands. Layered charcoal, turquoise directional light, background planes and fine
+grain add depth throughout the site. The redundant Home “Find your training” link
+group is removed. The exact original logo, source photographs, original movement,
+remaining copy, rates, credits and useful actions are preserved.
 
-Runtime `7f39769` passes 70 Chromium/WebKit layouts plus image, navigation, motion
-and safeguard checks. Desktop/mobile renders of all seven heroes were inspected.
-It is ready for PJ's visual review. See [current project state](docs/PROJECT_STATE.md)
-and [current evidence](verification/uniform-hero-texture-verification-20261017.json).
-Earlier reference-match reports record the preceding Home composition correction;
-earlier approved-design reports record the rejected first visual implementation.
-Production remains [sport-my-fitness.vercel.app](https://sport-my-fitness.vercel.app/).
+Runtime `38445de` passes 70 Chromium/WebKit layouts, 210 image checks, navigation,
+motion and safeguards. Final mobile and desktop renders were inspected. See
+[current project state](docs/PROJECT_STATE.md), [the reference comparison](docs/design/background-comparison-20261017.md)
+and [current evidence](verification/charcoal-depth-verification-20261017.json).
+PJ's visual review is the next step. Production remains
+[sport-my-fitness.vercel.app](https://sport-my-fitness.vercel.app/).
+Earlier design reports are historical checkpoints, not current acceptance.
 
 ## Routes
 

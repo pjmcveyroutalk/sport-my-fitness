@@ -32,5 +32,12 @@ pages alongside the board. Geometry checks catch the former stacking/scale
 regression but do not replace that comparison or PJ's review.
 
 The current rendered correction and fresh evidence are recorded in
-`verification/reference-match-verification-20261017.json`. PJ review remains the
+`verification/charcoal-depth-verification-20261017.json`. PJ review remains the
 next acceptance step.
+
+PJ's later refinements extend the shared hero style across all pages, remove
+forced mobile hero height and remove the Home “Find your training” link group.
+These instructions supersede that repeated block in the board. The background
+comparison and chosen charcoal treatment are in
+`docs/design/background-comparison-20261017.md`. Original logo and photo assets
+remain unchanged by this refinement.

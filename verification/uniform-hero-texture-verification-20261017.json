@@ -1,0 +1,162 @@
+{
+  "status": "ready_for_user_visual_review",
+  "checked_commit": "7f397692bfcf4e91bc7a4135df11e0c8530f6829",
+  "branch": "review/approved-glass-20261017",
+  "supersedes_checkpoint": "042847af0a855f80ebd16bc88e8f75e517da4031",
+  "request": "Unify the seven page heroes and add texture to the flat-black background.",
+  "visual_authority": "docs/design/approved-concept.webp plus PJ uniformity and texture request",
+  "preview": "https://sport-my-fitness-3foglprnk-routalk-builder.vercel.app",
+  "deployment_id": 7134803352,
+  "production_changed": false,
+  "production_main": "c6b209895aa01b7d419fa445d4c31d39ef90b920",
+  "workflow_run_id": 39002930461,
+  "workflow_url": "https://github.com/pjmcveyroutalk/sport-my-fitness/actions/runs/39002930461",
+  "artifact_id": 12089633789,
+  "artifact_digest": "sha256:82eb26a1f2adf5e939e4ce343993014832dc4882c1ec4f2566fa1c56643af45f",
+  "started_utc": "2026-10-17T04:33:19.160Z",
+  "completed_utc": "2026-10-17T04:35:51.509Z",
+  "browsers": {
+    "chromium": "151.0.7922.34",
+    "webkit": "26.5"
+  },
+  "results": {
+    "layouts": 70,
+    "image_checks": 210,
+    "navigation": 28,
+    "motion": 14,
+    "safeguards": 21,
+    "failures": 0
+  },
+  "hero_style_comparison": [
+    {
+      "engine": "chromium",
+      "viewport_width": 360,
+      "pages": 7,
+      "font_size": "59.04px",
+      "line_height": "50.7744px",
+      "title_offset": 225.859375,
+      "hero_height": 600
+    },
+    {
+      "engine": "chromium",
+      "viewport_width": 390,
+      "pages": 7,
+      "font_size": "63.96px",
+      "line_height": "55.0056px",
+      "title_offset": 244.171875,
+      "hero_height": 624
+    },
+    {
+      "engine": "chromium",
+      "viewport_width": 430,
+      "pages": 7,
+      "font_size": "70.52px",
+      "line_height": "60.6472px",
+      "title_offset": 268.609375,
+      "hero_height": 688
+    },
+    {
+      "engine": "chromium",
+      "viewport_width": 768,
+      "pages": 7,
+      "font_size": "96px",
+      "line_height": "82.56px",
+      "title_offset": 419.1875,
+      "hero_height": 900
+    },
+    {
+      "engine": "chromium",
+      "viewport_width": 900,
+      "pages": 7,
+      "font_size": "112px",
+      "line_height": "89.6px",
+      "title_offset": 146,
+      "hero_height": 868
+    },
+    {
+      "engine": "chromium",
+      "viewport_width": 901,
+      "pages": 7,
+      "font_size": "112px",
+      "line_height": "89.6px",
+      "title_offset": 234,
+      "hero_height": 956
+    },
+    {
+      "engine": "chromium",
+      "viewport_width": 1334,
+      "pages": 7,
+      "font_size": "149.408px",
+      "line_height": "119.526px",
+      "title_offset": 234,
+      "hero_height": 853.75
+    },
+    {
+      "engine": "chromium",
+      "viewport_width": 1920,
+      "pages": 7,
+      "font_size": "180px",
+      "line_height": "144px",
+      "title_offset": 246,
+      "hero_height": 980
+    },
+    {
+      "engine": "webkit",
+      "viewport_width": 390,
+      "pages": 7,
+      "font_size": "63.960003px",
+      "line_height": "55.0056px",
+      "title_offset": 244.171875,
+      "hero_height": 624
+    },
+    {
+      "engine": "webkit",
+      "viewport_width": 1334,
+      "pages": 7,
+      "font_size": "149.408005px",
+      "line_height": "119.526405px",
+      "title_offset": 234,
+      "hero_height": 853.75
+    }
+  ],
+  "visual_review": [
+    "All seven mobile and desktop hero renders inspected in Chromium and WebKit.",
+    "Shared headline scale, origin, canvas height, button treatment and proportional photographs verified.",
+    "Grain, fine diagonal weave and restrained turquoise glow inspected across heroes, body sections and footer.",
+    "Original Training artwork is cropped with CSS to its real gym area; no source image pixels changed.",
+    "Community desktop and Yoshi mobile full-page renders inspected for continuation, content and credit placement."
+  ],
+  "source_contract": {
+    "logo_menu_motion_form_source_files": "byte-identical to preceding reference-match checkpoint",
+    "home_artwork_and_all_inner_photo_files": "unchanged",
+    "substantive_copy_contextual_links_form_contracts": "retained",
+    "yoshi_credit": "same text and link, moved once beneath hero action",
+    "repetitive_page_end_panels_and_footer_navigation": "remain removed",
+    "texture": "existing athletic-grain.svg reused with CSS weave and subtle turquoise glow"
+  },
+  "active_source_sha256": {
+    "index.html": "d886d3e1d0eadb67bf95b7470771ae098aab7791be3a6fda58d410fc66a5e242",
+    "training.html": "91eca87edd553340e15cb5e50ea7019dbc77ad16405529dea4b46c49b2082c80",
+    "programs.html": "db3e2f177edfa4f2a8917fd5434ee970c09a906ee97458546afa33bc58bd2c9f",
+    "yoshi.html": "083b73aaa29256e625faa7d83eeae61862cfe02c38f2c65cb1b8609b2cf8f25e",
+    "media.html": "e33ecb6b78ac792da465eabf84291db1df0657cec1f8cca80c9a928cacdfaa20",
+    "community.html": "41e0112129c8d87a40fc7a988c6859899d7985cd2d9be4b78b9c6410f937adb1",
+    "contact.html": "2fc9671c902770226e14001ed77ee4cd60f0a77fb5eb80d3653cf611dc3a28c0",
+    "site-design.css": "a71f4886650a62c3fdd510fc6eca61eb4b812821807bc0ec88fbb9a18ad7df17",
+    "site-menu.js": "3d4310160d4cea432a6cf780be279c95bf5a6fe4d8aa1cac71bcd6d350a272d7",
+    "site-motion.css": "b2c4c1eebeddd76ebb7f6f5eda27ac91d82b16783df3619186217d2ad3143022",
+    "site-motion.js": "cff14d42c5d743dcc5bbee2bcafba6780c77bb58a40944e8700292c9ab94cc56",
+    "contact.js": "d791c23847564472ef02a741094da4338e6cdf4df15aef489dbb5beab693e065",
+    "assets/smf-motion-curves.json": "d9197bbfa766676178103ef8834491b804a50d6468047a22f4a5d660c21ce619",
+    "assets/brand/sport-my-fitness-original-lockup.png": "202f885d450df6330d8b0809f0c61f43a7ce940f7c870004c9bf6683178aad63",
+    "assets/photos/smf-waterfront-hero-800.webp": "ba56966cefcfb98383034c3bad78e714abab6cb058b8d9364c14aed3dcbd4344",
+    "assets/photos/smf-waterfront-hero-1200.webp": "83b36d9b11976b6217fcf0691c8720d58cf2d926a27d3cd5da1c695d5ca433b2",
+    "assets/photos/smf-waterfront-hero-1585.webp": "b34ee59f501384a00aa5b053475fbe2b9ef2ed5a6edd09018a73d8c87f39e22e",
+    "assets/athletic-grain.svg": "72e360fee6053ed4acc88818415edb5736b9a771ac8f3e00543fe54b8be649c0"
+  },
+  "limits": [
+    "PJ visual approval remains pending.",
+    "No physical-device run, new Lighthouse score or real form/email/booking/payment submission.",
+    "Preview retains existing Vercel sign-in protection."
+  ]
+}

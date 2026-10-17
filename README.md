@@ -6,17 +6,20 @@ Start with [the current project state](docs/PROJECT_STATE.md). It resolves the o
 
 ## Current work
 
-The corrected black/turquoise waterfront design is on `review/approved-glass-20261017`.
-Use the [corrected review preview](https://sport-my-fitness-kxolu0xcn-routalk-builder.vercel.app); it retains existing Vercel sign-in protection.
-Actual Home desktop/mobile renders were compared with [PJ's approved board](docs/design/approved-concept.webp).
-The original logo, inner-page photographs, substantive content and motion remain intact.
-Home uses a new full-bleed background edit with live overlaid text. Redundant page-end
-panels and footer navigation remain removed.
+The current seven-page hero and texture refinement is on `review/approved-glass-20261017`.
+Use the [updated review preview](https://sport-my-fitness-3foglprnk-routalk-builder.vercel.app); it retains existing Vercel sign-in protection.
+All seven heroes share a responsive type scale, title alignment, canvas height and
+photo treatment. Charcoal grain, fine weave and subtle turquoise depth continue
+through the page backgrounds. The exact original logo, source photographs,
+substantive content and original motion remain intact. Repeated page-end panels
+and footer navigation remain removed.
 
-The first implemented preview was rejected for visual mismatch; its earlier technical
-passes are historical. The corrected runtime `ada5a43` passes Chromium/WebKit checks
-and is ready for PJ's visual review. See [current project state](docs/PROJECT_STATE.md)
-and [current evidence](verification/reference-match-verification-20261017.json).
+Runtime `7f39769` passes 70 Chromium/WebKit layouts plus image, navigation, motion
+and safeguard checks. Desktop/mobile renders of all seven heroes were inspected.
+It is ready for PJ's visual review. See [current project state](docs/PROJECT_STATE.md)
+and [current evidence](verification/uniform-hero-texture-verification-20261017.json).
+Earlier reference-match reports record the preceding Home composition correction;
+earlier approved-design reports record the rejected first visual implementation.
 Production remains [sport-my-fitness.vercel.app](https://sport-my-fitness.vercel.app/).
 
 ## Routes

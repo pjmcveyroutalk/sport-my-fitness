@@ -1,18 +1,36 @@
 # Sport My Fitness — Current Project State
 
-Updated October 17, 2026 (UTC); final browser run completed 2026-10-17T05:01:40.340Z.
+Updated October 17, 2026 (UTC); final browser run completed 2026-10-17T16:04:05.549Z.
 
 ## Current checkpoint
 
-The current refinement removes the empty mobile hero bands, strengthens the dark
-background treatment and removes the redundant landing-page training link group.
+The current refinement adds one clean Google business map, exact-place directions,
+collapsible published hours and a short accessible-parking note to Contact. The
+previous mobile spacing, background and landing-page cleanup remain intact.
 
 - Branch: `review/approved-glass-20261017`
-- Verified runtime: `38445de6578ab0c9e22d05358e895fe0bca7e1af`
-- Review preview: https://sport-my-fitness-6t7000gh4-routalk-builder.vercel.app
+- Verified runtime: `3f39e6b9a95b4abe7427cb4686bcad4212a425ec`
+- Review preview: https://sport-my-fitness-naghhevku-routalk-builder.vercel.app
 - Visual authority: PJ's approved board, exact original brand and later refinement requests.
 - Production remains `main` at `c6b209895aa01b7d419fa445d4c31d39ef90b920`.
 - Public site: https://sport-my-fitness.vercel.app/
+
+## Location refinement
+
+The live Google Maps profile confirms 4722 W Vliet St, Milwaukee, WI 53208 and
+414-791-4526. Both were already correct on the site. Google also lists weekly
+hours and a wheelchair-accessible parking lot. Contact now replaces the old
+address-only map link with the exact business's standard Google road-map embed,
+one Get directions link, native collapsed Studio hours and the parking note.
+The map is lazy-loaded and its original colors, controls and attribution remain
+visible. No Maps SDK, API key, account setup or extra application JavaScript was
+introduced. The address, hours and directions remain available when the map fails.
+
+The listing's website field is blank. This is a follow-up for the final public
+website after publishing. No Google profile edit, suggestion, review or message
+was submitted. Restroom and rating information were checked but not repeated in
+the website UI. Observed facts are saved in
+`verification/google-business-listing-20261017.json`.
 
 ## Current design
 
@@ -34,36 +52,41 @@ and rates remain on Training and Programs; repeated page-end panels and footer
 navigation remain removed.
 
 The original logo, every source photograph and texture, menu code, motion code,
-Blender curves and form code are unchanged. Inner-page HTML changes only the CSS
-cache key. Home changes that key and removes the requested section. Remaining
-copy, credits, prices, destinations and contracts are intact.
+Blender curves and form code are unchanged. For the location refinement, the six
+other pages change only their CSS cache key; Contact additionally replaces its old
+map link. Existing hero content, form fields, credits, prices and booking contract
+remain intact.
 
-## Research and evidence
+## Current evidence
 
-[The comparison](design/background-comparison-20261017.md) records official
-Equinox, Nike Training Club and Les Mills references, Carbon dark-surface guidance,
-the root cause and the chosen treatment. This is an interpretation for the
-existing Sport My Fitness brand, not a replacement brand or site architecture.
+[Browser run 39047504190](https://github.com/pjmcveyroutalk/sport-my-fitness/actions/runs/39047504190)
+passed: 70 layouts, 210 image checks, 28 navigation journeys, 14 original-motion
+runs, four native Google map checks and 22 safeguards, with zero failures in
+Chromium 151.0.7922.34 and WebKit 26.5. Map checks cover the exact place identity,
+real native rendering, one directions action, keyboard-operated hours and lazy
+loading. A blocked-map case confirms usable text, hours and directions.
 
-[Browser run 39004509768](https://github.com/pjmcveyroutalk/sport-my-fitness/actions/runs/39004509768)
-passed: 70 layouts, 210 image checks, 28 navigation journeys, 14 motion runs,
-21 safeguards, zero failures, Chromium 151.0.7922.34 and WebKit 26.5. All 30 mobile
-inner-hero cases have 33px after the actual copy. Regression checks also enforce
-removal of the Home link group and preservation of both Home hero actions.
+Native map-component renders were inspected on mobile and desktop in both
+engines, plus the full Contact desktop layout. The pin and street remain clear
+in the compact map. Full-page captures can show a blank offscreen lazy Google
+frame after scrolling to the hero; the native component captures record its
+actual visible rendering. PJ visual approval remains pending.
 
-Final renders of all seven mobile pages, WebKit Contact mobile, Programs desktop
-and WebKit Home desktop were inspected. These checks establish review readiness;
-PJ's visual approval remains pending.
+- `verification/studio-map-browser-results-20261017.json`: full current results.
+- `verification/studio-map-verification-20261017.json`: exact source hashes,
+  preview, artifact, source preservation, visual review and limits.
+- `verification/google-business-listing-20261017.json`: primary listing observations.
+- CI artifact `12105534538`: screenshots and motion recordings.
 
-- `verification/charcoal-depth-browser-results-20261017.json`: full current results.
-- `verification/charcoal-depth-verification-20261017.json`: exact source hashes,
-  unchanged asset tree, preview, artifact digest, spacing and visual review.
-- CI artifact `12090711297`: final screenshots and motion recordings.
+The first map test expected the painted business label as DOM text. Inspection of
+Google's own live embed identified that test error; the corrected check retains
+the exact place identity and waits for native attribution controls. No website
+runtime code changed for that correction. The final complete run above is green.
 
-The preceding `uniform-hero-texture-*` reports capture the first uniform-hero pass
-before the mobile-gap and background feedback. `reference-match-*` records the
-Home composition correction; `approved-design-*` records the rejected first
-visual implementation. Preserve these as history, not current acceptance.
+The preceding charcoal-depth, uniform-hero-texture and reference-match reports
+remain design history. The comparison in `docs/design/background-comparison-20261017.md`
+still explains the background direction. The original rejected approved-design
+reports are historical, not current acceptance.
 
 ## Next step
 

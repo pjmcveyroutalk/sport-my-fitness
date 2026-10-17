@@ -1,0 +1,124 @@
+{
+  "status": "ready_for_user_visual_review",
+  "checked_commit": "3f39e6b9a95b4abe7427cb4686bcad4212a425ec",
+  "branch": "review/approved-glass-20261017",
+  "baseline_checkpoint": "d73cc48eef60f77563f52d865a3662c7196216dc",
+  "request": "Add a clean Google map for the business and check for useful missing listing information.",
+  "preview": "https://sport-my-fitness-naghhevku-routalk-builder.vercel.app",
+  "contact_preview": "https://sport-my-fitness-naghhevku-routalk-builder.vercel.app/contact.html#location-heading",
+  "deployment_id": 7142098530,
+  "production_changed": false,
+  "production_main": "c6b209895aa01b7d419fa445d4c31d39ef90b920",
+  "listing_evidence": "verification/google-business-listing-20261017.json",
+  "workflow_run_id": 39047504190,
+  "workflow_url": "https://github.com/pjmcveyroutalk/sport-my-fitness/actions/runs/39047504190",
+  "artifact_id": 12105534538,
+  "artifact_digest": "sha256:4ecbb750dae8fde7ec925cbcf7cd6441aad1675f3fd59d5264bce5f117e7ba74",
+  "started_utc": "2026-10-17T16:01:13.812Z",
+  "completed_utc": "2026-10-17T16:04:05.549Z",
+  "browsers": {
+    "chromium": "151.0.7922.34",
+    "webkit": "26.5"
+  },
+  "results": {
+    "layouts": 70,
+    "image_checks": 210,
+    "navigation": 28,
+    "motion": 14,
+    "native_map_checks": 4,
+    "safeguards": 22,
+    "failures": 0
+  },
+  "native_map_checks": [
+    {
+      "engine": "chromium",
+      "width": 390,
+      "googleMapRendered": true,
+      "correctPlace": true,
+      "singleDirectionsLink": true,
+      "keyboardHours": true,
+      "lazy": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1334,
+      "googleMapRendered": true,
+      "correctPlace": true,
+      "singleDirectionsLink": true,
+      "keyboardHours": true,
+      "lazy": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "googleMapRendered": true,
+      "correctPlace": true,
+      "singleDirectionsLink": true,
+      "keyboardHours": true,
+      "lazy": true
+    },
+    {
+      "engine": "webkit",
+      "width": 1334,
+      "googleMapRendered": true,
+      "correctPlace": true,
+      "singleDirectionsLink": true,
+      "keyboardHours": true,
+      "lazy": true
+    }
+  ],
+  "map_failure_check": {
+    "test": "blocked-map-address-directions-hours-available",
+    "pass": true
+  },
+  "visual_review": [
+    "Native location-component screenshots inspected at mobile and desktop widths in Chromium and WebKit.",
+    "Business pin and W Vliet St are visible, without an opaque business-information card covering the compact map.",
+    "Address, one directions link, collapsed native hours and the parking note align with the existing contact treatment.",
+    "Full Contact desktop composition inspected; original hero, logo, form and existing call/email/booking actions remain intact.",
+    "Use the native component captures for map visual evidence: offscreen lazy Google frames may be blank in full-page captures after scrolling back to the hero."
+  ],
+  "source_contract": {
+    "asset_tree_sha": "5d5f30bbfe834349a1dac869c6ff566f6383559a",
+    "all_original_logo_photo_texture_assets": "unchanged",
+    "motion_menu_form_source_files": "byte-identical",
+    "six_other_pages": "CSS cache key only",
+    "contact_page": "CSS cache key and replacement of the old map/address link with the requested location component only",
+    "form_fields_action_and_contextual_destinations": "unchanged",
+    "new_javascript_dependencies": "none",
+    "google_profile_edits": "none"
+  },
+  "active_source_sha256": {
+    "index.html": "b2dfa6081f5e3b52c6c9315bb31fa8ab94d4ac97112e48124aa66cfc058eaf63",
+    "training.html": "bb0eb2bc2c11c95ab86a81593c075df058a812049d499cd513968c8b6406deba",
+    "programs.html": "b33cd357441b90d765eb156fb45f777cf2e48de6d87f5da937928601f63df680",
+    "yoshi.html": "c505cbb564a4b7618ae716ff10e75a94466c95e5e2473d8bcff81e4c6fa4cc75",
+    "media.html": "10f9dc1d9baab94eca42f1895e2040a06b47db5f9e0fa9107e7a5d4f44b080f6",
+    "community.html": "fbd8d77a1d59f70124c634fc3be82ac98d0c749ec8014749c6b09161562e4340",
+    "contact.html": "79b736109ba7c72223e24ebdc3680368f7205bbf865a6a52d4a3f75914eb5377",
+    "site-design.css": "8947b8b16abbae3810ca1827525c9e73fd039117a5d652d971b65a7802b098c0",
+    "site-menu.js": "3d4310160d4cea432a6cf780be279c95bf5a6fe4d8aa1cac71bcd6d350a272d7",
+    "site-motion.css": "b2c4c1eebeddd76ebb7f6f5eda27ac91d82b16783df3619186217d2ad3143022",
+    "site-motion.js": "cff14d42c5d743dcc5bbee2bcafba6780c77bb58a40944e8700292c9ab94cc56",
+    "contact.js": "d791c23847564472ef02a741094da4338e6cdf4df15aef489dbb5beab693e065",
+    "assets/smf-motion-curves.json": "d9197bbfa766676178103ef8834491b804a50d6468047a22f4a5d660c21ce619",
+    "assets/brand/sport-my-fitness-original-lockup.png": "202f885d450df6330d8b0809f0c61f43a7ce940f7c870004c9bf6683178aad63",
+    "assets/photos/smf-waterfront-hero-800.webp": "ba56966cefcfb98383034c3bad78e714abab6cb058b8d9364c14aed3dcbd4344",
+    "assets/photos/smf-waterfront-hero-1200.webp": "83b36d9b11976b6217fcf0691c8720d58cf2d926a27d3cd5da1c695d5ca433b2",
+    "assets/photos/smf-waterfront-hero-1585.webp": "b34ee59f501384a00aa5b053475fbe2b9ef2ed5a6edd09018a73d8c87f39e22e",
+    "assets/athletic-grain.svg": "72e360fee6053ed4acc88818415edb5736b9a771ac8f3e00543fe54b8be649c0"
+  },
+  "initial_check_diagnosis": {
+    "run_id": 39047114397,
+    "artifact_id": 12106312346,
+    "failure": "Business label expected as DOM text; Google paints it inside the map.",
+    "correction": "Exact source place identity retained; native rendering checked using visible Google attribution controls, verified against the live official embed. Website runtime files did not change for this test correction."
+  },
+  "owner_follow_up": "Google currently displays Add website. Add the approved public website after publishing; no listing edit was submitted.",
+  "limits": [
+    "PJ visual review remains pending.",
+    "Hours are the values observed on Google Maps on 2026-10-17; they do not synchronize automatically.",
+    "Preview retains existing Vercel sign-in protection. Cloud Browser reached that sign-in wall; exact-source rendering and behavior were verified in repository CI.",
+    "No physical-device test or real form/email/booking/payment submission."
+  ]
+}

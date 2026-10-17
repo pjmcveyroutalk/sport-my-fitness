@@ -6,17 +6,21 @@ Start with [the current project state](docs/PROJECT_STATE.md). It resolves the o
 
 ## Current work
 
-Use the [current review preview](https://sport-my-fitness-6t7000gh4-routalk-builder.vercel.app) on `review/approved-glass-20261017`; existing Vercel sign-in protection remains.
+Use the [current review preview](https://sport-my-fitness-naghhevku-routalk-builder.vercel.app) on `review/approved-glass-20261017`; existing Vercel sign-in protection remains.
 Mobile inner heroes now end naturally after their copy, removing the large empty
 bands. Layered charcoal, turquoise directional light, background planes and fine
 grain add depth throughout the site. The redundant Home “Find your training” link
 group is removed. The exact original logo, source photographs, original movement,
 remaining copy, rates, credits and useful actions are preserved.
 
-Runtime `38445de` passes 70 Chromium/WebKit layouts, 210 image checks, navigation,
-motion and safeguards. Final mobile and desktop renders were inspected. See
+Contact now has one compact Google business map, a single directions link,
+expandable published hours and verified parking information.
+
+Runtime `3f39e6b` passes 70 Chromium/WebKit layouts, 210 image checks, four native
+map checks, navigation, motion and map-failure safeguards. Native mobile/desktop
+map renders and the Contact layout were inspected. See
 [current project state](docs/PROJECT_STATE.md), [the reference comparison](docs/design/background-comparison-20261017.md)
-and [current evidence](verification/charcoal-depth-verification-20261017.json).
+and [current evidence](verification/studio-map-verification-20261017.json).
 PJ's visual review is the next step. Production remains
 [sport-my-fitness.vercel.app](https://sport-my-fitness.vercel.app/).
 Earlier design reports are historical checkpoints, not current acceptance.

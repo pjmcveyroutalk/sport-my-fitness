@@ -1,18 +1,23 @@
 # Sport My Fitness — Current Project State
 
-Updated October 18, 2026 (UTC); approved design published, platform-mark correction in review.
+Updated October 18, 2026 (UTC); approved design and restored platform marks published and verified.
 
 ## Current checkpoint
 
-October 18 correction: restore the existing official Instagram, Facebook and
-YouTube SVGs beside the three About links and Media's All videos link. The four
-original assets are not redrawn or recolored. Compact light clear space keeps the
+October 18 correction: the existing official Instagram, Facebook and YouTube SVGs
+are restored beside the three About links and Media's All videos link. The source
+assets are not redrawn or recolored. Compact light clear space keeps the
 black Instagram glyph legible on the dark canvas; proportional image sizing
 preserves each mark. TMJ4's existing official mark stays in place. All seven pages
 use the new stylesheet cache key so returning visitors receive the correction.
-The browser review now checks the four marks and their readable link names,
-destinations, image proportions and mobile/desktop layout. Publication and results
-will be recorded after that review completes.
+Published runtime `28b959b4ef8fc945504b81e0a1353f7f5a490877` deployed successfully
+as Production `7149159062`. Browser run `39091843112` passed 70 layouts, 250 image
+checks, 40 platform-link checks, 28 navigation journeys and 14 original-motion
+runs in Chromium and WebKit with zero failures. About and Media mark components
+were visually inspected at mobile and desktop sizes. Live public browser checks
+confirm the four marks load, and all 15 checked public source files match the
+released bytes without SEO-preparation metadata leaking into production.
+See `verification/platform-marks-20261018.json` and its saved public screenshot.
 
 Post-release correction, October 17: PJ identified the Contact page's final
 “Sessions & packages” link as an unwanted exit to the old website. Contact now

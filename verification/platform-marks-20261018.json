@@ -1,0 +1,175 @@
+{
+  "status": "published_and_verified",
+  "checked_utc": "2026-10-18T03:02:42.049691+00:00",
+  "runtime_commit": "28b959b4ef8fc945504b81e0a1353f7f5a490877",
+  "previous_public_commit": "afe221bdfe36887eb3acdbecb8b03d3df5f32697",
+  "production_deployment": 7149159062,
+  "public_site": "https://sport-my-fitness.vercel.app/",
+  "scope": "Restore original official platform SVGs on three About links and Media All videos. Proportional sizing, original colors on light clear space, shared CSS cache key.",
+  "browser_review": {
+    "run": 39091843112,
+    "url": "https://github.com/pjmcveyroutalk/sport-my-fitness/actions/runs/39091843112",
+    "artifact": 12122608194,
+    "artifact_sha256": "6f840291caeac5f39d02c818ac2d915edd7f2355d3caf516f8c63fb7fa9ea565",
+    "conclusion": "success",
+    "chromium": "151.0.7922.34",
+    "webkit": "26.5",
+    "layouts": 70,
+    "image_checks": 250,
+    "platform_link_checks": 40,
+    "navigation_journeys": 28,
+    "original_motion_runs": 14,
+    "failures": [],
+    "visual_review": [
+      "About mobile and desktop: original marks legible, aligned and proportional",
+      "Media mobile and desktop: official YouTube mark beside All videos with no clipping"
+    ]
+  },
+  "preservation": {
+    "platform_svg_bytes": "unchanged",
+    "main_logo_sha256": "202f885d450df6330d8b0809f0c61f43a7ce940f7c870004c9bf6683178aad63",
+    "photographs_motion_form_map_and_search_metadata": "unchanged",
+    "html_scope": "Removing the four inserted mark wrappers and reversing the CSS cache key reproduces every prior page byte-for-byte."
+  },
+  "public_http_checks": [
+    {
+      "path": "index.html",
+      "status": 200,
+      "url": "https://sport-my-fitness.vercel.app/index.html",
+      "sha256": "a66a23c25c5deaad2a911276d81717faef22db26902e4b4777b5cec1a8a1bfa8",
+      "matches_released_source": true,
+      "preparation_noindex_leaked": false
+    },
+    {
+      "path": "training.html",
+      "status": 200,
+      "url": "https://sport-my-fitness.vercel.app/training.html",
+      "sha256": "0d13bdbaa3586c67c57931d76bd004a916062759a4a2e5bf91823625a3cff037",
+      "matches_released_source": true,
+      "preparation_noindex_leaked": false
+    },
+    {
+      "path": "programs.html",
+      "status": 200,
+      "url": "https://sport-my-fitness.vercel.app/programs.html",
+      "sha256": "f7f080aa9c39de92f8d6ff7fa388ec34eab64af8792013e3493ae8535efc84ad",
+      "matches_released_source": true,
+      "preparation_noindex_leaked": false
+    },
+    {
+      "path": "yoshi.html",
+      "status": 200,
+      "url": "https://sport-my-fitness.vercel.app/yoshi.html",
+      "sha256": "876bbbe391ffe21000df4e950f3001ecd542717733819a9ed4ef8169113c1153",
+      "matches_released_source": true,
+      "preparation_noindex_leaked": false
+    },
+    {
+      "path": "media.html",
+      "status": 200,
+      "url": "https://sport-my-fitness.vercel.app/media.html",
+      "sha256": "ee6fb4991a8be7b8e3fc6c3de2f46b763add4e207e4405daae960ef08aaeefda",
+      "matches_released_source": true,
+      "preparation_noindex_leaked": false
+    },
+    {
+      "path": "community.html",
+      "status": 200,
+      "url": "https://sport-my-fitness.vercel.app/community.html",
+      "sha256": "a66f7430c3b80475c9cdd24276cb7db0be2a763ae7beab40f5fe2ad97deb4929",
+      "matches_released_source": true,
+      "preparation_noindex_leaked": false
+    },
+    {
+      "path": "contact.html",
+      "status": 200,
+      "url": "https://sport-my-fitness.vercel.app/contact.html",
+      "sha256": "67e4a501029ae2493cfb4d59e706088d82d3385cbc27607c9f58331e0259b55f",
+      "matches_released_source": true,
+      "preparation_noindex_leaked": false
+    },
+    {
+      "path": "site-design.css",
+      "status": 200,
+      "url": "https://sport-my-fitness.vercel.app/site-design.css",
+      "sha256": "71b70a450a4644aa31ff5a87f677532b94dd2a0cd8ed5fb4c9be1fc4d2af34dd",
+      "matches_released_source": true
+    },
+    {
+      "path": "assets/platforms/instagram.svg",
+      "status": 200,
+      "url": "https://sport-my-fitness.vercel.app/assets/platforms/instagram.svg",
+      "sha256": "a036f8197b3856b02d1e236e08dd1b50a4ed68cb148686beb274eabf29794d51",
+      "matches_released_source": true
+    },
+    {
+      "path": "assets/platforms/facebook.svg",
+      "status": 200,
+      "url": "https://sport-my-fitness.vercel.app/assets/platforms/facebook.svg",
+      "sha256": "f6d89395644e07c894fea165e5b097544aed31e56f43e451a1b9695a18b9362d",
+      "matches_released_source": true
+    },
+    {
+      "path": "assets/platforms/youtube.svg",
+      "status": 200,
+      "url": "https://sport-my-fitness.vercel.app/assets/platforms/youtube.svg",
+      "sha256": "cc1173c038e5759673b2a57f44274f40f40445a23bd19ca2bd62d28234869b86",
+      "matches_released_source": true
+    },
+    {
+      "path": "assets/platforms/tmj4.svg",
+      "status": 200,
+      "url": "https://sport-my-fitness.vercel.app/assets/platforms/tmj4.svg",
+      "sha256": "28ef57bc702958d7711546c57fdd01e3f3512ed46e130529d6685dfdc50dba38",
+      "matches_released_source": true
+    },
+    {
+      "path": "assets/brand/sport-my-fitness-original-lockup.png",
+      "status": 200,
+      "url": "https://sport-my-fitness.vercel.app/assets/brand/sport-my-fitness-original-lockup.png",
+      "sha256": "202f885d450df6330d8b0809f0c61f43a7ce940f7c870004c9bf6683178aad63",
+      "matches_released_source": true
+    },
+    {
+      "path": "robots.txt",
+      "status": 200,
+      "url": "https://sport-my-fitness.vercel.app/robots.txt",
+      "sha256": "6a7545771e8ace02cdaaf82ba489452355c962d8be0c95cfcc7c2319b12d5b7d",
+      "matches_released_source": true
+    },
+    {
+      "path": "sitemap.xml",
+      "status": 200,
+      "url": "https://sport-my-fitness.vercel.app/sitemap.xml",
+      "sha256": "265f2344a967e33843de99812f73e3f2f3a61afbf9a0a4d110be9db9d604ac99",
+      "matches_released_source": true
+    }
+  ],
+  "live_browser": {
+    "about_url": "https://sport-my-fitness.vercel.app/yoshi.html#connect-heading",
+    "about_marks_loaded": [
+      "Instagram",
+      "Facebook",
+      "YouTube"
+    ],
+    "rendered_sizes": {
+      "Instagram": [
+        22,
+        22
+      ],
+      "Facebook": [
+        22,
+        22
+      ],
+      "YouTube": [
+        31.390625,
+        22
+      ]
+    },
+    "media_url": "https://sport-my-fitness.vercel.app/media.html#films-heading",
+    "media_youtube_loaded": true,
+    "social_links_opened": false,
+    "screenshot": "verification/platform-marks-public-20261018.jpg"
+  },
+  "seo_preparation": "Separate branch to inherit this fix; its future-domain canonicals and noindex are not published."
+}

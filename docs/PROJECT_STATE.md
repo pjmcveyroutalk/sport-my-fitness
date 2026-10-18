@@ -1,11 +1,12 @@
 # Sport My Fitness — Current Project State
 
-Updated October 17, 2026 (UTC); approved design published and publicly verified.
+Updated October 18, 2026 (UTC); approved design and restored platform marks published and verified.
 
 ## Current checkpoint
 
-SEO/AEO preparation is now on `prep/seo-aeo-20261017`, based on public checkpoint
-`afe221bdfe36887eb3acdbecb8b03d3df5f32697`. The intended official domain is
+SEO/AEO preparation is now on `prep/seo-aeo-20261017`, synchronized with public
+checkpoint `1e41e01297af36d6bab92ff6da6a98b6969c4c00` and runtime baseline
+`28b959b4ef8fc945504b81e0a1353f7f5a490877`. The intended official domain is
 `https://sportmyfitness.com/`, identified in the SmartBrand handoff as purchased
 and prelaunch. This supersedes the earlier unknown-domain planning assumption;
 DNS/HTTPS, final client changes and domain-launch authorization are still pending.
@@ -27,6 +28,21 @@ from the public checkpoint. Current preparation evidence is
 `verification/seo-aeo-prep-20261017.json`. Google's Rich Results validation,
 domain HTTP checks, Search Console ownership/indexing and AI citations remain
 separate pending launch steps, not results of these local checks.
+
+October 18 correction: the existing official Instagram, Facebook and YouTube SVGs
+are restored beside the three About links and Media's All videos link. The source
+assets are not redrawn or recolored. Compact light clear space keeps the
+black Instagram glyph legible on the dark canvas; proportional image sizing
+preserves each mark. TMJ4's existing official mark stays in place. All seven pages
+use the new stylesheet cache key so returning visitors receive the correction.
+Published runtime `28b959b4ef8fc945504b81e0a1353f7f5a490877` deployed successfully
+as Production `7149159062`. Browser run `39091843112` passed 70 layouts, 250 image
+checks, 40 platform-link checks, 28 navigation journeys and 14 original-motion
+runs in Chromium and WebKit with zero failures. About and Media mark components
+were visually inspected at mobile and desktop sizes. Live public browser checks
+confirm the four marks load, and all 15 checked public source files match the
+released bytes without SEO-preparation metadata leaking into production.
+See `verification/platform-marks-20261018.json` and its saved public screenshot.
 
 Post-release correction, October 17: PJ identified the Contact page's final
 “Sessions & packages” link as an unwanted exit to the old website. Contact now

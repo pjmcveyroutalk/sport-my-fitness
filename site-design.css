@@ -189,8 +189,10 @@ figcaption a, .quote-source { color: var(--muted); font-size: 12px; text-decorat
 .story-connect-inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; }
 .story-connect h2 { margin-top: 12px; }
 .story-personal-links { display: flex; flex-direction: column; gap: 12px; min-width: 240px; }
-.social-link { display: inline-flex; }
-.platform-icon { width: 25px; height: 25px; object-fit: contain; }
+.social-link { display: inline-flex; justify-content: flex-start; gap: 14px; padding-block: 8px; }
+.social-link > .teal-hover-label { margin-right: auto; }
+.platform-mark { display: inline-flex; align-items: center; justify-content: center; flex: 0 0 40px; width: 40px; height: 36px; border-radius: 5px; background: #f4f7f7; }
+.platform-icon { flex: none; width: auto; max-width: 32px; height: 22px; object-fit: contain; }
 .media-films { padding-block: 64px 0; }
 .media-feature { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 7%; align-items: center; }
 .media-feature-copy > p:not(.eyebrow) { color: var(--muted); margin-top: 22px; font-size: 18px; }

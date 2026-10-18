@@ -12,7 +12,7 @@ import unittest
 import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
-BASE = 'afe221bdfe36887eb3acdbecb8b03d3df5f32697'
+BASE = '28b959b4ef8fc945504b81e0a1353f7f5a490877'
 ROUTES = ['index.html', 'training.html', 'programs.html', 'yoshi.html', 'media.html', 'community.html', 'contact.html']
 spec = importlib.util.spec_from_file_location('prepare_search', ROOT / 'design-tools/prepare-search.py')
 prepare = importlib.util.module_from_spec(spec)

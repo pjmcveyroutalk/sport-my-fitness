@@ -10,7 +10,7 @@ const out = process.env.SMF_EVIDENCE_DIR || '/tmp/smf-design-evidence';
 const routes = ['index', 'training', 'programs', 'yoshi', 'media', 'community', 'contact'];
 const widths = [360, 390, 430, 768, 900, 901, 1334, 1920];
 const heroReferences = new Map();
-const report = {started: new Date().toISOString(), layouts: [], navigation: [], motion: [], locations: [], safeguards: [], failures: []};
+const report = {started: new Date().toISOString(), layouts: [], navigation: [], motion: [], locations: [], platformMarks: [], safeguards: [], failures: []};
 fs.mkdirSync(out, {recursive: true});
 function save() { fs.writeFileSync(path.join(out, 'results.json'), JSON.stringify(report, null, 2)); }
 async function check(name, fn) {
@@ -32,6 +32,30 @@ async function allPhotos(page) {
     return {src: i.getAttribute('src'), natural: [i.naturalWidth, i.naturalHeight], rendered: [r.width, r.height], fit: style.objectFit, mask: style.maskImage,
       valid: i.complete && i.naturalWidth > 0 && r.width > 0 && r.height > 0 && Math.abs((r.width / r.height) / (i.naturalWidth / i.naturalHeight) - 1) < .015};
   }));
+}
+async function officialPlatformMarks(page, route, width, engine) {
+  const expected = route === 'yoshi' ? [
+    ['Instagram', 'https://www.instagram.com/yoshibarnes/', 'instagram.svg'],
+    ['Facebook', 'https://www.facebook.com/yoshi.barnes/', 'facebook.svg'],
+    ['YouTube', 'https://www.youtube.com/@yoshibarnes', 'youtube.svg']
+  ] : [['All videos', 'https://www.youtube.com/@yoshibarnes/videos', 'youtube.svg']];
+  assert.equal(await page.locator('.social-link').count(), expected.length, 'platform links were removed or duplicated');
+  for (const [name, href, asset] of expected) {
+    const link = page.getByRole('link', {name, exact: true});
+    assert.equal(await link.count(), 1, 'readable platform link name is missing');
+    assert.equal(await link.getAttribute('href'), href);
+    const mark = link.locator('.platform-mark');
+    assert.equal(await mark.count(), 1, 'official platform mark is missing');
+    assert.equal(await mark.getAttribute('aria-hidden'), 'true');
+    const image = mark.locator('img');
+    assert.equal(await image.getAttribute('src'), 'assets/platforms/' + asset);
+    assert.equal(await image.getAttribute('alt'), '');
+    assert.equal(await mark.evaluate(el => getComputedStyle(el).backgroundColor), 'rgb(244, 247, 247)', 'original black glyph lacks light clear space');
+  }
+  if (width === 390 || width === 1334) {
+    await page.locator(route === 'yoshi' ? '.story-personal-links' : '.media-feature-copy').screenshot({path: path.join(out, `${engine}-${route}-platforms-${width}.png`)});
+  }
+  report.platformMarks.push({engine, route, width, links: expected.map(([name, href, asset]) => ({name, href, asset})), pass: true});
 }
 async function contactLocation(page, width, engine) {
   const location = page.locator('.contact-location');
@@ -78,6 +102,7 @@ async function layout(page, route, width, engine) {
   page.on('pageerror', error => errors.push(error.message));
   await load(page, route);
   const photos = await allPhotos(page);
+  if (route === 'yoshi' || route === 'media') await officialPlatformMarks(page, route, width, engine);
   if (route === 'contact' && (width === 390 || width === 1334)) await contactLocation(page, width, engine);
   assert(photos.every(i => i.valid), 'image ratio/decode failure: ' + JSON.stringify(photos.filter(i => !i.valid)));
   assert(photos.every(i => i.mask === 'none'), 'an image is using a decorative alpha mask');

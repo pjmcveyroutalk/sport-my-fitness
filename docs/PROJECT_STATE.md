@@ -4,23 +4,25 @@ Updated October 18, 2026 (UTC); approved design and restored platform marks publ
 
 ## Current checkpoint
 
-October 18 mobile-header review: PJ agreed with Xin's suggestion to place a
-standalone brand symbol beside readable text, replace the visible Menu word with
-a one-tap call action and retain a separate hamburger. Review branch
-`review/approved-glass-mobile-header-20261018` prepares the independent call and
-navigation changes on all seven pages. It is not a completed horizontal-logo
-design and is not released to main.
-Browser run `39099546911` passed 70 layouts, 49 mobile-header checks, 28 menu
-journeys and 14 original-motion runs in Chromium and WebKit. See
-`verification/mobile-header-review-20261018.json` and its controls screenshot.
+October 18 header release: PJ chose to keep the existing full-logo version shown
+in the accepted review and apply the phone/menu changes now. A separate symbol
+and horizontal wordmark are optional future refinements, not release blockers.
+The exact reviewed runtime is published at
+`https://sport-my-fitness.vercel.app/` as commit
+`63f3e5d20a0bb5b905de37ee707cd23e3251d2f1`, Production deployment `7150386635`.
 
-The approved source PNG and the current SmartBrand v1.1 SVG/transparent PNG all
-have the wordmark crossing the symbol. The kit contains no symbol-only asset;
-the older repository mark/icon files are different variants. To complete the
-horizontal lockup, the branding session must deliver an approved symbol-only
-SVG or transparent PNG. Do not redraw the symbol, crop away part of it or swap
-in the older variant to make this task appear complete. Until that source is
-available, public main remains the verified platform-mark release below.
+All seven mobile headers now have one direct call action for 414-791-4526 and a
+separate hamburger with 44px touch targets. The visible Menu word is removed on
+mobile; its accessible name and the native menu fallback remain. Desktop
+presentation, approved logo bytes, page content, photos and movement are preserved.
+Browser run `39099546911` passed 70 layouts, 49 mobile-header checks, 28 menu
+journeys and 14 original-motion runs. The released runtime is byte-identical to
+that tested candidate; the later commits add documentation/evidence only.
+All 13 checked public files match the release and every page has the correct
+phone URI and refreshed stylesheet. Live browser inspection confirms the logo,
+phone link and active stylesheet. See
+`verification/mobile-header-release-20261018.json`; the prior review receipt is
+historical and its symbol-only dependency is closed by PJ's latest decision.
 
 October 18 correction: the existing official Instagram, Facebook and YouTube SVGs
 are restored beside the three About links and Media's All videos link. The source

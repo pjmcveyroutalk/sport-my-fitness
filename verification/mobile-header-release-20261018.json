@@ -1,0 +1,164 @@
+{
+  "status": "published_and_verified",
+  "checked_utc": "2026-10-18T05:27:13.087209+00:00",
+  "public_url": "https://sport-my-fitness.vercel.app/",
+  "release_commit": "63f3e5d20a0bb5b905de37ee707cd23e3251d2f1",
+  "previous_public_commit": "1e41e01297af36d6bab92ff6da6a98b6969c4c00",
+  "production_deployment": 7150386635,
+  "owner_decision": "Keep the current full-logo version as shown in the reviewed header. Apply the call/hamburger changes now; the symbol-only horizontal variant is deferred.",
+  "implemented": [
+    "All seven mobile headers have one native telephone link to +14147914526",
+    "Separate hamburger replaces the visible Menu word on mobile and opens the existing navigation",
+    "Call and menu retain separate 44px touch targets, accessible labels and the no-JS fallback"
+  ],
+  "verification": {
+    "browser_run": 39099546911,
+    "verified_commit": "6114388292c0409dc0fa3c890e09877108515808",
+    "runtime_identical_to_verified_commit": true,
+    "layouts": 70,
+    "header_checks": 49,
+    "navigation_journeys": 28,
+    "image_checks": 250,
+    "original_motion_runs": 14,
+    "failures": 0,
+    "chromium": "151.0.7922.34",
+    "webkit": "26.5",
+    "actual_phone_calls_placed": false
+  },
+  "public_http_checks": [
+    {
+      "path": "index.html",
+      "status": 200,
+      "url": "https://sport-my-fitness.vercel.app/index.html",
+      "matches_released_source": true,
+      "sha256": "31d70fa2a99461d2e9e822399c314202513e428d38970fed3e86be2813f74a50",
+      "single_correct_phone_link": true,
+      "correct_stylesheet_key": true,
+      "preparation_noindex_leaked": false
+    },
+    {
+      "path": "training.html",
+      "status": 200,
+      "url": "https://sport-my-fitness.vercel.app/training.html",
+      "matches_released_source": true,
+      "sha256": "e9d04183d23dac5c28e923927436b4406d5cf6b6a448b30f028d723cf9028c00",
+      "single_correct_phone_link": true,
+      "correct_stylesheet_key": true,
+      "preparation_noindex_leaked": false
+    },
+    {
+      "path": "programs.html",
+      "status": 200,
+      "url": "https://sport-my-fitness.vercel.app/programs.html",
+      "matches_released_source": true,
+      "sha256": "7ea080d1c6864e20604ef481297674929bac2d93c182566bea2bd1af597a4c21",
+      "single_correct_phone_link": true,
+      "correct_stylesheet_key": true,
+      "preparation_noindex_leaked": false
+    },
+    {
+      "path": "yoshi.html",
+      "status": 200,
+      "url": "https://sport-my-fitness.vercel.app/yoshi.html",
+      "matches_released_source": true,
+      "sha256": "81e7cc53e335307c88a8cf6dbcc568556227c3f3752e170881f762b0fbb8e196",
+      "single_correct_phone_link": true,
+      "correct_stylesheet_key": true,
+      "preparation_noindex_leaked": false
+    },
+    {
+      "path": "media.html",
+      "status": 200,
+      "url": "https://sport-my-fitness.vercel.app/media.html",
+      "matches_released_source": true,
+      "sha256": "3cb633225cbe8c7ee8d59259d270020c92e080f017ebc9d8803ffb924a556ae1",
+      "single_correct_phone_link": true,
+      "correct_stylesheet_key": true,
+      "preparation_noindex_leaked": false
+    },
+    {
+      "path": "community.html",
+      "status": 200,
+      "url": "https://sport-my-fitness.vercel.app/community.html",
+      "matches_released_source": true,
+      "sha256": "87dbe4db18f66063b40fe49d4a5720783f461640a928ae7320caaef775f67523",
+      "single_correct_phone_link": true,
+      "correct_stylesheet_key": true,
+      "preparation_noindex_leaked": false
+    },
+    {
+      "path": "contact.html",
+      "status": 200,
+      "url": "https://sport-my-fitness.vercel.app/contact.html",
+      "matches_released_source": true,
+      "sha256": "427ba4e397ee3ae7579e6c5dd11dcf19b41374c72308dbe9e4e89b6189973b40",
+      "single_correct_phone_link": true,
+      "correct_stylesheet_key": true,
+      "preparation_noindex_leaked": false
+    },
+    {
+      "path": "site-design.css",
+      "status": 200,
+      "url": "https://sport-my-fitness.vercel.app/site-design.css",
+      "matches_released_source": true,
+      "sha256": "425f367a6ff2b345d9235e6f1481eeb09ea2949a0e33ad2da4ee68c50865f31a"
+    },
+    {
+      "path": "site-menu.js",
+      "status": 200,
+      "url": "https://sport-my-fitness.vercel.app/site-menu.js",
+      "matches_released_source": true,
+      "sha256": "3d4310160d4cea432a6cf780be279c95bf5a6fe4d8aa1cac71bcd6d350a272d7"
+    },
+    {
+      "path": "site-motion.js",
+      "status": 200,
+      "url": "https://sport-my-fitness.vercel.app/site-motion.js",
+      "matches_released_source": true,
+      "sha256": "cff14d42c5d743dcc5bbee2bcafba6780c77bb58a40944e8700292c9ab94cc56"
+    },
+    {
+      "path": "assets/brand/sport-my-fitness-original-lockup.png",
+      "status": 200,
+      "url": "https://sport-my-fitness.vercel.app/assets/brand/sport-my-fitness-original-lockup.png",
+      "matches_released_source": true,
+      "sha256": "202f885d450df6330d8b0809f0c61f43a7ce940f7c870004c9bf6683178aad63"
+    },
+    {
+      "path": "robots.txt",
+      "status": 200,
+      "url": "https://sport-my-fitness.vercel.app/robots.txt",
+      "matches_released_source": true,
+      "sha256": "6a7545771e8ace02cdaaf82ba489452355c962d8be0c95cfcc7c2319b12d5b7d"
+    },
+    {
+      "path": "sitemap.xml",
+      "status": 200,
+      "url": "https://sport-my-fitness.vercel.app/sitemap.xml",
+      "matches_released_source": true,
+      "sha256": "265f2344a967e33843de99812f73e3f2f3a61afbf9a0a4d110be9db9d604ac99"
+    }
+  ],
+  "live_browser": {
+    "url": "https://sport-my-fitness.vercel.app/",
+    "viewport_width": 1363,
+    "logo_loaded": true,
+    "logo_src": "assets/brand/sport-my-fitness-original-lockup.png",
+    "call_href": "tel:+14147914526",
+    "call_label": "Call Sport My Fitness at 414-791-4526",
+    "menu_accessible_name": "Menu",
+    "stylesheet": "site-design.css?v=mobile-call-1",
+    "screenshot": "verification/mobile-header-public-release-20261018.jpg"
+  },
+  "mobile_visual_evidence": {
+    "file": "verification/mobile-header-controls-390-20261018.png",
+    "scope": "Browser render of the exact released runtime at 390px; public file hashes match that runtime."
+  },
+  "preservation": {
+    "logo_sha256": "202f885d450df6330d8b0809f0c61f43a7ce940f7c870004c9bf6683178aad63",
+    "all_content_from_main_onward": "byte-identical on all seven pages",
+    "photos_motion_form_map_and_search_files": "unchanged"
+  },
+  "branding_integration_scope": "Preserves the full artwork from the accepted header review. Separate SmartBrand master-file and search-metadata integration remains in the launch preparation.",
+  "seo_preparation": "To inherit the released header; future-domain metadata and noindex stay isolated from public main."
+}

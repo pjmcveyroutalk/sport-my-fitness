@@ -1,13 +1,13 @@
 {
   "status": "prelaunch_prepared_and_locally_verified",
-  "checked_utc": "2026-10-18T05:28:41.082184+00:00",
+  "checked_utc": "2026-10-18T18:06:15.187175+00:00",
   "branch": "prep/seo-aeo-20261017",
-  "production_baseline": "63f3e5d20a0bb5b905de37ee707cd23e3251d2f1",
+  "production_baseline": "757d3b527652ebce6dd265254945a4a34fde237f",
   "planned_official_origin": "https://sportmyfitness.com",
   "current_public_review_url": "https://sport-my-fitness.vercel.app/",
-  "scope": "SEO/AEO preparation remains head-only relative to the current public runtime. Inherits the released phone/hamburger header and official platform marks; preserves the approved full-logo artwork.",
+  "scope": "SEO/AEO remains head-only relative to current public runtime. Inherits the verified About social-section desktop spacing correction, current header and official platform marks.",
   "verification": {
-    "command": "python3 verification/seo-aeo-check.py",
+    "command": "python3 -B verification/seo-aeo-check.py",
     "exit_code": 0,
     "tests": 17,
     "passed": 17,
@@ -76,91 +76,56 @@
       "status": 200,
       "matches_public_baseline": true,
       "preparation_noindex_leaked": false,
-      "sha256": "31d70fa2a99461d2e9e822399c314202513e428d38970fed3e86be2813f74a50"
+      "sha256": "de7658f673038c77617de7cd24962f4cb5f283625c36afb2ea2bc4f67d0495e9"
     },
     {
       "path": "training.html",
       "status": 200,
       "matches_public_baseline": true,
       "preparation_noindex_leaked": false,
-      "sha256": "e9d04183d23dac5c28e923927436b4406d5cf6b6a448b30f028d723cf9028c00"
+      "sha256": "0f2acce4f083c7396aa42c647d6a3bed47b72be6ce737bf7813f2cc2390c161d"
     },
     {
       "path": "programs.html",
       "status": 200,
       "matches_public_baseline": true,
       "preparation_noindex_leaked": false,
-      "sha256": "7ea080d1c6864e20604ef481297674929bac2d93c182566bea2bd1af597a4c21"
+      "sha256": "64769ba25064004ab0b48185349c4e5771b63591249c0134ae29962579d6ba49"
     },
     {
       "path": "yoshi.html",
       "status": 200,
       "matches_public_baseline": true,
       "preparation_noindex_leaked": false,
-      "sha256": "81e7cc53e335307c88a8cf6dbcc568556227c3f3752e170881f762b0fbb8e196"
+      "sha256": "248d0e73a8de5061abee3acd41c2f35fb76f730534210f279f1a8a4f279ee1c1"
     },
     {
       "path": "media.html",
       "status": 200,
       "matches_public_baseline": true,
       "preparation_noindex_leaked": false,
-      "sha256": "3cb633225cbe8c7ee8d59259d270020c92e080f017ebc9d8803ffb924a556ae1"
+      "sha256": "ce2f03cf9df292edaf4d0c9099c7620c8cbccd6cb93f1ecca7e8538bcd31ea9d"
     },
     {
       "path": "community.html",
       "status": 200,
       "matches_public_baseline": true,
       "preparation_noindex_leaked": false,
-      "sha256": "87dbe4db18f66063b40fe49d4a5720783f461640a928ae7320caaef775f67523"
+      "sha256": "608a35ee5c36627cc289875ae8d9b7c3d798f411c324b752ded8afaf1ce0e859"
     },
     {
       "path": "contact.html",
       "status": 200,
       "matches_public_baseline": true,
       "preparation_noindex_leaked": false,
-      "sha256": "427ba4e397ee3ae7579e6c5dd11dcf19b41374c72308dbe9e4e89b6189973b40"
+      "sha256": "34ed6d3f7eceb715a63a9f8f2b23eeb586a6f5bd372f72ba777432b9ac71f268"
     },
     {
       "path": "site-design.css",
       "status": 200,
       "matches_public_baseline": true,
       "preparation_noindex_leaked": false,
-      "sha256": "425f367a6ff2b345d9235e6f1481eeb09ea2949a0e33ad2da4ee68c50865f31a"
-    },
-    {
-      "path": "site-menu.js",
-      "status": 200,
-      "matches_public_baseline": true,
-      "preparation_noindex_leaked": false,
-      "sha256": "3d4310160d4cea432a6cf780be279c95bf5a6fe4d8aa1cac71bcd6d350a272d7"
-    },
-    {
-      "path": "site-motion.js",
-      "status": 200,
-      "matches_public_baseline": true,
-      "preparation_noindex_leaked": false,
-      "sha256": "cff14d42c5d743dcc5bbee2bcafba6780c77bb58a40944e8700292c9ab94cc56"
-    },
-    {
-      "path": "assets/brand/sport-my-fitness-original-lockup.png",
-      "status": 200,
-      "matches_public_baseline": true,
-      "preparation_noindex_leaked": false,
-      "sha256": "202f885d450df6330d8b0809f0c61f43a7ce940f7c870004c9bf6683178aad63"
-    },
-    {
-      "path": "robots.txt",
-      "status": 200,
-      "matches_public_baseline": true,
-      "preparation_noindex_leaked": false,
-      "sha256": "6a7545771e8ace02cdaaf82ba489452355c962d8be0c95cfcc7c2319b12d5b7d"
-    },
-    {
-      "path": "sitemap.xml",
-      "status": 200,
-      "matches_public_baseline": true,
-      "preparation_noindex_leaked": false,
-      "sha256": "265f2344a967e33843de99812f73e3f2f3a61afbf9a0a4d110be9db9d604ac99"
+      "sha256": "1aaae7f1ba85da68b611e0978a7f334730649591a6cdcf1dace34e381cc02ac5"
     }
   ],
   "prelaunch_protection": "All seven prepared pages retain noindex,follow and future-domain metadata. Public main contains the approved full-logo call/menu header release and its evidence. Domain launch remains a separate step.",
@@ -172,25 +137,25 @@
     "provenance_status": "The source master inside supplied SmartBrand-v1.1.zip was hash-checked during the header review and matches the expected handoff identity. It is not installed in this website; the separate metadata-rich asset integration remains pending."
   },
   "source_sha256": {
-    "index.html": "a46dd95e45963b38ecb8b014d969c4880c4d1b8af6ac900bb69ef689c3943fe1",
-    "training.html": "f0cfb42933ceaef1c4bd33f1f4d45333966aceb8cc82d4ef8a24dfdf5d941578",
-    "programs.html": "46bd28d498f9e11321891b0dcb90871a61e65d1d25e50b1cfd3eaff8a40d4df6",
-    "yoshi.html": "cdc6972406ca3ff25c2e8c0fec72b57e3027f2550cfbd0f1a249f8000ac8950a",
-    "media.html": "65cba43b49e26ce4514c72ff0a01142c01c85dad44e84ccda7fbc2ea387900a3",
-    "community.html": "0c7fea16b3f620d79c6b27dc1cce3457942d44b68044685bd3ee0a3672ebf74e",
-    "contact.html": "0a834f9eec0f0d77308814c12dc8f06c32a017159d91960405f0caaa285a97cd",
+    "index.html": "b6380b766142754918122b4ad92513837d464abef926746a332af74dc47e75d3",
+    "training.html": "8a7a3e35fd823c7ac3cf5e863e39e1710044aabedbc6f2ac9da0ea388aa120a9",
+    "programs.html": "0631996c56316cf826fcb3c557884581149bf8de13d4cb159520d2e02c6c5002",
+    "yoshi.html": "0ae83819621e49cf54a47c893dd10aa0773e0f3aae01d30c53b7a3b7eb208c7e",
+    "media.html": "c6bd4a838255a2f2adc84c56a5f48a496dbff1bbf02e7b192e98a2ed71e8faf8",
+    "community.html": "17448504e234c8ce68ee34867ae7770be4317b7196cb262543133d1e98784749",
+    "contact.html": "7cbe9facc4ba2682182a957d94d6d6c94e82581a2f7857777aefbb612efae163",
     "robots.txt": "a30ff31c8ecc242995483f6bfcd25f428654058ccb9620bed4ae6e23caa36007",
     "sitemap.xml": "61609f8963695345f3516ee3b30e89bee486feebd55928bf3769cdbefee91d3b",
     "seo/site-identity.json": "c7652d00b6b272f1a83d840537326eb9c729d547c15b3c56ef4eb520e1245a9b",
     "seo/page-metadata.json": "e84530fe7f59d0e1f9cdace037757c7b4356a4ec21171126d8e9ac225b5deeec",
-    "design-tools/prepare-search.py": "939e239fc54d80d0e3442415cfabf8ffbece4a13c6271462816bfb0efad278bd",
-    "verification/seo-aeo-check.py": "b1af8192d01958d1da754cedd011e0005ccbc4964316f52be95f0b6aa0fa6117",
+    "design-tools/prepare-search.py": "c1e2bc3806ef334b2a1024cfcb9c495d9f8d4243e43d13037061ed10a62a0f19",
+    "verification/seo-aeo-check.py": "9e4d3b42f91e48ef79f0f335337a6ff288e13fc9e7b104fddb422875454271c2",
     "docs/LAUNCH_TASKS.md": "b5b7d6ef3bb8575677ac54a408783b0981dc24a54d8bcc7a978647db37b389be",
     "docs/seo-aeo/AEO_ANSWER_DRAFT.md": "8591569916893a3a75416c714df5c29b74f45a324113a6a02b4ed7d88320e52a",
     "docs/seo-aeo/SMARTBRAND_WEBSITE_HANDOFF.md": "77a9c1b84e1864e5834cdeff5688552ad590020071ca609563525703a4650c01",
-    "site-design.css": "425f367a6ff2b345d9235e6f1481eeb09ea2949a0e33ad2da4ee68c50865f31a",
-    "verification/approved-design-browser.cjs": "ba1cfb5016b9d800167dfbefc74a98bfafe25d2f395e74ab6ebd3923146157f8",
-    "docs/PROJECT_STATE.md": "4728fdb2238772da4147ef58d4bc5a4a66c1ae13d979ea45b1a7084ebe9439ac"
+    "site-design.css": "1aaae7f1ba85da68b611e0978a7f334730649591a6cdcf1dace34e381cc02ac5",
+    "verification/approved-design-browser.cjs": "24eda30442cba2a9845a39dddd5f018ac5f7ba46ff0719bf2d78e58f2ddb8f52",
+    "docs/PROJECT_STATE.md": "92d7a78c461e65de3bc40ae70d9c651c5070d7f075a4db5c7ef1deb54d641751"
   },
   "remaining": [
     "Yoshi content/fact review and change requests",
@@ -215,7 +180,7 @@
     "https://developers.google.com/search/docs/appearance/structured-data/image-license-metadata",
     "https://developers.google.com/search/docs/appearance/ai-features"
   ],
-  "synced_public_checkpoint": "711ee1cceb16614ff3e63407a7e3e419cf0b3e37",
+  "synced_public_checkpoint": "e837156581c5db40cbf515517c55f3449b4fbe78",
   "platform_mark_sync": {
     "runtime_commit": "28b959b4ef8fc945504b81e0a1353f7f5a490877",
     "public_checkpoint": "1e41e01297af36d6bab92ff6da6a98b6969c4c00",
@@ -232,5 +197,13 @@
     "owner_decision": "Keep existing full-logo artwork and apply phone/hamburger controls. Symbol-only redesign deferred.",
     "preparation_checks_passed": 17,
     "public_evidence": "verification/mobile-header-release-20261018.json"
+  },
+  "social_spacing_sync": {
+    "runtime_commit": "757d3b527652ebce6dd265254945a4a34fde237f",
+    "public_checkpoint": "e837156581c5db40cbf515517c55f3449b4fbe78",
+    "browser_run": 39151874295,
+    "spacing_checks": 16,
+    "preparation_checks_passed": 17,
+    "public_evidence": "verification/about-spacing-release-20261018.json"
   }
 }

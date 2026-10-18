@@ -5,8 +5,8 @@ Updated October 18, 2026 (UTC); approved design and restored platform marks publ
 ## Current checkpoint
 
 SEO/AEO preparation is now on `prep/seo-aeo-20261017`, synchronized with public
-checkpoint `711ee1cceb16614ff3e63407a7e3e419cf0b3e37` and runtime baseline
-`63f3e5d20a0bb5b905de37ee707cd23e3251d2f1`. The intended official domain is
+checkpoint `e837156581c5db40cbf515517c55f3449b4fbe78` and runtime baseline
+`757d3b527652ebce6dd265254945a4a34fde237f`. The intended official domain is
 `https://sportmyfitness.com/`, identified in the SmartBrand handoff as purchased
 and prelaunch. This supersedes the earlier unknown-domain planning assumption;
 DNS/HTTPS, final client changes and domain-launch authorization are still pending.
@@ -29,6 +29,22 @@ from the public checkpoint. Current preparation evidence is
 `verification/seo-aeo-prep-20261017.json`. Google's Rich Results validation,
 domain HTTP checks, Search Console ownership/indexing and AI citations remain
 separate pending launch steps, not results of these local checks.
+
+October 18 desktop spacing correction is published as runtime
+`757d3b527652ebce6dd265254945a4a34fde237f`, Production deployment `7158513074`.
+PJ's Chromebook screenshot identified the 544px gap between About's heading and
+social links at 1363px, caused by space-between alignment. Above 800px, all three
+links now form one equal-width row directly beneath the heading, with 24px of
+separation, a 900px maximum row width and tighter section padding. Mobile keeps
+its original stacked layout and 32px heading gap.
+
+Browser run `39151874295` passed 70 page layouts, 16 focused social-spacing checks,
+28 navigation journeys, 250 image checks and 14 original-motion runs in Chromium
+and WebKit with zero failures. Visual review includes 1366px, the 801px boundary
+and 390px mobile. Public browser geometry confirms the row, shared left edge and
+24px gap; all eight checked public files match the release. All seven page bodies,
+platform SVGs, logo, photos, header, copy and motion remain unchanged. See
+`verification/about-spacing-release-20261018.json` and the saved public screenshot.
 
 October 18 header release: PJ chose to keep the existing full-logo version shown
 in the accepted review and apply the phone/menu changes now. A separate symbol

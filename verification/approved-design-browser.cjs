@@ -10,7 +10,7 @@ const out = process.env.SMF_EVIDENCE_DIR || '/tmp/smf-design-evidence';
 const routes = ['index', 'training', 'programs', 'yoshi', 'media', 'community', 'contact'];
 const widths = [360, 390, 430, 768, 900, 901, 1334, 1920];
 const heroReferences = new Map();
-const report = {started: new Date().toISOString(), layouts: [], navigation: [], motion: [], locations: [], platformMarks: [], headers: [], safeguards: [], failures: []};
+const report = {started: new Date().toISOString(), layouts: [], navigation: [], motion: [], locations: [], platformMarks: [], headers: [], connections: [], safeguards: [], failures: []};
 fs.mkdirSync(out, {recursive: true});
 function save() { fs.writeFileSync(path.join(out, 'results.json'), JSON.stringify(report, null, 2)); }
 async function check(name, fn) {
@@ -119,11 +119,32 @@ async function contactLocation(page, width, engine) {
   report.locations.push({engine, width, googleMapRendered: true, correctPlace: true, singleDirectionsLink: true, keyboardHours: true, lazy: true});
   save();
 }
+async function storyConnectionLayout(page, width, engine) {
+  const geometry = await page.locator('.story-connect-inner').evaluate(section => ({
+    heading: section.querySelector('h2').getBoundingClientRect().toJSON(),
+    links: [...section.querySelectorAll('.social-link')].map(link => ({...link.getBoundingClientRect().toJSON(), contentFits: link.scrollWidth <= link.clientWidth}))
+  }));
+  const [first, second, third] = geometry.links;
+  assert.equal(geometry.links.length, 3, 'social links were removed or duplicated');
+  assert(Math.abs(first.left - geometry.heading.left) < 1, 'heading and social links do not share a left edge');
+  assert(geometry.links.every(link => link.contentFits), 'social link text or marks overflow');
+  if (width > 800) {
+    assert(first.top >= geometry.heading.bottom + 20 && first.top <= geometry.heading.bottom + 28, 'desktop social links are detached from their heading');
+    assert(Math.abs(first.top - second.top) < 1 && Math.abs(first.top - third.top) < 1, 'desktop social links must form one compact row');
+    assert(Math.abs(first.width - second.width) < 1 && Math.abs(first.width - third.width) < 1, 'social button widths differ');
+  } else {
+    assert(second.top >= first.bottom + 10 && third.top >= second.bottom + 10, 'mobile social links no longer stack with clear tap spacing');
+  }
+  await page.locator('.story-connect').screenshot({path: path.join(out, `${engine}-yoshi-connect-${width}.png`)});
+  report.connections.push({engine, width, geometry, pass: true});
+  save();
+}
 async function layout(page, route, width, engine) {
   const errors = [];
   page.on('pageerror', error => errors.push(error.message));
   await load(page, route);
   const photos = await allPhotos(page);
+  if (route === 'yoshi') await storyConnectionLayout(page, width, engine);
   await mobileHeader(page, route, width, engine);
   if (route === 'yoshi' || route === 'media') await officialPlatformMarks(page, route, width, engine);
   if (route === 'contact' && (width === 390 || width === 1334)) await contactLocation(page, width, engine);
@@ -299,6 +320,10 @@ async function motion(browser, route, width, record) {
     for (const route of routes) for (const width of widths) await check(`layout ${route} ${width}`, async () => {
       const page = await browser.newPage({viewport: {width, height: 900}, reducedMotion: 'reduce'});
       try { await layout(page, route, width, 'chromium'); } finally { await page.close(); }
+    });
+    for (const width of [800, 801, 1024, 1280, 1366, 1440]) await check(`About social spacing ${width}`, async () => {
+      const page = await browser.newPage({viewport: {width, height: 900}, reducedMotion: 'reduce'});
+      try { await load(page, 'yoshi'); await storyConnectionLayout(page, width, 'chromium'); } finally { await page.close(); }
     });
     for (const route of routes) for (const width of [390, 1334]) await check(`motion ${route} ${width}`, () => motion(browser, route, width, width === 390 || route === 'index'));
     for (const route of routes) await check(`native menu without JS ${route}`, async () => {

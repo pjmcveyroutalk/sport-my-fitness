@@ -46,7 +46,8 @@ async function mobileHeader(page, route, width, engine, withoutJS = false) {
   const phoneBox = await call.boundingBox(), menuBox = await menu.boundingBox();
   assert(phoneBox.width >= 44 && phoneBox.height >= 44 && menuBox.width >= 44 && menuBox.height >= 44, 'header touch targets are too small');
   assert(menuBox.x - (phoneBox.x + phoneBox.width) >= 7, 'phone and navigation targets overlap');
-  assert.equal(await menu.innerText(), 'Menu', 'navigation lost its accessible label');
+  if (withoutJS) assert.equal((await menu.textContent()).trim(), 'Menu', 'native navigation lost its label');
+  else assert.equal(await page.getByRole('button', {name: 'Menu', exact: true}).count(), 1, 'navigation lost its accessible label');
   const label = await menu.locator('.menu-label').boundingBox();
   assert(label.width <= 1 && label.height <= 1, 'visible Menu word remains beside the icons');
   if (!withoutJS && route === 'index' && [360, 390, 430].includes(width)) {

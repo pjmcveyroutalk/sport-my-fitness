@@ -10,6 +10,9 @@ a one-tap call action and retain a separate hamburger. Review branch
 `review/approved-glass-mobile-header-20261018` prepares the independent call and
 navigation changes on all seven pages. It is not a completed horizontal-logo
 design and is not released to main.
+Browser run `39099546911` passed 70 layouts, 49 mobile-header checks, 28 menu
+journeys and 14 original-motion runs in Chromium and WebKit. See
+`verification/mobile-header-review-20261018.json` and its controls screenshot.
 
 The approved source PNG and the current SmartBrand v1.1 SVG/transparent PNG all
 have the wordmark crossing the symbol. The kit contains no symbol-only asset;

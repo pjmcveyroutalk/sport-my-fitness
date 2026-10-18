@@ -1,0 +1,53 @@
+{
+  "status": "controls_verified_in_review_horizontal_brand_pending_approved_symbol",
+  "checked_utc": "2026-10-18T05:14:15.774373+00:00",
+  "review_branch": "review/approved-glass-mobile-header-20261018",
+  "runtime_commit": "0203f3635ce7ce02093f28a4aadfd33f7a4fc945",
+  "verification_commit": "6114388292c0409dc0fa3c890e09877108515808",
+  "public_main_unchanged": "1e41e01297af36d6bab92ff6da6a98b6969c4c00",
+  "seo_preparation_unchanged": "1ecdc9e9a54606131090d51969cebdd95d988372",
+  "implemented": [
+    "One mobile header call link per active page: tel:+14147914526",
+    "Separate 44px call and hamburger targets; visible Menu word replaced by icon-only controls on mobile",
+    "Existing seven-destination dialog and native no-JS menu remain usable"
+  ],
+  "pending": [
+    "Approved standalone symbol-only SVG or transparent PNG from the branding work",
+    "Readable native brand text beside the approved symbol",
+    "Complete horizontal header visual review and release"
+  ],
+  "logo_source_review": {
+    "approved_png_sha256": "202f885d450df6330d8b0809f0c61f43a7ce940f7c870004c9bf6683178aad63",
+    "smartbrand_archive": "SmartBrand-v1.1.zip",
+    "archive_sha256": "b29ee0eac646a212cf3ece3f87c92bcc4a1a6bdd2d1ed45b8c0da760b0d8855e",
+    "master_sha256": "0349a132474c265497fad5d884fd89adcb32bdeeb6ba6ef26baba2e27cf79487",
+    "finding": "Approved PNG and kit full-logo SVG/transparent PNG retain crossing text. No symbol-only asset was supplied. Older repository mark/icon files are different variants and were not substituted.",
+    "branding_files_imported_or_changed": false
+  },
+  "browser_review": {
+    "run": 39099546911,
+    "artifact": 12125728715,
+    "artifact_sha256": "c606cb12716e15feb065621a3c94fc48dc3f054032bcc785cd19871ed7140bfd",
+    "conclusion": "success",
+    "layouts": 70,
+    "header_checks": 49,
+    "navigation_journeys": 28,
+    "image_checks": 250,
+    "original_motion_runs": 14,
+    "chromium": "151.0.7922.34",
+    "webkit": "26.5",
+    "failures": [],
+    "visual_review": "Inspected 360px and 390px Chromium and 390px WebKit header renders: phone and menu are clear and separated. The existing logo remains and is not presented as the finished horizontal design.",
+    "earlier_run": {
+      "id": 39099426074,
+      "classification": "test defect",
+      "detail": "innerText returned uppercase MENU from text-transform. Corrected to check accessible name and raw fallback label without changing runtime code."
+    }
+  },
+  "preservation": "All content from <main> onward is byte-identical on all seven pages; original asset files, photos, movement, form, map and search preparation are unchanged.",
+  "limits": [
+    "Actual phone calls were not placed. Verification covers the correct telephone URI and the accessible separated controls.",
+    "The full requested horizontal-logo design is incomplete and is not released on public main."
+  ],
+  "screenshot": "verification/mobile-header-controls-390-20261018.png"
+}

@@ -4,6 +4,21 @@ Updated October 18, 2026 (UTC); approved design and restored platform marks publ
 
 ## Current checkpoint
 
+October 18 mobile-header review: PJ agreed with Xin's suggestion to place a
+standalone brand symbol beside readable text, replace the visible Menu word with
+a one-tap call action and retain a separate hamburger. Review branch
+`review/approved-glass-mobile-header-20261018` prepares the independent call and
+navigation changes on all seven pages. It is not a completed horizontal-logo
+design and is not released to main.
+
+The approved source PNG and the current SmartBrand v1.1 SVG/transparent PNG all
+have the wordmark crossing the symbol. The kit contains no symbol-only asset;
+the older repository mark/icon files are different variants. To complete the
+horizontal lockup, the branding session must deliver an approved symbol-only
+SVG or transparent PNG. Do not redraw the symbol, crop away part of it or swap
+in the older variant to make this task appear complete. Until that source is
+available, public main remains the verified platform-mark release below.
+
 October 18 correction: the existing official Instagram, Facebook and YouTube SVGs
 are restored beside the three About links and Media's All videos link. The source
 assets are not redrawn or recolored. Compact light clear space keeps the

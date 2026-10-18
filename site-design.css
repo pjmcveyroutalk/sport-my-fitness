@@ -197,6 +197,11 @@ figcaption a, .quote-source { color: var(--muted); font-size: 12px; text-decorat
 .social-link > .teal-hover-label { margin-right: auto; }
 .platform-mark { display: inline-flex; align-items: center; justify-content: center; flex: 0 0 40px; width: 40px; height: 36px; border-radius: 5px; background: #f4f7f7; }
 .platform-icon { flex: none; width: auto; max-width: 32px; height: 22px; object-fit: contain; }
+@media (min-width: 801px) {
+  .story-connect { padding-block: 36px; }
+  .story-connect-inner { flex-direction: column; align-items: flex-start; gap: 24px; }
+  .story-personal-links { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; width: min(100%, 900px); min-width: 0; }
+}
 .media-films { padding-block: 64px 0; }
 .media-feature { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 7%; align-items: center; }
 .media-feature-copy > p:not(.eyebrow) { color: var(--muted); margin-top: 22px; font-size: 18px; }

@@ -4,14 +4,21 @@ Updated October 18, 2026 (UTC); approved design and restored platform marks publ
 
 ## Current checkpoint
 
-October 18 desktop spacing correction: PJ reported the wide empty gap between
-About's Keep connecting heading and its social links on a Chromebook. Live
-measurement at 1363px showed a 544px horizontal gap caused by space-between
-alignment. The review places all three links in one equal-width row directly
-below the heading above 800px, bounds the row to 900px, and reduces that section's
-desktop padding. The existing mobile stack, original platform SVGs, header,
-logo, page copy and movement are preserved. Browser review covers the 800/801px
-boundary and Chromebook/desktop widths before public release.
+October 18 desktop spacing correction is published as runtime
+`757d3b527652ebce6dd265254945a4a34fde237f`, Production deployment `7158513074`.
+PJ's Chromebook screenshot identified the 544px gap between About's heading and
+social links at 1363px, caused by space-between alignment. Above 800px, all three
+links now form one equal-width row directly beneath the heading, with 24px of
+separation, a 900px maximum row width and tighter section padding. Mobile keeps
+its original stacked layout and 32px heading gap.
+
+Browser run `39151874295` passed 70 page layouts, 16 focused social-spacing checks,
+28 navigation journeys, 250 image checks and 14 original-motion runs in Chromium
+and WebKit with zero failures. Visual review includes 1366px, the 801px boundary
+and 390px mobile. Public browser geometry confirms the row, shared left edge and
+24px gap; all eight checked public files match the release. All seven page bodies,
+platform SVGs, logo, photos, header, copy and motion remain unchanged. See
+`verification/about-spacing-release-20261018.json` and the saved public screenshot.
 
 October 18 header release: PJ chose to keep the existing full-logo version shown
 in the accepted review and apply the phone/menu changes now. A separate symbol

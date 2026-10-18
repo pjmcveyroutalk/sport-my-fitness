@@ -19,10 +19,12 @@ the public Vercel review site until a separate final-domain launch decision.
 The supplied SmartBrand v1.0 handoff specifies a 1248 × 884 JPEG, 109,884 bytes,
 SHA-256 `0349a132474c265497fad5d884fd89adcb32bdeeb6ba6ef26baba2e27cf79487`.
 The emblem, wordmark, tagline and glowing divider remain intact; the lower
-“MIND. BODY. PURPOSE.” portion is excluded. This expected hash is copied from
-the handoff; the latest final kit has not been received or independently checked
-in this website session. If the branding session delivers a deliberately revised
-master, reconcile its approved handoff before changing this contract.
+“MIND. BODY. PURPOSE.” portion is excluded. The master inside the supplied `SmartBrand-v1.1.zip` was hash-checked during
+the October 18 header-source review and matches this expected identity. The
+metadata-rich JPEG is still not installed in this website; PJ chose to retain the
+existing full-logo header artwork while applying the call/menu changes. If the
+branding session delivers a revised master, reconcile its approved handoff before
+changing this contract.
 
 The existing website PNG is a separate earlier approved asset. It remains
 byte-identical during SEO preparation and is not being presented as the new

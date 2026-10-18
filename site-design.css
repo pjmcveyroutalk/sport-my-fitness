@@ -58,6 +58,9 @@ h3 { font: 700 clamp(24px, 2.3vw, 36px)/1.15 var(--label); letter-spacing: .02em
 .site-header { position: absolute; top: 0; left: var(--rail-width); right: 0; z-index: 30; height: var(--header-height); background: linear-gradient(90deg, #000 0%, #000 22%, #0000 50%); }
 .site-header::after { content: ''; position: absolute; left: 0; bottom: 0; width: 38%; height: 1px; background: linear-gradient(90deg, var(--line), #29414900); }
 .header-inner { display: flex; align-items: center; justify-content: space-between; height: 100%; }
+.header-actions { display: flex; align-items: center; gap: 8px; }
+.header-call { display: none; }
+.header-call svg { display: block; width: 24px; height: 24px; }
 .brand { display: block; width: 254px; flex-shrink: 0; }
 .brand-logo { display: block; width: 100%; height: auto; aspect-ratio: 1100 / 725; }
 .menu-rail { position: fixed; z-index: 20; inset: 0 auto 0 0; width: var(--rail-width); border-right: 1px solid #2a555f; background: linear-gradient(140deg, #0d2028e6, #061014e6 55%, #0b2028e6); box-shadow: inset -1px 0 18px #00d9e009; -webkit-backdrop-filter: blur(18px); backdrop-filter: blur(18px); }
@@ -66,6 +69,7 @@ h3 { font: 700 clamp(24px, 2.3vw, 36px)/1.15 var(--label); letter-spacing: .02em
 .menu-label { font: 700 10px/1.2 var(--body); letter-spacing: .08em; text-transform: uppercase; }
 .menu-lines { position: relative; width: 21px; height: 16px; border-block: 2px solid currentColor; }
 .menu-lines::after { content: ""; position: absolute; left: 0; right: 0; top: 5px; border-top: 2px solid currentColor; }
+.menu-fallback > summary > .menu-lines { display: none; }
 .menu-panel { position: fixed; z-index: 80; top: 14px; left: 90px; right: auto; bottom: auto; margin: 0; width: 320px; max-height: calc(100dvh - 28px); overflow-y: auto; overscroll-behavior: contain; padding: 24px 22px 40px; border: 1px solid #59828c; border-radius: 20px; background: linear-gradient(140deg, #122c36f5, #061014fa 45%, #0d252ef5); box-shadow: 0 18px 60px #000b, inset 0 0 30px #03d6df07; -webkit-backdrop-filter: blur(24px); backdrop-filter: blur(24px); }
 .menu-panel:not([open]) { display: none; }
 .menu-panel::backdrop { background: #0005; }
@@ -287,13 +291,19 @@ figcaption a, .quote-source { color: var(--muted); font-size: 12px; text-decorat
   .site-header { position: fixed; left: 0; height: var(--header-height); background: #000000f5; border-bottom: 1px solid #25444d; -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px); }
   .site-header::after { display: none; }
   .brand { width: 128px; }
+  .header-actions { min-width: 96px; }
+  .header-call { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; flex: 0 0 44px; color: var(--teal); border-radius: 6px; }
+  .header-call:hover { color: #92f4f5; background: #1c3a4480; }
   .menu-rail { display: none; }
-  .menu-toggle { position: static; flex-direction: row; min-height: 44px; min-width: 76px; gap: 10px; padding: 8px 0 8px 8px; border: 0; border-radius: 0; }
+  .menu-toggle { position: static; flex-direction: row; width: 44px; height: 44px; min-height: 44px; min-width: 44px; padding: 0; border: 0; border-radius: 6px; }
   .menu-toggle:hover, .menu-toggle[aria-expanded="true"] { background: transparent; }
-  .menu-label { font-size: 13px; text-transform: none; letter-spacing: 0; }
+  .menu-label { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
   .menu-panel { left: auto; right: 12px; top: 12px; width: min(340px, calc(100vw - 24px)); max-height: calc(100dvh - 24px); }
   .menu-heading .brand { width: 165px; }
-  .menu-fallback { position: fixed; left: auto; right: 24px; top: 24px; width: 86px; }
+  .menu-fallback { position: fixed; left: auto; right: var(--gutter); top: 22px; width: 44px; }
+  .menu-fallback > summary { display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; min-height: 44px; padding: 0; border: 0; list-style: none; }
+  .menu-fallback > summary::-webkit-details-marker { display: none; }
+  .menu-fallback > summary > .menu-lines { display: block; }
   .menu-fallback[open] { top: 12px; right: 12px; max-height: calc(100dvh - 24px); }
   .program-row { scroll-margin-top: 120px; }
 }

@@ -10,7 +10,7 @@ const out = process.env.SMF_EVIDENCE_DIR || '/tmp/smf-design-evidence';
 const routes = ['index', 'training', 'programs', 'yoshi', 'media', 'community', 'contact'];
 const widths = [360, 390, 430, 768, 900, 901, 1334, 1920];
 const heroReferences = new Map();
-const report = {started: new Date().toISOString(), layouts: [], navigation: [], motion: [], locations: [], platformMarks: [], safeguards: [], failures: []};
+const report = {started: new Date().toISOString(), layouts: [], navigation: [], motion: [], locations: [], platformMarks: [], headers: [], safeguards: [], failures: []};
 fs.mkdirSync(out, {recursive: true});
 function save() { fs.writeFileSync(path.join(out, 'results.json'), JSON.stringify(report, null, 2)); }
 async function check(name, fn) {
@@ -32,6 +32,28 @@ async function allPhotos(page) {
     return {src: i.getAttribute('src'), natural: [i.naturalWidth, i.naturalHeight], rendered: [r.width, r.height], fit: style.objectFit, mask: style.maskImage,
       valid: i.complete && i.naturalWidth > 0 && r.width > 0 && r.height > 0 && Math.abs((r.width / r.height) / (i.naturalWidth / i.naturalHeight) - 1) < .015};
   }));
+}
+async function mobileHeader(page, route, width, engine, withoutJS = false) {
+  const call = page.getByRole('link', {name: 'Call Sport My Fitness at 414-791-4526', exact: true});
+  if (width > 900) {
+    assert.equal(await call.isVisible(), false, 'mobile call action changed the desktop header');
+    return;
+  }
+  assert(await call.isVisible(), 'one-tap call action is missing');
+  assert.equal(await call.getAttribute('href'), 'tel:+14147914526');
+  assert.equal(await call.getAttribute('target'), null, 'phone link should hand off directly to the dialer');
+  const menu = page.locator(withoutJS ? '.menu-fallback summary' : '.menu-toggle');
+  const phoneBox = await call.boundingBox(), menuBox = await menu.boundingBox();
+  assert(phoneBox.width >= 44 && phoneBox.height >= 44 && menuBox.width >= 44 && menuBox.height >= 44, 'header touch targets are too small');
+  assert(menuBox.x - (phoneBox.x + phoneBox.width) >= 7, 'phone and navigation targets overlap');
+  if (withoutJS) assert.equal((await menu.textContent()).trim(), 'Menu', 'native navigation lost its label');
+  else assert.equal(await page.getByRole('button', {name: 'Menu', exact: true}).count(), 1, 'navigation lost its accessible label');
+  const label = await menu.locator('.menu-label').boundingBox();
+  assert(label.width <= 1 && label.height <= 1, 'visible Menu word remains beside the icons');
+  if (!withoutJS && route === 'index' && [360, 390, 430].includes(width)) {
+    await page.locator('.site-header').screenshot({path: path.join(out, `${engine}-header-${width}.png`)});
+  }
+  report.headers.push({route, width, engine, withoutJS, telephoneURI: 'tel:+14147914526', targets: {phoneBox, menuBox}, pass: true});
 }
 async function officialPlatformMarks(page, route, width, engine) {
   const expected = route === 'yoshi' ? [
@@ -102,6 +124,7 @@ async function layout(page, route, width, engine) {
   page.on('pageerror', error => errors.push(error.message));
   await load(page, route);
   const photos = await allPhotos(page);
+  await mobileHeader(page, route, width, engine);
   if (route === 'yoshi' || route === 'media') await officialPlatformMarks(page, route, width, engine);
   if (route === 'contact' && (width === 390 || width === 1334)) await contactLocation(page, width, engine);
   assert(photos.every(i => i.valid), 'image ratio/decode failure: ' + JSON.stringify(photos.filter(i => !i.valid)));
@@ -281,6 +304,7 @@ async function motion(browser, route, width, record) {
     for (const route of routes) await check(`native menu without JS ${route}`, async () => {
       const context = await browser.newContext({viewport: {width: 390, height: 900}, javaScriptEnabled: false});
       const page = await context.newPage(); await load(page, route);
+      await mobileHeader(page, route, 390, 'chromium', true);
       await page.locator('.menu-fallback summary').click();
       assert.equal(await page.locator('.menu-fallback nav a:visible').count(), 7);
       assert(await page.locator('h1').isVisible());

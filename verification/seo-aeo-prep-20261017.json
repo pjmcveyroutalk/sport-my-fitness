@@ -1,11 +1,11 @@
 {
   "status": "prelaunch_prepared_and_locally_verified",
-  "checked_utc": "2026-10-18T03:03:48.586703+00:00",
+  "checked_utc": "2026-10-18T05:28:41.082184+00:00",
   "branch": "prep/seo-aeo-20261017",
-  "production_baseline": "28b959b4ef8fc945504b81e0a1353f7f5a490877",
+  "production_baseline": "63f3e5d20a0bb5b905de37ee707cd23e3251d2f1",
   "planned_official_origin": "https://sportmyfitness.com",
   "current_public_review_url": "https://sport-my-fitness.vercel.app/",
-  "scope": "SEO/AEO preparation remains head-only relative to the current public runtime. Inherits the verified October 18 official platform-mark restoration; no separate branding-kit application.",
+  "scope": "SEO/AEO preparation remains head-only relative to the current public runtime. Inherits the released phone/hamburger header and official platform marks; preserves the approved full-logo artwork.",
   "verification": {
     "command": "python3 verification/seo-aeo-check.py",
     "exit_code": 0,
@@ -38,31 +38,31 @@
   "preservation": {
     "body_sha256": {
       "index.html": {
-        "sha256": "2351ce8b18efd8a5de75e10e0ad9957a80f0c6c081901c296238f92b7e651c04",
+        "sha256": "b3d9090d5b163dc7e9a85bd3989a9580a2df698bab3408f8a23ed70394968af8",
         "matches_public_body": true
       },
       "training.html": {
-        "sha256": "e7ab96e52505bab631ef690f39d9ec1c065ab1d3a4f546b482f66eb69bef2b7f",
+        "sha256": "26818294e7bad7c54b4d94d5edf9a3d1aa99c9310f2573cd3322d0c41e5fa4bc",
         "matches_public_body": true
       },
       "programs.html": {
-        "sha256": "0eaa0f5f0c9f47ee144dc49ffd4f6dda386ae5dd6cd369a9df8fd2ec00b32480",
+        "sha256": "70bc28f0cb74057de14af335b7d26bf16f0722334b4393bf88ec3720038302f0",
         "matches_public_body": true
       },
       "yoshi.html": {
-        "sha256": "bf8c28305ec456ed12d41eab9e4df6dbff4809fab67b6145c1044457b121f751",
+        "sha256": "67001f3bae8141e2080b0194d105d74df52b6c3a0ea1b0f97e8412faefd43d31",
         "matches_public_body": true
       },
       "media.html": {
-        "sha256": "91748d4f803a6478de79c8bacc30f547ef47dce504dfc3a83d76cfdb509432f2",
+        "sha256": "0e23dfe21f0a960c959bf8d909b9bdd4423a02644b7fce61e426c127141a8177",
         "matches_public_body": true
       },
       "community.html": {
-        "sha256": "b6a319fb0a9be1bc51704a3ef660e549fb104284ec08e55050edb2e009ac1751",
+        "sha256": "06f6579c70e89c3ae251748cba653a91623e0405ae018b03e3af1fb2bd509ffb",
         "matches_public_body": true
       },
       "contact.html": {
-        "sha256": "a4da71e6bb9c5098e6dd615cabb3e39b3232ccbee715c098f49ce5f862608429",
+        "sha256": "efaeaf56e3b856cedba5ba29ce4caf2310c5233f807c2a83af1c5dff66bb2c1e",
         "matches_public_body": true
       }
     },
@@ -76,84 +76,70 @@
       "status": 200,
       "matches_public_baseline": true,
       "preparation_noindex_leaked": false,
-      "sha256": "a66a23c25c5deaad2a911276d81717faef22db26902e4b4777b5cec1a8a1bfa8"
+      "sha256": "31d70fa2a99461d2e9e822399c314202513e428d38970fed3e86be2813f74a50"
     },
     {
       "path": "training.html",
       "status": 200,
       "matches_public_baseline": true,
       "preparation_noindex_leaked": false,
-      "sha256": "0d13bdbaa3586c67c57931d76bd004a916062759a4a2e5bf91823625a3cff037"
+      "sha256": "e9d04183d23dac5c28e923927436b4406d5cf6b6a448b30f028d723cf9028c00"
     },
     {
       "path": "programs.html",
       "status": 200,
       "matches_public_baseline": true,
       "preparation_noindex_leaked": false,
-      "sha256": "f7f080aa9c39de92f8d6ff7fa388ec34eab64af8792013e3493ae8535efc84ad"
+      "sha256": "7ea080d1c6864e20604ef481297674929bac2d93c182566bea2bd1af597a4c21"
     },
     {
       "path": "yoshi.html",
       "status": 200,
       "matches_public_baseline": true,
       "preparation_noindex_leaked": false,
-      "sha256": "876bbbe391ffe21000df4e950f3001ecd542717733819a9ed4ef8169113c1153"
+      "sha256": "81e7cc53e335307c88a8cf6dbcc568556227c3f3752e170881f762b0fbb8e196"
     },
     {
       "path": "media.html",
       "status": 200,
       "matches_public_baseline": true,
       "preparation_noindex_leaked": false,
-      "sha256": "ee6fb4991a8be7b8e3fc6c3de2f46b763add4e207e4405daae960ef08aaeefda"
+      "sha256": "3cb633225cbe8c7ee8d59259d270020c92e080f017ebc9d8803ffb924a556ae1"
     },
     {
       "path": "community.html",
       "status": 200,
       "matches_public_baseline": true,
       "preparation_noindex_leaked": false,
-      "sha256": "a66f7430c3b80475c9cdd24276cb7db0be2a763ae7beab40f5fe2ad97deb4929"
+      "sha256": "87dbe4db18f66063b40fe49d4a5720783f461640a928ae7320caaef775f67523"
     },
     {
       "path": "contact.html",
       "status": 200,
       "matches_public_baseline": true,
       "preparation_noindex_leaked": false,
-      "sha256": "67e4a501029ae2493cfb4d59e706088d82d3385cbc27607c9f58331e0259b55f"
+      "sha256": "427ba4e397ee3ae7579e6c5dd11dcf19b41374c72308dbe9e4e89b6189973b40"
     },
     {
       "path": "site-design.css",
       "status": 200,
       "matches_public_baseline": true,
       "preparation_noindex_leaked": false,
-      "sha256": "71b70a450a4644aa31ff5a87f677532b94dd2a0cd8ed5fb4c9be1fc4d2af34dd"
+      "sha256": "425f367a6ff2b345d9235e6f1481eeb09ea2949a0e33ad2da4ee68c50865f31a"
     },
     {
-      "path": "assets/platforms/instagram.svg",
+      "path": "site-menu.js",
       "status": 200,
       "matches_public_baseline": true,
       "preparation_noindex_leaked": false,
-      "sha256": "a036f8197b3856b02d1e236e08dd1b50a4ed68cb148686beb274eabf29794d51"
+      "sha256": "3d4310160d4cea432a6cf780be279c95bf5a6fe4d8aa1cac71bcd6d350a272d7"
     },
     {
-      "path": "assets/platforms/facebook.svg",
+      "path": "site-motion.js",
       "status": 200,
       "matches_public_baseline": true,
       "preparation_noindex_leaked": false,
-      "sha256": "f6d89395644e07c894fea165e5b097544aed31e56f43e451a1b9695a18b9362d"
-    },
-    {
-      "path": "assets/platforms/youtube.svg",
-      "status": 200,
-      "matches_public_baseline": true,
-      "preparation_noindex_leaked": false,
-      "sha256": "cc1173c038e5759673b2a57f44274f40f40445a23bd19ca2bd62d28234869b86"
-    },
-    {
-      "path": "assets/platforms/tmj4.svg",
-      "status": 200,
-      "matches_public_baseline": true,
-      "preparation_noindex_leaked": false,
-      "sha256": "28ef57bc702958d7711546c57fdd01e3f3512ed46e130529d6685dfdc50dba38"
+      "sha256": "cff14d42c5d743dcc5bbee2bcafba6780c77bb58a40944e8700292c9ab94cc56"
     },
     {
       "path": "assets/brand/sport-my-fitness-original-lockup.png",
@@ -177,34 +163,34 @@
       "sha256": "265f2344a967e33843de99812f73e3f2f3a61afbf9a0a4d110be9db9d604ac99"
     }
   ],
-  "prelaunch_protection": "All seven prepared pages retain noindex,follow and future-domain metadata. Public main contains only the verified platform-mark correction and its evidence. Domain-launch mode still requires selecting the official origin and exact approved JPEG.",
+  "prelaunch_protection": "All seven prepared pages retain noindex,follow and future-domain metadata. Public main contains the approved full-logo call/menu header release and its evidence. Domain launch remains a separate step.",
   "smartbrand": {
     "handoff": "SMARTBRAND_SOL61_HANDOFF_2026-10-17.md",
     "expected_master_sha256": "0349a132474c265497fad5d884fd89adcb32bdeeb6ba6ef26baba2e27cf79487",
     "master_imported_here": false,
     "rights_confirmation": false,
-    "provenance_status": "Expected identity taken from supplied handoff; latest final kit bytes not independently checked in this website workstream."
+    "provenance_status": "The source master inside supplied SmartBrand-v1.1.zip was hash-checked during the header review and matches the expected handoff identity. It is not installed in this website; the separate metadata-rich asset integration remains pending."
   },
   "source_sha256": {
-    "index.html": "37e879c79891d06c8b7e2aa413598b48797ed22ddfc11d9002a5f3b1e8eca1c0",
-    "training.html": "38a54dfc8b8d4ed548475f79bce67c537c717f4755d6c0b73a3db777e41ee7bc",
-    "programs.html": "e2061e3c0ac18057c3c4ad578eb6113b9579290e2011ee66174fb3ef3e335b54",
-    "yoshi.html": "3aa30f024b0c6057cba971f8f73179d01b003eeda08a31ca7682ca0663484a90",
-    "media.html": "9d7ec9d5e9fc88c63edd1ed70ea3f0a3796e8b0cef024b86ef0bad7dd9fb4be2",
-    "community.html": "b76bf93c59201a1376269756930942a4ec4ab93042e85259156d169c7b3ae1fd",
-    "contact.html": "5781618e0b6777ef805448bc2141caf36ad3b9f300595c1d818660d71a7a9e1c",
+    "index.html": "a46dd95e45963b38ecb8b014d969c4880c4d1b8af6ac900bb69ef689c3943fe1",
+    "training.html": "f0cfb42933ceaef1c4bd33f1f4d45333966aceb8cc82d4ef8a24dfdf5d941578",
+    "programs.html": "46bd28d498f9e11321891b0dcb90871a61e65d1d25e50b1cfd3eaff8a40d4df6",
+    "yoshi.html": "cdc6972406ca3ff25c2e8c0fec72b57e3027f2550cfbd0f1a249f8000ac8950a",
+    "media.html": "65cba43b49e26ce4514c72ff0a01142c01c85dad44e84ccda7fbc2ea387900a3",
+    "community.html": "0c7fea16b3f620d79c6b27dc1cce3457942d44b68044685bd3ee0a3672ebf74e",
+    "contact.html": "0a834f9eec0f0d77308814c12dc8f06c32a017159d91960405f0caaa285a97cd",
     "robots.txt": "a30ff31c8ecc242995483f6bfcd25f428654058ccb9620bed4ae6e23caa36007",
     "sitemap.xml": "61609f8963695345f3516ee3b30e89bee486feebd55928bf3769cdbefee91d3b",
     "seo/site-identity.json": "c7652d00b6b272f1a83d840537326eb9c729d547c15b3c56ef4eb520e1245a9b",
     "seo/page-metadata.json": "e84530fe7f59d0e1f9cdace037757c7b4356a4ec21171126d8e9ac225b5deeec",
-    "design-tools/prepare-search.py": "909093d45660eebe09ebe1f8781208a0d35d906c9416aac5ad96b67782a9ca65",
-    "verification/seo-aeo-check.py": "1394c548bf5ed4b98ac371c4fe25157575785de18c4df0db50d32f9bb6f26328",
+    "design-tools/prepare-search.py": "939e239fc54d80d0e3442415cfabf8ffbece4a13c6271462816bfb0efad278bd",
+    "verification/seo-aeo-check.py": "b1af8192d01958d1da754cedd011e0005ccbc4964316f52be95f0b6aa0fa6117",
     "docs/LAUNCH_TASKS.md": "b5b7d6ef3bb8575677ac54a408783b0981dc24a54d8bcc7a978647db37b389be",
     "docs/seo-aeo/AEO_ANSWER_DRAFT.md": "8591569916893a3a75416c714df5c29b74f45a324113a6a02b4ed7d88320e52a",
-    "docs/seo-aeo/SMARTBRAND_WEBSITE_HANDOFF.md": "e6c36a84779913e40ccefe2969a25cf56b296bbfe824bae4011b6eba7f1041ff",
-    "site-design.css": "71b70a450a4644aa31ff5a87f677532b94dd2a0cd8ed5fb4c9be1fc4d2af34dd",
-    "verification/approved-design-browser.cjs": "97fe044f5d07b130590b5022136222bddb00a81d60d85db4b5d7d70b0839bc5f",
-    "docs/PROJECT_STATE.md": "7e6ae22024f75b4b7039a92137f6982ca78dd9b4770324e705a8589a139ba2bd"
+    "docs/seo-aeo/SMARTBRAND_WEBSITE_HANDOFF.md": "77a9c1b84e1864e5834cdeff5688552ad590020071ca609563525703a4650c01",
+    "site-design.css": "425f367a6ff2b345d9235e6f1481eeb09ea2949a0e33ad2da4ee68c50865f31a",
+    "verification/approved-design-browser.cjs": "ba1cfb5016b9d800167dfbefc74a98bfafe25d2f395e74ab6ebd3923146157f8",
+    "docs/PROJECT_STATE.md": "4728fdb2238772da4147ef58d4bc5a4a66c1ae13d979ea45b1a7084ebe9439ac"
   },
   "remaining": [
     "Yoshi content/fact review and change requests",
@@ -229,7 +215,7 @@
     "https://developers.google.com/search/docs/appearance/structured-data/image-license-metadata",
     "https://developers.google.com/search/docs/appearance/ai-features"
   ],
-  "synced_public_checkpoint": "1e41e01297af36d6bab92ff6da6a98b6969c4c00",
+  "synced_public_checkpoint": "711ee1cceb16614ff3e63407a7e3e419cf0b3e37",
   "platform_mark_sync": {
     "runtime_commit": "28b959b4ef8fc945504b81e0a1353f7f5a490877",
     "public_checkpoint": "1e41e01297af36d6bab92ff6da6a98b6969c4c00",
@@ -237,5 +223,14 @@
     "official_marks_restored": 4,
     "preparation_checks_passed": 17,
     "public_evidence": "verification/platform-marks-20261018.json"
+  },
+  "header_sync": {
+    "runtime_commit": "63f3e5d20a0bb5b905de37ee707cd23e3251d2f1",
+    "public_checkpoint": "711ee1cceb16614ff3e63407a7e3e419cf0b3e37",
+    "browser_run": 39099546911,
+    "header_checks": 49,
+    "owner_decision": "Keep existing full-logo artwork and apply phone/hamburger controls. Symbol-only redesign deferred.",
+    "preparation_checks_passed": 17,
+    "public_evidence": "verification/mobile-header-release-20261018.json"
   }
 }

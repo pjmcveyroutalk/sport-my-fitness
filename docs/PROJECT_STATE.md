@@ -5,8 +5,8 @@ Updated October 18, 2026 (UTC); approved design and restored platform marks publ
 ## Current checkpoint
 
 SEO/AEO preparation is now on `prep/seo-aeo-20261017`, synchronized with public
-checkpoint `1e41e01297af36d6bab92ff6da6a98b6969c4c00` and runtime baseline
-`28b959b4ef8fc945504b81e0a1353f7f5a490877`. The intended official domain is
+checkpoint `711ee1cceb16614ff3e63407a7e3e419cf0b3e37` and runtime baseline
+`63f3e5d20a0bb5b905de37ee707cd23e3251d2f1`. The intended official domain is
 `https://sportmyfitness.com/`, identified in the SmartBrand handoff as purchased
 and prelaunch. This supersedes the earlier unknown-domain planning assumption;
 DNS/HTTPS, final client changes and domain-launch authorization are still pending.
@@ -16,9 +16,10 @@ Seven page heads, the sitemap and robots reference are prepared for that officia
 domain. All preparation pages are `noindex,follow`; do not merge this branch into
 public production unchanged. The public Vercel site remains on `main`.
 Organization, local business, coach and webpage identities are connected without
-new visible sections, unsupported ratings or unverified rights claims. The latest
-SmartBrand kit is not yet imported; its expected JPEG identity is recorded, not
-claimed as independently verified. Read
+new visible sections, unsupported ratings or unverified rights claims. The full logo remains as approved by PJ for this header release. The separate
+SmartBrand master-file integration is still pending. Its source master hash was
+checked during the header review and matches the handoff, but the JPEG has not
+been installed into the website. Read
 [the website/branding handoff](seo-aeo/SMARTBRAND_WEBSITE_HANDOFF.md) and
 [the answer-copy draft](seo-aeo/AEO_ANSWER_DRAFT.md).
 
@@ -28,6 +29,26 @@ from the public checkpoint. Current preparation evidence is
 `verification/seo-aeo-prep-20261017.json`. Google's Rich Results validation,
 domain HTTP checks, Search Console ownership/indexing and AI citations remain
 separate pending launch steps, not results of these local checks.
+
+October 18 header release: PJ chose to keep the existing full-logo version shown
+in the accepted review and apply the phone/menu changes now. A separate symbol
+and horizontal wordmark are optional future refinements, not release blockers.
+The exact reviewed runtime is published at
+`https://sport-my-fitness.vercel.app/` as commit
+`63f3e5d20a0bb5b905de37ee707cd23e3251d2f1`, Production deployment `7150386635`.
+
+All seven mobile headers now have one direct call action for 414-791-4526 and a
+separate hamburger with 44px touch targets. The visible Menu word is removed on
+mobile; its accessible name and the native menu fallback remain. Desktop
+presentation, approved logo bytes, page content, photos and movement are preserved.
+Browser run `39099546911` passed 70 layouts, 49 mobile-header checks, 28 menu
+journeys and 14 original-motion runs. The released runtime is byte-identical to
+that tested candidate; the later commits add documentation/evidence only.
+All 13 checked public files match the release and every page has the correct
+phone URI and refreshed stylesheet. Live browser inspection confirms the logo,
+phone link and active stylesheet. See
+`verification/mobile-header-release-20261018.json`; the prior review receipt is
+historical and its symbol-only dependency is closed by PJ's latest decision.
 
 October 18 correction: the existing official Instagram, Facebook and YouTube SVGs
 are restored beside the three About links and Media's All videos link. The source
@@ -162,12 +183,9 @@ reports are historical, not current acceptance.
 
 ## Next step
 
-Continue the preparation branch using `docs/LAUNCH_TASKS.md`. Receive Yoshi's
-changes and the latest approved branding kit, then combine them for review. The
-public Vercel review site remains live on `main`. Official-domain activation,
-inquiry delivery confirmation, Business Profile updates and Search Console setup
-are still pending. No domain, environment, protection setting or Google profile
-was changed during this preparation.
+The finished preview is live. Continue from `main` and this release receipt for
+future requests. No domain, environment, protection setting or Google profile was
+changed. The blank Google listing website field remains a separate owner follow-up.
 
 Keep the existing static HTML/CSS/JavaScript architecture. Historical handoffs and
 studies cannot override PJ's board or later removal and refinement requests.

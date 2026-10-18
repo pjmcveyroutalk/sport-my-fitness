@@ -13,7 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 START = '<!-- SMF SEARCH METADATA START -->'
 END = '<!-- SMF SEARCH METADATA END -->'
 BLOCK = re.compile(re.escape(START) + r'.*?' + re.escape(END), re.S)
-BASELINE = '28b959b4ef8fc945504b81e0a1353f7f5a490877'
+BASELINE = '63f3e5d20a0bb5b905de37ee707cd23e3251d2f1'
 
 
 def load_data(root=ROOT):

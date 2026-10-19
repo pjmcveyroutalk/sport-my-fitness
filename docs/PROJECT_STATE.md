@@ -4,6 +4,19 @@ Updated October 18, 2026 (UTC); approved design and restored platform marks publ
 
 ## Current checkpoint
 
+October 19 client-content update is on
+`review/approved-glass-yoshi-content-20261019`. Yoshi supplied corrected San José
+State (2005–2008), Missouri Southern (2008–2010) and Northcentral University
+(2015–2020) dates, plus her MATC instructor role teaching Health and Wellness and
+Mental Health Performance, and contract work with St. Joan Antida. These facts
+are applied to About; release verification is pending. See
+`docs/CLIENT_CHANGES_20261019.md` for the exact request mapping and remaining
+main-photo replacement, apparel, classroom photos and upcoming event details.
+Domain/hosting setup is a separate session; no setup or access settings change
+with this copy update. The setup session should integrate this released content
+before launch without restoring old dates or importing prelaunch noindex into
+the currently public website.
+
 October 18 desktop spacing correction is published as runtime
 `757d3b527652ebce6dd265254945a4a34fde237f`, Production deployment `7158513074`.
 PJ's Chromebook screenshot identified the 544px gap between About's heading and

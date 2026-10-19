@@ -1,0 +1,52 @@
+{
+  "status": "browser_verified",
+  "recorded_at_utc": "2026-10-19T20:33:23.784809+00:00",
+  "request": "Organize the Showing up section on About.",
+  "runtime_commit": "0f9384278741a867cca44a184a3c0a21bd9258de",
+  "baseline": "793b4b877d6dac3b60ba2801b8dc83710a6950a0",
+  "runtime_files": [
+    "yoshi.html"
+  ],
+  "content_groups": {
+    "Teaching & contract work": [
+      "MATC instructor; Health and Wellness and Mental Health Performance",
+      "St. Joan Antida contract work"
+    ],
+    "School involvement": [
+      "American Indian School; September 2026; fitness and encouragement for young people",
+      "Pathways High",
+      "Whitefish Bay High School",
+      "Bader Hillel High School"
+    ]
+  },
+  "presentation": "Existing native chapter bullets, school headings, date styling and spacing reused. All existing facts retained; no new roles or services inferred.",
+  "hashes": {
+    "yoshi.html": "214a39eec3d6fbaecdf4f63ef1d51242c84603d8d326a2c73a1626831f8bb530",
+    "site-design.css": "c07a04791c06c2cc114170dd878162b841692f450c2151dee76f2ffba931db83",
+    "assets/brand/sport-my-fitness-original-lockup.png": "202f885d450df6330d8b0809f0c61f43a7ce940f7c870004c9bf6683178aad63"
+  },
+  "browser": {
+    "run_id": 39319411960,
+    "job_id": 118289253399,
+    "artifact_id": 12219368933,
+    "artifact_sha256": "862c3367978ad63dcfd5beeb6877d21d1a926fcbd0e8e2a3b2df7f89d3cfbe60",
+    "summary": {
+      "started": "2026-10-19T20:28:08.868Z",
+      "layouts": 70,
+      "navigation": 28,
+      "motion": 14,
+      "locations": 4,
+      "platformMarks": 20,
+      "headers": 49,
+      "connections": 16,
+      "safeguards": 22,
+      "failures": 0,
+      "chromiumVersion": "151.0.7922.34",
+      "webkitVersion": "26.5",
+      "completed": "2026-10-19T20:31:24.325Z"
+    },
+    "visual_review": "Chromium About screenshots at 390px and 1334px inspected. Roles and schools are clearly separated, date wraps cleanly on mobile, and all text is readable without overlap."
+  },
+  "preservation": "HTML outside Showing up is identical to baseline. Stylesheets, all other pages, original branding, images, navigation and motion unchanged.",
+  "limits": "Browser evidence uses the exact candidate on the static test server. The private live render is not independently authenticated in this content session. Vercel production identity/readiness is checked separately after publishing."
+}

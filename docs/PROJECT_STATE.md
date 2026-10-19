@@ -7,21 +7,21 @@ Updated October 19, 2026 (UTC); Yoshi’s confirmed biography corrections publis
 This is the main website content/design workstream. Domain, hosting, DNS,
 access controls and account setup are handled in the separate setup session.
 
-The current About refinement groups each college and its dates into a native
-bullet. San José State and Missouri Southern each have their verified basketball
-achievement directly beneath the school; Northcentral University has a separate
-Education label. Dates are larger and wrap naturally, and the repeated founding
-sentence is removed. All three date ranges occur once. No new facts are added.
+About now groups colleges and dates into native bullets with each achievement
+under the relevant school and Northcentral under Education. Showing up uses the
+same bullet treatment, divided into Teaching & contract work and School
+involvement. MATC and St. Joan Antida each show their stated role; American
+Indian School keeps its September 2026 context; the three other schools each
+have their own bullet. All existing facts are retained without extra claims.
 
-Runtime `5f0bff3ef1da5583f8afc9cda9f51f0013cd90f7` passed browser run
-`39318038489`: 70 layouts, 28 navigation journeys, 14 motion runs and 22
+Runtime `0f9384278741a867cca44a184a3c0a21bd9258de` passed browser run
+`39319411960`: 70 layouts, 28 navigation journeys, 14 motion runs and 22
 safeguards with zero failures. About mobile/desktop screenshots were inspected.
-Only About markup and its chapter-list CSS change at runtime. All other page
-bodies, photos, branding, navigation and original movement remain intact.
-See `verification/story-lists-20261019.json` for the evidence and live-check limit.
-The preceding factual correction and primary athletics sources are recorded in
-`verification/on-court-release-20261019.json` and
-`docs/ON_THE_COURT_SOURCES_20261019.md`.
+Only the Showing up article changes in this follow-up; all other About markup,
+stylesheets, page bodies, photos, branding, navigation and motion are preserved.
+See `verification/showing-up-20261019.json` for the evidence and live-check limit.
+The earlier college layout is recorded in `verification/story-lists-20261019.json`;
+primary athletics sources remain in `docs/ON_THE_COURT_SOURCES_20261019.md`.
 
 October 19 client-content update is on
 `review/approved-glass-yoshi-content-20261019`. Yoshi supplied corrected San José

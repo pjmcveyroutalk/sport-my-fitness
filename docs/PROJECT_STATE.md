@@ -4,6 +4,15 @@ Updated October 19, 2026 (UTC); Yoshi’s confirmed biography corrections publis
 
 ## Current checkpoint
 
+This is the main website content/design workstream. Domain, hosting, DNS,
+access controls and account setup are handled in the separate setup session.
+The October 19 On the court correction removes the irrelevant hometown line
+and adds verified San José State recognition and Missouri Southern's 2008–09
+scoring/assists leadership. See `docs/ON_THE_COURT_SOURCES_20261019.md`.
+Only that existing paragraph changes at runtime; Yoshi's dates and the approved
+layout, branding, photographs and movement are preserved. Release validation
+is recorded separately when complete.
+
 October 19 client-content update is on
 `review/approved-glass-yoshi-content-20261019`. Yoshi supplied corrected San José
 State (2005–2008), Missouri Southern (2008–2010) and Northcentral University

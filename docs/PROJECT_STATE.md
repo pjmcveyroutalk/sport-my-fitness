@@ -10,8 +10,12 @@ The October 19 On the court correction removes the irrelevant hometown line
 and adds verified San José State recognition and Missouri Southern's 2008–09
 scoring/assists leadership. See `docs/ON_THE_COURT_SOURCES_20261019.md`.
 Only that existing paragraph changes at runtime; Yoshi's dates and the approved
-layout, branding, photographs and movement are preserved. Release validation
-is recorded separately when complete.
+layout, branding, photographs and movement are preserved. Runtime `383da8f8102720048df6fceed3d628dc039280c4` is deployed as Production
+`dpl_5t9bVWPGQnB9mZtpes3X4HDZ25Vb` (READY). Browser run `39313100026`
+passed 70 layouts, 28 navigation journeys, 14 motion runs and 22 safeguards
+with zero failures. Mobile/desktop screenshots were inspected. Live private
+HTTP content could not be independently fetched through the connected reader;
+see `verification/on-court-release-20261019.json` for the evidence and limit.
 
 October 19 client-content update is on
 `review/approved-glass-yoshi-content-20261019`. Yoshi supplied corrected San José

@@ -1,0 +1,103 @@
+{
+  "status": "published; CI and screenshots verified",
+  "recorded_at_utc": "2026-10-19T19:48:30.892881+00:00",
+  "scope": "Main website content adjustment: On the court paragraph only",
+  "runtime_commit": "383da8f8102720048df6fceed3d628dc039280c4",
+  "rollback_main": "e313e584e1d9defebba6f558c68e64c5bcce3042",
+  "production": {
+    "id": "dpl_5t9bVWPGQnB9mZtpes3X4HDZ25Vb",
+    "state": "READY",
+    "target": "production",
+    "alias": "sport-my-fitness.vercel.app"
+  },
+  "browser": {
+    "run_id": 39313100026,
+    "job_id": 118267519629,
+    "artifact_id": 12217530859,
+    "artifact_sha256": "40cd3b176e6e89b916b90cbbd5368189af580f1c2e8ed4ac60d30d802a380448",
+    "summary": {
+      "started": "2026-10-19T19:42:34.343Z",
+      "layouts": 70,
+      "navigation": 28,
+      "motion": 14,
+      "locations": 4,
+      "platformMarks": 20,
+      "headers": 49,
+      "connections": 16,
+      "safeguards": 22,
+      "failures": 0,
+      "chromiumVersion": "151.0.7922.34",
+      "webkitVersion": "26.5",
+      "completed": "2026-10-19T19:45:31.120Z"
+    },
+    "visual_review": "Chromium About full-page captures at 390px and 1334px inspected. Revised copy readable without clipping or overlap; original images proportional."
+  },
+  "source_preservation": {
+    "scope": "On the court content only",
+    "baseline": "e313e584e1d9defebba6f558c68e64c5bcce3042",
+    "runtime_commit": "383da8f8102720048df6fceed3d628dc039280c4",
+    "unchanged_runtime_files": [
+      {
+        "path": "index.html",
+        "sha256": "de7658f673038c77617de7cd24962f4cb5f283625c36afb2ea2bc4f67d0495e9",
+        "unchanged": true
+      },
+      {
+        "path": "training.html",
+        "sha256": "0f2acce4f083c7396aa42c647d6a3bed47b72be6ce737bf7813f2cc2390c161d",
+        "unchanged": true
+      },
+      {
+        "path": "programs.html",
+        "sha256": "64769ba25064004ab0b48185349c4e5771b63591249c0134ae29962579d6ba49",
+        "unchanged": true
+      },
+      {
+        "path": "media.html",
+        "sha256": "ce2f03cf9df292edaf4d0c9099c7620c8cbccd6cb93f1ecca7e8538bcd31ea9d",
+        "unchanged": true
+      },
+      {
+        "path": "community.html",
+        "sha256": "608a35ee5c36627cc289875ae8d9b7c3d798f411c324b752ded8afaf1ce0e859",
+        "unchanged": true
+      },
+      {
+        "path": "contact.html",
+        "sha256": "34ed6d3f7eceb715a63a9f8f2b23eeb586a6f5bd372f72ba777432b9ac71f268",
+        "unchanged": true
+      },
+      {
+        "path": "site-design.css",
+        "sha256": "1aaae7f1ba85da68b611e0978a7f334730649591a6cdcf1dace34e381cc02ac5",
+        "unchanged": true
+      },
+      {
+        "path": "site-menu.js",
+        "sha256": "3d4310160d4cea432a6cf780be279c95bf5a6fe4d8aa1cac71bcd6d350a272d7",
+        "unchanged": true
+      },
+      {
+        "path": "site-motion.js",
+        "sha256": "cff14d42c5d743dcc5bbee2bcafba6780c77bb58a40944e8700292c9ab94cc56",
+        "unchanged": true
+      },
+      {
+        "path": "assets/smf-motion-curves.json",
+        "sha256": "d9197bbfa766676178103ef8834491b804a50d6468047a22f4a5d660c21ce619",
+        "unchanged": true
+      },
+      {
+        "path": "assets/brand/sport-my-fitness-original-lockup.png",
+        "sha256": "202f885d450df6330d8b0809f0c61f43a7ce940f7c870004c9bf6683178aad63",
+        "unchanged": true
+      }
+    ],
+    "new_about_sha256": "5d9543253c2bf171b9bce7291265c7741ec8a192f24209f8806e2d152c8eec0e"
+  },
+  "sources": "docs/ON_THE_COURT_SOURCES_20261019.md",
+  "limits": [
+    "Authenticated live HTTP content was not independently fetched: connected Vercel reader returned 403 at read_protection_bypass. No access control or bypass settings changed for this correction.",
+    "Production READY and its exact checked Git SHA confirmed through Vercel deployment metadata."
+  ]
+}

@@ -185,7 +185,16 @@ figcaption a, .quote-source { color: var(--muted); font-size: 12px; text-decorat
 .story-chapter { border-top: 1px solid var(--line); padding-block: 24px; }
 .chapter-label { font: 700 13px/1.5 var(--label); letter-spacing: .13em; margin-bottom: 10px; }
 .story-chapter h3 { margin-bottom: 12px; }
-.story-chapter .chapter-history { margin-top: 14px; color: var(--teal); font-size: 13px; }
+.chapter-list { margin: 18px 0 0; padding-left: 20px; }
+.chapter-list > li { padding-left: 4px; }
+.chapter-list > li + li { margin-top: 22px; }
+.chapter-list > li::marker { color: var(--teal); font-size: .85em; }
+.chapter-item-heading { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; line-height: 1.4; }
+.chapter-item-heading strong { font: 700 21px/1.3 var(--label); color: var(--ink); }
+.chapter-dates { color: var(--teal); font-size: 15px; white-space: nowrap; }
+.chapter-list p { margin-top: 6px; color: var(--muted); line-height: 1.7; }
+.chapter-subheading { margin-top: 22px; color: var(--muted); font: 700 14px/1.4 var(--label); letter-spacing: .12em; text-transform: uppercase; }
+.chapter-subheading + .chapter-list { margin-top: 10px; }
 .story-words { padding-block: 48px; border-block: 1px solid var(--line); }
 .story-words blockquote { margin: 20px 0; padding-left: 24px; border-left: 3px solid var(--teal); }
 .story-words blockquote p { font: 700 clamp(29px, 3.3vw, 48px)/1.2 var(--label); max-width: 1050px; }

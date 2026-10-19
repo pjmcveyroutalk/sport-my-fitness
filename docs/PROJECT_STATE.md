@@ -4,6 +4,17 @@ Updated October 18, 2026 (UTC); approved design and restored platform marks publ
 
 ## Current checkpoint
 
+October 19 domain preparation is isolated on
+`prep/domain-coming-soon-20261019`; production and DNS are unchanged. PJ requested
+a public Coming soon landing page and full-site access limited to PJ/Yoshi while
+branding and client changes continue. Use `docs/DOMAIN_SETUP_20261019.md` and the
+updated `docs/LAUNCH_TASKS.md` for tomorrow. An allowlisted static holding-page
+packager is prepared; the plan uses a tiny public holding project and All
+Deployments Vercel Authentication on the existing full-site project. Real privacy,
+domain connection, hosting-plan entitlement, Yoshi's reviewer access and final
+indexing remain pending. Do not merge the prep branch's prelaunch noindex pages
+wholesale into production or confuse domain setup with full website launch.
+
 SEO/AEO preparation is now on `prep/seo-aeo-20261017`, synchronized with public
 checkpoint `e837156581c5db40cbf515517c55f3449b4fbe78` and runtime baseline
 `757d3b527652ebce6dd265254945a4a34fde237f`. The intended official domain is

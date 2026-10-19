@@ -1,0 +1,94 @@
+name: Coming soon preparation review
+on:
+  push:
+    branches: ['prep/domain-coming-soon-*']
+    paths: ['prelaunch/**', 'design-tools/package-coming-soon.py', '.github/workflows/prelaunch-review.yml']
+permissions:
+  contents: read
+jobs:
+  holding-page:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Package only the public holding page
+        run: |
+          python3 design-tools/package-coming-soon.py --output "$RUNNER_TEMP/smf-coming-soon"
+          git diff --check
+      - name: Install isolated browser tools
+        run: |
+          npm install --prefix "$RUNNER_TEMP/smf-browser" --no-package-lock --no-save playwright@1.62.1
+          "$RUNNER_TEMP/smf-browser/node_modules/.bin/playwright" install --with-deps chromium webkit
+      - name: Check public package and capture review images
+        env:
+          SMF_PUBLIC_PACKAGE: ${{ runner.temp }}/smf-coming-soon
+          SMF_EVIDENCE_DIR: ${{ runner.temp }}/smf-prelaunch-evidence
+        run: |
+          python3 -m http.server 8080 --bind 127.0.0.1 --directory "$SMF_PUBLIC_PACKAGE" > "$RUNNER_TEMP/smf-http.log" 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid" 2>/dev/null || true' EXIT
+          NODE_PATH="$RUNNER_TEMP/smf-browser/node_modules" node <<'JS'
+          const fs = require('node:fs');
+          const path = require('node:path');
+          const assert = require('node:assert/strict');
+          const { chromium, webkit } = require('playwright');
+          const output = process.env.SMF_EVIDENCE_DIR;
+          fs.mkdirSync(output, {recursive: true});
+          (async () => {
+            const results = [];
+            for (const [name, engine] of Object.entries({chromium, webkit})) {
+              const browser = await engine.launch();
+              try {
+                for (const width of [320, 360, 390, 430, 768, 1366, 1920]) {
+                  const page = await browser.newPage({viewport: {width, height: 900}});
+                  await page.goto('http://127.0.0.1:8080', {waitUntil: 'networkidle'});
+                  await page.evaluate(() => document.fonts.ready);
+                  const geometry = await page.evaluate(() => {
+                    const logo = document.querySelector('.logo');
+                    const h1 = document.querySelector('h1').getBoundingClientRect();
+                    const main = document.querySelector('main').getBoundingClientRect();
+                    return {viewport: innerWidth, document: document.documentElement.scrollWidth,
+                      logoLoaded: logo.complete && logo.naturalWidth === 1100,
+                      ratio: logo.clientWidth / logo.clientHeight,
+                      headingInside: h1.left >= main.left && h1.right <= main.right,
+                      callHeight: document.querySelector('.call').getBoundingClientRect().height};
+                  });
+                  assert(geometry.document <= width, `${name}/${width}: horizontal overflow`);
+                  assert(geometry.logoLoaded, `${name}/${width}: original logo not loaded`);
+                  assert(Math.abs(geometry.ratio - 1100 / 725) < 0.02, 'Logo proportions changed');
+                  assert(geometry.headingInside && geometry.callHeight >= 44, 'Heading or call target clipped');
+                  assert.equal(await page.locator('h1').count(), 1);
+                  assert.equal(await page.locator('a[href="tel:+14147914526"]').count(), 1);
+                  assert.equal(await page.locator('a[href="mailto:Yoshi_barnes@outlook.com"]').count(), 1);
+                  assert.equal(await page.locator('nav, script, form').count(), 0);
+                  assert.equal(await page.locator('meta[name="robots"]').getAttribute('content'), 'noindex,nofollow');
+                  if ([390, 1366].includes(width)) await page.screenshot({path: path.join(output, `${name}-${width}.png`), fullPage: true});
+                  results.push({engine: name, width, ...geometry});
+                  await page.close();
+                }
+                const page = await browser.newPage();
+                for (const privatePath of ['/contact.html', '/yoshi.html', '/api/inquiry', '/site-menu.js', '/sitemap.xml', '/service-worker.js']) {
+                  const response = await page.request.get(`http://127.0.0.1:8080${privatePath}`);
+                  assert.equal(response.status(), 404, `Private file leaked into public package: ${privatePath}`);
+                }
+                await page.close();
+              } finally { await browser.close(); }
+            }
+            const receipt = {status: 'passed', layouts: results.length, results,
+              limits: 'Local static package only. Vercel headers, HTTPS, real DNS and private-site authentication remain deployment checks for tomorrow.'};
+            fs.writeFileSync(path.join(output, 'results.json'), JSON.stringify(receipt, null, 2) + '\n');
+            console.log(`Passed ${results.length} layouts and public-package absence checks.`);
+          })().catch(error => { console.error(error); process.exitCode = 1; });
+          JS
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: coming-soon-review
+          path: ${{ runner.temp }}/smf-prelaunch-evidence
+          retention-days: 30
+          if-no-files-found: warn

@@ -2,7 +2,7 @@ name: Coming soon preparation review
 on:
   push:
     branches: ['prep/domain-coming-soon-*']
-    paths: ['prelaunch/**', 'design-tools/package-coming-soon.py', '.github/workflows/prelaunch-review.yml']
+    paths: ['prelaunch/**', 'design-tools/package-coming-soon.py', 'test/admin-access.test.cjs', '.github/workflows/prelaunch-review.yml']
 permissions:
   contents: read
 jobs:
@@ -16,6 +16,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
+      - name: Verify password-only private preview
+        run: node --test test/admin-access.test.cjs
       - name: Package only the public holding page
         run: |
           python3 design-tools/package-coming-soon.py --output "$RUNNER_TEMP/smf-coming-soon"

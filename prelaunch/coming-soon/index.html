@@ -28,7 +28,9 @@
     .call:hover { background: #4de6ec; }
     .email { display: inline-flex; align-items: center; min-height: 48px; }
     a:focus-visible { outline: 3px solid var(--teal); outline-offset: 5px; }
-    footer { padding: 18px clamp(24px, 5vw, 64px); border-top: 1px solid #294149; color: var(--muted); font-size: 13px; }
+    footer { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding: 18px clamp(24px, 5vw, 64px); border-top: 1px solid #294149; color: var(--muted); font-size: 13px; }
+    .admin-link { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 8px 16px; border: 1px solid #527680; border-radius: 8px; font-size: 13px; text-decoration: none; }
+    .admin-link:hover { border-color: var(--teal); color: var(--teal); }
     @media (max-width: 480px) { main { border-radius: 14px; } .brand-row { padding-block: 12px; } .logo { width: 220px; } .call { width: 100%; } .actions { gap: 8px; } }
   </style>
 </head>
@@ -44,7 +46,7 @@
         <a class="email" href="mailto:Yoshi_barnes@outlook.com">Email Yoshi</a>
       </div>
     </section>
-    <footer>© 2026 Sport My Fitness · Milwaukee</footer>
+    <footer><span>© 2026 Sport My Fitness · Milwaukee</span><a class="admin-link" href="/admin">Admin Only</a></footer>
   </main>
 </body>
 </html>

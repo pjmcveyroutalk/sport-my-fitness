@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Package only the public holding page; never copy the full review website."""
+"""Package the holding page and password gateway; never copy the full review website."""
 import argparse
 import hashlib
 from pathlib import Path
@@ -9,6 +9,7 @@ import tempfile
 ROOT = Path(__file__).resolve().parents[1]
 FILES = {
     "index.html": "prelaunch/coming-soon/index.html",
+    "api/gateway.js": "prelaunch/coming-soon/api/gateway.js",
     "404.html": "prelaunch/coming-soon/index.html",
     "robots.txt": "prelaunch/coming-soon/robots.txt",
     "vercel.json": "prelaunch/coming-soon/vercel.json",
@@ -48,7 +49,7 @@ def main():
         raise
     total = sum(path.stat().st_size for path in output.rglob("*") if path.is_file())
     print(f"Prepared {len(FILES)} public files ({total:,} bytes) at {output}")
-    print("Not deployed. No full-site pages, API, service worker, sitemap or private access link included.")
+    print("Not deployed. Password gateway included; full-site pages, inquiry API, service worker and sitemap are absent.")
 
 
 if __name__ == "__main__":

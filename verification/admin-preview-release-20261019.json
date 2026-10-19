@@ -1,0 +1,115 @@
+{
+  "checkedAt": "2026-10-19T20:04:55.925Z",
+  "origin": "https://sport-my-fitness-coming-soon.vercel.app",
+  "checks": [
+    "Public page, centered logo and Admin Only button",
+    "Password form without Vercel login",
+    "Wrong password rejected",
+    "Direct private requests denied before login",
+    "Correct password issues secure session",
+    "Logout clears session; signed-out private pages remain denied",
+    "Tampered session denied",
+    "Offline caching, source and inquiry API paths excluded"
+  ],
+  "pages": [
+    {
+      "path": "/",
+      "status": 200,
+      "title": "Sport My Fitness | Coach Yoshi Barnes"
+    },
+    {
+      "path": "/training.html",
+      "status": 200,
+      "title": "Training | Sport My Fitness"
+    },
+    {
+      "path": "/programs.html",
+      "status": 200,
+      "title": "Programs &amp; Rates | Sport My Fitness"
+    },
+    {
+      "path": "/yoshi.html",
+      "status": 200,
+      "title": "Yoshi’s Story | Sport My Fitness"
+    },
+    {
+      "path": "/media.html",
+      "status": 200,
+      "title": "Media &amp; Community | Sport My Fitness"
+    },
+    {
+      "path": "/contact.html",
+      "status": 200,
+      "title": "Let’s Train | Sport My Fitness"
+    },
+    {
+      "path": "/community.html",
+      "status": 200,
+      "title": "Community | Sport My Fitness"
+    }
+  ],
+  "assets": [
+    {
+      "path": "/assets/brand/sport-my-fitness-original-lockup.png",
+      "status": 200,
+      "bytes": 302009
+    },
+    {
+      "path": "/assets/barlow-condensed-900-italic.woff",
+      "status": 200,
+      "bytes": 44064
+    },
+    {
+      "path": "/assets/fonts.css",
+      "status": 200,
+      "bytes": 431
+    },
+    {
+      "path": "/site-design.css",
+      "status": 200,
+      "bytes": 33293
+    },
+    {
+      "path": "/site-menu.js",
+      "status": 200,
+      "bytes": 3442
+    },
+    {
+      "path": "/site-motion.css",
+      "status": 200,
+      "bytes": 1462
+    },
+    {
+      "path": "/site-motion.js",
+      "status": 200,
+      "bytes": 8080
+    },
+    {
+      "path": "/assets/brand/sport-my-fitness-original-lockup.png",
+      "status": 200,
+      "bytes": 302009
+    },
+    {
+      "path": "/assets/brand/sport-my-fitness-original-lockup.png",
+      "status": 200,
+      "bytes": 302009
+    },
+    {
+      "path": "/assets/photos/smf-waterfront-hero-1585.webp",
+      "status": 200,
+      "bytes": 184424
+    }
+  ],
+  "status": "passed",
+  "deploymentId": "dpl_6kxuyhjrFAMtemnqRkC5NiZ25Wt6",
+  "sourceCommit": "74891dd62e56b801375be9c8c41b51d914f0734a",
+  "automatedChecks": {
+    "nodeIntegrationTests": 9,
+    "failures": 0,
+    "githubRunId": 39316072078,
+    "githubRunConclusion": "success"
+  },
+  "passwordStoredInReceipt": false,
+  "authArchitecture": "Server-side salted scrypt password verification; eight-hour signed Secure/HttpOnly/SameSite=Strict cookie; server-only upstream credential; full-site Vercel Authentication remains All Deployments.",
+  "remaining": "Namecheap DNS connection and final-domain HTTPS checks. No DNS or billing changes made."
+}

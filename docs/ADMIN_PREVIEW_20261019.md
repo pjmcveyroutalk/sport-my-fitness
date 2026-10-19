@@ -46,3 +46,13 @@ valid/invalid passwords, cross-site posts, secure cookies, current-site fetching
 asset loading, no shared caching, tampered/expired sessions, logout, attempt limits,
 source/API/worker exclusions, missing configuration and password rotation.
 Live deployment and end-to-end results are recorded in the follow-up release receipt.
+
+## Live release confirmed
+
+Production deployment `dpl_6kxuyhjrFAMtemnqRkC5NiZ25Wt6` is READY at
+https://sport-my-fitness-coming-soon.vercel.app/ . Source is
+`74891dd62e56b801375be9c8c41b51d914f0734a`; GitHub run `39316072078` passed.
+Fresh live checks passed public page, wrong and correct passwords, secure session,
+all seven current pages, ten asset requests, logout, tampered sessions and private
+path restrictions. See `verification/admin-preview-release-20261019.json`.
+The Namecheap DNS connection remains the next user-guided step.

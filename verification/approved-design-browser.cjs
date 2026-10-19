@@ -91,6 +91,7 @@ async function appearance(browser, route, width, engine) {
     assert.equal(await toggle.getAttribute('aria-checked'), 'false', 'new visitors should retain the existing dark default');
     if (route === 'contact') await page.locator('#inquiry-name').fill('Theme preview');
     const original = await appearanceSnapshot(page);
+    const originalHeaderPaint = await page.locator('.site-header').evaluate(el => getComputedStyle(el).backgroundImage);
     const box = await toggle.boundingBox();
     assert(box.width >= 44 && box.height >= 44, 'appearance switch target is too small');
     const phone = await page.locator('.header-call').boundingBox();
@@ -101,10 +102,15 @@ async function appearance(browser, route, width, engine) {
     assert.equal(await page.evaluate(() => localStorage.getItem('smf-color-theme')), 'light');
     assert.equal(await page.locator('html').evaluate(el => getComputedStyle(el).colorScheme), 'light');
     assert.deepEqual(await appearanceSnapshot(page), original, 'switching to light changed content, image placement or layout');
+    assert.equal(await page.locator('.site-header').evaluate(el => getComputedStyle(el).backgroundImage), originalHeaderPaint, 'appearance change covered the hero photograph with header paint');
     if (route === 'contact') assert.equal(await page.locator('#inquiry-name').inputValue(), 'Theme preview', 'appearance change cleared a form field');
     const lightStyle = await page.evaluate(() => ({background: getComputedStyle(document.body).backgroundColor, ink: getComputedStyle(document.body).color}));
     assert.equal(lightStyle.background, 'rgb(242, 245, 245)');
     assert.equal(lightStyle.ink, 'rgb(24, 39, 47)');
+    await page.locator('main a').first().focus();
+    await page.keyboard.press('Shift+Tab');
+    await page.keyboard.press('Tab');
+    assert.equal(await page.locator('main a').first().evaluate(el => getComputedStyle(el).outlineColor), 'rgb(0, 110, 120)', 'light mode keyboard focus lacks the readable accent color');
     const mainSurface = page.locator('main > section').first();
     await mainSurface.screenshot({path: path.join(out, `${engine}-${route}-light-${width}.png`)});
     if (route === 'index') await page.locator('.site-header').screenshot({path: path.join(out, `${engine}-header-light-${width}.png`)});

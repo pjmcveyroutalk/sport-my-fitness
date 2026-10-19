@@ -22,8 +22,9 @@
 
 /* Retain a dark brand surface for the original, unmodified logo and controls. */
 :root[data-theme="light"] :is(.site-header, .menu-panel, .menu-fallback) { --ink: #f4f7f7; --muted: #b5c3c6; --line: #294149; color: var(--ink); }
-:root[data-theme="light"] .site-header { background: linear-gradient(90deg, #000 0%, #000 36%, #081417 70%); }
 :root[data-theme="light"] .site-header::after { background: linear-gradient(90deg, #49676f, #29414900); }
+:root[data-theme="light"] main :focus-visible,
+:root[data-theme="light"] .site-footer :focus-visible { outline-color: var(--accent-ink); }
 
 :root[data-theme="light"] .hero-art { background-image: url('assets/athletic-grain.svg'), linear-gradient(90deg, #f2f5f5f5 0%, #f2f5f5e6 25%, #f2f5f57a 45%, #f2f5f500 67%), linear-gradient(0deg, #f2f5f5f2 0%, #f2f5f500 42%); }
 :root[data-theme="light"] .page-hero .hero-visual::after { background: linear-gradient(90deg, #f2f5f5b3, #f2f5f500 34%), linear-gradient(0deg, #f2f5f5, #f2f5f500 38%); }

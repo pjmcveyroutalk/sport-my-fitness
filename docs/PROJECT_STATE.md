@@ -1,11 +1,26 @@
 # Sport My Fitness — Current Project State
 
-Updated October 19, 2026 (UTC); Yoshi’s confirmed biography corrections published and verified.
+Updated October 19, 2026 (UTC); desktop Call control verified and biography corrections preserved.
 
 ## Current checkpoint
 
 This is the main website content/design workstream. Domain, hosting, DNS,
 access controls and account setup are handled in the separate setup session.
+
+The existing call link now appears directly beneath Menu in the desktop left
+rail: a small turquoise outline handset, compact Call label, subtle hover
+highlight and “Call Yoshi” tooltip. It uses `tel:+14147914526`; mobile retains
+its existing icon-only header placement. The shared control is consistent on
+all seven pages, with no duplicated header call links.
+
+Runtime `3af1038b9e586f8208b9fdbfb7aeef932014c3ea` passed browser run
+`39328493582`: 70 layouts, 77 header checks, 28 navigation journeys, 14 original
+motion runs and 22 safeguards with zero failures in Chromium and WebKit.
+Desktop and mobile Home renders were inspected. All page bodies, logo assets,
+photos, existing copy and motion remain unchanged. Light-mode concepts remain
+preview-only. See `verification/desktop-call-20261019.json`.
+
+### Earlier biography organization
 
 About now groups colleges and dates into native bullets with each achievement
 under the relevant school and Northcentral under Education. Showing up uses the

@@ -1,0 +1,66 @@
+{
+  "status": "browser_verified",
+  "recorded_at_utc": "2026-10-19T21:39:46.792858+00:00",
+  "request": "Add a discreet desktop phone control beneath Menu in the existing left rail.",
+  "baseline": "703926adfd76640f3ca7c4b7b8007196740b1ad0",
+  "runtime_commit": "3af1038b9e586f8208b9fdbfb7aeef932014c3ea",
+  "runtime_files": [
+    "index.html",
+    "training.html",
+    "programs.html",
+    "yoshi.html",
+    "media.html",
+    "community.html",
+    "contact.html",
+    "site-design.css"
+  ],
+  "behavior": {
+    "placement": "One existing phone link positioned below Menu in the desktop rail above 900px.",
+    "presentation": "Turquoise 22px outline handset; compact Call label; subtle hover highlight; native Call Yoshi tooltip.",
+    "phone_uri": "tel:+14147914526",
+    "mobile": "Existing 44px icon-only header link, beside the hamburger."
+  },
+  "hashes": {
+    "index.html": "09fdf81699ed11441d87f7a8584fb6702350be2adccb7e3d5e6bafd118179445",
+    "training.html": "4f8e46853964712fedb151da4a7cf7066c3b2febac104c1b63112d4bf124fbeb",
+    "programs.html": "bc580545fdeeb18c9db4bcfc2e4bd94f57fe5705ac140bc45e4085e9b26a66e4",
+    "yoshi.html": "26a2da4b8512641d101510ca07d8f7862bc432fcf09ff6a108c22cf2d0d6920c",
+    "media.html": "f30c19fd11f4585ed1c452e35888cff00137dc5478e0d326422708161667263c",
+    "community.html": "49377ec84c30ea29d9e7805a83d5b196868d005706a08b8442a9fc54038b29f2",
+    "contact.html": "f7fe1068ea31047d87d44dbf6862dc785fe50dd222a3e9163fad2cf86b80f8bd",
+    "site-design.css": "8fe01340c91f5963774d47f4c86aa8ff9646c1af9413ddac17b9b1d2727c7c84",
+    "assets/brand/sport-my-fitness-original-lockup.png": "202f885d450df6330d8b0809f0c61f43a7ce940f7c870004c9bf6683178aad63"
+  },
+  "static_checks": {
+    "diff_check": "passed",
+    "browser_script_syntax": "passed",
+    "page_bodies": "All seven page bodies from <main> onward are byte-identical to baseline.",
+    "link_count": "Exactly one header call link on each page."
+  },
+  "browser": {
+    "run_id": 39328493582,
+    "job_id": 118320375883,
+    "status": "completed",
+    "conclusion": "success",
+    "artifact_id": 12223586525,
+    "artifact_sha256": "26fec9a670eb3fb2451d1b16e4ebee13c7751c83fc5c2c8822e7769513247328",
+    "summary": {
+      "started": "2026-10-19T21:35:01.782Z",
+      "layouts": 70,
+      "navigation": 28,
+      "motion": 14,
+      "locations": 4,
+      "platformMarks": 20,
+      "headers": 77,
+      "connections": 16,
+      "safeguards": 22,
+      "failures": 0,
+      "chromiumVersion": "151.0.7922.34",
+      "webkitVersion": "26.5",
+      "completed": "2026-10-19T21:38:16.504Z"
+    },
+    "visual_review": "Chromium desktop Home at 1334px, WebKit desktop Home at 1334px and Chromium mobile Home at 390px inspected. The call control is aligned below Menu inside the desktop rail; mobile remains icon-only beside the hamburger."
+  },
+  "preservation": "Original logo, all photos, page content, motion, maps, forms and existing navigation destinations are preserved. Light-mode concepts remain preview-only.",
+  "limits": "No actual telephone call is placed. Browser checks validate the URI, hit target and layout. Private production rendering requires its existing authenticated review access."
+}

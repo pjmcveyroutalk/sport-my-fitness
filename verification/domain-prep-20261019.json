@@ -1,0 +1,225 @@
+{
+  "prepared_at_utc": "2026-10-19T01:04:54.103935+00:00",
+  "status": "prepared_not_activated",
+  "candidate_commit": "5ac2eb8ef53071c848d96c365de3bf29f60a85cf",
+  "base_preparation_commit": "a832be9ea9ec0d025c460861f34a8cc7eb776be0",
+  "production_branch_unchanged": "e837156581c5db40cbf515517c55f3449b4fbe78",
+  "workflow": {
+    "run_id": 39183419027,
+    "job_id": 117840789383,
+    "conclusion": "success",
+    "url": "https://github.com/pjmcveyroutalk/sport-my-fitness/actions/runs/39183419027",
+    "artifact_id": 12156684540,
+    "artifact_sha256": "5e40d6d509d8b3e6d777b4f6b0920707d58867d19e9aea00ffb8848a2257b9d1",
+    "artifact_retention_days": 30
+  },
+  "browser_result": {
+    "status": "passed",
+    "layouts": 14,
+    "results": [
+      {
+        "engine": "chromium",
+        "width": 320,
+        "viewport": 320,
+        "document": 320,
+        "logoLoaded": true,
+        "ratio": 1.5172413793103448,
+        "headingInside": true,
+        "callHeight": 80.375
+      },
+      {
+        "engine": "chromium",
+        "width": 360,
+        "viewport": 360,
+        "document": 360,
+        "logoLoaded": true,
+        "ratio": 1.5172413793103448,
+        "headingInside": true,
+        "callHeight": 53.1875
+      },
+      {
+        "engine": "chromium",
+        "width": 390,
+        "viewport": 390,
+        "document": 390,
+        "logoLoaded": true,
+        "ratio": 1.5172413793103448,
+        "headingInside": true,
+        "callHeight": 53.1875
+      },
+      {
+        "engine": "chromium",
+        "width": 430,
+        "viewport": 430,
+        "document": 430,
+        "logoLoaded": true,
+        "ratio": 1.5172413793103448,
+        "headingInside": true,
+        "callHeight": 53.1875
+      },
+      {
+        "engine": "chromium",
+        "width": 768,
+        "viewport": 768,
+        "document": 768,
+        "logoLoaded": true,
+        "ratio": 1.515527950310559,
+        "headingInside": true,
+        "callHeight": 53.1875
+      },
+      {
+        "engine": "chromium",
+        "width": 1366,
+        "viewport": 1366,
+        "document": 1366,
+        "logoLoaded": true,
+        "ratio": 1.515527950310559,
+        "headingInside": true,
+        "callHeight": 53.1875
+      },
+      {
+        "engine": "chromium",
+        "width": 1920,
+        "viewport": 1920,
+        "document": 1920,
+        "logoLoaded": true,
+        "ratio": 1.515527950310559,
+        "headingInside": true,
+        "callHeight": 53.1875
+      },
+      {
+        "engine": "webkit",
+        "width": 320,
+        "viewport": 320,
+        "document": 320,
+        "logoLoaded": true,
+        "ratio": 1.5172413793103448,
+        "headingInside": true,
+        "callHeight": 80.375
+      },
+      {
+        "engine": "webkit",
+        "width": 360,
+        "viewport": 360,
+        "document": 360,
+        "logoLoaded": true,
+        "ratio": 1.5172413793103448,
+        "headingInside": true,
+        "callHeight": 53.1875
+      },
+      {
+        "engine": "webkit",
+        "width": 390,
+        "viewport": 390,
+        "document": 390,
+        "logoLoaded": true,
+        "ratio": 1.5172413793103448,
+        "headingInside": true,
+        "callHeight": 53.1875
+      },
+      {
+        "engine": "webkit",
+        "width": 430,
+        "viewport": 430,
+        "document": 430,
+        "logoLoaded": true,
+        "ratio": 1.5172413793103448,
+        "headingInside": true,
+        "callHeight": 53.1875
+      },
+      {
+        "engine": "webkit",
+        "width": 768,
+        "viewport": 768,
+        "document": 768,
+        "logoLoaded": true,
+        "ratio": 1.515527950310559,
+        "headingInside": true,
+        "callHeight": 53.1875
+      },
+      {
+        "engine": "webkit",
+        "width": 1366,
+        "viewport": 1366,
+        "document": 1366,
+        "logoLoaded": true,
+        "ratio": 1.515527950310559,
+        "headingInside": true,
+        "callHeight": 53.1875
+      },
+      {
+        "engine": "webkit",
+        "width": 1920,
+        "viewport": 1920,
+        "document": 1920,
+        "logoLoaded": true,
+        "ratio": 1.515527950310559,
+        "headingInside": true,
+        "callHeight": 53.1875
+      }
+    ],
+    "limits": "Local static package only. Vercel headers, HTTPS, real DNS and private-site authentication remain deployment checks for tomorrow."
+  },
+  "visual_review": "Chromium 390px and 1366px captures inspected: exact full logo, proportional sizing, existing fonts/charcoal texture/turquoise, readable copy and contact controls; no clipping observed.",
+  "public_package": [
+    {
+      "path": "404.html",
+      "bytes": 4222,
+      "sha256": "e49940d40cdd46dfe5181ab7a05808c0a93ab895b4320908ba04f4ee8f0496fe"
+    },
+    {
+      "path": "assets/athletic-grain.svg",
+      "bytes": 324,
+      "sha256": "72e360fee6053ed4acc88818415edb5736b9a771ac8f3e00543fe54b8be649c0"
+    },
+    {
+      "path": "assets/barlow-condensed-900-italic.woff",
+      "bytes": 44064,
+      "sha256": "f2f2dc3ba7f5213e558d65705e63c8b89d8ed782000ffeef30b7358e43ed2c6c"
+    },
+    {
+      "path": "assets/brand/sport-my-fitness-original-lockup.png",
+      "bytes": 302009,
+      "sha256": "202f885d450df6330d8b0809f0c61f43a7ce940f7c870004c9bf6683178aad63"
+    },
+    {
+      "path": "assets/font-4.woff",
+      "bytes": 140164,
+      "sha256": "e68f9eb65e649ef429d83bca6df8dbc0957790b8a0a6686172cce9ec4819a1b7"
+    },
+    {
+      "path": "index.html",
+      "bytes": 4222,
+      "sha256": "e49940d40cdd46dfe5181ab7a05808c0a93ab895b4320908ba04f4ee8f0496fe"
+    },
+    {
+      "path": "robots.txt",
+      "bytes": 99,
+      "sha256": "d1cb9f8bb8f2ddc89c48ce0014816f21ac9ffdac320ede441ba468af3beb92b2"
+    },
+    {
+      "path": "vercel.json",
+      "bytes": 625,
+      "sha256": "c83943f7c5d347382cf2274ba0ac4e1771af6e3fa5736b83e94757facfceac74"
+    }
+  ],
+  "local_checks": [
+    "Exact eight-file public package; original logo SHA-256 unchanged",
+    "One correct tel action and one correct mailto action",
+    "No full-site HTML, API, service worker, sitemap or menu script in public package",
+    "Packager rejects existing output and output inside repository",
+    "Twelve existing full-site HTML/CSS/JS/config sources unchanged from preparation baseline",
+    "git diff --check passed"
+  ],
+  "pending": [
+    "Owner approval of public holding copy",
+    "Domain registrar/DNS access and hosting plan/cost verification",
+    "Live deployment of isolated holding package",
+    "Root/www DNS, HTTPS, redirects and actual HTTP response headers/status",
+    "All Deployments authentication and current bypass/member audit",
+    "Successful PJ/Yoshi review access and signed-out checks on all historic URLs",
+    "Source repository visibility decision",
+    "Google account ownership and later full launch/indexing"
+  ],
+  "live_changes": "No production deployment, DNS, domain, project protection, billing, Google profile or repository visibility changes. Preparation branch and one morning reminder created."
+}

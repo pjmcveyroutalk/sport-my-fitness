@@ -121,6 +121,17 @@ Keep the full-site project protected. Do not restore an older public full-site
 deployment or weaken protection as a rollback. For a domain-setup failure, use the
 saved original DNS values and verify resolution/email after restoration.
 
+## Preparation verification
+
+The exact preparation candidate `5ac2eb8ef53071c848d96c365de3bf29f60a85cf`
+passed [browser run 39183419027](https://github.com/pjmcveyroutalk/sport-my-fitness/actions/runs/39183419027):
+14 layouts from 320–1920px in Chromium and WebKit, original-logo proportions,
+contact targets, noindex and absent full-site files. Mobile 390px and desktop
+1366px renders were visually inspected. The eight-file package and safe-output
+checks passed locally; twelve existing full-site source files are unchanged.
+See `verification/domain-prep-20261019.json`. Live headers, DNS, HTTPS and actual
+reviewer privacy remain tomorrow’s deployment checks.
+
 ## Current observations and limits
 
 Read-only connector checks on October 19 UTC found project

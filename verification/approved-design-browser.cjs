@@ -10,7 +10,7 @@ const out = process.env.SMF_EVIDENCE_DIR || '/tmp/smf-design-evidence';
 const routes = ['index', 'training', 'programs', 'yoshi', 'media', 'community', 'contact'];
 const widths = [360, 390, 430, 768, 900, 901, 1334, 1920];
 const heroReferences = new Map();
-const report = {started: new Date().toISOString(), layouts: [], navigation: [], motion: [], locations: [], platformMarks: [], headers: [], connections: [], safeguards: [], failures: []};
+const report = {started: new Date().toISOString(), layouts: [], navigation: [], motion: [], locations: [], platformMarks: [], headers: [], connections: [], appearance: [], safeguards: [], failures: []};
 fs.mkdirSync(out, {recursive: true});
 function save() { fs.writeFileSync(path.join(out, 'results.json'), JSON.stringify(report, null, 2)); }
 async function check(name, fn) {
@@ -66,6 +66,66 @@ async function headerControls(page, route, width, engine, withoutJS = false) {
     await page.locator('.site-header').screenshot({path: path.join(out, `${engine}-header-${width}.png`)});
   }
   report.headers.push({route, width, engine, withoutJS, telephoneURI: 'tel:+14147914526', targets: {phoneBox, menuBox}, pass: true});
+}
+async function appearanceSnapshot(page) {
+  await page.evaluate(() => scrollTo({top: 0, behavior: 'instant'}));
+  return page.evaluate(() => {
+    const items = [...document.querySelectorAll('main *, .site-header .brand-logo')];
+    return {
+      content: document.querySelector('main').innerHTML,
+      layout: items.map(el => {
+        const box = el.getBoundingClientRect(), style = getComputedStyle(el);
+        return {tag: el.tagName, classes: el.getAttribute('class'), x: box.x, y: box.y, width: box.width, height: box.height,
+          font: style.font, fit: style.objectFit, source: el.getAttribute('src'), sources: el.getAttribute('srcset')};
+      })
+    };
+  });
+}
+async function appearance(browser, route, width, engine) {
+  const page = await browser.newPage({viewport: {width, height: 900}, reducedMotion: 'reduce'});
+  try {
+    await load(page, route);
+    const toggle = page.getByRole('switch', {name: 'Light mode', exact: true});
+    assert.equal(await toggle.count(), 1, 'appearance switch is duplicated');
+    assert(await toggle.isVisible(), 'appearance switch is missing');
+    assert.equal(await toggle.getAttribute('aria-checked'), 'false', 'new visitors should retain the existing dark default');
+    if (route === 'contact') await page.locator('#inquiry-name').fill('Theme preview');
+    const original = await appearanceSnapshot(page);
+    const box = await toggle.boundingBox();
+    assert(box.width >= 44 && box.height >= 44, 'appearance switch target is too small');
+    const phone = await page.locator('.header-call').boundingBox();
+    assert(box.x + box.width <= phone.x || phone.x + phone.width <= box.x || box.y + box.height <= phone.y || phone.y + phone.height <= box.y, 'appearance and phone targets overlap');
+    await toggle.click();
+    assert.equal(await page.locator('html').getAttribute('data-theme'), 'light');
+    assert.equal(await toggle.getAttribute('aria-checked'), 'true');
+    assert.equal(await page.evaluate(() => localStorage.getItem('smf-color-theme')), 'light');
+    assert.equal(await page.locator('html').evaluate(el => getComputedStyle(el).colorScheme), 'light');
+    assert.deepEqual(await appearanceSnapshot(page), original, 'switching to light changed content, image placement or layout');
+    if (route === 'contact') assert.equal(await page.locator('#inquiry-name').inputValue(), 'Theme preview', 'appearance change cleared a form field');
+    const lightStyle = await page.evaluate(() => ({background: getComputedStyle(document.body).backgroundColor, ink: getComputedStyle(document.body).color}));
+    assert.equal(lightStyle.background, 'rgb(242, 245, 245)');
+    assert.equal(lightStyle.ink, 'rgb(24, 39, 47)');
+    const mainSurface = page.locator('main > section').first();
+    await mainSurface.screenshot({path: path.join(out, `${engine}-${route}-light-${width}.png`)});
+    if (route === 'index') await page.locator('.site-header').screenshot({path: path.join(out, `${engine}-header-light-${width}.png`)});
+    await page.getByRole('button', {name: 'Menu', exact: true}).click();
+    assert.equal(await page.locator('.menu-panel a[href]').count(), 8, 'light mode changed menu destinations or brand link');
+    await page.getByRole('button', {name: 'Close menu', exact: true}).click();
+    await page.reload({waitUntil: 'networkidle'});
+    assert.equal(await toggle.getAttribute('aria-checked'), 'true', 'reload lost the selected appearance');
+    await page.getByRole('button', {name: 'Menu', exact: true}).click();
+    const next = route === 'training' ? 'index' : 'training';
+    await page.locator(`.menu-panel .primary-nav a[href="${next}.html"]`).click();
+    await page.waitForURL(`**/${next}.html`);
+    assert.equal(await toggle.getAttribute('aria-checked'), 'true', 'navigation lost the selected appearance');
+    await toggle.focus();
+    await page.keyboard.press('Space');
+    assert.equal(await toggle.getAttribute('aria-checked'), 'false', 'keyboard activation did not restore dark mode');
+    assert.equal(await page.locator('html').evaluate(el => getComputedStyle(el).colorScheme), 'dark');
+    await page.reload({waitUntil: 'networkidle'});
+    assert.equal(await toggle.getAttribute('aria-checked'), 'false', 'dark preference did not persist');
+    report.appearance.push({route, width, engine, lightStyle, geometry: 'identical', persistence: 'reload and navigation', keyboard: 'passed', pass: true});
+  } finally { await page.close(); }
 }
 async function officialPlatformMarks(page, route, width, engine) {
   const expected = route === 'yoshi' ? [
@@ -337,6 +397,27 @@ async function motion(browser, route, width, record) {
       const page = await browser.newPage({viewport: {width, height: 900}, reducedMotion: 'reduce'});
       try { await load(page, 'yoshi'); await storyConnectionLayout(page, width, 'chromium'); } finally { await page.close(); }
     });
+    for (const route of routes) for (const width of [390, 1334]) await check(`appearance ${route} ${width}`, () => appearance(browser, route, width, 'chromium'));
+    await check('appearance with browser storage unavailable', async () => {
+      const page = await browser.newPage({viewport: {width: 390, height: 900}, reducedMotion: 'reduce'});
+      await page.addInitScript(() => Object.defineProperty(window, 'localStorage', {get() { throw new DOMException('Storage unavailable', 'SecurityError'); }}));
+      await load(page, 'index');
+      const toggle = page.getByRole('switch', {name: 'Light mode', exact: true});
+      await toggle.click(); assert.equal(await toggle.getAttribute('aria-checked'), 'true');
+      await toggle.click(); assert.equal(await toggle.getAttribute('aria-checked'), 'false');
+      report.safeguards.push({test: 'appearance-without-storage', pass: true}); await page.close();
+    });
+    await check('appearance script unavailable preserves the dark site', async () => {
+      const page = await browser.newPage({viewport: {width: 390, height: 900}, reducedMotion: 'reduce'});
+      await page.route('**/site-appearance.js*', request => request.abort());
+      await load(page, 'index');
+      assert.equal(await page.locator('[data-theme-toggle]').isVisible(), false);
+      assert.equal(await page.locator('html').evaluate(el => getComputedStyle(el).colorScheme), 'dark');
+      assert(await page.locator('h1').isVisible());
+      await page.getByRole('button', {name: 'Menu', exact: true}).click();
+      assert.equal(await page.locator('.menu-panel .primary-nav a').count(), 7);
+      report.safeguards.push({test: 'appearance-script-failure', pass: true}); await page.close();
+    });
     for (const route of routes) for (const width of [390, 1334]) await check(`motion ${route} ${width}`, () => motion(browser, route, width, width === 390 || route === 'index'));
     for (const route of routes) await check(`native menu without JS ${route}`, async () => {
       const context = await browser.newContext({viewport: {width: 390, height: 900}, javaScriptEnabled: false});
@@ -461,6 +542,7 @@ async function motion(browser, route, width, record) {
       const page = await safari.newPage({viewport: {width, height: 900}, reducedMotion: 'reduce'});
       try { await layout(page, route, width, 'webkit'); await navigation(page, route, width); } finally { await page.close(); }
     });
+    for (const route of routes) for (const width of [390, 1334]) await check(`WebKit appearance ${route} ${width}`, () => appearance(safari, route, width, 'webkit'));
   } finally { await safari.close(); }
   report.completed = new Date().toISOString(); save();
   console.log(JSON.stringify({layouts: report.layouts.length, navigation: report.navigation.length, motion: report.motion.length, locations: report.locations.length, safeguards: report.safeguards.length, failures: report.failures.length, chromium: report.chromiumVersion, webkit: report.webkitVersion}));

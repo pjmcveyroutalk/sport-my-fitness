@@ -1,0 +1,68 @@
+/* The switch and light palette. Existing layout, typography and motion stay in
+   their original stylesheets; dark mode uses those rules without overrides. */
+.theme-toggle { display: inline-flex; align-items: center; flex: 0 0 auto; min-height: 44px; padding: 4px; border: 1px solid #49676f; border-radius: 999px; background: #0b1b22eb; color: #c9dadc; }
+.theme-option { display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 34px; padding: 6px 12px; border-radius: 999px; font: 700 13px/1.2 var(--body); }
+.theme-option svg { display: block; width: 18px; height: 18px; flex: 0 0 auto; }
+:root:not([data-theme="light"]) .theme-option--dark,
+:root[data-theme="light"] .theme-option--light { background: #edf4f4; color: #14262b; }
+.theme-toggle:hover { border-color: #8eb4bd; }
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --ink: #18272f;
+  --muted: #465860;
+  --line: #b5cbd1;
+  --surface: #fff;
+  --accent-ink: #006e78;
+  --canvas-color: #f2f5f5;
+  --canvas-panels: linear-gradient(122deg, transparent 0 48%, #b6d7df4d 48.05%, #deedf333 48.2%, #ffffff50 82%, transparent 82.15%);
+  --canvas-light: radial-gradient(ellipse at 100% 0, #a5dce545, transparent 66%);
+  --canvas-base: linear-gradient(120deg, #f6f8f8, #f2f5f5 58%, #e6f1f3);
+}
+
+/* Retain a dark brand surface for the original, unmodified logo and controls. */
+:root[data-theme="light"] :is(.site-header, .menu-panel, .menu-fallback) { --ink: #f4f7f7; --muted: #b5c3c6; --line: #294149; color: var(--ink); }
+:root[data-theme="light"] .site-header { background: linear-gradient(90deg, #000 0%, #000 36%, #081417 70%); }
+:root[data-theme="light"] .site-header::after { background: linear-gradient(90deg, #49676f, #29414900); }
+
+:root[data-theme="light"] .hero-art { background-image: url('assets/athletic-grain.svg'), linear-gradient(90deg, #f2f5f5f5 0%, #f2f5f5e6 25%, #f2f5f57a 45%, #f2f5f500 67%), linear-gradient(0deg, #f2f5f5f2 0%, #f2f5f500 42%); }
+:root[data-theme="light"] .page-hero .hero-visual::after { background: linear-gradient(90deg, #f2f5f5b3, #f2f5f500 34%), linear-gradient(0deg, #f2f5f5, #f2f5f500 38%); }
+:root[data-theme="light"] main > section:nth-of-type(odd):not(.hero):not(.page-hero):not(.mission-strip) { --canvas-light: radial-gradient(ellipse at 0 0, #a5dce538, transparent 66%); }
+:root[data-theme="light"] :is(.hero, .page-hero, .site-footer, .programs-list) { border-color: var(--line); }
+:root[data-theme="light"] :is(.hero-description, .client-review blockquote) { color: var(--muted); }
+
+/* A deeper turquoise keeps lettering readable on the light canvas. The logo
+   and original turquoise button fills are unchanged. */
+:root[data-theme="light"] main :is(.teal, .teal-letter, h2 > span, .hero-eyebrow, .program-copy h3, .chapter-dates, .contact-direct > a > span:first-child, .contact-arrow, .contact-location h2, .location-directions, .review-rating, .video-link-arrow) { color: var(--accent-ink); }
+:root[data-theme="light"] .chapter-list > li::marker { color: var(--accent-ink); }
+:root[data-theme="light"] .text-link { background: #ffffffc9; color: var(--ink); border-color: #779ea6; }
+:root[data-theme="light"] .text-link:hover { background: #e4f1f3; }
+:root[data-theme="light"] .location-directions:hover { color: #004d56; }
+:root[data-theme="light"] .mission-strip { border-color: var(--line); background-image: linear-gradient(#f2f5f5e8, #e6f1f3f2), url('assets/photos/smf-waterfront-hero-1200.webp'); }
+:root[data-theme="light"] .mission-inner p,
+:root[data-theme="light"] .footer-tagline { color: var(--accent-ink); }
+:root[data-theme="light"] .mission-inner > span { background: #93b6bf; }
+:root[data-theme="light"] .site-footer { background: url('assets/athletic-grain.svg'), linear-gradient(100deg, #edf3f4, #dfedf0, #edf3f4); }
+:root[data-theme="light"] :is(.field input, .field select, .field textarea) { background: #fff; border-color: #859ea5; }
+:root[data-theme="light"] :is(.field input, .field textarea)::placeholder { color: #64757c; }
+:root[data-theme="light"] .film-poster { color: #f4f7f7; }
+:root[data-theme="light"] .film-poster .teal { color: var(--teal); }
+
+@media (max-width: 900px) {
+  .theme-toggle { justify-content: center; width: 44px; height: 44px; flex: 0 0 44px; min-height: 44px; padding: 0; border: 0; border-radius: 6px; background: transparent; color: #03d6df; }
+  .theme-option { min-height: 0; padding: 0; }
+  .theme-option svg { width: 22px; height: 22px; }
+  .theme-option > span { display: none; }
+  .theme-option--dark { display: none; }
+  :root[data-theme="light"] .theme-option--light { display: none; }
+  :root[data-theme="light"] .theme-option--dark { display: inline-flex; }
+  :root:not([data-theme="light"]) .theme-option--dark,
+  :root[data-theme="light"] .theme-option--light { background: transparent; color: inherit; }
+  .theme-toggle:hover { background: #1c3a4480; }
+}
+@media (max-width: 359px) {
+  .header-actions { gap: 0; }
+}
+@media (max-width: 800px) {
+  :root[data-theme="light"] .hero-art { background-image: url('assets/athletic-grain.svg'), radial-gradient(ellipse at 100% 100%, #a5dce544, transparent 65%), linear-gradient(to bottom, #f2f5f500 0%, #f2f5f500 43vw, #f2f5f588 66vw, #f2f5f5ed 108vw, #f2f5f5 149vw); }
+}

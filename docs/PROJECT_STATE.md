@@ -1,6 +1,6 @@
 # Sport My Fitness — Current Project State
 
-Updated October 18, 2026 (UTC); approved design and restored platform marks published and verified.
+Updated October 19, 2026 (UTC); Yoshi’s confirmed biography corrections published and verified.
 
 ## Current checkpoint
 
@@ -9,7 +9,12 @@ October 19 client-content update is on
 State (2005–2008), Missouri Southern (2008–2010) and Northcentral University
 (2015–2020) dates, plus her MATC instructor role teaching Health and Wellness and
 Mental Health Performance, and contract work with St. Joan Antida. These facts
-are applied to About; release verification is pending. See
+are published on About as runtime `7f659fb9c149520b7eb46209fb8349fca6a530e2`,
+Production `dpl_5Bv3FdLh2Uen7qV6k3NGZkwZXRD2`. Browser run `39308633855`
+passed 70 layouts, 28 navigation journeys, 14 original-motion runs and 22
+safeguards in Chromium/WebKit with zero failures. About mobile/desktop renders
+were inspected, and live HTML, stylesheet and logo match their checked bytes.
+See `verification/yoshi-content-release-20261019.json` and
 `docs/CLIENT_CHANGES_20261019.md` for the exact request mapping and remaining
 main-photo replacement, apparel, classroom photos and upcoming event details.
 Domain/hosting setup is a separate session; no setup or access settings change

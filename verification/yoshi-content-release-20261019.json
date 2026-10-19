@@ -1,0 +1,98 @@
+{
+  "status": "published_and_verified",
+  "recorded_at_utc": "2026-10-19T19:17:40.374287+00:00",
+  "request_source": "Yoshi adjustments forwarded by PJ October 19, 2026; PJ confirmed waiting for her approved main photo and a display-only apparel gallery.",
+  "runtime_commit": "7f659fb9c149520b7eb46209fb8349fca6a530e2",
+  "previous_main_rollback": "e837156581c5db40cbf515517c55f3449b4fbe78",
+  "review_branch": "review/approved-glass-yoshi-content-20261019",
+  "public_url": "https://sport-my-fitness.vercel.app/yoshi.html#story",
+  "production": {
+    "project_id": "prj_gekwpLHnnGbcuGHOp47ieG9C93xJ",
+    "team_id": "team_jC9jlJ9GZ9GSjrbYoD0pin3U",
+    "deployment_id": "dpl_5Bv3FdLh2Uen7qV6k3NGZkwZXRD2",
+    "deployment_url": "https://sport-my-fitness-glc9ayhdy-routalk-builder.vercel.app",
+    "target": "production",
+    "state": "READY",
+    "sha": "7f659fb9c149520b7eb46209fb8349fca6a530e2"
+  },
+  "confirmed_changes": {
+    "san_jose_state": "2005\u20132008",
+    "missouri_southern": "2008\u20132010",
+    "northcentral_university": "2015\u20132020",
+    "matc_role": "Instructor; Health and Wellness and Mental Health Performance",
+    "st_joan_antida": "Contract work"
+  },
+  "scope": {
+    "runtime_files_changed": [
+      "yoshi.html"
+    ],
+    "other_runtime_files_checked_unchanged": 11,
+    "asset_tree_unchanged": "5d5f30bbfe834349a1dac869c6ff566f6383559a",
+    "logo_sha256": "202f885d450df6330d8b0809f0c61f43a7ce940f7c870004c9bf6683178aad63",
+    "layout_styles_navigation_photos_motion_config": "unchanged"
+  },
+  "browser": {
+    "run_id": 39308633855,
+    "job_id": 118252140743,
+    "run_url": "https://github.com/pjmcveyroutalk/sport-my-fitness/actions/runs/39308633855",
+    "checked_commit": "7f659fb9c149520b7eb46209fb8349fca6a530e2",
+    "summary": {
+      "layouts": 70,
+      "navigation": 28,
+      "motion": 14,
+      "locations": 4,
+      "platformMarks": 20,
+      "headers": 49,
+      "connections": 16,
+      "safeguards": 22,
+      "failures": 0
+    },
+    "chromium": "151.0.7922.34",
+    "webkit": "26.5",
+    "artifact_id": 12214274051,
+    "artifact_sha256": "80a9ce88c13af10be1e3d076533c4091d4644079eea339a3bd60b7559d85bf0f",
+    "artifact_retention_days": 30,
+    "visual_review": "Chromium About captures at 390px and 1334px inspected: corrected dates and new work copy are readable, without clipping or content collisions; source images remain proportional."
+  },
+  "public_checks": {
+    "checked_at_utc": "2026-10-19T19:16:44.327612+00:00",
+    "production_commit": "7f659fb9c149520b7eb46209fb8349fca6a530e2",
+    "production_deployment": "dpl_5Bv3FdLh2Uen7qV6k3NGZkwZXRD2",
+    "checks": [
+      {
+        "path": "yoshi.html",
+        "url": "https://sport-my-fitness.vercel.app/yoshi.html",
+        "status": 200,
+        "sha256": "a113e0547dfac49a0f71ba200027eedcfab970296a91101d35bb5eaec896092b",
+        "matches_source": true
+      },
+      {
+        "path": "site-design.css",
+        "url": "https://sport-my-fitness.vercel.app/site-design.css",
+        "status": 200,
+        "sha256": "1aaae7f1ba85da68b611e0978a7f334730649591a6cdcf1dace34e381cc02ac5",
+        "matches_source": true
+      },
+      {
+        "path": "assets/brand/sport-my-fitness-original-lockup.png",
+        "url": "https://sport-my-fitness.vercel.app/assets/brand/sport-my-fitness-original-lockup.png",
+        "status": 200,
+        "sha256": "202f885d450df6330d8b0809f0c61f43a7ce940f7c870004c9bf6683178aad63",
+        "matches_source": true
+      }
+    ]
+  },
+  "verification": [
+    "Five client-provided facts occur once and old single-season labels are gone",
+    "HTML edits confined to existing biography chapters",
+    "Existing contract/syntax check and browser workflow passed",
+    "Live About HTML, stylesheet and original logo match checked source bytes"
+  ],
+  "pending": [
+    "Approved replacement main photo; update homepage and sharing placements together",
+    "Display-only apparel gallery after approved photos and item descriptions arrive",
+    "Approved classroom photographs and captions",
+    "Event title, date/year, time, venue and registration/contact information"
+  ],
+  "setup_handoff": "Setup session must integrate the released content and reconcile pinned SEO body baselines before regenerating metadata. No DNS, hosting configuration, access protection, billing or Google setup change in this content task."
+}

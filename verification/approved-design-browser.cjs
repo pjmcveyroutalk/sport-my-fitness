@@ -33,15 +33,27 @@ async function allPhotos(page) {
       valid: i.complete && i.naturalWidth > 0 && r.width > 0 && r.height > 0 && Math.abs((r.width / r.height) / (i.naturalWidth / i.naturalHeight) - 1) < .015};
   }));
 }
-async function mobileHeader(page, route, width, engine, withoutJS = false) {
+async function headerControls(page, route, width, engine, withoutJS = false) {
   const call = page.getByRole('link', {name: 'Call Sport My Fitness at 414-791-4526', exact: true});
-  if (width > 900) {
-    assert.equal(await call.isVisible(), false, 'mobile call action changed the desktop header');
-    return;
-  }
-  assert(await call.isVisible(), 'one-tap call action is missing');
+  assert.equal(await call.count(), 1, 'call action was duplicated');
+  assert(await call.isVisible(), 'call action is missing');
   assert.equal(await call.getAttribute('href'), 'tel:+14147914526');
   assert.equal(await call.getAttribute('target'), null, 'phone link should hand off directly to the dialer');
+  if (width > 900) {
+    const menu = page.locator(withoutJS ? '.menu-fallback summary' : '.menu-toggle');
+    const phoneBox = await call.boundingBox(), menuBox = await menu.boundingBox();
+    const railBox = await page.locator('.menu-rail').boundingBox();
+    assert(phoneBox.width >= 44 && phoneBox.height >= 44, 'desktop call target is too small');
+    assert(phoneBox.y - (menuBox.y + menuBox.height) >= 12, 'call control crowds the desktop menu');
+    assert(Math.abs((phoneBox.x + phoneBox.width / 2) - (menuBox.x + menuBox.width / 2)) < 1, 'desktop rail controls are not centered together');
+    assert(phoneBox.x >= railBox.x && phoneBox.x + phoneBox.width <= railBox.x + railBox.width, 'call control extends outside the rail');
+    assert.equal(await call.getAttribute('title'), 'Call Yoshi', 'call tooltip is missing');
+    assert(await call.locator('.header-call-label').isVisible(), 'desktop Call label is missing');
+    await call.click({trial: true});
+    report.headers.push({route, width, engine, withoutJS, telephoneURI: 'tel:+14147914526', placement: 'desktop rail beneath Menu', targets: {phoneBox, menuBox}, pass: true});
+    return;
+  }
+  assert.equal(await call.locator('.header-call-label').isVisible(), false, 'desktop Call label appeared in the mobile header');
   const menu = page.locator(withoutJS ? '.menu-fallback summary' : '.menu-toggle');
   const phoneBox = await call.boundingBox(), menuBox = await menu.boundingBox();
   assert(phoneBox.width >= 44 && phoneBox.height >= 44 && menuBox.width >= 44 && menuBox.height >= 44, 'header touch targets are too small');
@@ -145,7 +157,7 @@ async function layout(page, route, width, engine) {
   await load(page, route);
   const photos = await allPhotos(page);
   if (route === 'yoshi') await storyConnectionLayout(page, width, engine);
-  await mobileHeader(page, route, width, engine);
+  await headerControls(page, route, width, engine);
   if (route === 'yoshi' || route === 'media') await officialPlatformMarks(page, route, width, engine);
   if (route === 'contact' && (width === 390 || width === 1334)) await contactLocation(page, width, engine);
   assert(photos.every(i => i.valid), 'image ratio/decode failure: ' + JSON.stringify(photos.filter(i => !i.valid)));
@@ -329,7 +341,7 @@ async function motion(browser, route, width, record) {
     for (const route of routes) await check(`native menu without JS ${route}`, async () => {
       const context = await browser.newContext({viewport: {width: 390, height: 900}, javaScriptEnabled: false});
       const page = await context.newPage(); await load(page, route);
-      await mobileHeader(page, route, 390, 'chromium', true);
+      await headerControls(page, route, 390, 'chromium', true);
       await page.locator('.menu-fallback summary').click();
       assert.equal(await page.locator('.menu-fallback nav a:visible').count(), 7);
       assert(await page.locator('h1').isVisible());

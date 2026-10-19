@@ -59,8 +59,10 @@ h3 { font: 700 clamp(24px, 2.3vw, 36px)/1.15 var(--label); letter-spacing: .02em
 .site-header::after { content: ''; position: absolute; left: 0; bottom: 0; width: 38%; height: 1px; background: linear-gradient(90deg, var(--line), #29414900); }
 .header-inner { display: flex; align-items: center; justify-content: space-between; height: 100%; }
 .header-actions { display: flex; align-items: center; gap: 8px; }
-.header-call { display: none; }
-.header-call svg { display: block; width: 24px; height: 24px; }
+.header-call { position: fixed; z-index: 85; left: 12px; top: 112px; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 9px; width: 52px; min-height: 65px; padding: 10px 6px; border: 1px solid transparent; border-radius: 9px; color: var(--teal); }
+.header-call:hover { background: #1c3a4480; border-color: #4c7680; }
+.header-call svg { display: block; width: 22px; height: 22px; }
+.header-call-label { font: 700 10px/1.2 var(--body); letter-spacing: .08em; text-transform: uppercase; }
 .brand { display: block; width: 254px; flex-shrink: 0; }
 .brand-logo { display: block; width: 100%; height: auto; aspect-ratio: 1100 / 725; }
 .menu-rail { position: fixed; z-index: 20; inset: 0 auto 0 0; width: var(--rail-width); border-right: 1px solid #2a555f; background: linear-gradient(140deg, #0d2028e6, #061014e6 55%, #0b2028e6); box-shadow: inset -1px 0 18px #00d9e009; -webkit-backdrop-filter: blur(18px); backdrop-filter: blur(18px); }
@@ -306,7 +308,9 @@ figcaption a, .quote-source { color: var(--muted); font-size: 12px; text-decorat
   .site-header::after { display: none; }
   .brand { width: 128px; }
   .header-actions { min-width: 96px; }
-  .header-call { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; flex: 0 0 44px; color: var(--teal); border-radius: 6px; }
+  .header-call { position: static; display: inline-flex; flex-direction: row; gap: 0; width: 44px; height: 44px; min-height: 44px; padding: 0; border: 0; flex: 0 0 44px; color: var(--teal); border-radius: 6px; }
+  .header-call svg { width: 24px; height: 24px; }
+  .header-call-label { display: none; }
   .header-call:hover { color: #92f4f5; background: #1c3a4480; }
   .menu-rail { display: none; }
   .menu-toggle { position: static; flex-direction: row; width: 44px; height: 44px; min-height: 44px; min-width: 44px; padding: 0; border: 0; border-radius: 6px; }

@@ -1,0 +1,95 @@
+{
+  "status": "browser_verified",
+  "recorded_at_utc": "2026-10-19T22:05:32.774411+00:00",
+  "request": "Add a light/dark switch; change only appearance.",
+  "baseline": "4a1cce8c9aed5af05fb2c5d2616efe6429528c76",
+  "runtime_commit": "a68688581ee00897b436553284d73f2784822637",
+  "runtime_files": [
+    "index.html",
+    "training.html",
+    "programs.html",
+    "yoshi.html",
+    "media.html",
+    "community.html",
+    "contact.html",
+    "site-appearance.css",
+    "site-appearance.js"
+  ],
+  "behavior": {
+    "default": "dark",
+    "preference": "Explicit light/dark selection saved in browser localStorage under smf-color-theme; applied in the head before page styles.",
+    "desktop": "Compact Light/Dark switch in the header.",
+    "mobile": "44px sun/moon control beside the existing call and menu controls.",
+    "light": "Light textured canvas, readable charcoal copy and turquoise accents; original logo on a dark header.",
+    "fallback": "Dark page remains usable with JavaScript blocked; toggling still works when browser storage is unavailable."
+  },
+  "hashes": {
+    "index.html": "a1af916795b3e0643e243672fb2915534f07f1de9b8dc83706e95a2fdeb8521c",
+    "training.html": "45f11a32f143bc6c1291f6001eef2e93abb8342c35b1f59f840f4dc09797c37f",
+    "programs.html": "ccb62d3843fcfe395027f8f674662e65ff9c6c55f378dfb2fa84c10ed3960b5c",
+    "yoshi.html": "5d59599583ea6fd8e126d733d713a06b388b3a07fd6d545c1f181216328aaed1",
+    "media.html": "c8a5c5eddda544ef9f19c4603415cf86046a1151606d49e6e29e4db6068c49f8",
+    "community.html": "4b4a907b1d9d4b33718c9abfec14162bab29b4960fd79d26feecfdd5af0ce65a",
+    "contact.html": "e38507f765a2c476ded2605c905e3580ddc6ea64a86e3adef81333229875f211",
+    "site-appearance.css": "fa5f7fe8d60d708d81625ab8229b29a493a2302595f4873f55f9d041dc00fa7e",
+    "site-appearance.js": "f0f7da63ead1687e331450bd182c5e6cadf4740f822a46ac9c493fa0f5d3d6c5",
+    "site-design.css": "8fe01340c91f5963774d47f4c86aa8ff9646c1af9413ddac17b9b1d2727c7c84",
+    "site-menu.js": "3d4310160d4cea432a6cf780be279c95bf5a6fe4d8aa1cac71bcd6d350a272d7",
+    "site-motion.css": "b2c4c1eebeddd76ebb7f6f5eda27ac91d82b16783df3619186217d2ad3143022",
+    "site-motion.js": "cff14d42c5d743dcc5bbee2bcafba6780c77bb58a40944e8700292c9ab94cc56",
+    "contact.js": "d791c23847564472ef02a741094da4338e6cdf4df15aef489dbb5beab693e065",
+    "assets/brand/sport-my-fitness-original-lockup.png": "202f885d450df6330d8b0809f0c61f43a7ce940f7c870004c9bf6683178aad63"
+  },
+  "preservation": {
+    "page_bodies": "All seven bodies from <main> onward are byte-identical to baseline.",
+    "existing_runtime": "Core stylesheet, logo file, photos, menu script, form handling and animation sources are unchanged.",
+    "scope": "Only appearance controls, palette/overlay colors and browser theme-color metadata change.",
+    "dark_baseline_comparison": {
+      "baseline_run": 39328493582,
+      "layout_and_photo_matches": 70,
+      "identical_motion_runs": 14,
+      "appearance_journeys_with_identical_content_and_geometry": 28
+    }
+  },
+  "browser": {
+    "run_id": 39331578380,
+    "status": "completed",
+    "conclusion": "success",
+    "job_id": 118330816615,
+    "artifact_id": 12224353846,
+    "artifact_sha256": "554f0a1ca1813df69d95442cbc8bfdb66082e1b5efd9e4cf16e310e7116d91c0",
+    "summary": {
+      "started": "2026-10-19T21:59:24.363Z",
+      "layouts": 70,
+      "navigation": 28,
+      "motion": 14,
+      "locations": 4,
+      "platformMarks": 20,
+      "headers": 77,
+      "connections": 16,
+      "appearance": 28,
+      "safeguards": 24,
+      "failures": 0,
+      "chromiumVersion": "151.0.7922.34",
+      "webkitVersion": "26.5",
+      "completed": "2026-10-19T22:04:08.567Z"
+    },
+    "visual_review": "Final Chromium Home at 1334px, WebKit About at 1334px and mobile light header at 390px inspected. Hero faces remain visible through the original header fade, original logo is retained, and controls fit."
+  },
+  "limits": "No real calls, inquiries or bookings are submitted. Private live rendering retains its existing authenticated access requirements.",
+  "earlier_review": {
+    "runtime_commit": "ede142881950012581354b653ec49fd823b1abd9",
+    "run_id": 39330380971,
+    "browser_checks": "passed",
+    "visual_issue": "The full-width light header masked the top of the desktop hero photograph.",
+    "resolution": "Restored the original header fade without moving the photo; added an invariant for header paint. Light-mode keyboard focus now uses the readable accent color.",
+    "status": "superseded_before_release"
+  },
+  "contrast_ratios": {
+    "body_text": 13.98,
+    "supporting_text": 6.46,
+    "accent_text_and_light_focus": 5.21,
+    "primary_button": 10.69,
+    "selected_appearance": 14.05
+  }
+}

@@ -1,11 +1,32 @@
 # Sport My Fitness — Current Project State
 
-Updated October 19, 2026 (UTC); desktop Call control verified and biography corrections preserved.
+Updated October 19, 2026 (UTC); appearance switch verified; approved layout, branding and motion preserved.
 
 ## Current checkpoint
 
 This is the main website content/design workstream. Domain, hosting, DNS,
 access controls and account setup are handled in the separate setup session.
+
+All seven pages now have a light/dark appearance switch. Dark remains the
+first-visit default; the selected mode is applied before page styles and saved
+across navigation and reloads. Desktop uses a compact Light/Dark header control;
+mobile uses a 44px sun/moon control beside the existing call and menu actions.
+Light changes the canvas, text, borders and overlay colors, with readable
+keyboard focus. The original header fade keeps the hero photographs visible.
+
+Runtime `a68688581ee00897b436553284d73f2784822637` passed browser run
+`39331578380`: 70 layouts, 28 appearance journeys, 77 header checks, 28 navigation
+journeys, 14 motion runs and 24 safeguards, with zero failures in Chromium and
+WebKit. All 70 dark layouts and photo dimensions match the approved desktop-call
+baseline exactly; the original motion results also match. Theme changes preserve
+page content, geometry and entered form values. Storage and script-failure
+fallbacks passed, and final desktop/mobile renders were inspected.
+
+Original page bodies, logo/photo assets, core stylesheet, form handling and
+motion sources are unchanged. See `verification/appearance-20261019.json` for
+hashes, evidence and the visual correction made before release.
+
+### Desktop Call control
 
 The existing call link now appears directly beneath Menu in the desktop left
 rail: a small turquoise outline handset, compact Call label, subtle hover

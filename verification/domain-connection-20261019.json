@@ -1,0 +1,81 @@
+{
+  "checkedAt": "2026-10-19T20:26:09.767Z",
+  "projectId": "prj_KlCwsCvrYBPgY5gcvKcQmpvaAGT5",
+  "deploymentId": "dpl_8mUXU2vsvTYFxuGoqJb7diP4jwuZ",
+  "runtimeSourceCommit": "74891dd62e56b801375be9c8c41b51d914f0734a",
+  "domain": "sportmyfitness.com",
+  "dns": {
+    "apex": {
+      "type": "A",
+      "value": [
+        "76.76.21.21"
+      ],
+      "misconfigured": false
+    },
+    "www": {
+      "type": "CNAME",
+      "value": [
+        "cname.vercel-dns.com."
+      ],
+      "misconfigured": false
+    },
+    "nameservers": [
+      "dns1.registrar-servers.com",
+      "dns2.registrar-servers.com"
+    ],
+    "editsPerformedBy": "User in Namecheap",
+    "unrelatedEmailRecords": "User instructed to preserve; registrar inventory not accessed"
+  },
+  "https": {
+    "apexCertificateId": "cert_RqkCUqohb6ntDskfqMDfqT7y",
+    "autoRenew": true,
+    "certificateValidationEnabled": true
+  },
+  "tests": {
+    "checkedAt": "2026-10-19T20:26:09.767Z",
+    "origin": "https://sportmyfitness.com",
+    "redirects": [
+      {
+        "url": "https://www.sportmyfitness.com/",
+        "status": 307,
+        "location": "https://sportmyfitness.com/"
+      }
+    ],
+    "publicStatus": 200,
+    "publicComingSoon": true,
+    "adminButtonPresent": true,
+    "images": [
+      {
+        "path": "/assets/brand/sport-my-fitness-original-lockup.png",
+        "status": 200,
+        "type": "image/png"
+      }
+    ],
+    "loginPageStatus": 200,
+    "loginStatus": 303,
+    "secureSession": true,
+    "authenticatedHomeStatus": 200,
+    "privateHomeShown": true,
+    "privatePageStatus": 200,
+    "signedOutPrivatePageStatus": 404,
+    "logoutStatus": 303,
+    "logoutClearsCookie": true,
+    "passed": true
+  },
+  "passwordRotation": {
+    "checkedAt": "2026-10-19T20:11:43.919Z",
+    "publicComingSoon": true,
+    "newPasswordStatus": 303,
+    "secureSession": true,
+    "privatePageStatus": 200,
+    "privatePageContent": true,
+    "oldPasswordStatus": 401,
+    "oldPasswordCreatesNoSession": true,
+    "oldSessionStatus": 404,
+    "signedOutPrivatePageStatus": 404
+  },
+  "notes": [
+    "Credentials, hashes and cookies are omitted.",
+    "HTTPS apex and www were verified; port-80 probes were reset by the execution network, so HTTP redirect validation is not claimed."
+  ]
+}

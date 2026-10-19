@@ -6,16 +6,22 @@ Updated October 19, 2026 (UTC); Yoshi’s confirmed biography corrections publis
 
 This is the main website content/design workstream. Domain, hosting, DNS,
 access controls and account setup are handled in the separate setup session.
-The October 19 On the court correction removes the irrelevant hometown line
-and adds verified San José State recognition and Missouri Southern's 2008–09
-scoring/assists leadership. See `docs/ON_THE_COURT_SOURCES_20261019.md`.
-Only that existing paragraph changes at runtime; Yoshi's dates and the approved
-layout, branding, photographs and movement are preserved. Runtime `383da8f8102720048df6fceed3d628dc039280c4` is deployed as Production
-`dpl_5t9bVWPGQnB9mZtpes3X4HDZ25Vb` (READY). Browser run `39313100026`
-passed 70 layouts, 28 navigation journeys, 14 motion runs and 22 safeguards
-with zero failures. Mobile/desktop screenshots were inspected. Live private
-HTTP content could not be independently fetched through the connected reader;
-see `verification/on-court-release-20261019.json` for the evidence and limit.
+
+The current About refinement groups each college and its dates into a native
+bullet. San José State and Missouri Southern each have their verified basketball
+achievement directly beneath the school; Northcentral University has a separate
+Education label. Dates are larger and wrap naturally, and the repeated founding
+sentence is removed. All three date ranges occur once. No new facts are added.
+
+Runtime `5f0bff3ef1da5583f8afc9cda9f51f0013cd90f7` passed browser run
+`39318038489`: 70 layouts, 28 navigation journeys, 14 motion runs and 22
+safeguards with zero failures. About mobile/desktop screenshots were inspected.
+Only About markup and its chapter-list CSS change at runtime. All other page
+bodies, photos, branding, navigation and original movement remain intact.
+See `verification/story-lists-20261019.json` for the evidence and live-check limit.
+The preceding factual correction and primary athletics sources are recorded in
+`verification/on-court-release-20261019.json` and
+`docs/ON_THE_COURT_SOURCES_20261019.md`.
 
 October 19 client-content update is on
 `review/approved-glass-yoshi-content-20261019`. Yoshi supplied corrected San José

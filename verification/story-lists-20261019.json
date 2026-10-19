@@ -1,0 +1,46 @@
+{
+  "status": "browser_verified",
+  "recorded_at_utc": "2026-10-19T20:22:26.872237+00:00",
+  "request": "Organize colleges and dates as bullets; clean up the crowded section.",
+  "runtime_commit": "5f0bff3ef1da5583f8afc9cda9f51f0013cd90f7",
+  "baseline": "7daeb18d67433eb74ff0dc14b4e7e8ddde371b36",
+  "runtime_files": [
+    "yoshi.html",
+    "site-design.css"
+  ],
+  "presentation": [
+    "One native bullet per college, with school, dates and relevant basketball achievement grouped together",
+    "Northcentral University remains under a separate Education label",
+    "Removed repeated founding-date sentence; 2015 remains in the chapter label",
+    "Flexible school/date rows; dates enlarged from 13px to 15px"
+  ],
+  "hashes": {
+    "yoshi.html": "c4ed81e867bf70d0411c4a30b4acc58de633353f5b92f8b50135daa0775ef4df",
+    "site-design.css": "c07a04791c06c2cc114170dd878162b841692f450c2151dee76f2ffba931db83",
+    "assets/brand/sport-my-fitness-original-lockup.png": "202f885d450df6330d8b0809f0c61f43a7ce940f7c870004c9bf6683178aad63"
+  },
+  "browser": {
+    "run_id": 39318038489,
+    "job_id": 118284526416,
+    "artifact_id": 12218717182,
+    "artifact_sha256": "7a9e44aba86689e420591c7e331c86db594980cdfc27a54df4c593c2ef728d0f",
+    "summary": {
+      "started": "2026-10-19T20:18:10.590Z",
+      "layouts": 70,
+      "navigation": 28,
+      "motion": 14,
+      "locations": 4,
+      "platformMarks": 20,
+      "headers": 49,
+      "connections": 16,
+      "safeguards": 22,
+      "failures": 0,
+      "chromiumVersion": "151.0.7922.34",
+      "webkitVersion": "26.5",
+      "completed": "2026-10-19T20:21:04.669Z"
+    },
+    "visual_review": "Chromium About screenshots at 390px and 1334px inspected. Bullets, school names, dates and descriptions are legible and grouped correctly; no clipping or overlap."
+  },
+  "preservation": "All other page bodies, menus, motion source, image assets and original logo preserved. Dates and verified achievements unchanged.",
+  "limits": "Browser evidence exercises the exact candidate through the static test server. The private live render is not independently authenticated in this content session. Vercel deployment identity/readiness is checked separately after publishing."
+}

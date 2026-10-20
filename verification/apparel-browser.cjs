@@ -3,9 +3,10 @@ const {chromium, webkit} = require('playwright');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
+const heroLettering = require('./hero-lettering.cjs');
 const base = process.env.SMF_BASE_URL || 'http://127.0.0.1:8080';
 const out = path.join(process.env.SMF_EVIDENCE_DIR || '/tmp/smf-design-evidence', 'apparel');
-const report = {started: new Date().toISOString(), layouts: [], journeys: [], fallbacks: [], failures: []};
+const report = {started: new Date().toISOString(), layouts: [], lettering: [], journeys: [], fallbacks: [], failures: []};
 fs.mkdirSync(out, {recursive: true});
 function save() { fs.writeFileSync(path.join(out, 'results.json'), JSON.stringify(report, null, 2)); }
 async function load(page, route) {
@@ -20,6 +21,7 @@ async function layout(browser, engine, route, width, theme) {
     await page.addInitScript(value => localStorage.setItem('smf-color-theme', value), theme);
     await load(page, route);
     await page.locator('img[src]').evaluateAll(images => Promise.all(images.map(image => { image.loading = 'eager'; return image.decode(); })));
+    report.lettering.push(await heroLettering(page, route, width, engine, out));
     assert.equal(await page.locator('html').getAttribute('data-theme'), theme);
     assert.equal(await page.locator('h1').count(), 1);
     assert.equal(await page.locator('#primary-nav a').count(), 7);

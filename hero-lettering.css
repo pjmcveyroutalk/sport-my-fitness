@@ -1,0 +1,55 @@
+/* Approved hero lettering: live, selectable text with restrained depth.
+   Keep the existing font, sizes, spacing, colors and entrance choreography. */
+:is(.hero, .page-hero) h1 {
+  --letter-outline: #06191f;
+  --letter-edge: #d7fbff80;
+  --letter-depth: #08333e;
+  --letter-shadow: #0009;
+  --letter-scrim: #10212ba6;
+  position: relative;
+  isolation: isolate;
+  z-index: 1;
+}
+
+:is(.hero, .page-hero) h1 > span {
+  -webkit-text-stroke: clamp(1px, .016em, 2.4px) var(--letter-outline);
+  paint-order: stroke fill;
+  text-shadow:
+    0 -.009em 0 var(--letter-edge),
+    .008em .012em 0 var(--letter-depth),
+    .016em .022em 0 var(--letter-outline),
+    .022em .032em .026em var(--letter-shadow);
+}
+
+/* A feathered contrast layer follows the heading, behind its opaque letters.
+   It has no layout footprint and cannot intercept a link or control. */
+:is(.hero, .page-hero) h1::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: -.16em -.16em -.12em -.18em;
+  pointer-events: none;
+  background: radial-gradient(ellipse at 35% 50%, var(--letter-scrim), transparent 76%);
+}
+
+/* Photography remains below the existing foreground copy (z-index: 3).
+   Header, menu, source credits and placeholder labels retain their own layers. */
+.page-hero > .hero-visual { z-index: 1; }
+.apparel-page .apparel-campaign-photo { z-index: 0; }
+.apparel-page .apparel-photo-wash { z-index: 1; }
+
+/* Light canvases use a clean pale edge around their existing petrol/teal faces.
+   Apparel keeps its approved lighter campaign in either selected theme. */
+:root[data-theme="light"] :is(.hero, .page-hero) h1,
+.apparel-page :is(.hero, .page-hero) h1 {
+  --letter-outline: #f2f8f8;
+  --letter-edge: #ffffffb3;
+  --letter-depth: #23495266;
+  --letter-shadow: #15333a33;
+  --letter-scrim: #f2f5f5d9;
+}
+
+@media (forced-colors: active) {
+  :is(.hero, .page-hero) h1 > span { -webkit-text-stroke: 0; text-shadow: none; }
+  :is(.hero, .page-hero) h1::before { display: none; }
+}

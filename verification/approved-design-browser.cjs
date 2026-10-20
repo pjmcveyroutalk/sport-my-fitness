@@ -4,13 +4,14 @@ const {chromium, webkit} = require('playwright');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
+const heroLettering = require('./hero-lettering.cjs');
 
 const base = process.env.SMF_BASE_URL || 'http://127.0.0.1:8080';
 const out = process.env.SMF_EVIDENCE_DIR || '/tmp/smf-design-evidence';
 const routes = ['index', 'training', 'programs', 'media', 'community', 'contact'];
 const widths = [360, 390, 430, 768, 900, 901, 1334, 1920];
 const heroReferences = new Map();
-const report = {started: new Date().toISOString(), layouts: [], navigation: [], motion: [], locations: [], platformMarks: [], headers: [], connections: [], consolidation: [], legacyYoshi: [], appearance: [], safeguards: [], failures: []};
+const report = {started: new Date().toISOString(), layouts: [], navigation: [], motion: [], locations: [], platformMarks: [], headers: [], connections: [], consolidation: [], legacyYoshi: [], appearance: [], lettering: [], safeguards: [], failures: []};
 fs.mkdirSync(out, {recursive: true});
 function save() { fs.writeFileSync(path.join(out, 'results.json'), JSON.stringify(report, null, 2)); }
 async function check(name, fn) {
@@ -102,6 +103,7 @@ async function appearance(browser, route, width, engine) {
     assert.equal(await page.evaluate(() => localStorage.getItem('smf-color-theme')), 'light');
     assert.equal(await page.locator('html').evaluate(el => getComputedStyle(el).colorScheme), 'light');
     assert.deepEqual(await appearanceSnapshot(page), original, 'switching to light changed content, image placement or layout');
+    report.lettering.push(await heroLettering(page, route, width, engine, out));
     assert.equal(await page.locator('.site-header').evaluate(el => getComputedStyle(el).backgroundImage), originalHeaderPaint, 'appearance change covered the hero photograph with header paint');
     if (route === 'contact') assert.equal(await page.locator('#inquiry-name').inputValue(), 'Theme preview', 'appearance change cleared a form field');
     const lightStyle = await page.evaluate(() => ({background: getComputedStyle(document.body).backgroundColor, ink: getComputedStyle(document.body).color}));
@@ -222,6 +224,7 @@ async function layout(page, route, width, engine) {
   page.on('pageerror', error => errors.push(error.message));
   await load(page, route);
   const photos = await allPhotos(page);
+  report.lettering.push(await heroLettering(page, route, width, engine, out));
   if (route === 'training') { await storyConnectionLayout(page, width, engine); await combinedTraining(page, width, engine); }
   await headerControls(page, route, width, engine);
   if (route === 'training' || route === 'media') await officialPlatformMarks(page, route, width, engine);

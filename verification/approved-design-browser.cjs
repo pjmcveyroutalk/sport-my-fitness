@@ -231,7 +231,7 @@ async function layout(page, route, width, engine) {
   assert.equal(await page.locator('.page-step,.footer-links,.footer-name').count(), 0, 'redundant page ending remains');
   if (route === 'index') {
     assert.equal(await page.locator('.training-section,.training-option').count(), 0, 'redundant landing-page training link group remains');
-    assert.deepEqual(await page.locator('.hero-actions > a').evaluateAll(links => links.map(link => link.getAttribute('href'))), ['contact.html', 'training.html'], 'landing-page hero actions changed');
+    assert.deepEqual(await page.locator('.hero-actions > a').evaluateAll(links => links.map(link => link.getAttribute('href'))), ['apparel.html', 'training.html'], 'landing-page hero actions changed');
   }
   assert.equal(await page.locator('#primary-nav a').count(), 8);
   const current = page.locator('#primary-nav a[aria-current="page"]');

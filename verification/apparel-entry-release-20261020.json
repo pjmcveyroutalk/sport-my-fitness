@@ -1,0 +1,127 @@
+{
+  "status": "published; focused source and authenticated live checks passed",
+  "recorded_at_utc": "2026-10-20T19:16:08.725756+00:00",
+  "request": {
+    "home_hero": "Replace Let’s train with Apparel linking to the lookbook",
+    "menu": "Move Apparel directly under Home across the shared menus"
+  },
+  "baseline": "590fd99e194addbac32019912a0be424d4d3773b",
+  "runtime_commit": "e4c471360c2e6bfdcf51e93e055e72d0911657a9",
+  "production": {
+    "id": "dpl_BKYfFEZ7qDxCnXcN78bByCm6Wi92",
+    "state": "READY",
+    "target": "production",
+    "url": "https://sport-my-fitness-lrw4fi9lz-routalk-builder.vercel.app",
+    "alias": "https://sport-my-fitness.vercel.app/",
+    "review": "https://sportmyfitness.com/admin"
+  },
+  "behavior": {
+    "home_hero_label": "Apparel",
+    "home_hero_destination": "apparel.html",
+    "menu_order": [
+      "Home",
+      "Apparel",
+      "Training",
+      "Programs & Rates",
+      "About Yoshi",
+      "Media",
+      "Community",
+      "Contact"
+    ],
+    "pages_updated": 9
+  },
+  "verification": {
+    "all_nine_menu_order_and_current_page_checks": "passed",
+    "all_local_menu_destinations_exist": true,
+    "scope_comparison": "Outside the primary nav and the requested Home hero anchor text/href, all nine HTML files match baseline bytes. Only the existing hero-destination expectation changes in the browser test.",
+    "syntax": "node --check verification/approved-design-browser.cjs passed",
+    "whitespace": "git diff --check passed",
+    "browser_rerun": false,
+    "browser_limit": "Focused source and live HTTP checks for this native anchor/menu-order-only change; no new browser-layout claim. The preceding full browser baseline is run 39476577094 and verification/apparel-integration-release-20261020.json."
+  },
+  "preserved": [
+    "Home Explore training action",
+    "Original logo and all photographs",
+    "Shared styling, light/dark preference and controls",
+    "Original motion code and curves",
+    "Contact form, redirects, hosting, privacy and Google setup"
+  ],
+  "live": {
+    "site": "https://sportmyfitness.com",
+    "authenticated_source_checks": [
+      {
+        "path": "index.html",
+        "status": 200,
+        "sha256": "ba1994ee6df6ac8fc1f5519ae4a3134496a937379503eba6c659ceeecdba9190",
+        "matches_candidate": true
+      },
+      {
+        "path": "training.html",
+        "status": 200,
+        "sha256": "8229114629d01760a510908fb0368d23f7477dcc44e6d7d153daf291d709544c",
+        "matches_candidate": true
+      },
+      {
+        "path": "programs.html",
+        "status": 200,
+        "sha256": "e50a0bf755539f9068d486dd60deffaa222c80ca6dd428c02fd9b360cb20550a",
+        "matches_candidate": true
+      },
+      {
+        "path": "yoshi.html",
+        "status": 200,
+        "sha256": "0d0be3a4cd677888d74effc6f5bd695f9bb247d13b901e74edc31f46c81d8ab1",
+        "matches_candidate": true
+      },
+      {
+        "path": "media.html",
+        "status": 200,
+        "sha256": "9964e8b082b8956f1e85fef23f511cb20e8bb8e8e76a49b55fba2817f4750bae",
+        "matches_candidate": true
+      },
+      {
+        "path": "community.html",
+        "status": 200,
+        "sha256": "760584e15ab13f2fcd680ca5c36fba25e3f9e3e6c3e23a419840214755e62cc6",
+        "matches_candidate": true
+      },
+      {
+        "path": "contact.html",
+        "status": 200,
+        "sha256": "85a094dcc801e33894e66fcc4f810393a7dd39cdf8f980b0bfe781c61ab49a7f",
+        "matches_candidate": true
+      },
+      {
+        "path": "apparel.html",
+        "status": 200,
+        "sha256": "5a2108c8ed81725485a3cc41ebb01f1417c9fd7fb5a3b69a6dbb91f145a65e5e",
+        "matches_candidate": true
+      },
+      {
+        "path": "apparel-collection.html",
+        "status": 200,
+        "sha256": "3c9044234712eb57bca68992cb300ea30239e631476fca94b10682fe53b79704",
+        "matches_candidate": true
+      }
+    ],
+    "signed_out_checks": [
+      {
+        "path": "/",
+        "status": 200,
+        "shows_coming_soon": true
+      },
+      {
+        "path": "/apparel.html",
+        "status": 404,
+        "private_content_hidden": true
+      },
+      {
+        "path": "/apparel-collection.html",
+        "status": 404,
+        "private_content_hidden": true
+      }
+    ],
+    "status": "passed",
+    "limits": "HTTP source and privacy checks; browser behavior and visual review are recorded separately in CI evidence. No real inquiry, call or purchase."
+  }
+}

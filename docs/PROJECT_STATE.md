@@ -2,7 +2,25 @@
 
 Updated October 20, 2026 (UTC); apparel integrated and verified through the existing private-review access.
 
-## Current checkpoint — apparel release, October 20, 2026
+## Current checkpoint — Home apparel entry, October 20, 2026
+
+The Home hero's former “Let’s train” button now reads **Apparel** and opens
+`apparel.html`. Every one of the nine page menus starts Home, Apparel, then
+Training, Programs & Rates, About Yoshi, Media, Community and Contact. Current-page
+markers are retained. The existing Home “Explore training” action remains.
+
+Runtime `e4c471360c2e6bfdcf51e93e055e72d0911657a9` is published as Production
+`dpl_BKYfFEZ7qDxCnXcN78bByCm6Wi92`. Focused source checks verified the order and
+links on all nine pages and exact preservation outside those requested markup
+changes; the existing browser guard now expects the new Home destination.
+Authenticated live checks confirm all nine HTML files match the release.
+Public Coming soon and signed-out exclusion of the apparel pages still pass.
+No shared styles, logo/photo assets, appearance/motion or form code changed.
+The broad browser suite was not repeated for this link/label/order-only change;
+its preceding green baseline remains the apparel release below. See
+`verification/apparel-entry-release-20261020.json` for current focused evidence.
+
+## Apparel release — October 20, 2026
 
 PJ brought the approved apparel review into this main website session and asked
 to continue integration. Runtime `b69fba08f45feed479330d72d064c0575a61af9a` is

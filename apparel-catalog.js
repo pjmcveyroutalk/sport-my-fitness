@@ -1,4 +1,5 @@
-/* Only owner-approved, available items with a real local photo enter the gallery. */
+/* Browser module: the private preview gateway serves .js, not .mjs.
+   Only owner-approved, available items with a real local photo enter the gallery. */
 export function approvedApparelItems(catalog) {
   if (!catalog || catalog.version !== 1 || !Array.isArray(catalog.items)) return [];
   const usedIds = new Set();

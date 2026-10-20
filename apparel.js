@@ -1,4 +1,4 @@
-import {approvedApparelItems, apparelPriceLabel} from './apparel-catalog.mjs?v=apparel-20261020';
+import {approvedApparelItems, apparelPriceLabel} from './apparel-catalog.js?v=apparel-integration-20261020';
 
 /* Native scrolling stays usable without JavaScript; controls enhance it. */
 const track = document.getElementById('apparel-look-track');

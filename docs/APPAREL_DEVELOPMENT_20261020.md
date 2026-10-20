@@ -21,7 +21,7 @@ generated garment marks are removed; real apparel photographs remain pending.
   multiple photo views and an inquiry destination.
 - `apparel.css`: styles scoped to the apparel pages; lighter campaign surfaces
   in both existing appearances and softer, translucent rounded cards.
-- `apparel.js`, `apparel-catalog.mjs`: customer-controlled native scrolling,
+- `apparel.js`, `apparel-catalog.js`: customer-controlled native scrolling,
   reduced-motion support, collection loading, confirmed-item selection and
   native-dialog details. The native scroll row and existing fallback menu
   remain usable without JavaScript.

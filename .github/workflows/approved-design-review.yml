@@ -19,7 +19,7 @@ jobs:
           node-version: '24'
       - name: Syntax and existing contract check
         run: |
-          for file in *.js *.mjs api/*.js verification/apparel-browser.cjs; do node --check "$file"; done
+          for file in *.js api/*.js verification/apparel-browser.cjs; do node --check "$file"; done
           node --test test/pilot-verify-production.test.js test/apparel-catalog.test.mjs
           git diff --check
       - name: Install isolated browser test tools

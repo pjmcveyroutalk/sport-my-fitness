@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {approvedApparelItems, apparelPriceLabel} from '../apparel-catalog.mjs';
+import {approvedApparelItems, apparelPriceLabel} from '../apparel-catalog.js';
 
 const approved = {
   id: 'owner-approved-shirt', name: 'Owner-supplied name', approved: true, available: true,

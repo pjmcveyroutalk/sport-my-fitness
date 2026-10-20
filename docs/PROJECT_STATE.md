@@ -2,6 +2,17 @@
 
 Updated October 20, 2026 (UTC); approved shared hero lettering published and verified through the existing private-review access.
 
+## Latest content refinement — college background, October 20, 2026
+
+At PJ's request, Train with Yoshi now combines the former On the court and
+Education articles under **Basketball & Education**. One chronological bullet
+list holds San José State (2005–2008), Missouri Southern (2008–2010), and
+Northcentral University (2015–2020). All three original school/date rows and
+basketball achievements are retained verbatim. The duplicate chapter heading,
+label and separating article/list boundary are removed. Source comparison
+confirms the rest of Training is identical; no stylesheet, other page, photo,
+logo, movement, hosting or access setting changes.
+
 ## Current checkpoint — shared hero lettering, October 20, 2026
 
 PJ approved the refined outlined lettering and foreground visibility throughout

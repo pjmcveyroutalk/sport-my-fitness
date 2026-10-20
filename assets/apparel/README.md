@@ -1,7 +1,9 @@
 # Sport My Fitness apparel assets
 
-This is the isolated October 20, 2026 apparel implementation. These pages are
-development drafts with `noindex,nofollow`; they are not a product launch.
+This October 20, 2026 apparel implementation is integrated into the full website
+behind its existing private-review access. The pages retain `noindex,nofollow`
+and pending-data labels while real photographs and approved item details arrive.
+See `verification/apparel-integration-release-20261020.json` for release evidence.
 
 ## Official branding
 

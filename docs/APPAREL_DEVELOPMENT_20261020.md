@@ -1,7 +1,10 @@
 # Apparel development checkpoint — October 20, 2026
 
-Base: `b14145df8434086b606c8557d0db854e4859c5f2` from current GitHub `main`.
-Isolated local branch: `work/smf-apparel-20261020`.
+Base checkpoint: `b14145df8434086b606c8557d0db854e4859c5f2`.
+Original source: `review/approved-glass-apparel-20261020`, commit `0bfe6eef4cf071c3b378bc54b81e19e99a97ed45`.
+Integrated release runtime: `b69fba08f45feed479330d72d064c0575a61af9a`, now on `main`.
+Production: `dpl_E2mYuFVHC92ZcEQEz9ZoLYocGgQy`.
+Review access: https://sportmyfitness.com/admin (existing login, then Apparel).
 
 PJ requested applying the real branding and beginning the actual apparel
 subpage, using the developed campaign and linking to the available apparel.
@@ -42,9 +45,10 @@ addition to the full website; it does not launch the separate coming-soon site.
 
 The pages retain noindex metadata while campaign photography and item data are
 pending. DNS, Google setup, real inquiries, calls, messages and payments remain
-outside this release. Source preparation stays on an isolated review branch.
+outside this release. The checked integration is published on `main`; continue
+from the latest `main` rather than restoring the original draft branch.
 
-Before release: receive Yoshi's actual apparel photos and item details; approve
+Before the finished apparel launch: receive Yoshi's actual apparel photos and item details; approve
 the final campaign photography/garment branding; populate and verify the real
 collection; run the actual browser checks and inspect affected renders; review
 the draft indexing state and publication scope explicitly. Existing account
@@ -58,11 +62,23 @@ production-verifier contract is also run as required by the repository.
 Syntax, local links/asset paths, ARIA references and preservation of the
 existing bodies/footer are checked separately.
 
-Actual browser QA is pending: this managed session has neither the advertised
-control-browser skill nor an installed local browser, so a preview server or
-browser installation is not improvised. The existing GitHub Actions Chromium/
-WebKit workflow remains available after an authorized review-branch push.
+Actual browser QA passed as run `39476577094` in Chromium and WebKit: 70 original
+layouts plus 56 apparel layouts, the existing navigation/appearance/motion
+checks, four focused apparel journeys and four JavaScript-disabled apparel
+fallbacks. Desktop/mobile renders were inspected; all 16 final apparel captures
+match the inspected candidate byte-for-byte. The carousel test now waits for
+the customer-visible control update instead of racing its animation frame.
 
-See `verification/apparel-20261020.json` for the fresh source-check results and
-their limitations. A self-contained review export, when provided, is derived
-from these actual page files and is not the production deployment.
+The catalogue helper is served as `apparel-catalog.js`, compatible with the
+existing private gateway's extension allowlist. Page script cache keys were
+updated accordingly. No gateway, domain or access-control change was made.
+Authenticated live checks confirm 25 source files match the release; public
+Coming soon and signed-out exclusion of both apparel pages remain intact.
+Populated product filters/details still need their real-data browser check when
+Yoshi's approved item photographs and information arrive. No real inquiry was sent.
+
+The initial `verification/apparel-20261020.json` is historical source-only
+evidence. Current acceptance and live verification are recorded in
+`verification/apparel-integration-release-20261020.json`. The supplied standalone
+HTML export is the reviewed reference; the website serves the actual editable
+page files rather than that embedded review wrapper.

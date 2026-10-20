@@ -1,25 +1,41 @@
 # Sport My Fitness — Current Project State
 
-Updated October 19, 2026 (UTC); appearance switch verified; approved layout, branding and motion preserved.
+Updated October 20, 2026 (UTC); apparel integrated and verified through the existing private-review access.
 
-## Isolated apparel draft — October 20, 2026 (unreleased)
+## Current checkpoint — apparel release, October 20, 2026
 
-The local `work/smf-apparel-20261020` branch adds a branded apparel lookbook and
-linked collection page. It uses the shared header/menu and theme controls with
-the exact v1.1 kit JPEG logo, a lighter campaign, rounded glass cards and
-customer-controlled horizontal browsing. Every temporary campaign photo has a
-visible **PLACEHOLDER IMAGE** label; sample garments have no generated logos.
-Confirmed product data is pending; the collection does not
-invent items, prices or availability. Existing page bodies, footers, shared
-styles, appearance/motion sources and photographs retain the approved baseline;
-seven navigation lists gain one Apparel link. Browser navigation assertions are
-updated for that eighth destination.
+PJ brought the approved apparel review into this main website session and asked
+to continue integration. Runtime `b69fba08f45feed479330d72d064c0575a61af9a` is
+published as Production `dpl_E2mYuFVHC92ZcEQEz9ZoLYocGgQy`. The Apparel menu entry
+now opens `apparel.html`, with the linked `apparel-collection.html` beneath it:
+eight menu destinations and nine website pages. Continue from current `main`;
+the original isolated apparel draft is development history.
 
-This is source preparation, not a production release. See
-`docs/APPAREL_DEVELOPMENT_20261020.md`, `assets/apparel/README.md` and
-`verification/apparel-20261020.json` for scope, data entry, evidence and limits.
+The new pages retain the reviewed lighter campaign, exact v1.1 kit JPEG logo,
+rounded glass carousel, phone/menu controls and saved light/dark switch. Every
+temporary photo has its own **PLACEHOLDER IMAGE** label. Actual apparel photos
+and approved item data are pending; the collection remains empty and noindex.
+The seven original main/footer bodies, original logo and photographs, shared
+design/appearance/menu/motion/form code, redirects and search files are unchanged.
+Each original menu receives exactly one Apparel link.
 
-## Current checkpoint
+Browser run `39476577094` passed in Chromium/WebKit: 70 original-site layouts,
+56 apparel layouts, 28 existing navigation journeys, four apparel journeys,
+four apparel JavaScript-disabled fallbacks, 28 appearance journeys and all
+14 original-motion runs, with zero failures. All 16 final apparel screenshots
+are byte-identical to the visually inspected renders. A carousel assertion was
+corrected to wait for its queued control update. The catalogue browser module
+uses `.js` because the existing private gateway rejects root `.mjs` paths; no
+gateway or access-control change was needed.
+
+Live authenticated HTTP checks through `https://sportmyfitness.com/admin` confirm
+all 25 checked HTML/assets match the tested source after removing the gateway's
+existing Admin control. Signed-out `/` still shows Coming soon; the two private
+apparel URLs correctly return 404. No DNS, protection, Google, form delivery or
+payment settings changed. See `verification/apparel-integration-release-20261020.json`
+and `docs/APPAREL_DEVELOPMENT_20261020.md` for evidence and remaining inputs.
+
+## Appearance checkpoint — October 19, 2026
 
 This is the main website content/design workstream. Domain, hosting, DNS,
 access controls and account setup are handled in the separate setup session.

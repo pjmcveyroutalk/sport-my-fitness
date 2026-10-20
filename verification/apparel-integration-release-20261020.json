@@ -1,0 +1,308 @@
+{
+  "status": "published; exact-source CI, visual equivalence and live private access verified",
+  "recorded_at_utc": "2026-10-20T18:53:00.191001+00:00",
+  "request": "Integrate the attached approved apparel lookbook and collection into the main site while preserving the approved existing design, branding, original movement and image proportions.",
+  "reference": {
+    "library_file_id": "libfile_e2f2f17107c48191a075b20150c2705a",
+    "file": "SMF_Apparel_Review_2026-10-20(1).html",
+    "sha256": "68489d92d83eb9a96d7592a035b9a7a27d895b888d3e1e42ee71d39f9f8d16a7"
+  },
+  "baseline": "b14145df8434086b606c8557d0db854e4859c5f2",
+  "original_apparel_candidate": "0bfe6eef4cf071c3b378bc54b81e19e99a97ed45",
+  "runtime_commit": "b69fba08f45feed479330d72d064c0575a61af9a",
+  "review_branch": "review/approved-glass-apparel-integration-20261020",
+  "production": {
+    "id": "dpl_E2mYuFVHC92ZcEQEz9ZoLYocGgQy",
+    "state": "READY",
+    "target": "production",
+    "url": "https://sport-my-fitness-k7p6ahhav-routalk-builder.vercel.app",
+    "alias": "https://sport-my-fitness.vercel.app/",
+    "review_entry": "https://sportmyfitness.com/admin",
+    "source_sha": "b69fba08f45feed479330d72d064c0575a61af9a"
+  },
+  "browser": {
+    "run_id": 39476577094,
+    "url": "https://github.com/pjmcveyroutalk/sport-my-fitness/actions/runs/39476577094",
+    "job_id": 118813967718,
+    "artifact_id": 12289289770,
+    "artifact_sha256": "e7de679286786a90ba8692f4e7cc05052db9692d775e40d956c3d36357ea03e6",
+    "original_site": {
+      "started": "2026-10-20T18:39:53.487Z",
+      "layouts": 70,
+      "navigation": 28,
+      "motion": 14,
+      "locations": 4,
+      "platformMarks": 20,
+      "headers": 77,
+      "connections": 16,
+      "appearance": 28,
+      "safeguards": 24,
+      "failures": 0,
+      "chromiumVersion": "151.0.7922.34",
+      "webkitVersion": "26.5",
+      "completed": "2026-10-20T18:44:37.038Z"
+    },
+    "apparel": {
+      "started": "2026-10-20T18:44:37.377Z",
+      "layouts": 56,
+      "journeys": 4,
+      "fallbacks": 4,
+      "failures": 0,
+      "completed": "2026-10-20T18:45:36.600Z"
+    }
+  },
+  "visual_review": {
+    "inspected_run": 39475725583,
+    "inspected_runtime": "bc36e690cdaa84a587bf670501c22e567fbac58f",
+    "inspected": [
+      "chromium-apparel-dark-1334.png",
+      "webkit-apparel-light-390.png",
+      "chromium-apparel-collection-dark-390.png"
+    ],
+    "final_screenshots": 16,
+    "byte_identical_final_screenshots": 16,
+    "note": "The compatibility change alters the module filename/import and cache key, not the reviewed design, CSS, imagery or geometry."
+  },
+  "source_preservation": {
+    "original_main_footer_bodies": [
+      {
+        "path": "index.html",
+        "main_and_footer_sha256": "2727c4066161c40a4713baed864f0fec1bba23e35bae6d9c2b8cd63b3e835c22",
+        "matches_baseline": true
+      },
+      {
+        "path": "training.html",
+        "main_and_footer_sha256": "ef021eac4737f1d06f896e40f30a4015d31d4ef213502dfe1b8489b8025b43f3",
+        "matches_baseline": true
+      },
+      {
+        "path": "programs.html",
+        "main_and_footer_sha256": "80c974869fa54a95fa9e855d2996adea9cf5b9a2c96a6c91af6bcae8b2a68804",
+        "matches_baseline": true
+      },
+      {
+        "path": "yoshi.html",
+        "main_and_footer_sha256": "69684e980e639195663dedced0d70d9635baedb12cfcb79046a695bfef580891",
+        "matches_baseline": true
+      },
+      {
+        "path": "media.html",
+        "main_and_footer_sha256": "44f386c1bd719e496741030d99da7a461314ef3bd4c712a196a992b41dadc2b0",
+        "matches_baseline": true
+      },
+      {
+        "path": "community.html",
+        "main_and_footer_sha256": "27db6fe8318617be480715a649df51d6b17541a22c63497aff9d23e6a384e8d1",
+        "matches_baseline": true
+      },
+      {
+        "path": "contact.html",
+        "main_and_footer_sha256": "f3aaedf14853705dfc6fc30399dd4a9ed1cbe65048eaea65c93f4624eb52d888",
+        "matches_baseline": true
+      }
+    ],
+    "shared_runtime_and_routes": "site-design.css, site-appearance.css/js, site-menu.js, site-motion.css/js, contact.js, vercel.json, robots.txt and sitemap.xml match baseline bytes.",
+    "original_photos": "No original photograph or motion data file changed.",
+    "original_logo_sha256": "202f885d450df6330d8b0809f0c61f43a7ce940f7c870004c9bf6683178aad63",
+    "apparel_kit_master_sha256": "0349a132474c265497fad5d884fd89adcb32bdeeb6ba6ef26baba2e27cf79487",
+    "navigation": "Exactly one Apparel entry added to each of the seven original menus; eight destinations, nine pages including Collection."
+  },
+  "compatibility_corrections": [
+    "Carousel assertion waits for the scroll/rAF update to enable Previous; actual carousel code is unchanged.",
+    "Browser catalogue helper uses .js because the existing private gateway rejects root .mjs; no gateway or protection setting changed.",
+    "Signed-out test follows the existing contract: root Coming soon is 200; private apparel URLs return 404."
+  ],
+  "source_checks": {
+    "syntax": "passed",
+    "catalogue_and_existing_verifier_contracts": 6,
+    "local_links_assets": 64,
+    "unique_ids_aria_targets": "passed",
+    "diff_whitespace": "passed"
+  },
+  "live": {
+    "site": "https://sportmyfitness.com",
+    "authenticated_source_checks": [
+      {
+        "path": "index.html",
+        "status": 200,
+        "sha256": "87542c577fc2e05ea5517a66f97c3dcdfbcc8192a5142f5df8f4eeeb78bb2988",
+        "matches_candidate": true
+      },
+      {
+        "path": "training.html",
+        "status": 200,
+        "sha256": "e496217d01fc93c75f37930a37ee708cc5b9d9707ee859f8289c8fada2d89248",
+        "matches_candidate": true
+      },
+      {
+        "path": "programs.html",
+        "status": 200,
+        "sha256": "06918dd0a9977a312847457128512fc8abde1e0e10e61df2480b1380680df8f3",
+        "matches_candidate": true
+      },
+      {
+        "path": "yoshi.html",
+        "status": 200,
+        "sha256": "8ede5b22c41decd8e418d39455b3b1da965eb1afde9197c2328cd50f11ea1257",
+        "matches_candidate": true
+      },
+      {
+        "path": "media.html",
+        "status": 200,
+        "sha256": "5b232208c55967e95b5ca00e120b86dae1fb19bccacc7649195b8336e9e685c9",
+        "matches_candidate": true
+      },
+      {
+        "path": "community.html",
+        "status": 200,
+        "sha256": "d245ba6a5459fc27486cf37411320aa395aba9a4c80efbfb3d251be954f4b376",
+        "matches_candidate": true
+      },
+      {
+        "path": "contact.html",
+        "status": 200,
+        "sha256": "fd021e63a969c0ccc47e34298cab05983d24a1c08a6c7c1ab990f6650024f4ff",
+        "matches_candidate": true
+      },
+      {
+        "path": "apparel.html",
+        "status": 200,
+        "sha256": "1e0edb6afe7765d303bf67c80231e412c0fabcc4d3a7bfe4810f5373278a6959",
+        "matches_candidate": true
+      },
+      {
+        "path": "apparel-collection.html",
+        "status": 200,
+        "sha256": "359754b16af870d25fb88e415d04fee1243e5fc2324dafc686f16477391a6795",
+        "matches_candidate": true
+      },
+      {
+        "path": "apparel.css",
+        "status": 200,
+        "sha256": "9641ef899ba1c499d5b5687614560c2fcb2e26b83d2a6bb928393705ab410c20",
+        "matches_candidate": true
+      },
+      {
+        "path": "apparel.js",
+        "status": 200,
+        "sha256": "f54ccce7709edcadb2e50d82097559852cad44e7a2ff598603a7605f732a0c8b",
+        "matches_candidate": true
+      },
+      {
+        "path": "apparel-catalog.js",
+        "status": 200,
+        "sha256": "a145aac05f2b400b2487d00695069a99a4223eaf8f0b55fcb800ee0f65c8d488",
+        "matches_candidate": true
+      },
+      {
+        "path": "assets/apparel/catalog.json",
+        "status": 200,
+        "sha256": "b485e80423217a2f3c89915de77f2f4e5232a742feec45aeeee56735eea05f67",
+        "matches_candidate": true
+      },
+      {
+        "path": "assets/apparel/campaign-960.webp",
+        "status": 200,
+        "sha256": "b0d05ffc17161ce440e506ac8ecdd79fcb800e94c0f5d9a774e372fab3df92e2",
+        "matches_candidate": true
+      },
+      {
+        "path": "assets/apparel/campaign-1600.webp",
+        "status": 200,
+        "sha256": "8a4d357613e1723aa659639839229f297e03a2522eb6550858b64f21606443ad",
+        "matches_candidate": true
+      },
+      {
+        "path": "assets/apparel/campaign-full.webp",
+        "status": 200,
+        "sha256": "39ababdb1fd8ce6e41c9a37c44c27e6f8d03b2d31efc5dcebaf401f74ecd542c",
+        "matches_candidate": true
+      },
+      {
+        "path": "assets/brand/apparel-kit/brand-smart.jpg",
+        "status": 200,
+        "sha256": "0349a132474c265497fad5d884fd89adcb32bdeeb6ba6ef26baba2e27cf79487",
+        "matches_candidate": true
+      },
+      {
+        "path": "assets/brand/sport-my-fitness-original-lockup.png",
+        "status": 200,
+        "sha256": "202f885d450df6330d8b0809f0c61f43a7ce940f7c870004c9bf6683178aad63",
+        "matches_candidate": true
+      },
+      {
+        "path": "site-design.css",
+        "status": 200,
+        "sha256": "8fe01340c91f5963774d47f4c86aa8ff9646c1af9413ddac17b9b1d2727c7c84",
+        "matches_candidate": true
+      },
+      {
+        "path": "site-appearance.css",
+        "status": 200,
+        "sha256": "fa5f7fe8d60d708d81625ab8229b29a493a2302595f4873f55f9d041dc00fa7e",
+        "matches_candidate": true
+      },
+      {
+        "path": "site-appearance.js",
+        "status": 200,
+        "sha256": "f0f7da63ead1687e331450bd182c5e6cadf4740f822a46ac9c493fa0f5d3d6c5",
+        "matches_candidate": true
+      },
+      {
+        "path": "site-menu.js",
+        "status": 200,
+        "sha256": "3d4310160d4cea432a6cf780be279c95bf5a6fe4d8aa1cac71bcd6d350a272d7",
+        "matches_candidate": true
+      },
+      {
+        "path": "site-motion.css",
+        "status": 200,
+        "sha256": "b2c4c1eebeddd76ebb7f6f5eda27ac91d82b16783df3619186217d2ad3143022",
+        "matches_candidate": true
+      },
+      {
+        "path": "site-motion.js",
+        "status": 200,
+        "sha256": "cff14d42c5d743dcc5bbee2bcafba6780c77bb58a40944e8700292c9ab94cc56",
+        "matches_candidate": true
+      },
+      {
+        "path": "assets/smf-motion-curves.json",
+        "status": 200,
+        "sha256": "d9197bbfa766676178103ef8834491b804a50d6468047a22f4a5d660c21ce619",
+        "matches_candidate": true
+      }
+    ],
+    "signed_out_checks": [
+      {
+        "path": "/",
+        "status": 200,
+        "shows_coming_soon": true
+      },
+      {
+        "path": "/apparel.html",
+        "status": 404,
+        "private_content_hidden": true
+      },
+      {
+        "path": "/apparel-collection.html",
+        "status": 404,
+        "private_content_hidden": true
+      }
+    ],
+    "status": "passed",
+    "limits": "HTTP source and privacy checks; browser behavior and visual review are recorded separately in CI evidence. No real inquiry, call or purchase."
+  },
+  "pending": {
+    "placeholder_image_labels": 4,
+    "catalogue_items": 0,
+    "item_photos_and_details": "Await owner-approved photographs, names, categories, availability, sizes/colors and optional pricing.",
+    "campaign": "All four campaign images remain clearly marked placeholders; final real campaign photographs/garment approval pending.",
+    "indexing": "Apparel remains noindex,nofollow; full search/domain launch is a separate workstream."
+  },
+  "limits": [
+    "Browser runs use the exact source on the CI static server; authenticated production verification is HTTP source/asset comparison through the existing admin gateway.",
+    "Populated product-grid filters and detail-dialog workflows require browser verification when approved real inventory is supplied.",
+    "No real inquiry, call, message, booking, payment or Google account action. No DNS, billing, gateway code or protection settings changed."
+  ]
+}

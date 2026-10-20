@@ -60,6 +60,9 @@ async function journey(browser, engine, width) {
     await load(page, 'apparel');
     await page.locator('[data-carousel-next]').click();
     await page.waitForFunction(() => document.getElementById('apparel-look-track').scrollLeft > 10);
+    // Scroll position changes before the queued scroll/rAF control update.
+    // Wait for the customer-visible control state instead of racing that frame.
+    await page.waitForFunction(() => !document.querySelector('[data-carousel-prev]').disabled);
     assert.equal(await page.locator('[data-carousel-prev]').isDisabled(), false);
     await page.locator('[data-carousel-prev]').click();
     await page.waitForFunction(() => document.getElementById('apparel-look-track').scrollLeft < 3);

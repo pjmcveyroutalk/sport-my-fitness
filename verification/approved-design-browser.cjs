@@ -115,7 +115,7 @@ async function appearance(browser, route, width, engine) {
     await mainSurface.screenshot({path: path.join(out, `${engine}-${route}-light-${width}.png`)});
     if (route === 'index') await page.locator('.site-header').screenshot({path: path.join(out, `${engine}-header-light-${width}.png`)});
     await page.getByRole('button', {name: 'Menu', exact: true}).click();
-    assert.equal(await page.locator('.menu-panel a[href]').count(), 8, 'light mode changed menu destinations or brand link');
+    assert.equal(await page.locator('.menu-panel a[href]').count(), 9, 'light mode changed menu destinations or brand link');
     await page.getByRole('button', {name: 'Close menu', exact: true}).click();
     await page.reload({waitUntil: 'networkidle'});
     assert.equal(await toggle.getAttribute('aria-checked'), 'true', 'reload lost the selected appearance');
@@ -233,7 +233,7 @@ async function layout(page, route, width, engine) {
     assert.equal(await page.locator('.training-section,.training-option').count(), 0, 'redundant landing-page training link group remains');
     assert.deepEqual(await page.locator('.hero-actions > a').evaluateAll(links => links.map(link => link.getAttribute('href'))), ['contact.html', 'training.html'], 'landing-page hero actions changed');
   }
-  assert.equal(await page.locator('#primary-nav a').count(), 7);
+  assert.equal(await page.locator('#primary-nav a').count(), 8);
   const current = page.locator('#primary-nav a[aria-current="page"]');
   assert.equal(await current.count(), 1);
   assert.equal(await current.getAttribute('href'), route + '.html');
@@ -312,7 +312,7 @@ async function navigation(page, route, width) {
   await trigger.click();
   assert.equal(await trigger.getAttribute('aria-expanded'), 'true');
   assert(await page.locator('#site-menu').isVisible());
-  assert.equal(await page.locator('#site-menu #primary-nav a:visible').count(), 7);
+  assert.equal(await page.locator('#site-menu #primary-nav a:visible').count(), 8);
   const menuBox = await page.locator('#site-menu').boundingBox();
   assert(Math.abs(menuBox.y - (width > 900 ? 14 : 12)) < 10, 'menu is not anchored near the top');
   if (width > 900) assert(Math.abs(menuBox.x - 90) < 1, 'desktop menu is not anchored beside the rail');
@@ -421,7 +421,7 @@ async function motion(browser, route, width, record) {
       assert.equal(await page.locator('html').evaluate(el => getComputedStyle(el).colorScheme), 'dark');
       assert(await page.locator('h1').isVisible());
       await page.getByRole('button', {name: 'Menu', exact: true}).click();
-      assert.equal(await page.locator('.menu-panel .primary-nav a').count(), 7);
+      assert.equal(await page.locator('.menu-panel .primary-nav a').count(), 8);
       report.safeguards.push({test: 'appearance-script-failure', pass: true}); await page.close();
     });
     for (const route of routes) for (const width of [390, 1334]) await check(`motion ${route} ${width}`, () => motion(browser, route, width, width === 390 || route === 'index'));
@@ -430,7 +430,7 @@ async function motion(browser, route, width, record) {
       const page = await context.newPage(); await load(page, route);
       await headerControls(page, route, 390, 'chromium', true);
       await page.locator('.menu-fallback summary').click();
-      assert.equal(await page.locator('.menu-fallback nav a:visible').count(), 7);
+      assert.equal(await page.locator('.menu-fallback nav a:visible').count(), 8);
       assert(await page.locator('h1').isVisible());
       await page.locator('.menu-fallback a[href="contact.html"]').click();
       assert(new URL(page.url()).pathname.endsWith('/contact.html'));
@@ -440,7 +440,7 @@ async function motion(browser, route, width, record) {
       const page = await browser.newPage({viewport: {width: 390, height: 900}, reducedMotion: 'reduce'});
       await page.route('**/site-menu.js*', r => r.abort()); await load(page, 'index');
       await page.locator('.menu-fallback summary').click();
-      assert.equal(await page.locator('.menu-fallback nav a:visible').count(), 7);
+      assert.equal(await page.locator('.menu-fallback nav a:visible').count(), 8);
       report.safeguards.push({test: 'blocked-menu-js', pass: true}); await page.close();
     });
     await check('resize boundary', async () => {
@@ -497,7 +497,7 @@ async function motion(browser, route, width, record) {
       });
       await page.waitForFunction(() => navigator.serviceWorker.controller);
       await load(page, 'contact');
-      assert.equal(await page.locator('#primary-nav a').count(), 7);
+      assert.equal(await page.locator('#primary-nav a').count(), 8);
       assert((await page.locator('body').evaluate(el => getComputedStyle(el).backgroundImage)).includes('athletic-grain.svg'), 'returning visitor did not load the current textured theme');
       assert.equal(await page.evaluate(() => !!window.legacyMenuScriptWasUsed), false, 'stale unversioned menu code was used');
       await page.locator('.menu-toggle').click(); await page.locator('.menu-close').click();

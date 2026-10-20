@@ -2,6 +2,23 @@
 
 Updated October 19, 2026 (UTC); appearance switch verified; approved layout, branding and motion preserved.
 
+## Isolated apparel draft — October 20, 2026 (unreleased)
+
+The local `work/smf-apparel-20261020` branch adds a branded apparel lookbook and
+linked collection page. It uses the shared header/menu and theme controls with
+the exact v1.1 kit JPEG logo, a lighter campaign, rounded glass cards and
+customer-controlled horizontal browsing. Every temporary campaign photo has a
+visible **PLACEHOLDER IMAGE** label; sample garments have no generated logos.
+Confirmed product data is pending; the collection does not
+invent items, prices or availability. Existing page bodies, footers, shared
+styles, appearance/motion sources and photographs retain the approved baseline;
+seven navigation lists gain one Apparel link. Browser navigation assertions are
+updated for that eighth destination.
+
+This is source preparation, not a production release. See
+`docs/APPAREL_DEVELOPMENT_20261020.md`, `assets/apparel/README.md` and
+`verification/apparel-20261020.json` for scope, data entry, evidence and limits.
+
 ## Current checkpoint
 
 This is the main website content/design workstream. Domain, hosting, DNS,

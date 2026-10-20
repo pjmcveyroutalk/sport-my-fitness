@@ -1,6 +1,6 @@
 {
-  "status": "prepared; source checks passed; browser and live checks pending",
-  "recorded_at_utc": "2026-10-20T20:30:07.881742+00:00",
+  "status": "published; browser, visual, authenticated live and privacy checks passed",
+  "recorded_at_utc": "2026-10-20T20:44:40.308982+00:00",
   "baseline": "e1f679813c5e0423e733b21478384321f281c021",
   "requirements": {
     "canonical_page": "training.html",
@@ -29,7 +29,170 @@
     },
     "whitespace": "git diff --check passed"
   },
-  "browser": null,
-  "production": null,
-  "live": null
+  "browser": {
+    "run_id": 39492626727,
+    "job_id": 118869461575,
+    "conclusion": "success",
+    "tested_commit": "b318df8a8ed47849a52ff1ed6c5d9c968c58d2d3",
+    "artifact_id": 12295519709,
+    "artifact_sha256": "d06df27cb8f1d23689da55040a4383ce2fed0cf4be20c6fc2378fecb3f1ab786",
+    "chromium": "151.0.7922.34",
+    "webkit": "26.5",
+    "counts": {
+      "layouts": 60,
+      "navigation": 24,
+      "motion": 12,
+      "locations": 4,
+      "platformMarks": 20,
+      "headers": 66,
+      "connections": 16,
+      "consolidation": 10,
+      "legacyYoshi": 4,
+      "appearance": 24,
+      "safeguards": 23,
+      "failures": 0
+    },
+    "apparel": {
+      "layouts": 56,
+      "journeys": 4,
+      "fallbacks": 4,
+      "failures": 0
+    }
+  },
+  "production": {
+    "id": "dpl_8eaTXjQFbYC8T7jnBtvM92oPgBYG",
+    "state": "READY",
+    "target": "production",
+    "url": "https://sport-my-fitness-6p8do3p7x-routalk-builder.vercel.app",
+    "alias": "https://sport-my-fitness.vercel.app/",
+    "review": "https://sportmyfitness.com/admin"
+  },
+  "live": {
+    "status": "passed",
+    "authenticated_source_checks": [
+      {
+        "path": "index.html",
+        "status": 200,
+        "sha256": "32a77e3606be423300d6f22004cf84eda254bc57d9cdfcaf6cbea0d0e57896b3",
+        "matches_source": true
+      },
+      {
+        "path": "training.html",
+        "status": 200,
+        "sha256": "fc5343a3da8ed4e6cda58b1b6246fc50b33a1fa883437244d73975ab032e82cb",
+        "matches_source": true
+      },
+      {
+        "path": "programs.html",
+        "status": 200,
+        "sha256": "6da062ff648850aeb2ab2f2df4b4cb9650bd594345aec857a37d29b53c96e390",
+        "matches_source": true
+      },
+      {
+        "path": "media.html",
+        "status": 200,
+        "sha256": "6722329353ab80dde60f70b34630f820a7aaf44d09c661c14031b616dd26330c",
+        "matches_source": true
+      },
+      {
+        "path": "community.html",
+        "status": 200,
+        "sha256": "2dadd9d32b83a4d4910396483264a86e610605dcc0b663e4105831e5176dcdb6",
+        "matches_source": true
+      },
+      {
+        "path": "contact.html",
+        "status": 200,
+        "sha256": "7ab963ea8721b49e6667a903f2e8a08f4fa5448fd3a02453e7287d6642a0fcfc",
+        "matches_source": true
+      },
+      {
+        "path": "apparel.html",
+        "status": 200,
+        "sha256": "9dce5a87fd40dc6d66e7621aa185a19fde0cf2af392fec2072460136c9cc7733",
+        "matches_source": true
+      },
+      {
+        "path": "apparel-collection.html",
+        "status": 200,
+        "sha256": "3ac532b5b1dad88b0b36e1a936f5a1ad31b5448495402be595923e13cf0e3121",
+        "matches_source": true
+      },
+      {
+        "path": "training-merged.css",
+        "status": 200,
+        "sha256": "5b59a0609efa0d105b15e31607f635b83e287117fc146d36ff553b4776f9f786",
+        "matches_source": true
+      },
+      {
+        "path": "site-design.css",
+        "status": 200,
+        "sha256": "8fe01340c91f5963774d47f4c86aa8ff9646c1af9413ddac17b9b1d2727c7c84",
+        "matches_source": true
+      },
+      {
+        "path": "site-motion.js",
+        "status": 200,
+        "sha256": "cff14d42c5d743dcc5bbee2bcafba6780c77bb58a40944e8700292c9ab94cc56",
+        "matches_source": true
+      },
+      {
+        "path": "assets/smf-motion-curves.json",
+        "status": 200,
+        "sha256": "d9197bbfa766676178103ef8834491b804a50d6468047a22f4a5d660c21ce619",
+        "matches_source": true
+      },
+      {
+        "path": "assets/brand/sport-my-fitness-original-lockup.png",
+        "status": 200,
+        "sha256": "202f885d450df6330d8b0809f0c61f43a7ce940f7c870004c9bf6683178aad63",
+        "matches_source": true
+      }
+    ],
+    "legacy_redirects": [
+      {
+        "from": "https://sportmyfitness.com/yoshi.html",
+        "to": "https://sportmyfitness.com/training.html",
+        "status": 308
+      }
+    ],
+    "extensionless_alias_note": "/yoshi is configured in the full-site Vercel project but the existing private gateway does not admit extensionless content paths; no gateway/access change is in scope. Its platform behavior is not claimed as verified here.",
+    "signed_out_checks": [
+      {
+        "path": "/",
+        "status": 200,
+        "shows_coming_soon": true
+      },
+      {
+        "path": "/training.html",
+        "status": 404,
+        "private_content_hidden": true
+      },
+      {
+        "path": "/yoshi.html",
+        "status": 404,
+        "private_content_hidden": true
+      },
+      {
+        "path": "/admin",
+        "status": 200,
+        "login_available": true
+      }
+    ],
+    "limits": "HTTP byte matching and platform redirect/privacy checks. Browser layout and motion evidence are recorded separately. No inquiry, call, account, DNS or billing action."
+  },
+  "runtime_commit": "b318df8a8ed47849a52ff1ed6c5d9c968c58d2d3",
+  "visual_review": {
+    "status": "passed",
+    "renders": [
+      "chromium-training-1334.png",
+      "chromium-training-background-1334.png",
+      "chromium-training-teaching-1334.png",
+      "chromium-training-coach-390.png",
+      "chromium-training-light-390.png",
+      "chromium-training-reviews-390.png"
+    ],
+    "observed": "Approved layout and textured palette retained; ordered background/teaching sections, bullet lists, proportional photographs, compact social row, single inquiry and light hero inspected."
+  },
+  "verification_correction": "The first live checker process had loaded an extra /yoshi request before its source was narrowed to the actual former yoshi.html link. The existing private gateway rejects extensionless content paths. The corrected checker verifies yoshi.html and records the /yoshi gateway limitation; no runtime/gateway change or broad browser rerun was made for this checker correction."
 }

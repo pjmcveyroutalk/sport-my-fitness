@@ -52,9 +52,22 @@ Legacy About navigation is exercised with and without JavaScript. Platform-level
 redirects are checked on the deployment, since the CI static server does not
 execute `vercel.json`.
 
-See `verification/training-consolidation-20261020.json` for current evidence.
-Browser and live evidence are recorded after those checks run; this document
-does not itself claim they have passed.
+Published runtime `b318df8a8ed47849a52ff1ed6c5d9c968c58d2d3` is Production
+`dpl_8eaTXjQFbYC8T7jnBtvM92oPgBYG`. Browser run `39492626727` passed with zero
+failures: 60 main-site and 56 apparel layouts, 24 main navigation journeys,
+24 appearance journeys, 12 original-motion runs, 10 consolidation checks and
+four legacy About fallbacks, plus the existing safeguards. Mobile, desktop and
+light-mode renders were inspected. Thirteen authenticated live files match the
+tested source; the former `/yoshi.html` link permanently redirects to Training.
+Four signed-out checks preserve Coming soon, the login and private-page exclusion.
+See `verification/training-consolidation-20261020.json` for evidence and limits.
+
+The full-project `/yoshi` redirect is configured but is not exposed by the
+existing private gateway, which only admits HTML and selected asset paths. The
+first live checker had included that extensionless alias; its request set was
+corrected to the actual legacy `/yoshi.html` link. The corrected checks pass.
+No runtime fix or gateway change was needed. The following documentation commit
+records results only; runtime bytes remain identical to the tested candidate.
 
 The reliable human entry point remains `https://sportmyfitness.com/admin`.
 After login, choose **Train with Yoshi** from the menu in that same tab. Standalone

@@ -1,6 +1,6 @@
 # Sport My Fitness — Current Project State
 
-Updated October 20, 2026 (UTC); apparel integrated and verified through the existing private-review access.
+Updated October 20, 2026 (UTC); Train with Yoshi consolidation published and verified through the existing private-review access.
 
 ## Current checkpoint — Train with Yoshi consolidation, October 20, 2026
 
@@ -18,8 +18,20 @@ Old `/yoshi.html` and `/yoshi` paths forward to Training; the static compatibili
 document also works without JavaScript. Current sitemap/title/description reflect
 the page consolidation; hosting, protection and Google setup are unchanged.
 
-Source checks are complete; browser/deployment evidence is pending at this
-pre-release checkpoint. Continue with `docs/TRAIN_WITH_YOSHI_20261020.md` and
+Runtime `b318df8a8ed47849a52ff1ed6c5d9c968c58d2d3` is Production
+`dpl_8eaTXjQFbYC8T7jnBtvM92oPgBYG`. Browser run `39492626727` passed 60 main-site
+layouts, 56 apparel layouts, 24 navigation journeys, 24 appearance journeys,
+12 original-motion runs, 10 combined-content checks and four legacy About
+fallbacks in Chromium/WebKit, with zero failures. Desktop/mobile/light renders
+were inspected. Thirteen authenticated live files match the source; the actual
+former `yoshi.html` link returns a permanent redirect to Training. Four public
+checks preserve Coming soon, the login page and exclusion of private content.
+
+The additional `/yoshi` alias is configured in the full-site Vercel project; the
+existing private gateway does not admit extensionless content paths. That alias
+is not claimed as verified through the gateway. No gateway/access change is in
+scope. Use `https://sportmyfitness.com/admin`, then Train with Yoshi in the menu.
+Continue with `docs/TRAIN_WITH_YOSHI_20261020.md` and
 `verification/training-consolidation-20261020.json`, not the older two-page map.
 
 ## Current checkpoint — face-only preview and flyer, October 20, 2026

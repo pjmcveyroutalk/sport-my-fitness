@@ -20,6 +20,15 @@ clarification, not turned into a new billing or payment flow. See
 `docs/PHOTO_AND_FLYER_20261020.md` and
 `verification/face-and-flyer-20261020.json` for scope and evidence.
 
+Published runtime `a846f5a717fceef94643fd13c3706617180e5a42` is Production
+`dpl_29UY66jNmXBprhsFqiWse7qjxHNg`. Seven authenticated live files match the
+checked source, including Programs, unchanged Home, all three original hero
+variants, the original logo and the unreferenced review asset. Three signed-out
+checks retain public Coming soon and exclude Programs/the photo draft. The
+preceding full browser baseline remains run `39476577094`; this single-sentence
+copy change and unused draft asset did not repeat it. No Google, DNS, billing,
+access controls, payment flow or runtime Home image changed.
+
 ## Current checkpoint — Home apparel entry, October 20, 2026
 
 The Home hero's former “Let’s train” button now reads **Apparel** and opens

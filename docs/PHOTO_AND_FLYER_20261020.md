@@ -67,3 +67,13 @@ tree. This note supersedes the older instruction to wait for a reference photo;
 the supplied original now exists and face-only preview work is authorized. The
 main-photo approval remains open. Classroom photos, actual apparel photos/item
 data and upcoming-event details are still pending.
+
+## Release evidence
+
+The service sentence is published as runtime
+`a846f5a717fceef94643fd13c3706617180e5a42`, Production
+`dpl_29UY66jNmXBprhsFqiWse7qjxHNg`. Seven authenticated live files match the
+checked source. Coming soon remains public; signed-out Programs and the draft
+asset return 404. The hero and its three existing sizes retain their original
+bytes. The facial draft is saved for review and is not used by the website.
+The following documentation commit adds evidence only.

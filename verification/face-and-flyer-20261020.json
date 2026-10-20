@@ -1,0 +1,52 @@
+{
+  "status": "prepared; source checks passed; live copy release pending",
+  "recorded_at_utc": "2026-10-20T19:35:11.201081+00:00",
+  "baseline": "49c16241d5a3a7ff26cb568e9eff9bfd1bac383a",
+  "runtime_change": {
+    "file": "programs.html",
+    "before": "For one-on-one attention and coaching built around your goals, strength and movement.",
+    "after": "One-on-one coaching for your goals, from weight loss and muscle building to cardio and core training.",
+    "only_one_text_replacement": true,
+    "sha256": "393a0036f801f9a85f1e838678337ea67411403eb603dd06791adf9a5e90e15c"
+  },
+  "photo_preview": {
+    "status": "review-only; not owner-approved and not applied to the site",
+    "output": "assets/photos/review/smf-waterfront-face-review-20261020.webp",
+    "dimensions": {
+      "width": 1585,
+      "height": 992
+    },
+    "facePath": "M1156 109 C1172 110 1179 120 1181 136 L1184 149 C1188 155 1192 158 1192 164 L1188 171 C1193 177 1196 185 1190 195 L1184 206 C1179 217 1171 226 1162 228 C1144 228 1129 218 1117 204 L1111 195 L1107 190 L1108 180 L1112 166 L1124 148 L1138 128 Z",
+    "maskedPixels": 7505,
+    "maskBoundsInclusive": {
+      "left": 1106,
+      "top": 108,
+      "right": 1194,
+      "bottom": 228
+    },
+    "changedFacePixels": 7343,
+    "changedPixelsOutsideFace": 0,
+    "originalSha256": "b34ee59f501384a00aa5b053475fbe2b9ef2ed5a6edd09018a73d8c87f39e22e",
+    "generatedDraftSha256": "2db27ba3ccca4c5c91a91bb4a0276fc6e08198f7a85467b1e44f80ccf686f1cf",
+    "reviewSha256": "148fecab0570bdb87e679fa8db05f6b711f891723833bb0bb420f6aca9355dd4",
+    "generatedDraftTool": "built-in image_gen",
+    "assembly": "Generated facial edit restricted to feathered facial mask and losslessly composited onto the original decoded image with Sharp. No generated pixels outside the face are used."
+  },
+  "verification": {
+    "unchanged_other_eight_pages": true,
+    "unchanged_shared_styles_scripts_motion_form": true,
+    "unchanged_existing_hero_variants_and_logo": true,
+    "preview_referenced_by_runtime_html": false,
+    "visual_review": "Whole composition and enlarged face inspected. Preview only; owner likeness approval pending.",
+    "browser_rerun": false,
+    "browser_limit": "One text sentence and an unreferenced preview asset. The previous green browser baseline is 39476577094; no new browser-layout or likeness-approval claim.",
+    "whitespace": "git diff --check passed"
+  },
+  "pending": [
+    "PJ/Yoshi approval of the face-only preview",
+    "Clarify monthly billing scope",
+    "Confirm whether Cash App should be published as payment instructions",
+    "Actual apparel item photos/data, classroom photos and upcoming-event details"
+  ],
+  "live": null
+}

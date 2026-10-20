@@ -21,6 +21,14 @@ logo, photos, aspect ratios, styles, navigation and original movement are unchan
 
 ## Pending material and decisions
 
+October 20 update: PJ has now supplied the original running photograph and
+specified a face-only correction. A review-only, facially masked candidate is
+prepared; it is not applied to Home until likeness approval. The original
+waterfront/body/pose remain required. Apparel is integrated with clearly labeled
+temporary imagery; actual item photos/data remain pending. Current treatment
+is detailed in `PHOTO_AND_FLYER_20261020.md` and `PROJECT_STATE.md`; the table
+below records the original October 19 waiting state.
+
 | Request | Needed before implementation | Current treatment |
 | --- | --- | --- |
 | Main photo does not look like Yoshi | Receive Yoshi's exact approved replacement. PJ confirmed that we should wait for her photo. | Replacement pending; keep the current image until that approved replacement arrives. Do not generate or retouch a substitute likeness. |

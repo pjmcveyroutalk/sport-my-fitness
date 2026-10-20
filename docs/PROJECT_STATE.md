@@ -2,6 +2,24 @@
 
 Updated October 20, 2026 (UTC); apparel integrated and verified through the existing private-review access.
 
+## Current checkpoint — face-only preview and flyer, October 20, 2026
+
+PJ supplied Yoshi's authentic running photograph and clarified that **only her
+face** needs correcting. A review-only asset is saved at
+`assets/photos/review/smf-waterfront-face-review-20261020.webp`. It uses a narrowly
+masked facial edit; decoded-pixel comparison confirms zero changes outside the
+face. No Home asset reference, responsive image, sharing image, layout, logo or
+motion changes yet. The likeness requires PJ/Yoshi's visual approval before
+application. Do not replace the waterfront hero with the original track photo.
+
+The supplied flyer adds weight loss, muscle building, cardio and core training
+to the existing Personal training description on Programs. Existing rates,
+phone/social details and Functional movement & rehab entry are retained.
+The flyer’s ambiguous monthly-billing note and Cash App handle are recorded for
+clarification, not turned into a new billing or payment flow. See
+`docs/PHOTO_AND_FLYER_20261020.md` and
+`verification/face-and-flyer-20261020.json` for scope and evidence.
+
 ## Current checkpoint — Home apparel entry, October 20, 2026
 
 The Home hero's former “Let’s train” button now reads **Apparel** and opens

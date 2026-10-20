@@ -22,7 +22,7 @@ async function layout(browser, engine, route, width, theme) {
     await page.locator('img[src]').evaluateAll(images => Promise.all(images.map(image => { image.loading = 'eager'; return image.decode(); })));
     assert.equal(await page.locator('html').getAttribute('data-theme'), theme);
     assert.equal(await page.locator('h1').count(), 1);
-    assert.equal(await page.locator('#primary-nav a').count(), 8);
+    assert.equal(await page.locator('#primary-nav a').count(), 7);
     assert.equal(await page.locator('#primary-nav a[aria-current="page"]').getAttribute('href'), 'apparel.html');
     const logo = page.locator('.site-header .brand-logo');
     assert.equal(await logo.getAttribute('src'), 'assets/brand/apparel-kit/brand-smart.jpg');
@@ -73,7 +73,7 @@ async function journey(browser, engine, width) {
     assert(await page.locator('[data-catalog-empty]').isVisible());
     assert.equal(await page.locator('[data-catalog-empty] .button').getAttribute('href'), 'contact.html#inquiry');
     await page.getByRole('button', {name: 'Menu', exact: true}).click();
-    assert.equal(await page.locator('#site-menu #primary-nav a:visible').count(), 8);
+    assert.equal(await page.locator('#site-menu #primary-nav a:visible').count(), 7);
     await page.keyboard.press('Escape');
     assert(await page.getByRole('button', {name: 'Menu', exact: true}).evaluate(button => button === document.activeElement));
     await page.locator('.apparel-back-link').click();
@@ -87,7 +87,7 @@ async function fallback(browser, engine, route) {
     const page = await context.newPage(); await load(page, route);
     assert(await page.locator('h1').isVisible());
     await page.locator('.menu-fallback summary').click();
-    assert.equal(await page.locator('.menu-fallback #primary-nav a:visible').count(), 8);
+    assert.equal(await page.locator('.menu-fallback #primary-nav a:visible').count(), 7);
     await page.locator('.menu-fallback summary').click();
     if (route === 'apparel') {
       await page.locator('.apparel-look-link').last().focus();

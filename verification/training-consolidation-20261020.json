@@ -1,0 +1,35 @@
+{
+  "status": "prepared; source checks passed; browser and live checks pending",
+  "recorded_at_utc": "2026-10-20T20:30:07.881742+00:00",
+  "baseline": "e1f679813c5e0423e733b21478384321f281c021",
+  "requirements": {
+    "canonical_page": "training.html",
+    "title_and_menu": "Train with Yoshi",
+    "active_pages": 8,
+    "menu_destinations": 7,
+    "programs_separate": true,
+    "legacy_aliases": [
+      "/yoshi.html",
+      "/yoshi"
+    ],
+    "inquiry": "contact.html#inquiry"
+  },
+  "source_checks": {
+    "all_local_links_and_fragments_exist": true,
+    "unique_ids": true,
+    "seven_other_page_bodies_unchanged": true,
+    "shared_styles_scripts_original_motion_and_form_unchanged": true,
+    "all_existing_assets_unchanged": true,
+    "previous_four_redirects_preserved": true,
+    "unapproved_home_face_preview_still_unapplied": true,
+    "node_syntax": "passed for both visitor scripts",
+    "existing_contract_tests": {
+      "passed": 6,
+      "failed": 0
+    },
+    "whitespace": "git diff --check passed"
+  },
+  "browser": null,
+  "production": null,
+  "live": null
+}

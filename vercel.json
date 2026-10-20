@@ -20,6 +20,16 @@
       "source": "/training-options",
       "destination": "/programs.html",
       "permanent": true
+    },
+    {
+      "source": "/yoshi.html",
+      "destination": "/training.html",
+      "permanent": true
+    },
+    {
+      "source": "/yoshi",
+      "destination": "/training.html",
+      "permanent": true
     }
   ]
 }

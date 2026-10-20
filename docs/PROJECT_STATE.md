@@ -2,6 +2,26 @@
 
 Updated October 20, 2026 (UTC); apparel integrated and verified through the existing private-review access.
 
+## Current checkpoint — Train with Yoshi consolidation, October 20, 2026
+
+PJ approved combining Training and About Yoshi. `training.html` now brings the
+coaching introduction, qualifications, college/education bullets, teaching and
+community work, photographs and client reviews into one ordered page. Its title
+and menu label are **Train with Yoshi**. Programs & Rates remains separate. The
+eight full pages share seven menu destinations; the separate About entry is gone.
+
+All six distinct photos remain, once each, with their credits and responsive
+proportions. The existing gym hero, logo, shared design/appearance, phone controls,
+form, original motion code and curves stay intact. The Home face draft remains
+unapplied. Only a local Training stylesheet supplies the merged page's spacing.
+Old `/yoshi.html` and `/yoshi` paths forward to Training; the static compatibility
+document also works without JavaScript. Current sitemap/title/description reflect
+the page consolidation; hosting, protection and Google setup are unchanged.
+
+Source checks are complete; browser/deployment evidence is pending at this
+pre-release checkpoint. Continue with `docs/TRAIN_WITH_YOSHI_20261020.md` and
+`verification/training-consolidation-20261020.json`, not the older two-page map.
+
 ## Current checkpoint — face-only preview and flyer, October 20, 2026
 
 PJ supplied Yoshi's authentic running photograph and clarified that **only her

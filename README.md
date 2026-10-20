@@ -34,7 +34,7 @@ Earlier design reports are historical checkpoints, not current acceptance.
 
 ## Routes
 
-Home (`index.html`), Training (`training.html`), Programs (`programs.html`), About (`yoshi.html`), Media (`media.html`), Contact (`contact.html`), and Community (`community.html`).
+Home (`index.html`), Apparel (`apparel.html`), Apparel collection (`apparel-collection.html`), Train with Yoshi (`training.html`), Programs (`programs.html`), Media (`media.html`), Community (`community.html`), and Contact (`contact.html`). The former About paths (`yoshi.html` and `/yoshi`) forward to the combined Training page.
 
 Keep the existing static HTML/CSS/JavaScript and GitHub/Vercel workflow. No framework or hosting migration is needed.
 

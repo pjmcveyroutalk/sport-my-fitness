@@ -1,6 +1,34 @@
 # Sport My Fitness — Current Project State
 
-Updated October 20, 2026 (UTC); Train with Yoshi consolidation published and verified through the existing private-review access.
+Updated October 20, 2026 (UTC); approved shared hero lettering published and verified through the existing private-review access.
+
+## Current checkpoint — shared hero lettering, October 20, 2026
+
+PJ approved the refined outlined lettering and foreground visibility throughout
+the full website. All eight active pages now load `hero-lettering.css?v=20261020`.
+The live H1 text keeps its original words, font, sizes, line breaks, colors and
+spacing; a clean outline, shallow depth and feathered local contrast add clarity.
+Light mode and Apparel use a pale edge around their existing dark title faces.
+The heading stays above hero photos/decorations inside its own scrolling section;
+the header/menu/call controls, credits and placeholder notices remain usable.
+Body headings, logos, photos, original motion and form/navigation code are unchanged.
+The Home face draft remains unapplied. The public Coming soon package is separate.
+
+Runtime `d240c0836754cc748e29fd4fd26f93c89d944080` is published; its GitHub Vercel
+check reports completion at 2026-10-20T21:56:20Z, dashboard reference
+`4kETgJ1ku1SCRS1bpkdvhTK8DPnS` in `routalk-builder/sport-my-fitness`.
+Browser run `39502775703` passes 140 lettering cases, 60 main layouts, 56 apparel
+layouts, 24 navigation and 24 appearance journeys, 12 original-motion runs and
+existing map/form/fallback safeguards, with zero failures in Chromium/WebKit.
+All 60 main hero geometry/photo-size cases match the preceding release. All eight
+pages were visually reviewed in both themes at mobile/desktop sizes, plus WebKit
+spot checks. Seventeen authenticated live files match the tested source; the
+legacy About redirect and five public/privacy checks pass.
+
+Use https://sportmyfitness.com/admin and navigate within that signed-in tab.
+See `docs/HERO_LETTERING_20261020.md` and
+`verification/hero-lettering-20261020.json` for exact scope, hashes, evidence and
+live-check limits. No DNS, Google, billing, account or access-control setting changed.
 
 ## Current checkpoint — Train with Yoshi consolidation, October 20, 2026
 

@@ -1,10 +1,20 @@
 # Sport My Fitness
 
-Seven-page static website for Sport My Fitness and Coach Yoshi Barnes.
+Eight-page static website for Sport My Fitness and Coach Yoshi Barnes.
 
 Start with [the current project state](docs/PROJECT_STATE.md). It resolves the older handoffs, identifies the verified source revisions, records the audit evidence, and gives the next task.
 
 ## Current work
+
+The October 20 shared hero-lettering release covers all eight full-site pages.
+Start at [the current project state](docs/PROJECT_STATE.md),
+[the lettering implementation](docs/HERO_LETTERING_20261020.md) and
+[its verification receipt](verification/hero-lettering-20261020.json) for the
+observed review/release status. The existing review entrance is
+https://sportmyfitness.com/admin; navigate inside that tab after signing in.
+The public Coming soon page and account/hosting setup remain separate.
+
+## Earlier design checkpoints
 
 The finished design is live at [sport-my-fitness.vercel.app](https://sport-my-fitness.vercel.app/), released from `main` at `cb0786118740c8b146978a1d6aac3304ac5245b2` after PJ's explicit publishing request. The [review preview](https://sport-my-fitness-naghhevku-routalk-builder.vercel.app) remains a historical reference with its existing sign-in protection.
 Mobile inner heroes now end naturally after their copy, removing the large empty

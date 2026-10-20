@@ -1,0 +1,287 @@
+{
+  "date": "2026-10-20",
+  "status": "published_and_verified",
+  "requirement": "Apply the approved foreground hero lettering across the whole full-site website, in both themes, preserving branding, photographs, geometry, controls and original page motion.",
+  "repository": "pjmcveyroutalk/sport-my-fitness",
+  "base_commit": "38c0b49c2c67bf1a9bfe2573e3d21990f90352a0",
+  "runtime_commit": "d240c0836754cc748e29fd4fd26f93c89d944080",
+  "runtime_tree": "95cb61f821564c35ec6ab6fc3155b835a95a3260",
+  "review_branch": "review/approved-glass-hero-lettering-20261020",
+  "runtime_files": {
+    "index.html": "e1d46e1b5b6849ad99f84d55cfb04a5f825e6db5b301abdb3ecdd517d5f9b2b8",
+    "training.html": "3c0dfd643db40a6854fec43047316a6d571228e86725d4a5bc16ad4963494107",
+    "programs.html": "b2a91af74b728d52cb98dca5fdfab74a336046fcb4c65e60fe5e0a9985312b78",
+    "media.html": "b91f44d866c37912ecfda9cff2b80a527630cef7e99aa9edec95c2cc5d3d094b",
+    "community.html": "1bd4cea0ae08c5c14316dc816dfce637be537232c3b6f74b927904739fadfc36",
+    "contact.html": "7c0d3ae6cc6891ff0416520831e6165da4e8af001e264a2194409664435995b7",
+    "apparel.html": "017164f9d4c18fcca8d1de1df025b2cba74acf951d6f9381e0a089e1fb28761c",
+    "apparel-collection.html": "a84e8643b6925283f6973a8fee43b27ad6ca06b8b37519c272ceca562064b7d4",
+    "hero-lettering.css": "84ca5f514241ed31492e4f70839c6c8fdb98597cf1f06b1d369f293fa9bff855"
+  },
+  "scope": {
+    "pages": [
+      "index",
+      "training",
+      "programs",
+      "media",
+      "community",
+      "contact",
+      "apparel",
+      "apparel-collection"
+    ],
+    "new_stylesheet": "hero-lettering.css?v=20261020",
+    "headline_semantics": "existing live selectable H1 spans; no duplicate text or generated lettering assets",
+    "treatment": "clean outline, tiny edge highlight, shallow sidewall, tight shadow and feathered contrast backdrop",
+    "foreground": "inside each scrolling hero, above photos and decoration; header/menu controls and source/placeholder notices retain their layers",
+    "light_and_apparel": "pale edge around existing petrol/teal faces; apparel keeps its existing light campaign palette",
+    "forced_colors": "system text remains usable; decorative stroke, shadow and backdrop removed"
+  },
+  "source_preservation": {
+    "all_eight_html_identical_after_removing_one_stylesheet_link": true,
+    "all_existing_runtime_styles_scripts_fonts_logos_photos_and_motion_assets_unchanged": true,
+    "changed_existing_runtime_paths": [
+      "index.html",
+      "training.html",
+      "programs.html",
+      "media.html",
+      "community.html",
+      "contact.html",
+      "apparel.html",
+      "apparel-collection.html"
+    ],
+    "no_body_headline_or_copy_changes": true,
+    "home_face_draft_applied": false,
+    "dns_google_billing_accounts_and_access_controls_changed": false
+  },
+  "local_checks": {
+    "contract_tests": {
+      "passed": 6,
+      "failed": 0
+    },
+    "javascript_syntax": "passed",
+    "git_diff_check": "passed",
+    "stylesheet_runtime_rendering": "passed in Chromium and WebKit"
+  },
+  "browser": {
+    "run_id": 39502775703,
+    "job_id": 118904139402,
+    "status": "passed",
+    "conclusion": "success",
+    "artifact_id": 12301763128,
+    "artifact_sha256": "c17284eb0cd16349b27c7c8fd922125106330068c9bf109254254d199fe1f41a",
+    "main_counts": {
+      "layouts": 60,
+      "navigation": 24,
+      "motion": 12,
+      "locations": 4,
+      "platformMarks": 20,
+      "headers": 66,
+      "connections": 16,
+      "consolidation": 10,
+      "legacyYoshi": 4,
+      "appearance": 24,
+      "lettering": 84,
+      "safeguards": 23,
+      "failures": 0
+    },
+    "apparel_counts": {
+      "layouts": 56,
+      "lettering": 56,
+      "journeys": 4,
+      "fallbacks": 4,
+      "failures": 0
+    },
+    "browsers": {
+      "chromium": "151.0.7922.34",
+      "webkit": "26.5"
+    },
+    "lettering_cases": 140,
+    "minimum_measured_fill_outline_contrast": 5.585433480604956,
+    "unchanged_main_hero_geometry_and_photo_dimension_comparisons": 60,
+    "visual_review": {
+      "chromium": "all eight pages at 390px and 1334px in both themes, plus full-resolution Home/Training/Contact/Apparel samples",
+      "webkit": "Community dark mobile and Home light desktop, including enlarged before/after lettering detail",
+      "result": "approved for release; crisp edges, clear foreground hierarchy, preserved photography and spacing"
+    }
+  },
+  "production": {
+    "status": "published",
+    "entry_url": "https://sportmyfitness.com/admin",
+    "full_site_project": "sport-my-fitness",
+    "public_holding_page": "separate and unchanged",
+    "commit": "d240c0836754cc748e29fd4fd26f93c89d944080",
+    "dashboard_url": "https://vercel.com/routalk-builder/sport-my-fitness/4kETgJ1ku1SCRS1bpkdvhTK8DPnS",
+    "github_vercel_check": "success \u2014 Deployment has completed, 2026-10-20T21:56:20Z",
+    "verified_project_path": "routalk-builder/sport-my-fitness",
+    "metadata_limit": "Vercel MCP project/list metadata returned 404/403 and no Vercel CLI is installed. Release status is confirmed by the fresh GitHub Vercel deployment check and authenticated live byte comparisons; no account or protection change was attempted."
+  },
+  "live": {
+    "status": "passed",
+    "authenticated_source_checks": [
+      {
+        "path": "index.html",
+        "status": 200,
+        "sha256": "e1d46e1b5b6849ad99f84d55cfb04a5f825e6db5b301abdb3ecdd517d5f9b2b8",
+        "matches_source": true
+      },
+      {
+        "path": "training.html",
+        "status": 200,
+        "sha256": "3c0dfd643db40a6854fec43047316a6d571228e86725d4a5bc16ad4963494107",
+        "matches_source": true
+      },
+      {
+        "path": "programs.html",
+        "status": 200,
+        "sha256": "b2a91af74b728d52cb98dca5fdfab74a336046fcb4c65e60fe5e0a9985312b78",
+        "matches_source": true
+      },
+      {
+        "path": "media.html",
+        "status": 200,
+        "sha256": "b91f44d866c37912ecfda9cff2b80a527630cef7e99aa9edec95c2cc5d3d094b",
+        "matches_source": true
+      },
+      {
+        "path": "community.html",
+        "status": 200,
+        "sha256": "1bd4cea0ae08c5c14316dc816dfce637be537232c3b6f74b927904739fadfc36",
+        "matches_source": true
+      },
+      {
+        "path": "contact.html",
+        "status": 200,
+        "sha256": "7c0d3ae6cc6891ff0416520831e6165da4e8af001e264a2194409664435995b7",
+        "matches_source": true
+      },
+      {
+        "path": "apparel.html",
+        "status": 200,
+        "sha256": "017164f9d4c18fcca8d1de1df025b2cba74acf951d6f9381e0a089e1fb28761c",
+        "matches_source": true
+      },
+      {
+        "path": "apparel-collection.html",
+        "status": 200,
+        "sha256": "a84e8643b6925283f6973a8fee43b27ad6ca06b8b37519c272ceca562064b7d4",
+        "matches_source": true
+      },
+      {
+        "path": "hero-lettering.css?v=20261020",
+        "status": 200,
+        "sha256": "84ca5f514241ed31492e4f70839c6c8fdb98597cf1f06b1d369f293fa9bff855",
+        "matches_source": true
+      },
+      {
+        "path": "site-design.css",
+        "status": 200,
+        "sha256": "8fe01340c91f5963774d47f4c86aa8ff9646c1af9413ddac17b9b1d2727c7c84",
+        "matches_source": true
+      },
+      {
+        "path": "site-appearance.css",
+        "status": 200,
+        "sha256": "fa5f7fe8d60d708d81625ab8229b29a493a2302595f4873f55f9d041dc00fa7e",
+        "matches_source": true
+      },
+      {
+        "path": "apparel.css",
+        "status": 200,
+        "sha256": "9641ef899ba1c499d5b5687614560c2fcb2e26b83d2a6bb928393705ab410c20",
+        "matches_source": true
+      },
+      {
+        "path": "site-motion.js",
+        "status": 200,
+        "sha256": "cff14d42c5d743dcc5bbee2bcafba6780c77bb58a40944e8700292c9ab94cc56",
+        "matches_source": true
+      },
+      {
+        "path": "site-motion.css",
+        "status": 200,
+        "sha256": "b2c4c1eebeddd76ebb7f6f5eda27ac91d82b16783df3619186217d2ad3143022",
+        "matches_source": true
+      },
+      {
+        "path": "assets/smf-motion-curves.json",
+        "status": 200,
+        "sha256": "d9197bbfa766676178103ef8834491b804a50d6468047a22f4a5d660c21ce619",
+        "matches_source": true
+      },
+      {
+        "path": "assets/brand/sport-my-fitness-original-lockup.png",
+        "status": 200,
+        "sha256": "202f885d450df6330d8b0809f0c61f43a7ce940f7c870004c9bf6683178aad63",
+        "matches_source": true
+      },
+      {
+        "path": "assets/brand/apparel-kit/brand-smart.jpg",
+        "status": 200,
+        "sha256": "0349a132474c265497fad5d884fd89adcb32bdeeb6ba6ef26baba2e27cf79487",
+        "matches_source": true
+      }
+    ],
+    "legacy_redirects": [
+      {
+        "from": "https://sportmyfitness.com/yoshi.html",
+        "to": "https://sportmyfitness.com/training.html",
+        "status": 308
+      }
+    ],
+    "extensionless_alias_note": "/yoshi is configured in the full-site Vercel project but the existing private gateway does not admit extensionless content paths; no gateway/access change is in scope. Its platform behavior is not claimed as verified here.",
+    "signed_out_checks": [
+      {
+        "path": "/",
+        "status": 200,
+        "shows_coming_soon": true
+      },
+      {
+        "path": "/training.html",
+        "status": 404,
+        "private_content_hidden": true
+      },
+      {
+        "path": "/apparel.html",
+        "status": 404,
+        "private_content_hidden": true
+      },
+      {
+        "path": "/hero-lettering.css",
+        "status": 404,
+        "private_content_hidden": true
+      },
+      {
+        "path": "/admin",
+        "status": 200,
+        "login_available": true
+      }
+    ],
+    "limits": "HTTP byte matching and platform redirect/privacy checks. Browser layout and motion evidence are recorded separately. No inquiry, call, account, DNS or billing action."
+  },
+  "limits": [
+    "Automated browser checks run against the candidate source served by the existing GitHub Actions browser environment; private live delivery is verified separately by authenticated HTTP byte matching.",
+    "No real inquiry, phone call, purchase or Google account action is submitted."
+  ],
+  "acceptance": [
+    {
+      "criterion": "Approved restrained outline/depth on all eight hero headlines",
+      "status": "confirmed",
+      "evidence": "Shared stylesheet loaded by all eight unchanged HTML bodies; 140 lettering cases; desktop/mobile visual review."
+    },
+    {
+      "criterion": "Readable foreground in both themes, with working header controls",
+      "status": "confirmed",
+      "evidence": "Foreground hit testing includes photo/decorative layers; minimum measured fill/outline contrast 5.585:1; header controls remain hit targets; existing navigation/appearance journeys pass."
+    },
+    {
+      "criterion": "Preserve logo/photos, spacing and original movement",
+      "status": "confirmed",
+      "evidence": "Existing runtime assets/styles/scripts unchanged; all 60 main hero geometry and photo-size cases match preceding release; 12 original-motion runs pass."
+    },
+    {
+      "criterion": "Publish tested code through existing private-review access",
+      "status": "confirmed",
+      "evidence": "Exact tested runtime on main; new production Vercel check success; 17 authenticated live files match, legacy redirect and five public/privacy checks pass."
+    }
+  ]
+}

@@ -2,6 +2,16 @@
 
 Updated October 21, 2026 (UTC); the floating Apparel design and clean carousel row are published and live-verified.
 
+## Latest Apparel cleanup — October 21, 2026
+
+At PJ's request, the redundant hero **View apparel** button is removed. The
+collection and full item cards already sit on this page. Only that button and
+its unused CSS are removed; the existing browser journey now scrolls directly
+to the collection. The CSS URL is versioned for this cleanup. Native garment
+scrolling, item anchors, cards and all other controls stay unchanged. Focused
+source and syntax checks cover this removal; the browser baseline below is
+from the preceding design release, not a rerun for this change.
+
 ## Current Apparel refinement — October 21, 2026
 
 **Published:** Runtime `46c3c326bf4c7f87e1461cd9e7df632fe250a899` is Production
@@ -53,7 +63,7 @@ cards and unknown prices become “Ask Yoshi for pricing”. No checkout is adde
 
 The separate Collection UI/popup is retired. Its old URL forwards to the main
 Apparel page, including a static JavaScript-disabled fallback. The exact kit
-master, existing Apparel campaign hero (apart from its same-page button target),
+master, existing Apparel campaign hero (apart from the removed redundant button),
 header/menu/call/theme controls, original motion and every other full-site page
 remain unchanged. The public Coming soon project and access settings are separate.
 See `docs/APPAREL_FLOATING_20261021.md` and the release receipt for fresh checks.

@@ -5,6 +5,10 @@ live review site. The agreed flow is one Apparel page: swipe/scroll isolated
 clothing, select an item, scroll to its full detail card, continue browsing the
 same collection. There is no separate product page or modal.
 
+PJ also requested removing the hero's **View apparel** button because the
+collection is on the same page. That redundant button and its unused CSS are
+removed. The existing browser journey scrolls to the collection directly.
+
 ## Cleaner row refinement
 
 PJ subsequently requested removing the counter and arrow buttons. The entire
@@ -55,7 +59,7 @@ for exact evidence and the resolved deployment issue.
   Other cards remain present. Back to apparel and browser history work normally.
 - Original site motion and reduced-motion behavior remain. The exact kit JPEG,
   original campaign photo/hero geometry, menu, phone and appearance controls are
-  retained; only the hero’s View apparel target changes to `#collection`.
+  retained; the redundant hero View apparel button is removed.
 - All other pages, shared styles/scripts, logos, photographs and form handling
   are unchanged. No Google, DNS, billing, protection or account setting changes.
 

@@ -84,9 +84,8 @@ async function journey(browser, engine, width) {
   const page = await browser.newPage({viewport: {width, height: 900}, reducedMotion: 'reduce'});
   try {
     await load(page);
-    await page.locator('.apparel-hero-actions a').click();
+    await page.locator('#collection').scrollIntoViewIfNeeded();
     assert.equal(new URL(page.url()).pathname, '/apparel.html');
-    assert.equal(new URL(page.url()).hash, '#collection');
     assert.equal(await page.locator('[data-carousel-controls], [data-carousel-position], [data-carousel-prev], [data-carousel-next]').count(), 0, 'counter or arrow controls remain');
     await page.locator('#apparel-look-track').focus();
     await page.keyboard.press('ArrowRight');

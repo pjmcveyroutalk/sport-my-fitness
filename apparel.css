@@ -37,8 +37,6 @@
 .apparel-page .apparel-hero-copy { width: 66%; max-width: 800px; padding-top: 0; }
 .apparel-page .apparel-hero-copy h1 { color: var(--apparel-ink); margin-top: 22px; margin-bottom: 24px; }
 .apparel-page .apparel-hero .hero-subline { font-size: clamp(20px, 2vw, 30px); }
-.apparel-page .apparel-hero-actions { display: flex; margin-top: 25px; }
-.apparel-page .apparel-hero-actions .button { width: auto; min-width: 200px; min-height: 52px; padding: 14px 24px; font-size: 17px; }
 .apparel-page .apparel-campaign-credit { position: absolute; z-index: 4; left: var(--gutter); bottom: 22px; max-width: calc(100% - 2 * var(--gutter)); color: var(--apparel-muted); font-size: 11px; line-height: 1.5; }
 .apparel-page .apparel-placeholder-label { position: absolute; z-index: 4; top: 10px; left: 10px; max-width: calc(100% - 20px); margin: 0; padding: 7px 9px; border: 1px solid #ffffffdf; border-radius: 7px; background: #f6f9f8f2; color: #172b31; font: 700 10px/1.35 var(--body); letter-spacing: .05em; pointer-events: none; }
 .apparel-page .apparel-hero-placeholder { top: calc(var(--header-height) + 18px); left: var(--gutter); max-width: calc(100% - 2 * var(--gutter)); }
@@ -129,8 +127,6 @@ body.apparel-page main.smf-inner-page > section.apparel-stage {
   .apparel-page .apparel-hero-copy .eyebrow { font-size: 12px; letter-spacing: .12em; }
   .apparel-page .apparel-hero-copy h1 { margin-top: 17px; margin-bottom: 18px; }
   .apparel-page .apparel-hero .hero-subline { font-size: 21px; }
-  .apparel-page .apparel-hero-actions { margin-top: 22px; }
-  .apparel-page .apparel-hero-actions .button { width: 100%; min-height: 48px; justify-content: center; font-size: 16px; }
   .apparel-page .apparel-campaign-credit { bottom: 19px; font-size: 11px; max-width: 32ch; }
   body.apparel-page main.smf-inner-page > section.apparel-stage { padding-block: 35px 0; }
   .apparel-stage .apparel-section-heading { gap: 12px; margin-bottom: 16px; }

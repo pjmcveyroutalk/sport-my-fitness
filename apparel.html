@@ -14,10 +14,10 @@
   <script src="site-appearance.js?v=light-dark-20261019"></script>
   <link rel="stylesheet" href="site-design.css?v=desktop-call-20261019">
   <link rel="stylesheet" href="site-appearance.css?v=light-dark-20261019">
-  <link rel="stylesheet" href="apparel.css?v=floating-apparel-nocta-20261021">
+  <link rel="stylesheet" href="apparel.css?v=carousel-card-20261021">
   <link rel="stylesheet" href="hero-lettering.css?v=20261020">
   <script src="site-menu.js?v=approved-glass-1" defer></script>
-  <script src="apparel.js?v=floating-apparel-clean-20261021" type="module"></script>
+  <script src="apparel.js?v=carousel-card-20261021" type="module"></script>
   <script>
   // Set the first pose before paint, with a short, fail-open deadline.
   (()=>{const r=document.documentElement;
@@ -81,7 +81,7 @@
     </section>
     <section class="apparel-lookbook apparel-stage" id="collection" aria-labelledby="lookbook-heading" tabindex="-1">
       <div class="wrap">
-        <div class="apparel-section-heading"><div><p class="eyebrow apparel-eyebrow">SPORT MY FITNESS · APPAREL</p><h2 id="lookbook-heading">IN THE <span class="apparel-accent">LOOK.</span></h2></div><p class="apparel-browse-hint" id="apparel-browse-hint">Scroll through. Select a style.</p></div>
+        <div class="apparel-section-heading"><div><p class="eyebrow apparel-eyebrow">SPORT MY FITNESS · APPAREL</p><h2 id="lookbook-heading">IN THE <span class="apparel-accent">LOOK.</span></h2></div><p class="apparel-browse-hint" id="apparel-browse-hint">Choose a style. Select to see details.</p></div>
         <p class="apparel-pending-notice" data-apparel-pending>Sample images shown. Yoshi’s product photos, descriptions, prices and options are on their way.</p>
         <p class="apparel-catalog-error" data-catalog-error role="status" hidden>Apparel details couldn’t refresh. Please try again or ask Yoshi.</p>
         <div class="apparel-carousel" role="region" aria-roledescription="carousel" aria-label="Sport My Fitness apparel">
@@ -93,9 +93,9 @@
               </a>
             </li>
             <li class="apparel-look-item">
-              <a href="#apparel-sample-tee" class="apparel-look-link">
-                <img class="apparel-floating-photo" src="assets/apparel/placeholders/sample-tee-20261021.webp" width="1254" height="1254" alt="Placeholder image: plain grey tee; illustrative sample, not actual Sport My Fitness apparel" loading="lazy" decoding="async">
-                <span class="apparel-look-name">Tee</span><span class="apparel-sample-label">SAMPLE IMAGE</span>
+              <a href="#apparel-sample-jacket" class="apparel-look-link">
+                <img class="apparel-floating-photo" src="assets/apparel/placeholders/sample-jacket-20261021.webp" width="1254" height="1254" alt="Placeholder image: plain turquoise jacket; illustrative sample, not actual Sport My Fitness apparel" loading="lazy" decoding="async">
+                <span class="apparel-look-name">Jacket</span><span class="apparel-sample-label">SAMPLE IMAGE</span>
               </a>
             </li>
             <li class="apparel-look-item">
@@ -105,14 +105,17 @@
               </a>
             </li>
             <li class="apparel-look-item">
-              <a href="#apparel-sample-jacket" class="apparel-look-link">
-                <img class="apparel-floating-photo" src="assets/apparel/placeholders/sample-jacket-20261021.webp" width="1254" height="1254" alt="Placeholder image: plain turquoise jacket; illustrative sample, not actual Sport My Fitness apparel" loading="lazy" decoding="async">
-                <span class="apparel-look-name">Jacket</span><span class="apparel-sample-label">SAMPLE IMAGE</span>
+              <a href="#apparel-sample-tee" class="apparel-look-link">
+                <img class="apparel-floating-photo" src="assets/apparel/placeholders/sample-tee-20261021.webp" width="1254" height="1254" alt="Placeholder image: plain grey tee; illustrative sample, not actual Sport My Fitness apparel" loading="lazy" decoding="async">
+                <span class="apparel-look-name">Tee</span><span class="apparel-sample-label">SAMPLE IMAGE</span>
               </a>
             </li>
           </ul>
+          <button class="apparel-carousel-arrow apparel-carousel-arrow--previous" type="button" aria-label="Previous style" aria-controls="apparel-look-track" data-carousel-previous hidden><span aria-hidden="true">‹</span></button>
+          <button class="apparel-carousel-arrow apparel-carousel-arrow--next" type="button" aria-label="Next style" aria-controls="apparel-look-track" data-carousel-next hidden><span aria-hidden="true">›</span></button>
+          <p class="apparel-carousel-caption" aria-live="polite" aria-atomic="true" data-carousel-caption hidden><span data-carousel-name></span><span class="apparel-sample-label" data-carousel-note></span></p>
         </div>
-        <div class="apparel-product-list" data-apparel-products>
+        <div class="apparel-product-list" id="apparel-product-details" data-apparel-products>
           <article class="apparel-product-card" id="apparel-sample-hoodie" aria-labelledby="apparel-sample-hoodie-title" tabindex="-1">
             <header class="apparel-product-heading"><p class="eyebrow apparel-eyebrow">APPAREL DETAILS · DESIGN SAMPLE</p><h3 id="apparel-sample-hoodie-title">Charcoal <span class="apparel-accent">Hoodie</span></h3></header>
             <div class="apparel-product-photos"><img class="apparel-detail-photo" src="assets/apparel/placeholders/sample-hoodie-20261021.webp" width="1254" height="1254" alt="Placeholder image: plain charcoal hoodie; illustrative sample, not actual Sport My Fitness apparel" loading="lazy" decoding="async"><p class="apparel-sample-label">SAMPLE IMAGE</p></div>

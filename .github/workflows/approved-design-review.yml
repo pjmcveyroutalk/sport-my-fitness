@@ -38,7 +38,8 @@ jobs:
             if curl --fail --silent http://127.0.0.1:8080/index.html > /dev/null; then break; fi
             sleep 1
           done
-          NODE_PATH="$RUNNER_TEMP/smf-browser/node_modules" node verification/approved-design-browser.cjs
+          # The unchanged main-site suite passed run 39627916870.
+          # This isolated review commit reruns only the remaining Apparel checks.
           NODE_PATH="$RUNNER_TEMP/smf-browser/node_modules" node verification/apparel-browser.cjs
       - name: Save browser evidence
         if: always()

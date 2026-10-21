@@ -213,8 +213,10 @@ async function approvedProducts(browser, engine, width) {
     assert.equal(await page.locator('.apparel-option').count(), 0, 'unsupplied options were invented');
     // A one-item catalogue needs neither arrow and still has a usable detail.
     await page.route('**/assets/apparel/catalog.json?*', route => route.fulfill({json: {version: 1, items: [tee]}}));
-    await load(page, 'apparel', '#apparel-fixture-tee');
+    await page.reload({waitUntil: 'networkidle'});
     await page.waitForFunction(() => document.querySelector('[data-apparel-catalog]').dataset.apparelState === 'approved');
+    assert.equal(await page.locator('#apparel-look-track > li').count(), 1);
+    await currentLink(page).click();
     await selectedCard(page, 'apparel-fixture-tee');
     assert.equal(await page.locator('.apparel-carousel-arrow:visible').count(), 0);
     report.approvedProducts.push({engine, width, fixtureOnly: true, approvalGates: true, oneAndTwoItems: true, photoSelection: true, realOptionsOnly: true, unknownsNotZero: true, pass: true});

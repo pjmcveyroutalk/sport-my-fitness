@@ -1,0 +1,307 @@
+{
+  "status": "IMPLEMENTED_AND_VERIFIED_IN_GITHUB; LIVE_PUBLICATION_BLOCKED",
+  "recorded_at_utc": "2026-10-21T16:04:15.804829+00:00",
+  "request": "Apply the approved floating apparel carousel and same-page product details to the live review site while actual owner photos, prices and descriptions are pending.",
+  "baseline_commit": "0c079918298d1c631f2cb6eace6f749af008c4cd",
+  "tested_runtime_commit": "89c41124ab0fbf3340a459814ef28b87dfc0009e",
+  "release_candidate": "8259bf62c4e524406cbae35ea111462a39666689",
+  "main_runtime_commit": "df34ef40a5ba0201a0e4463b057c41ff5b01862e",
+  "source_tree": "676fccf2fcb8f079ddf2187c1d43b5754dd333db",
+  "current_live_state": "Live authenticated Apparel HTML/CSS/JS still belong to the previous design; four new garment assets return 404. Do not tell PJ this release is live.",
+  "release_difference": "Final main HTML only renames its two CSS/JS query version keys. Reversing that replacement yields the exact tested HTML. No visual or behavior changes after the inspected runtime.",
+  "browser": {
+    "main_site": {
+      "run_id": 39627916870,
+      "artifact_id": 12358457160,
+      "artifact_sha256": "c6a596af8c58766082c92da86de4f34f248ddb9fd4a606850ccf7fc75e5c1557",
+      "results": {
+        "started": "2026-10-21T15:42:06.905Z",
+        "layouts": 60,
+        "navigation": 24,
+        "motion": 12,
+        "locations": 4,
+        "platformMarks": 20,
+        "headers": 66,
+        "connections": 16,
+        "consolidation": 10,
+        "legacyYoshi": 4,
+        "appearance": 24,
+        "lettering": 84,
+        "safeguards": 23,
+        "failures": 0,
+        "chromiumVersion": "151.0.7922.34",
+        "webkitVersion": "26.5",
+        "completed": "2026-10-21T15:45:54.469Z"
+      },
+      "note": "Main-site portion passes. The initial Apparel test failed only on a WebKit automated click-stability wait in the keyboard fallback, corrected in the final focused run."
+    },
+    "final_apparel": {
+      "run_id": 39629389215,
+      "job_id": 119323147376,
+      "check_commit": "2fe8ed1256b9319cce4b682afe0dc458b6ccdb36",
+      "artifact_id": 12358786583,
+      "artifact_sha256": "60690ea68330d535994c42f64f95e27dc1f54e7c244188715b51a3e38ceb488c",
+      "results": {
+        "started": "2026-10-21T15:52:03.137Z",
+        "layouts": 36,
+        "lettering": 36,
+        "journeys": 4,
+        "approvedProducts": 4,
+        "fallbacks": 4,
+        "failures": 0,
+        "completed": "2026-10-21T15:53:07.711Z"
+      },
+      "source_equivalence": "Only the CI workflow command differs from release candidate 8259bf62c4e524406cbae35ea111462a39666689. The isolated workflow change is not on main.",
+      "render_captures_identical_to_inspected_runtime": 24,
+      "different_captures": []
+    }
+  },
+  "visual_review": {
+    "inspected": [
+      "chromium-apparel-row-dark-1334.png",
+      "chromium-apparel-detail-dark-390.png",
+      "webkit-apparel-row-light-1334.png",
+      "webkit-apparel-detail-light-390.png"
+    ],
+    "result": "Approved floating cutouts and clean same-page detail flow; mobile header offset counted once, garments proportional in both themes."
+  },
+  "source_checks": {
+    "unit_and_verifier_tests_pass": 6,
+    "unique_ids_local_links_aria": true,
+    "exact_existing_apparel_header_hero_footer_preservation": true,
+    "other_six_pages_and_shared_styles_scripts_motion_unchanged": true,
+    "official_kit_master_sha256": "0349a132474c265497fad5d884fd89adcb32bdeeb6ba6ef26baba2e27cf79487",
+    "real_catalogue_empty": true,
+    "unbranded_samples_with_true_alpha": 4,
+    "prices_options_descriptions_pending": true
+  },
+  "source_hashes": [
+    {
+      "path": "apparel.html",
+      "sha256": "4b622cc232f9e40892050f82d124e79299a172cbf4dbfcba7e616b7e8ef59361"
+    },
+    {
+      "path": "apparel.css",
+      "sha256": "87ebec5a97ceb949ce04c6c57187a4053d3a69fa9109d165de44dbca509f5897"
+    },
+    {
+      "path": "apparel.js",
+      "sha256": "00156d473097eb6e3ab475899fb7ecb5bef0751ec987d4cfa0e62688bf908090"
+    },
+    {
+      "path": "apparel-collection.html",
+      "sha256": "fc05decd7d440833a052a5e828ecfc78bcbf034ed8dadf5bea0c88079c83846a"
+    },
+    {
+      "path": "vercel.json",
+      "sha256": "1e0cc4fa275d94a313f62f27de999c02b9d5e444aef4229caf70461f4dbb913a"
+    },
+    {
+      "path": "assets/apparel/catalog.json",
+      "sha256": "b485e80423217a2f3c89915de77f2f4e5232a742feec45aeeee56735eea05f67"
+    },
+    {
+      "path": "assets/apparel/placeholders/sample-hoodie-20261021.webp",
+      "sha256": "28426e7395c69cba4c8e055761ba893942bfb24cf08a4392a33c3d4fb25ef4f1"
+    },
+    {
+      "path": "assets/apparel/placeholders/sample-jacket-20261021.webp",
+      "sha256": "000e6056e4f20f5e9e11559b2da790db19c64034095da90ae8adcb470dbb8615"
+    },
+    {
+      "path": "assets/apparel/placeholders/sample-pants-20261021.webp",
+      "sha256": "b32b3a52818404f5d17b1c7ad9c1831c6a403ba7700775073ca21b749f9ad579"
+    },
+    {
+      "path": "assets/apparel/placeholders/sample-tee-20261021.webp",
+      "sha256": "a79833780a1d49807eb367d0d70560ce9318c3fb375ba99bc571e885d5c1f6f9"
+    }
+  ],
+  "live_verification": {
+    "checked_at_utc": "2026-10-21T15:57:31.734011+00:00",
+    "files": [
+      {
+        "path": "apparel.html",
+        "status": 200,
+        "expected_sha256": "454c7ffc1f5637fab91b164bc60b31fb4a17cb6d8fafe8caaf53bb1fb43e14e6",
+        "served_sha256": "08d3e5fa7f5c33d999f79e75371253215e39276644b1469f888eb4809307832d",
+        "source_matches": false,
+        "pass": false,
+        "source_difference_count": 229
+      },
+      {
+        "path": "apparel.css",
+        "status": 200,
+        "expected_sha256": "87ebec5a97ceb949ce04c6c57187a4053d3a69fa9109d165de44dbca509f5897",
+        "served_sha256": "9641ef899ba1c499d5b5687614560c2fcb2e26b83d2a6bb928393705ab410c20",
+        "source_matches": false,
+        "pass": false
+      },
+      {
+        "path": "apparel.js",
+        "status": 200,
+        "expected_sha256": "00156d473097eb6e3ab475899fb7ecb5bef0751ec987d4cfa0e62688bf908090",
+        "served_sha256": "f54ccce7709edcadb2e50d82097559852cad44e7a2ff598603a7605f732a0c8b",
+        "source_matches": false,
+        "pass": false
+      },
+      {
+        "path": "apparel-catalog.js",
+        "status": 200,
+        "expected_sha256": "a145aac05f2b400b2487d00695069a99a4223eaf8f0b55fcb800ee0f65c8d488",
+        "served_sha256": "a145aac05f2b400b2487d00695069a99a4223eaf8f0b55fcb800ee0f65c8d488",
+        "source_matches": true,
+        "pass": true
+      },
+      {
+        "path": "assets/apparel/catalog.json",
+        "status": 200,
+        "expected_sha256": "b485e80423217a2f3c89915de77f2f4e5232a742feec45aeeee56735eea05f67",
+        "served_sha256": "b485e80423217a2f3c89915de77f2f4e5232a742feec45aeeee56735eea05f67",
+        "source_matches": true,
+        "pass": true
+      },
+      {
+        "path": "assets/apparel/placeholders/sample-hoodie-20261021.webp",
+        "status": 404,
+        "expected_sha256": "28426e7395c69cba4c8e055761ba893942bfb24cf08a4392a33c3d4fb25ef4f1",
+        "served_sha256": "f3a819e13ed6e446667e939d385000ecaee1a10b64da82bfe70ff64c676b1439",
+        "source_matches": false,
+        "pass": false
+      },
+      {
+        "path": "assets/apparel/placeholders/sample-tee-20261021.webp",
+        "status": 404,
+        "expected_sha256": "a79833780a1d49807eb367d0d70560ce9318c3fb375ba99bc571e885d5c1f6f9",
+        "served_sha256": "5e4ee82449f61b522798f193ff7d254e609fc6561e4f424866b84fe976c8fd06",
+        "source_matches": false,
+        "pass": false
+      },
+      {
+        "path": "assets/apparel/placeholders/sample-pants-20261021.webp",
+        "status": 404,
+        "expected_sha256": "b32b3a52818404f5d17b1c7ad9c1831c6a403ba7700775073ca21b749f9ad579",
+        "served_sha256": "c4ee727050fcd03a7d5235e8c16e142d2755ad0d01d5a103f7537cc7dffaa164",
+        "source_matches": false,
+        "pass": false
+      },
+      {
+        "path": "assets/apparel/placeholders/sample-jacket-20261021.webp",
+        "status": 404,
+        "expected_sha256": "000e6056e4f20f5e9e11559b2da790db19c64034095da90ae8adcb470dbb8615",
+        "served_sha256": "2707af249309b60787b8849664898e702bcce33973817120c346845ef691cafd",
+        "source_matches": false,
+        "pass": false
+      },
+      {
+        "path": "assets/brand/apparel-kit/brand-smart.jpg",
+        "status": 200,
+        "expected_sha256": "0349a132474c265497fad5d884fd89adcb32bdeeb6ba6ef26baba2e27cf79487",
+        "served_sha256": "0349a132474c265497fad5d884fd89adcb32bdeeb6ba6ef26baba2e27cf79487",
+        "source_matches": true,
+        "pass": true
+      },
+      {
+        "path": "index.html",
+        "status": 200,
+        "expected_sha256": "e1d46e1b5b6849ad99f84d55cfb04a5f825e6db5b301abdb3ecdd517d5f9b2b8",
+        "served_sha256": "f356edc037a0d20c3b1c6a8685ded77fecaf82f5e89e2b58a9baa0f7e7e89c51",
+        "gateway_admin_insertions": 1,
+        "source_matches": true,
+        "pass": true
+      },
+      {
+        "path": "training.html",
+        "status": 200,
+        "expected_sha256": "ff4a57d6be1ab8bcec7f43991cface9fbd2f5ef611cb8ddb1afa583555bf5d48",
+        "served_sha256": "57efb559fbd70a9ef567c63fd752330b4f96e423d5e45e08d239d1f058d0ae63",
+        "gateway_admin_insertions": 1,
+        "source_matches": true,
+        "pass": true
+      },
+      {
+        "path": "site-motion.js",
+        "status": 200,
+        "expected_sha256": "cff14d42c5d743dcc5bbee2bcafba6780c77bb58a40944e8700292c9ab94cc56",
+        "served_sha256": "cff14d42c5d743dcc5bbee2bcafba6780c77bb58a40944e8700292c9ab94cc56",
+        "source_matches": true,
+        "pass": true
+      },
+      {
+        "path": "site-appearance.js",
+        "status": 200,
+        "expected_sha256": "f0f7da63ead1687e331450bd182c5e6cadf4740f822a46ac9c493fa0f5d3d6c5",
+        "served_sha256": "f0f7da63ead1687e331450bd182c5e6cadf4740f822a46ac9c493fa0f5d3d6c5",
+        "source_matches": true,
+        "pass": true
+      },
+      {
+        "path": "hero-lettering.css",
+        "status": 200,
+        "expected_sha256": "84ca5f514241ed31492e4f70839c6c8fdb98597cf1f06b1d369f293fa9bff855",
+        "served_sha256": "84ca5f514241ed31492e4f70839c6c8fdb98597cf1f06b1d369f293fa9bff855",
+        "source_matches": true,
+        "pass": true
+      }
+    ],
+    "legacy": {
+      "status": 200,
+      "destination": "https://sportmyfitness.com/apparel-collection.html",
+      "main_apparel": false,
+      "pass": false
+    },
+    "privacy": [
+      {
+        "path": "/",
+        "status": 200,
+        "pass": true
+      },
+      {
+        "path": "/admin",
+        "status": 200,
+        "pass": true
+      },
+      {
+        "path": "/apparel.html",
+        "status": 404,
+        "pass": true
+      },
+      {
+        "path": "/apparel-collection.html",
+        "status": 404,
+        "pass": true
+      },
+      {
+        "path": "/assets/apparel/catalog.json",
+        "status": 404,
+        "pass": true
+      },
+      {
+        "path": "/assets/apparel/placeholders/sample-hoodie-20261021.webp",
+        "status": 404,
+        "pass": true
+      }
+    ],
+    "credentials_or_cookies_saved": false,
+    "all_pass": false
+  },
+  "deployment_block": {
+    "provider": "Vercel connected app",
+    "target": "production",
+    "team": "routalk-builder",
+    "team_id": "team_jC9jlJ9GZ9GSjrbYoD0pin3U",
+    "project": "sport-my-fitness",
+    "project_id": "prj_gekwpLHnnGbcuGHOp47ieG9C93xJ",
+    "git_sha": "df34ef40a5ba0201a0e4463b057c41ff5b01862e",
+    "http_status": 403,
+    "message": "You don't have permission to create a Production Deployment for this project.",
+    "github_main_updates_completed": true,
+    "github_vercel_status_for_new_main": "No status reported; live source remained old at verification.",
+    "cli_fallback": "Vercel CLI is not installed.",
+    "no_access_or_account_setting_changed": true,
+    "next_step": "Obtain the browser-tool-required approval to use the Vercel dashboard, or a working authorized production deployment connection. Deploy current main to the existing full-site project; preserve the public Coming soon project/protection. Then rerun authenticated live hashes/legacy redirect and signed-out privacy checks. Do not repeat passing browser suites unless runtime changes."
+  },
+  "review_entry": "https://sportmyfitness.com/admin",
+  "credentials_or_cookies_saved": false,
+  "runtime_or_access_rollback_needed": false
+}

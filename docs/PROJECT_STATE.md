@@ -1,8 +1,25 @@
 # Sport My Fitness — Current Project State
 
-Updated October 21, 2026 (UTC); approved floating apparel refinement prepared for the existing private-review website.
+Updated October 21, 2026 (UTC); floating apparel implementation verified and saved on main; production publishing is blocked.
 
 ## Current Apparel refinement — October 21, 2026
+
+**Deployment checkpoint:** The implementation is on `main`, runtime
+`df34ef40a5ba0201a0e4463b057c41ff5b01862e`, but **is not live**. The connected
+Vercel app rejects production deployment with HTTP 403: “You don't have permission
+to create a Production Deployment for this project.” New main commits have no
+Vercel status, and authenticated live checks still return the previous Apparel
+HTML/CSS/JS; the four new cutouts return 404. The public Coming soon page and six
+signed-out privacy checks remain intact. No account or access setting changed.
+
+Chromium/WebKit checks pass: 36 Apparel layouts, four complete item journeys,
+four approved-data/photo/pricing fixtures and four JS/network fallbacks; the
+unchanged main site also passes 60 layouts, 24 navigation, 24 appearance and
+12 original-motion runs. All 24 final captures match the inspected runtime.
+See `verification/apparel-floating-20261021.json` for exact runs, source hashes,
+limits and the deployment error. **Do not redo the implementation or passing
+browser tests.** Finish publishing current main to the existing full-site
+project with authorized Vercel access, then check live hashes and privacy.
 
 PJ approved the floating cutout carousel and inline product cards, then explicitly
 requested applying it to the live site. `apparel.html` now contains both browsing

@@ -6,6 +6,11 @@ Start with [the current project state](docs/PROJECT_STATE.md). It resolves the o
 
 ## Current work
 
+**Publication pending:** The new Apparel implementation is verified on main,
+but Vercel’s connected app denied production publishing (HTTP 403). The live
+review site still shows the previous Apparel version. Resume from the
+[deployment checkpoint](verification/apparel-floating-20261021.json).
+
 The October 21 Apparel refinement puts the floating garment carousel and each
 item’s full details on **one Apparel page**. It follows the approved mockups:
 transparent cutouts, no product frames or prices in the row, native horizontal

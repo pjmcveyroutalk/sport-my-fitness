@@ -1,6 +1,7 @@
 # Sport My Fitness apparel assets
 
-The October 21 floating design is integrated on **one** Apparel page, retaining
+The October 21 floating design is implemented on **one** Apparel page in main;
+production publication is blocked by Vercel app permissions. It retains
 `noindex,nofollow` and the existing private-review entrance. See
 `docs/APPAREL_FLOATING_20261021.md` for the current layout and release evidence.
 Yoshi's actual product photos, descriptions, prices and options are pending.

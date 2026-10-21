@@ -4,6 +4,14 @@ Updated October 21, 2026 (UTC); floating apparel implementation verified and sav
 
 ## Current Apparel refinement — October 21, 2026
 
+**Latest requested refinement:** PJ removed the visible carousel counter,
+previous/next buttons and progress bar. The floating row retains native swipe,
+trackpad and keyboard scrolling, and its same-page item anchors. The obsolete
+control markup, styles and JavaScript are removed; product details and all
+other page elements are unchanged. This refinement is source-verified; the
+previous passing browser run is the baseline. Production is still blocked as
+recorded below; browser-dashboard fallback approval has not been given.
+
 **Deployment checkpoint:** The implementation is on `main`, runtime
 `df34ef40a5ba0201a0e4463b057c41ff5b01862e`, but **is not live**. The connected
 Vercel app rejects production deployment with HTTP 403: “You don't have permission

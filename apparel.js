@@ -6,46 +6,12 @@ const root = document.querySelector('[data-apparel-catalog]');
 if (root) {
   const track = root.querySelector('#apparel-look-track');
   const products = root.querySelector('[data-apparel-products]');
-  const controls = root.querySelector('[data-carousel-controls]');
-  const previous = root.querySelector('[data-carousel-prev]');
-  const next = root.querySelector('[data-carousel-next]');
-  const position = root.querySelector('[data-carousel-position]');
-  const progress = root.querySelector('[data-carousel-progress]');
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
-  let frame = 0;
-
-  function updateCarousel() {
-    frame = 0;
-    const max = Math.max(0, track.scrollWidth - track.clientWidth);
-    const offset = Math.max(0, Math.min(max, track.scrollLeft));
-    const bounds = track.getBoundingClientRect();
-    const cards = [...track.children];
-    const visible = cards.flatMap((card, index) => {
-      const box = card.getBoundingClientRect();
-      return Math.min(bounds.right, box.right) - Math.max(bounds.left, box.left) >= box.width * .4 ? [index + 1] : [];
-    });
-    previous.disabled = offset <= 2;
-    next.disabled = offset >= max - 2;
-    controls.hidden = max < 3;
-    const first = visible[0] || 1;
-    const last = visible.at(-1) || first;
-    const label = `${first === last ? first : `${first}–${last}`} of ${cards.length}`;
-    if (position.textContent !== label) position.textContent = label;
-    const thumb = Math.min(100, track.clientWidth / Math.max(track.scrollWidth, 1) * 100);
-    progress.style.width = `${thumb}%`;
-    progress.style.left = `${max ? offset / max * (100 - thumb) : 0}%`;
-  }
-  function queueUpdate() {
-    if (!frame) frame = requestAnimationFrame(updateCarousel);
-  }
   function move(direction) {
     const width = track.firstElementChild?.getBoundingClientRect().width || track.clientWidth;
     const gap = parseFloat(getComputedStyle(track).columnGap) || 0;
     track.scrollBy({left: direction * (width + gap), behavior: reducedMotion.matches ? 'auto' : 'smooth'});
   }
-  previous.addEventListener('click', () => move(-1));
-  next.addEventListener('click', () => move(1));
-  track.addEventListener('scroll', queueUpdate, {passive: true});
   track.addEventListener('keydown', event => {
     if (event.target !== track) return;
     if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
@@ -55,8 +21,6 @@ if (root) {
       track.scrollTo({left: event.key === 'Home' ? 0 : track.scrollWidth, behavior: reducedMotion.matches ? 'auto' : 'smooth'});
     }
   });
-  if ('ResizeObserver' in window) new ResizeObserver(queueUpdate).observe(track);
-  else addEventListener('resize', queueUpdate);
 
   function markSelection() {
     track.querySelectorAll('a').forEach(link => {
@@ -66,7 +30,6 @@ if (root) {
   }
   addEventListener('hashchange', markSelection);
   markSelection();
-  updateCarousel();
 
   function element(tag, className, text) {
     const node = document.createElement(tag);
@@ -154,8 +117,7 @@ if (root) {
     root.dataset.apparelState = 'approved';
     root.querySelector('[data-apparel-pending]').hidden = true;
     markSelection();
-    updateCarousel();
-    // An incoming product fragment may precede the asynchronous catalogue.
+      // An incoming product fragment may precede the asynchronous catalogue.
     const target = [...products.children].find(card => `#${card.id}` === location.hash);
     if (target) requestAnimationFrame(() => target.scrollIntoView({behavior: 'instant', block: 'start'}));
   }

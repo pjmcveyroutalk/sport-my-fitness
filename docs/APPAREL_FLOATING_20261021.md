@@ -5,6 +5,17 @@ live review site. The agreed flow is one Apparel page: swipe/scroll isolated
 clothing, select an item, scroll to its full detail card, continue browsing the
 same collection. There is no separate product page or modal.
 
+## Cleaner row refinement
+
+PJ subsequently requested removing the counter and arrow buttons. The entire
+control strip (counter, progress bar and arrows) is removed. Native swipe,
+trackpad and keyboard scrolling and same-page item links remain. No extra
+space replaces the deleted strip. Header/menu/call controls, photo choices,
+detail cards, images and branding remain unchanged. JavaScript syntax and
+focused source-preservation checks pass for this small removal; the prior
+browser run below records the full design baseline, not a new run of this
+refinement. Publication remains blocked by the existing Vercel permission error.
+
 ## Current publication checkpoint
 
 The source is implemented and verified on main (`df34ef40a5ba0201a0e4463b057c41ff5b01862e`),
@@ -37,7 +48,7 @@ be repeated unless runtime changes.
   rectangular frames/fills, and proportional `object-fit: contain` sizing.
 - The collection uses the existing textured dark/light site canvas. Mobile
   displays a large garment and a peek of the next; desktop displays several.
-- The native row supports touch, trackpad, Tab focus, previous/next controls and
+- The native row supports touch, trackpad, Tab focus and
   focused-row Arrow/Home/End keys. There is no autoplay or scroll hijacking.
 - Ordinary item fragments keep navigation on `apparel.html`. Full cards include
   the photograph(s), description, confirmed price/options and inquiry action.

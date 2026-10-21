@@ -80,14 +80,6 @@ body.apparel-page main.smf-inner-page > section.apparel-stage {
 .apparel-stage .apparel-look-link[aria-current="location"] .apparel-look-name::after,
 .apparel-stage .apparel-look-link:focus-visible .apparel-look-name::after { left: 22%; right: 22%; }
 .apparel-stage .apparel-sample-label { margin-top: 7px; color: var(--muted); font: 700 10px/1.5 var(--body); letter-spacing: .12em; text-align: center; }
-.apparel-stage .apparel-carousel-navigation { display: flex; align-items: center; gap: 22px; margin-top: 4px; padding-bottom: 32px; }
-.apparel-stage .apparel-carousel-position { min-width: 56px; color: var(--muted); font-size: 12px; }
-.apparel-stage .apparel-carousel-progress { position: relative; flex: 1; height: 3px; margin-left: auto; max-width: 380px; overflow: hidden; border-radius: 3px; background: var(--line); }
-.apparel-stage .apparel-carousel-progress > span { position: absolute; top: 0; bottom: 0; left: 0; width: 25%; border-radius: inherit; background: var(--apparel-stage-accent); }
-.apparel-stage .apparel-carousel-buttons { display: flex; gap: 12px; }
-.apparel-stage .apparel-circle-button { display: inline-flex; justify-content: center; align-items: center; width: 46px; height: 46px; min-width: 46px; padding: 0 0 4px; border: 1px solid currentColor; border-radius: 50%; color: var(--ink); background: transparent; font: 400 32px/1 var(--body); }
-.apparel-stage .apparel-circle-button:hover:not(:disabled) { color: var(--apparel-stage-accent); }
-.apparel-stage .apparel-circle-button:disabled { opacity: .35; cursor: default; }
 .apparel-stage .apparel-product-list { padding-top: 8px; }
 .apparel-stage .apparel-product-card { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-template-rows: auto 1fr; grid-template-areas: 'photos heading' 'photos content'; align-content: start; gap: 0 clamp(28px, 5vw, 80px); padding-block: clamp(40px, 5vw, 72px); border-top: 1px solid var(--line); scroll-margin-top: 20px; }
 .apparel-stage .apparel-product-card:focus:not(:focus-visible) { outline: none; }
@@ -149,8 +141,6 @@ body.apparel-page main.smf-inner-page > section.apparel-stage {
   .apparel-stage .apparel-look-track { --look-width: 85%; gap: 18px; padding-top: 18px; }
   .apparel-stage .apparel-floating-photo { height: clamp(270px, 83vw, 380px); }
   .apparel-stage .apparel-look-name { font-size: 18px; }
-  .apparel-stage .apparel-carousel-navigation { gap: 16px; padding-bottom: 28px; }
-  .apparel-stage .apparel-carousel-progress { max-width: none; }
   .apparel-stage .apparel-product-card { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto; grid-template-areas: 'heading' 'photos' 'content'; gap: 20px; padding-block: 32px 40px; }
   .apparel-stage .apparel-product-heading { padding-top: 0; }
   .apparel-stage .apparel-product-heading .eyebrow { font-size: 11px; }

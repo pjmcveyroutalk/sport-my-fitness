@@ -2,6 +2,24 @@
 
 Updated October 21, 2026 (America/Chicago). The current Apparel implementation uses the approved centered carousel and a single replaceable card.
 
+## Latest carousel motion correction — October 21, 2026
+
+PJ reported choppy desktop motion. The cause was removing side garments from
+rendering during entry/exit. Rows now remain painted through a 460ms transform/
+opacity animation. Rapid input continues from the composed frame; nearby images
+are warmed before browsing. Reduced-motion mode stays immediate. Offstage items
+are inert and excluded from assistive navigation. The approved design and single
+replaceable product card are preserved.
+
+The same runtime passes 44 responsive layouts plus the existing visitor/data/
+fallback journeys in run `39651637738`. The dedicated motion comparison passes
+all six Chromium/WebKit phone/desktop cases in run `39652430417` and reproduces
+the old popping in six baseline cases. The initial motion harness mixed two
+WebKit compositor times; the final test holds an exact interrupted frame.
+No runtime change was made between those two checks. Frame timings are recorded,
+not treated as physical-device FPS certification. CI now retains this regression.
+See `verification/apparel-smoothness-20261021.json` for the current release status.
+
 ## Current Apparel carousel — October 21, 2026
 
 **Published and live-verified:** Runtime `c9a061b5977aae2ba69fb229fec7fe230e14f59a`

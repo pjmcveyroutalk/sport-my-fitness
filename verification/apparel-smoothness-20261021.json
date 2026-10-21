@@ -1,0 +1,796 @@
+{
+  "schema_version": 1,
+  "checked_at_utc": "2026-10-21T18:28:54.465185+00:00",
+  "requirement": "Smooth desktop carousel entry, exit and interrupted navigation; retain the approved cutouts and one-card behavior.",
+  "baseline": "9ad5d302c78b7625123552560b92d3f422a1c5e0",
+  "cause": "Changing row.hidden removed outgoing garments immediately and prevented incoming CSS interpolation.",
+  "implementation": [
+    "Persistent rendered rows; offstage items are inert and hidden from assistive navigation.",
+    "Composed transform/opacity animation over 460ms, with cached current frames for rapid retargeting.",
+    "Batched style reads/writes and bounded compositor hints; no nested hover lift.",
+    "Intersection-based image warming before the carousel enters view.",
+    "Reduced-motion preference cancels animations; design and product-card interaction are preserved."
+  ],
+  "functional_checks": {
+    "run_id": 39651637738,
+    "review_commit": "d560d364b3157015aef43b8b166682edb976143b",
+    "artifact_id": 12368789252,
+    "artifact_sha256": "ba8aca3341e9f3438411a21d45c648f142237ef805e46f5f4aea7d3c45c70e3d",
+    "portion_result": "44 layouts, 44 lettering checks, six journeys, six catalogue fixtures, four fallbacks and four normal-motion journeys pass. Overall job failed only in the new rapid-motion measuring harness.",
+    "counts": {
+      "layouts": 44,
+      "lettering": 44,
+      "journeys": 6,
+      "approvedProducts": 6,
+      "fallbacks": 4,
+      "motion": 4,
+      "failures": 0
+    }
+  },
+  "motion_checks": {
+    "run_id": 39652430417,
+    "review_commit": "af991a23852b83eeb3df33289af65093fbe6f3a5",
+    "conclusion": "success",
+    "artifact_id": 12369847903,
+    "artifact_sha256": "d904d160dda1e4e1bd7e0bcfc096bcecdd59f6313fe6560c8b5f5c35a1973052",
+    "baseline_reproductions": [
+      {
+        "exitSamples": 0,
+        "enterSamples": 0,
+        "persistentRows": false,
+        "frameCount": 40,
+        "centerSamples": 11,
+        "frameTiming": {
+          "medianMs": 16.699999999999818,
+          "p95Ms": 16.799999999999955,
+          "maxMs": 16.800000000000068
+        },
+        "imagesReady": true,
+        "endpoints": {
+          "first": {
+            "time": 5.600000000046521,
+            "exit": {
+              "display": "none",
+              "opacity": 1,
+              "scale": null
+            },
+            "enter": {
+              "display": "list-item",
+              "opacity": 0.8,
+              "scale": 0.64
+            },
+            "center": {
+              "display": "list-item",
+              "opacity": 0.8,
+              "scale": 0.64
+            },
+            "displayed": 3
+          },
+          "last": {
+            "time": 655.5000000000466,
+            "exit": {
+              "display": "none",
+              "opacity": 1,
+              "scale": null
+            },
+            "enter": {
+              "display": "list-item",
+              "opacity": 0.8,
+              "scale": 0.64
+            },
+            "center": {
+              "display": "list-item",
+              "opacity": 1,
+              "scale": 1
+            },
+            "displayed": 3
+          }
+        },
+        "engine": "chromium",
+        "width": 390,
+        "continuous": false
+      },
+      {
+        "exitSamples": 0,
+        "enterSamples": 0,
+        "persistentRows": false,
+        "frameCount": 40,
+        "centerSamples": 11,
+        "frameTiming": {
+          "medianMs": 16.699999999999932,
+          "p95Ms": 16.700000000000045,
+          "maxMs": 16.700000000000045
+        },
+        "imagesReady": true,
+        "endpoints": {
+          "first": {
+            "time": 8.600000000000023,
+            "exit": {
+              "display": "none",
+              "opacity": 1,
+              "scale": null
+            },
+            "enter": {
+              "display": "list-item",
+              "opacity": 0.8,
+              "scale": 0.64
+            },
+            "center": {
+              "display": "list-item",
+              "opacity": 0.8,
+              "scale": 0.64
+            },
+            "displayed": 3
+          },
+          "last": {
+            "time": 658.5,
+            "exit": {
+              "display": "none",
+              "opacity": 1,
+              "scale": null
+            },
+            "enter": {
+              "display": "list-item",
+              "opacity": 0.8,
+              "scale": 0.64
+            },
+            "center": {
+              "display": "list-item",
+              "opacity": 1,
+              "scale": 1
+            },
+            "displayed": 3
+          }
+        },
+        "engine": "chromium",
+        "width": 1366,
+        "continuous": false
+      },
+      {
+        "exitSamples": 0,
+        "enterSamples": 0,
+        "persistentRows": false,
+        "frameCount": 39,
+        "centerSamples": 11,
+        "frameTiming": {
+          "medianMs": 16.699999999999932,
+          "p95Ms": 16.799999999999955,
+          "maxMs": 33.299999999999955
+        },
+        "imagesReady": true,
+        "endpoints": {
+          "first": {
+            "time": 11.800000000011664,
+            "exit": {
+              "display": "none",
+              "opacity": 1,
+              "scale": null
+            },
+            "enter": {
+              "display": "list-item",
+              "opacity": 0.8,
+              "scale": 0.64
+            },
+            "center": {
+              "display": "list-item",
+              "opacity": 0.8,
+              "scale": 0.64
+            },
+            "displayed": 3
+          },
+          "last": {
+            "time": 661.8000000000116,
+            "exit": {
+              "display": "none",
+              "opacity": 1,
+              "scale": null
+            },
+            "enter": {
+              "display": "list-item",
+              "opacity": 0.8,
+              "scale": 0.64
+            },
+            "center": {
+              "display": "list-item",
+              "opacity": 1,
+              "scale": 1
+            },
+            "displayed": 3
+          }
+        },
+        "engine": "chromium",
+        "width": 1920,
+        "continuous": false
+      },
+      {
+        "exitSamples": 0,
+        "enterSamples": 0,
+        "persistentRows": false,
+        "frameCount": 41,
+        "centerSamples": 12,
+        "frameTiming": {
+          "medianMs": 16,
+          "p95Ms": 21,
+          "maxMs": 33
+        },
+        "imagesReady": true,
+        "endpoints": {
+          "first": {
+            "time": 3,
+            "exit": {
+              "display": "none",
+              "opacity": 1,
+              "scale": null
+            },
+            "enter": {
+              "display": "list-item",
+              "opacity": 0.8,
+              "scale": 0.64
+            },
+            "center": {
+              "display": "list-item",
+              "opacity": 0.800576,
+              "scale": 0.641038
+            },
+            "displayed": 3
+          },
+          "last": {
+            "time": 663,
+            "exit": {
+              "display": "none",
+              "opacity": 1,
+              "scale": null
+            },
+            "enter": {
+              "display": "list-item",
+              "opacity": 0.8,
+              "scale": 0.64
+            },
+            "center": {
+              "display": "list-item",
+              "opacity": 1,
+              "scale": 1
+            },
+            "displayed": 3
+          }
+        },
+        "engine": "webkit",
+        "width": 390,
+        "continuous": false
+      },
+      {
+        "exitSamples": 0,
+        "enterSamples": 0,
+        "persistentRows": false,
+        "frameCount": 36,
+        "centerSamples": 9,
+        "frameTiming": {
+          "medianMs": 16,
+          "p95Ms": 44,
+          "maxMs": 50
+        },
+        "imagesReady": true,
+        "endpoints": {
+          "first": {
+            "time": 54,
+            "exit": {
+              "display": "none",
+              "opacity": 1,
+              "scale": null
+            },
+            "enter": {
+              "display": "list-item",
+              "opacity": 0.8,
+              "scale": 0.64
+            },
+            "center": {
+              "display": "list-item",
+              "opacity": 0.851496,
+              "scale": 0.732693
+            },
+            "displayed": 3
+          },
+          "last": {
+            "time": 656,
+            "exit": {
+              "display": "none",
+              "opacity": 1,
+              "scale": null
+            },
+            "enter": {
+              "display": "list-item",
+              "opacity": 0.8,
+              "scale": 0.64
+            },
+            "center": {
+              "display": "list-item",
+              "opacity": 1,
+              "scale": 1
+            },
+            "displayed": 3
+          }
+        },
+        "engine": "webkit",
+        "width": 1366,
+        "continuous": false
+      },
+      {
+        "exitSamples": 0,
+        "enterSamples": 0,
+        "persistentRows": false,
+        "frameCount": 24,
+        "centerSamples": 0,
+        "frameTiming": {
+          "medianMs": 16,
+          "p95Ms": 51,
+          "maxMs": 52
+        },
+        "imagesReady": true,
+        "endpoints": {
+          "first": {
+            "time": 222,
+            "exit": {
+              "display": "none",
+              "opacity": 1,
+              "scale": null
+            },
+            "enter": {
+              "display": "list-item",
+              "opacity": 0.8,
+              "scale": 0.64
+            },
+            "center": {
+              "display": "list-item",
+              "opacity": 0.991621,
+              "scale": 0.984918
+            },
+            "displayed": 3
+          },
+          "last": {
+            "time": 652,
+            "exit": {
+              "display": "none",
+              "opacity": 1,
+              "scale": null
+            },
+            "enter": {
+              "display": "list-item",
+              "opacity": 0.8,
+              "scale": 0.64
+            },
+            "center": {
+              "display": "list-item",
+              "opacity": 1,
+              "scale": 1
+            },
+            "displayed": 3
+          }
+        },
+        "engine": "webkit",
+        "width": 1920,
+        "continuous": false
+      }
+    ],
+    "candidate_results": [
+      {
+        "exitSamples": 16,
+        "enterSamples": 16,
+        "persistentRows": true,
+        "frameCount": 40,
+        "centerSamples": 14,
+        "frameTiming": {
+          "medianMs": 16.700000000000045,
+          "p95Ms": 16.799999999999955,
+          "maxMs": 16.800000000000068
+        },
+        "imagesReady": true,
+        "endpoints": {
+          "first": {
+            "time": 9.600000000023329,
+            "exit": {
+              "display": "list-item",
+              "opacity": 0.8,
+              "scale": 0.64
+            },
+            "enter": {
+              "display": "list-item",
+              "opacity": 0,
+              "scale": 0.5
+            },
+            "center": {
+              "display": "list-item",
+              "opacity": 0.8,
+              "scale": 0.64
+            },
+            "displayed": 4
+          },
+          "last": {
+            "time": 659.6000000000233,
+            "exit": {
+              "display": "list-item",
+              "opacity": 0,
+              "scale": 0.5
+            },
+            "enter": {
+              "display": "list-item",
+              "opacity": 0.8,
+              "scale": 0.64
+            },
+            "center": {
+              "display": "list-item",
+              "opacity": 1,
+              "scale": 1
+            },
+            "displayed": 4
+          }
+        },
+        "engine": "chromium",
+        "width": 390,
+        "continuous": true,
+        "rapid": {
+          "maxShift": 0,
+          "maxOpacityJump": 0,
+          "current": "#apparel-sample-hoodie",
+          "hiddenRows": 0
+        },
+        "oneCardPreserved": true,
+        "reducedMotion": true,
+        "pass": true
+      },
+      {
+        "exitSamples": 16,
+        "enterSamples": 16,
+        "persistentRows": true,
+        "frameCount": 40,
+        "centerSamples": 14,
+        "frameTiming": {
+          "medianMs": 16.699999999999932,
+          "p95Ms": 16.799999999999955,
+          "maxMs": 16.799999999999955
+        },
+        "imagesReady": true,
+        "endpoints": {
+          "first": {
+            "time": 10.100000000011619,
+            "exit": {
+              "display": "list-item",
+              "opacity": 0.8,
+              "scale": 0.64
+            },
+            "enter": {
+              "display": "list-item",
+              "opacity": 0,
+              "scale": 0.5
+            },
+            "center": {
+              "display": "list-item",
+              "opacity": 0.8,
+              "scale": 0.64
+            },
+            "displayed": 4
+          },
+          "last": {
+            "time": 660.1000000000117,
+            "exit": {
+              "display": "list-item",
+              "opacity": 0,
+              "scale": 0.5
+            },
+            "enter": {
+              "display": "list-item",
+              "opacity": 0.8,
+              "scale": 0.64
+            },
+            "center": {
+              "display": "list-item",
+              "opacity": 1,
+              "scale": 1
+            },
+            "displayed": 4
+          }
+        },
+        "engine": "chromium",
+        "width": 1366,
+        "continuous": true,
+        "rapid": {
+          "maxShift": 0,
+          "maxOpacityJump": 0,
+          "current": "#apparel-sample-hoodie",
+          "hiddenRows": 0
+        },
+        "oneCardPreserved": true,
+        "reducedMotion": true,
+        "pass": true
+      },
+      {
+        "exitSamples": 16,
+        "enterSamples": 16,
+        "persistentRows": true,
+        "frameCount": 40,
+        "centerSamples": 14,
+        "frameTiming": {
+          "medianMs": 16.700000000000045,
+          "p95Ms": 16.700000000000045,
+          "maxMs": 16.800000000000182
+        },
+        "imagesReady": true,
+        "endpoints": {
+          "first": {
+            "time": 10.200000000000045,
+            "exit": {
+              "display": "list-item",
+              "opacity": 0.8,
+              "scale": 0.64
+            },
+            "enter": {
+              "display": "list-item",
+              "opacity": 0,
+              "scale": 0.5
+            },
+            "center": {
+              "display": "list-item",
+              "opacity": 0.8,
+              "scale": 0.64
+            },
+            "displayed": 4
+          },
+          "last": {
+            "time": 660.2,
+            "exit": {
+              "display": "list-item",
+              "opacity": 0,
+              "scale": 0.5
+            },
+            "enter": {
+              "display": "list-item",
+              "opacity": 0.8,
+              "scale": 0.64
+            },
+            "center": {
+              "display": "list-item",
+              "opacity": 1,
+              "scale": 1
+            },
+            "displayed": 4
+          }
+        },
+        "engine": "chromium",
+        "width": 1920,
+        "continuous": true,
+        "rapid": {
+          "maxShift": 0,
+          "maxOpacityJump": 0,
+          "current": "#apparel-sample-hoodie",
+          "hiddenRows": 0
+        },
+        "oneCardPreserved": true,
+        "reducedMotion": true,
+        "pass": true
+      },
+      {
+        "exitSamples": 16,
+        "enterSamples": 16,
+        "persistentRows": true,
+        "frameCount": 40,
+        "centerSamples": 14,
+        "frameTiming": {
+          "medianMs": 16,
+          "p95Ms": 23,
+          "maxMs": 40
+        },
+        "imagesReady": true,
+        "endpoints": {
+          "first": {
+            "time": 8,
+            "exit": {
+              "display": "list-item",
+              "opacity": 0.8,
+              "scale": 0.64
+            },
+            "enter": {
+              "display": "list-item",
+              "opacity": 0,
+              "scale": 0.5
+            },
+            "center": {
+              "display": "list-item",
+              "opacity": 0.8,
+              "scale": 0.64
+            },
+            "displayed": 4
+          },
+          "last": {
+            "time": 653,
+            "exit": {
+              "display": "list-item",
+              "opacity": 0,
+              "scale": 0.5
+            },
+            "enter": {
+              "display": "list-item",
+              "opacity": 0.8,
+              "scale": 0.64
+            },
+            "center": {
+              "display": "list-item",
+              "opacity": 1,
+              "scale": 1
+            },
+            "displayed": 4
+          }
+        },
+        "engine": "webkit",
+        "width": 390,
+        "continuous": true,
+        "rapid": {
+          "maxShift": 0,
+          "maxOpacityJump": 0,
+          "current": "#apparel-sample-hoodie",
+          "hiddenRows": 0
+        },
+        "oneCardPreserved": true,
+        "reducedMotion": true,
+        "pass": true
+      },
+      {
+        "exitSamples": 12,
+        "enterSamples": 12,
+        "persistentRows": true,
+        "frameCount": 36,
+        "centerSamples": 10,
+        "frameTiming": {
+          "medianMs": 16,
+          "p95Ms": 21,
+          "maxMs": 38
+        },
+        "imagesReady": true,
+        "endpoints": {
+          "first": {
+            "time": 82,
+            "exit": {
+              "display": "list-item",
+              "opacity": 0.304375,
+              "scale": 0.552601
+            },
+            "enter": {
+              "display": "list-item",
+              "opacity": 0.499425,
+              "scale": 0.587399
+            },
+            "center": {
+              "display": "list-item",
+              "opacity": 0.924856,
+              "scale": 0.864741
+            },
+            "displayed": 4
+          },
+          "last": {
+            "time": 659,
+            "exit": {
+              "display": "list-item",
+              "opacity": 0,
+              "scale": 0.5
+            },
+            "enter": {
+              "display": "list-item",
+              "opacity": 0.8,
+              "scale": 0.64
+            },
+            "center": {
+              "display": "list-item",
+              "opacity": 1,
+              "scale": 1
+            },
+            "displayed": 4
+          }
+        },
+        "engine": "webkit",
+        "width": 1366,
+        "continuous": true,
+        "rapid": {
+          "maxShift": 0,
+          "maxOpacityJump": 0,
+          "current": "#apparel-sample-hoodie",
+          "hiddenRows": 0
+        },
+        "oneCardPreserved": true,
+        "reducedMotion": true,
+        "pass": true
+      },
+      {
+        "exitSamples": 7,
+        "enterSamples": 7,
+        "persistentRows": true,
+        "frameCount": 31,
+        "centerSamples": 5,
+        "frameTiming": {
+          "medianMs": 16,
+          "p95Ms": 31,
+          "maxMs": 171
+        },
+        "imagesReady": true,
+        "endpoints": {
+          "first": {
+            "time": 4,
+            "exit": {
+              "display": "list-item",
+              "opacity": 0.8,
+              "scale": 0.64
+            },
+            "enter": {
+              "display": "list-item",
+              "opacity": 0,
+              "scale": 0.5
+            },
+            "center": {
+              "display": "list-item",
+              "opacity": 0.8,
+              "scale": 0.64
+            },
+            "displayed": 4
+          },
+          "last": {
+            "time": 652,
+            "exit": {
+              "display": "list-item",
+              "opacity": 0,
+              "scale": 0.5
+            },
+            "enter": {
+              "display": "list-item",
+              "opacity": 0.8,
+              "scale": 0.64
+            },
+            "center": {
+              "display": "list-item",
+              "opacity": 1,
+              "scale": 1
+            },
+            "displayed": 4
+          }
+        },
+        "engine": "webkit",
+        "width": 1920,
+        "continuous": true,
+        "rapid": {
+          "maxShift": 0,
+          "maxOpacityJump": 0,
+          "current": "#apparel-sample-hoodie",
+          "hiddenRows": 0
+        },
+        "oneCardPreserved": true,
+        "reducedMotion": true,
+        "pass": true
+      }
+    ],
+    "failures": [],
+    "test_correction": "Rapid retarget measurements hold the old frame and sample new animations at time zero. This isolates WebKit compositor clock advancement; no motion threshold was loosened. Runtime is unchanged from the full functional check."
+  },
+  "source_sha256": {
+    "apparel.html": "3378443bf637af85d909330c0b28b71363bad9fa9f0487eb48339dc130fa2599",
+    "apparel.css": "c128c1b43385046a5aa0f6f6a4119ef2e9d33c93ba4c451fe6076ae1c7683648",
+    "apparel.js": "746ac89226053b7a2fdca01c0727869abb26e8ef57ea19972b7d45667d086b90",
+    "verification/apparel-browser.cjs": "ccae949491e055c6df146d4bc8fa30e67405476c251dbf84ee888a3fe9c36932",
+    "verification/apparel-smoothness.cjs": "57eec061bc33448b9dbc737013ec3b3f84e64bf612fefcf72f405a8e3e287dd3",
+    ".github/workflows/approved-design-review.yml": "e3fb9e5b5f608548ecbb33db68c84a35f26e39204eee73cafabb472875361cbf"
+  },
+  "scope_preserved": [
+    "All other pages, exact logo and product/campaign image bytes.",
+    "Prices, approval gates, appearance, menu and original shared page motion.",
+    "Existing full-site protection and separate public Coming soon project."
+  ],
+  "visual_review": [
+    "Chromium desktop dark and WebKit mobile light source-identical renders inspected."
+  ],
+  "publication": {
+    "status": "verified_ready_for_release",
+    "project": "sport-my-fitness",
+    "project_id": "prj_gekwpLHnnGbcuGHOp47ieG9C93xJ",
+    "review_entry": "https://sportmyfitness.com/admin"
+  },
+  "limits": [
+    "Frame timings are headless-runner diagnostics, not a physical Chromebook FPS guarantee. All raw timings, including a WebKit 1920px long frame, remain in this receipt.",
+    "The unpaused entry/exit checks and controlled interrupted-frame checks test different animation properties.",
+    "Owner garment facts remain pending; no real inquiry or purchase was submitted."
+  ]
+}

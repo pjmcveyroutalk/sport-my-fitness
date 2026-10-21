@@ -60,3 +60,14 @@ select Apparel in that same tab. Never submit a real inquiry while testing.
 Accepted browser run: `39644190729`, review source `cfbb3de10601d08f5889ad35adcefb1a445f9b37`. All 44 responsive layouts, six visitor journeys, six catalogue fixture cases, four fallbacks and four motion cases pass in Chromium and WebKit. Desktop/mobile dark/light renders were inspected. See the receipt for exact hashes, earlier failures and limits.
 
 Published runtime `c9a061b5977aae2ba69fb229fec7fe230e14f59a`, Production `dpl_561nQ4amD9Ji421aehxQVApYY6fC` (READY). All 15 authenticated HTML/asset comparisons, legacy Collection forwarding and six signed-out privacy checks pass. All Deployments Authentication stays enabled. The release receipt stores the live source hashes and privacy results; no credential/cookie is recorded.
+
+## Smooth motion correction
+
+The latest correction retains garment rows during entry and exit instead of
+using display:none. Only transform/opacity animate; rapid clicks retarget from
+the composed frame. Image warming and compositor hints avoid cold entries and
+nested hover transforms. Offstage garments are inert/aria-hidden. Reduced-motion
+mode and all normal one-card behavior remain available. The retained CI motion
+regression compares actual frames against the previous release and checks rapid
+retargeting at a fixed frame time. Full responsive checks and focused motion
+checks use identical runtime bytes. See `verification/apparel-smoothness-20261021.json`.

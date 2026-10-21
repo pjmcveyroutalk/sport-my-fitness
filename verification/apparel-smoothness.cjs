@@ -61,13 +61,23 @@ async function probe(browser, engine, width, base, baseline) {
       const snapshot = row => { const s = getComputedStyle(row); return {x: new DOMMatrixReadOnly(s.transform).m41, opacity: Number(s.opacity)}; };
       let maxShift = 0, maxOpacityJump = 0;
       for (let step = 0; step < 3; step++) {
+        // Hold a precise composed frame. WebKit's compositor clock otherwise
+        // advances between the two measurements and looks like a tiny jump.
+        rows.flatMap(row => row.getAnimations()).forEach(animation => {
+          const time = animation.currentTime;
+          animation.pause();
+          if (time !== null) animation.currentTime = time;
+        });
         const before = rows.map(snapshot);
         next.click();
+        const restarted = rows.flatMap(row => row.getAnimations());
+        restarted.forEach(animation => { animation.pause(); animation.currentTime = 0; });
         const after = rows.map(snapshot);
         before.forEach((old, i) => {
           if (old.opacity > .05 || after[i].opacity > .05) maxShift = Math.max(maxShift, Math.abs(old.x - after[i].x));
           maxOpacityJump = Math.max(maxOpacityJump, Math.abs(old.opacity - after[i].opacity));
         });
+        restarted.forEach(animation => animation.play());
         await new Promise(resolve => setTimeout(resolve, 90));
       }
       await Promise.all(rows.flatMap(row => row.getAnimations()).map(animation => animation.finished.catch(() => {})));

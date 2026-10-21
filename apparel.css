@@ -55,7 +55,8 @@ body.apparel-page main.smf-inner-page > section.apparel-stage {
   background-color: var(--canvas-color);
   background-image: var(--canvas-image);
   background-size: var(--canvas-size);
-  scroll-margin-top: calc(var(--header-height) + 20px);
+  /* The shared html scroll-padding already clears the fixed mobile header. */
+  scroll-margin-top: 20px;
 }
 :root[data-theme="light"] body.apparel-page main.smf-inner-page > section.apparel-stage {
   --apparel-stage-accent: #006e78;
@@ -88,7 +89,7 @@ body.apparel-page main.smf-inner-page > section.apparel-stage {
 .apparel-stage .apparel-circle-button:hover:not(:disabled) { color: var(--apparel-stage-accent); }
 .apparel-stage .apparel-circle-button:disabled { opacity: .35; cursor: default; }
 .apparel-stage .apparel-product-list { padding-top: 8px; }
-.apparel-stage .apparel-product-card { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-template-rows: auto 1fr; grid-template-areas: 'photos heading' 'photos content'; align-content: start; gap: 0 clamp(28px, 5vw, 80px); padding-block: clamp(40px, 5vw, 72px); border-top: 1px solid var(--line); scroll-margin-top: calc(var(--header-height) + 20px); }
+.apparel-stage .apparel-product-card { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-template-rows: auto 1fr; grid-template-areas: 'photos heading' 'photos content'; align-content: start; gap: 0 clamp(28px, 5vw, 80px); padding-block: clamp(40px, 5vw, 72px); border-top: 1px solid var(--line); scroll-margin-top: 20px; }
 .apparel-stage .apparel-product-card:focus:not(:focus-visible) { outline: none; }
 .apparel-stage .apparel-product-heading { grid-area: heading; min-width: 0; padding-top: 20px; }
 .apparel-stage .apparel-product-heading .eyebrow { font-size: 13px; letter-spacing: .12em; }

@@ -106,8 +106,12 @@ async function journey(browser, engine, width) {
     await page.waitForFunction(hash => [...document.querySelectorAll('.apparel-look-link')].some(link => link.hash === hash && link.getAttribute('aria-current') === 'location'), target);
     assert.equal(await link.getAttribute('aria-current'), 'location');
     const card = page.locator(target);
-    const top = await card.evaluate(el => ({top: el.getBoundingClientRect().top, header: parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--header-height'))}));
+    const top = await card.evaluate(el => {
+      const header = document.querySelector('.site-header');
+      return {top: el.getBoundingClientRect().top, header: getComputedStyle(header).position === 'fixed' ? header.getBoundingClientRect().bottom : 0};
+    });
     assert(top.top >= top.header, 'fixed header covers the selected product');
+    assert(top.top <= top.header + 60, 'header offset was counted twice and left a gap above the selected product');
     assert.equal(await page.locator('[data-apparel-products] > article:visible').count(), 4, 'selection removed the rest of the collection');
     assert.equal(await page.locator('dialog[open]').count(), 0, 'selection opened a popup');
     assert.equal(await card.locator('.button').getAttribute('href'), 'contact.html#inquiry');

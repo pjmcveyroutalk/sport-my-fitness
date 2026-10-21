@@ -7,7 +7,9 @@ Start with [the current project state](docs/PROJECT_STATE.md). It resolves the o
 ## Current work
 
 **Published and live-verified:** the accepted carousel source is now on the
-existing private review site. Browser and served-file checks pass.
+existing private review site. Browser and served-file checks pass. The latest
+[smooth-motion correction](verification/apparel-smoothness-20261021.json) also
+checks real entry/exit frames and interrupted navigation.
 
 The Apparel page now uses the approved **centered cutout carousel with one
 selected product card beneath it**. Side arrows work with a mouse; keyboard and

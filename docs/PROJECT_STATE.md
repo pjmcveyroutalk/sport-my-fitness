@@ -4,6 +4,14 @@ Updated October 21, 2026 (America/Chicago). The current Apparel implementation u
 
 ## Latest carousel motion correction — October 21, 2026
 
+**Published and live-verified:** Runtime `1ecc57b8763e34b3a1857c02764dcb43cfbde2cd`,
+Production `dpl_7zYB59fbbPXqbjMS8ox5eajhZva6` (READY). All 15 authenticated
+HTML/asset comparisons match the tested source, including the new versioned CSS
+and JS. Collection forwarding and all six signed-out privacy checks pass.
+The existing full-site protection and public Coming soon page are preserved.
+Refresh the Apparel page to load the new asset versions. The checkpoint after
+this runtime changes documentation/evidence only.
+
 PJ reported choppy desktop motion. The cause was removing side garments from
 rendering during entry/exit. Rows now remain painted through a 460ms transform/
 opacity animation. Rapid input continues from the composed frame; nearby images

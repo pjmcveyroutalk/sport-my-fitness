@@ -71,3 +71,5 @@ mode and all normal one-card behavior remain available. The retained CI motion
 regression compares actual frames against the previous release and checks rapid
 retargeting at a fixed frame time. Full responsive checks and focused motion
 checks use identical runtime bytes. See `verification/apparel-smoothness-20261021.json`.
+
+Motion correction published from `1ecc57b8763e34b3a1857c02764dcb43cfbde2cd`, Production `dpl_7zYB59fbbPXqbjMS8ox5eajhZva6` (READY). All 15 live source checks and six signed-out privacy checks pass; see the motion receipt.

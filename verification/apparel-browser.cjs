@@ -13,7 +13,6 @@ function save() { fs.writeFileSync(path.join(out, 'results.json'), JSON.stringif
 async function load(page, route = 'apparel', hash = '') {
   assert.equal((await page.goto(`${base}/${route}.html${hash}`, {waitUntil: 'networkidle'})).status(), 200);
   await page.evaluate(() => document.fonts.ready);
-  await page.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
 }
 const visibleCards = page => page.locator('[data-apparel-products] > article:visible');
 const currentLink = page => page.locator('[data-position="current"] .apparel-look-link');

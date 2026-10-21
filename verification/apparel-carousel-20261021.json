@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "checked_at_utc": "2026-10-21T17:33:47.056972+00:00",
+  "requirement": "Centered floating-cutout carousel; one enlarged product card below; another selection replaces it on the same page.",
+  "baseline_commit": "1787b0d539d1ac9183152f4e2906377a0719acdd",
+  "tested_review_commit": "cfbb3de10601d08f5889ad35adcefb1a445f9b37",
+  "browser_run": {
+    "id": 39644190729,
+    "job_id": 119375324142,
+    "url": "https://github.com/pjmcveyroutalk/sport-my-fitness/actions/runs/39644190729",
+    "conclusion": "success",
+    "artifact_id": 12367161076,
+    "artifact_sha256": "1c0238fa0973c24a786125e023f9962de540f9c5a3016ab1144309b1921b2b86",
+    "counts": {
+      "layouts": 44,
+      "lettering": 44,
+      "journeys": 6,
+      "approvedProducts": 6,
+      "fallbacks": 4,
+      "motion": 4,
+      "failures": 0
+    },
+    "engines": [
+      "Chromium",
+      "WebKit"
+    ],
+    "widths": [
+      320,
+      360,
+      390,
+      600,
+      768,
+      900,
+      901,
+      1024,
+      1334,
+      1366,
+      1920
+    ],
+    "themes": [
+      "dark",
+      "light"
+    ]
+  },
+  "runtime_sha256": {
+    "apparel.html": "ce745c5265ed6fa3c25cea81d2031e5fe413dd3363b39e02985e6ddd176238d3",
+    "apparel.css": "23df43bd7ad01da0eed0f52363e9384888dad333d54810518de199f7ded7fc10",
+    "apparel.js": "014c4dcbaa6b5874a5238cd90a14c9f1eb1055515fcbde52a5fddd8a5f0fa5be",
+    "apparel-catalog.js": "a145aac05f2b400b2487d00695069a99a4223eaf8f0b55fcb800ee0f65c8d488",
+    "verification/apparel-browser.cjs": "1e1c985bd2092a79ab53595675130508e9ac89f08f81f1baba19f6085087e057"
+  },
+  "confirmed": [
+    "No horizontal document overflow at every checked width.",
+    "Mouse arrows, keyboard cycling/activation and touch input.",
+    "Only one product article exists after a selection; replacement keeps the carousel above it.",
+    "Desktop two-column and mobile stacked detail layout.",
+    "Live resize preserves selection.",
+    "Original image containment, exact kit logo and textured appearances.",
+    "Supplied real options/prices only; missing real prices never become zero.",
+    "One- and two-item catalogues, additional photos and owner approval gates.",
+    "History, reload/deep links, menu, appearance persistence and reduced motion.",
+    "Script-disabled static fallback, catalogue failure and legacy Collection forwarding."
+  ],
+  "visual_review": [
+    "Chromium desktop/mobile in dark/light: centered cutouts, lower single card and replacement inspected.",
+    "WebKit desktop dark and mobile replacement in both themes inspected."
+  ],
+  "unchanged_source_paths": [
+    "index.html",
+    "training.html",
+    "programs.html",
+    "media.html",
+    "community.html",
+    "contact.html",
+    "site-design.css",
+    "site-appearance.css",
+    "site-appearance.js",
+    "site-motion.css",
+    "site-motion.js",
+    "site-menu.js",
+    "hero-lettering.css",
+    "assets/brand",
+    "assets/apparel/placeholders",
+    ".github/workflows/approved-design-review.yml"
+  ],
+  "earlier_attempts": [
+    {
+      "run": 39642067603,
+      "result": "failed deep-link position assertion after 22 Chromium layouts",
+      "resolution": "Wait for page/font layout before restoring a saved selection; measure settled layout and respect document-end bounds."
+    },
+    {
+      "run": 39642633088,
+      "result": "test-only single-item fixture tried a fragment navigation instead of fetching its new catalogue",
+      "resolution": "Reload the fixture catalogue explicitly."
+    },
+    {
+      "run": 39643074592,
+      "result": "success for the preceding runtime; superseded by the load/font readiness improvement"
+    },
+    {
+      "run": 39643621024,
+      "result": "test-only animation-frame promise in JavaScript-disabled fallback",
+      "resolution": "Keep frame waits inside the script-enabled reload journey."
+    }
+  ],
+  "publication": {
+    "status": "verified_ready_for_release",
+    "project": "sport-my-fitness",
+    "project_id": "prj_gekwpLHnnGbcuGHOp47ieG9C93xJ",
+    "target": "production",
+    "review_entry": "https://sportmyfitness.com/admin",
+    "all_deployments_authentication_preserved": true
+  },
+  "limits": [
+    "Browser-engine/viewport checks, not physical-device certification.",
+    "Product photos, prices, sizes and colors are pending from Yoshi; sample options remain explicitly illustrative.",
+    "No actual inquiry, call, purchase, Google/DNS/account/billing/protection change."
+  ]
+}

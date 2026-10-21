@@ -6,20 +6,22 @@ Start with [the current project state](docs/PROJECT_STATE.md). It resolves the o
 
 ## Current work
 
-**Published and verified:** The floating Apparel design and clean row without
-a counter or arrows are live through the existing private-review entrance.
-See [the release receipt](verification/apparel-floating-20261021.json).
+The Apparel page now uses the approved **centered cutout carousel with one
+selected product card beneath it**. Side arrows work with a mouse; keyboard and
+touch input cycle styles. Selecting another item replaces the card in place.
+Desktop details sit beside the enlarged cutout; mobile details stack below it.
+There is no bottom counter/progress strip, popup or separate product page.
 
-The October 21 Apparel refinement puts the floating garment carousel and each
-item’s full details on **one Apparel page**. It follows the approved mockups:
-transparent cutouts, no product frames or prices in the row, native horizontal
-scrolling, and an inline card for each garment. Clearly labeled samples remain
-until Yoshi supplies the actual clothing photos, descriptions, prices and options.
-The real approved-products catalogue remains empty; unknown prices are inquiries.
-See [the implementation](docs/APPAREL_FLOATING_20261021.md) and
-[the current project state](docs/PROJECT_STATE.md) for verification/release status.
+Clearly labeled sample garments and illustrative option controls remain until
+Yoshi supplies actual photos, prices, descriptions and available sizes/colors.
+Only owner-approved catalogue entries replace those samples. Unknown real
+prices are inquiries, never zero. There is no checkout.
+
+See [the implementation](docs/APPAREL_CAROUSEL_20261021.md),
+[verification receipt](verification/apparel-carousel-20261021.json), and
+[current project state](docs/PROJECT_STATE.md). The existing full-site project,
+private review entrance and separate public Coming soon page are retained.
 Review at https://sportmyfitness.com/admin, then choose Apparel in the same tab.
-The public Coming soon page and account/hosting setup remain separate.
 
 ## Earlier design checkpoints
 

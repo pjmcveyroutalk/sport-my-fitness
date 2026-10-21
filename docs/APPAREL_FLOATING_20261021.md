@@ -1,5 +1,8 @@
 # Floating Apparel — October 21, 2026
 
+Historical row checkpoint. The current centered carousel and single selected
+card supersede this layout; see `APPAREL_CAROUSEL_20261021.md`.
+
 PJ approved the two mockups and explicitly requested applying the design to the
 live review site. The agreed flow is one Apparel page: swipe/scroll isolated
 clothing, select an item, scroll to its full detail card, continue browsing the

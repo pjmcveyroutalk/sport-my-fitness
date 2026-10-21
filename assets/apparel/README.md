@@ -1,9 +1,10 @@
 # Sport My Fitness apparel assets
 
 The October 21 floating design is published and verified on **one** Apparel page.
-The clean row has no counter, arrow buttons or progress bar. It retains
+The current centered carousel has side arrows and one replaceable detail card
+below. There is no bottom counter or progress bar. It retains
 `noindex,nofollow` and the existing private-review entrance. See
-`docs/APPAREL_FLOATING_20261021.md` for the current layout and release evidence.
+`docs/APPAREL_CAROUSEL_20261021.md` for the current layout and release evidence.
 Yoshi's actual product photos, descriptions, prices and options are pending.
 
 ## Floating sample garments
@@ -15,10 +16,14 @@ Each image has a visible SAMPLE IMAGE label and placeholder alt text. All are
 1254 × 1254, exported proportionally with their alpha preserved. Exact prompts
 and export settings are in `placeholders/prompts-20261021.json`.
 
-The four sample detail cards state that descriptions/options are pending and
-pricing is by inquiry. They do not invent actual product facts. The approved
-catalogue remains empty. Once actual approved entries exist, the browser replaces
-both sample browsing and detail areas with those entries, on the same page.
+The sample catalogue remains empty of real stock. Selecting a sample renders
+only its detail card, with Price coming soon and clearly marked illustrative
+sizes/colors awaiting Yoshi's confirmation. Those controls demonstrate the
+approved design, not availability, variants or an order. Once actual approved
+entries exist, they replace both sample browsing and detail data. Only supplied
+real options appear; missing options stay To be confirmed. Real unknown pricing
+remains Ask Yoshi for pricing. The same one-card interaction applies to both.
+Without JavaScript, ordinary anchors still reach the static sample details.
 
 ## Official branding
 

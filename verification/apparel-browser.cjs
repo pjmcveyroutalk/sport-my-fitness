@@ -101,6 +101,9 @@ async function journey(browser, engine, width) {
     await link.click();
     assert.equal(new URL(page.url()).pathname, '/apparel.html');
     assert.equal(new URL(page.url()).hash, target);
+    // Native fragment navigation commits the URL before its hashchange task.
+    // Wait for the visible/current-item update instead of racing the browser.
+    await page.waitForFunction(hash => [...document.querySelectorAll('.apparel-look-link')].some(link => link.hash === hash && link.getAttribute('aria-current') === 'location'), target);
     assert.equal(await link.getAttribute('aria-current'), 'location');
     const card = page.locator(target);
     const top = await card.evaluate(el => ({top: el.getBoundingClientRect().top, header: parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--header-height'))}));

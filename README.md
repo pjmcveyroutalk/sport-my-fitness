@@ -6,6 +6,9 @@ Start with [the current project state](docs/PROJECT_STATE.md). It resolves the o
 
 ## Current work
 
+**Published and live-verified:** the accepted carousel source is now on the
+existing private review site. Browser and served-file checks pass.
+
 The Apparel page now uses the approved **centered cutout carousel with one
 selected product card beneath it**. Side arrows work with a mouse; keyboard and
 touch input cycle styles. Selecting another item replaces the card in place.

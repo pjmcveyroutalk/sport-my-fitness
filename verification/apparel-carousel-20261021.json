@@ -105,12 +105,183 @@
     }
   ],
   "publication": {
-    "status": "verified_ready_for_release",
+    "status": "published_and_live_verified",
     "project": "sport-my-fitness",
     "project_id": "prj_gekwpLHnnGbcuGHOp47ieG9C93xJ",
     "target": "production",
     "review_entry": "https://sportmyfitness.com/admin",
-    "all_deployments_authentication_preserved": true
+    "all_deployments_authentication_preserved": true,
+    "runtime_commit": "c9a061b5977aae2ba69fb229fec7fe230e14f59a",
+    "deployment_id": "dpl_561nQ4amD9Ji421aehxQVApYY6fC",
+    "ready_state": "READY",
+    "live_check": {
+      "checked_at_utc": "2026-10-21T17:36:04.686152+00:00",
+      "files": [
+        {
+          "path": "apparel.html",
+          "status": 200,
+          "expected_sha256": "ce745c5265ed6fa3c25cea81d2031e5fe413dd3363b39e02985e6ddd176238d3",
+          "served_sha256": "6437024f1f557b427fe755a9f223356d4c986eb599ae4b33f702a886b5dcf9f3",
+          "source_matches": true,
+          "gateway_admin_insertions": 1,
+          "pass": true
+        },
+        {
+          "path": "apparel.css?v=carousel-card-20261021",
+          "status": 200,
+          "expected_sha256": "23df43bd7ad01da0eed0f52363e9384888dad333d54810518de199f7ded7fc10",
+          "served_sha256": "23df43bd7ad01da0eed0f52363e9384888dad333d54810518de199f7ded7fc10",
+          "source_matches": true,
+          "pass": true
+        },
+        {
+          "path": "apparel.js?v=carousel-card-20261021",
+          "status": 200,
+          "expected_sha256": "014c4dcbaa6b5874a5238cd90a14c9f1eb1055515fcbde52a5fddd8a5f0fa5be",
+          "served_sha256": "014c4dcbaa6b5874a5238cd90a14c9f1eb1055515fcbde52a5fddd8a5f0fa5be",
+          "source_matches": true,
+          "pass": true
+        },
+        {
+          "path": "apparel-catalog.js",
+          "status": 200,
+          "expected_sha256": "a145aac05f2b400b2487d00695069a99a4223eaf8f0b55fcb800ee0f65c8d488",
+          "served_sha256": "a145aac05f2b400b2487d00695069a99a4223eaf8f0b55fcb800ee0f65c8d488",
+          "source_matches": true,
+          "pass": true
+        },
+        {
+          "path": "assets/apparel/catalog.json",
+          "status": 200,
+          "expected_sha256": "b485e80423217a2f3c89915de77f2f4e5232a742feec45aeeee56735eea05f67",
+          "served_sha256": "b485e80423217a2f3c89915de77f2f4e5232a742feec45aeeee56735eea05f67",
+          "source_matches": true,
+          "pass": true
+        },
+        {
+          "path": "assets/apparel/placeholders/sample-hoodie-20261021.webp",
+          "status": 200,
+          "expected_sha256": "28426e7395c69cba4c8e055761ba893942bfb24cf08a4392a33c3d4fb25ef4f1",
+          "served_sha256": "28426e7395c69cba4c8e055761ba893942bfb24cf08a4392a33c3d4fb25ef4f1",
+          "source_matches": true,
+          "pass": true
+        },
+        {
+          "path": "assets/apparel/placeholders/sample-tee-20261021.webp",
+          "status": 200,
+          "expected_sha256": "a79833780a1d49807eb367d0d70560ce9318c3fb375ba99bc571e885d5c1f6f9",
+          "served_sha256": "a79833780a1d49807eb367d0d70560ce9318c3fb375ba99bc571e885d5c1f6f9",
+          "source_matches": true,
+          "pass": true
+        },
+        {
+          "path": "assets/apparel/placeholders/sample-pants-20261021.webp",
+          "status": 200,
+          "expected_sha256": "b32b3a52818404f5d17b1c7ad9c1831c6a403ba7700775073ca21b749f9ad579",
+          "served_sha256": "b32b3a52818404f5d17b1c7ad9c1831c6a403ba7700775073ca21b749f9ad579",
+          "source_matches": true,
+          "pass": true
+        },
+        {
+          "path": "assets/apparel/placeholders/sample-jacket-20261021.webp",
+          "status": 200,
+          "expected_sha256": "000e6056e4f20f5e9e11559b2da790db19c64034095da90ae8adcb470dbb8615",
+          "served_sha256": "000e6056e4f20f5e9e11559b2da790db19c64034095da90ae8adcb470dbb8615",
+          "source_matches": true,
+          "pass": true
+        },
+        {
+          "path": "assets/brand/apparel-kit/brand-smart.jpg",
+          "status": 200,
+          "expected_sha256": "0349a132474c265497fad5d884fd89adcb32bdeeb6ba6ef26baba2e27cf79487",
+          "served_sha256": "0349a132474c265497fad5d884fd89adcb32bdeeb6ba6ef26baba2e27cf79487",
+          "source_matches": true,
+          "pass": true
+        },
+        {
+          "path": "index.html",
+          "status": 200,
+          "expected_sha256": "e1d46e1b5b6849ad99f84d55cfb04a5f825e6db5b301abdb3ecdd517d5f9b2b8",
+          "served_sha256": "f356edc037a0d20c3b1c6a8685ded77fecaf82f5e89e2b58a9baa0f7e7e89c51",
+          "source_matches": true,
+          "gateway_admin_insertions": 1,
+          "pass": true
+        },
+        {
+          "path": "training.html",
+          "status": 200,
+          "expected_sha256": "ff4a57d6be1ab8bcec7f43991cface9fbd2f5ef611cb8ddb1afa583555bf5d48",
+          "served_sha256": "57efb559fbd70a9ef567c63fd752330b4f96e423d5e45e08d239d1f058d0ae63",
+          "source_matches": true,
+          "gateway_admin_insertions": 1,
+          "pass": true
+        },
+        {
+          "path": "site-motion.js",
+          "status": 200,
+          "expected_sha256": "cff14d42c5d743dcc5bbee2bcafba6780c77bb58a40944e8700292c9ab94cc56",
+          "served_sha256": "cff14d42c5d743dcc5bbee2bcafba6780c77bb58a40944e8700292c9ab94cc56",
+          "source_matches": true,
+          "pass": true
+        },
+        {
+          "path": "site-appearance.js",
+          "status": 200,
+          "expected_sha256": "f0f7da63ead1687e331450bd182c5e6cadf4740f822a46ac9c493fa0f5d3d6c5",
+          "served_sha256": "f0f7da63ead1687e331450bd182c5e6cadf4740f822a46ac9c493fa0f5d3d6c5",
+          "source_matches": true,
+          "pass": true
+        },
+        {
+          "path": "hero-lettering.css",
+          "status": 200,
+          "expected_sha256": "84ca5f514241ed31492e4f70839c6c8fdb98597cf1f06b1d369f293fa9bff855",
+          "served_sha256": "84ca5f514241ed31492e4f70839c6c8fdb98597cf1f06b1d369f293fa9bff855",
+          "source_matches": true,
+          "pass": true
+        }
+      ],
+      "legacy": {
+        "status": 200,
+        "destination": "https://sportmyfitness.com/apparel.html#collection",
+        "main_apparel": true,
+        "pass": true
+      },
+      "privacy": [
+        {
+          "path": "/",
+          "status": 200,
+          "pass": true
+        },
+        {
+          "path": "/admin",
+          "status": 200,
+          "pass": true
+        },
+        {
+          "path": "/apparel.html",
+          "status": 404,
+          "pass": true
+        },
+        {
+          "path": "/apparel-collection.html",
+          "status": 404,
+          "pass": true
+        },
+        {
+          "path": "/assets/apparel/catalog.json",
+          "status": 404,
+          "pass": true
+        },
+        {
+          "path": "/assets/apparel/placeholders/sample-hoodie-20261021.webp",
+          "status": 404,
+          "pass": true
+        }
+      ],
+      "credentials_or_cookies_saved": false,
+      "all_pass": true
+    }
   },
   "limits": [
     "Browser-engine/viewport checks, not physical-device certification.",

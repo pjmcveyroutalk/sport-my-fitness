@@ -4,6 +4,14 @@ Updated October 21, 2026 (America/Chicago). The current Apparel implementation u
 
 ## Current Apparel carousel — October 21, 2026
 
+**Published and live-verified:** Runtime `c9a061b5977aae2ba69fb229fec7fe230e14f59a`
+is Production `dpl_561nQ4amD9Ji421aehxQVApYY6fC`, READY. All 15 authenticated
+HTML/asset comparisons match the accepted source at the actual versioned CSS/JS
+URLs. Legacy Collection forwarding and all six signed-out privacy checks pass.
+All Deployments Vercel Authentication remains enabled; the public holding page
+and existing login continue to work. No account, DNS, billing or access setting
+was changed. The final checkpoint commit changes documentation/evidence only.
+
 PJ approved the final three-panel mockup: carousel above; exactly one enlarged
 product card below. A new selection replaces that card. Desktop has two-column
 details; phones stack the cutout and information. The carousel has side arrows,

@@ -168,14 +168,17 @@ async function approvedProducts(browser, engine, width) {
   } finally { await page.close(); }
 }
 async function fallback(browser, engine, mode) {
-  const context = await browser.newContext({viewport: {width: 390, height: 900}, javaScriptEnabled: mode !== 'no-js'});
+  const context = await browser.newContext({viewport: {width: 390, height: 900}, reducedMotion: 'reduce', javaScriptEnabled: mode !== 'no-js'});
   try {
     const page = await context.newPage();
     if (mode === 'network') await page.route('**/assets/apparel/catalog.json?*', route => route.fulfill({status: 503, body: 'Unavailable'}));
     await load(page);
     await page.locator('.apparel-look-link').last().focus();
     assert(await page.locator('#apparel-look-track').evaluate(track => track.scrollLeft > 10), 'native focus did not scroll the garment row');
-    await page.locator('.apparel-look-link').last().click();
+    // Activate the focused native anchor with the keyboard. WebKit's click
+    // stability heuristic can race its focus/scroll-snap animation without JS.
+    await page.keyboard.press('Enter');
+    await page.waitForURL('**/apparel.html#apparel-sample-jacket');
     assert.equal(new URL(page.url()).hash, '#apparel-sample-jacket');
     assert.equal(await page.locator('[data-apparel-products] > article:visible').count(), 4);
     if (mode === 'no-js') {

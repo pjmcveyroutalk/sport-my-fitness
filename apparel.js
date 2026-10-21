@@ -15,32 +15,77 @@ if (root) {
   let selected = '';
   let gesture = null;
   let ignoreClickUntil = 0;
+  const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+  let imageObserver;
 
-  function updateCarousel() {
+  function updateCarousel(animate = true) {
     const count = entries.length;
+    // Read the current composed frame before any writes. Interrupted arrow
+    // clicks continue from that frame instead of restarting from a stale pose.
+    const frames = entries.map(entry => {
+      const style = getComputedStyle(entry.row);
+      return {transform: style.transform, opacity: Number(style.opacity), position: entry.row.dataset.position};
+    });
+    const positions = [];
     entries.forEach((entry, index) => {
       const position = index === current ? 'current' :
         index === (current + 1) % count ? 'next' :
         count > 2 && index === (current + count - 1) % count ? 'previous' : '';
-      entry.row.hidden = !position;
-      entry.row.dataset.position = position;
+      const active = Boolean(position);
+      entry.animation?.cancel();
+      entry.animation = null;
+      delete entry.row.dataset.carouselAnimating;
+      // Keep the outgoing/incoming cutouts painted. display:none cancels
+      // their exit/entry animation and was the source of the visible popping.
+      entry.row.hidden = false;
+      entry.row.inert = !active;
+      if (active) entry.row.removeAttribute('aria-hidden');
+      else entry.row.setAttribute('aria-hidden', 'true');
+      const target = position || (frames[index].position?.includes('previous') ? 'offstage-previous' : 'offstage-next');
+      entry.row.dataset.position = target;
+      positions.push(target);
       entry.link.tabIndex = position === 'current' ? 0 : -1;
       entry.link.setAttribute('aria-expanded', String(selected === entry.card.id));
       if (selected === entry.card.id) entry.link.setAttribute('aria-current', 'true');
       else entry.link.removeAttribute('aria-current');
+    });
+    // Batch the target-style reads too. Only transform/opacity animate;
+    // garment sizing and the detail-card layout do not animate every frame.
+    const targets = entries.map(entry => {
+      const style = getComputedStyle(entry.row);
+      return {transform: style.transform, opacity: Number(style.opacity)};
+    });
+    if (animate && !reducedMotion.matches) entries.forEach((entry, index) => {
+      if (!entry.row.animate) return;
+      const from = frames[index];
+      const to = targets[index];
+      if (from.opacity < .001 && to.opacity > 0) {
+        from.transform = positions[index] === 'previous' ? 'translate3d(-200%, 0, 0) scale(.5)' : 'translate3d(100%, 0, 0) scale(.5)';
+      }
+      if (from.transform === to.transform && from.opacity === to.opacity) return;
+      entry.row.dataset.carouselAnimating = 'true';
+      const animation = entry.row.animate([
+        {transform: from.transform, opacity: from.opacity}, to
+      ], {duration: 460, easing: 'cubic-bezier(.2,.7,.2,1)'});
+      entry.animation = animation;
+      animation.addEventListener('finish', () => {
+        if (entry.animation !== animation) return;
+        entry.animation = null;
+        delete entry.row.dataset.carouselAnimating;
+      }, {once: true});
     });
     const entry = entries[current];
     caption.querySelector('[data-carousel-name]').textContent = entry.name + (selected === entry.card.id ? ' · Selected' : '');
     caption.querySelector('[data-carousel-note]').textContent = root.dataset.apparelState === 'samples' ? 'DESIGN SAMPLE' : 'Select to see details';
     previous.hidden = next.hidden = count < 2;
   }
-  function select(index, {remember = true, focus = false} = {}) {
+  function select(index, {remember = true, focus = false, animate = true} = {}) {
     current = index;
     const card = entries[index].card;
     selected = card.id;
     if (products.firstElementChild !== card) products.replaceChildren(card);
     if (remember && location.hash !== `#${card.id}`) history.pushState(null, '', `#${card.id}`);
-    updateCarousel();
+    updateCarousel(animate);
     if (focus) card.focus({preventScroll: true});
   }
   function browse(index) {
@@ -51,7 +96,7 @@ if (root) {
   function syncFragment(scroll = false) {
     const index = entries.findIndex(entry => `#${entry.card.id}` === location.hash);
     if (index >= 0) {
-      select(index, {remember: false});
+      select(index, {remember: false, animate: false});
       if (scroll) {
         const card = entries[index].card;
         const hash = location.hash;
@@ -68,10 +113,12 @@ if (root) {
     } else {
       selected = '';
       products.replaceChildren();
-      updateCarousel();
+      updateCarousel(false);
     }
   }
   function initializeCarousel() {
+    imageObserver?.disconnect();
+    entries.forEach(entry => entry.animation?.cancel());
     const cards = new Map([...products.children].map(card => [card.id, card]));
     entries = [...track.children].map(row => {
       const link = row.querySelector('a');
@@ -88,7 +135,20 @@ if (root) {
     carousel.dataset.carouselReady = 'true';
     caption.hidden = false;
     syncFragment(true);
+    const warmImages = () => entries.forEach(entry => {
+      const photo = entry.link.querySelector('img');
+      photo.loading = 'eager';
+      photo.decode?.().catch(() => {});
+    });
+    if ('IntersectionObserver' in window) {
+      imageObserver = new IntersectionObserver(records => {
+        if (!records.some(record => record.isIntersecting)) return;
+        warmImages(); imageObserver.disconnect();
+      }, {rootMargin: '400px'});
+      imageObserver.observe(carousel);
+    } else warmImages();
   }
+  reducedMotion.addEventListener('change', () => updateCarousel(false));
   previous.addEventListener('click', () => browse(current - 1));
   next.addEventListener('click', () => browse(current + 1));
   track.addEventListener('click', event => {

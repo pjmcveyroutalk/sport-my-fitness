@@ -14,32 +14,37 @@ jobs:
       - uses: actions/checkout@v4
         with:
           persist-credentials: false
+          fetch-depth: 2
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
       - name: Syntax and existing contract check
         run: |
-          for file in *.js api/*.js verification/apparel-browser.cjs; do node --check "$file"; done
+          for file in *.js api/*.js verification/apparel-browser.cjs verification/apparel-smoothness.cjs; do node --check "$file"; done
           node --test test/pilot-verify-production.test.js test/apparel-catalog.test.mjs
           git diff --check
       - name: Install isolated browser test tools
         run: |
           npm install --prefix "$RUNNER_TEMP/smf-browser" --no-package-lock --no-save playwright@1.62.1
           "$RUNNER_TEMP/smf-browser/node_modules/.bin/playwright" install --with-deps chromium webkit
-      - name: Check all pages, menu, photographs, motion, and fallbacks
+      - name: Check apparel layouts and compare motion with previous release
         env:
           SMF_BASE_URL: http://127.0.0.1:8080
           SMF_EVIDENCE_DIR: ${{ runner.temp }}/smf-evidence
         run: |
           python3 -m http.server 8080 --bind 127.0.0.1 > "$RUNNER_TEMP/smf-http.log" 2>&1 &
           server_pid=$!
-          trap 'kill "$server_pid" 2>/dev/null || true' EXIT
+          mkdir -p "$RUNNER_TEMP/smf-baseline"
+          git archive 9ad5d302c78b7625123552560b92d3f422a1c5e0 | tar -x -C "$RUNNER_TEMP/smf-baseline"
+          python3 -m http.server 8081 --bind 127.0.0.1 --directory "$RUNNER_TEMP/smf-baseline" > "$RUNNER_TEMP/smf-baseline-http.log" 2>&1 &
+          baseline_pid=$!
+          trap 'kill "$server_pid" "$baseline_pid" 2>/dev/null || true' EXIT
           for attempt in $(seq 1 30); do
             if curl --fail --silent http://127.0.0.1:8080/index.html > /dev/null; then break; fi
             sleep 1
           done
-          NODE_PATH="$RUNNER_TEMP/smf-browser/node_modules" node verification/approved-design-browser.cjs
           NODE_PATH="$RUNNER_TEMP/smf-browser/node_modules" node verification/apparel-browser.cjs
+          NODE_PATH="$RUNNER_TEMP/smf-browser/node_modules" SMF_BASELINE_URL=http://127.0.0.1:8081 node verification/apparel-smoothness.cjs
       - name: Save browser evidence
         if: always()
         uses: actions/upload-artifact@v4

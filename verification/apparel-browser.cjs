@@ -38,7 +38,7 @@ async function sampleContract(page) {
   assert.equal(await page.locator('#apparel-look-track > li').count(), 4);
   assert.equal(await page.locator('[data-apparel-products] > article').count(), 0, 'details must wait for a product selection');
   assert.equal(await page.locator('.apparel-carousel[data-carousel-ready="true"]').count(), 1);
-  assert.equal(await page.locator('#apparel-look-track > li:visible').count(), 3);
+  assert.equal(await page.locator('#apparel-look-track > li:not([aria-hidden="true"])').count(), 3);
   assert.equal(await page.locator('main a[href*="apparel-collection"]').count(), 0);
   assert.equal(await page.locator('.apparel-hero-actions').count(), 0);
   assert.equal(await page.getByText('PLACEHOLDER IMAGE', {exact: true}).count(), 1);
@@ -253,7 +253,6 @@ async function motion(browser, engine, width) {
   const page = await browser.newPage({viewport: {width, height: 900}, reducedMotion: 'no-preference'});
   try {
     await load(page);
-    assert.notEqual(await page.locator('[data-position="current"]').evaluate(item => getComputedStyle(item).transitionDuration), '0s');
     await page.getByRole('button', {name: 'Next style', exact: true}).click();
     await currentLink(page).click();
     await selectedCard(page, 'apparel-sample-jacket');

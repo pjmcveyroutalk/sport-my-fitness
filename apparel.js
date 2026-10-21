@@ -52,7 +52,19 @@ if (root) {
     const index = entries.findIndex(entry => `#${entry.card.id}` === location.hash);
     if (index >= 0) {
       select(index, {remember: false});
-      if (scroll) requestAnimationFrame(() => entries[index].card.scrollIntoView({behavior: 'instant', block: 'start'}));
+      if (scroll) {
+        const card = entries[index].card;
+        const hash = location.hash;
+        const ready = document.readyState === 'complete' ? Promise.resolve() :
+          new Promise(resolve => addEventListener('load', resolve, {once: true}));
+        // Native reload restoration and web fonts can finish after the first
+        // frame. Position a saved selection after that layout has settled.
+        ready.then(() => document.fonts?.ready).then(() => requestAnimationFrame(() => {
+          if (selected === card.id && location.hash === hash && products.firstElementChild === card) {
+            card.scrollIntoView({behavior: 'instant', block: 'start'});
+          }
+        }));
+      }
     } else {
       selected = '';
       products.replaceChildren();

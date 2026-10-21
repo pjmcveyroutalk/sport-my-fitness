@@ -13,6 +13,7 @@ function save() { fs.writeFileSync(path.join(out, 'results.json'), JSON.stringif
 async function load(page, route = 'apparel', hash = '') {
   assert.equal((await page.goto(`${base}/${route}.html${hash}`, {waitUntil: 'networkidle'})).status(), 200);
   await page.evaluate(() => document.fonts.ready);
+  await page.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
 }
 const visibleCards = page => page.locator('[data-apparel-products] > article:visible');
 const currentLink = page => page.locator('[data-position="current"] .apparel-look-link');
@@ -172,6 +173,8 @@ async function journey(browser, engine, width) {
     await page.keyboard.press('Escape');
     assert(await page.getByRole('button', {name: 'Menu', exact: true}).evaluate(button => button === document.activeElement));
     await page.reload({waitUntil: 'networkidle'});
+    await page.evaluate(() => document.fonts.ready);
+    await page.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
     await selectedCard(page, target.slice(1));
     const anchor = await visibleCards(page).evaluate(card => {
       const header = document.querySelector('.site-header');

@@ -1,6 +1,25 @@
 # Sport My Fitness — Current Project State
 
-Updated October 21, 2026 (UTC); the floating Apparel design and clean carousel row are published and live-verified.
+Updated October 21, 2026 (America/Chicago). The current Apparel implementation uses the approved centered carousel and a single replaceable card.
+
+## Current Apparel carousel — October 21, 2026
+
+PJ approved the final three-panel mockup: carousel above; exactly one enlarged
+product card below. A new selection replaces that card. Desktop has two-column
+details; phones stack the cutout and information. The carousel has side arrows,
+keyboard navigation and touch gestures; no bottom counter/progress strip.
+Initially details stay closed until a garment is selected. Once open, cycling
+also updates the card. History, deep links, appearance and menu remain supported.
+
+This supersedes the native scrolling row and four simultaneously displayed
+cards documented in the earlier checkpoints below. Samples now explicitly label
+illustrative color/size controls; prices remain pending. Real approved data uses
+only supplied options and prices. The exact logo, campaign hero, shared motion,
+other pages, public Coming soon page and privacy configuration stay intact.
+
+Implementation: `docs/APPAREL_CAROUSEL_20261021.md`.
+Fresh browser evidence: `verification/apparel-carousel-20261021.json`.
+Review entrance: https://sportmyfitness.com/admin, then Apparel in the same tab.
 
 ## Latest Apparel cleanup — October 21, 2026
 
@@ -12,7 +31,7 @@ scrolling, item anchors, cards and all other controls stay unchanged. Focused
 source and syntax checks cover this removal; the browser baseline below is
 from the preceding design release, not a rerun for this change.
 
-## Current Apparel refinement — October 21, 2026
+## Earlier floating-row release — October 21, 2026
 
 **Published:** Runtime `46c3c326bf4c7f87e1461cd9e7df632fe250a899` is Production
 `dpl_wF9Nnv9e8mSmuLiLxa2DyAH8i1tp` (READY). The complete floating design is live,

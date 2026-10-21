@@ -173,9 +173,14 @@ async function journey(browser, engine, width) {
     assert(await page.getByRole('button', {name: 'Menu', exact: true}).evaluate(button => button === document.activeElement));
     await page.reload({waitUntil: 'networkidle'});
     await selectedCard(page, target.slice(1));
-    const clearance = await visibleCards(page).evaluate(card => { const header = document.querySelector('.site-header'); return card.getBoundingClientRect().top - (getComputedStyle(header).position === 'fixed' ? header.getBoundingClientRect().bottom : 0); });
-    assert(clearance >= 0 && clearance <= 65, 'deep-linked details are hidden under the header or offset twice');
-    report.journeys.push({engine, width, mouseAndKeyboard: true, touchInput: width <= 600, replacement: true, history: true, resize: true, options: true, appearance: true, menu: true, deepLinkClearance: true, pass: true});
+    const anchor = await visibleCards(page).evaluate(card => {
+      const header = document.querySelector('.site-header');
+      const headerBottom = getComputedStyle(header).position === 'fixed' ? header.getBoundingClientRect().bottom : 0;
+      return {clearance: card.getBoundingClientRect().top - headerBottom, atDocumentEnd: scrollY + innerHeight >= document.documentElement.scrollHeight - 2, scrollY, documentHeight: document.documentElement.scrollHeight};
+    });
+    // A short last card cannot align at the top after reaching document end.
+    assert(anchor.clearance >= 0 && (anchor.clearance <= 65 || anchor.atDocumentEnd), `deep-link clearance: ${JSON.stringify(anchor)}`);
+    report.journeys.push({engine, width, mouseAndKeyboard: true, touchInput: width <= 600, replacement: true, history: true, resize: true, options: true, appearance: true, menu: true, deepLinkClearance: anchor, pass: true});
   } finally { await page.close(); }
 }
 async function approvedProducts(browser, engine, width) {

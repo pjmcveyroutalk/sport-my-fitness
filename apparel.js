@@ -1,52 +1,72 @@
 import {approvedApparelItems, apparelPriceLabel} from './apparel-catalog.js?v=apparel-integration-20261020';
 
-/* Native scrolling stays usable without JavaScript; controls enhance it. */
-const track = document.getElementById('apparel-look-track');
-if (track) {
-  const cards = [...track.children];
-  const previous = document.querySelector('[data-carousel-prev]');
-  const next = document.querySelector('[data-carousel-next]');
-  const position = document.querySelector('[data-carousel-position]');
-  const controls = document.querySelector('[data-carousel-controls]');
+/* One page, ordinary anchors and native horizontal scrolling. Sample markup
+   stays useful if JavaScript, the catalogue or the network is unavailable. */
+const root = document.querySelector('[data-apparel-catalog]');
+if (root) {
+  const track = root.querySelector('#apparel-look-track');
+  const products = root.querySelector('[data-apparel-products]');
+  const controls = root.querySelector('[data-carousel-controls]');
+  const previous = root.querySelector('[data-carousel-prev]');
+  const next = root.querySelector('[data-carousel-next]');
+  const position = root.querySelector('[data-carousel-position]');
+  const progress = root.querySelector('[data-carousel-progress]');
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
   let frame = 0;
-  let lastPosition = -1;
+
   function updateCarousel() {
     frame = 0;
     const max = Math.max(0, track.scrollWidth - track.clientWidth);
-    const firstWidth = cards[0]?.getBoundingClientRect().width || 1;
-    const gap = parseFloat(getComputedStyle(track).columnGap) || 0;
-    const index = Math.min(cards.length - 1, Math.max(0, Math.round(track.scrollLeft / (firstWidth + gap))));
-    previous.disabled = track.scrollLeft <= 2;
-    next.disabled = track.scrollLeft >= max - 2;
+    const offset = Math.max(0, Math.min(max, track.scrollLeft));
+    const bounds = track.getBoundingClientRect();
+    const cards = [...track.children];
+    const visible = cards.flatMap((card, index) => {
+      const box = card.getBoundingClientRect();
+      return Math.min(bounds.right, box.right) - Math.max(bounds.left, box.left) >= box.width * .4 ? [index + 1] : [];
+    });
+    previous.disabled = offset <= 2;
+    next.disabled = offset >= max - 2;
     controls.hidden = max < 3;
-    if (lastPosition !== index) { position.textContent = `Look ${index + 1} of ${cards.length}`; lastPosition = index; }
+    const first = visible[0] || 1;
+    const last = visible.at(-1) || first;
+    const label = `${first === last ? first : `${first}–${last}`} of ${cards.length}`;
+    if (position.textContent !== label) position.textContent = label;
+    const thumb = Math.min(100, track.clientWidth / Math.max(track.scrollWidth, 1) * 100);
+    progress.style.width = `${thumb}%`;
+    progress.style.left = `${max ? offset / max * (100 - thumb) : 0}%`;
+  }
+  function queueUpdate() {
+    if (!frame) frame = requestAnimationFrame(updateCarousel);
   }
   function move(direction) {
-    const width = cards[0]?.getBoundingClientRect().width || track.clientWidth;
+    const width = track.firstElementChild?.getBoundingClientRect().width || track.clientWidth;
     const gap = parseFloat(getComputedStyle(track).columnGap) || 0;
     track.scrollBy({left: direction * (width + gap), behavior: reducedMotion.matches ? 'auto' : 'smooth'});
   }
   previous.addEventListener('click', () => move(-1));
   next.addEventListener('click', () => move(1));
-  track.addEventListener('scroll', () => { if (!frame) frame = requestAnimationFrame(updateCarousel); }, {passive: true});
-  if ('ResizeObserver' in window) new ResizeObserver(updateCarousel).observe(track);
-  else addEventListener('resize', updateCarousel);
-  updateCarousel();
-}
+  track.addEventListener('scroll', queueUpdate, {passive: true});
+  track.addEventListener('keydown', event => {
+    if (event.target !== track) return;
+    if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+      event.preventDefault(); move(event.key === 'ArrowLeft' ? -1 : 1);
+    } else if (event.key === 'Home' || event.key === 'End') {
+      event.preventDefault();
+      track.scrollTo({left: event.key === 'Home' ? 0 : track.scrollWidth, behavior: reducedMotion.matches ? 'auto' : 'smooth'});
+    }
+  });
+  if ('ResizeObserver' in window) new ResizeObserver(queueUpdate).observe(track);
+  else addEventListener('resize', queueUpdate);
 
-const catalogRoot = document.querySelector('[data-catalog]');
-if (catalogRoot) {
-  const grid = catalogRoot.querySelector('[data-product-grid]');
-  const empty = catalogRoot.querySelector('[data-catalog-empty]');
-  const errorNotice = catalogRoot.querySelector('[data-catalog-error]');
-  const count = catalogRoot.querySelector('[data-item-count]');
-  const filters = catalogRoot.querySelector('[data-category-filters]');
-  const dialog = document.getElementById('apparel-product-dialog');
-  let items = [];
-  let selectedCategory = 'All';
-  let opener = null;
-  let beforeDialogOverflow = '';
+  function markSelection() {
+    track.querySelectorAll('a').forEach(link => {
+      if (link.hash === location.hash) link.setAttribute('aria-current', 'location');
+      else link.removeAttribute('aria-current');
+    });
+  }
+  addEventListener('hashchange', markSelection);
+  markSelection();
+  updateCarousel();
 
   function element(tag, className, text) {
     const node = document.createElement(tag);
@@ -54,117 +74,103 @@ if (catalogRoot) {
     if (text !== undefined) node.textContent = text;
     return node;
   }
-  function closeProduct() {
-    if (!dialog.open) return;
-    dialog.close();
-    document.body.style.overflow = beforeDialogOverflow;
-    opener?.focus({preventScroll: true});
+  function image(photo, className) {
+    const node = element('img', className);
+    node.src = photo.src;
+    node.alt = photo.alt;
+    node.width = 900;
+    node.height = 1100;
+    node.loading = 'lazy';
+    node.decoding = 'async';
+    return node;
   }
-  dialog.querySelector('[data-product-close]').addEventListener('click', closeProduct);
-  dialog.addEventListener('cancel', event => { event.preventDefault(); closeProduct(); });
-  dialog.addEventListener('close', () => { document.body.style.overflow = beforeDialogOverflow; });
-  addEventListener('pagehide', closeProduct);
-  dialog.addEventListener('click', event => {
-    if (event.target !== dialog) return;
-    const rect = dialog.getBoundingClientRect();
-    if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) closeProduct();
-  });
-
-  function showItem(item, trigger) {
-    const photo = dialog.querySelector('[data-detail-photo]');
-    const choices = dialog.querySelector('[data-photo-choices]');
-    choices.replaceChildren();
-    function selectPhoto(index) {
-      photo.src = item.photos[index].src;
-      photo.alt = item.photos[index].alt;
-      choices.querySelectorAll('button').forEach((button, buttonIndex) => button.setAttribute('aria-pressed', String(buttonIndex === index)));
+  function productCard(item) {
+    const id = `apparel-${item.id}`;
+    const article = element('article', 'apparel-product-card');
+    article.id = id;
+    article.tabIndex = -1;
+    article.setAttribute('aria-labelledby', `${id}-title`);
+    const heading = element('header', 'apparel-product-heading');
+    const title = element('h3', '', item.name);
+    title.id = `${id}-title`;
+    heading.append(element('p', 'eyebrow apparel-eyebrow', item.category), title);
+    const photos = element('div', 'apparel-product-photos');
+    const photo = image(item.photos[0], 'apparel-detail-photo');
+    photos.append(photo);
+    if (item.photos.length > 1) {
+      const choices = element('div', 'apparel-photo-choices');
+      choices.setAttribute('role', 'group');
+      choices.setAttribute('aria-label', `${item.name} photographs`);
+      item.photos.forEach((view, index) => {
+        const button = element('button', 'apparel-photo-choice');
+        button.type = 'button';
+        button.setAttribute('aria-label', view.label);
+        button.setAttribute('aria-pressed', String(index === 0));
+        const thumb = image({...view, alt: ''}, '');
+        button.append(thumb, element('span', '', view.label));
+        button.addEventListener('click', () => {
+          photo.src = view.src;
+          photo.alt = view.alt;
+          choices.querySelectorAll('button').forEach((choice, choiceIndex) => choice.setAttribute('aria-pressed', String(choiceIndex === index)));
+        });
+        choices.append(button);
+      });
+      photos.append(choices);
     }
-    item.photos.forEach((image, index) => {
-      const button = element('button', 'apparel-photo-choice', image.label);
-      button.type = 'button';
-      button.setAttribute('aria-pressed', String(index === 0));
-      button.addEventListener('click', () => selectPhoto(index));
-      choices.append(button);
-    });
-    choices.hidden = item.photos.length < 2;
-    selectPhoto(0);
-    dialog.querySelector('[data-detail-category]').textContent = item.category;
-    dialog.querySelector('#apparel-product-title').textContent = item.name;
-    const description = dialog.querySelector('[data-detail-description]');
-    description.textContent = item.description;
-    description.hidden = !item.description;
-    dialog.querySelector('[data-detail-price]').textContent = apparelPriceLabel(item);
-    const specs = dialog.querySelector('[data-detail-specs]');
-    specs.replaceChildren();
+    const copy = element('div', 'apparel-product-description');
+    copy.append(element('p', 'apparel-detail-description', item.description || 'Product description coming soon.'));
+    copy.append(element('p', 'apparel-detail-price', apparelPriceLabel(item)));
+    const specs = element('dl', 'apparel-item-specifications');
     [['Colors', item.colors], ['Sizes', item.sizes]].forEach(([label, values]) => {
-      if (!values.length) return;
       const row = element('div');
-      row.append(element('dt', '', label), element('dd', '', values.join(', ')));
+      row.append(element('dt', '', label), element('dd', '', values.length ? values.join(', ') : 'To be confirmed'));
       specs.append(row);
     });
-    opener = trigger;
-    beforeDialogOverflow = document.body.style.overflow;
-    if (typeof dialog.showModal !== 'function') { location.href = 'contact.html#inquiry'; return; }
-    dialog.showModal();
-    document.body.style.overflow = 'hidden';
-    dialog.querySelector('[data-product-close]').focus({preventScroll: true});
+    const inquiry = element('a', 'button', 'Ask about this item');
+    inquiry.href = 'contact.html#inquiry';
+    const arrow = element('span', '', '→');
+    arrow.setAttribute('aria-hidden', 'true');
+    inquiry.append(arrow);
+    const back = element('a', 'apparel-back-link', '↑ Back to apparel');
+    back.href = '#collection';
+    copy.append(specs, inquiry, back);
+    article.append(heading, photos, copy);
+    return article;
   }
-
-  function renderItems() {
-    const visible = selectedCategory === 'All' ? items : items.filter(item => item.category === selectedCategory);
-    grid.replaceChildren();
-    visible.forEach(item => {
-      const row = element('li', 'apparel-product-card');
-      const button = element('button', 'apparel-product-trigger');
-      button.type = 'button';
-      button.setAttribute('aria-haspopup', 'dialog');
-      button.setAttribute('aria-controls', 'apparel-product-dialog');
-      const image = element('img', 'apparel-catalog-photo');
-      image.src = item.photos[0].src;
-      image.alt = item.photos[0].alt;
-      image.width = 900;
-      image.height = 1100;
-      image.loading = 'lazy';
-      image.decoding = 'async';
-      const copy = element('span', 'apparel-product-card-copy');
-      copy.append(element('span', 'apparel-product-category', item.category), element('strong', '', item.name), element('span', 'apparel-product-price', apparelPriceLabel(item)), element('span', 'apparel-card-action', 'View details →'));
-      button.append(image, copy);
-      button.addEventListener('click', () => showItem(item, button));
-      row.append(button);
-      grid.append(row);
+  function renderCollection(items) {
+    const rail = document.createDocumentFragment();
+    const details = document.createDocumentFragment();
+    items.forEach(item => {
+      const row = element('li', 'apparel-look-item');
+      const link = element('a', 'apparel-look-link');
+      link.href = `#apparel-${item.id}`;
+      link.append(image(item.photos[0], 'apparel-floating-photo'), element('span', 'apparel-look-name', item.name));
+      row.append(link);
+      rail.append(row);
+      details.append(productCard(item));
     });
-    grid.hidden = !visible.length;
-    empty.hidden = items.length > 0;
-    count.hidden = !items.length;
-    count.textContent = `${visible.length} ${visible.length === 1 ? 'item' : 'items'}`;
-    filters.querySelectorAll('button').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.category === selectedCategory)));
+    track.replaceChildren(rail);
+    products.replaceChildren(details);
+    root.dataset.apparelState = 'approved';
+    root.querySelector('[data-apparel-pending]').hidden = true;
+    markSelection();
+    updateCarousel();
+    // An incoming product fragment may precede the asynchronous catalogue.
+    const target = [...products.children].find(card => `#${card.id}` === location.hash);
+    if (target) requestAnimationFrame(() => target.scrollIntoView({behavior: 'instant', block: 'start'}));
   }
-
   async function loadCollection() {
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), 8000);
     try {
-      const response = await fetch('assets/apparel/catalog.json?v=apparel-20261020', {signal: controller.signal});
+      const response = await fetch('assets/apparel/catalog.json?v=floating-apparel-20261021', {signal: controller.signal});
       if (!response.ok) throw new Error('Collection unavailable');
       const catalog = await response.json();
       if (catalog.version !== 1 || !Array.isArray(catalog.items)) throw new Error('Invalid collection');
-      items = approvedApparelItems(catalog);
-      const categories = [...new Set(items.map(item => item.category))];
-      if (categories.length > 1) {
-        ['All', ...categories].forEach(category => {
-          const button = element('button', 'apparel-filter', category);
-          button.type = 'button';
-          button.dataset.category = category;
-          button.setAttribute('aria-pressed', String(category === selectedCategory));
-          button.addEventListener('click', () => { selectedCategory = category; renderItems(); });
-          filters.append(button);
-        });
-        filters.hidden = false;
-      }
-      renderItems();
+      const items = approvedApparelItems(catalog);
+      if (items.length) renderCollection(items);
     } catch (_) {
-      errorNotice.hidden = false;
-      empty.hidden = false;
+      root.querySelector('[data-catalog-error]').hidden = false;
     } finally { clearTimeout(timeout); }
   }
   loadCollection();

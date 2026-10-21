@@ -1,9 +1,23 @@
 # Sport My Fitness apparel assets
 
-This October 20, 2026 apparel implementation is integrated into the full website
-behind its existing private-review access. The pages retain `noindex,nofollow`
-and pending-data labels while real photographs and approved item details arrive.
-See `verification/apparel-integration-release-20261020.json` for release evidence.
+The October 21 floating design is integrated on **one** Apparel page, retaining
+`noindex,nofollow` and the existing private-review entrance. See
+`docs/APPAREL_FLOATING_20261021.md` for the current layout and release evidence.
+Yoshi's actual product photos, descriptions, prices and options are pending.
+
+## Floating sample garments
+
+`placeholders/sample-{hoodie,tee,pants,jacket}-20261021.webp` are transparent,
+unbranded illustrative cutouts generated with the built-in image-generation
+tool to implement PJ's approved mockup. They are not actual SMF inventory.
+Each image has a visible SAMPLE IMAGE label and placeholder alt text. All are
+1254 × 1254, exported proportionally with their alpha preserved. Exact prompts
+and export settings are in `placeholders/prompts-20261021.json`.
+
+The four sample detail cards state that descriptions/options are pending and
+pricing is by inquiry. They do not invent actual product facts. The approved
+catalogue remains empty. Once actual approved entries exist, the browser replaces
+both sample browsing and detail areas with those entries, on the same page.
 
 ## Official branding
 
@@ -25,10 +39,10 @@ built-in image-generation tool from the lighter Canva composition. A targeted
 edit removes the inaccurate generated garment marks and leaves the sample
 clothing plain. It does not represent real inventory or real customers.
 
-Every temporary photo on the page — the hero and each of the three lookbook
-cards — has its own visible **PLACEHOLDER IMAGE** label and a placeholder alt
-description. The hero credit also identifies the campaign as AI-generated.
-The collection has no temporary product photos or mock inventory.
+The preserved hero photo has its original visible **PLACEHOLDER IMAGE** label,
+placeholder alt description and AI-generated campaign credit. The former three
+framed campaign cards have been replaced by the explicitly labeled floating
+samples above; they were not imported as real inventory.
 
 `campaign-960.webp`, `campaign-1600.webp` and `campaign-full.webp` are proportional
 WebP exports, without cropping or retouching. HTML/CSS performs intentional
@@ -50,7 +64,7 @@ of the actual gear are the preferred replacement for a fully real campaign.
 
 ## Collection data
 
-`catalog.json` starts with no products because Yoshi's approved inventory,
+`catalog.json` still has no products because Yoshi's approved inventory,
 photographs, sizes, colors and prices have not been received. Generated campaign
 clothes and old mockup product names are not imported as inventory.
 
@@ -78,8 +92,9 @@ Add one item only after its name, photographs and availability are confirmed:
 
 The two flags in this example intentionally default to false. Only items with
 both flags true, a unique valid ID, a supplied name and a usable local photograph
-enter the collection. Photo views, category filters and specifications appear
-only when the approved data supports them. Optional pricing requires a numeric
+enter the collection. The first photograph supplies the floating image; use an
+approved transparent cutout to retain the design. Additional photo views appear
+inside the same-page item card. Unknown options are marked To be confirmed. Optional pricing requires a numeric
 `price` and `currency: "USD"`; unknown pricing becomes an inquiry, never zero.
 
 The collection is display/inquiry only. It links to the existing contact page;

@@ -1,17 +1,20 @@
 # Sport My Fitness
 
-Eight-page static website for Sport My Fitness and Coach Yoshi Barnes.
+Seven-page static website for Sport My Fitness and Coach Yoshi Barnes.
 
 Start with [the current project state](docs/PROJECT_STATE.md). It resolves the older handoffs, identifies the verified source revisions, records the audit evidence, and gives the next task.
 
 ## Current work
 
-The October 20 shared hero-lettering release covers all eight full-site pages.
-Start at [the current project state](docs/PROJECT_STATE.md),
-[the lettering implementation](docs/HERO_LETTERING_20261020.md) and
-[its verification receipt](verification/hero-lettering-20261020.json) for the
-observed review/release status. The existing review entrance is
-https://sportmyfitness.com/admin; navigate inside that tab after signing in.
+The October 21 Apparel refinement puts the floating garment carousel and each
+item’s full details on **one Apparel page**. It follows the approved mockups:
+transparent cutouts, no product frames or prices in the row, native horizontal
+scrolling, and an inline card for each garment. Clearly labeled samples remain
+until Yoshi supplies the actual clothing photos, descriptions, prices and options.
+The real approved-products catalogue remains empty; unknown prices are inquiries.
+See [the implementation](docs/APPAREL_FLOATING_20261021.md) and
+[the current project state](docs/PROJECT_STATE.md) for verification/release status.
+Review at https://sportmyfitness.com/admin, then choose Apparel in the same tab.
 The public Coming soon page and account/hosting setup remain separate.
 
 ## Earlier design checkpoints
@@ -44,7 +47,7 @@ Earlier design reports are historical checkpoints, not current acceptance.
 
 ## Routes
 
-Home (`index.html`), Apparel (`apparel.html`), Apparel collection (`apparel-collection.html`), Train with Yoshi (`training.html`), Programs (`programs.html`), Media (`media.html`), Community (`community.html`), and Contact (`contact.html`). The former About paths (`yoshi.html` and `/yoshi`) forward to the combined Training page.
+Home (`index.html`), Apparel (`apparel.html`), Train with Yoshi (`training.html`), Programs (`programs.html`), Media (`media.html`), Community (`community.html`), and Contact (`contact.html`). The former About paths (`yoshi.html` and `/yoshi`) forward to Training. The former `apparel-collection.html` and `/apparel-collection` paths forward to `apparel.html#collection`; the static compatibility file also supports JavaScript-disabled visits.
 
 Keep the existing static HTML/CSS/JavaScript and GitHub/Vercel workflow. No framework or hosting migration is needed.
 

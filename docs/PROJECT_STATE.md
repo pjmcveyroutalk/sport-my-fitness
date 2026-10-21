@@ -1,6 +1,29 @@
 # Sport My Fitness — Current Project State
 
-Updated October 20, 2026 (UTC); approved shared hero lettering published and verified through the existing private-review access.
+Updated October 21, 2026 (UTC); approved floating apparel refinement prepared for the existing private-review website.
+
+## Current Apparel refinement — October 21, 2026
+
+PJ approved the floating cutout carousel and inline product cards, then explicitly
+requested applying it to the live site. `apparel.html` now contains both browsing
+and full product details. Native item anchors scroll to each garment’s card;
+Back to apparel returns to the row. The row has no product boxes, image fills or
+prices. Dark/light appearances use the existing textured athletic canvas. Mobile
+shows one large garment and the next item peeking in; desktop shows several.
+
+Four clearly labeled, unbranded generated samples demonstrate the approved
+layout while Yoshi prepares real photos, descriptions, prices and options.
+`assets/apparel/catalog.json` remains empty. Sample details never assert a price,
+available size/color, fabric, stock or delivery. Approved catalogue entries
+replace both sample areas together when supplied; prices remain in full detail
+cards and unknown prices become “Ask Yoshi for pricing”. No checkout is added.
+
+The separate Collection UI/popup is retired. Its old URL forwards to the main
+Apparel page, including a static JavaScript-disabled fallback. The exact kit
+master, existing Apparel campaign hero (apart from its same-page button target),
+header/menu/call/theme controls, original motion and every other full-site page
+remain unchanged. The public Coming soon project and access settings are separate.
+See `docs/APPAREL_FLOATING_20261021.md` and the release receipt for fresh checks.
 
 ## Latest content refinement — college background, October 20, 2026
 

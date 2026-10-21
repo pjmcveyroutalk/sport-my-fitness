@@ -30,6 +30,16 @@
       "source": "/yoshi",
       "destination": "/training.html",
       "permanent": true
+    },
+    {
+      "source": "/apparel-collection.html",
+      "destination": "/apparel.html#collection",
+      "permanent": true
+    },
+    {
+      "source": "/apparel-collection",
+      "destination": "/apparel.html#collection",
+      "permanent": true
     }
   ]
 }

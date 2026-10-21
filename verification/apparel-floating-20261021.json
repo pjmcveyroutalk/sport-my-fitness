@@ -1,14 +1,14 @@
 {
-  "status": "IMPLEMENTED_AND_VERIFIED_IN_GITHUB; LIVE_PUBLICATION_BLOCKED",
-  "recorded_at_utc": "2026-10-21T16:04:15.804829+00:00",
+  "status": "PUBLISHED_AND_LIVE_VERIFIED",
+  "recorded_at_utc": "2026-10-21T16:28:32.177080+00:00",
   "request": "Apply the approved floating apparel carousel and same-page product details to the live review site while actual owner photos, prices and descriptions are pending.",
   "baseline_commit": "0c079918298d1c631f2cb6eace6f749af008c4cd",
   "tested_runtime_commit": "89c41124ab0fbf3340a459814ef28b87dfc0009e",
   "release_candidate": "8259bf62c4e524406cbae35ea111462a39666689",
-  "main_runtime_commit": "df34ef40a5ba0201a0e4463b057c41ff5b01862e",
-  "source_tree": "676fccf2fcb8f079ddf2187c1d43b5754dd333db",
-  "current_live_state": "Live authenticated Apparel HTML/CSS/JS still belong to the previous design; four new garment assets return 404. Do not tell PJ this release is live.",
-  "release_difference": "Final main HTML only renames its two CSS/JS query version keys. Reversing that replacement yields the exact tested HTML. No visual or behavior changes after the inspected runtime.",
+  "main_runtime_commit": "46c3c326bf4c7f87e1461cd9e7df632fe250a899",
+  "source_tree": "fbf65b9d07c38bdff2564f4d6a2c3b0d2744e652",
+  "current_live_state": "Authenticated Apparel and all 15 checked source/assets match the release; old Collection forwards to Apparel; all six signed-out privacy checks pass.",
+  "release_difference": "The current runtime removes the counter/arrow/progress strip and obsolete control JavaScript/CSS from the inspected design. Native swipe/trackpad/keyboard scrolling, anchors and product rendering are retained. Source preservation and JS syntax checks pass; the preceding browser run remains the design baseline, not a new browser run of this small removal.",
   "browser": {
     "main_site": {
       "run_id": 39627916870,
@@ -78,15 +78,15 @@
   "source_hashes": [
     {
       "path": "apparel.html",
-      "sha256": "4b622cc232f9e40892050f82d124e79299a172cbf4dbfcba7e616b7e8ef59361"
+      "sha256": "1a002ced43c9b72e142ac65ca774b0680ac6130f3b47a57a2eb21b43a4b5e06d"
     },
     {
       "path": "apparel.css",
-      "sha256": "87ebec5a97ceb949ce04c6c57187a4053d3a69fa9109d165de44dbca509f5897"
+      "sha256": "484403e4f2901400610acfac18c3ccea3f1e5a9bb9292c00520d10a4186c5fd6"
     },
     {
       "path": "apparel.js",
-      "sha256": "00156d473097eb6e3ab475899fb7ecb5bef0751ec987d4cfa0e62688bf908090"
+      "sha256": "4cdd31cb53364cc3bed012a78a786b4166192c409f5135f4cbca2a030c320c9f"
     },
     {
       "path": "apparel-collection.html",
@@ -118,32 +118,32 @@
     }
   ],
   "live_verification": {
-    "checked_at_utc": "2026-10-21T15:57:31.734011+00:00",
+    "checked_at_utc": "2026-10-21T16:26:55.817093+00:00",
     "files": [
       {
         "path": "apparel.html",
         "status": 200,
-        "expected_sha256": "454c7ffc1f5637fab91b164bc60b31fb4a17cb6d8fafe8caaf53bb1fb43e14e6",
-        "served_sha256": "08d3e5fa7f5c33d999f79e75371253215e39276644b1469f888eb4809307832d",
-        "source_matches": false,
-        "pass": false,
-        "source_difference_count": 229
+        "expected_sha256": "1a002ced43c9b72e142ac65ca774b0680ac6130f3b47a57a2eb21b43a4b5e06d",
+        "served_sha256": "fd40ceaca352ffa3f8eafd7b3297bd838a6055ec950e6aad7711632e542ffa60",
+        "source_matches": true,
+        "gateway_admin_insertions": 1,
+        "pass": true
       },
       {
-        "path": "apparel.css",
+        "path": "apparel.css?v=floating-apparel-clean-20261021",
         "status": 200,
-        "expected_sha256": "87ebec5a97ceb949ce04c6c57187a4053d3a69fa9109d165de44dbca509f5897",
-        "served_sha256": "9641ef899ba1c499d5b5687614560c2fcb2e26b83d2a6bb928393705ab410c20",
-        "source_matches": false,
-        "pass": false
+        "expected_sha256": "484403e4f2901400610acfac18c3ccea3f1e5a9bb9292c00520d10a4186c5fd6",
+        "served_sha256": "484403e4f2901400610acfac18c3ccea3f1e5a9bb9292c00520d10a4186c5fd6",
+        "source_matches": true,
+        "pass": true
       },
       {
-        "path": "apparel.js",
+        "path": "apparel.js?v=floating-apparel-clean-20261021",
         "status": 200,
-        "expected_sha256": "00156d473097eb6e3ab475899fb7ecb5bef0751ec987d4cfa0e62688bf908090",
-        "served_sha256": "f54ccce7709edcadb2e50d82097559852cad44e7a2ff598603a7605f732a0c8b",
-        "source_matches": false,
-        "pass": false
+        "expected_sha256": "4cdd31cb53364cc3bed012a78a786b4166192c409f5135f4cbca2a030c320c9f",
+        "served_sha256": "4cdd31cb53364cc3bed012a78a786b4166192c409f5135f4cbca2a030c320c9f",
+        "source_matches": true,
+        "pass": true
       },
       {
         "path": "apparel-catalog.js",
@@ -163,35 +163,35 @@
       },
       {
         "path": "assets/apparel/placeholders/sample-hoodie-20261021.webp",
-        "status": 404,
+        "status": 200,
         "expected_sha256": "28426e7395c69cba4c8e055761ba893942bfb24cf08a4392a33c3d4fb25ef4f1",
-        "served_sha256": "f3a819e13ed6e446667e939d385000ecaee1a10b64da82bfe70ff64c676b1439",
-        "source_matches": false,
-        "pass": false
+        "served_sha256": "28426e7395c69cba4c8e055761ba893942bfb24cf08a4392a33c3d4fb25ef4f1",
+        "source_matches": true,
+        "pass": true
       },
       {
         "path": "assets/apparel/placeholders/sample-tee-20261021.webp",
-        "status": 404,
+        "status": 200,
         "expected_sha256": "a79833780a1d49807eb367d0d70560ce9318c3fb375ba99bc571e885d5c1f6f9",
-        "served_sha256": "5e4ee82449f61b522798f193ff7d254e609fc6561e4f424866b84fe976c8fd06",
-        "source_matches": false,
-        "pass": false
+        "served_sha256": "a79833780a1d49807eb367d0d70560ce9318c3fb375ba99bc571e885d5c1f6f9",
+        "source_matches": true,
+        "pass": true
       },
       {
         "path": "assets/apparel/placeholders/sample-pants-20261021.webp",
-        "status": 404,
+        "status": 200,
         "expected_sha256": "b32b3a52818404f5d17b1c7ad9c1831c6a403ba7700775073ca21b749f9ad579",
-        "served_sha256": "c4ee727050fcd03a7d5235e8c16e142d2755ad0d01d5a103f7537cc7dffaa164",
-        "source_matches": false,
-        "pass": false
+        "served_sha256": "b32b3a52818404f5d17b1c7ad9c1831c6a403ba7700775073ca21b749f9ad579",
+        "source_matches": true,
+        "pass": true
       },
       {
         "path": "assets/apparel/placeholders/sample-jacket-20261021.webp",
-        "status": 404,
+        "status": 200,
         "expected_sha256": "000e6056e4f20f5e9e11559b2da790db19c64034095da90ae8adcb470dbb8615",
-        "served_sha256": "2707af249309b60787b8849664898e702bcce33973817120c346845ef691cafd",
-        "source_matches": false,
-        "pass": false
+        "served_sha256": "000e6056e4f20f5e9e11559b2da790db19c64034095da90ae8adcb470dbb8615",
+        "source_matches": true,
+        "pass": true
       },
       {
         "path": "assets/brand/apparel-kit/brand-smart.jpg",
@@ -206,8 +206,8 @@
         "status": 200,
         "expected_sha256": "e1d46e1b5b6849ad99f84d55cfb04a5f825e6db5b301abdb3ecdd517d5f9b2b8",
         "served_sha256": "f356edc037a0d20c3b1c6a8685ded77fecaf82f5e89e2b58a9baa0f7e7e89c51",
-        "gateway_admin_insertions": 1,
         "source_matches": true,
+        "gateway_admin_insertions": 1,
         "pass": true
       },
       {
@@ -215,8 +215,8 @@
         "status": 200,
         "expected_sha256": "ff4a57d6be1ab8bcec7f43991cface9fbd2f5ef611cb8ddb1afa583555bf5d48",
         "served_sha256": "57efb559fbd70a9ef567c63fd752330b4f96e423d5e45e08d239d1f058d0ae63",
-        "gateway_admin_insertions": 1,
         "source_matches": true,
+        "gateway_admin_insertions": 1,
         "pass": true
       },
       {
@@ -246,9 +246,9 @@
     ],
     "legacy": {
       "status": 200,
-      "destination": "https://sportmyfitness.com/apparel-collection.html",
-      "main_apparel": false,
-      "pass": false
+      "destination": "https://sportmyfitness.com/apparel.html#collection",
+      "main_apparel": true,
+      "pass": true
     },
     "privacy": [
       {
@@ -283,25 +283,41 @@
       }
     ],
     "credentials_or_cookies_saved": false,
-    "all_pass": false
-  },
-  "deployment_block": {
-    "provider": "Vercel connected app",
-    "target": "production",
-    "team": "routalk-builder",
-    "team_id": "team_jC9jlJ9GZ9GSjrbYoD0pin3U",
-    "project": "sport-my-fitness",
-    "project_id": "prj_gekwpLHnnGbcuGHOp47ieG9C93xJ",
-    "git_sha": "df34ef40a5ba0201a0e4463b057c41ff5b01862e",
-    "http_status": 403,
-    "message": "You don't have permission to create a Production Deployment for this project.",
-    "github_main_updates_completed": true,
-    "github_vercel_status_for_new_main": "No status reported; live source remained old at verification.",
-    "cli_fallback": "Vercel CLI is not installed.",
-    "no_access_or_account_setting_changed": true,
-    "next_step": "Obtain the browser-tool-required approval to use the Vercel dashboard, or a working authorized production deployment connection. Deploy current main to the existing full-site project; preserve the public Coming soon project/protection. Then rerun authenticated live hashes/legacy redirect and signed-out privacy checks. Do not repeat passing browser suites unless runtime changes."
+    "all_pass": true
   },
   "review_entry": "https://sportmyfitness.com/admin",
   "credentials_or_cookies_saved": false,
-  "runtime_or_access_rollback_needed": false
+  "runtime_or_access_rollback_needed": false,
+  "resolved_deployment_issue": {
+    "original_error": "Explicit team-scoped connector requests returned project-not-found/production-permission errors.",
+    "resolution": "The same correct project is accessible through the connector default account scope. Omit explicit teamId/slug for this connection, and verify the returned account/project before a write. Production deployment succeeded without changing any permission or credential.",
+    "default_account_id": "team_jC9jlJ9GZ9GSjrbYoD0pin3U",
+    "project_id": "prj_gekwpLHnnGbcuGHOp47ieG9C93xJ",
+    "manual_deployment": "dpl_9P3JHGRmv9Uxb38SweU6jW8S7Jwo",
+    "queue_note": "An older automatic fc018f6 build completed after the manual release. Verification was repeated after the final automatic main release 46c3c32 became READY; all 15 customer-path source checks then matched.",
+    "browser_fallback_used": false,
+    "access_or_account_settings_changed": false
+  },
+  "production": {
+    "id": "dpl_wF9Nnv9e8mSmuLiLxa2DyAH8i1tp",
+    "url": "https://sport-my-fitness-53nwfzx34-routalk-builder.vercel.app",
+    "target": "production",
+    "state": "READY",
+    "git_sha": "46c3c326bf4c7f87e1461cd9e7df632fe250a899",
+    "alias": "https://sport-my-fitness.vercel.app/",
+    "review_entry": "https://sportmyfitness.com/admin",
+    "sso_protection": {
+      "enabled": true,
+      "deploymentType": "all"
+    },
+    "public_coming_soon_preserved": true
+  },
+  "counter_removal": {
+    "requested": true,
+    "counter_arrows_progress_strip_removed": true,
+    "native_scrolling_and_same_page_links_retained": true,
+    "javascript_syntax_and_source_preservation": true,
+    "additional_broad_browser_run": false,
+    "live_html_and_versioned_css_js_match": true
+  }
 }

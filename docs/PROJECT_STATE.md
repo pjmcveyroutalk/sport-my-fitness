@@ -1,33 +1,41 @@
 # Sport My Fitness — Current Project State
 
-Updated October 21, 2026 (UTC); floating apparel implementation verified and saved on main; production publishing is blocked.
+Updated October 21, 2026 (UTC); the floating Apparel design and clean carousel row are published and live-verified.
 
 ## Current Apparel refinement — October 21, 2026
 
-**Latest requested refinement:** PJ removed the visible carousel counter,
-previous/next buttons and progress bar. The floating row retains native swipe,
-trackpad and keyboard scrolling, and its same-page item anchors. The obsolete
-control markup, styles and JavaScript are removed; product details and all
-other page elements are unchanged. This refinement is source-verified; the
-previous passing browser run is the baseline. Production is still blocked as
-recorded below; browser-dashboard fallback approval has not been given.
+**Published:** Runtime `46c3c326bf4c7f87e1461cd9e7df632fe250a899` is Production
+`dpl_wF9Nnv9e8mSmuLiLxa2DyAH8i1tp` (READY). The complete floating design is live,
+including PJ's latest removal of the counter, arrow buttons and progress bar.
+Native swipe/trackpad/keyboard scrolling and same-page product detail links remain.
+No empty space replaces the deleted controls. Headers, photos, exact logo,
+original motion, product details and other pages are unchanged by that cleanup.
 
-**Deployment checkpoint:** The implementation is on `main`, runtime
-`df34ef40a5ba0201a0e4463b057c41ff5b01862e`, but **is not live**. The connected
-Vercel app rejects production deployment with HTTP 403: “You don't have permission
-to create a Production Deployment for this project.” New main commits have no
-Vercel status, and authenticated live checks still return the previous Apparel
-HTML/CSS/JS; the four new cutouts return 404. The public Coming soon page and six
-signed-out privacy checks remain intact. No account or access setting changed.
+**Live verification:** All 15 checked HTML/assets match the release; CSS and JS
+are checked at the actual versioned URLs used by the page. The former Collection
+URL forwards to `apparel.html#collection`. Six signed-out checks preserve public
+Coming soon, the existing login, and exclusion of private pages/product assets.
+The full-site project's All Deployments Vercel Authentication remains enabled.
+No access, billing, domain, Google, account or protection setting changed.
 
-Chromium/WebKit checks pass: 36 Apparel layouts, four complete item journeys,
-four approved-data/photo/pricing fixtures and four JS/network fallbacks; the
-unchanged main site also passes 60 layouts, 24 navigation, 24 appearance and
-12 original-motion runs. All 24 final captures match the inspected runtime.
-See `verification/apparel-floating-20261021.json` for exact runs, source hashes,
-limits and the deployment error. **Do not redo the implementation or passing
-browser tests.** Finish publishing current main to the existing full-site
-project with authorized Vercel access, then check live hashes and privacy.
+**Resolved connection issue:** Explicit `teamId`/`slug` arguments caused the
+connector's project/deployment calls to fail. Using its default account scope
+finds the same correct project and publishes successfully. For this connection,
+omit those explicit selectors and verify returned account/project IDs before
+writes: account `team_jC9jlJ9GZ9GSjrbYoD0pin3U`, project
+`prj_gekwpLHnnGbcuGHOp47ieG9C93xJ` (`sport-my-fitness`). Browser fallback is not
+needed. An older queued automatic build briefly overtook the manual deployment;
+final live checks were made after current main became READY.
+
+The preceding Chromium/WebKit baseline passes 36 Apparel layouts, four item
+journeys, four data/photo fixtures and four JS/network fallbacks; the unchanged
+main site passes 60 layouts, 24 navigation, 24 appearance and 12 motion runs.
+All 24 design captures match the inspected runtime. The small control-strip
+removal has focused syntax/source checks and live hash verification; the full
+browser suite was not repeated. Exact evidence and limits are recorded in
+`verification/apparel-floating-20261021.json`. Continue from latest main.
+
+Review: https://sportmyfitness.com/admin, then choose Apparel in the same tab.
 
 PJ approved the floating cutout carousel and inline product cards, then explicitly
 requested applying it to the live site. `apparel.html` now contains both browsing

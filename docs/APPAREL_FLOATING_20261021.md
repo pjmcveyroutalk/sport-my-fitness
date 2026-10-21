@@ -14,31 +14,31 @@ space replaces the deleted strip. Header/menu/call controls, photo choices,
 detail cards, images and branding remain unchanged. JavaScript syntax and
 focused source-preservation checks pass for this small removal; the prior
 browser run below records the full design baseline, not a new run of this
-refinement. Publication remains blocked by the existing Vercel permission error.
+refinement. The cleaned-up release is now published and live-verified as described below.
 
 ## Current publication checkpoint
 
-The source is implemented and verified on main (`df34ef40a5ba0201a0e4463b057c41ff5b01862e`),
-but **the live site still serves the previous design**. Production publishing
-through the connected Vercel app fails with HTTP 403 (no permission to create a
-Production Deployment for this project). GitHub updates succeeded, but there is
-no Vercel status for the new source and live source hashes do not match yet.
-No access, hosting, billing, account or DNS setting was changed.
+The floating design and latest control-strip removal are live. Runtime
+`46c3c326bf4c7f87e1461cd9e7df632fe250a899` is Production
+`dpl_wF9Nnv9e8mSmuLiLxa2DyAH8i1tp`, READY, with the existing full-site aliases.
+All 15 authenticated source/asset checks pass, including the actual versioned
+CSS and JavaScript URLs. Old Collection forwards to the same-page collection.
+All six signed-out privacy checks pass. All Deployments Authentication and the
+separate public Coming soon project remain unchanged.
 
-Main-site browser checks pass run `39627916870`; the remaining Apparel checks
-pass focused run `39629389215`. All 36 Apparel layouts, four customer journeys,
-four data/photo fixtures and four JS/network fallbacks pass. The focused review
-branch changes only its workflow command, which is deliberately absent from
-main. All 24 captures are byte-identical to the inspected runtime. Current main
-only refreshes the HTML asset-version queries beyond the tested candidate.
+The apparent deployment-permission block was a connector request-scope issue.
+The default account scope can access and deploy the correct project; explicit
+team selectors caused failed calls. Omit `teamId`/`slug` for this connection and
+verify the returned account/project first. No account, role, credential, billing,
+DNS or protection change was needed. No browser fallback was used.
 
-Resume by deploying **current main** to the existing full-site project using
-authorized Vercel access, then rerun live hash/redirect/privacy checks. Preserve
-the separate Coming soon project and private-review controls. The existing
-browser-tool fallback rule requires approval before switching from the blocked
-connector to dashboard interaction. Full details are saved in
-`verification/apparel-floating-20261021.json`; passing browser checks need not
-be repeated unless runtime changes.
+Main-site checks pass run `39627916870`; Apparel checks pass focused run
+`39629389215`. All 36 layouts, four customer journeys, four data/photo fixtures
+and four fallbacks pass. The isolated workflow change is absent from main. All
+24 final design captures match the inspected runtime. The subsequent small
+counter/arrow removal is syntax/source-verified and checked live; it did not
+repeat the broad browser run. See `verification/apparel-floating-20261021.json`
+for exact evidence and the resolved deployment issue.
 
 ## Scope and behavior
 

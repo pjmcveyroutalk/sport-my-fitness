@@ -6,4 +6,4 @@ PJ requested removal of the small sentence from the official logo, the kit and w
 
 `sport-my-fitness-smart.{jpg,png,webp,svg}` are the current full kit formats. SVG is a genuine contour-derived approximation with layered transparency; it is not an original editable design master. Exact current hashes and verification are recorded with this release. Existing creator, copyright and license fields remain unset.
 
-Every active page's header/menu alt text now says Sport My Fitness. The shared header crop keeps the prior aspect ratio. Apparel retains its established full-kit image dimensions and placement, using the same cleaned identity. Campaign photos, page headlines, homepage lakefront/water artwork and original motion code are outside this edit.
+Every active page's header/menu alt text now says Sport My Fitness. The shared header crop keeps the prior aspect ratio. Apparel now uses the exact same cropped asset and aspect ratio as every other current page, superseding the former separate kit placement. Campaign photos, page headlines, homepage lakefront/water artwork and original motion code are outside this edit.

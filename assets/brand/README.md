@@ -1,9 +1,9 @@
-# Original Sport My Fitness logo
+# Sport My Fitness website logo - October 22, 2026
 
-`sport-my-fitness-original-lockup.png` is an unretouched crop from the original 1248×1248 brand ad supplied by PJ, not a generated or traced replacement. All header/menu placements use this one asset and preserve its aspect ratio. The supplied mark, overlapping wordmark and “SPORT YOUR BEST SELF.” tagline remain in their original relationship.
+PJ requested removal of the small sentence from the official logo, the kit and website placements. This supersedes the former rule preserving that sentence. The runner, wordmark, turquoise identity and existing website placement remain.
 
-Crop: x=75, y=85, width=1100, height=725.
+`sport-my-fitness-logo.png` is the current 1100 x 725 website crop, derived from the current kit's 1248 x 884 raster. The image-assisted cleanup removed the sentence and restored the obscured leg portions. It is an edited derivative, not an untouched original. The former `sport-my-fitness-original-lockup.png` filename now supplies the same cleaned bytes as a compatibility alias; historical original bytes remain in Git history.
 
-Original ad SHA-256: `e815464b8da369f38b754239861431b871cf35127bd75d75b619d7b309797d3a`.
+`sport-my-fitness-smart.{jpg,png,webp,svg}` are the current full kit formats. SVG is a genuine contour-derived approximation with layered transparency; it is not an original editable design master. Exact current hashes and verification are recorded with this release. Existing creator, copyright and license fields remain unset.
 
-Cropped asset SHA-256: `202f885d450df6330d8b0809f0c61f43a7ce940f7c870004c9bf6683178aad63`.
+Every active page's header/menu alt text now says Sport My Fitness. The shared header crop keeps the prior aspect ratio. Apparel now uses the exact same cropped asset and aspect ratio as every other current page, superseding the former separate kit placement. Campaign photos, page headlines, homepage lakefront/water artwork and original motion code are outside this edit.

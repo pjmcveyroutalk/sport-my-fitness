@@ -1,0 +1,94 @@
+{
+  "runtime_commit": "524db2db7caa8fb356049e3582e0021e56d2044f",
+  "baseline": "a277678cfa11397599d2240e8b4ecf72b241e4a8",
+  "logo_sha256": "d27f9e400a10f023ba3ffdf1a079f20cc0042e07552b4da3ab1f21e6ca10b8c7",
+  "pages": [
+    {
+      "page": "index.html",
+      "header_and_menu_same_logo": true,
+      "dimensions": [
+        1100,
+        725
+      ],
+      "unrelated_page_content_preserved": true
+    },
+    {
+      "page": "training.html",
+      "header_and_menu_same_logo": true,
+      "dimensions": [
+        1100,
+        725
+      ],
+      "unrelated_page_content_preserved": true
+    },
+    {
+      "page": "programs.html",
+      "header_and_menu_same_logo": true,
+      "dimensions": [
+        1100,
+        725
+      ],
+      "unrelated_page_content_preserved": true
+    },
+    {
+      "page": "media.html",
+      "header_and_menu_same_logo": true,
+      "dimensions": [
+        1100,
+        725
+      ],
+      "unrelated_page_content_preserved": true
+    },
+    {
+      "page": "community.html",
+      "header_and_menu_same_logo": true,
+      "dimensions": [
+        1100,
+        725
+      ],
+      "unrelated_page_content_preserved": true
+    },
+    {
+      "page": "contact.html",
+      "header_and_menu_same_logo": true,
+      "dimensions": [
+        1100,
+        725
+      ],
+      "unrelated_page_content_preserved": true
+    },
+    {
+      "page": "yoshis-book.html",
+      "header_and_menu_same_logo": true,
+      "dimensions": [
+        1100,
+        725
+      ],
+      "unrelated_page_content_preserved": true
+    },
+    {
+      "page": "apparel.html",
+      "header_and_menu_same_logo": true,
+      "dimensions": [
+        1100,
+        725
+      ],
+      "unrelated_page_content_preserved": true
+    }
+  ],
+  "byte_identical_motion_and_typography": [
+    "site-motion.js",
+    "site-motion.css",
+    "assets/home-water-motion.js",
+    "assets/home-lakefront.css",
+    "hero-lettering.css",
+    "headline-system.css"
+  ],
+  "apparel_inherits_shared_logo_sizing": true,
+  "node_contract_tests_passed": 6,
+  "syntax_and_diff_checks": "pass",
+  "browser_run": 39809049113,
+  "integration_base": "5fe377df77032757ad7d945784226e874fff5e8d",
+  "latest_home_water_and_no_button_preserved": true,
+  "integration_note": "Current main advanced with the separately verified automatic-water release. Home was refreshed from that commit and only logo references/alt text were changed. Shared-header geometry is unaffected. All water code, styles and workflow changes are retained by building on the current main tree."
+}

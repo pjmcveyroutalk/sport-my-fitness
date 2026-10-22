@@ -88,9 +88,11 @@ async function proofGeometry(page) {
             await load(page, 'index');
             const actual = await geometry(page);
             // The selected lakefront artwork has a new responsive crop. All copy,
-            // actions, branding, header and canvas geometry remain unchanged.
-            const protectedGeometry = ({photo, image, ...unchanged}) => unchanged;
+            // actions, header and canvas geometry remain unchanged. The logo
+            // URL intentionally changes for PJ's approved sentence removal.
+            const protectedGeometry = ({photo, image, logo, ...unchanged}) => unchanged;
             assert.deepEqual(protectedGeometry(actual), protectedGeometry(original), 'approved foreground geometry changed: ' + JSON.stringify({engine,width,height,theme,variant}));
+            assert.equal(actual.logo, 'assets/brand/sport-my-fitness-logo.png?v=without-tagline-20261022');
             assert.equal(actual.image, 'assets/photos/smf-lakefront-bench-20261022-1584.webp');
             assert.equal(await page.locator('.yoshi-hero').evaluate(img=>getComputedStyle(img).objectFit), 'cover');
             assert(actual.scrollWidth <= width, 'horizontal overflow');

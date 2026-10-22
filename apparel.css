@@ -1,4 +1,4 @@
-/* Preserve the approved campaign hero and exact kit logo. The new floating
+/* Preserve the approved campaign hero and shared site logo. The new floating
    collection uses the shared site canvas in either appearance. */
 .apparel-page {
   --apparel-canvas: #e5ecec;
@@ -20,10 +20,7 @@
   --apparel-photo-wash: #f2f5f5;
 }
 .apparel-page main { color: var(--apparel-ink); background: var(--apparel-canvas); }
-/* Preserve the byte-identical kit master and its original proportions. */
-.apparel-page .brand { width: 244px; }
-.apparel-page .brand-logo { aspect-ratio: 1248 / 884; }
-.apparel-page .menu-heading .brand { width: 183px; }
+/* The logo inherits the same asset proportions and sizing as every page. */
 .apparel-page .apparel-accent, .apparel-page .apparel-eyebrow { color: var(--apparel-accent); }
 .apparel-page .apparel-inline-link { display: inline-flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 44px; padding-block: 9px; border-bottom: 1px solid currentColor; color: var(--apparel-ink); font-size: 14px; line-height: 1.4; }
 .apparel-page .apparel-inline-link:hover { color: var(--apparel-accent); }
@@ -145,8 +142,6 @@ body.apparel-page main.smf-inner-page > section.apparel-stage {
   .apparel-stage .apparel-look-track { --look-width: calc((100% - 48px) / 2.25); gap: 24px; }
 }
 @media (max-width: 900px) {
-  .apparel-page .brand { width: 120px; }
-  .apparel-page .menu-heading .brand { width: 165px; }
   .apparel-page .apparel-hero-placeholder { top: 18px; }
   .apparel-page .apparel-campaign-photo { inset: 0; }
   .apparel-page .apparel-hero { --hero-title: clamp(72px, 10.4vw, 110px); min-height: 650px; }

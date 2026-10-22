@@ -93,7 +93,7 @@ async function layout(page, width) {
           await load(page);
           assert.equal(await page.locator('html').getAttribute('data-theme'), theme);
           const geometry = await layout(page, width);
-          assert.equal(await page.locator('.brand-logo').first().getAttribute('src'), 'assets/brand/sport-my-fitness-original-lockup.png');
+          assert.equal(await page.locator('.brand-logo').first().getAttribute('src'), 'assets/brand/sport-my-fitness-logo.png?v=without-tagline-20261022');
           if ([390, 1366].includes(width)) await page.screenshot({path: path.join(out, `${engine}-${theme}-${width}.png`), fullPage: true});
           report.layouts.push({engine, width, theme, geometry, pass: true});
           await page.close();

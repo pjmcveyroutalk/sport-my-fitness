@@ -1,5 +1,16 @@
 # Sport My Fitness — Current Project State
 
+## Official logo cleanup and shared Apparel branding - October 22, 2026
+
+PJ requested removal of the small sentence from the official logo, kit and website. All eight current pages now use the same 1100 x 725 cleaned logo in headers and menus, with matching alt text and fresh cache keys. Apparel's separate asset and size overrides were removed so it inherits the shared presentation. The Community branding signoff was removed. Current logo assets and legacy full-wordmark/social variants use the cleaned identity.
+
+Kit 1.2 contains current raster, vector, transparency and PDF exports plus matching metadata and publisher examples. The cleanup was image-assisted; derived SVG/transparency remain documented approximations. Rights stay unset; SEO/AI outcomes remain unmeasured. The later custom icon family and professional records closeout remain separate pending tasks.
+
+Integration is based on main `5fe377df77032757ad7d945784226e874fff5e8d`, preserving its automatic water ripples with no control button. Shared movement, headings, navigation and actions are retained. Source checks confirm all 16 logo placements and dimensions, raster decoding, original-page preservation and unchanged current water code. Six existing contract tests and syntax/diff checks pass. Corrected browser run 39809049113 was delayed during setup; no corrected desktop/mobile rendering pass is claimed at publication. See `docs/LOGO_CLEANUP_20261022.md` and `verification/logo-cleanup-release-20261022.json`.
+
+The public Coming Soon logo is updated and exact served bytes match the current website crop. Eight public/privacy checks pass. Gateway authentication source and route configuration retain the same provider file identities; All Deployments protection for the full site remains required. Authenticated live content comparison remains unavailable through the connector; do not change access or repeatedly retry unchanged authorization paths.
+
+
 ## Automatic water without a control button — October 22, 2026
 
 PJ reported still water and explicitly requested automatic ripples without a

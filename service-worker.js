@@ -1,4 +1,4 @@
-const CACHE_VERSION = "smf-v1";
+const CACHE_VERSION = "smf-logo-20261022";
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 const RUNTIME_CACHE = `${CACHE_VERSION}-runtime`;
 

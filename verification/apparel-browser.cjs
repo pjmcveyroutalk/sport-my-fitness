@@ -63,7 +63,7 @@ async function layout(browser, engine, width, theme) {
     assert.equal(await page.locator('html').getAttribute('data-theme'), theme);
     assert.equal(await page.locator('h1').count(), 1);
     assert.equal(await page.locator('#primary-nav a').count(), 8);
-    assert.equal(await page.locator('.site-header .brand-logo').getAttribute('src'), 'assets/brand/apparel-kit/brand-smart.jpg');
+    assert.equal(await page.locator('.site-header .brand-logo').getAttribute('src'), 'assets/brand/sport-my-fitness-logo.png?v=without-tagline-20261022');
     const geometry = await page.evaluate(() => {
       const logo = document.querySelector('.site-header .brand-logo');
       const box = logo.getBoundingClientRect();
@@ -81,8 +81,8 @@ async function layout(browser, engine, width, theme) {
         surface: getComputedStyle(document.getElementById('collection')).backgroundImage};
     });
     assert(geometry.overflow <= 1, `page overflowed by ${geometry.overflow}px`);
-    assert.deepEqual(geometry.natural, [1248, 884]);
-    assert(Math.abs(geometry.ratio / (1248 / 884) - 1) < .01);
+    assert.deepEqual(geometry.natural, [1100, 725]);
+    assert(Math.abs(geometry.ratio / (1100 / 725) - 1) < .01);
     assert(geometry.cutoutsUnframed);
     assert(geometry.carouselFits, 'carousel still depends on horizontal native scrolling');
     assert(geometry.centerOffset <= 1 && geometry.centerScale > 1.4 && geometry.neighboringItemVisible, 'centered carousel depth/peek is missing');

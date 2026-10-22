@@ -29,7 +29,7 @@ Without JavaScript, ordinary anchors still reach the static sample details.
 
 The apparel header, menu and favicon use the exact approved JPEG master from
 `Sport-My-Fitness-Smart-Brand-Kit-v1.1.zip`, retrieved at version 4:
-`../brand/apparel-kit/brand-smart.jpg`, 1248 × 884.
+`../brand/apparel-kit/brand-smart.jpg`, 1248 × 884. Updated to the cleaned, tagline-free kit on October 22, 2026.
 
 SHA-256: `0349a132474c265497fad5d884fd89adcb32bdeeb6ba6ef26baba2e27cf79487`.
 

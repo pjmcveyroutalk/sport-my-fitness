@@ -1,0 +1,86 @@
+{
+  "date": "2026-10-22",
+  "requested_change": "Remove the small sentence from the official logo and unify all page branding, including Apparel",
+  "integration_base": "5fe377df77032757ad7d945784226e874fff5e8d",
+  "logo_runtime_review_source": "524db2db7caa8fb356049e3582e0021e56d2044f",
+  "all_8_pages_same_logo": "assets/brand/sport-my-fitness-logo.png?v=without-tagline-20261022",
+  "header_menu_placements_verified": 16,
+  "image_dimensions": [
+    1100,
+    725
+  ],
+  "logo_sha256": "d27f9e400a10f023ba3ffdf1a079f20cc0042e07552b4da3ab1f21e6ca10b8c7",
+  "apparel_inherits_shared_sizing": true,
+  "source_and_image_checks": "pass",
+  "existing_contract_tests": {
+    "pass": 6,
+    "fail": 0
+  },
+  "browser_review": {
+    "corrected_run_id": 39809049113,
+    "status_at_publication": "delayed during browser setup; no new desktop/mobile pass claimed",
+    "prior_run_id": 39804829742,
+    "prior_failure": "historical trust fixture expected old logo URL; replaced with an explicit new URL assertion while retaining geometry assertions",
+    "local_browser_attempt": "download failed; not a rendering result"
+  },
+  "public_holding": {
+    "deployment": "dpl_CThrzErdtBNfRVCW3hyVZUrYGkqe",
+    "status": "READY",
+    "gateway_source_uid_unchanged": "deb80eb415080bf4eec29c9d6685eaa08921f890",
+    "routes_config_uid_unchanged": "a48dd640a1b722f18f8f06639885c1e3cd4e1226",
+    "checks": [
+      {
+        "path": "/",
+        "status": 200,
+        "content_type": "text/html; charset=utf-8",
+        "holding_preserved": true
+      },
+      {
+        "path": "/admin",
+        "status": 200,
+        "content_type": "text/html; charset=utf-8",
+        "password_form_preserved": true
+      },
+      {
+        "path": "/index.html",
+        "status": 200,
+        "content_type": "text/html; charset=utf-8",
+        "holding_preserved": true
+      },
+      {
+        "path": "/training.html",
+        "status": 404,
+        "content_type": "text/plain; charset=utf-8",
+        "private_content_hidden": true
+      },
+      {
+        "path": "/apparel.html",
+        "status": 404,
+        "content_type": "text/plain; charset=utf-8",
+        "private_content_hidden": true
+      },
+      {
+        "path": "/yoshis-book.html",
+        "status": 404,
+        "content_type": "text/plain; charset=utf-8",
+        "private_content_hidden": true
+      },
+      {
+        "path": "/site-design.css",
+        "status": 404,
+        "content_type": "text/plain; charset=utf-8",
+        "private_content_hidden": true
+      },
+      {
+        "path": "/assets/brand/sport-my-fitness-original-lockup.png?v=without-tagline-20261022",
+        "status": 200,
+        "content_type": "image/png",
+        "sha256": "d27f9e400a10f023ba3ffdf1a079f20cc0042e07552b4da3ab1f21e6ca10b8c7",
+        "exact_cleaned_asset": true
+      }
+    ]
+  },
+  "latest_automatic_water_preserved": true,
+  "full_site_public_launch": false,
+  "authenticated_live_content_comparison": "unavailable via existing connector; no credential/access changes made"
+}

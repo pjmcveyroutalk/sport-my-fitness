@@ -1,35 +1,44 @@
-# Yoshi’s Book — page concept for PJ’s review
+# Yoshi’s Book — revised page concept for PJ’s review
 
-This is a **review concept**, based on main `7ff0d0c`, not an approved production
-release. It gives the Book destination a dedicated introduction and cover area,
-followed by a short About the book section. It uses the existing textured canvas,
-lettering, exact logo, header, eight-link navigation, phone and appearance control.
-The cover is explicitly a placeholder. No actual title, cover, description,
-reading sample, format, price, release date, endorsement or sales claim is supplied.
+This is a **review concept**, based on main `7ff0d0c`, not a production release.
+PJ accepted the overall layout and requested a cleaner, more proportionate cover
+placeholder plus removal of the entire lower About section. The current concept
+has a single introduction/cover section and the existing site footer.
 
-The only working page action is **About the book**, which stays on this page.
-**Digital edition · Coming soon** is a status, not a checkout. Return home remains
-available. A later approved book title/description, cover and optional reading
-sample replace the placeholders; payment and protected delivery stay in the
-separate payment workstream. No manuscript is exposed here.
+The cover is upright with a 3:4 ratio, a fine solid edge, subtle spine and shadow,
+and quiet placeholder labels. The previous dashed edge, tilt and oversized
+Coming soon lettering are removed. Cover width is 288px maximum on large screens
+and 216px on phones. The removed About section leaves no gap or dead anchor;
+Return home is available beneath the digital-edition status in the introduction.
 
-Only `yoshis-book.html` and new, page-scoped `yoshis-book.css` change the page.
+The existing textured canvas, semantic heading/lettering, exact logo, header,
+eight-link navigation, phone, appearance control and footer are retained.
+Actual book title, cover, description, reading sample, format, price, release
+date and endorsements remain pending. The page contains no sales claim,
+checkout, payment handling, public manuscript or digital fulfillment.
+
+Only `yoshis-book.html` and page-scoped `yoshis-book.css` change the page.
 Home, home buttons, all other pages, shared design/appearance/menu/motion,
 curves, photographs, exact brand bytes, redirects, and Psalm 23 are untouched.
-The Book placeholder did not run entrance motion; this concept also remains
-static pending the actual book artwork and PJ’s direction.
+The Book placeholder did not run entrance motion; this concept remains static.
 
 `verification/book-page-concept.cjs` renders the concept and checks responsive
-fit, placeholder honesty, themes, keyboard navigation, native menu fallback and
-links. The review branch temporarily scopes the existing review workflow to this
-page only. **Do not merge that temporary workflow change into production.**
+fit, the cover ratio, absent lower section/dead anchor, themes, keyboard return,
+menu and native fallback. The review branch temporarily scopes the existing
+review workflow to this page. **Restore the unchanged main workflow before
+production integration.** Keep setup, branding and payments in their separate
+workstreams. This revision is for PJ’s requested new mockup, not publication.
 
-PJ’s handoff requests a focused mockup and design decision before applying a
-materially new book-page composition. Keep this concept on its review branch
-until PJ has reviewed it. Main and production continue to serve the temporary
-Book destination during review.
+## Revised mockup evidence
 
-## Fresh review evidence
+Run `39706280580` succeeds on `f4103d6`: 24 layouts, four focused journeys and
+four native fallbacks, zero failures in Chromium/WebKit at six widths and both
+themes. The cover ratio and absence of the lower section/dead action are checked.
+Desktop and phone dark renders were inspected. Evidence artifact: `12394643159`;
+receipt: `verification/book-page-concept-clean-20261021.json`. The revised mockup
+has not been applied to production.
+
+## Earlier first-concept evidence
 
 Run `39704221233` succeeds on concept commit `a1ccc0e`: 24 layouts at six widths
 (320–1920px), dark/light, Chromium 151 and WebKit 26.5; four focused navigation

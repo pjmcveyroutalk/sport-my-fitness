@@ -1,5 +1,20 @@
 # Sport My Fitness — Current Project State
 
+## Cleaner Book mockup — October 21, 2026
+
+**Review branch only.** PJ accepted the overall book layout and requested a
+cleaner, more proportionate placeholder and removal of the entire bottom About
+section. Revised concept `f4103d6` uses an upright 3:4 cover, subtle edge/spine,
+quiet labels and a single introduction section. The removed About action is
+absent; Return home sits beneath the edition status. The existing footer remains.
+
+Run `39706280580` passes 24 layouts, four journeys and four native fallbacks in
+both themes and Chromium/WebKit. Desktop/phone renders were inspected. See
+`verification/book-page-concept-clean-20261021.json`. No production integration,
+other page, shared movement, setup, branding or payments change is included.
+Restore the full main review workflow before any future production integration.
+
+
 ## Book-page concept ready for PJ’s review — October 21, 2026
 
 **Review branch only; not a production release.**

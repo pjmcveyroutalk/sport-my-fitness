@@ -1,0 +1,53 @@
+{
+  "status": "REVISED_MOCKUP_READY_NOT_PRODUCTION",
+  "tested_commit": "f4103d632208dfc35229cb7dd86b05b5facdfc09",
+  "review_branch": "review/approved-glass-book-concept-20261021",
+  "base_main": "7ff0d0cf8c4c41c49293847aa0af1f4bad163848",
+  "changes": [
+    "Upright 3:4 cover placeholder with simple type, fine edge and subtle spine",
+    "Entire lower About section and its dead action removed",
+    "Return home retained in the introduction"
+  ],
+  "run_id": 39706280580,
+  "job_id": 119586956534,
+  "conclusion": "success",
+  "artifact_id": 12394643159,
+  "artifact_sha256": "cf1a6a9e86609c5bd9e496bff4a5bd143913cf5dadd5d307ca9b115f75420387",
+  "checks": {
+    "layouts": 24,
+    "journeys": 4,
+    "fallbacks": 4,
+    "failures": [],
+    "themes": [
+      "dark",
+      "light"
+    ],
+    "widths": [
+      320,
+      390,
+      768,
+      901,
+      1366,
+      1920
+    ],
+    "header_navigation_footer_exact": true,
+    "syntax": "passed",
+    "git_diff_check": "passed"
+  },
+  "visual_inspection": [
+    "chromium-dark-1366.png",
+    "chromium-dark-390.png"
+  ],
+  "browsers": {
+    "chromium": "151.0.7922.34",
+    "webkit": "26.5"
+  },
+  "scope_limits": [
+    "Review mockup only",
+    "Home, shared movement, branding, other pages and privacy settings unchanged",
+    "No payments or digital fulfillment",
+    "No physical-device testing",
+    "Restore full main review workflow before production integration"
+  ],
+  "completed_at": "2026-10-22T01:33:59.943Z"
+}

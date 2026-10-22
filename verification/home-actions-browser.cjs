@@ -72,6 +72,18 @@ async function layout(page, width) {
           await page.close();
         }
       }
+      for (const [width, height] of [[901, 657], [1366, 600], [1366, 657], [1366, 768], [1920, 657], [1920, 768]]) {
+        for (const theme of ['dark', 'light']) {
+          const page = await browser.newPage({viewport: {width, height}, reducedMotion: 'reduce'});
+          await page.addInitScript(value => localStorage.setItem('smf-color-theme', value), theme);
+          await load(page);
+          const geometry = await layout(page, width);
+          assert(geometry.buttons.every(button => button.rect.bottom <= height - 12), 'home actions fall below the first screen');
+          if (width === 1366 && height !== 600) await page.screenshot({path: path.join(out, `${engine}-${theme}-${width}x${height}.png`), fullPage: false});
+          report.layouts.push({engine, width, height, theme, geometry, firstScreen: true, pass: true});
+          await page.close();
+        }
+      }
       for (const width of [390, 1366]) {
         const page = await browser.newPage({viewport: {width, height: 900}, reducedMotion: 'reduce'});
         for (const [label, destination] of [['Apparel', 'apparel.html'], ['Explore training', 'training.html'], ['Yoshi’s Book', 'yoshis-book.html']]) {

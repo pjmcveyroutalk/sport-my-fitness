@@ -10,6 +10,7 @@
   let timeLocation;
   let context2d;
   let waterMask;
+  let waterSource;
   let crop;
   let renderer;
   let ready = false;
@@ -117,6 +118,13 @@
       gl.uniform4f(gl.getUniformLocation(program, 'u_crop'), ...crop);
       gl.uniform2f(gl.getUniformLocation(program, 'u_image_size'), photo.naturalWidth, photo.naturalHeight);
     } else {
+      waterSource = document.createElement('canvas');
+      waterSource.width = photo.naturalWidth;
+      waterSource.height = photo.naturalHeight;
+      // Draw the whole responsive image once. Explicit source rectangles on
+      // an HTMLImageElement can use density-corrected dimensions differently
+      // from its decoded raster; the canvas has unambiguous pixel coordinates.
+      waterSource.getContext('2d').drawImage(photo, 0, 0, waterSource.width, waterSource.height);
       makeWaterMask();
     }
     paint();
@@ -164,10 +172,10 @@
       const dx = (swell * 3.8 + ripple * 1.7 + fine * 0.6) * strength;
       const dy = Math.sin(v * 210 + center * 10 - elapsed * 0.85) * 0.8 * strength;
       const height = Math.min(band, canvas.height - y);
-      context2d.drawImage(photo,
-        crop[0] * photo.naturalWidth + dx,
-        (crop[1] + y / canvas.height * crop[3]) * photo.naturalHeight + dy,
-        crop[2] * photo.naturalWidth, height / canvas.height * crop[3] * photo.naturalHeight,
+      context2d.drawImage(waterSource,
+        crop[0] * waterSource.width + dx,
+        (crop[1] + y / canvas.height * crop[3]) * waterSource.height + dy,
+        crop[2] * waterSource.width, height / canvas.height * crop[3] * waterSource.height,
         0, y, canvas.width, height);
     }
     context2d.globalCompositeOperation = 'destination-in';

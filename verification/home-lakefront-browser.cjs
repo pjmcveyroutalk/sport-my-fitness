@@ -14,17 +14,19 @@ function pixelChange(before,after) {
   const a=PNG.sync.read(before),b=PNG.sync.read(after);
   assert.equal(a.width,b.width);assert.equal(a.height,b.height);
   let changed=0,total=0,maximum=0;
+  const channels=[0,0,0];
   for(let i=0;i<a.data.length;i+=4) {
     let largest=0;
     for(let c=0;c<3;c+=1) {
       const delta=Math.abs(a.data[i+c]-b.data[i+c]);total+=delta;largest=Math.max(largest,delta);
+      channels[c]+=a.data[i+c]-b.data[i+c];
     }
     maximum=Math.max(maximum,largest);
     // Ignore imperceptible compositor rounding; compare rendered pixels,
     // rather than requiring identical PNG compression bytes.
     if(largest>3)changed+=1;
   }
-  return {changed,pixels:a.width*a.height,mean:total/(a.width*a.height*3),maximum};
+  return {changed,pixels:a.width*a.height,mean:total/(a.width*a.height*3),maximum,colorMeanDelta:Math.max(...channels.map(value=>Math.abs(value)/(a.width*a.height)))};
 }
 async function load(page) {
   const response = await page.goto(base+'/index.html',{waitUntil:'domcontentloaded'});
@@ -87,11 +89,15 @@ async function water(page, engine, width, mode) {
   await page.screenshot({path:path.join(out,`${engine}-${mode}-${width}-a.png`),fullPage:true});
   await delay(1000);
   const regions={};
+  let activeWater;
   for(const [name,clip] of Object.entries(boxes)) {
     const after=await page.screenshot({clip});
     fs.writeFileSync(path.join(out,`${engine}-${mode}-${width}-${name}-b.png`),after);
     const delta=pixelChange(before[name],after);
-    if(name==='water')assert(delta.changed>delta.pixels*0.15&&delta.mean>1,'water is visibly still: '+JSON.stringify(delta));
+    if(name==='water') {
+      assert(delta.changed>delta.pixels*0.15&&delta.mean>1,'water is visibly still: '+JSON.stringify(delta));
+      activeWater=after;
+    }
     else assert(delta.maximum<=3,name+' moves with the water: '+JSON.stringify(delta));
     regions[name]=delta;
   }
@@ -99,6 +105,8 @@ async function water(page, engine, width, mode) {
   await page.emulateMedia({reducedMotion:'reduce'});
   await page.waitForFunction(()=>document.querySelector('.smf-water-canvas').dataset.waterState==='reduced');
   assert.equal(await page.locator('.smf-water-canvas').isVisible(),false);
+  const appearance=pixelChange(activeWater,await page.screenshot({clip:boxes.water}));
+  assert(appearance.colorMeanDelta<5,'moving water samples the wrong part of the image: '+JSON.stringify(appearance));
   const still=await page.screenshot();await delay(250);
   assert(still.equals(await page.screenshot()),'reduced-motion page still moves');
   await page.emulateMedia({reducedMotion:'no-preference'});
@@ -110,7 +118,7 @@ async function water(page, engine, width, mode) {
   const frames=await page.locator('.smf-water-canvas').getAttribute('data-rendered-frames');
   await page.waitForFunction(previous=>document.querySelector('.smf-water-canvas').dataset.renderedFrames!==previous,frames);
   assert.deepEqual(errors,[]);
-  return {engine,width,mode,renderer,automatic:true,noButton:true,regions,recovered,restoredPageLifecycle:true,reducedMotion:true,pass:true};
+  return {engine,width,mode,renderer,automatic:true,noButton:true,regions,appearance,recovered,restoredPageLifecycle:true,reducedMotion:true,pass:true};
 }
 (async()=>{
   const selected=(process.env.SMF_BROWSER_ENGINES||'chromium,webkit').split(',');
@@ -118,7 +126,7 @@ async function water(page, engine, width, mode) {
     const browser=await launcher.launch(engine==='chromium'?{args:['--no-sandbox','--disable-dev-shm-usage']}:{});
     report[engine+'Version']=browser.version();
     try {
-      for (const width of [390,1366]) {
+      for (const width of (process.env.SMF_WATER_WIDTHS||'390,1366').split(',').map(Number)) {
         for (const theme of ['dark','light']) {
           const page=await browser.newPage({viewport:{width,height:900},reducedMotion:'reduce'});
           await page.addInitScript(theme=>localStorage.setItem('smf-color-theme',theme),theme);
@@ -144,7 +152,7 @@ async function water(page, engine, width, mode) {
           report.layouts.push({engine,width,theme,data,womanHead,pass:true});
           await page.close();
         }
-        for(const mode of ['normal','without-webgl','shader-failure','context-loss','without-graphics']) {
+        for(const mode of (process.env.SMF_WATER_MODES||'normal,without-webgl,shader-failure,context-loss,without-graphics').split(',')) {
           const page=await browser.newPage({viewport:{width,height:1000},reducedMotion:'no-preference'});
           try {
             const result=await water(page,engine,width,mode);

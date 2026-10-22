@@ -13,9 +13,12 @@ const pages = ['index', 'apparel', 'yoshis-book', 'training', 'programs', 'media
 const save = () => fs.writeFileSync(path.join(out, 'results.json'), JSON.stringify(report, null, 2));
 const check = (condition, message) => { if (!condition) report.failures.push({error: message}); };
 async function load(page, route) {
-  const response = await page.goto(`${base}/${route}.html`, {waitUntil: 'networkidle'});
+  const response = await page.goto(`${base}/${route}.html`, {waitUntil: 'domcontentloaded'});
   assert.equal(response.status(), 200);
-  await page.evaluate(() => document.fonts.ready);
+  await page.evaluate(async () => {
+    await document.fonts.ready;
+    await Promise.all([...document.querySelectorAll('.yoshi-hero,.training-gym,.brand-logo')].map(img=>img.decode().catch(()=>{})));
+  });
 }
 async function geometry(page) {
   return page.evaluate(() => {
@@ -60,6 +63,7 @@ async function proofGeometry(page) {
           await load(page, 'index');
           const original = await geometry(page);
           for (const variant of variants) {
+            const previousFailures = report.failures.length;
             await load(page, 'home-trust-' + variant);
             const actual = await geometry(page);
             assert.deepEqual(actual, original, 'approved geometry changed: ' + JSON.stringify({engine,width,height,theme,variant}));
@@ -78,7 +82,7 @@ async function proofGeometry(page) {
             if ((width === 390 || width === 1366) && height !== 657) {
               await page.screenshot({path: path.join(out, `${engine}-${theme}-${variant}-${width}.png`)});
             }
-            report.layouts.push({engine,width,height,theme,variant,proof,approvedHeroUnchanged:true,pass:true});
+            report.layouts.push({engine,width,height,theme,variant,proof,approvedHeroUnchanged:true,pass:report.failures.length === previousFailures});
           }
           await page.close();
         }

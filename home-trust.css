@@ -59,6 +59,10 @@
 :root[data-theme="light"] .proof-icon { background: #f4f9f9cc; border-color: #759ba4; }
 :root[data-theme="light"] .proof-panel { background: linear-gradient(115deg, #f7fbfbf2, #edf5f5e6); }
 :root[data-theme="light"] :is(.proof-detail, .proof-panel li span, .proof-client figcaption) { color: var(--muted); }
+/* Taller desktop headlines leave a clear area beside WORK, below her arm. */
+@media (min-width: 1160px) and (min-height: 720px) {
+  .home-proof--badges { top: calc(var(--hero-kicker-slot) + var(--hero-title) * 1.4); }
+}
 @media (max-width: 800px) {
   .home-proof {
     top: calc(var(--hero-kicker-slot) + var(--hero-title) * .35);

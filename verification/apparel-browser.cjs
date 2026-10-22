@@ -63,7 +63,7 @@ async function layout(browser, engine, width, theme) {
     assert.equal(await page.locator('html').getAttribute('data-theme'), theme);
     assert.equal(await page.locator('h1').count(), 1);
     assert.equal(await page.locator('#primary-nav a').count(), 8);
-    assert.equal(await page.locator('.site-header .brand-logo').getAttribute('src'), 'assets/brand/apparel-kit/brand-smart.jpg');
+    assert.equal(await page.locator('.site-header .brand-logo').getAttribute('src'), 'assets/brand/apparel-kit/brand-smart.jpg?v=without-tagline-20261022');
     const geometry = await page.evaluate(() => {
       const logo = document.querySelector('.site-header .brand-logo');
       const box = logo.getBoundingClientRect();

@@ -1,0 +1,14 @@
+/* One athletic headline family, with a clear secondary scale.
+   Hero lettering, original logo, body copy, small labels and motion stay intact. */
+main h2:not(.eyebrow),
+main h3:not(.eyebrow) {
+  font-family: var(--display);
+  font-style: italic;
+  font-weight: 900;
+  letter-spacing: .005em;
+}
+main h2:not(.eyebrow) {
+  font-size: clamp(44px, 4.4vw, 64px);
+  line-height: 1.02;
+}
+main h3:not(.eyebrow) { line-height: 1.08; }

@@ -1,0 +1,71 @@
+/* Approved Home trust badges: preserve the hero's resting geometry.
+   Proof sits in the space beside the heading, above the existing actions. */
+.home-proof {
+  --proof-accent: var(--accent-ink, var(--teal));
+  position: absolute;
+  z-index: 3;
+  top: calc(var(--hero-kicker-slot) + var(--hero-title) * .45);
+  left: calc(var(--hero-title) * 2.95);
+  width: 206px;
+  max-width: calc(100vw - var(--rail-width) - 2 * var(--gutter) - var(--hero-title) * 2.95);
+  color: var(--ink);
+  transition: opacity 180ms ease;
+}
+.home-proof ul { list-style: none; padding: 0; margin: 0; }
+.proof-badges { display: grid; gap: 22px; }
+.proof-badges li { display: flex; align-items: center; gap: 12px; }
+.proof-icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 48px;
+  width: 48px;
+  height: 48px;
+  border: 1px solid #9bbec5;
+  border-radius: 50%;
+  background: #0a2026a6;
+  color: var(--proof-accent);
+}
+.proof-icon svg { width: 26px; height: 26px; }
+.proof-badges strong {
+  display: block;
+  font: 700 19px/1.1 var(--label);
+}
+.proof-badges .proof-detail {
+  display: block;
+  margin-top: 5px;
+  font: 400 12px/1.35 var(--body);
+  color: #d1e0e3;
+}
+:root[data-theme="light"] .proof-icon { background: #f4f9f9cc; border-color: #759ba4; }
+:root[data-theme="light"] .proof-detail { color: var(--muted); }
+/* Taller desktop headlines leave a clear area beside WORK. */
+@media (min-width: 1160px) and (min-height: 720px) {
+  .home-proof--badges { top: calc(var(--hero-kicker-slot) + var(--hero-title) * 1.4); }
+}
+@media (max-width: 800px) {
+  .home-proof {
+    top: calc(var(--hero-kicker-slot) + var(--hero-title) * .35);
+    left: calc(var(--hero-title) * 2.95);
+    width: 165px;
+  }
+  .proof-badges { gap: 19px; }
+  .proof-badges li { gap: 9px; }
+  .proof-icon { width: 36px; height: 36px; flex-basis: 36px; }
+  .proof-icon svg { width: 21px; height: 21px; }
+  .proof-badges strong { font-size: 16px; line-height: 1.08; }
+  .proof-badges .proof-detail { font-size: 11px; margin-top: 4px; }
+}
+@media (max-width: 359px) {
+  .home-proof { left: calc(var(--hero-title) * 2.87); max-width: calc(100vw - 2 * var(--gutter) - var(--hero-title) * 2.87); }
+  .proof-badges li { gap: 6px; }
+  .proof-icon { width: 30px; height: 30px; flex-basis: 30px; }
+  .proof-badges strong { font-size: 14px; }
+  .proof-badges .proof-detail { font-size: 10px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  html.smf-motion-boot .home-proof,
+  html.smf-motion-playing .home-proof { opacity: 0; }
+}
+@media (forced-colors: active) {
+  .proof-icon { border-color: CanvasText; }
+}

@@ -1,5 +1,20 @@
 # Sport My Fitness — Current Project State
 
+## Matching website favicon — October 22, 2026
+
+PJ requested the favicon match the corrected horizontal website branding. New
+website-only icons reuse the exact original symbol embedded in the current
+header, centered on black. All eight pages, Coming Soon and Admin reference the
+versioned ICO, PNG and Apple touch icons. The root favicon, manifest icons and
+worker cache also use this artwork. Existing brand masters and the separate
+branding package are untouched. `design-tools/build-site-icons.cjs` reproduces
+the exports from the header asset.
+
+All 13 existing contract tests, syntax and diff checks pass. Image decoding
+confirms the six PNG sizes and the ICO's 16, 32 and 48 pixel entries. Source
+checks confirm every page reference and unchanged header artwork and automatic
+water controller. Authentication and launch restrictions are retained.
+
 ## Horizontal website logo — October 22, 2026
 
 PJ approved the horizontal runner/wordmark header across the website and kept the

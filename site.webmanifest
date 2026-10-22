@@ -6,12 +6,12 @@
   "scope": "/",
   "icons": [
     {
-      "src": "/brand/android-chrome-192x192.png",
+      "src": "/assets/brand/site-icons/icon-192.png?v=current-brand-20261022",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/brand/android-chrome-512x512.png",
+      "src": "/assets/brand/site-icons/icon-512.png?v=current-brand-20261022",
       "sizes": "512x512",
       "type": "image/png"
     }

@@ -1,4 +1,4 @@
-const CACHE_VERSION = "smf-clean-urls-20261022";
+const CACHE_VERSION = "smf-favicon-20261022";
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 const RUNTIME_CACHE = `${CACHE_VERSION}-runtime`;
 
@@ -9,10 +9,10 @@ const PRECACHE_URLS = [
   "/styles.css",
   "/site-theme.css",
   "/site-shell.js",
-  "/brand/favicon.ico",
-  "/brand/apple-touch-icon.png",
-  "/brand/android-chrome-192x192.png",
-  "/brand/android-chrome-512x512.png"
+  "/favicon.ico",
+  "/assets/brand/site-icons/apple-touch-icon.png",
+  "/assets/brand/site-icons/icon-192.png",
+  "/assets/brand/site-icons/icon-512.png"
 ];
 
 self.addEventListener("install", event => {

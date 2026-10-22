@@ -1,0 +1,149 @@
+{
+  "schema_version": 1,
+  "status": "published-and-live-verified",
+  "runtime_commit": "686e1b6537c0e11349c2507c06b13a52b775b6fa",
+  "review_commit": "2cc55e947f26fee61dc70d7bfd7ff06f6104ed67",
+  "project": {
+    "id": "prj_gekwpLHnnGbcuGHOp47ieG9C93xJ",
+    "name": "sport-my-fitness",
+    "accountId": "team_jC9jlJ9GZ9GSjrbYoD0pin3U",
+    "protection": {
+      "enabled": true,
+      "deploymentType": "all"
+    }
+  },
+  "production": {
+    "id": "dpl_4jQ1vitywbepnQ6go3rGqMiZAHrV",
+    "state": "READY",
+    "url": "sport-my-fitness-fo9ugm6u4-routalk-builder.vercel.app"
+  },
+  "browser": {
+    "run_id": 39701675498,
+    "job_id": 119572115893,
+    "artifact_id": 12393560488,
+    "artifact_digest": "sha256:f4f69dbcccf54e18fccd1d2d023d9dc84108389c3000b7a225333ad37a698abb",
+    "menu_journeys": 32,
+    "native_fallbacks": 4,
+    "failures": 0,
+    "chromium_version": "151.0.7922.34",
+    "webkit_version": "26.5",
+    "completed_at": "2026-10-22T00:47:22.641Z"
+  },
+  "change": "Yoshi\u2019s Book is the third entry, directly below Apparel, in all eight side menus. It opens yoshis-book.html, matching the home button. The Book page marks its menu link current.",
+  "live": {
+    "checked_at": "2026-10-22T00:49:07.968798+00:00",
+    "authenticated_files": [
+      {
+        "path": "index.html",
+        "status": 200,
+        "source_sha256": "98485efd719a6d5b10f3ed8bf1f9ab51f1b95df0c81cbd03a7091f8a8c8c12e7",
+        "served_sha256": "98485efd719a6d5b10f3ed8bf1f9ab51f1b95df0c81cbd03a7091f8a8c8c12e7",
+        "existing_admin_control_normalized": true,
+        "pass": true
+      },
+      {
+        "path": "apparel.html",
+        "status": 200,
+        "source_sha256": "94505bccef47423cf0ca116dd360c2c8e1b29312a184fce9dceec4ffc5dd30a2",
+        "served_sha256": "94505bccef47423cf0ca116dd360c2c8e1b29312a184fce9dceec4ffc5dd30a2",
+        "existing_admin_control_normalized": true,
+        "pass": true
+      },
+      {
+        "path": "training.html",
+        "status": 200,
+        "source_sha256": "f1c2a066bb5e0520b26f26fab9783bc60f222cb1c0b6102e22cc62b76eb24661",
+        "served_sha256": "f1c2a066bb5e0520b26f26fab9783bc60f222cb1c0b6102e22cc62b76eb24661",
+        "existing_admin_control_normalized": true,
+        "pass": true
+      },
+      {
+        "path": "programs.html",
+        "status": 200,
+        "source_sha256": "3949816a89b89c063afeed1025cfe5f5bc5d99c1ba4d5b4d189401094af8758a",
+        "served_sha256": "3949816a89b89c063afeed1025cfe5f5bc5d99c1ba4d5b4d189401094af8758a",
+        "existing_admin_control_normalized": true,
+        "pass": true
+      },
+      {
+        "path": "media.html",
+        "status": 200,
+        "source_sha256": "f45b64cf09fb2dbbac2e90fff1b376b134e1734928a8a1ce657818acdfc46b18",
+        "served_sha256": "f45b64cf09fb2dbbac2e90fff1b376b134e1734928a8a1ce657818acdfc46b18",
+        "existing_admin_control_normalized": true,
+        "pass": true
+      },
+      {
+        "path": "community.html",
+        "status": 200,
+        "source_sha256": "307c2a3d5118f22ccc63578423d0c30dc26424a617dbd4655d51f4eac412c7eb",
+        "served_sha256": "307c2a3d5118f22ccc63578423d0c30dc26424a617dbd4655d51f4eac412c7eb",
+        "existing_admin_control_normalized": true,
+        "pass": true
+      },
+      {
+        "path": "contact.html",
+        "status": 200,
+        "source_sha256": "53df43ab0c1a32791d7b6145b3647d632fab6205d84da5458bb60bee607a477d",
+        "served_sha256": "53df43ab0c1a32791d7b6145b3647d632fab6205d84da5458bb60bee607a477d",
+        "existing_admin_control_normalized": true,
+        "pass": true
+      },
+      {
+        "path": "yoshis-book.html",
+        "status": 200,
+        "source_sha256": "c50fde9701233b3165cce10a60c75fcb61bea4f32bba69569f0ea26a0b9cdd25",
+        "served_sha256": "c50fde9701233b3165cce10a60c75fcb61bea4f32bba69569f0ea26a0b9cdd25",
+        "existing_admin_control_normalized": true,
+        "pass": true
+      },
+      {
+        "path": "site-menu.js?v=approved-glass-1",
+        "status": 200,
+        "source_sha256": "3d4310160d4cea432a6cf780be279c95bf5a6fe4d8aa1cac71bcd6d350a272d7",
+        "served_sha256": "3d4310160d4cea432a6cf780be279c95bf5a6fe4d8aa1cac71bcd6d350a272d7",
+        "existing_admin_control_normalized": false,
+        "pass": true
+      }
+    ],
+    "privacy": [
+      {
+        "path": "/",
+        "status": 200,
+        "pass": true
+      },
+      {
+        "path": "/admin",
+        "status": 200,
+        "pass": true
+      },
+      {
+        "path": "/index.html",
+        "status": 200,
+        "pass": true
+      },
+      {
+        "path": "/apparel.html",
+        "status": 404,
+        "pass": true
+      },
+      {
+        "path": "/yoshis-book.html",
+        "status": 404,
+        "pass": true
+      },
+      {
+        "path": "/home-actions.css",
+        "status": 404,
+        "pass": true
+      }
+    ],
+    "credentials_or_cookies_saved": false,
+    "legacy_booking_redirect": {
+      "destination": "/contact.html",
+      "status": 200,
+      "pass": true
+    },
+    "all_pass": true
+  }
+}

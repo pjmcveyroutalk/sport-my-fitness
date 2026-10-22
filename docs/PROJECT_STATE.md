@@ -1,5 +1,20 @@
 # Sport My Fitness — Current Project State
 ## Homepage buttons and book link — October 21, 2026
+## Book added to every side menu — October 21, 2026
+
+**Published and live-verified:** Runtime `686e1b6537c0e11349c2507c06b13a52b775b6fa`, Production
+`dpl_4jQ1vitywbepnQ6go3rGqMiZAHrV` (READY). **Yoshi’s Book** is now directly under Apparel
+in the side menu on all eight full pages and opens `yoshis-book.html`, matching
+the home button. The Book page marks that entry as current. The shared menu
+controller, page content, photos, logo and button layout are unchanged.
+
+Run `39701675498` passes 32 menu-to-book journeys and four native no-JavaScript
+fallbacks in Chromium/WebKit at desktop and mobile widths, with zero failures.
+Nine live HTML/controller comparisons, six signed-out privacy checks and the
+legacy booking redirect pass. All Deployments protection remains enabled.
+See `verification/book-menu-20261021.json`. The full book page is still the next
+task; the current destination is the branded temporary Coming soon page.
+
 
 **Published and live-verified:** Runtime `6724e2e6e079af150abc12739327a880f7dacf70`, Production
 `dpl_AoVNPdcjHpjApUD9Q5nm6m5bnnmh` (READY). The homepage now has three equal buttons in one row

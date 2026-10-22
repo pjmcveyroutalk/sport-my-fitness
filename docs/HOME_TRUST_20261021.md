@@ -54,3 +54,24 @@ Setup/Google, branding-kit and payment sessions remain separate. Existing
 Vercel All Deployments protection and the public Coming soon holding project
 must remain intact. Release evidence belongs in
 `verification/home-trust-release-20261021.json` after verification.
+
+## Published verification
+
+Runtime `e15b7e0` is production `dpl_2WPSbm4rpziDA7NspGC8w6MW53uw`, READY
+with the expected project, main source SHA and full-site aliases. Run
+`39721603611` passes the full existing browser workflow plus the new checks:
+60 general layouts, 44 Apparel layouts, 68 Home action layouts, 24 Book
+layouts and 36 trust layouts. All 32 headline checks and both icon-source
+checks pass. The approved hero geometry matches its preceding source in every
+trust comparison. All report failure counts are zero.
+
+The stale appearance-test menu count was corrected to distinguish eight menu
+destinations from the separate logo link. The website menu did not change.
+Final phone and desktop Home renders were inspected. Eight signed-out privacy
+checks pass and All Deployments protection remains enabled.
+
+Authenticated served-page fetching remains unavailable through the existing
+connection. This release verifies browser-rendered source, provider deployment
+identity and public privacy; no new signed-in live-browser check is claimed.
+Review through https://sportmyfitness.com/admin in the signed-in tab. Full
+source hashes and evidence references are recorded in the release receipt.

@@ -1,0 +1,268 @@
+{
+  "schema_version": 1,
+  "status": "published-deployment-and-public-privacy-verified",
+  "base_main": "e07c1556cef0423842afbf706a8c42c0315ebf87",
+  "approved_concept": "A \u2014 Certified trainer and Community focused",
+  "approved_review_source": "de5303203867411f18d07fce57102e970ca47d50",
+  "runtime_commit": "e15b7e053ed110d05b4513646b80f02fc001d885",
+  "project": {
+    "id": "prj_gekwpLHnnGbcuGHOp47ieG9C93xJ",
+    "name": "sport-my-fitness",
+    "accountId": "team_jC9jlJ9GZ9GSjrbYoD0pin3U",
+    "ssoProtection": {
+      "enabled": true,
+      "deploymentType": "all"
+    }
+  },
+  "production": {
+    "id": "dpl_2WPSbm4rpziDA7NspGC8w6MW53uw",
+    "url": "sport-my-fitness-g0hsuz8ni-routalk-builder.vercel.app",
+    "state": "READY",
+    "projectId": "prj_gekwpLHnnGbcuGHOp47ieG9C93xJ",
+    "sourceSha": "e15b7e053ed110d05b4513646b80f02fc001d885",
+    "target": "production",
+    "aliases": [
+      "sport-my-fitness.vercel.app",
+      "sport-my-fitness-routalk-builder.vercel.app",
+      "sport-my-fitness-git-main-routalk-builder.vercel.app"
+    ]
+  },
+  "icons": {
+    "provider": "Lucide",
+    "version": "0.468.0",
+    "upstream_commit": "f12b0de177fbc2a6795e99be065887e72b237123",
+    "names": [
+      "shield-check",
+      "users-round"
+    ],
+    "kind": "Existing SVG artwork; no raster generation",
+    "license": "ISC; original sources and license retained locally; inline drawings match source geometry"
+  },
+  "verification": {
+    "run_id": 39721603611,
+    "job_id": 119636088373,
+    "artifact_id": 12401831866,
+    "archive_digest": "sha256:7e36e5d1cfee59d25bfe4616f22fe61dc68c8aec802d29faf078788212b40b70",
+    "reports": {
+      "results.json": {
+        "layouts": 60,
+        "navigation": 24,
+        "motion": 12,
+        "locations": 4,
+        "platformMarks": 20,
+        "headers": 66,
+        "connections": 16,
+        "consolidation": 10,
+        "legacyYoshi": 4,
+        "appearance": 24,
+        "lettering": 84,
+        "safeguards": 23,
+        "failures": 0
+      },
+      "home-actions/results.json": {
+        "layouts": 68,
+        "journeys": 12,
+        "fallbacks": 4,
+        "motion": 4,
+        "menus": 32,
+        "menuFallbacks": 4,
+        "failures": 0
+      },
+      "home-trust/results.json": {
+        "layouts": 36,
+        "headlines": 32,
+        "icons": 2,
+        "motion": 4,
+        "fallbacks": 8,
+        "failures": 0
+      },
+      "apparel/results.json": {
+        "layouts": 44,
+        "lettering": 44,
+        "journeys": 6,
+        "approvedProducts": 6,
+        "fallbacks": 4,
+        "motion": 4,
+        "failures": 0
+      },
+      "book-concept/results.json": {
+        "layouts": 24,
+        "journeys": 4,
+        "fallbacks": 4,
+        "failures": 0
+      },
+      "apparel-motion/results.json": {
+        "baseline": 0,
+        "candidate": 6,
+        "failures": 0
+      }
+    },
+    "existing_contract_tests": 6,
+    "all_pass": true,
+    "visual_review": "Final phone and desktop dark Home renders inspected; earlier Light render and matching headline design inspected. No physical-device testing is claimed."
+  },
+  "initial_failure": {
+    "run_id": 39721181904,
+    "cause": "Legacy appearance test expected 8 total drawer anchors after the approved Book menu addition. Actual drawer has 8 navigation destinations plus its brand link. Corrected the test to inspect destinations and brand separately; website menu code and content are unchanged."
+  },
+  "runtime_source_sha256": {
+    "index.html": "d0df1dec5a303a212c188b9159a3b182928bcad5e235eb7ae9cc638ce4f1c5e1",
+    "apparel.html": "3f7d28cb4ac9690e93cadc258143511a11ca879dff18c9b179b82b923a4b68b8",
+    "training.html": "ad9c7d936d586ea773c35cb41fea1071278cd095e8940cd5120bd13ef29d4e95",
+    "programs.html": "67eb4bc92e269fe79412b2e20e77f0ded9dee7887e75112210c9fdf10f2c9273",
+    "media.html": "aa005d9247335d21d1e2a2e2d9af836136490f8671355c1432663b61485275e6",
+    "community.html": "498323cb65cc5a2289e40e30d2b27c843fe4513b00de3abff433ab5bf267cc31",
+    "contact.html": "c3fdb3b00dbc3233d1b27628ccbaf7b9421f1e3ca9f24f4e4046fc03f961bd32",
+    "yoshis-book.html": "71028b52b0a8b11b1422dbc7f6c73214d54facb10607fd19828c3b9e517d061b",
+    "headline-system.css": "a14386ec0674748b4e512e898b5df0bc3d619fc7e377640c670a5712451dddd7",
+    "home-trust.css": "056548bfaf05511e802f21d0e454b8859fa9005eceb8f6008c2a06c631ba7285",
+    "assets/icons/lucide/shield-check.svg": "8d4fcdbde5bba4abb1a2f6fe53e37ceb6343a1d5449a9d88f6f97c1971d26c4e",
+    "assets/icons/lucide/users-round.svg": "8b41ee3ada1609e25a410d64056aa333952cf27d770f0c379a100065270de7f7",
+    "assets/icons/lucide/LICENSE.txt": "1e7290b35280a048667bbf0ebabac1c7fd52a75300e8b2946ac165715997f2bc"
+  },
+  "preserved_shared_files": [
+    {
+      "path": "site-design.css",
+      "sha256": "8fe01340c91f5963774d47f4c86aa8ff9646c1af9413ddac17b9b1d2727c7c84",
+      "unchanged": true
+    },
+    {
+      "path": "site-appearance.css",
+      "sha256": "fa5f7fe8d60d708d81625ab8229b29a493a2302595f4873f55f9d041dc00fa7e",
+      "unchanged": true
+    },
+    {
+      "path": "site-motion.js",
+      "sha256": "cff14d42c5d743dcc5bbee2bcafba6780c77bb58a40944e8700292c9ab94cc56",
+      "unchanged": true
+    },
+    {
+      "path": "site-motion.css",
+      "sha256": "b2c4c1eebeddd76ebb7f6f5eda27ac91d82b16783df3619186217d2ad3143022",
+      "unchanged": true
+    },
+    {
+      "path": "assets/smf-motion-curves.json",
+      "sha256": "d9197bbfa766676178103ef8834491b804a50d6468047a22f4a5d660c21ce619",
+      "unchanged": true
+    },
+    {
+      "path": "home-actions.css",
+      "sha256": "b19d7d8790b23b09c3cc8754b77bc6dbce1440987af648501528e70f6b0660a3",
+      "unchanged": true
+    },
+    {
+      "path": "hero-lettering.css",
+      "sha256": "84ca5f514241ed31492e4f70839c6c8fdb98597cf1f06b1d369f293fa9bff855",
+      "unchanged": true
+    },
+    {
+      "path": "assets/brand/sport-my-fitness-original-lockup.png",
+      "sha256": "202f885d450df6330d8b0809f0c61f43a7ce940f7c870004c9bf6683178aad63",
+      "unchanged": true
+    },
+    {
+      "path": "assets/photos/smf-waterfront-hero-800.webp",
+      "sha256": "ba56966cefcfb98383034c3bad78e714abab6cb058b8d9364c14aed3dcbd4344",
+      "unchanged": true
+    },
+    {
+      "path": "assets/photos/smf-waterfront-hero-1200.webp",
+      "sha256": "83b36d9b11976b6217fcf0691c8720d58cf2d926a27d3cd5da1c695d5ca433b2",
+      "unchanged": true
+    },
+    {
+      "path": "assets/photos/smf-waterfront-hero-1585.webp",
+      "sha256": "b34ee59f501384a00aa5b053475fbe2b9ef2ed5a6edd09018a73d8c87f39e22e",
+      "unchanged": true
+    },
+    {
+      "path": "yoshis-book.css",
+      "sha256": "dbd7fdd687f9258424098e290330afa69c3a82d8c5852bbbfc21ef870be824e5",
+      "unchanged": true
+    },
+    {
+      "path": "vercel.json",
+      "sha256": "1e0cc4fa275d94a313f62f27de999c02b9d5e444aef4229caf70461f4dbb913a",
+      "unchanged": true
+    },
+    {
+      "path": "site-menu.js",
+      "sha256": "3d4310160d4cea432a6cf780be279c95bf5a6fe4d8aa1cac71bcd6d350a272d7",
+      "unchanged": true
+    },
+    {
+      "path": "site-appearance.js",
+      "sha256": "f0f7da63ead1687e331450bd182c5e6cadf4740f822a46ac9c493fa0f5d3d6c5",
+      "unchanged": true
+    }
+  ],
+  "source_preservation": "All eight HTML files preserve prior content, controls, links and source assets outside the requested new stylesheet links and Home badges.",
+  "future_home_photo": "Replacement planned by PJ; no new picture selected or installed. Keep current artwork until the replacement is approved.",
+  "live": {
+    "public_privacy": {
+      "checked_at": "2026-10-22T04:29:04.221360+00:00",
+      "checks": [
+        {
+          "path": "/",
+          "status": 200,
+          "expected": 200,
+          "holding_page": true,
+          "private_home_markup_absent": true,
+          "pass": true
+        },
+        {
+          "path": "/admin",
+          "status": 200,
+          "expected": 200,
+          "pass": true
+        },
+        {
+          "path": "/index.html",
+          "status": 200,
+          "expected": 200,
+          "holding_page": true,
+          "private_home_markup_absent": true,
+          "pass": true
+        },
+        {
+          "path": "/yoshis-book.html",
+          "status": 404,
+          "expected": 404,
+          "pass": true
+        },
+        {
+          "path": "/apparel.html",
+          "status": 404,
+          "expected": 404,
+          "pass": true
+        },
+        {
+          "path": "/home-trust.css?v=certified-community-20261021",
+          "status": 404,
+          "expected": 404,
+          "pass": true
+        },
+        {
+          "path": "/headline-system.css?v=uniform-20261021",
+          "status": 404,
+          "expected": 404,
+          "pass": true
+        },
+        {
+          "path": "/assets/icons/lucide/users-round.svg",
+          "status": 404,
+          "expected": 404,
+          "pass": true
+        }
+      ],
+      "all_pass": true
+    },
+    "authenticated_served_source": {
+      "status": "unverified",
+      "reason": "The existing Vercel connection denies authenticated page fetching. The previously failed route was not retried. No access settings or credentials were changed."
+    }
+  },
+  "scope": "Home trust badges and uniform section headline styling. Setup/Google, branding-kit and payment sessions remain separate.",
+  "checked_at": "2026-10-22T04:30:26.719413+00:00"
+}

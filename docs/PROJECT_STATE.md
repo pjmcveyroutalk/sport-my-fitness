@@ -1,5 +1,25 @@
 # Sport My Fitness — Current Project State
 
+
+## Current Home badges and headings — October 21, 2026
+
+PJ selected **Certified trainer** and **Community focused** with existing SVG
+artwork. Both are now applied to Home using Lucide's shield and people drawings.
+All eight pages use the reviewed headline family with smaller secondary titles.
+Current Home imagery, actions, original entrance, exact logo, menu, Book layout
+and quote remain intact. A future Home image replacement is planned, but no
+replacement has been selected or installed.
+
+The full browser workflow passes, with zero failures. The private production
+release and public Coming soon privacy were verified; existing All Deployments
+protection remains enabled. Authenticated served-content fetching is still
+unavailable through the existing connection. Review via
+https://sportmyfitness.com/admin in the signed-in tab.
+
+See `docs/HOME_TRUST_20261021.md` and
+`verification/home-trust-release-20261021.json` for current source and evidence.
+Setup/Google, branding-kit and payment workstreams remain separate.
+
 ## Approved Book quote area — October 21, 2026
 
 PJ approved the quote-area mockup and requested a clean live implementation.

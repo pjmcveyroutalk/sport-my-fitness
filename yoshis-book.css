@@ -55,6 +55,33 @@
 }
 .book-cover-pending { font: 400 16px/1.5 var(--body); }
 .book-art figcaption { margin-top: 18px; color: var(--muted); font-size: 12px; }
+.book-quote {
+  grid-column: 1 / -1;
+  justify-self: center;
+  align-self: center;
+  width: min(100%, 620px);
+  min-width: 0;
+  margin: 0;
+  padding-inline-start: 24px;
+  border-inline-start: 1px solid var(--line);
+}
+.book-quote-label {
+  color: var(--accent-ink, var(--teal));
+  font: 700 12px/1.5 var(--label);
+  letter-spacing: .16em;
+}
+.book-quote blockquote { margin: 18px 0 0; }
+.book-quote-mark {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--accent-ink, var(--teal));
+  font: 400 68px/.75 Georgia, "Times New Roman", serif;
+}
+.book-quote blockquote p {
+  color: var(--ink);
+  font: italic 400 clamp(23px, 1.9vw, 30px)/1.5 Georgia, "Times New Roman", serif;
+}
+.book-quote figcaption { margin-top: 20px; color: var(--muted); font-size: 12px; line-height: 1.6; }
 .book-return {
   display: inline-flex;
   align-items: center;
@@ -79,6 +106,7 @@
   .book-intro { grid-template-columns: minmax(0, 1fr) 328px minmax(0, 1fr); }
   .book-copy { grid-column: 1; grid-row: 1; }
   .book-art { grid-column: 2; grid-row: 1; }
+  .book-quote { grid-column: 3; grid-row: 1; width: auto; justify-self: stretch; }
 }
 @media (max-width: 1100px) and (min-width: 901px) {
   .book-page .book-hero h1 { font-size: 106px; }

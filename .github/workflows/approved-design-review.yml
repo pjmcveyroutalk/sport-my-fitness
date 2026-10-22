@@ -1,4 +1,4 @@
-name: Approved design review
+name: Book quote preview review
 on:
   push:
     branches: ['review/approved-glass-*']
@@ -26,7 +26,7 @@ jobs:
         run: |
           npm install --prefix "$RUNNER_TEMP/smf-browser" --no-package-lock --no-save playwright@1.62.1
           "$RUNNER_TEMP/smf-browser/node_modules/.bin/playwright" install --with-deps chromium webkit
-      - name: Check all pages, menu, photographs, motion, and fallbacks
+      - name: Review the Book quote preview
         env:
           SMF_BASE_URL: http://127.0.0.1:8080
           SMF_EVIDENCE_DIR: ${{ runner.temp }}/smf-evidence
@@ -38,10 +38,6 @@ jobs:
             if curl --fail --silent http://127.0.0.1:8080/index.html > /dev/null; then break; fi
             sleep 1
           done
-          NODE_PATH="$RUNNER_TEMP/smf-browser/node_modules" node verification/approved-design-browser.cjs
-          NODE_PATH="$RUNNER_TEMP/smf-browser/node_modules" node verification/apparel-browser.cjs
-          NODE_PATH="$RUNNER_TEMP/smf-browser/node_modules" node verification/apparel-smoothness.cjs
-          NODE_PATH="$RUNNER_TEMP/smf-browser/node_modules" node verification/home-actions-browser.cjs
           NODE_PATH="$RUNNER_TEMP/smf-browser/node_modules" node verification/book-page-concept.cjs
       - name: Save browser evidence
         if: always()

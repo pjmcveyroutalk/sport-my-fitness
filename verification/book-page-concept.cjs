@@ -33,10 +33,10 @@ async function load(page) {
             const bounds = selector => document.querySelector(selector).getBoundingClientRect().toJSON();
             return {scrollWidth: document.documentElement.scrollWidth, intro: bounds('.book-intro'), copy: bounds('.book-copy'),
               cover: bounds('.book-cover-placeholder'), header: bounds('.site-header'),
-              heading: bounds('h1'), action: bounds('.book-return')};
+              heading: bounds('h1'), action: bounds('.book-return'), quote: bounds('.book-quote')};
           });
           assert(geometry.scrollWidth <= width, 'horizontal overflow');
-          for (const key of ['cover', 'heading', 'action']) {
+          for (const key of ['cover', 'heading', 'action', 'quote']) {
             assert(geometry[key].left >= 0 && geometry[key].right <= width, key + ' leaves viewport');
           }
           assert(geometry.heading.top >= geometry.header.bottom, 'heading overlaps header');
@@ -47,6 +47,10 @@ async function load(page) {
             assert(Math.abs((geometry.cover.left + geometry.cover.right) / 2 -
               (geometry.intro.left + geometry.intro.right) / 2) < 1, 'book is not centered on the page');
           }
+          if (width >= 1200) assert(geometry.quote.left > geometry.cover.right, 'quote overlaps centered book');
+          else assert(geometry.quote.top > geometry.cover.bottom, 'stacked quote overlaps book');
+          assert(await page.getByText('Sample text · not a book excerpt', {exact: true}).isVisible());
+          assert.equal(await page.locator('.book-quote cite').count(), 0, 'sample must not be attributed to the author');
           assert(await page.getByText('Cover placeholder', {exact: true}).isVisible());
           assert.equal(await page.locator('main > section').count(), 1, 'removed bottom section returns');
           assert.equal(await page.locator('a[href="#about-the-book"]').count(), 0, 'orphaned about link');

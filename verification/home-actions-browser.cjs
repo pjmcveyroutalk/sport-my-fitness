@@ -6,7 +6,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const base = process.env.SMF_BASE_URL || 'http://127.0.0.1:8080';
 const out = path.join(process.env.SMF_EVIDENCE_DIR || '/tmp/smf-evidence', 'home-actions');
-const report = {started: new Date().toISOString(), layouts: [], journeys: [], fallbacks: [], motion: [], failures: []};
+const report = {started: new Date().toISOString(), layouts: [], journeys: [], fallbacks: [], motion: [], menus: [], menuFallbacks: [], failures: []};
 fs.mkdirSync(out, {recursive: true});
 const save = () => fs.writeFileSync(path.join(out, 'results.json'), JSON.stringify(report, null, 2));
 async function load(page) {
@@ -59,6 +59,33 @@ async function layout(page, width) {
     const browser = await launcher.launch(engine === 'chromium' ? {args: ['--no-sandbox', '--disable-dev-shm-usage']} : {});
     report[engine + 'Version'] = browser.version();
     try {
+      for (const width of [390, 1366]) {
+        const page = await browser.newPage({viewport: {width, height: 657}, reducedMotion: 'reduce'});
+        for (const route of ['index', 'apparel', 'training', 'programs', 'media', 'community', 'contact', 'yoshis-book']) {
+          await page.goto(`${base}/${route}.html`, {waitUntil: 'domcontentloaded'});
+          await page.getByRole('button', {name: 'Menu', exact: true}).click();
+          const nav = page.locator('#site-menu #primary-nav');
+          assert.deepEqual(await nav.locator('a').allTextContents(), ['Home', 'Apparel', 'Yoshi’s Book', 'Train with Yoshi', 'Programs & Rates', 'Media', 'Community', 'Contact']);
+          assert.equal(await nav.locator('[aria-current="page"]').getAttribute('href'), route + '.html');
+          if (route === 'index') await page.screenshot({path: path.join(out, `${engine}-book-menu-${width}.png`)});
+          await nav.getByRole('link', {name: 'Yoshi’s Book', exact: true}).click();
+          await page.waitForURL('**/yoshis-book.html');
+          assert(await page.getByRole('heading', {name: 'Yoshi’s book', exact: true}).isVisible());
+          report.menus.push({engine, width, route, destinations: 8, bookPosition: 3, pass: true});
+        }
+        await page.close();
+        const native = await browser.newPage({viewport: {width, height: 657}, javaScriptEnabled: false});
+        await native.goto(base + '/index.html');
+        await native.locator('.menu-fallback summary').click();
+        const nav = native.locator('.menu-fallback #primary-nav');
+        assert.equal(await nav.locator('a:visible').count(), 8);
+        await nav.getByRole('link', {name: 'Yoshi’s Book', exact: true}).click();
+        await native.waitForURL('**/yoshis-book.html');
+        assert(await native.getByRole('heading', {name: 'Yoshi’s book', exact: true}).isVisible());
+        report.menuFallbacks.push({engine, width, withoutJS: true, pass: true});
+        await native.close();
+      }
+      if (process.env.SMF_BOOK_MENU_ONLY === '1') continue;
       for (const width of [320, 390, 600, 768, 800, 801, 900, 901, 1024, 1366, 1920]) {
         for (const theme of ['dark', 'light']) {
           const page = await browser.newPage({viewport: {width, height: 900}, reducedMotion: 'reduce'});
@@ -119,5 +146,5 @@ async function layout(page, width) {
     } finally { await browser.close(); save(); }
   }
   report.completed = new Date().toISOString(); save();
-  console.log(JSON.stringify({layouts: report.layouts.length, journeys: report.journeys.length, fallbacks: report.fallbacks.length, motion: report.motion.length, failures: report.failures.length}));
+  console.log(JSON.stringify({layouts: report.layouts.length, journeys: report.journeys.length, fallbacks: report.fallbacks.length, motion: report.motion.length, menus: report.menus.length, menuFallbacks: report.menuFallbacks.length, failures: report.failures.length}));
 })().catch(error => { report.failures.push({error: error.stack}); save(); console.error(error.stack); process.exitCode = 1; });

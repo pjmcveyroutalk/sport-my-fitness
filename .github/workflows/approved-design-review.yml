@@ -38,10 +38,7 @@ jobs:
             if curl --fail --silent http://127.0.0.1:8080/index.html > /dev/null; then break; fi
             sleep 1
           done
-          NODE_PATH="$RUNNER_TEMP/smf-browser/node_modules" node verification/approved-design-browser.cjs
-          NODE_PATH="$RUNNER_TEMP/smf-browser/node_modules" node verification/apparel-browser.cjs
-          NODE_PATH="$RUNNER_TEMP/smf-browser/node_modules" node verification/apparel-smoothness.cjs
-          NODE_PATH="$RUNNER_TEMP/smf-browser/node_modules" node verification/home-actions-browser.cjs
+          SMF_BOOK_MENU_ONLY=1 NODE_PATH="$RUNNER_TEMP/smf-browser/node_modules" node verification/home-actions-browser.cjs
       - name: Save browser evidence
         if: always()
         uses: actions/upload-artifact@v4

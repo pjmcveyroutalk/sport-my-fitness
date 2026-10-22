@@ -19,7 +19,7 @@ jobs:
           node-version: '24'
       - name: Syntax and existing contract check
         run: |
-          for file in *.js api/*.js verification/apparel-browser.cjs verification/apparel-smoothness.cjs; do node --check "$file"; done
+          for file in *.js api/*.js verification/apparel-browser.cjs verification/apparel-smoothness.cjs verification/home-actions-browser.cjs; do node --check "$file"; done
           node --test test/pilot-verify-production.test.js test/apparel-catalog.test.mjs
           git diff --check
       - name: Install isolated browser test tools
@@ -41,6 +41,7 @@ jobs:
           NODE_PATH="$RUNNER_TEMP/smf-browser/node_modules" node verification/approved-design-browser.cjs
           NODE_PATH="$RUNNER_TEMP/smf-browser/node_modules" node verification/apparel-browser.cjs
           NODE_PATH="$RUNNER_TEMP/smf-browser/node_modules" node verification/apparel-smoothness.cjs
+          NODE_PATH="$RUNNER_TEMP/smf-browser/node_modules" node verification/home-actions-browser.cjs
       - name: Save browser evidence
         if: always()
         uses: actions/upload-artifact@v4

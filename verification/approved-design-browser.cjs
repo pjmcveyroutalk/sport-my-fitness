@@ -234,7 +234,7 @@ async function layout(page, route, width, engine) {
   assert.equal(await page.locator('.page-step,.footer-links,.footer-name').count(), 0, 'redundant page ending remains');
   if (route === 'index') {
     assert.equal(await page.locator('.training-section,.training-option').count(), 0, 'redundant landing-page training link group remains');
-    assert.deepEqual(await page.locator('.hero-actions > a').evaluateAll(links => links.map(link => link.getAttribute('href'))), ['apparel.html', 'training.html'], 'landing-page hero actions changed');
+    assert.deepEqual(await page.locator('.hero-actions > a').evaluateAll(links => links.map(link => link.getAttribute('href'))), ['apparel.html', 'training.html', 'yoshis-book.html'], 'landing-page hero actions changed');
   }
   assert.equal(await page.locator('#primary-nav a').count(), 7);
   assert.deepEqual(await page.locator('#primary-nav a').allTextContents(), ['Home', 'Apparel', 'Train with Yoshi', 'Programs & Rates', 'Media', 'Community', 'Contact']);
@@ -269,7 +269,14 @@ async function layout(page, route, width, engine) {
     for (const key of ['font', 'size', 'line', 'weight']) assert.equal(appearance[key], reference[key], `inconsistent hero ${key} on ${route} ${width}`);
     assert(Math.abs(appearance.titleOffset - reference.titleOffset) < 1, `hero title origin differs on ${route} ${width}`);
     if (width > 800) assert(Math.abs(appearance.height - reference.height) < 1, `hero canvas height differs on ${route} ${width}`);
-    if (appearance.button) assert.deepEqual(appearance.button, reference.button, `hero action styling differs on ${route}`);
+    // Home uses its approved compact three-link group; inner pages retain the
+    // shared action styling and are compared with one another.
+    if (appearance.button) {
+      const innerKey = `${sharedKey}-inner-action`;
+      const innerReference = heroReferences.get(innerKey);
+      if (innerReference) assert.deepEqual(appearance.button, innerReference, `hero action styling differs on ${route}`);
+      else heroReferences.set(innerKey, appearance.button);
+    }
     if (width <= 800) {
       assert(geometry.transition.afterCopy >= 24 && geometry.transition.afterCopy <= 40, `empty mobile hero band on ${route} ${width}: ${JSON.stringify(geometry.transition)}`);
       assert(typeof geometry.transition.nextContent === 'number' && geometry.transition.nextContent <= 96, `next mobile section is separated by excess blank space on ${route} ${width}: ${JSON.stringify(geometry.transition)}`);
@@ -280,8 +287,8 @@ async function layout(page, route, width, engine) {
   assert(geometry.h1.bottom <= geometry.subline.top + 2, 'headline overlaps supporting copy');
   if (route === 'index' && width >= 1200) {
     const actions = await page.locator('.hero-actions > a').evaluateAll(links => links.map(link => link.getBoundingClientRect().toJSON()));
-    assert(Math.abs(actions[0].top - actions[1].top) < 1, 'desktop hero actions must share a row, as in the approved reference');
-    assert(Math.abs(actions[0].width - actions[1].width) < 1, 'desktop hero actions must have equal widths');
+    assert(actions.every(action => Math.abs(actions[0].top - action.top) < 1), 'desktop hero actions must share the approved row');
+    assert(actions.every(action => Math.abs(actions[0].width - action.width) < 1), 'desktop hero actions must have equal widths');
   }
   if (route === 'index' && width <= 430) {
     const composition = await page.evaluate(() => {

@@ -1,0 +1,51 @@
+/* Approved home actions only. Shared heroes and their motion are unchanged. */
+.smf-home-page .hero .hero-actions.home-actions {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  justify-items: stretch;
+  width: min(620px, calc(100vw - var(--rail-width) - 2 * var(--gutter)));
+  gap: 12px;
+}
+.smf-home-page .hero .home-actions > a {
+  width: 100%;
+  min-width: 0;
+  min-height: 52px;
+  padding: 12px 14px;
+  gap: 8px;
+  border-radius: 8px;
+  font-size: clamp(14px, 1.25vw, 18px);
+  white-space: nowrap;
+}
+.smf-home-page .hero .home-actions > a > span[aria-hidden] {
+  flex: 0 0 auto;
+  font-size: 22px;
+}
+/* Keep the approved actions on the first screen of shorter laptops. */
+@media (min-width: 801px) and (max-height: 800px) {
+  .smf-home-page { --hero-title: clamp(40px, min(11.2vw, calc((100svh - 410px) / 2.4)), 180px); }
+  .smf-home-page .hero-inner { padding-top: calc(var(--header-height) + 8px); }
+  .smf-home-page .hero h1 { margin-bottom: 12px; }
+  .smf-home-page .hero .hero-subline { font-size: 22px; }
+  .smf-home-page .hero .hero-description { font-size: 18px; }
+  .smf-home-page .hero .hero-actions.home-actions { margin-top: 18px; }
+}
+@media (max-width: 800px) {
+  .smf-home-page .hero .hero-actions.home-actions {
+    width: 100%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+  .smf-home-page .hero .home-actions > a {
+    min-height: 46px;
+    justify-content: center;
+    padding: 10px 6px;
+    gap: 6px;
+    font-size: clamp(13px, 3.5vw, 16px);
+  }
+  .smf-home-page .hero .home-actions > .hero-button {
+    grid-column: 1 / -1;
+    font-size: 18px;
+  }
+  .smf-home-page .hero .home-actions > a > span[aria-hidden] {
+    font-size: 18px;
+  }
+}

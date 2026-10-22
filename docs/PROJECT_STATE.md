@@ -13,7 +13,14 @@ both themes and Chromium/WebKit. Integration preserves the full existing review
 workflow; its temporary mockup exclusions are not copied. The homepage, movement,
 other pages, navigation, footer, private access, branding and payments are unchanged.
 
-Publication checks are in progress. See `verification/book-quote-release-20261021.json`.
+**Published:** runtime `58941cd`, production `dpl_3pg88pmoji1CKwTKAGpxH2oZWpXB`,
+READY with the correct source and existing full-site aliases. Seven signed-out
+privacy checks pass, including the versioned Quote CSS. All Deployments Vercel
+Authentication is retained. Authenticated HTTP content verification remains
+unavailable through the existing connection; that known failing path was not
+retried and no access setting was changed. See
+`verification/book-quote-release-20261021.json`. Review through
+https://sportmyfitness.com/admin, then Yoshi’s Book in the same signed-in tab.
 
 
 ## Approved Yoshi’s Book page — October 21, 2026

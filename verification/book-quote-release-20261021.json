@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "approved-awaiting-deployment",
+  "status": "published-deployment-and-public-privacy-verified",
   "approved_review_commit": "a1faf5292ea35f38ed0e3e3ca37b43529ecc41eb",
   "base_main": "a6dfc9dd6424490ca47bc9d89d220eed4fed6fb0",
   "project": {
@@ -36,6 +36,71 @@
     "diff_check": "passed"
   },
   "content": "Approved placeholder design; sample text is not a quote from the book and is not attributed to Yoshi.",
-  "live": null,
-  "known_verification_limit": "Automated authenticated page fetch denied by Vercel connection in preceding release. No access change authorized or made."
+  "live": {
+    "public_privacy": {
+      "checked_at": "2026-10-22T02:21:46.320428+00:00",
+      "checks": [
+        {
+          "path": "/",
+          "status": 200,
+          "pass": true
+        },
+        {
+          "path": "/admin",
+          "status": 200,
+          "pass": true
+        },
+        {
+          "path": "/index.html",
+          "status": 200,
+          "pass": true
+        },
+        {
+          "path": "/yoshis-book.html",
+          "status": 404,
+          "pass": true
+        },
+        {
+          "path": "/yoshis-book.css?v=quote-preview-20261021",
+          "status": 404,
+          "pass": true
+        },
+        {
+          "path": "/apparel.html",
+          "status": 404,
+          "pass": true
+        },
+        {
+          "path": "/home-actions.css",
+          "status": 404,
+          "pass": true
+        }
+      ],
+      "all_pass": true
+    },
+    "project_protection": {
+      "enabled": true,
+      "deploymentType": "all"
+    },
+    "authenticated_served_source": {
+      "status": "unverified",
+      "reason": "The existing Vercel connection denied authenticated HTTP fetching in the preceding release. The unchanged failing path was not retried. No access settings or credentials were changed."
+    },
+    "deployment_source": "READY production deployment and correct source SHA/project/aliases verified through provider API"
+  },
+  "known_verification_limit": "Automated authenticated page fetch denied by Vercel connection in preceding release. No access change authorized or made.",
+  "runtime_commit": "58941cdfe08fd80bd1dbe8fc46d01d4cd70729ec",
+  "production": {
+    "id": "dpl_3pg88pmoji1CKwTKAGpxH2oZWpXB",
+    "state": "READY",
+    "url": "sport-my-fitness-c5k72nhsx-routalk-builder.vercel.app",
+    "source_sha": "58941cdfe08fd80bd1dbe8fc46d01d4cd70729ec",
+    "target": "production",
+    "aliases": [
+      "sport-my-fitness.vercel.app",
+      "sport-my-fitness-routalk-builder.vercel.app",
+      "sport-my-fitness-git-main-routalk-builder.vercel.app"
+    ]
+  },
+  "checked_at": "2026-10-22T02:22:44.375955+00:00"
 }

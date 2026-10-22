@@ -1,0 +1,108 @@
+/* Review concepts only: no change to the approved hero's resting geometry.
+   Proof sits in the space beside the heading, above the existing actions. */
+.home-proof {
+  --proof-accent: var(--accent-ink, var(--teal));
+  position: absolute;
+  z-index: 3;
+  top: calc(var(--hero-kicker-slot) + var(--hero-title) * .45);
+  left: calc(var(--hero-title) * 2.95);
+  width: 206px;
+  max-width: calc(100vw - var(--rail-width) - 2 * var(--gutter) - var(--hero-title) * 2.95);
+  color: var(--ink);
+  transition: opacity 180ms ease;
+}
+.home-proof ul { list-style: none; padding: 0; margin: 0; }
+.proof-badges { display: grid; gap: 22px; }
+.proof-badges li { display: flex; align-items: center; gap: 12px; }
+.proof-icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 48px;
+  width: 48px;
+  height: 48px;
+  border: 1px solid #9bbec5;
+  border-radius: 50%;
+  background: #0a2026a6;
+  color: var(--proof-accent);
+}
+.proof-icon svg { width: 26px; height: 26px; }
+.proof-badges strong {
+  display: block;
+  font: 700 19px/1.1 var(--label);
+}
+.proof-badges .proof-detail {
+  display: block;
+  margin-top: 5px;
+  font: 400 12px/1.35 var(--body);
+  color: #d1e0e3;
+}
+.proof-panel {
+  padding: 17px 18px;
+  border-left: 2px solid var(--proof-accent);
+  border-radius: 0 10px 10px 0;
+  background: linear-gradient(115deg, #07191fe6, #10272ed9);
+}
+.proof-panel .proof-kicker {
+  margin-bottom: 14px;
+  font: 700 11px/1.3 var(--label);
+  letter-spacing: .12em;
+  color: var(--proof-accent);
+}
+.proof-panel ul { display: grid; gap: 13px; }
+.proof-panel strong { display: block; font: 700 20px/1 var(--label); }
+.proof-panel li span { display: block; margin-top: 4px; color: #d1e0e3; font: 400 12px/1.3 var(--body); }
+.proof-client { margin: 0; padding: 0 0 0 17px; border-left: 2px solid var(--proof-accent); }
+.proof-client .proof-quote-mark { color: var(--proof-accent); font: italic 900 48px/.65 var(--display); }
+.proof-client blockquote { margin: 10px 0 0; font: 700 20px/1.25 var(--label); text-wrap: balance; }
+.proof-client figcaption { margin-top: 12px; color: #d1e0e3; font: 400 12px/1.4 var(--body); }
+.proof-client cite { font-style: normal; }
+.proof-client .proof-qualification { display: block; margin-top: 14px; color: var(--proof-accent); font: 700 12px/1.3 var(--label); }
+:root[data-theme="light"] .proof-icon { background: #f4f9f9cc; border-color: #759ba4; }
+:root[data-theme="light"] .proof-panel { background: linear-gradient(115deg, #f7fbfbf2, #edf5f5e6); }
+:root[data-theme="light"] :is(.proof-detail, .proof-panel li span, .proof-client figcaption) { color: var(--muted); }
+@media (max-width: 800px) {
+  .home-proof {
+    top: calc(var(--hero-kicker-slot) + var(--hero-title) * .35);
+    left: calc(var(--hero-title) * 2.95);
+    width: 165px;
+  }
+  .home-proof--panel, .home-proof--quote { top: var(--hero-kicker-slot); }
+  .proof-badges { gap: 19px; }
+  .proof-badges li { gap: 9px; }
+  .proof-icon { width: 36px; height: 36px; flex-basis: 36px; }
+  .proof-icon svg { width: 21px; height: 21px; }
+  .proof-badges strong { font-size: 16px; line-height: 1.08; }
+  .proof-badges .proof-detail { font-size: 11px; margin-top: 4px; }
+  .proof-panel { padding: 10px; }
+  .proof-panel .proof-kicker { font-size: 10px; margin-bottom: 11px; letter-spacing: .07em; }
+  .proof-panel ul { gap: 10px; }
+  .proof-panel strong { font-size: 17px; }
+  .proof-panel li span { font-size: 11px; }
+  .proof-client { padding-left: 12px; }
+  .proof-client blockquote { font-size: 16px; line-height: 1.15; }
+  .proof-client .proof-quote-mark { font-size: 34px; }
+  .proof-client figcaption { font-size: 11px; margin-top: 8px; }
+  .proof-client .proof-qualification { margin-top: 10px; font-size: 11px; }
+}
+@media (max-width: 359px) {
+  .home-proof { left: calc(var(--hero-title) * 2.87); max-width: calc(100vw - 2 * var(--gutter) - var(--hero-title) * 2.87); }
+  .proof-badges li { gap: 6px; }
+  .proof-icon { width: 30px; height: 30px; flex-basis: 30px; }
+  .proof-badges strong { font-size: 14px; }
+  .proof-badges .proof-detail { font-size: 10px; }
+  .proof-panel { padding: 9px 8px; }
+  .proof-panel .proof-kicker { font-size: 9px; margin-bottom: 8px; }
+  .proof-panel ul { gap: 8px; }
+  .proof-panel strong { font-size: 16px; }
+  .proof-panel li span { font-size: 10px; }
+  .proof-client blockquote { font-size: 14px; }
+  .proof-client .proof-qualification { margin-top: 8px; }
+  .proof-client .proof-qualification { display: none; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  html.smf-motion-boot .home-proof,
+  html.smf-motion-playing .home-proof { opacity: 0; }
+}
+@media (forced-colors: active) {
+  .proof-icon, .proof-panel, .proof-client { border-color: CanvasText; }
+}

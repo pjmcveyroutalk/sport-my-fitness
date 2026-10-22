@@ -1,0 +1,30 @@
+/* Approved lakefront composition; preserve the shared headline and navigation geometry. */
+.smf-home-page .hero .yoshi-stage { inset: 0; width: 100%; overflow: hidden; }
+.smf-home-page .hero .yoshi-hero {
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  object-position: 74% 50%;
+  transform: none;
+}
+.smf-home-page .mission-strip {
+  background-image: linear-gradient(#001018d9, #001018e6), url('assets/photos/smf-lakefront-bench-20261022-1200.webp');
+}
+:root[data-theme="light"] .smf-home-page .mission-strip {
+  background-image: linear-gradient(#f2f5f5e8, #e6f1f3f2), url('assets/photos/smf-lakefront-bench-20261022-1200.webp');
+}
+@media (max-width: 800px) {
+  .smf-home-page .hero .yoshi-hero {
+    height: min(110vw, 500px);
+    object-position: 84% 50%;
+  }
+}
+
+.smf-water-canvas {
+  position: absolute;
+  inset: 0;
+  display: block;
+  pointer-events: none;
+}

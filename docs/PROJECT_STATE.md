@@ -4,7 +4,9 @@
 
 PJ approved the horizontal runner/wordmark header across the website and kept the
 branding package separate. All eight page headers and menus now share the new
-website-only SVG, also used on Coming Soon and Admin. Existing master assets and
+website-only SVG, also used on Coming Soon and Admin. PJ rejected the initial
+redrawn symbol; the corrected header embeds the original published icon artwork
+byte-for-byte, with clipping only. Existing master assets and
 kit exports are unchanged. Mobile/desktop header heights, page content, clean
 routes, original entrance and automatic water code remain intact.
 

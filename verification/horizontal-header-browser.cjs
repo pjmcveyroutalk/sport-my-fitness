@@ -9,7 +9,7 @@ const {createPreviewServer} = require('./site-preview-server.cjs');
 const {createGateway} = require('../infrastructure/review-gateway/gateway.cjs');
 const root = path.resolve(__dirname, '..');
 const out = process.env.SMF_EVIDENCE_DIR ? path.join(process.env.SMF_EVIDENCE_DIR, 'horizontal-header') : '/tmp/smf-horizontal-header-evidence';
-const logo = '/assets/brand/sport-my-fitness-header.svg?v=horizontal-20261022';
+const logo = '/assets/brand/sport-my-fitness-header.svg?v=horizontal-original-20261022';
 const routes = ['/home/','/apparel/','/yoshis-book/','/training/','/programs/','/media/','/community/','/contact/'];
 const report = {layouts:[],menus:[],fallbacks:[],entryPages:[],motion:[],failures:[]};
 fs.mkdirSync(out,{recursive:true});

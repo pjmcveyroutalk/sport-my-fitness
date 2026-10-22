@@ -2,10 +2,14 @@
 
 PJ approved the supplied horizontal header direction and explicitly kept the
 branding package separate. The website now uses one shared SVG: a turquoise
-runner ribbon beside SPORT MY in white and FITNESS in turquoise. The ribbon is
-reconstructed as a continuous vector silhouette from the supplied logo/reference;
-lettering is outlined from the website's existing Barlow Condensed Bold font.
-The SVG has no external font or image dependency.
+runner ribbon beside SPORT MY in white and FITNESS in turquoise. The original
+symbol artwork from `brand/android-chrome-512x512.png` is embedded byte-for-byte
+and clipped inside the SVG. The symbol is not redrawn. Lettering is outlined
+from the website's existing Barlow Condensed Bold font; all artwork is embedded.
+
+PJ rejected the first header symbol because its redrawn shape did not match the
+brand. The current header uses the original image pixels, shape and shading.
+Keep this original artwork; do not substitute a traced or generated symbol.
 
 All eight page headers and menu headings use this website asset, with correct
 intrinsic dimensions, accessible labels and a fresh stylesheet cache key. The

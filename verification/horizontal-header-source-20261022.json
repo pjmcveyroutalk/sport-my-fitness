@@ -7,10 +7,15 @@
   "existingAssetStyleAndRuntimeFilesPreserved": 183,
   "brandingPackageModified": false,
   "existingBrandingAssetsModified": false,
-  "gatewayChanges": "one exact public SVG entry and Admin image markup only",
+  "gatewayChanges": "same exact public SVG entry; logo URL refreshed, authentication unchanged",
   "gatewayBeforeSha1": "402f7eff0a8f386509cc484a7887c888608de4c8",
-  "gatewayAfterSha1": "cbe7420cf7f374e18b9bd54b8b7f843ebe96d4ff",
-  "websiteSvgSha1": "044bd600f81a05328a7299362d66a53be454a846",
-  "holdingHtmlSha1": "db6c75344d9bf34b0e22fe4ee5ea3bc73adcbee4",
-  "existingContractsPassed": 13
+  "gatewayAfterSha1": "cc1a62c9722f349340b41083e767cd4056a3c6ee",
+  "websiteSvgSha1": "4e11d645bda27ce47c6eea459b91af2496d8d719",
+  "holdingHtmlSha1": "0ab9c6081a11ee5781728eb6d5e4c02d36a79f45",
+  "existingContractsPassed": 13,
+  "correctionParent": "a7cc991909af9e3e92f4b95bce4915468778e12e",
+  "symbolSource": "brand/android-chrome-512x512.png",
+  "symbolSourceSha256": "0df78288b986adc38db9a14e701ebfe223c74bd7392720d294b37072422fcf1a",
+  "originalSymbolEmbeddedByteForByte": true,
+  "redrawnSymbolRemoved": true
 }

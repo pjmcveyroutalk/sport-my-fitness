@@ -7,8 +7,8 @@ has a single introduction/cover section and the existing site footer.
 
 The cover is upright with a 3:4 ratio, a fine solid edge, subtle spine and shadow,
 and quiet placeholder labels. The previous dashed edge, tilt and oversized
-Coming soon lettering are removed. Cover width is 288px maximum on large screens
-and 216px on phones. The removed About section leaves no gap or dead anchor;
+Coming soon lettering are removed. The cover is brought inward toward the text and enlarged: 328px maximum on
+large screens and 240px on phones, where it stays centered. The removed About section leaves no gap or dead anchor;
 Return home is available beneath the digital-edition status in the introduction.
 
 The existing textured canvas, semantic heading/lettering, exact logo, header,
@@ -29,7 +29,18 @@ review workflow to this page. **Restore the unchanged main workflow before
 production integration.** Keep setup, branding and payments in their separate
 workstreams. This revision is for PJ’s requested new mockup, not publication.
 
-## Revised mockup evidence
+## Current enlarged and centered mockup
+
+At PJ’s request, the cover is enlarged and brought inward toward the text. The
+current render is `d2eaed8`. Run `39706952267` passes all 24 layouts, four journeys
+and four native fallbacks. Measured comparison confirms a larger cover in every
+layout, movement inward on larger screens, and unchanged phone centering. At
+1366px the book is 328px wide and its center moves from x=1066 to x=1000. Desktop
+and phone dark renders were inspected. See
+`verification/book-page-concept-centered-20261021.json` and artifact `12395448153`.
+This remains a review mockup; main and production are unchanged.
+
+## Earlier simplified mockup evidence
 
 Run `39706280580` succeeds on `f4103d6`: 24 layouts, four focused journeys and
 four native fallbacks, zero failures in Chromium/WebKit at six widths and both

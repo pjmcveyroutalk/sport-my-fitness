@@ -21,5 +21,9 @@ existing holding project, retaining its other eight source files and all project
 settings. Do not copy the full website into the public holding deployment or
 change deployment protection. Credential values are never required for packaging.
 
+Deploy this directory's `robots.txt` as the holding project's root `robots.txt`.
+It contains only the active crawler directives; explanatory notes belong here.
+The main website's separate root file retains its sitemap reference for launch.
+
 `node --test test/clean-urls.test.cjs` runs real HTTP requests through the gateway
 and the routing-aware site server using local synthetic credentials only.

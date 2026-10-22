@@ -33,7 +33,7 @@ async function load(page) {
             const bounds = selector => document.querySelector(selector).getBoundingClientRect().toJSON();
             return {scrollWidth: document.documentElement.scrollWidth, copy: bounds('.book-copy'),
               cover: bounds('.book-cover-placeholder'), header: bounds('.site-header'),
-              heading: bounds('h1'), action: bounds('.book-actions .button')};
+              heading: bounds('h1'), action: bounds('.book-return')};
           });
           assert(geometry.scrollWidth <= width, 'horizontal overflow');
           for (const key of ['cover', 'heading', 'action']) {
@@ -43,7 +43,10 @@ async function load(page) {
           assert(geometry.action.height >= 44, 'primary link too short');
           if (width > 600) assert(geometry.cover.left > geometry.copy.right, 'desktop columns overlap');
           else assert(geometry.cover.top > geometry.copy.bottom, 'mobile cover overlaps introduction');
-          assert(await page.getByText('Placeholder', {exact: true}).isVisible());
+          assert(await page.getByText('Cover placeholder', {exact: true}).isVisible());
+          assert.equal(await page.locator('main > section').count(), 1, 'removed bottom section returns');
+          assert.equal(await page.locator('a[href="#about-the-book"]').count(), 0, 'orphaned about link');
+          assert(Math.abs(geometry.cover.width / geometry.cover.height - .75) < .002, 'cover ratio differs');
           assert.equal(await page.locator('a[href^="tel:"]').getAttribute('href'), 'tel:+14147914526');
           if ([390, 1366].includes(width)) {
             await page.screenshot({path: path.join(out, `${engine}-${theme}-${width}.png`), fullPage: true});
@@ -56,10 +59,6 @@ async function load(page) {
       for (const width of [390, 1366]) {
         const page = await browser.newPage({viewport: {width, height: 768}, reducedMotion: 'no-preference'});
         await load(page);
-        const about = page.getByRole('link', {name: 'About the book', exact: true});
-        await about.focus(); await page.keyboard.press('Enter');
-        await page.waitForURL('**/yoshis-book.html#about-the-book');
-        assert(await page.getByRole('heading', {name: 'About the book', exact: true}).isVisible());
         const menu = page.getByRole('button', {name: 'Menu', exact: true});
         await menu.click();
         const nav = page.locator('#site-menu #primary-nav');
@@ -68,10 +67,11 @@ async function load(page) {
         await page.keyboard.press('Escape');
         assert(!(await page.locator('#site-menu').isVisible()));
         await page.getByRole('switch', {name: 'Light mode', exact: true}).click();
-        await page.getByRole('link', {name: 'Return home', exact: true}).click();
+        await page.getByRole('link', {name: 'Return home', exact: true}).focus();
+        await page.keyboard.press('Enter');
         await page.waitForURL('**/index.html');
         assert.equal(await page.locator('html').getAttribute('data-theme'), 'light');
-        report.journeys.push({engine, width, aboutAnchor: true, menu: true, themePersists: true, pass: true});
+        report.journeys.push({engine, width, keyboardReturn: true, menu: true, themePersists: true, pass: true});
         await page.close();
         const native = await browser.newPage({viewport: {width, height: 768}, javaScriptEnabled: false});
         await load(native);

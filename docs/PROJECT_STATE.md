@@ -1,4 +1,24 @@
 # Sport My Fitness — Current Project State
+
+## Approved Yoshi’s Book page — October 21, 2026
+
+PJ approved the final centered, enlarged book mockup and requested publication.
+The release contains the exact tested Book HTML/CSS from `5ad3e11`: a single
+introduction with the 3:4 cover centered on the main canvas at desktop widths,
+a centered stacked cover on phones, and the existing header/menu/footer. The
+lower About section is removed. Book artwork and content remain clearly marked
+as pending; there is no payment or download flow.
+
+Browser run `39707625984` passes 24 layouts, four journeys and four native
+fallbacks in Chromium/WebKit and both themes. The integrated runtime files match
+that tested source byte for byte; six existing contract tests pass locally.
+The full main review workflow is retained and extended with the Book checks.
+Home, its buttons, shared movement, other pages, exact brand bytes, Psalm 23,
+redirects, private access and all separate workstreams remain intact.
+
+Publication and live delivery checks are in progress. See
+`docs/BOOK_PAGE_20261021.md` and `verification/book-page-20261021.json`.
+
 ## Homepage buttons and book link — October 21, 2026
 ## Book added to every side menu — October 21, 2026
 

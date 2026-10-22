@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "status": "approved-awaiting-deployment",
+  "approved_review_commit": "5ad3e11798a1ee4986d07359ee1d3f2650cfd1da",
+  "base_main": "7ff0d0cf8c4c41c49293847aa0af1f4bad163848",
+  "project": {
+    "id": "prj_gekwpLHnnGbcuGHOp47ieG9C93xJ",
+    "name": "sport-my-fitness",
+    "accountId": "team_jC9jlJ9GZ9GSjrbYoD0pin3U",
+    "protection": {
+      "enabled": true,
+      "deploymentType": "all"
+    }
+  },
+  "browser": {
+    "run_id": 39707625984,
+    "job_id": 119591265233,
+    "artifact_id": 12395429865,
+    "artifact_digest": "sha256:f8581eac61f96403f2ec60d5382b2d4aa7c257ba0fa9be447bc1d3fb7d58fb26",
+    "layouts": 24,
+    "journeys": 4,
+    "native_fallbacks": 4,
+    "failures": 0
+  },
+  "runtime_source_sha256": {
+    "yoshis-book.html": "169decfa82a55b422b69818c3df102e1aba66efeb644f05e8aa363b0c3cfbdbc",
+    "yoshis-book.css": "fd0d273d73be4163627087069a0cdd8ccc5b484e355c01e98ccbe0985be75f60"
+  },
+  "integration": {
+    "exact_tested_runtime": true,
+    "existing_contract_tests": 6,
+    "syntax": "passed",
+    "diff_check": "passed",
+    "full_existing_workflow_preserved": true
+  },
+  "live": null,
+  "payments": "not implemented",
+  "owner_book_content": "pending",
+  "public_launch": "not authorized; private access retained"
+}

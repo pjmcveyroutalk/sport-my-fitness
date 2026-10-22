@@ -1,56 +1,82 @@
 {
   "status": "REVISED_MOCKUP_READY_NOT_PRODUCTION",
-  "tested_commit": "d2eaed8b51dd1c4fb44f6560c7ef18ce86c673ea",
+  "tested_commit": "5ad3e11798a1ee4986d07359ee1d3f2650cfd1da",
   "review_branch": "review/approved-glass-book-concept-20261021",
-  "changes": [
-    "Book moved inward toward text on larger screens",
-    "Cover increased from 288px to 328px on desktop and from 216px to 240px on phones",
-    "Single-section composition, 3:4 cover ratio and mobile centering retained"
-  ],
-  "run_id": 39706952267,
-  "job_id": 119589125218,
-  "artifact_id": 12395448153,
-  "artifact_sha256": "013cb1d4af49c10a784fcd7395b4fe269c27b6e26ebf21a5dccc7a6223cd418e",
+  "change": "Book midpoint aligns with the main page midpoint at desktop widths of 1200px and above. Existing cover size, mobile centering and readable intermediate layout retained.",
+  "run_id": 39707625984,
+  "job_id": 119591265233,
+  "artifact_id": 12395429865,
+  "artifact_sha256": "f8581eac61f96403f2ec60d5382b2d4aa7c257ba0fa9be447bc1d3fb7d58fb26",
   "conclusion": "success",
-  "checks": {
-    "layouts": 24,
-    "journeys": 4,
-    "fallbacks": 4,
-    "failures": [],
-    "comparison_with_previous": "Larger in all 24 layouts; center moves inward on desktop and stays centered on phones"
-  },
-  "measured_comparisons": [
+  "layouts": 24,
+  "journeys": 4,
+  "fallbacks": 4,
+  "failures": [],
+  "measured_centers": [
     {
-      "width": 390,
-      "before": {
-        "cover_width": 216,
-        "center": 187.5
-      },
-      "after": {
-        "cover_width": 240,
-        "center": 187.5
-      }
+      "engine": "chromium",
+      "width": 1366,
+      "theme": "dark",
+      "book_center": 713.5,
+      "page_center": 713.5
     },
     {
+      "engine": "chromium",
       "width": 1366,
-      "before": {
-        "cover_width": 288,
-        "center": 1066.046875
-      },
-      "after": {
-        "cover_width": 328,
-        "center": 999.75
-      }
+      "theme": "light",
+      "book_center": 713.5,
+      "page_center": 713.5
+    },
+    {
+      "engine": "chromium",
+      "width": 1920,
+      "theme": "dark",
+      "book_center": 990.5,
+      "page_center": 990.5
+    },
+    {
+      "engine": "chromium",
+      "width": 1920,
+      "theme": "light",
+      "book_center": 990.5,
+      "page_center": 990.5
+    },
+    {
+      "engine": "webkit",
+      "width": 1366,
+      "theme": "dark",
+      "book_center": 721.0,
+      "page_center": 721.0
+    },
+    {
+      "engine": "webkit",
+      "width": 1366,
+      "theme": "light",
+      "book_center": 721.0,
+      "page_center": 721.0
+    },
+    {
+      "engine": "webkit",
+      "width": 1920,
+      "theme": "dark",
+      "book_center": 998.0,
+      "page_center": 998.0
+    },
+    {
+      "engine": "webkit",
+      "width": 1920,
+      "theme": "light",
+      "book_center": 998.0,
+      "page_center": 998.0
     }
   ],
-  "visual_inspection": [
-    "chromium-dark-1366.png",
-    "chromium-dark-390.png"
+  "visually_inspected": [
+    "chromium-dark-1366.png"
   ],
   "limits": [
-    "Review only; not published to production",
+    "Mockup only; production unchanged",
     "No physical-device testing",
-    "Existing full review workflow must be restored before production integration"
+    "Restore the main review workflow before production integration"
   ],
-  "completed_at": "2026-10-22T01:41:08.838Z"
+  "completed_at": "2026-10-22T01:50:53.131Z"
 }

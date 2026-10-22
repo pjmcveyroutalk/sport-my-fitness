@@ -1,5 +1,36 @@
 # Sport My Fitness — Current Project State
 
+## Automatic water without a control button — October 22, 2026
+
+PJ reported still water and explicitly requested automatic ripples without a
+button. Home now starts the effect automatically and removes the control.
+Native Canvas 2D provides moving water when WebGL is unavailable, shader setup
+fails or a running context is lost. The more visible ripples remain confined
+to the water. Responsive image sampling is normalized through a source canvas
+so the fallback retains the lake's actual appearance.
+
+**Verified runtime source:** `d3d9cef`. Run `39805853509` passes in Chromium
+and WebKit: eight lakefront layouts, 16 automatic motion/recovery cases and
+eight static fallbacks, plus the existing 36 Home trust layouts, 32 headline
+checks and four original-motion cases. All results have zero failures. Each
+motion case verifies moving-water pixels, stationary landmarks, preserved
+water color, no button, reduced motion and page restoration. Existing six
+contract tests also pass. No physical-device testing is claimed.
+
+The controller and stylesheet use root URLs matching the site's established
+script/style routing. Earlier versioned assets remain for cached markup.
+The selected artwork, original entrance, logo, shared navigation, other pages
+and privacy configuration keep their prior bytes. This record accompanies
+publication through the existing protected full-site project; its runtime
+files match the tested source exactly. Deployment readiness and signed-out
+privacy are checked separately after publication. Authenticated live viewing
+and runtime logs remain unavailable through the current connection (403).
+
+Review at https://sportmyfitness.com/admin in the signed-in tab. See
+`verification/home-water-automatic-20261022.json` and
+`docs/HOME_LAKEFRONT_20261022.md`. Setup/Google, branding and payments remain
+separate.
+
 ## Approved Home lakefront and moving water — October 22, 2026
 
 PJ selected the final Milwaukee-inspired lakefront homepage: a hooded woman

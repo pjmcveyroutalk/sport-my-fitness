@@ -1,0 +1,1037 @@
+{
+  "schema_version": 1,
+  "status": "browser-verified-runtime",
+  "requested_behavior": "Water ripples start automatically without a water-control button.",
+  "base_main": "a277678cfa11397599d2240e8b4ecf72b241e4a8",
+  "runtime_source": "d3d9cefd0d9503318af7ae0405a17012042ed605",
+  "review_branch": "review/water-motion-automatic-20261022",
+  "publication": "The main commit containing this receipt carries byte-identical runtime files from runtime_source. Production deployment metadata and public privacy are checked separately after publication.",
+  "project": {
+    "id": "prj_gekwpLHnnGbcuGHOp47ieG9C93xJ",
+    "name": "sport-my-fitness",
+    "accountId": "team_jC9jlJ9GZ9GSjrbYoD0pin3U",
+    "ssoProtection": {
+      "enabled": true,
+      "deploymentType": "all"
+    }
+  },
+  "verification": {
+    "run_id": 39805853509,
+    "job_id": 119918730954,
+    "run_url": "https://github.com/pjmcveyroutalk/sport-my-fitness/actions/runs/39805853509",
+    "artifact_id": 12437362866,
+    "archive_digest": "sha256:5c62d6b0fa5e4c041dc072b963ffa01dfe68a020c0a1bc44b8ecab1bd943f28c",
+    "existing_contract_tests": 6,
+    "all_pass": true,
+    "physical_device_testing": false,
+    "reports": {
+      "home-lakefront/results.json": {
+        "layouts": 8,
+        "water": 16,
+        "fallbacks": 8,
+        "failures": 0,
+        "chromiumVersion": "151.0.7922.34",
+        "webkitVersion": "26.5"
+      },
+      "home-trust/results.json": {
+        "layouts": 36,
+        "headlines": 32,
+        "icons": 2,
+        "motion": 4,
+        "fallbacks": 8,
+        "failures": 0,
+        "chromiumVersion": "151.0.7922.34",
+        "webkitVersion": "26.5"
+      }
+    },
+    "motion_cases": [
+      {
+        "engine": "chromium",
+        "width": 390,
+        "mode": "normal",
+        "renderer": "webgl",
+        "automatic": true,
+        "noButton": true,
+        "regions": {
+          "water": {
+            "changed": 2890,
+            "pixels": 3612,
+            "mean": 10.780546327057955,
+            "maximum": 108,
+            "colorMeanDelta": 0.06256921373200443
+          },
+          "museum": {
+            "changed": 0,
+            "pixels": 4042,
+            "mean": 0,
+            "maximum": 0,
+            "colorMeanDelta": 0
+          },
+          "woman": {
+            "changed": 0,
+            "pixels": 1400,
+            "mean": 0,
+            "maximum": 0,
+            "colorMeanDelta": 0
+          },
+          "sky": {
+            "changed": 0,
+            "pixels": 9630,
+            "mean": 0,
+            "maximum": 0,
+            "colorMeanDelta": 0
+          },
+          "pavement": {
+            "changed": 0,
+            "pixels": 749,
+            "mean": 0,
+            "maximum": 0,
+            "colorMeanDelta": 0
+          }
+        },
+        "appearance": {
+          "changed": 2973,
+          "pixels": 3612,
+          "mean": 10.302141011443338,
+          "maximum": 92,
+          "colorMeanDelta": 0.8042635658914729
+        },
+        "recovered": false,
+        "restoredPageLifecycle": true,
+        "reducedMotion": true,
+        "pass": true
+      },
+      {
+        "engine": "chromium",
+        "width": 390,
+        "mode": "without-webgl",
+        "renderer": "canvas2d",
+        "automatic": true,
+        "noButton": true,
+        "regions": {
+          "water": {
+            "changed": 2839,
+            "pixels": 3612,
+            "mean": 9.595145810262089,
+            "maximum": 76,
+            "colorMeanDelta": 0.17635658914728683
+          },
+          "museum": {
+            "changed": 0,
+            "pixels": 4042,
+            "mean": 0,
+            "maximum": 0,
+            "colorMeanDelta": 0
+          },
+          "woman": {
+            "changed": 0,
+            "pixels": 1400,
+            "mean": 0,
+            "maximum": 0,
+            "colorMeanDelta": 0
+          },
+          "sky": {
+            "changed": 0,
+            "pixels": 9630,
+            "mean": 0,
+            "maximum": 0,
+            "colorMeanDelta": 0
+          },
+          "pavement": {
+            "changed": 0,
+            "pixels": 749,
+            "mean": 0,
+            "maximum": 0,
+            "colorMeanDelta": 0
+          }
+        },
+        "appearance": {
+          "changed": 3016,
+          "pixels": 3612,
+          "mean": 10.078995939461056,
+          "maximum": 78,
+          "colorMeanDelta": 1.304263565891473
+        },
+        "recovered": false,
+        "restoredPageLifecycle": true,
+        "reducedMotion": true,
+        "pass": true
+      },
+      {
+        "engine": "chromium",
+        "width": 390,
+        "mode": "shader-failure",
+        "renderer": "canvas2d",
+        "automatic": true,
+        "noButton": true,
+        "regions": {
+          "water": {
+            "changed": 2839,
+            "pixels": 3612,
+            "mean": 9.595238095238095,
+            "maximum": 76,
+            "colorMeanDelta": 0.17691029900332225
+          },
+          "museum": {
+            "changed": 0,
+            "pixels": 4042,
+            "mean": 0,
+            "maximum": 0,
+            "colorMeanDelta": 0
+          },
+          "woman": {
+            "changed": 0,
+            "pixels": 1400,
+            "mean": 0,
+            "maximum": 0,
+            "colorMeanDelta": 0
+          },
+          "sky": {
+            "changed": 0,
+            "pixels": 9630,
+            "mean": 0,
+            "maximum": 0,
+            "colorMeanDelta": 0
+          },
+          "pavement": {
+            "changed": 0,
+            "pixels": 749,
+            "mean": 0,
+            "maximum": 0,
+            "colorMeanDelta": 0
+          }
+        },
+        "appearance": {
+          "changed": 3016,
+          "pixels": 3612,
+          "mean": 10.08001107419712,
+          "maximum": 78,
+          "colorMeanDelta": 1.3056478405315615
+        },
+        "recovered": false,
+        "restoredPageLifecycle": true,
+        "reducedMotion": true,
+        "pass": true
+      },
+      {
+        "engine": "chromium",
+        "width": 390,
+        "mode": "context-loss",
+        "renderer": "canvas2d",
+        "automatic": true,
+        "noButton": true,
+        "regions": {
+          "water": {
+            "changed": 2839,
+            "pixels": 3612,
+            "mean": 9.595053525286083,
+            "maximum": 76,
+            "colorMeanDelta": 0.17691029900332225
+          },
+          "museum": {
+            "changed": 0,
+            "pixels": 4042,
+            "mean": 0,
+            "maximum": 0,
+            "colorMeanDelta": 0
+          },
+          "woman": {
+            "changed": 0,
+            "pixels": 1400,
+            "mean": 0,
+            "maximum": 0,
+            "colorMeanDelta": 0
+          },
+          "sky": {
+            "changed": 0,
+            "pixels": 9630,
+            "mean": 0,
+            "maximum": 0,
+            "colorMeanDelta": 0
+          },
+          "pavement": {
+            "changed": 0,
+            "pixels": 749,
+            "mean": 0,
+            "maximum": 0,
+            "colorMeanDelta": 0
+          }
+        },
+        "appearance": {
+          "changed": 3016,
+          "pixels": 3612,
+          "mean": 10.078995939461056,
+          "maximum": 78,
+          "colorMeanDelta": 1.304263565891473
+        },
+        "recovered": true,
+        "restoredPageLifecycle": true,
+        "reducedMotion": true,
+        "pass": true
+      },
+      {
+        "engine": "chromium",
+        "width": 1366,
+        "mode": "normal",
+        "renderer": "webgl",
+        "automatic": true,
+        "noButton": true,
+        "regions": {
+          "water": {
+            "changed": 13849,
+            "pixels": 15225,
+            "mean": 16.17889436234264,
+            "maximum": 165,
+            "colorMeanDelta": 0.1910016420361248
+          },
+          "museum": {
+            "changed": 0,
+            "pixels": 16625,
+            "mean": 0,
+            "maximum": 0,
+            "colorMeanDelta": 0
+          },
+          "woman": {
+            "changed": 0,
+            "pixels": 6068,
+            "mean": 0,
+            "maximum": 0,
+            "colorMeanDelta": 0
+          },
+          "sky": {
+            "changed": 0,
+            "pixels": 96968,
+            "mean": 0,
+            "maximum": 0,
+            "colorMeanDelta": 0
+          },
+          "pavement": {
+            "changed": 0,
+            "pixels": 9136,
+            "mean": 0,
+            "maximum": 0,
+            "colorMeanDelta": 0
+          }
+        },
+        "appearance": {
+          "changed": 12864,
+          "pixels": 15225,
+          "mean": 10.871505199781062,
+          "maximum": 177,
+          "colorMeanDelta": 0.22614121510673235
+        },
+        "recovered": false,
+        "restoredPageLifecycle": true,
+        "reducedMotion": true,
+        "pass": true
+      },
+      {
+        "engine": "chromium",
+        "width": 1366,
+        "mode": "without-webgl",
+        "renderer": "canvas2d",
+        "automatic": true,
+        "noButton": true,
+        "regions": {
+          "water": {
+            "changed": 13380,
+            "pixels": 15225,
+            "mean": 11.862550629447181,
+            "maximum": 142,
+            "colorMeanDelta": 0.17904761904761904
+          },
+          "museum": {
+            "changed": 0,
+            "pixels": 16625,
+            "mean": 0,
+            "maximum": 0,
+            "colorMeanDelta": 0
+          },
+          "woman": {
+            "changed": 0,
+            "pixels": 6068,
+            "mean": 0,
+            "maximum": 0,
+            "colorMeanDelta": 0
+          },
+          "sky": {
+            "changed": 0,
+            "pixels": 96968,
+            "mean": 0,
+            "maximum": 0,
+            "colorMeanDelta": 0
+          },
+          "pavement": {
+            "changed": 0,
+            "pixels": 9136,
+            "mean": 0,
+            "maximum": 0,
+            "colorMeanDelta": 0
+          }
+        },
+        "appearance": {
+          "changed": 13544,
+          "pixels": 15225,
+          "mean": 11.360985221674877,
+          "maximum": 168,
+          "colorMeanDelta": 1.2732348111658456
+        },
+        "recovered": false,
+        "restoredPageLifecycle": true,
+        "reducedMotion": true,
+        "pass": true
+      },
+      {
+        "engine": "chromium",
+        "width": 1366,
+        "mode": "shader-failure",
+        "renderer": "canvas2d",
+        "automatic": true,
+        "noButton": true,
+        "regions": {
+          "water": {
+            "changed": 13380,
+            "pixels": 15225,
+            "mean": 11.862769567597153,
+            "maximum": 142,
+            "colorMeanDelta": 0.17904761904761904
+          },
+          "museum": {
+            "changed": 0,
+            "pixels": 16625,
+            "mean": 0,
+            "maximum": 0,
+            "colorMeanDelta": 0
+          },
+          "woman": {
+            "changed": 0,
+            "pixels": 6068,
+            "mean": 0,
+            "maximum": 0,
+            "colorMeanDelta": 0
+          },
+          "sky": {
+            "changed": 0,
+            "pixels": 96968,
+            "mean": 0,
+            "maximum": 0,
+            "colorMeanDelta": 0
+          },
+          "pavement": {
+            "changed": 0,
+            "pixels": 9136,
+            "mean": 0,
+            "maximum": 0,
+            "colorMeanDelta": 0
+          }
+        },
+        "appearance": {
+          "changed": 13544,
+          "pixels": 15225,
+          "mean": 11.361007115489874,
+          "maximum": 168,
+          "colorMeanDelta": 1.2733004926108373
+        },
+        "recovered": false,
+        "restoredPageLifecycle": true,
+        "reducedMotion": true,
+        "pass": true
+      },
+      {
+        "engine": "chromium",
+        "width": 1366,
+        "mode": "context-loss",
+        "renderer": "canvas2d",
+        "automatic": true,
+        "noButton": true,
+        "regions": {
+          "water": {
+            "changed": 13224,
+            "pixels": 15225,
+            "mean": 11.882014230979749,
+            "maximum": 142,
+            "colorMeanDelta": 0.16801313628899836
+          },
+          "museum": {
+            "changed": 0,
+            "pixels": 16625,
+            "mean": 0,
+            "maximum": 0,
+            "colorMeanDelta": 0
+          },
+          "woman": {
+            "changed": 0,
+            "pixels": 6068,
+            "mean": 0,
+            "maximum": 0,
+            "colorMeanDelta": 0
+          },
+          "sky": {
+            "changed": 0,
+            "pixels": 96968,
+            "mean": 0,
+            "maximum": 0,
+            "colorMeanDelta": 0
+          },
+          "pavement": {
+            "changed": 0,
+            "pixels": 9136,
+            "mean": 0,
+            "maximum": 0,
+            "colorMeanDelta": 0
+          }
+        },
+        "appearance": {
+          "changed": 13453,
+          "pixels": 15225,
+          "mean": 11.300842911877394,
+          "maximum": 169,
+          "colorMeanDelta": 1.2635139573070608
+        },
+        "recovered": true,
+        "restoredPageLifecycle": true,
+        "reducedMotion": true,
+        "pass": true
+      },
+      {
+        "engine": "webkit",
+        "width": 390,
+        "mode": "normal",
+        "renderer": "webgl",
+        "automatic": true,
+        "noButton": true,
+        "regions": {
+          "water": {
+            "changed": 2841,
+            "pixels": 3570,
+            "mean": 10.383846872082167,
+            "maximum": 104,
+            "colorMeanDelta": 0.4280112044817927
+          },
+          "museum": {
+            "changed": 0,
+            "pixels": 3995,
+            "mean": 0,
+            "maximum": 0,
+            "colorMeanDelta": 0
+          },
+          "woman": {
+            "changed": 0,
+            "pixels": 1400,
+            "mean": 0,
+            "maximum": 0,
+            "colorMeanDelta": 0
+          },
+          "sky": {
+            "changed": 0,
+            "pixels": 10710,
+            "mean": 0,
+            "maximum": 0,
+            "colorMeanDelta": 0
+          },
+          "pavement": {
+            "changed": 0,
+            "pixels": 833,
+            "mean": 0,
+            "maximum": 0,
+            "colorMeanDelta": 0
+          }
+        },
+        "appearance": {
+          "changed": 2732,
+          "pixels": 3570,
+          "mean": 8.52922502334267,
+          "maximum": 85,
+          "colorMeanDelta": 0.2781512605042017
+        },
+        "recovered": false,
+        "restoredPageLifecycle": true,
+        "reducedMotion": true,
+        "pass": true
+      },
+      {
+        "engine": "webkit",
+        "width": 390,
+        "mode": "without-webgl",
+        "renderer": "canvas2d",
+        "automatic": true,
+        "noButton": true,
+        "regions": {
+          "water": {
+            "changed": 2894,
+            "pixels": 3570,
+            "mean": 9.746405228758169,
+            "maximum": 95,
+            "colorMeanDelta": 0.2504201680672269
+          },
+          "museum": {
+            "changed": 0,
+            "pixels": 3995,
+            "mean": 0,
+            "maximum": 0,
+            "colorMeanDelta": 0
+          },
+          "woman": {
+            "changed": 0,
+            "pixels": 1400,
+            "mean": 0,
+            "maximum": 0,
+            "colorMeanDelta": 0
+          },
+          "sky": {
+            "changed": 0,
+            "pixels": 10710,
+            "mean": 0,
+            "maximum": 0,
+            "colorMeanDelta": 0
+          },
+          "pavement": {
+            "changed": 0,
+            "pixels": 833,
+            "mean": 0,
+            "maximum": 0,
+            "colorMeanDelta": 0
+          }
+        },
+        "appearance": {
+          "changed": 2772,
+          "pixels": 3570,
+          "mean": 8.415966386554622,
+          "maximum": 69,
+          "colorMeanDelta": 0.2669467787114846
+        },
+        "recovered": false,
+        "restoredPageLifecycle": true,
+        "reducedMotion": true,
+        "pass": true
+      },
+      {
+        "engine": "webkit",
+        "width": 390,
+        "mode": "shader-failure",
+        "renderer": "canvas2d",
+        "automatic": true,
+        "noButton": true,
+        "regions": {
+          "water": {
+            "changed": 2852,
+            "pixels": 3570,
+            "mean": 9.59047619047619,
+            "maximum": 91,
+            "colorMeanDelta": 0.24201680672268908
+          },
+          "museum": {
+            "changed": 0,
+            "pixels": 3995,
+            "mean": 0,
+            "maximum": 0,
+            "colorMeanDelta": 0
+          },
+          "woman": {
+            "changed": 0,
+            "pixels": 1400,
+            "mean": 0,
+            "maximum": 0,
+            "colorMeanDelta": 0
+          },
+          "sky": {
+            "changed": 0,
+            "pixels": 10710,
+            "mean": 0,
+            "maximum": 0,
+            "colorMeanDelta": 0
+          },
+          "pavement": {
+            "changed": 0,
+            "pixels": 833,
+            "mean": 0,
+            "maximum": 0,
+            "colorMeanDelta": 0
+          }
+        },
+        "appearance": {
+          "changed": 2754,
+          "pixels": 3570,
+          "mean": 8.343137254901961,
+          "maximum": 69,
+          "colorMeanDelta": 0.2672268907563025
+        },
+        "recovered": false,
+        "restoredPageLifecycle": true,
+        "reducedMotion": true,
+        "pass": true
+      },
+      {
+        "engine": "webkit",
+        "width": 390,
+        "mode": "context-loss",
+        "renderer": "canvas2d",
+        "automatic": true,
+        "noButton": true,
+        "regions": {
+          "water": {
+            "changed": 2850,
+            "pixels": 3570,
+            "mean": 9.741643323996264,
+            "maximum": 86,
+            "colorMeanDelta": 0.24257703081232493
+          },
+          "museum": {
+            "changed": 0,
+            "pixels": 3995,
+            "mean": 0,
+            "maximum": 0,
+            "colorMeanDelta": 0
+          },
+          "woman": {
+            "changed": 0,
+            "pixels": 1400,
+            "mean": 0,
+            "maximum": 0,
+            "colorMeanDelta": 0
+          },
+          "sky": {
+            "changed": 0,
+            "pixels": 10710,
+            "mean": 0,
+            "maximum": 0,
+            "colorMeanDelta": 0
+          },
+          "pavement": {
+            "changed": 0,
+            "pixels": 833,
+            "mean": 0,
+            "maximum": 0,
+            "colorMeanDelta": 0
+          }
+        },
+        "appearance": {
+          "changed": 2739,
+          "pixels": 3570,
+          "mean": 8.262838468720823,
+          "maximum": 69,
+          "colorMeanDelta": 0.28711484593837533
+        },
+        "recovered": true,
+        "restoredPageLifecycle": true,
+        "reducedMotion": true,
+        "pass": true
+      },
+      {
+        "engine": "webkit",
+        "width": 1366,
+        "mode": "normal",
+        "renderer": "webgl",
+        "automatic": true,
+        "noButton": true,
+        "regions": {
+          "water": {
+            "changed": 13670,
+            "pixels": 15225,
+            "mean": 14.499529282977559,
+            "maximum": 187,
+            "colorMeanDelta": 0.18016420361247948
+          },
+          "museum": {
+            "changed": 0,
+            "pixels": 16625,
+            "mean": 0,
+            "maximum": 0,
+            "colorMeanDelta": 0
+          },
+          "woman": {
+            "changed": 0,
+            "pixels": 6068,
+            "mean": 0,
+            "maximum": 0,
+            "colorMeanDelta": 0
+          },
+          "sky": {
+            "changed": 0,
+            "pixels": 96968,
+            "mean": 0,
+            "maximum": 0,
+            "colorMeanDelta": 0
+          },
+          "pavement": {
+            "changed": 0,
+            "pixels": 9136,
+            "mean": 0,
+            "maximum": 0,
+            "colorMeanDelta": 0
+          }
+        },
+        "appearance": {
+          "changed": 12847,
+          "pixels": 15225,
+          "mean": 10.955949644225507,
+          "maximum": 171,
+          "colorMeanDelta": 0.19494252873563217
+        },
+        "recovered": false,
+        "restoredPageLifecycle": true,
+        "reducedMotion": true,
+        "pass": true
+      },
+      {
+        "engine": "webkit",
+        "width": 1366,
+        "mode": "without-webgl",
+        "renderer": "canvas2d",
+        "automatic": true,
+        "noButton": true,
+        "regions": {
+          "water": {
+            "changed": 12936,
+            "pixels": 15225,
+            "mean": 10.534143404488232,
+            "maximum": 132,
+            "colorMeanDelta": 0.10922824302134647
+          },
+          "museum": {
+            "changed": 0,
+            "pixels": 16625,
+            "mean": 0,
+            "maximum": 0,
+            "colorMeanDelta": 0
+          },
+          "woman": {
+            "changed": 0,
+            "pixels": 6068,
+            "mean": 0,
+            "maximum": 0,
+            "colorMeanDelta": 0
+          },
+          "sky": {
+            "changed": 0,
+            "pixels": 96968,
+            "mean": 0,
+            "maximum": 0,
+            "colorMeanDelta": 0
+          },
+          "pavement": {
+            "changed": 0,
+            "pixels": 9136,
+            "mean": 0,
+            "maximum": 0,
+            "colorMeanDelta": 0
+          }
+        },
+        "appearance": {
+          "changed": 13536,
+          "pixels": 15225,
+          "mean": 11.537186644772852,
+          "maximum": 140,
+          "colorMeanDelta": 0.09464696223316912
+        },
+        "recovered": false,
+        "restoredPageLifecycle": true,
+        "reducedMotion": true,
+        "pass": true
+      },
+      {
+        "engine": "webkit",
+        "width": 1366,
+        "mode": "shader-failure",
+        "renderer": "canvas2d",
+        "automatic": true,
+        "noButton": true,
+        "regions": {
+          "water": {
+            "changed": 12773,
+            "pixels": 15225,
+            "mean": 10.515008210180625,
+            "maximum": 134,
+            "colorMeanDelta": 0.09504105090311987
+          },
+          "museum": {
+            "changed": 0,
+            "pixels": 16625,
+            "mean": 0,
+            "maximum": 0,
+            "colorMeanDelta": 0
+          },
+          "woman": {
+            "changed": 0,
+            "pixels": 6068,
+            "mean": 0,
+            "maximum": 0,
+            "colorMeanDelta": 0
+          },
+          "sky": {
+            "changed": 0,
+            "pixels": 96968,
+            "mean": 0,
+            "maximum": 0,
+            "colorMeanDelta": 0
+          },
+          "pavement": {
+            "changed": 0,
+            "pixels": 9136,
+            "mean": 0,
+            "maximum": 0,
+            "colorMeanDelta": 0
+          }
+        },
+        "appearance": {
+          "changed": 13521,
+          "pixels": 15225,
+          "mean": 11.523962780514506,
+          "maximum": 148,
+          "colorMeanDelta": 0.07474548440065681
+        },
+        "recovered": false,
+        "restoredPageLifecycle": true,
+        "reducedMotion": true,
+        "pass": true
+      },
+      {
+        "engine": "webkit",
+        "width": 1366,
+        "mode": "context-loss",
+        "renderer": "canvas2d",
+        "automatic": true,
+        "noButton": true,
+        "regions": {
+          "water": {
+            "changed": 12880,
+            "pixels": 15225,
+            "mean": 10.420667761357416,
+            "maximum": 132,
+            "colorMeanDelta": 0.09333333333333334
+          },
+          "museum": {
+            "changed": 0,
+            "pixels": 16625,
+            "mean": 0,
+            "maximum": 0,
+            "colorMeanDelta": 0
+          },
+          "woman": {
+            "changed": 0,
+            "pixels": 6068,
+            "mean": 0,
+            "maximum": 0,
+            "colorMeanDelta": 0
+          },
+          "sky": {
+            "changed": 0,
+            "pixels": 96968,
+            "mean": 0,
+            "maximum": 0,
+            "colorMeanDelta": 0
+          },
+          "pavement": {
+            "changed": 0,
+            "pixels": 9136,
+            "mean": 0,
+            "maximum": 0,
+            "colorMeanDelta": 0
+          }
+        },
+        "appearance": {
+          "changed": 13532,
+          "pixels": 15225,
+          "mean": 11.534997263273125,
+          "maximum": 140,
+          "colorMeanDelta": 0.08440065681444991
+        },
+        "recovered": true,
+        "restoredPageLifecycle": true,
+        "reducedMotion": true,
+        "pass": true
+      }
+    ],
+    "water_minimum_changed_fraction": 0.7859911406423035,
+    "water_maximum_color_mean_difference": 1.3056478405315615,
+    "source_verification": {
+      "base": "a277678cfa11397599d2240e8b4ecf72b241e4a8",
+      "review": "d3d9cefd0d9503318af7ae0405a17012042ed605",
+      "changed_files": [
+        {
+          "path": ".github/workflows/approved-design-review.yml",
+          "sha256": "940498b53242218e410280e79646fd2d54253ff1a494cc220cf9db1b010d36b3",
+          "tested_review_bytes_match": true
+        },
+        {
+          "path": ".github/workflows/water-motion-review.yml",
+          "sha256": "cf2b00041caced59daf3accad6a920c3921a925b194933e456baa56faf8310dd",
+          "tested_review_bytes_match": true
+        },
+        {
+          "path": "docs/HOME_LAKEFRONT_20261022.md",
+          "sha256": "9544d680371da0b98ef03c47732774fe32edfcc1e7c1dc08f5c105a363bfec47",
+          "tested_review_bytes_match": true
+        },
+        {
+          "path": "home-lakefront.css",
+          "sha256": "ca4aa0c5fe7f500bad30c43bfa8a9799b91a3b3a6e3dfbd31cd40aff0adb72cc",
+          "tested_review_bytes_match": true
+        },
+        {
+          "path": "home-water-motion.js",
+          "sha256": "e159f8bffd1882622378042265f5c9bda50f4b67843d8a417c8fec352c26f03a",
+          "tested_review_bytes_match": true
+        },
+        {
+          "path": "index.html",
+          "sha256": "86ba2600d73ca3c80444feecd39216b5f7a4a0af180186c0340753e2401416f3",
+          "tested_review_bytes_match": true
+        },
+        {
+          "path": "verification/home-lakefront-browser.cjs",
+          "sha256": "710c2de8cf04ab29478ce8013d144736721cf41a71302f289ff3ebc3f0341c2d",
+          "tested_review_bytes_match": true
+        }
+      ],
+      "preserved_files": [
+        "site-motion.js",
+        "site-motion.css",
+        "assets/smf-motion-curves.json",
+        "site-menu.js",
+        "site-design.css",
+        "site-appearance.css",
+        "home-trust.css",
+        "home-actions.css",
+        "hero-lettering.css",
+        "assets/brand/sport-my-fitness-original-lockup.png",
+        "assets/photos/smf-lakefront-bench-20261022-800.webp",
+        "assets/photos/smf-lakefront-bench-20261022-1200.webp",
+        "assets/photos/smf-lakefront-bench-20261022-1584.webp",
+        "vercel.json",
+        "training.html",
+        "apparel.html",
+        "programs.html",
+        "media.html",
+        "community.html",
+        "contact.html",
+        "yoshis-book.html"
+      ],
+      "all_match": true
+    }
+  },
+  "private_live_inspection": {
+    "status": "unverified",
+    "reason": "Existing authenticated page access is unavailable. Vercel denied the runtime-log request with 403; the request was not retried. No authentication, credential or protection setting changed."
+  },
+  "scope": "Home water motion, removal of its control, root script/style URLs, and focused verification. Artwork, shared entrance, original logo, page content and the public holding project are preserved.",
+  "review_entry": "https://sportmyfitness.com/admin",
+  "confirmed_original_failure": {
+    "source": "a277678cfa11397599d2240e8b4ecf72b241e4a8",
+    "browser": "Chromium 133.0.6943.0",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "webgl": "deliberately unavailable",
+    "observed": {
+      "state": "unavailable",
+      "controlVisible": false,
+      "frames": 0,
+      "photoLoaded": true,
+      "reducedMotion": false
+    },
+    "scope": "Confirmed fallback failure; actual user device was not inspected."
+  },
+  "verified_at": "2026-10-22T15:39:31.598567+00:00"
+}

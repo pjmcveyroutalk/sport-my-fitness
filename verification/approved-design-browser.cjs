@@ -117,7 +117,8 @@ async function appearance(browser, route, width, engine) {
     await mainSurface.screenshot({path: path.join(out, `${engine}-${route}-light-${width}.png`)});
     if (route === 'index') await page.locator('.site-header').screenshot({path: path.join(out, `${engine}-header-light-${width}.png`)});
     await page.getByRole('button', {name: 'Menu', exact: true}).click();
-    assert.equal(await page.locator('.menu-panel a[href]').count(), 8, 'light mode changed menu destinations or brand link');
+    assert.equal(await page.locator('.menu-panel .primary-nav a[href]').count(), 8, 'light mode changed the eight menu destinations');
+    assert.equal(await page.locator('.menu-panel .menu-heading a.brand[href="index.html"]').count(), 1, 'light mode changed the menu brand link');
     await page.getByRole('button', {name: 'Close menu', exact: true}).click();
     await page.reload({waitUntil: 'networkidle'});
     assert.equal(await toggle.getAttribute('aria-checked'), 'true', 'reload lost the selected appearance');

@@ -76,7 +76,7 @@ async function layout(page, width) {
         const page = await browser.newPage({viewport: {width, height: 900}, reducedMotion: 'reduce'});
         for (const [label, destination] of [['Apparel', 'apparel.html'], ['Explore training', 'training.html'], ['Yoshi’s Book', 'yoshis-book.html']]) {
           await load(page);
-          const action = page.locator('.home-actions').getByRole('link', {name: label + ' →', exact: true});
+          const action = page.locator('.home-actions').getByRole('link', {name: label, exact: true});
           await action.focus(); await page.keyboard.press('Enter');
           await page.waitForURL('**/' + destination);
           assert(await page.locator('h1').isVisible());
@@ -85,7 +85,7 @@ async function layout(page, width) {
             assert.equal(await page.locator('form, input, button[type="submit"]').count(), 0);
             await page.getByRole('switch', {name: 'Light mode', exact: true}).click();
             assert.equal(await page.locator('html').getAttribute('data-theme'), 'light');
-            await page.getByRole('link', {name: 'Return home →', exact: true}).click();
+            await page.getByRole('link', {name: 'Return home', exact: true}).click();
             await page.waitForURL('**/index.html');
             assert.equal(await page.locator('html').getAttribute('data-theme'), 'light');
           }

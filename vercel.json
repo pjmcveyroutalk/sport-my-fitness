@@ -1,45 +1,155 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "trailingSlash": true,
   "redirects": [
     {
+      "source": "/",
+      "destination": "/home/",
+      "permanent": true
+    },
+    {
+      "source": "/index",
+      "destination": "/home/",
+      "permanent": true
+    },
+    {
+      "source": "/index/",
+      "destination": "/home/",
+      "permanent": true
+    },
+    {
+      "source": "/index.html",
+      "destination": "/home/",
+      "permanent": true
+    },
+    {
+      "source": "/apparel.html",
+      "destination": "/apparel/",
+      "permanent": true
+    },
+    {
+      "source": "/yoshis-book.html",
+      "destination": "/yoshis-book/",
+      "permanent": true
+    },
+    {
+      "source": "/training.html",
+      "destination": "/training/",
+      "permanent": true
+    },
+    {
+      "source": "/programs.html",
+      "destination": "/programs/",
+      "permanent": true
+    },
+    {
+      "source": "/media.html",
+      "destination": "/media/",
+      "permanent": true
+    },
+    {
+      "source": "/community.html",
+      "destination": "/community/",
+      "permanent": true
+    },
+    {
+      "source": "/contact.html",
+      "destination": "/contact/",
+      "permanent": true
+    },
+    {
       "source": "/book.html",
-      "destination": "/contact.html",
+      "destination": "/contact/",
       "permanent": true
     },
     {
       "source": "/book",
-      "destination": "/contact.html",
+      "destination": "/contact/",
+      "permanent": true
+    },
+    {
+      "source": "/book/",
+      "destination": "/contact/",
       "permanent": true
     },
     {
       "source": "/training-options.html",
-      "destination": "/programs.html",
+      "destination": "/programs/",
       "permanent": true
     },
     {
       "source": "/training-options",
-      "destination": "/programs.html",
+      "destination": "/programs/",
+      "permanent": true
+    },
+    {
+      "source": "/training-options/",
+      "destination": "/programs/",
       "permanent": true
     },
     {
       "source": "/yoshi.html",
-      "destination": "/training.html",
+      "destination": "/training/",
       "permanent": true
     },
     {
       "source": "/yoshi",
-      "destination": "/training.html",
+      "destination": "/training/",
+      "permanent": true
+    },
+    {
+      "source": "/yoshi/",
+      "destination": "/training/",
       "permanent": true
     },
     {
       "source": "/apparel-collection.html",
-      "destination": "/apparel.html#collection",
+      "destination": "/apparel/#collection",
       "permanent": true
     },
     {
       "source": "/apparel-collection",
-      "destination": "/apparel.html#collection",
+      "destination": "/apparel/#collection",
       "permanent": true
+    },
+    {
+      "source": "/apparel-collection/",
+      "destination": "/apparel/#collection",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/home/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/apparel/",
+      "destination": "/apparel.html"
+    },
+    {
+      "source": "/yoshis-book/",
+      "destination": "/yoshis-book.html"
+    },
+    {
+      "source": "/training/",
+      "destination": "/training.html"
+    },
+    {
+      "source": "/programs/",
+      "destination": "/programs.html"
+    },
+    {
+      "source": "/media/",
+      "destination": "/media.html"
+    },
+    {
+      "source": "/community/",
+      "destination": "/community.html"
+    },
+    {
+      "source": "/contact/",
+      "destination": "/contact.html"
     }
   ]
 }

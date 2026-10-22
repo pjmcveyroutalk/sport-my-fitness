@@ -1,3 +1,4 @@
+const {pagePath} = require('./page-route.cjs');
 /* Approved homepage button placement and its temporary book destination.
  * Read-only browsing only: no inquiries, purchases, calls or account changes. */
 const {chromium, webkit} = require('playwright');
@@ -10,7 +11,7 @@ const report = {started: new Date().toISOString(), layouts: [], journeys: [], fa
 fs.mkdirSync(out, {recursive: true});
 const save = () => fs.writeFileSync(path.join(out, 'results.json'), JSON.stringify(report, null, 2));
 async function load(page) {
-  const response = await page.goto(base + '/index.html', {waitUntil: 'networkidle'});
+  const response = await page.goto(base + '/home/', {waitUntil: 'networkidle'});
   assert.equal(response.status(), 200);
   await page.evaluate(() => document.fonts.ready);
 }
@@ -28,7 +29,7 @@ async function layout(page, width) {
       })};
   });
   assert.equal(data.buttons.length, 3);
-  assert.deepEqual(data.buttons.map(x => x.href), ['apparel.html', 'training.html', 'yoshis-book.html']);
+  assert.deepEqual(data.buttons.map(x => x.href), ['/apparel/', '/training/', '/yoshis-book/']);
   assert(data.scrollWidth <= width, 'page overflows horizontally');
   for (const {rect, label, arrow, font, clipped} of data.buttons) {
     assert(rect.left >= 0 && rect.right <= width, 'button leaves viewport');
@@ -62,25 +63,25 @@ async function layout(page, width) {
       for (const width of [390, 1366]) {
         const page = await browser.newPage({viewport: {width, height: 657}, reducedMotion: 'reduce'});
         for (const route of ['index', 'apparel', 'training', 'programs', 'media', 'community', 'contact', 'yoshis-book']) {
-          await page.goto(`${base}/${route}.html`, {waitUntil: 'domcontentloaded'});
+          await page.goto(`${base}${pagePath(route)}`, {waitUntil: 'domcontentloaded'});
           await page.getByRole('button', {name: 'Menu', exact: true}).click();
           const nav = page.locator('#site-menu #primary-nav');
           assert.deepEqual(await nav.locator('a').allTextContents(), ['Home', 'Apparel', 'Yoshi’s Book', 'Train with Yoshi', 'Programs & Rates', 'Media', 'Community', 'Contact']);
-          assert.equal(await nav.locator('[aria-current="page"]').getAttribute('href'), route + '.html');
+          assert.equal(await nav.locator('[aria-current="page"]').getAttribute('href'), pagePath(route));
           if (route === 'index') await page.screenshot({path: path.join(out, `${engine}-book-menu-${width}.png`)});
           await nav.getByRole('link', {name: 'Yoshi’s Book', exact: true}).click();
-          await page.waitForURL('**/yoshis-book.html');
+          await page.waitForURL('**/yoshis-book/');
           assert(await page.getByRole('heading', {name: 'Yoshi’s book', exact: true}).isVisible());
           report.menus.push({engine, width, route, destinations: 8, bookPosition: 3, pass: true});
         }
         await page.close();
         const native = await browser.newPage({viewport: {width, height: 657}, javaScriptEnabled: false});
-        await native.goto(base + '/index.html');
+        await native.goto(base + '/home/');
         await native.locator('.menu-fallback summary').click();
         const nav = native.locator('.menu-fallback #primary-nav');
         assert.equal(await nav.locator('a:visible').count(), 8);
         await nav.getByRole('link', {name: 'Yoshi’s Book', exact: true}).click();
-        await native.waitForURL('**/yoshis-book.html');
+        await native.waitForURL('**/yoshis-book/');
         assert(await native.getByRole('heading', {name: 'Yoshi’s book', exact: true}).isVisible());
         report.menuFallbacks.push({engine, width, withoutJS: true, pass: true});
         await native.close();
@@ -93,7 +94,7 @@ async function layout(page, width) {
           await load(page);
           assert.equal(await page.locator('html').getAttribute('data-theme'), theme);
           const geometry = await layout(page, width);
-          assert.equal(await page.locator('.brand-logo').first().getAttribute('src'), 'assets/brand/sport-my-fitness-logo.png?v=without-tagline-20261022');
+          assert.equal(await page.locator('.brand-logo').first().getAttribute('src'), '/assets/brand/sport-my-fitness-logo.png?v=without-tagline-20261022');
           if ([390, 1366].includes(width)) await page.screenshot({path: path.join(out, `${engine}-${theme}-${width}.png`), fullPage: true});
           report.layouts.push({engine, width, theme, geometry, pass: true});
           await page.close();
@@ -113,19 +114,19 @@ async function layout(page, width) {
       }
       for (const width of [390, 1366]) {
         const page = await browser.newPage({viewport: {width, height: 900}, reducedMotion: 'reduce'});
-        for (const [label, destination] of [['Apparel', 'apparel.html'], ['Explore training', 'training.html'], ['Yoshi’s Book', 'yoshis-book.html']]) {
+        for (const [label, destination] of [['Apparel', '/apparel/'], ['Explore training', '/training/'], ['Yoshi’s Book', '/yoshis-book/']]) {
           await load(page);
           const action = page.locator('.home-actions').getByRole('link', {name: label, exact: true});
           await action.focus(); await page.keyboard.press('Enter');
-          await page.waitForURL('**/' + destination);
+          await page.waitForURL('**' + destination);
           assert(await page.locator('h1').isVisible());
-          if (destination === 'yoshis-book.html') {
+          if (destination === '/yoshis-book/') {
             assert.equal(await page.locator('meta[name="robots"]').getAttribute('content'), 'noindex,nofollow');
             assert.equal(await page.locator('form, input, button[type="submit"]').count(), 0);
             await page.getByRole('switch', {name: 'Light mode', exact: true}).click();
             assert.equal(await page.locator('html').getAttribute('data-theme'), 'light');
             await page.getByRole('link', {name: 'Return home', exact: true}).click();
-            await page.waitForURL('**/index.html');
+            await page.waitForURL('**/home/');
             assert.equal(await page.locator('html').getAttribute('data-theme'), 'light');
           }
           report.journeys.push({engine, width, destination, keyboard: true, pass: true});
@@ -133,8 +134,8 @@ async function layout(page, width) {
         await page.close();
         const native = await browser.newPage({viewport: {width, height: 900}, javaScriptEnabled: false});
         await load(native); await layout(native, width);
-        await native.locator('.home-actions a[href="yoshis-book.html"]').click();
-        await native.waitForURL('**/yoshis-book.html');
+        await native.locator('.home-actions a[href="/yoshis-book/"]').click();
+        await native.waitForURL('**/yoshis-book/');
         assert(await native.locator('h1').isVisible());
         report.fallbacks.push({engine, width, withoutJS: true, pass: true}); await native.close();
         const moving = await browser.newPage({viewport: {width, height: 900}, reducedMotion: 'no-preference'});

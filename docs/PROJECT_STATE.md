@@ -1,5 +1,22 @@
 # Sport My Fitness — Current Project State
 
+## Clean page addresses — October 22, 2026
+
+PJ requested Xin's clean-URL recommendation. All eight pages use trailing-slash
+addresses starting with `/home/` and `/apparel/`; the old HTML and historical
+aliases redirect permanently. Internal resources, runtime fetches and section
+links support direct visits and refreshes. The private review gateway admits
+these exact routes and sends login to `/home/`, retaining existing sessions
+and the public Coming Soon page. No credentials or protection settings change.
+
+Thirteen contract tests, syntax checks and source-preservation checks pass.
+All eight pages retain non-URL content and markup; 159 style, asset and runtime
+files match the header-size baseline, including current automatic water movement.
+Browser URL expectations and the local server are updated; no new browser
+rendering pass is claimed. See `docs/CLEAN_URLS_20261022.md` and
+`verification/clean-urls-source-20261022.json`.
+
+
 ## Smaller shared header logo - October 22, 2026
 
 PJ requested a quieter header logo that sits in proportion with the menu, phone and appearance controls. The shared logo width is now 160px on desktop (previously 254px) and 96px at the existing mobile/tablet breakpoint (previously 128px). Existing proportional image sizing and vertical centering remain. All eight pages load the refreshed stylesheet version. Header height, controls, menu-drawer logo, artwork, typography, page spacing and movement are unchanged. This is a website presentation adjustment; brand-kit artwork is unchanged.

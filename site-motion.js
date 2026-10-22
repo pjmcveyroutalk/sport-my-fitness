@@ -100,7 +100,7 @@
   const fetchController = new AbortController();
   const timeout = setTimeout(() => fetchController.abort(), 1800);
   try {
-   const response = await fetch('assets/smf-motion-curves.json', {signal:fetchController.signal});
+   const response = await fetch('/assets/smf-motion-curves.json', {signal:fetchController.signal});
    if (!response.ok) throw new Error('Motion curves unavailable');
    curves = await response.json();
    if (curves.version !== 1 || !['headline','photo','support','band','reveal'].every(name =>

@@ -130,8 +130,8 @@
     video.addEventListener('loadeddata',resolve,{once:true});
     video.addEventListener('error',reject,{once:true});
    });
-   video.src='assets/smf-home-blender-motion.mp4';video.load();
-   const data=fetch('assets/smf-home-blender-timeline.json').then(r=>{
+   video.src='/assets/smf-home-blender-motion.mp4';video.load();
+   const data=fetch('/assets/smf-home-blender-timeline.json').then(r=>{
     if(!r.ok) throw Error('Blender timeline unavailable');return r.json();
    });
    [timeline]=await Promise.all([data,ready,document.fonts?.ready || Promise.resolve()]);

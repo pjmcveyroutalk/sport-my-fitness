@@ -1,10 +1,9 @@
-const CACHE_VERSION = "smf-logo-20261022";
+const CACHE_VERSION = "smf-clean-urls-20261022";
 const STATIC_CACHE = `${CACHE_VERSION}-static`;
 const RUNTIME_CACHE = `${CACHE_VERSION}-runtime`;
 
 const PRECACHE_URLS = [
-  "/",
-  "/index.html",
+  "/home/",
   "/site.webmanifest",
   "/brand.css",
   "/styles.css",
@@ -52,7 +51,7 @@ self.addEventListener("fetch", event => {
         })
         .catch(async () => (
           await caches.match(request) ||
-          await caches.match("/index.html")
+          await caches.match("/home/")
         ))
     );
     return;

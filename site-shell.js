@@ -12,32 +12,31 @@
 
 
   const currentPath =
-    window.location.pathname
-      .split('/')
-      .pop() || 'index.html';
+    window.location.pathname;
 
 
   const onHome =
-    currentPath === '' ||
-    currentPath === 'index.html';
+    currentPath === '/' ||
+    currentPath === '/home/' ||
+    currentPath === '/index.html';
 
 
-  const homeHref = 'index.html';
+  const homeHref = '/home/';
 
   const missionHref =
     onHome
       ? '#mission'
-      : 'index.html#mission';
+      : '/home/#mission';
 
   const yoshiHref =
     onHome
       ? '#yoshi'
-      : 'index.html#yoshi';
+      : '/home/#yoshi';
 
   const contactHref =
     onHome
       ? '#contact'
-      : 'index.html#contact';
+      : '/home/#contact';
 
 
   /* ========================================
@@ -67,7 +66,7 @@
         >
 
           <img
-            src="assets/brand/sport-my-fitness-logo.png?v=without-tagline-20261022"
+            src="/assets/brand/sport-my-fitness-logo.png?v=without-tagline-20261022"
             alt="Sport My Fitness"
           >
 
@@ -98,7 +97,7 @@
           aria-label="Primary"
         >
 
-          <a href="programs.html">
+          <a href="/programs/">
             Programs
           </a>
 
@@ -106,11 +105,11 @@
             About Yoshi
           </a>
 
-          <a href="media.html">
+          <a href="/media/">
             Media
           </a>
 
-          <a href="training-options.html">
+          <a href="/programs/">
             Training Options
           </a>
 
@@ -191,23 +190,23 @@
           aria-label="Footer"
         >
 
-          <a href="index.html">
+          <a href="/home/">
             Home
           </a>
 
-          <a href="programs.html">
+          <a href="/programs/">
             Programs
           </a>
 
-          <a href="training-options.html">
+          <a href="/programs/">
             Training Options
           </a>
 
-          <a href="media.html">
+          <a href="/media/">
             Media
           </a>
 
-          <a href="book.html">
+          <a href="/contact/">
             Book
           </a>
 

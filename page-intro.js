@@ -78,7 +78,7 @@
     timer = setTimeout(() => finish('setup-timeout'), 6000);
     try {
       const [timeline] = await Promise.all([
-        fetch('assets/smf-page-blender-timeline.json', {signal:controller.signal}).then(response => {
+        fetch('/assets/smf-page-blender-timeline.json', {signal:controller.signal}).then(response => {
           if (!response.ok) throw Error('Blender timing unavailable');
           return response.json();
         }),

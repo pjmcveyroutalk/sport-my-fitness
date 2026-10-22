@@ -196,7 +196,7 @@ if (root) {
   }
   function image(photo, className) {
     const node = element('img', className);
-    node.src = photo.src;
+    node.src = photo.src.startsWith('/') ? photo.src : '/' + photo.src;
     node.alt = photo.alt;
     node.width = 900;
     node.height = 1100;
@@ -266,7 +266,7 @@ if (root) {
         const thumb = image({...view, alt: ''}, '');
         button.append(thumb, element('span', '', view.label));
         button.addEventListener('click', () => {
-          photo.src = view.src;
+          photo.src = view.src.startsWith('/') ? view.src : '/' + view.src;
           photo.alt = view.alt;
           choices.querySelectorAll('button').forEach((choice, choiceIndex) => choice.setAttribute('aria-pressed', String(choiceIndex === index)));
         });
@@ -279,7 +279,7 @@ if (root) {
     copy.append(element('p', 'apparel-detail-price', apparelPriceLabel(item)));
     const specs = specifications(item.colors, item.sizes);
     const inquiry = element('a', 'apparel-inquiry-link', 'Ask Yoshi');
-    inquiry.href = 'contact.html#inquiry';
+    inquiry.href = '/contact/#inquiry';
     const arrow = element('span', '', '→');
     arrow.setAttribute('aria-hidden', 'true');
     inquiry.append(arrow);
@@ -322,7 +322,7 @@ if (root) {
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), 8000);
     try {
-      const response = await fetch('assets/apparel/catalog.json?v=floating-apparel-20261021', {signal: controller.signal});
+      const response = await fetch('/assets/apparel/catalog.json?v=floating-apparel-20261021', {signal: controller.signal});
       if (!response.ok) throw new Error('Collection unavailable');
       const catalog = await response.json();
       if (catalog.version !== 1 || !Array.isArray(catalog.items)) throw new Error('Invalid collection');

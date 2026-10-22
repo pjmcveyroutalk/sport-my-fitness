@@ -19,7 +19,7 @@ jobs:
         run: |
           node --check home-water-motion.js
           node --check verification/home-lakefront-browser.cjs
-          node --test test/pilot-verify-production.test.js test/apparel-catalog.test.mjs
+          node --test test/pilot-verify-production.test.js test/apparel-catalog.test.mjs test/clean-urls.test.cjs
           git diff --check
       - name: Install browser tools
         run: |
@@ -30,11 +30,11 @@ jobs:
           SMF_BASE_URL: http://127.0.0.1:8080
           SMF_EVIDENCE_DIR: ${{ runner.temp }}/smf-water-evidence
         run: |
-          python3 -m http.server 8080 --bind 127.0.0.1 > "$RUNNER_TEMP/smf-http.log" 2>&1 &
+          node verification/site-preview-server.cjs > "$RUNNER_TEMP/smf-http.log" 2>&1 &
           server_pid=$!
           trap 'kill "$server_pid" 2>/dev/null || true' EXIT
           for attempt in $(seq 1 30); do
-            if curl --fail --silent http://127.0.0.1:8080/index.html > /dev/null; then break; fi
+            if curl --fail --silent http://127.0.0.1:8080/home/ > /dev/null; then break; fi
             sleep 1
           done
           NODE_PATH="$RUNNER_TEMP/smf-browser/node_modules" node verification/home-lakefront-browser.cjs

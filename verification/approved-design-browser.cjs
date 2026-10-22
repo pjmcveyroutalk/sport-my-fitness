@@ -1,3 +1,4 @@
+const {pagePath} = require('./page-route.cjs');
 /* Visitor-facing checks for the approved design. Does not submit inquiries,
  * complete bookings, or require production credentials. */
 const {chromium, webkit} = require('playwright');
@@ -19,7 +20,7 @@ async function check(name, fn) {
   catch (error) { report.failures.push({name, error: error.stack}); console.error('FAIL ' + name + '\n' + error.stack); save(); throw error; }
 }
 async function load(page, route) {
-  const response = await page.goto(`${base}/${route}.html`, {waitUntil: 'networkidle'});
+  const response = await page.goto(`${base}${pagePath(route)}`, {waitUntil: 'networkidle'});
   assert.equal(response.status(), 200);
   await page.evaluate(() => document.fonts.ready);
 }
@@ -119,14 +120,14 @@ async function appearance(browser, route, width, engine) {
     if (route === 'index') await page.locator('.site-header').screenshot({path: path.join(out, `${engine}-header-light-${width}.png`)});
     await page.getByRole('button', {name: 'Menu', exact: true}).click();
     assert.equal(await page.locator('.menu-panel .primary-nav a[href]').count(), 8, 'light mode changed the eight menu destinations');
-    assert.equal(await page.locator('.menu-panel .menu-heading a.brand[href="index.html"]').count(), 1, 'light mode changed the menu brand link');
+    assert.equal(await page.locator('.menu-panel .menu-heading a.brand[href="/home/"]').count(), 1, 'light mode changed the menu brand link');
     await page.getByRole('button', {name: 'Close menu', exact: true}).click();
     await page.reload({waitUntil: 'networkidle'});
     assert.equal(await toggle.getAttribute('aria-checked'), 'true', 'reload lost the selected appearance');
     await page.getByRole('button', {name: 'Menu', exact: true}).click();
     const next = route === 'training' ? 'index' : 'training';
-    await page.locator(`.menu-panel .primary-nav a[href="${next}.html"]`).click();
-    await page.waitForURL(`**/${next}.html`);
+    await page.locator(`.menu-panel .primary-nav a[href="${pagePath(next)}"]`).click();
+    await page.waitForURL(`**${pagePath(next)}`);
     assert.equal(await toggle.getAttribute('aria-checked'), 'true', 'navigation lost the selected appearance');
     await toggle.focus();
     await page.keyboard.press('Space');
@@ -152,7 +153,7 @@ async function officialPlatformMarks(page, route, width, engine) {
     assert.equal(await mark.count(), 1, 'official platform mark is missing');
     assert.equal(await mark.getAttribute('aria-hidden'), 'true');
     const image = mark.locator('img');
-    assert.equal(await image.getAttribute('src'), 'assets/platforms/' + asset);
+    assert.equal(await image.getAttribute('src'), '/assets/platforms/' + asset);
     assert.equal(await image.getAttribute('alt'), '');
     assert.equal(await mark.evaluate(el => getComputedStyle(el).backgroundColor), 'rgb(244, 247, 247)', 'original black glyph lacks light clear space');
   }
@@ -236,14 +237,14 @@ async function layout(page, route, width, engine) {
   assert.equal(await page.locator('.page-step,.footer-links,.footer-name').count(), 0, 'redundant page ending remains');
   if (route === 'index') {
     assert.equal(await page.locator('.training-section,.training-option').count(), 0, 'redundant landing-page training link group remains');
-    assert.deepEqual(await page.locator('.hero-actions > a').evaluateAll(links => links.map(link => link.getAttribute('href'))), ['apparel.html', 'training.html', 'yoshis-book.html'], 'landing-page hero actions changed');
+    assert.deepEqual(await page.locator('.hero-actions > a').evaluateAll(links => links.map(link => link.getAttribute('href'))), ['/apparel/', '/training/', '/yoshis-book/'], 'landing-page hero actions changed');
   }
   assert.equal(await page.locator('#primary-nav a').count(), 8);
   assert.deepEqual(await page.locator('#primary-nav a').allTextContents(), ['Home', 'Apparel', 'Yoshi’s Book', 'Train with Yoshi', 'Programs & Rates', 'Media', 'Community', 'Contact']);
   assert.equal(await page.locator('a[href="yoshi.html"]').count(), 0, 'obsolete About links remain');
   const current = page.locator('#primary-nav a[aria-current="page"]');
   assert.equal(await current.count(), 1);
-  assert.equal(await current.getAttribute('href'), route + '.html');
+  assert.equal(await current.getAttribute('href'), pagePath(route));
   const geometry = await page.evaluate(() => {
     const hero = document.querySelector('main > section').getBoundingClientRect();
     const h1 = document.querySelector('h1');
@@ -360,8 +361,8 @@ async function navigation(page, route, width) {
   await page.keyboard.press('Escape');
   const next = routes[(routes.indexOf(route) + 1) % routes.length];
   await trigger.click();
-  const destination = page.waitForURL(url => url.pathname.endsWith('/' + next + '.html'));
-  const destinationLink = page.locator(`#primary-nav a[href="${next}.html"]`);
+  const destination = page.waitForURL(url => url.pathname.endsWith(pagePath(next)));
+  const destinationLink = page.locator(`#primary-nav a[href="${pagePath(next)}"]`);
   if (route === 'index' && width === 390) { await destinationLink.focus(); await destinationLink.press('Enter'); }
   else await destinationLink.click();
   await destination;
@@ -382,18 +383,18 @@ async function combinedTraining(page, width, engine) {
     assert((await teaching.innerText()).includes(phrase), 'teaching/community fact missing: ' + phrase);
   }
   assert.equal(await page.locator('.client-review').count(), 2);
-  assert.equal(await page.locator('main a[href^="contact.html"]').count(), 1, 'inquiry action is missing or duplicated');
-  assert.equal(await page.locator('.training-inquiry .button').getAttribute('href'), 'contact.html#inquiry');
-  assert.equal(await page.locator('.training-hero .hero-actions a').getAttribute('href'), 'programs.html');
+  assert.equal(await page.locator('main a[href^="/contact/"]').count(), 1, 'inquiry action is missing or duplicated');
+  assert.equal(await page.locator('.training-inquiry .button').getAttribute('href'), '/contact/#inquiry');
+  assert.equal(await page.locator('.training-hero .hero-actions a').getAttribute('href'), '/programs/');
   const photos = await page.locator('main img:not(.platform-icon)').evaluateAll(images => images.map(image => image.getAttribute('src')));
   assert.equal(new Set(photos).size, photos.length, 'a photograph is repeated on the combined page');
   assert.deepEqual([...photos].sort(), [
-    'assets/photos/training-gym-background-1586.webp',
-    'assets/photos/yoshi-fitness-facebook-clarity-1254.webp',
-    'assets/photos/yoshi-smiling-facebook-clarity-1254.webp',
-    'assets/photos/yoshi-community-socialx-clarity-1536.webp',
-    'assets/photos/yoshi-leading-session-socialx-clarity-1536.webp',
-    'assets/photos/yoshi-youth-coaching-2026-09-02-clarity-1254.webp'
+    '/assets/photos/training-gym-background-1586.webp',
+    '/assets/photos/yoshi-fitness-facebook-clarity-1254.webp',
+    '/assets/photos/yoshi-smiling-facebook-clarity-1254.webp',
+    '/assets/photos/yoshi-community-socialx-clarity-1536.webp',
+    '/assets/photos/yoshi-leading-session-socialx-clarity-1536.webp',
+    '/assets/photos/yoshi-youth-coaching-2026-09-02-clarity-1254.webp'
   ].sort(), 'approved photographs were lost or replaced');
   if ([390, 1334].includes(width)) for (const [name, selector] of [['coach', '#meet-yoshi'], ['background', '#story'], ['teaching', '#teaching'], ['reviews', '.client-reviews']]) {
     await page.locator(selector).screenshot({path: path.join(out, `${engine}-training-${name}-${width}.png`)});
@@ -406,11 +407,11 @@ async function legacyYoshi(browser, engine, javaScriptEnabled) {
     const page = await context.newPage();
     const suffix = javaScriptEnabled ? '?ref=legacy#story' : '';
     await page.goto(`${base}/yoshi.html${suffix}`, {waitUntil: 'networkidle'});
-    await page.waitForURL(url => url.pathname.endsWith('/training.html'));
+    await page.waitForURL(url => url.pathname.endsWith('/training/'));
     const target = new URL(page.url());
     if (javaScriptEnabled) { assert.equal(target.search, '?ref=legacy'); assert.equal(target.hash, '#story'); }
     assert.match(await page.locator('h1').innerText(), /TRAIN WITH\s*YOSHI\./);
-    assert.equal(await page.locator('#primary-nav a[aria-current="page"]').getAttribute('href'), 'training.html');
+    assert.equal(await page.locator('#primary-nav a[aria-current="page"]').getAttribute('href'), '/training/');
     report.legacyYoshi.push({engine, javaScriptEnabled, destination: target.pathname, fragmentPreserved: javaScriptEnabled ? target.hash === '#story' : 'not asserted for meta-refresh fallback', pass: true});
   } finally { await context.close(); }
 }
@@ -494,8 +495,8 @@ async function motion(browser, route, width, record) {
       await page.locator('.menu-fallback summary').click();
       assert.equal(await page.locator('.menu-fallback nav a:visible').count(), 8);
       assert(await page.locator('h1').isVisible());
-      await page.locator('.menu-fallback a[href="contact.html"]').click();
-      assert(new URL(page.url()).pathname.endsWith('/contact.html'));
+      await page.locator('.menu-fallback a[href="/contact/"]').click();
+      assert(new URL(page.url()).pathname.endsWith('/contact/'));
       report.safeguards.push({test: 'no-js', route, pass: true}); await context.close();
     });
     await check('menu script failure', async () => {
@@ -522,9 +523,9 @@ async function motion(browser, route, width, record) {
     ]) await check(name, async () => {
       const page = await browser.newPage({viewport: {width: 390, height: 900}, reducedMotion: 'no-preference'});
       await setup(page);
-      if (name === 'deep-link') await page.goto(`${base}/programs.html#online-coaching`);
+      if (name === 'deep-link') await page.goto(`${base}/programs/#online-coaching`);
       else {
-        await page.goto(`${base}/index.html`);
+        await page.goto(`${base}/home/`);
         if (name === 'interrupted') await page.keyboard.press('ArrowDown');
         if (name === 'preference-change') await page.emulateMedia({reducedMotion: 'reduce'});
       }
@@ -555,7 +556,7 @@ async function motion(browser, route, width, record) {
         await navigator.serviceWorker.ready;
         const cache = await caches.open('smf-v1-runtime');
         await cache.put('/contact.js', new Response('window.legacyMenuScriptWasUsed = true;', {headers: {'content-type': 'application/javascript'}}));
-        await cache.put('/contact.html', new Response('<!doctype html><html><body>OLD CONTACT PAGE</body></html>', {headers: {'content-type': 'text/html'}}));
+        await cache.put('/contact/', new Response('<!doctype html><html><body>OLD CONTACT PAGE</body></html>', {headers: {'content-type': 'text/html'}}));
       });
       await page.waitForFunction(() => navigator.serviceWorker.controller);
       await load(page, 'contact');
@@ -590,7 +591,7 @@ async function motion(browser, route, width, record) {
         await new Promise(resolve => setTimeout(resolve, 2600));
         await route.fulfill({path: path.join(process.cwd(), 'assets/smf-motion-curves.json'), contentType: 'application/json'}).catch(() => {});
       });
-      await page.goto(`${base}/index.html`);
+      await page.goto(`${base}/home/`);
       await page.waitForTimeout(3000);
       assert.equal(await page.evaluate(() => document.documentElement.dataset.smfMotionState), 'static');
       assert.equal(await page.locator('h1').evaluate(el => getComputedStyle(el).opacity), '1');

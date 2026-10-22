@@ -9,7 +9,7 @@ const report = {started: new Date().toISOString(), layouts: [], journeys: [], fa
 fs.mkdirSync(out, {recursive: true});
 const save = () => fs.writeFileSync(path.join(out, 'results.json'), JSON.stringify(report, null, 2));
 async function load(page) {
-  const response = await page.goto(base + '/yoshis-book.html', {waitUntil: 'networkidle'});
+  const response = await page.goto(base + '/yoshis-book/', {waitUntil: 'networkidle'});
   assert.equal(response.status(), 200);
   await page.evaluate(() => document.fonts.ready);
 }
@@ -71,13 +71,13 @@ async function load(page) {
         await menu.click();
         const nav = page.locator('#site-menu #primary-nav');
         assert.equal(await nav.locator('a').count(), 8);
-        assert.equal(await nav.locator('[aria-current="page"]').getAttribute('href'), 'yoshis-book.html');
+        assert.equal(await nav.locator('[aria-current="page"]').getAttribute('href'), '/yoshis-book/');
         await page.keyboard.press('Escape');
         assert(!(await page.locator('#site-menu').isVisible()));
         await page.getByRole('switch', {name: 'Light mode', exact: true}).click();
         await page.getByRole('link', {name: 'Return home', exact: true}).focus();
         await page.keyboard.press('Enter');
-        await page.waitForURL('**/index.html');
+        await page.waitForURL('**/home/');
         assert.equal(await page.locator('html').getAttribute('data-theme'), 'light');
         report.journeys.push({engine, width, keyboardReturn: true, menu: true, themePersists: true, pass: true});
         await page.close();
@@ -88,7 +88,7 @@ async function load(page) {
         const nativeNav = native.locator('.menu-fallback #primary-nav');
         assert.equal(await nativeNav.locator('a:visible').count(), 8);
         await nativeNav.getByRole('link', {name: 'Home', exact: true}).click();
-        await native.waitForURL('**/index.html');
+        await native.waitForURL('**/home/');
         report.fallbacks.push({engine, width, noJS: true, pass: true});
         await native.close();
       }

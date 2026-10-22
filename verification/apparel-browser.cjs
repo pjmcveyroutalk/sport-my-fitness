@@ -1,3 +1,4 @@
+const {pagePath} = require('./page-route.cjs');
 /* Responsive carousel and single-card visitor checks. Inventory fixtures stay
    in the browser; no inquiries, calls, payments or account settings change. */
 const {chromium, webkit} = require('playwright');
@@ -11,7 +12,7 @@ const report = {started: new Date().toISOString(), layouts: [], lettering: [], j
 fs.mkdirSync(out, {recursive: true});
 function save() { fs.writeFileSync(path.join(out, 'results.json'), JSON.stringify(report, null, 2)); }
 async function load(page, route = 'apparel', hash = '') {
-  assert.equal((await page.goto(`${base}/${route}.html${hash}`, {waitUntil: 'networkidle'})).status(), 200);
+  assert.equal((await page.goto(`${base}${pagePath(route)}${hash}`, {waitUntil: 'networkidle'})).status(), 200);
   await page.evaluate(() => document.fonts.ready);
 }
 const visibleCards = page => page.locator('[data-apparel-products] > article:visible');
@@ -23,7 +24,7 @@ async function selectedCard(page, id) {
   assert.equal(await currentLink(page).getAttribute('href'), `#${id}`);
   assert.equal(await currentLink(page).getAttribute('aria-expanded'), 'true');
   assert.equal(new URL(page.url()).hash, `#${id}`);
-  assert.equal(new URL(page.url()).pathname, '/apparel.html');
+  assert.equal(new URL(page.url()).pathname, '/apparel/');
   const geometry = await page.evaluate(() => {
     const carousel = document.querySelector('.apparel-carousel').getBoundingClientRect();
     const card = document.querySelector('[data-apparel-products] > article').getBoundingClientRect();
@@ -63,7 +64,7 @@ async function layout(browser, engine, width, theme) {
     assert.equal(await page.locator('html').getAttribute('data-theme'), theme);
     assert.equal(await page.locator('h1').count(), 1);
     assert.equal(await page.locator('#primary-nav a').count(), 8);
-    assert.equal(await page.locator('.site-header .brand-logo').getAttribute('src'), 'assets/brand/sport-my-fitness-logo.png?v=without-tagline-20261022');
+    assert.equal(await page.locator('.site-header .brand-logo').getAttribute('src'), '/assets/brand/sport-my-fitness-logo.png?v=without-tagline-20261022');
     const geometry = await page.evaluate(() => {
       const logo = document.querySelector('.site-header .brand-logo');
       const box = logo.getBoundingClientRect();
@@ -150,7 +151,7 @@ async function journey(browser, engine, width) {
     assert.equal(await page.getByRole('button', {name: 'Size: M', exact: true}).getAttribute('aria-pressed'), 'true');
     await page.getByRole('button', {name: 'Color: Cream', exact: true}).click();
     assert.equal(await page.locator('.apparel-option-selection').innerText(), 'Cream');
-    assert.equal(await page.locator('.apparel-inquiry-link').getAttribute('href'), 'contact.html#inquiry');
+    assert.equal(await page.locator('.apparel-inquiry-link').getAttribute('href'), '/contact/#inquiry');
     const selected = await visibleCards(page).getAttribute('id');
     for (const nextWidth of [390, 1366, width]) {
       await page.setViewportSize({width: nextWidth, height: 900});
@@ -233,7 +234,7 @@ async function fallback(browser, engine, mode) {
     if (mode === 'no-js') {
       await page.locator('a[href="#apparel-sample-jacket"]').focus();
       await page.keyboard.press('Enter');
-      await page.waitForURL('**/apparel.html#apparel-sample-jacket');
+      await page.waitForURL('**/apparel/#apparel-sample-jacket');
       assert.equal(await visibleCards(page).count(), 4, 'static fallback details are missing');
       await page.locator('.menu-fallback summary').click();
       assert.equal(await page.locator('.menu-fallback #primary-nav a:visible').count(), 8);
@@ -244,7 +245,7 @@ async function fallback(browser, engine, mode) {
       await selectedCard(page, 'apparel-sample-jacket');
     }
     await load(page, 'apparel-collection');
-    await page.waitForURL('**/apparel.html#collection');
+    await page.waitForURL('**/apparel/#collection');
     assert.equal(await page.locator('[data-apparel-products] > article').count(), mode === 'no-js' ? 4 : 0);
     report.fallbacks.push({engine, mode, detailsAvailable: true, oldCollectionForward: true, pass: true});
   } finally { await context.close(); }

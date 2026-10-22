@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-22",
+  "baseline": "7c143f5ad000f440ee55e3bb46a5537113ba8896",
+  "cleanPages": 8,
+  "htmlNonUrlContentUnchanged": [
+    "index.html",
+    "apparel.html",
+    "yoshis-book.html",
+    "training.html",
+    "programs.html",
+    "media.html",
+    "community.html",
+    "contact.html"
+  ],
+  "originalMotionOnlyRootFetchChanged": true,
+  "preservedRuntimeAndAssetFiles": 159,
+  "originalGatewaySha1": "deb80eb415080bf4eec29c9d6685eaa08921f890",
+  "newGatewaySha1": "402f7eff0a8f386509cc484a7887c888608de4c8",
+  "checks": {
+    "contractTestsPassed": 13,
+    "syntax": "passed",
+    "diffWhitespace": "passed",
+    "browserRendering": "not rerun; browser installation unavailable; this change only modifies URLs",
+    "authenticatedLiveContent": "requires the existing human review session; no production credentials read"
+  }
+}

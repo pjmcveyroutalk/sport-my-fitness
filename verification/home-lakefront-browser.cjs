@@ -29,7 +29,7 @@ function pixelChange(before,after) {
   return {changed,pixels:a.width*a.height,mean:total/(a.width*a.height*3),maximum,colorMeanDelta:Math.max(...channels.map(value=>Math.abs(value)/(a.width*a.height)))};
 }
 async function load(page) {
-  const response = await page.goto(base+'/index.html',{waitUntil:'domcontentloaded'});
+  const response = await page.goto(base+'/home/',{waitUntil:'domcontentloaded'});
   assert.equal(response.status(),200);
   await page.waitForFunction(()=>document.fonts.status==='loaded'&&[...document.images].every(image=>image.complete&&image.naturalWidth>0));
   await page.waitForFunction(()=>['playing','reduced','unavailable','paused'].includes(document.querySelector('.smf-water-canvas').dataset.waterState));
@@ -136,11 +136,11 @@ async function water(page, engine, width, mode) {
             const box=photo.getBoundingClientRect(),hero=photo.closest('.hero').getBoundingClientRect();
             return {src:photo.getAttribute('src'),fit:style.objectFit,box:box.toJSON(),hero:hero.toJSON(),waterControls:document.querySelectorAll('.water-toggle').length,overflow:document.documentElement.scrollWidth>innerWidth,water:document.querySelector('.smf-water-canvas').dataset.waterState,og:document.querySelector('meta[property="og:image"]').content,twitter:document.querySelector('meta[name="twitter:image"]').content};
           });
-          assert.equal(data.src,'assets/photos/smf-lakefront-bench-20261022-1584.webp');
+          assert.equal(data.src,'/assets/photos/smf-lakefront-bench-20261022-1584.webp');
           assert.equal(data.fit,'cover');
           assert(!data.overflow);
           assert.equal(data.og,data.twitter);
-          assert(data.og.endsWith('/'+data.src));
+          assert(data.og.endsWith(data.src));
           assert(['reduced','unavailable'].includes(data.water));
           assert.equal(data.waterControls,0,'water control must be removed');
           const fit=Math.max(data.box.width/1584,data.box.height/993);
@@ -161,7 +161,7 @@ async function water(page, engine, width, mode) {
           } finally {await page.close();}
         }
         const native=await browser.newPage({viewport:{width,height:900},javaScriptEnabled:false});
-        await native.goto(base+'/index.html');
+        await native.goto(base+'/home/');
         assert(await native.locator('.yoshi-hero').isVisible());
         assert.equal(await native.locator('.water-toggle').count(),0);
         assert.equal(await native.locator('.home-actions a').count(),3);

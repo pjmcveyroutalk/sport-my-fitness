@@ -10,7 +10,7 @@ const report = {baseline: [], candidate: [], failures: []};
 async function probe(browser, engine, width, base, baseline) {
   const page = await browser.newPage({viewport: {width, height: 900}, reducedMotion: 'no-preference'});
   try {
-    await page.goto(`${base}/apparel.html`, {waitUntil: 'networkidle'});
+    await page.goto(`${base}/apparel/`, {waitUntil: 'networkidle'});
     await page.evaluate(() => document.fonts.ready);
     await page.locator('.apparel-carousel').scrollIntoViewIfNeeded();
     // Warm baseline images too, so a decode delay cannot explain its failure.

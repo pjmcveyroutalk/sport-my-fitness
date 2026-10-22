@@ -1,3 +1,4 @@
+const {pagePath} = require('./page-route.cjs');
 /* Approved release: preserved heading/action geometry, truthful proof, a shared
  * headline family, original entrance direction/timing, and useful fallbacks. */
 const {chromium, webkit} = require('playwright');
@@ -16,7 +17,7 @@ async function load(page, route) {
   if (route === 'baseline') {
     await page.route('**/index.html?trust-baseline=1', request => request.fulfill({status:200,contentType:'text/html',body:fs.readFileSync(path.join(__dirname,'fixtures/home-before-trust.html'),'utf8')}), {times:1});
   }
-  const url = route === 'baseline' ? '/index.html?trust-baseline=1' : '/' + route + '.html';
+  const url = route === 'baseline' ? '/index.html?trust-baseline=1' : pagePath(route);
   const response = await page.goto(base + url, {waitUntil: 'domcontentloaded'});
   assert.equal(response.status(), 200);
   await page.evaluate(async () => {
@@ -67,7 +68,7 @@ async function proofGeometry(page) {
         const output = [];
         for (const svg of icons) {
           const name = svg.dataset.icon;
-          const response = await fetch('assets/icons/lucide/'+name+'.svg');
+          const response = await fetch('/assets/icons/lucide/'+name+'.svg');
           const original = new DOMParser().parseFromString(await response.text(),'image/svg+xml').documentElement;
           output.push({name,actual:geometry(svg),source:geometry(original),hidden:svg.getAttribute('aria-hidden'),stroke:svg.getAttribute('stroke-width')});
         }
@@ -83,6 +84,7 @@ async function proofGeometry(page) {
           await page.addInitScript(value => localStorage.setItem('smf-color-theme', value), theme);
           await load(page, 'baseline');
           const original = await geometry(page);
+          original.actions.forEach(action => { action.href = pagePath(action.href.replace(/\.html$/, '')); });
           for (const variant of variants) {
             const previousFailures = report.failures.length;
             await load(page, 'index');
@@ -92,8 +94,8 @@ async function proofGeometry(page) {
             // URL intentionally changes for PJ's approved sentence removal.
             const protectedGeometry = ({photo, image, logo, ...unchanged}) => unchanged;
             assert.deepEqual(protectedGeometry(actual), protectedGeometry(original), 'approved foreground geometry changed: ' + JSON.stringify({engine,width,height,theme,variant}));
-            assert.equal(actual.logo, 'assets/brand/sport-my-fitness-logo.png?v=without-tagline-20261022');
-            assert.equal(actual.image, 'assets/photos/smf-lakefront-bench-20261022-1584.webp');
+            assert.equal(actual.logo, '/assets/brand/sport-my-fitness-logo.png?v=without-tagline-20261022');
+            assert.equal(actual.image, '/assets/photos/smf-lakefront-bench-20261022-1584.webp');
             assert.equal(await page.locator('.yoshi-hero').evaluate(img=>getComputedStyle(img).objectFit), 'cover');
             assert(actual.scrollWidth <= width, 'horizontal overflow');
             const proof = await proofGeometry(page);
@@ -162,8 +164,8 @@ async function proofGeometry(page) {
         for (const variant of variants) {
           await load(native, 'index');
           assert.equal(await native.locator('.home-proof').evaluate(el=>getComputedStyle(el).opacity),'1');
-          await native.locator('.home-actions a[href="training.html"]').click();
-          await native.waitForURL('**/training.html');
+          await native.locator('.home-actions a[href="/training/"]').click();
+          await native.waitForURL('**/training/');
           report.fallbacks.push({engine,width,variant,withoutJS:true,trainingLink:true,pass:true});
         }
         await native.close();

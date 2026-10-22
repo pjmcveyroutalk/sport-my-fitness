@@ -23,7 +23,7 @@ No real inquiry or booking was sent. Browser-engine checks do not establish phys
 Local reproduction with an installed Playwright package and browsers:
 
 ```sh
-python3 -m http.server 8080
+node verification/site-preview-server.cjs
 # In another terminal, with the development dependency resolvable:
 SMF_BASE_URL=http://127.0.0.1:8080 SMF_EVIDENCE_DIR=/tmp/smf-evidence node verification/approved-design-browser.cjs
 ```

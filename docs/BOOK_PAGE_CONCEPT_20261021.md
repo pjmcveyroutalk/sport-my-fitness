@@ -28,3 +28,16 @@ PJ’s handoff requests a focused mockup and design decision before applying a
 materially new book-page composition. Keep this concept on its review branch
 until PJ has reviewed it. Main and production continue to serve the temporary
 Book destination during review.
+
+## Fresh review evidence
+
+Run `39704221233` succeeds on concept commit `a1ccc0e`: 24 layouts at six widths
+(320–1920px), dark/light, Chromium 151 and WebKit 26.5; four focused navigation
+journeys and four native fallbacks; zero failures. Six existing contract tests
+and the workflow syntax checks also pass. Desktop dark/light and phone dark
+images were inspected. No physical-device test or broad motion rerun is claimed.
+
+See `verification/book-page-concept-20261021.json`. The reviewed render files
+are in artifact `12394401307` under run `39704221233` (30-day retention); the
+concept is reproducible from this branch after artifact expiration. Main remains
+`7ff0d0c`; no new composition is applied to production.

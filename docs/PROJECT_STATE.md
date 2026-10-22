@@ -1,4 +1,23 @@
 # Sport My Fitness — Current Project State
+
+## Book-page concept ready for PJ’s review — October 21, 2026
+
+**Review branch only; not a production release.**
+`review/approved-glass-book-concept-20261021` contains the focused book-page
+concept, tested at `a1ccc0e`. The existing main and production still serve the
+temporary Book message. The design adds a responsive cover/introduction and a
+short About section using the current site style. Cover and book copy remain
+explicit placeholders; there is no checkout, preview file or delivery flow.
+
+All 24 concept layouts, four journeys and four native fallbacks pass in
+Chromium/WebKit, with dark/light and six screen widths. Existing header/menu/
+footer source is exact. Home, its buttons, photos, shared movement and all other
+existing runtime files remain unchanged. See `docs/BOOK_PAGE_CONCEPT_20261021.md`
+and `verification/book-page-concept-20261021.json`. Next is PJ’s composition
+decision and actual book material. The branch has a temporary focused review
+workflow; restore the main workflow before integration. Keep setup, branding
+and payment workstreams separate.
+
 ## Homepage buttons and book link — October 21, 2026
 ## Book added to every side menu — October 21, 2026
 

@@ -1,0 +1,71 @@
+{
+  "status": "DESIGN_REVIEW_READY_NOT_PRODUCTION",
+  "review_branch": "review/approved-glass-book-concept-20261021",
+  "tested_commit": "a1ccc0ef241598276860310daf10b239c412f41d",
+  "base_main": "7ff0d0cf8c4c41c49293847aa0af1f4bad163848",
+  "scope": "Dedicated book-page concept with explicit cover/content placeholders. No payments or protected delivery.",
+  "ci": {
+    "run_id": 39704221233,
+    "job_id": 119580326371,
+    "conclusion": "success",
+    "artifact_id": 12394401307,
+    "artifact_sha256": "fd69a447f8bf5551a49ecbed1dc6435d86c4d7de7e93ed9fc45c3f7d330e98ce",
+    "url": "https://github.com/pjmcveyroutalk/sport-my-fitness/actions/runs/39704221233"
+  },
+  "checks": {
+    "layouts": 24,
+    "widths": [
+      320,
+      390,
+      768,
+      901,
+      1366,
+      1920
+    ],
+    "themes": [
+      "dark",
+      "light"
+    ],
+    "journeys": 4,
+    "native_fallbacks": 4,
+    "failures": [],
+    "existing_contract_tests": 6,
+    "syntax": "passed",
+    "git_diff_check": "passed",
+    "local_references": "passed",
+    "header_navigation_footer_exact": "passed"
+  },
+  "browsers": {
+    "chromium": "151.0.7922.34",
+    "webkit": "26.5"
+  },
+  "visual_inspection": [
+    "chromium-dark-1366.png",
+    "chromium-dark-390.png",
+    "chromium-light-1366.png"
+  ],
+  "preserved_by_exact_source_comparison": [
+    "index.html",
+    "home-actions.css",
+    "site-design.css",
+    "site-menu.js",
+    "site-appearance.js",
+    "site-appearance.css",
+    "hero-lettering.css",
+    "site-motion.js",
+    "site-motion.css",
+    "assets/smf-motion-curves.json",
+    "all other existing pages",
+    "all existing assets",
+    "vercel.json",
+    ".github/PSALM-23.md"
+  ],
+  "limits": [
+    "No physical device testing",
+    "No full-site motion/browser rerun; unrelated runtime source remains unchanged",
+    "No production publication",
+    "Actual book title, cover, description, sample and price remain pending",
+    "Restore the unchanged main review workflow before any approved production integration"
+  ],
+  "completed_at": "2026-10-22T01:12:55.481Z"
+}

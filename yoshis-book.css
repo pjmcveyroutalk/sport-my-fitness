@@ -23,7 +23,7 @@
 .book-description { max-width: 34ch; margin-top: 16px; color: var(--muted); }
 .book-actions { margin-top: 28px; }
 .book-availability { color: var(--muted); font-size: 14px; }
-.book-art { width: min(100%, 288px); justify-self: center; text-align: center; }
+.book-art { width: min(100%, 328px); justify-self: start; text-align: center; }
 .book-cover-placeholder {
   display: flex;
   align-items: center;
@@ -77,12 +77,12 @@
 :root[data-theme="light"] .book-return > span { color: var(--accent-ink); }
 @media (max-width: 1100px) and (min-width: 901px) {
   .book-page .book-hero h1 { font-size: 106px; }
-  .book-art { width: 240px; }
+  .book-art { width: min(100%, 280px); }
 }
 @media (max-width: 900px) {
   .book-intro { padding-block: 48px; gap: 40px; }
   .book-page .book-hero h1 { font-size: clamp(76px, 11vw, 108px); }
-  .book-art { width: min(100%, 230px); }
+  .book-art { width: min(100%, 260px); }
 }
 @media (max-width: 600px) {
   .book-intro { grid-template-columns: minmax(0, 1fr); gap: 36px; padding-block: 34px 36px; }
@@ -90,7 +90,7 @@
   .book-page .book-hero h1 { font-size: clamp(88px, 24vw, 118px); margin-bottom: 20px; }
   .book-description { max-width: 36ch; margin-top: 12px; font-size: 16px; }
   .book-actions { margin-top: 22px; }
-  .book-art { width: 216px; }
+  .book-art { width: min(100%, 240px); justify-self: center; }
   .book-cover-placeholder { padding: 22px 18px; }
 }
 @media (forced-colors: active) {

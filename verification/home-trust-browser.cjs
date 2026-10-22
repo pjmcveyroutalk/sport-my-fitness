@@ -11,6 +11,7 @@ const report = {layouts: [], headlines: [], motion: [], fallbacks: [], failures:
 const variants = ['badges', 'panel', 'quote'];
 const pages = ['index', 'apparel', 'yoshis-book', 'training', 'programs', 'media', 'community', 'contact'];
 const save = () => fs.writeFileSync(path.join(out, 'results.json'), JSON.stringify(report, null, 2));
+const check = (condition, message) => { if (!condition) report.failures.push({error: message}); };
 async function load(page, route) {
   const response = await page.goto(`${base}/${route}.html`, {waitUntil: 'networkidle'});
   assert.equal(response.status(), 200);
@@ -65,13 +66,13 @@ async function proofGeometry(page) {
             assert(actual.scrollWidth <= width, 'horizontal overflow');
             const proof = await proofGeometry(page);
             assert.equal(proof.opacity, '1', 'proof not visible');
-            assert(proof.rect.right <= width - 10, 'proof leaves viewport');
-            assert(proof.rect.bottom <= proof.subline.top + 1, 'proof overlaps supporting copy: ' + JSON.stringify({engine,width,variant,proof}));
+            check(proof.rect.right <= width - 10, 'proof leaves viewport');
+            check(proof.rect.bottom <= proof.subline.top + 1, 'proof overlaps supporting copy: ' + JSON.stringify({engine,width,variant,proof}));
             for (const span of proof.heading) {
-              assert(span.right <= proof.rect.left - 4, 'proof crowds the headline: ' + JSON.stringify({engine,width,variant,proof}));
+              check(span.right <= proof.rect.left - 4, 'proof crowds the headline: ' + JSON.stringify({engine,width,variant,proof}));
             }
             for (const leaf of proof.leaves) {
-              assert(leaf.rect.right <= proof.rect.right + 1, 'proof text leaves its box: ' + JSON.stringify({engine,width,variant,leaf,proof}));
+              check(leaf.rect.right <= proof.rect.right + 1, 'proof text leaves its box: ' + JSON.stringify({engine,width,variant,leaf,proof}));
             }
             if (width > 900 && height <= 768) assert(actual.actions.every(a => a.bottom <= height - 12), 'existing first-screen actions lost');
             if ((width === 390 || width === 1366) && height !== 657) {
@@ -138,4 +139,5 @@ async function proofGeometry(page) {
     } finally { await browser.close(); save(); }
   }
   save(); console.log(JSON.stringify({layouts:report.layouts.length,headlines:report.headlines.length,motion:report.motion.length,fallbacks:report.fallbacks.length,failures:report.failures.length}));
+  assert.equal(report.failures.length,0,'design review failures recorded in results.json');
 })().catch(error=>{report.failures.push({error:error.stack});save();console.error(error.stack);process.exitCode=1;});

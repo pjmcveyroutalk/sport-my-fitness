@@ -52,8 +52,7 @@
 .proof-panel strong { display: block; font: 700 20px/1 var(--label); }
 .proof-panel li span { display: block; margin-top: 4px; color: #d1e0e3; font: 400 12px/1.3 var(--body); }
 .proof-client { margin: 0; padding: 0 0 0 17px; border-left: 2px solid var(--proof-accent); }
-.proof-client .proof-quote-mark { color: var(--proof-accent); font: italic 900 48px/.65 var(--display); }
-.proof-client blockquote { margin: 10px 0 0; font: 700 20px/1.25 var(--label); text-wrap: balance; }
+.proof-client blockquote { margin: 0; font: 700 20px/1.25 var(--label); text-wrap: balance; }
 .proof-client figcaption { margin-top: 12px; color: #d1e0e3; font: 400 12px/1.4 var(--body); }
 .proof-client cite { font-style: normal; }
 .proof-client .proof-qualification { display: block; margin-top: 14px; color: var(--proof-accent); font: 700 12px/1.3 var(--label); }
@@ -80,7 +79,6 @@
   .proof-panel li span { font-size: 11px; }
   .proof-client { padding-left: 12px; }
   .proof-client blockquote { font-size: 16px; line-height: 1.15; }
-  .proof-client .proof-quote-mark { font-size: 34px; }
   .proof-client figcaption { font-size: 11px; margin-top: 8px; }
   .proof-client .proof-qualification { margin-top: 10px; font-size: 11px; }
 }
@@ -96,7 +94,6 @@
   .proof-panel strong { font-size: 16px; }
   .proof-panel li span { font-size: 10px; }
   .proof-client blockquote { font-size: 14px; }
-  .proof-client .proof-qualification { margin-top: 8px; }
   .proof-client .proof-qualification { display: none; }
 }
 @media (prefers-reduced-motion: no-preference) {

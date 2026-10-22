@@ -17,3 +17,13 @@ approved release while the new area is reviewed. The branch temporarily scopes
 the existing browser workflow to the changed Book page. Restore the full main
 workflow before integrating this design. Setup, branding, payments, actual book
 content, other pages and shared movement are outside this change.
+
+## Fresh mockup evidence
+
+Run `39710016484` succeeds on `a1faf52`: 24 layouts, four journeys and four native
+fallbacks in Chromium/WebKit, both themes and six widths, with zero failures.
+The quote is beside the book on desktop and stacks below it on smaller screens.
+Direct comparison against the approved Book render confirms identical cover
+left/top/width/height in all 24 cases. Desktop and phone dark renders were
+inspected. See `verification/book-quote-preview-20261021.json`; the rendered
+evidence is artifact `12396249537`. Main and the live page remain unchanged.

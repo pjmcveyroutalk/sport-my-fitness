@@ -1,5 +1,19 @@
 # Sport My Fitness — Current Project State
 
+## Book quote area — review mockup, October 21, 2026
+
+`review/approved-glass-book-quote-20261021` adds a quote area to the right of the
+centered book. It uses clearly labeled invented sample text, with no attribution
+to Yoshi. Phones and intermediate widths stack it after the book within the same
+hero. The approved book position and size match exactly in all 24 checked layouts.
+
+Concept `a1faf52`, run `39710016484`: 24 layouts, four journeys and four native
+fallbacks, zero failures. Desktop and phone renders were inspected. This is a
+mockup for PJ’s review; main and production have not changed. Restore the full
+main workflow before integration. See `docs/BOOK_QUOTE_PREVIEW_20261021.md` and
+`verification/book-quote-preview-20261021.json`.
+
+
 ## Approved Yoshi’s Book page — October 21, 2026
 
 PJ approved the final centered, enlarged book mockup and requested publication.

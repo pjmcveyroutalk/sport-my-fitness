@@ -1,0 +1,27 @@
+{
+  "status": "QUOTE_DESIGN_REVIEW_READY_NOT_PRODUCTION",
+  "review_branch": "review/approved-glass-book-quote-20261021",
+  "tested_commit": "a1faf5292ea35f38ed0e3e3ca37b43529ecc41eb",
+  "base_main": "a6dfc9dd6424490ca47bc9d89d220eed4fed6fb0",
+  "run_id": 39710016484,
+  "job_id": 119598855484,
+  "artifact_id": 12396249537,
+  "artifact_sha256": "1e371bfdcb3a9ac9691d59b5b3ae553daa8eb3805ef77424bac6d56a9c662d55",
+  "conclusion": "success",
+  "layouts": 24,
+  "journeys": 4,
+  "fallbacks": 4,
+  "failures": [],
+  "book_geometry_matches_approved_layout_in_all_24_cases": true,
+  "visual_inspection": [
+    "chromium-dark-1366.png",
+    "chromium-dark-390.png"
+  ],
+  "copy": "Invented sample text, explicitly labeled as not a book excerpt; no author attribution.",
+  "limits": [
+    "Review mockup only; not applied to main or production",
+    "No physical-device testing",
+    "Restore the unchanged main workflow before integration"
+  ],
+  "completed_at": "2026-10-22T02:13:08.338Z"
+}

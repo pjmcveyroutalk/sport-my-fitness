@@ -1,5 +1,20 @@
 # Sport My Fitness — Current Project State
 
+## Horizontal website logo — October 22, 2026
+
+PJ approved the horizontal runner/wordmark header across the website and kept the
+branding package separate. All eight page headers and menus now share the new
+website-only SVG, also used on Coming Soon and Admin. Existing master assets and
+kit exports are unchanged. Mobile/desktop header heights, page content, clean
+routes, original entrance and automatic water code remain intact.
+
+Fresh Chromium 153 checks pass: 60 layouts in both themes, three menus, three
+native navigation cases, two entry pages and one entrance case. All 13 contracts
+pass. See `docs/HORIZONTAL_HEADER_20261022.md` and the matching source/browser
+receipts. No physical-device or fresh WebKit result is claimed. Privacy and
+authentication settings remain intact.
+
+
 ## Clean page addresses — October 22, 2026
 
 PJ requested Xin's clean-URL recommendation. All eight pages use trailing-slash

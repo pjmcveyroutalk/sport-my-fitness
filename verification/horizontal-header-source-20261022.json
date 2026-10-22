@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-22",
+  "baseline": "51f0952b230074334edfe818b9876e25b92314d0",
+  "pages": 8,
+  "currentLogoPlacements": 16,
+  "nonLogoPageMarkupUnchanged": true,
+  "existingAssetStyleAndRuntimeFilesPreserved": 183,
+  "brandingPackageModified": false,
+  "existingBrandingAssetsModified": false,
+  "gatewayChanges": "one exact public SVG entry and Admin image markup only",
+  "gatewayBeforeSha1": "402f7eff0a8f386509cc484a7887c888608de4c8",
+  "gatewayAfterSha1": "cbe7420cf7f374e18b9bd54b8b7f843ebe96d4ff",
+  "websiteSvgSha1": "044bd600f81a05328a7299362d66a53be454a846",
+  "holdingHtmlSha1": "db6c75344d9bf34b0e22fe4ee5ea3bc73adcbee4",
+  "existingContractsPassed": 13
+}

@@ -94,7 +94,7 @@ async function proofGeometry(page) {
             // URL intentionally changes for PJ's approved sentence removal.
             const protectedGeometry = ({photo, image, logo, ...unchanged}) => unchanged;
             assert.deepEqual(protectedGeometry(actual), protectedGeometry(original), 'approved foreground geometry changed: ' + JSON.stringify({engine,width,height,theme,variant}));
-            assert.equal(actual.logo, '/assets/brand/sport-my-fitness-logo.png?v=without-tagline-20261022');
+            assert.equal(actual.logo, '/assets/brand/sport-my-fitness-header.svg?v=horizontal-20261022');
             assert.equal(actual.image, '/assets/photos/smf-lakefront-bench-20261022-1584.webp');
             assert.equal(await page.locator('.yoshi-hero').evaluate(img=>getComputedStyle(img).objectFit), 'cover');
             assert(actual.scrollWidth <= width, 'horizontal overflow');

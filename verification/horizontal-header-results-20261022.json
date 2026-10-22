@@ -1,0 +1,3713 @@
+{
+  "layouts": [
+    {
+      "width": 320,
+      "theme": {
+        "x": 161,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 205,
+        "bottom": 65.5,
+        "left": 161
+      },
+      "route": "/home/",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 305,
+        "height": 88,
+        "top": 0,
+        "right": 305,
+        "bottom": 88,
+        "left": 0
+      },
+      "brand": {
+        "x": 12,
+        "y": 24.234375,
+        "width": 141,
+        "height": 38.515625,
+        "top": 24.234375,
+        "right": 153,
+        "bottom": 62.75,
+        "left": 12
+      },
+      "phone": {
+        "x": 205,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 249,
+        "bottom": 65.5,
+        "left": 205
+      },
+      "menu": {
+        "x": 249,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 293,
+        "bottom": 65.5,
+        "left": 249
+      },
+      "src": "/assets/brand/sport-my-fitness-header.svg?v=horizontal-20261022",
+      "natural": [
+        366,
+        100
+      ],
+      "scrollWidth": 305,
+      "viewport": 320
+    },
+    {
+      "width": 390,
+      "theme": {
+        "x": 223,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 267,
+        "bottom": 65.5,
+        "left": 223
+      },
+      "route": "/home/",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 375,
+        "height": 88,
+        "top": 0,
+        "right": 375,
+        "bottom": 88,
+        "left": 0
+      },
+      "brand": {
+        "x": 12,
+        "y": 17.546875,
+        "width": 190,
+        "height": 51.90625,
+        "top": 17.546875,
+        "right": 202,
+        "bottom": 69.453125,
+        "left": 12
+      },
+      "phone": {
+        "x": 271,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 315,
+        "bottom": 65.5,
+        "left": 271
+      },
+      "menu": {
+        "x": 319,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 363,
+        "bottom": 65.5,
+        "left": 319
+      },
+      "src": "/assets/brand/sport-my-fitness-header.svg?v=horizontal-20261022",
+      "natural": [
+        366,
+        100
+      ],
+      "scrollWidth": 375,
+      "viewport": 390
+    },
+    {
+      "width": 1366,
+      "theme": {
+        "x": 1125.359375,
+        "y": 66,
+        "width": 171,
+        "height": 44,
+        "top": 66,
+        "right": 1296.359375,
+        "bottom": 110,
+        "left": 1125.359375
+      },
+      "route": "/home/",
+      "header": {
+        "x": 76,
+        "y": 0,
+        "width": 1275,
+        "height": 176,
+        "top": 0,
+        "right": 1351,
+        "bottom": 176,
+        "left": 76
+      },
+      "brand": {
+        "x": 130.640625,
+        "y": 54.671875,
+        "width": 244,
+        "height": 66.65625,
+        "top": 54.671875,
+        "right": 374.640625,
+        "bottom": 121.328125,
+        "left": 130.640625
+      },
+      "phone": {
+        "x": 12,
+        "y": 112,
+        "width": 52,
+        "height": 65,
+        "top": 112,
+        "right": 64,
+        "bottom": 177,
+        "left": 12
+      },
+      "menu": {
+        "x": 12,
+        "y": 32,
+        "width": 52,
+        "height": 65,
+        "top": 32,
+        "right": 64,
+        "bottom": 97,
+        "left": 12
+      },
+      "src": "/assets/brand/sport-my-fitness-header.svg?v=horizontal-20261022",
+      "natural": [
+        366,
+        100
+      ],
+      "scrollWidth": 1351,
+      "viewport": 1366
+    },
+    {
+      "width": 320,
+      "theme": {
+        "x": 161,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 205,
+        "bottom": 65.5,
+        "left": 161
+      },
+      "route": "/apparel/",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 305,
+        "height": 88,
+        "top": 0,
+        "right": 305,
+        "bottom": 88,
+        "left": 0
+      },
+      "brand": {
+        "x": 12,
+        "y": 24.234375,
+        "width": 141,
+        "height": 38.515625,
+        "top": 24.234375,
+        "right": 153,
+        "bottom": 62.75,
+        "left": 12
+      },
+      "phone": {
+        "x": 205,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 249,
+        "bottom": 65.5,
+        "left": 205
+      },
+      "menu": {
+        "x": 249,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 293,
+        "bottom": 65.5,
+        "left": 249
+      },
+      "src": "/assets/brand/sport-my-fitness-header.svg?v=horizontal-20261022",
+      "natural": [
+        366,
+        100
+      ],
+      "scrollWidth": 305,
+      "viewport": 320
+    },
+    {
+      "width": 390,
+      "theme": {
+        "x": 223,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 267,
+        "bottom": 65.5,
+        "left": 223
+      },
+      "route": "/apparel/",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 375,
+        "height": 88,
+        "top": 0,
+        "right": 375,
+        "bottom": 88,
+        "left": 0
+      },
+      "brand": {
+        "x": 12,
+        "y": 17.546875,
+        "width": 190,
+        "height": 51.90625,
+        "top": 17.546875,
+        "right": 202,
+        "bottom": 69.453125,
+        "left": 12
+      },
+      "phone": {
+        "x": 271,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 315,
+        "bottom": 65.5,
+        "left": 271
+      },
+      "menu": {
+        "x": 319,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 363,
+        "bottom": 65.5,
+        "left": 319
+      },
+      "src": "/assets/brand/sport-my-fitness-header.svg?v=horizontal-20261022",
+      "natural": [
+        366,
+        100
+      ],
+      "scrollWidth": 375,
+      "viewport": 390
+    },
+    {
+      "width": 1366,
+      "theme": {
+        "x": 1125.359375,
+        "y": 66,
+        "width": 171,
+        "height": 44,
+        "top": 66,
+        "right": 1296.359375,
+        "bottom": 110,
+        "left": 1125.359375
+      },
+      "route": "/apparel/",
+      "header": {
+        "x": 76,
+        "y": 0,
+        "width": 1275,
+        "height": 176,
+        "top": 0,
+        "right": 1351,
+        "bottom": 176,
+        "left": 76
+      },
+      "brand": {
+        "x": 130.640625,
+        "y": 54.671875,
+        "width": 244,
+        "height": 66.65625,
+        "top": 54.671875,
+        "right": 374.640625,
+        "bottom": 121.328125,
+        "left": 130.640625
+      },
+      "phone": {
+        "x": 12,
+        "y": 112,
+        "width": 52,
+        "height": 65,
+        "top": 112,
+        "right": 64,
+        "bottom": 177,
+        "left": 12
+      },
+      "menu": {
+        "x": 12,
+        "y": 32,
+        "width": 52,
+        "height": 65,
+        "top": 32,
+        "right": 64,
+        "bottom": 97,
+        "left": 12
+      },
+      "src": "/assets/brand/sport-my-fitness-header.svg?v=horizontal-20261022",
+      "natural": [
+        366,
+        100
+      ],
+      "scrollWidth": 1351,
+      "viewport": 1366
+    },
+    {
+      "width": 320,
+      "theme": {
+        "x": 161,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 205,
+        "bottom": 65.5,
+        "left": 161
+      },
+      "route": "/yoshis-book/",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 305,
+        "height": 88,
+        "top": 0,
+        "right": 305,
+        "bottom": 88,
+        "left": 0
+      },
+      "brand": {
+        "x": 12,
+        "y": 24.234375,
+        "width": 141,
+        "height": 38.515625,
+        "top": 24.234375,
+        "right": 153,
+        "bottom": 62.75,
+        "left": 12
+      },
+      "phone": {
+        "x": 205,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 249,
+        "bottom": 65.5,
+        "left": 205
+      },
+      "menu": {
+        "x": 249,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 293,
+        "bottom": 65.5,
+        "left": 249
+      },
+      "src": "/assets/brand/sport-my-fitness-header.svg?v=horizontal-20261022",
+      "natural": [
+        366,
+        100
+      ],
+      "scrollWidth": 305,
+      "viewport": 320
+    },
+    {
+      "width": 390,
+      "theme": {
+        "x": 223,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 267,
+        "bottom": 65.5,
+        "left": 223
+      },
+      "route": "/yoshis-book/",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 375,
+        "height": 88,
+        "top": 0,
+        "right": 375,
+        "bottom": 88,
+        "left": 0
+      },
+      "brand": {
+        "x": 12,
+        "y": 17.546875,
+        "width": 190,
+        "height": 51.90625,
+        "top": 17.546875,
+        "right": 202,
+        "bottom": 69.453125,
+        "left": 12
+      },
+      "phone": {
+        "x": 271,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 315,
+        "bottom": 65.5,
+        "left": 271
+      },
+      "menu": {
+        "x": 319,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 363,
+        "bottom": 65.5,
+        "left": 319
+      },
+      "src": "/assets/brand/sport-my-fitness-header.svg?v=horizontal-20261022",
+      "natural": [
+        366,
+        100
+      ],
+      "scrollWidth": 375,
+      "viewport": 390
+    },
+    {
+      "width": 1366,
+      "theme": {
+        "x": 1125.359375,
+        "y": 66,
+        "width": 171,
+        "height": 44,
+        "top": 66,
+        "right": 1296.359375,
+        "bottom": 110,
+        "left": 1125.359375
+      },
+      "route": "/yoshis-book/",
+      "header": {
+        "x": 76,
+        "y": 0,
+        "width": 1275,
+        "height": 176,
+        "top": 0,
+        "right": 1351,
+        "bottom": 176,
+        "left": 76
+      },
+      "brand": {
+        "x": 130.640625,
+        "y": 54.671875,
+        "width": 244,
+        "height": 66.65625,
+        "top": 54.671875,
+        "right": 374.640625,
+        "bottom": 121.328125,
+        "left": 130.640625
+      },
+      "phone": {
+        "x": 12,
+        "y": 112,
+        "width": 52,
+        "height": 65,
+        "top": 112,
+        "right": 64,
+        "bottom": 177,
+        "left": 12
+      },
+      "menu": {
+        "x": 12,
+        "y": 32,
+        "width": 52,
+        "height": 65,
+        "top": 32,
+        "right": 64,
+        "bottom": 97,
+        "left": 12
+      },
+      "src": "/assets/brand/sport-my-fitness-header.svg?v=horizontal-20261022",
+      "natural": [
+        366,
+        100
+      ],
+      "scrollWidth": 1351,
+      "viewport": 1366
+    },
+    {
+      "width": 320,
+      "theme": {
+        "x": 161,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 205,
+        "bottom": 65.5,
+        "left": 161
+      },
+      "route": "/training/",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 305,
+        "height": 88,
+        "top": 0,
+        "right": 305,
+        "bottom": 88,
+        "left": 0
+      },
+      "brand": {
+        "x": 12,
+        "y": 24.234375,
+        "width": 141,
+        "height": 38.515625,
+        "top": 24.234375,
+        "right": 153,
+        "bottom": 62.75,
+        "left": 12
+      },
+      "phone": {
+        "x": 205,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 249,
+        "bottom": 65.5,
+        "left": 205
+      },
+      "menu": {
+        "x": 249,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 293,
+        "bottom": 65.5,
+        "left": 249
+      },
+      "src": "/assets/brand/sport-my-fitness-header.svg?v=horizontal-20261022",
+      "natural": [
+        366,
+        100
+      ],
+      "scrollWidth": 305,
+      "viewport": 320
+    },
+    {
+      "width": 390,
+      "theme": {
+        "x": 223,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 267,
+        "bottom": 65.5,
+        "left": 223
+      },
+      "route": "/training/",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 375,
+        "height": 88,
+        "top": 0,
+        "right": 375,
+        "bottom": 88,
+        "left": 0
+      },
+      "brand": {
+        "x": 12,
+        "y": 17.546875,
+        "width": 190,
+        "height": 51.90625,
+        "top": 17.546875,
+        "right": 202,
+        "bottom": 69.453125,
+        "left": 12
+      },
+      "phone": {
+        "x": 271,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 315,
+        "bottom": 65.5,
+        "left": 271
+      },
+      "menu": {
+        "x": 319,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 363,
+        "bottom": 65.5,
+        "left": 319
+      },
+      "src": "/assets/brand/sport-my-fitness-header.svg?v=horizontal-20261022",
+      "natural": [
+        366,
+        100
+      ],
+      "scrollWidth": 375,
+      "viewport": 390
+    },
+    {
+      "width": 1366,
+      "theme": {
+        "x": 1125.359375,
+        "y": 66,
+        "width": 171,
+        "height": 44,
+        "top": 66,
+        "right": 1296.359375,
+        "bottom": 110,
+        "left": 1125.359375
+      },
+      "route": "/training/",
+      "header": {
+        "x": 76,
+        "y": 0,
+        "width": 1275,
+        "height": 176,
+        "top": 0,
+        "right": 1351,
+        "bottom": 176,
+        "left": 76
+      },
+      "brand": {
+        "x": 130.640625,
+        "y": 54.671875,
+        "width": 244,
+        "height": 66.65625,
+        "top": 54.671875,
+        "right": 374.640625,
+        "bottom": 121.328125,
+        "left": 130.640625
+      },
+      "phone": {
+        "x": 12,
+        "y": 112,
+        "width": 52,
+        "height": 65,
+        "top": 112,
+        "right": 64,
+        "bottom": 177,
+        "left": 12
+      },
+      "menu": {
+        "x": 12,
+        "y": 32,
+        "width": 52,
+        "height": 65,
+        "top": 32,
+        "right": 64,
+        "bottom": 97,
+        "left": 12
+      },
+      "src": "/assets/brand/sport-my-fitness-header.svg?v=horizontal-20261022",
+      "natural": [
+        366,
+        100
+      ],
+      "scrollWidth": 1351,
+      "viewport": 1366
+    },
+    {
+      "width": 320,
+      "theme": {
+        "x": 161,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 205,
+        "bottom": 65.5,
+        "left": 161
+      },
+      "route": "/programs/",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 305,
+        "height": 88,
+        "top": 0,
+        "right": 305,
+        "bottom": 88,
+        "left": 0
+      },
+      "brand": {
+        "x": 12,
+        "y": 24.234375,
+        "width": 141,
+        "height": 38.515625,
+        "top": 24.234375,
+        "right": 153,
+        "bottom": 62.75,
+        "left": 12
+      },
+      "phone": {
+        "x": 205,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 249,
+        "bottom": 65.5,
+        "left": 205
+      },
+      "menu": {
+        "x": 249,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 293,
+        "bottom": 65.5,
+        "left": 249
+      },
+      "src": "/assets/brand/sport-my-fitness-header.svg?v=horizontal-20261022",
+      "natural": [
+        366,
+        100
+      ],
+      "scrollWidth": 305,
+      "viewport": 320
+    },
+    {
+      "width": 390,
+      "theme": {
+        "x": 223,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 267,
+        "bottom": 65.5,
+        "left": 223
+      },
+      "route": "/programs/",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 375,
+        "height": 88,
+        "top": 0,
+        "right": 375,
+        "bottom": 88,
+        "left": 0
+      },
+      "brand": {
+        "x": 12,
+        "y": 17.546875,
+        "width": 190,
+        "height": 51.90625,
+        "top": 17.546875,
+        "right": 202,
+        "bottom": 69.453125,
+        "left": 12
+      },
+      "phone": {
+        "x": 271,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 315,
+        "bottom": 65.5,
+        "left": 271
+      },
+      "menu": {
+        "x": 319,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 363,
+        "bottom": 65.5,
+        "left": 319
+      },
+      "src": "/assets/brand/sport-my-fitness-header.svg?v=horizontal-20261022",
+      "natural": [
+        366,
+        100
+      ],
+      "scrollWidth": 375,
+      "viewport": 390
+    },
+    {
+      "width": 1366,
+      "theme": {
+        "x": 1125.359375,
+        "y": 66,
+        "width": 171,
+        "height": 44,
+        "top": 66,
+        "right": 1296.359375,
+        "bottom": 110,
+        "left": 1125.359375
+      },
+      "route": "/programs/",
+      "header": {
+        "x": 76,
+        "y": 0,
+        "width": 1275,
+        "height": 176,
+        "top": 0,
+        "right": 1351,
+        "bottom": 176,
+        "left": 76
+      },
+      "brand": {
+        "x": 130.640625,
+        "y": 54.671875,
+        "width": 244,
+        "height": 66.65625,
+        "top": 54.671875,
+        "right": 374.640625,
+        "bottom": 121.328125,
+        "left": 130.640625
+      },
+      "phone": {
+        "x": 12,
+        "y": 112,
+        "width": 52,
+        "height": 65,
+        "top": 112,
+        "right": 64,
+        "bottom": 177,
+        "left": 12
+      },
+      "menu": {
+        "x": 12,
+        "y": 32,
+        "width": 52,
+        "height": 65,
+        "top": 32,
+        "right": 64,
+        "bottom": 97,
+        "left": 12
+      },
+      "src": "/assets/brand/sport-my-fitness-header.svg?v=horizontal-20261022",
+      "natural": [
+        366,
+        100
+      ],
+      "scrollWidth": 1351,
+      "viewport": 1366
+    },
+    {
+      "width": 320,
+      "theme": {
+        "x": 161,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 205,
+        "bottom": 65.5,
+        "left": 161
+      },
+      "route": "/media/",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 305,
+        "height": 88,
+        "top": 0,
+        "right": 305,
+        "bottom": 88,
+        "left": 0
+      },
+      "brand": {
+        "x": 12,
+        "y": 24.234375,
+        "width": 141,
+        "height": 38.515625,
+        "top": 24.234375,
+        "right": 153,
+        "bottom": 62.75,
+        "left": 12
+      },
+      "phone": {
+        "x": 205,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 249,
+        "bottom": 65.5,
+        "left": 205
+      },
+      "menu": {
+        "x": 249,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 293,
+        "bottom": 65.5,
+        "left": 249
+      },
+      "src": "/assets/brand/sport-my-fitness-header.svg?v=horizontal-20261022",
+      "natural": [
+        366,
+        100
+      ],
+      "scrollWidth": 305,
+      "viewport": 320
+    },
+    {
+      "width": 390,
+      "theme": {
+        "x": 223,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 267,
+        "bottom": 65.5,
+        "left": 223
+      },
+      "route": "/media/",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 375,
+        "height": 88,
+        "top": 0,
+        "right": 375,
+        "bottom": 88,
+        "left": 0
+      },
+      "brand": {
+        "x": 12,
+        "y": 17.546875,
+        "width": 190,
+        "height": 51.90625,
+        "top": 17.546875,
+        "right": 202,
+        "bottom": 69.453125,
+        "left": 12
+      },
+      "phone": {
+        "x": 271,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 315,
+        "bottom": 65.5,
+        "left": 271
+      },
+      "menu": {
+        "x": 319,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 363,
+        "bottom": 65.5,
+        "left": 319
+      },
+      "src": "/assets/brand/sport-my-fitness-header.svg?v=horizontal-20261022",
+      "natural": [
+        366,
+        100
+      ],
+      "scrollWidth": 375,
+      "viewport": 390
+    },
+    {
+      "width": 1366,
+      "theme": {
+        "x": 1125.359375,
+        "y": 66,
+        "width": 171,
+        "height": 44,
+        "top": 66,
+        "right": 1296.359375,
+        "bottom": 110,
+        "left": 1125.359375
+      },
+      "route": "/media/",
+      "header": {
+        "x": 76,
+        "y": 0,
+        "width": 1275,
+        "height": 176,
+        "top": 0,
+        "right": 1351,
+        "bottom": 176,
+        "left": 76
+      },
+      "brand": {
+        "x": 130.640625,
+        "y": 54.671875,
+        "width": 244,
+        "height": 66.65625,
+        "top": 54.671875,
+        "right": 374.640625,
+        "bottom": 121.328125,
+        "left": 130.640625
+      },
+      "phone": {
+        "x": 12,
+        "y": 112,
+        "width": 52,
+        "height": 65,
+        "top": 112,
+        "right": 64,
+        "bottom": 177,
+        "left": 12
+      },
+      "menu": {
+        "x": 12,
+        "y": 32,
+        "width": 52,
+        "height": 65,
+        "top": 32,
+        "right": 64,
+        "bottom": 97,
+        "left": 12
+      },
+      "src": "/assets/brand/sport-my-fitness-header.svg?v=horizontal-20261022",
+      "natural": [
+        366,
+        100
+      ],
+      "scrollWidth": 1351,
+      "viewport": 1366
+    },
+    {
+      "width": 320,
+      "theme": {
+        "x": 161,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 205,
+        "bottom": 65.5,
+        "left": 161
+      },
+      "route": "/community/",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 305,
+        "height": 88,
+        "top": 0,
+        "right": 305,
+        "bottom": 88,
+        "left": 0
+      },
+      "brand": {
+        "x": 12,
+        "y": 24.234375,
+        "width": 141,
+        "height": 38.515625,
+        "top": 24.234375,
+        "right": 153,
+        "bottom": 62.75,
+        "left": 12
+      },
+      "phone": {
+        "x": 205,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 249,
+        "bottom": 65.5,
+        "left": 205
+      },
+      "menu": {
+        "x": 249,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 293,
+        "bottom": 65.5,
+        "left": 249
+      },
+      "src": "/assets/brand/sport-my-fitness-header.svg?v=horizontal-20261022",
+      "natural": [
+        366,
+        100
+      ],
+      "scrollWidth": 305,
+      "viewport": 320
+    },
+    {
+      "width": 390,
+      "theme": {
+        "x": 223,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 267,
+        "bottom": 65.5,
+        "left": 223
+      },
+      "route": "/community/",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 375,
+        "height": 88,
+        "top": 0,
+        "right": 375,
+        "bottom": 88,
+        "left": 0
+      },
+      "brand": {
+        "x": 12,
+        "y": 17.546875,
+        "width": 190,
+        "height": 51.90625,
+        "top": 17.546875,
+        "right": 202,
+        "bottom": 69.453125,
+        "left": 12
+      },
+      "phone": {
+        "x": 271,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 315,
+        "bottom": 65.5,
+        "left": 271
+      },
+      "menu": {
+        "x": 319,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 363,
+        "bottom": 65.5,
+        "left": 319
+      },
+      "src": "/assets/brand/sport-my-fitness-header.svg?v=horizontal-20261022",
+      "natural": [
+        366,
+        100
+      ],
+      "scrollWidth": 375,
+      "viewport": 390
+    },
+    {
+      "width": 1366,
+      "theme": {
+        "x": 1125.359375,
+        "y": 66,
+        "width": 171,
+        "height": 44,
+        "top": 66,
+        "right": 1296.359375,
+        "bottom": 110,
+        "left": 1125.359375
+      },
+      "route": "/community/",
+      "header": {
+        "x": 76,
+        "y": 0,
+        "width": 1275,
+        "height": 176,
+        "top": 0,
+        "right": 1351,
+        "bottom": 176,
+        "left": 76
+      },
+      "brand": {
+        "x": 130.640625,
+        "y": 54.671875,
+        "width": 244,
+        "height": 66.65625,
+        "top": 54.671875,
+        "right": 374.640625,
+        "bottom": 121.328125,
+        "left": 130.640625
+      },
+      "phone": {
+        "x": 12,
+        "y": 112,
+        "width": 52,
+        "height": 65,
+        "top": 112,
+        "right": 64,
+        "bottom": 177,
+        "left": 12
+      },
+      "menu": {
+        "x": 12,
+        "y": 32,
+        "width": 52,
+        "height": 65,
+        "top": 32,
+        "right": 64,
+        "bottom": 97,
+        "left": 12
+      },
+      "src": "/assets/brand/sport-my-fitness-header.svg?v=horizontal-20261022",
+      "natural": [
+        366,
+        100
+      ],
+      "scrollWidth": 1351,
+      "viewport": 1366
+    },
+    {
+      "width": 320,
+      "theme": {
+        "x": 161,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 205,
+        "bottom": 65.5,
+        "left": 161
+      },
+      "route": "/contact/",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 305,
+        "height": 88,
+        "top": 0,
+        "right": 305,
+        "bottom": 88,
+        "left": 0
+      },
+      "brand": {
+        "x": 12,
+        "y": 24.234375,
+        "width": 141,
+        "height": 38.515625,
+        "top": 24.234375,
+        "right": 153,
+        "bottom": 62.75,
+        "left": 12
+      },
+      "phone": {
+        "x": 205,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 249,
+        "bottom": 65.5,
+        "left": 205
+      },
+      "menu": {
+        "x": 249,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 293,
+        "bottom": 65.5,
+        "left": 249
+      },
+      "src": "/assets/brand/sport-my-fitness-header.svg?v=horizontal-20261022",
+      "natural": [
+        366,
+        100
+      ],
+      "scrollWidth": 305,
+      "viewport": 320
+    },
+    {
+      "width": 390,
+      "theme": {
+        "x": 223,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 267,
+        "bottom": 65.5,
+        "left": 223
+      },
+      "route": "/contact/",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 375,
+        "height": 88,
+        "top": 0,
+        "right": 375,
+        "bottom": 88,
+        "left": 0
+      },
+      "brand": {
+        "x": 12,
+        "y": 17.546875,
+        "width": 190,
+        "height": 51.90625,
+        "top": 17.546875,
+        "right": 202,
+        "bottom": 69.453125,
+        "left": 12
+      },
+      "phone": {
+        "x": 271,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 315,
+        "bottom": 65.5,
+        "left": 271
+      },
+      "menu": {
+        "x": 319,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 363,
+        "bottom": 65.5,
+        "left": 319
+      },
+      "src": "/assets/brand/sport-my-fitness-header.svg?v=horizontal-20261022",
+      "natural": [
+        366,
+        100
+      ],
+      "scrollWidth": 375,
+      "viewport": 390
+    },
+    {
+      "width": 1366,
+      "theme": {
+        "x": 1125.359375,
+        "y": 66,
+        "width": 171,
+        "height": 44,
+        "top": 66,
+        "right": 1296.359375,
+        "bottom": 110,
+        "left": 1125.359375
+      },
+      "route": "/contact/",
+      "header": {
+        "x": 76,
+        "y": 0,
+        "width": 1275,
+        "height": 176,
+        "top": 0,
+        "right": 1351,
+        "bottom": 176,
+        "left": 76
+      },
+      "brand": {
+        "x": 130.640625,
+        "y": 54.671875,
+        "width": 244,
+        "height": 66.65625,
+        "top": 54.671875,
+        "right": 374.640625,
+        "bottom": 121.328125,
+        "left": 130.640625
+      },
+      "phone": {
+        "x": 12,
+        "y": 112,
+        "width": 52,
+        "height": 65,
+        "top": 112,
+        "right": 64,
+        "bottom": 177,
+        "left": 12
+      },
+      "menu": {
+        "x": 12,
+        "y": 32,
+        "width": 52,
+        "height": 65,
+        "top": 32,
+        "right": 64,
+        "bottom": 97,
+        "left": 12
+      },
+      "src": "/assets/brand/sport-my-fitness-header.svg?v=horizontal-20261022",
+      "natural": [
+        366,
+        100
+      ],
+      "scrollWidth": 1351,
+      "viewport": 1366
+    },
+    {
+      "width": 360,
+      "theme": {
+        "x": 193,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 237,
+        "bottom": 65.5,
+        "left": 193
+      },
+      "route": "/home/",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 345,
+        "height": 88,
+        "top": 0,
+        "right": 345,
+        "bottom": 88,
+        "left": 0
+      },
+      "brand": {
+        "x": 12,
+        "y": 19.859375,
+        "width": 173,
+        "height": 47.265625,
+        "top": 19.859375,
+        "right": 185,
+        "bottom": 67.125,
+        "left": 12
+      },
+      "phone": {
+        "x": 241,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 285,
+        "bottom": 65.5,
+        "left": 241
+      },
+      "menu": {
+        "x": 289,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 333,
+        "bottom": 65.5,
+        "left": 289
+      },
+      "src": "/assets/brand/sport-my-fitness-header.svg?v=horizontal-20261022",
+      "natural": [
+        366,
+        100
+      ],
+      "scrollWidth": 345,
+      "viewport": 360
+    },
+    {
+      "width": 428,
+      "theme": {
+        "x": 243,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 287,
+        "bottom": 65.5,
+        "left": 243
+      },
+      "route": "/home/",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 413,
+        "height": 88,
+        "top": 0,
+        "right": 413,
+        "bottom": 88,
+        "left": 0
+      },
+      "brand": {
+        "x": 22,
+        "y": 17.546875,
+        "width": 190,
+        "height": 51.90625,
+        "top": 17.546875,
+        "right": 212,
+        "bottom": 69.453125,
+        "left": 22
+      },
+      "phone": {
+        "x": 295,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 339,
+        "bottom": 65.5,
+        "left": 295
+      },
+      "menu": {
+        "x": 347,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 391,
+        "bottom": 65.5,
+        "left": 347
+      },
+      "src": "/assets/brand/sport-my-fitness-header.svg?v=horizontal-20261022",
+      "natural": [
+        366,
+        100
+      ],
+      "scrollWidth": 413,
+      "viewport": 428
+    },
+    {
+      "width": 768,
+      "theme": {
+        "x": 583,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 627,
+        "bottom": 65.5,
+        "left": 583
+      },
+      "route": "/home/",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 753,
+        "height": 88,
+        "top": 0,
+        "right": 753,
+        "bottom": 88,
+        "left": 0
+      },
+      "brand": {
+        "x": 22,
+        "y": 17.546875,
+        "width": 190,
+        "height": 51.90625,
+        "top": 17.546875,
+        "right": 212,
+        "bottom": 69.453125,
+        "left": 22
+      },
+      "phone": {
+        "x": 635,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 679,
+        "bottom": 65.5,
+        "left": 635
+      },
+      "menu": {
+        "x": 687,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 731,
+        "bottom": 65.5,
+        "left": 687
+      },
+      "src": "/assets/brand/sport-my-fitness-header.svg?v=horizontal-20261022",
+      "natural": [
+        366,
+        100
+      ],
+      "scrollWidth": 753,
+      "viewport": 768
+    },
+    {
+      "width": 900,
+      "theme": {
+        "x": 715,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 759,
+        "bottom": 65.5,
+        "left": 715
+      },
+      "route": "/home/",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 885,
+        "height": 88,
+        "top": 0,
+        "right": 885,
+        "bottom": 88,
+        "left": 0
+      },
+      "brand": {
+        "x": 22,
+        "y": 17.546875,
+        "width": 190,
+        "height": 51.90625,
+        "top": 17.546875,
+        "right": 212,
+        "bottom": 69.453125,
+        "left": 22
+      },
+      "phone": {
+        "x": 767,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 811,
+        "bottom": 65.5,
+        "left": 767
+      },
+      "menu": {
+        "x": 819,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 863,
+        "bottom": 65.5,
+        "left": 819
+      },
+      "src": "/assets/brand/sport-my-fitness-header.svg?v=horizontal-20261022",
+      "natural": [
+        366,
+        100
+      ],
+      "scrollWidth": 885,
+      "viewport": 900
+    },
+    {
+      "width": 901,
+      "theme": {
+        "x": 685,
+        "y": 66,
+        "width": 171,
+        "height": 44,
+        "top": 66,
+        "right": 856,
+        "bottom": 110,
+        "left": 685
+      },
+      "route": "/home/",
+      "header": {
+        "x": 76,
+        "y": 0,
+        "width": 810,
+        "height": 176,
+        "top": 0,
+        "right": 886,
+        "bottom": 176,
+        "left": 76
+      },
+      "brand": {
+        "x": 106,
+        "y": 54.671875,
+        "width": 244,
+        "height": 66.65625,
+        "top": 54.671875,
+        "right": 350,
+        "bottom": 121.328125,
+        "left": 106
+      },
+      "phone": {
+        "x": 12,
+        "y": 112,
+        "width": 52,
+        "height": 65,
+        "top": 112,
+        "right": 64,
+        "bottom": 177,
+        "left": 12
+      },
+      "menu": {
+        "x": 12,
+        "y": 32,
+        "width": 52,
+        "height": 65,
+        "top": 32,
+        "right": 64,
+        "bottom": 97,
+        "left": 12
+      },
+      "src": "/assets/brand/sport-my-fitness-header.svg?v=horizontal-20261022",
+      "natural": [
+        366,
+        100
+      ],
+      "scrollWidth": 886,
+      "viewport": 901
+    },
+    {
+      "width": 1920,
+      "theme": {
+        "x": 1539.5,
+        "y": 66,
+        "width": 171,
+        "height": 44,
+        "top": 66,
+        "right": 1710.5,
+        "bottom": 110,
+        "left": 1539.5
+      },
+      "route": "/home/",
+      "header": {
+        "x": 76,
+        "y": 0,
+        "width": 1829,
+        "height": 176,
+        "top": 0,
+        "right": 1905,
+        "bottom": 176,
+        "left": 76
+      },
+      "brand": {
+        "x": 270.5,
+        "y": 54.671875,
+        "width": 244,
+        "height": 66.65625,
+        "top": 54.671875,
+        "right": 514.5,
+        "bottom": 121.328125,
+        "left": 270.5
+      },
+      "phone": {
+        "x": 12,
+        "y": 112,
+        "width": 52,
+        "height": 65,
+        "top": 112,
+        "right": 64,
+        "bottom": 177,
+        "left": 12
+      },
+      "menu": {
+        "x": 12,
+        "y": 32,
+        "width": 52,
+        "height": 65,
+        "top": 32,
+        "right": 64,
+        "bottom": 97,
+        "left": 12
+      },
+      "src": "/assets/brand/sport-my-fitness-header.svg?v=horizontal-20261022",
+      "natural": [
+        366,
+        100
+      ],
+      "scrollWidth": 1905,
+      "viewport": 1920
+    },
+    {
+      "width": 320,
+      "theme": {
+        "x": 161,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 205,
+        "bottom": 65.5,
+        "left": 161
+      },
+      "route": "/home/",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 305,
+        "height": 88,
+        "top": 0,
+        "right": 305,
+        "bottom": 88,
+        "left": 0
+      },
+      "brand": {
+        "x": 12,
+        "y": 24.234375,
+        "width": 141,
+        "height": 38.515625,
+        "top": 24.234375,
+        "right": 153,
+        "bottom": 62.75,
+        "left": 12
+      },
+      "phone": {
+        "x": 205,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 249,
+        "bottom": 65.5,
+        "left": 205
+      },
+      "menu": {
+        "x": 249,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 293,
+        "bottom": 65.5,
+        "left": 249
+      },
+      "src": "/assets/brand/sport-my-fitness-header.svg?v=horizontal-20261022",
+      "natural": [
+        366,
+        100
+      ],
+      "scrollWidth": 305,
+      "viewport": 320
+    },
+    {
+      "width": 390,
+      "theme": {
+        "x": 223,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 267,
+        "bottom": 65.5,
+        "left": 223
+      },
+      "route": "/home/",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 375,
+        "height": 88,
+        "top": 0,
+        "right": 375,
+        "bottom": 88,
+        "left": 0
+      },
+      "brand": {
+        "x": 12,
+        "y": 17.546875,
+        "width": 190,
+        "height": 51.90625,
+        "top": 17.546875,
+        "right": 202,
+        "bottom": 69.453125,
+        "left": 12
+      },
+      "phone": {
+        "x": 271,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 315,
+        "bottom": 65.5,
+        "left": 271
+      },
+      "menu": {
+        "x": 319,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 363,
+        "bottom": 65.5,
+        "left": 319
+      },
+      "src": "/assets/brand/sport-my-fitness-header.svg?v=horizontal-20261022",
+      "natural": [
+        366,
+        100
+      ],
+      "scrollWidth": 375,
+      "viewport": 390
+    },
+    {
+      "width": 1366,
+      "theme": {
+        "x": 1125.359375,
+        "y": 66,
+        "width": 171,
+        "height": 44,
+        "top": 66,
+        "right": 1296.359375,
+        "bottom": 110,
+        "left": 1125.359375
+      },
+      "route": "/home/",
+      "header": {
+        "x": 76,
+        "y": 0,
+        "width": 1275,
+        "height": 176,
+        "top": 0,
+        "right": 1351,
+        "bottom": 176,
+        "left": 76
+      },
+      "brand": {
+        "x": 130.640625,
+        "y": 54.671875,
+        "width": 244,
+        "height": 66.65625,
+        "top": 54.671875,
+        "right": 374.640625,
+        "bottom": 121.328125,
+        "left": 130.640625
+      },
+      "phone": {
+        "x": 12,
+        "y": 112,
+        "width": 52,
+        "height": 65,
+        "top": 112,
+        "right": 64,
+        "bottom": 177,
+        "left": 12
+      },
+      "menu": {
+        "x": 12,
+        "y": 32,
+        "width": 52,
+        "height": 65,
+        "top": 32,
+        "right": 64,
+        "bottom": 97,
+        "left": 12
+      },
+      "src": "/assets/brand/sport-my-fitness-header.svg?v=horizontal-20261022",
+      "natural": [
+        366,
+        100
+      ],
+      "scrollWidth": 1351,
+      "viewport": 1366
+    },
+    {
+      "width": 320,
+      "theme": {
+        "x": 161,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 205,
+        "bottom": 65.5,
+        "left": 161
+      },
+      "route": "/apparel/",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 305,
+        "height": 88,
+        "top": 0,
+        "right": 305,
+        "bottom": 88,
+        "left": 0
+      },
+      "brand": {
+        "x": 12,
+        "y": 24.234375,
+        "width": 141,
+        "height": 38.515625,
+        "top": 24.234375,
+        "right": 153,
+        "bottom": 62.75,
+        "left": 12
+      },
+      "phone": {
+        "x": 205,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 249,
+        "bottom": 65.5,
+        "left": 205
+      },
+      "menu": {
+        "x": 249,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 293,
+        "bottom": 65.5,
+        "left": 249
+      },
+      "src": "/assets/brand/sport-my-fitness-header.svg?v=horizontal-20261022",
+      "natural": [
+        366,
+        100
+      ],
+      "scrollWidth": 305,
+      "viewport": 320
+    },
+    {
+      "width": 390,
+      "theme": {
+        "x": 223,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 267,
+        "bottom": 65.5,
+        "left": 223
+      },
+      "route": "/apparel/",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 375,
+        "height": 88,
+        "top": 0,
+        "right": 375,
+        "bottom": 88,
+        "left": 0
+      },
+      "brand": {
+        "x": 12,
+        "y": 17.546875,
+        "width": 190,
+        "height": 51.90625,
+        "top": 17.546875,
+        "right": 202,
+        "bottom": 69.453125,
+        "left": 12
+      },
+      "phone": {
+        "x": 271,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 315,
+        "bottom": 65.5,
+        "left": 271
+      },
+      "menu": {
+        "x": 319,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 363,
+        "bottom": 65.5,
+        "left": 319
+      },
+      "src": "/assets/brand/sport-my-fitness-header.svg?v=horizontal-20261022",
+      "natural": [
+        366,
+        100
+      ],
+      "scrollWidth": 375,
+      "viewport": 390
+    },
+    {
+      "width": 1366,
+      "theme": {
+        "x": 1125.359375,
+        "y": 66,
+        "width": 171,
+        "height": 44,
+        "top": 66,
+        "right": 1296.359375,
+        "bottom": 110,
+        "left": 1125.359375
+      },
+      "route": "/apparel/",
+      "header": {
+        "x": 76,
+        "y": 0,
+        "width": 1275,
+        "height": 176,
+        "top": 0,
+        "right": 1351,
+        "bottom": 176,
+        "left": 76
+      },
+      "brand": {
+        "x": 130.640625,
+        "y": 54.671875,
+        "width": 244,
+        "height": 66.65625,
+        "top": 54.671875,
+        "right": 374.640625,
+        "bottom": 121.328125,
+        "left": 130.640625
+      },
+      "phone": {
+        "x": 12,
+        "y": 112,
+        "width": 52,
+        "height": 65,
+        "top": 112,
+        "right": 64,
+        "bottom": 177,
+        "left": 12
+      },
+      "menu": {
+        "x": 12,
+        "y": 32,
+        "width": 52,
+        "height": 65,
+        "top": 32,
+        "right": 64,
+        "bottom": 97,
+        "left": 12
+      },
+      "src": "/assets/brand/sport-my-fitness-header.svg?v=horizontal-20261022",
+      "natural": [
+        366,
+        100
+      ],
+      "scrollWidth": 1351,
+      "viewport": 1366
+    },
+    {
+      "width": 320,
+      "theme": {
+        "x": 161,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 205,
+        "bottom": 65.5,
+        "left": 161
+      },
+      "route": "/yoshis-book/",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 305,
+        "height": 88,
+        "top": 0,
+        "right": 305,
+        "bottom": 88,
+        "left": 0
+      },
+      "brand": {
+        "x": 12,
+        "y": 24.234375,
+        "width": 141,
+        "height": 38.515625,
+        "top": 24.234375,
+        "right": 153,
+        "bottom": 62.75,
+        "left": 12
+      },
+      "phone": {
+        "x": 205,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 249,
+        "bottom": 65.5,
+        "left": 205
+      },
+      "menu": {
+        "x": 249,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 293,
+        "bottom": 65.5,
+        "left": 249
+      },
+      "src": "/assets/brand/sport-my-fitness-header.svg?v=horizontal-20261022",
+      "natural": [
+        366,
+        100
+      ],
+      "scrollWidth": 305,
+      "viewport": 320
+    },
+    {
+      "width": 390,
+      "theme": {
+        "x": 223,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 267,
+        "bottom": 65.5,
+        "left": 223
+      },
+      "route": "/yoshis-book/",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 375,
+        "height": 88,
+        "top": 0,
+        "right": 375,
+        "bottom": 88,
+        "left": 0
+      },
+      "brand": {
+        "x": 12,
+        "y": 17.546875,
+        "width": 190,
+        "height": 51.90625,
+        "top": 17.546875,
+        "right": 202,
+        "bottom": 69.453125,
+        "left": 12
+      },
+      "phone": {
+        "x": 271,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 315,
+        "bottom": 65.5,
+        "left": 271
+      },
+      "menu": {
+        "x": 319,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 363,
+        "bottom": 65.5,
+        "left": 319
+      },
+      "src": "/assets/brand/sport-my-fitness-header.svg?v=horizontal-20261022",
+      "natural": [
+        366,
+        100
+      ],
+      "scrollWidth": 375,
+      "viewport": 390
+    },
+    {
+      "width": 1366,
+      "theme": {
+        "x": 1125.359375,
+        "y": 66,
+        "width": 171,
+        "height": 44,
+        "top": 66,
+        "right": 1296.359375,
+        "bottom": 110,
+        "left": 1125.359375
+      },
+      "route": "/yoshis-book/",
+      "header": {
+        "x": 76,
+        "y": 0,
+        "width": 1275,
+        "height": 176,
+        "top": 0,
+        "right": 1351,
+        "bottom": 176,
+        "left": 76
+      },
+      "brand": {
+        "x": 130.640625,
+        "y": 54.671875,
+        "width": 244,
+        "height": 66.65625,
+        "top": 54.671875,
+        "right": 374.640625,
+        "bottom": 121.328125,
+        "left": 130.640625
+      },
+      "phone": {
+        "x": 12,
+        "y": 112,
+        "width": 52,
+        "height": 65,
+        "top": 112,
+        "right": 64,
+        "bottom": 177,
+        "left": 12
+      },
+      "menu": {
+        "x": 12,
+        "y": 32,
+        "width": 52,
+        "height": 65,
+        "top": 32,
+        "right": 64,
+        "bottom": 97,
+        "left": 12
+      },
+      "src": "/assets/brand/sport-my-fitness-header.svg?v=horizontal-20261022",
+      "natural": [
+        366,
+        100
+      ],
+      "scrollWidth": 1351,
+      "viewport": 1366
+    },
+    {
+      "width": 320,
+      "theme": {
+        "x": 161,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 205,
+        "bottom": 65.5,
+        "left": 161
+      },
+      "route": "/training/",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 305,
+        "height": 88,
+        "top": 0,
+        "right": 305,
+        "bottom": 88,
+        "left": 0
+      },
+      "brand": {
+        "x": 12,
+        "y": 24.234375,
+        "width": 141,
+        "height": 38.515625,
+        "top": 24.234375,
+        "right": 153,
+        "bottom": 62.75,
+        "left": 12
+      },
+      "phone": {
+        "x": 205,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 249,
+        "bottom": 65.5,
+        "left": 205
+      },
+      "menu": {
+        "x": 249,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 293,
+        "bottom": 65.5,
+        "left": 249
+      },
+      "src": "/assets/brand/sport-my-fitness-header.svg?v=horizontal-20261022",
+      "natural": [
+        366,
+        100
+      ],
+      "scrollWidth": 305,
+      "viewport": 320
+    },
+    {
+      "width": 390,
+      "theme": {
+        "x": 223,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 267,
+        "bottom": 65.5,
+        "left": 223
+      },
+      "route": "/training/",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 375,
+        "height": 88,
+        "top": 0,
+        "right": 375,
+        "bottom": 88,
+        "left": 0
+      },
+      "brand": {
+        "x": 12,
+        "y": 17.546875,
+        "width": 190,
+        "height": 51.90625,
+        "top": 17.546875,
+        "right": 202,
+        "bottom": 69.453125,
+        "left": 12
+      },
+      "phone": {
+        "x": 271,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 315,
+        "bottom": 65.5,
+        "left": 271
+      },
+      "menu": {
+        "x": 319,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 363,
+        "bottom": 65.5,
+        "left": 319
+      },
+      "src": "/assets/brand/sport-my-fitness-header.svg?v=horizontal-20261022",
+      "natural": [
+        366,
+        100
+      ],
+      "scrollWidth": 375,
+      "viewport": 390
+    },
+    {
+      "width": 1366,
+      "theme": {
+        "x": 1125.359375,
+        "y": 66,
+        "width": 171,
+        "height": 44,
+        "top": 66,
+        "right": 1296.359375,
+        "bottom": 110,
+        "left": 1125.359375
+      },
+      "route": "/training/",
+      "header": {
+        "x": 76,
+        "y": 0,
+        "width": 1275,
+        "height": 176,
+        "top": 0,
+        "right": 1351,
+        "bottom": 176,
+        "left": 76
+      },
+      "brand": {
+        "x": 130.640625,
+        "y": 54.671875,
+        "width": 244,
+        "height": 66.65625,
+        "top": 54.671875,
+        "right": 374.640625,
+        "bottom": 121.328125,
+        "left": 130.640625
+      },
+      "phone": {
+        "x": 12,
+        "y": 112,
+        "width": 52,
+        "height": 65,
+        "top": 112,
+        "right": 64,
+        "bottom": 177,
+        "left": 12
+      },
+      "menu": {
+        "x": 12,
+        "y": 32,
+        "width": 52,
+        "height": 65,
+        "top": 32,
+        "right": 64,
+        "bottom": 97,
+        "left": 12
+      },
+      "src": "/assets/brand/sport-my-fitness-header.svg?v=horizontal-20261022",
+      "natural": [
+        366,
+        100
+      ],
+      "scrollWidth": 1351,
+      "viewport": 1366
+    },
+    {
+      "width": 320,
+      "theme": {
+        "x": 161,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 205,
+        "bottom": 65.5,
+        "left": 161
+      },
+      "route": "/programs/",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 305,
+        "height": 88,
+        "top": 0,
+        "right": 305,
+        "bottom": 88,
+        "left": 0
+      },
+      "brand": {
+        "x": 12,
+        "y": 24.234375,
+        "width": 141,
+        "height": 38.515625,
+        "top": 24.234375,
+        "right": 153,
+        "bottom": 62.75,
+        "left": 12
+      },
+      "phone": {
+        "x": 205,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 249,
+        "bottom": 65.5,
+        "left": 205
+      },
+      "menu": {
+        "x": 249,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 293,
+        "bottom": 65.5,
+        "left": 249
+      },
+      "src": "/assets/brand/sport-my-fitness-header.svg?v=horizontal-20261022",
+      "natural": [
+        366,
+        100
+      ],
+      "scrollWidth": 305,
+      "viewport": 320
+    },
+    {
+      "width": 390,
+      "theme": {
+        "x": 223,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 267,
+        "bottom": 65.5,
+        "left": 223
+      },
+      "route": "/programs/",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 375,
+        "height": 88,
+        "top": 0,
+        "right": 375,
+        "bottom": 88,
+        "left": 0
+      },
+      "brand": {
+        "x": 12,
+        "y": 17.546875,
+        "width": 190,
+        "height": 51.90625,
+        "top": 17.546875,
+        "right": 202,
+        "bottom": 69.453125,
+        "left": 12
+      },
+      "phone": {
+        "x": 271,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 315,
+        "bottom": 65.5,
+        "left": 271
+      },
+      "menu": {
+        "x": 319,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 363,
+        "bottom": 65.5,
+        "left": 319
+      },
+      "src": "/assets/brand/sport-my-fitness-header.svg?v=horizontal-20261022",
+      "natural": [
+        366,
+        100
+      ],
+      "scrollWidth": 375,
+      "viewport": 390
+    },
+    {
+      "width": 1366,
+      "theme": {
+        "x": 1125.359375,
+        "y": 66,
+        "width": 171,
+        "height": 44,
+        "top": 66,
+        "right": 1296.359375,
+        "bottom": 110,
+        "left": 1125.359375
+      },
+      "route": "/programs/",
+      "header": {
+        "x": 76,
+        "y": 0,
+        "width": 1275,
+        "height": 176,
+        "top": 0,
+        "right": 1351,
+        "bottom": 176,
+        "left": 76
+      },
+      "brand": {
+        "x": 130.640625,
+        "y": 54.671875,
+        "width": 244,
+        "height": 66.65625,
+        "top": 54.671875,
+        "right": 374.640625,
+        "bottom": 121.328125,
+        "left": 130.640625
+      },
+      "phone": {
+        "x": 12,
+        "y": 112,
+        "width": 52,
+        "height": 65,
+        "top": 112,
+        "right": 64,
+        "bottom": 177,
+        "left": 12
+      },
+      "menu": {
+        "x": 12,
+        "y": 32,
+        "width": 52,
+        "height": 65,
+        "top": 32,
+        "right": 64,
+        "bottom": 97,
+        "left": 12
+      },
+      "src": "/assets/brand/sport-my-fitness-header.svg?v=horizontal-20261022",
+      "natural": [
+        366,
+        100
+      ],
+      "scrollWidth": 1351,
+      "viewport": 1366
+    },
+    {
+      "width": 320,
+      "theme": {
+        "x": 161,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 205,
+        "bottom": 65.5,
+        "left": 161
+      },
+      "route": "/media/",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 305,
+        "height": 88,
+        "top": 0,
+        "right": 305,
+        "bottom": 88,
+        "left": 0
+      },
+      "brand": {
+        "x": 12,
+        "y": 24.234375,
+        "width": 141,
+        "height": 38.515625,
+        "top": 24.234375,
+        "right": 153,
+        "bottom": 62.75,
+        "left": 12
+      },
+      "phone": {
+        "x": 205,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 249,
+        "bottom": 65.5,
+        "left": 205
+      },
+      "menu": {
+        "x": 249,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 293,
+        "bottom": 65.5,
+        "left": 249
+      },
+      "src": "/assets/brand/sport-my-fitness-header.svg?v=horizontal-20261022",
+      "natural": [
+        366,
+        100
+      ],
+      "scrollWidth": 305,
+      "viewport": 320
+    },
+    {
+      "width": 390,
+      "theme": {
+        "x": 223,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 267,
+        "bottom": 65.5,
+        "left": 223
+      },
+      "route": "/media/",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 375,
+        "height": 88,
+        "top": 0,
+        "right": 375,
+        "bottom": 88,
+        "left": 0
+      },
+      "brand": {
+        "x": 12,
+        "y": 17.546875,
+        "width": 190,
+        "height": 51.90625,
+        "top": 17.546875,
+        "right": 202,
+        "bottom": 69.453125,
+        "left": 12
+      },
+      "phone": {
+        "x": 271,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 315,
+        "bottom": 65.5,
+        "left": 271
+      },
+      "menu": {
+        "x": 319,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 363,
+        "bottom": 65.5,
+        "left": 319
+      },
+      "src": "/assets/brand/sport-my-fitness-header.svg?v=horizontal-20261022",
+      "natural": [
+        366,
+        100
+      ],
+      "scrollWidth": 375,
+      "viewport": 390
+    },
+    {
+      "width": 1366,
+      "theme": {
+        "x": 1125.359375,
+        "y": 66,
+        "width": 171,
+        "height": 44,
+        "top": 66,
+        "right": 1296.359375,
+        "bottom": 110,
+        "left": 1125.359375
+      },
+      "route": "/media/",
+      "header": {
+        "x": 76,
+        "y": 0,
+        "width": 1275,
+        "height": 176,
+        "top": 0,
+        "right": 1351,
+        "bottom": 176,
+        "left": 76
+      },
+      "brand": {
+        "x": 130.640625,
+        "y": 54.671875,
+        "width": 244,
+        "height": 66.65625,
+        "top": 54.671875,
+        "right": 374.640625,
+        "bottom": 121.328125,
+        "left": 130.640625
+      },
+      "phone": {
+        "x": 12,
+        "y": 112,
+        "width": 52,
+        "height": 65,
+        "top": 112,
+        "right": 64,
+        "bottom": 177,
+        "left": 12
+      },
+      "menu": {
+        "x": 12,
+        "y": 32,
+        "width": 52,
+        "height": 65,
+        "top": 32,
+        "right": 64,
+        "bottom": 97,
+        "left": 12
+      },
+      "src": "/assets/brand/sport-my-fitness-header.svg?v=horizontal-20261022",
+      "natural": [
+        366,
+        100
+      ],
+      "scrollWidth": 1351,
+      "viewport": 1366
+    },
+    {
+      "width": 320,
+      "theme": {
+        "x": 161,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 205,
+        "bottom": 65.5,
+        "left": 161
+      },
+      "route": "/community/",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 305,
+        "height": 88,
+        "top": 0,
+        "right": 305,
+        "bottom": 88,
+        "left": 0
+      },
+      "brand": {
+        "x": 12,
+        "y": 24.234375,
+        "width": 141,
+        "height": 38.515625,
+        "top": 24.234375,
+        "right": 153,
+        "bottom": 62.75,
+        "left": 12
+      },
+      "phone": {
+        "x": 205,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 249,
+        "bottom": 65.5,
+        "left": 205
+      },
+      "menu": {
+        "x": 249,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 293,
+        "bottom": 65.5,
+        "left": 249
+      },
+      "src": "/assets/brand/sport-my-fitness-header.svg?v=horizontal-20261022",
+      "natural": [
+        366,
+        100
+      ],
+      "scrollWidth": 305,
+      "viewport": 320
+    },
+    {
+      "width": 390,
+      "theme": {
+        "x": 223,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 267,
+        "bottom": 65.5,
+        "left": 223
+      },
+      "route": "/community/",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 375,
+        "height": 88,
+        "top": 0,
+        "right": 375,
+        "bottom": 88,
+        "left": 0
+      },
+      "brand": {
+        "x": 12,
+        "y": 17.546875,
+        "width": 190,
+        "height": 51.90625,
+        "top": 17.546875,
+        "right": 202,
+        "bottom": 69.453125,
+        "left": 12
+      },
+      "phone": {
+        "x": 271,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 315,
+        "bottom": 65.5,
+        "left": 271
+      },
+      "menu": {
+        "x": 319,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 363,
+        "bottom": 65.5,
+        "left": 319
+      },
+      "src": "/assets/brand/sport-my-fitness-header.svg?v=horizontal-20261022",
+      "natural": [
+        366,
+        100
+      ],
+      "scrollWidth": 375,
+      "viewport": 390
+    },
+    {
+      "width": 1366,
+      "theme": {
+        "x": 1125.359375,
+        "y": 66,
+        "width": 171,
+        "height": 44,
+        "top": 66,
+        "right": 1296.359375,
+        "bottom": 110,
+        "left": 1125.359375
+      },
+      "route": "/community/",
+      "header": {
+        "x": 76,
+        "y": 0,
+        "width": 1275,
+        "height": 176,
+        "top": 0,
+        "right": 1351,
+        "bottom": 176,
+        "left": 76
+      },
+      "brand": {
+        "x": 130.640625,
+        "y": 54.671875,
+        "width": 244,
+        "height": 66.65625,
+        "top": 54.671875,
+        "right": 374.640625,
+        "bottom": 121.328125,
+        "left": 130.640625
+      },
+      "phone": {
+        "x": 12,
+        "y": 112,
+        "width": 52,
+        "height": 65,
+        "top": 112,
+        "right": 64,
+        "bottom": 177,
+        "left": 12
+      },
+      "menu": {
+        "x": 12,
+        "y": 32,
+        "width": 52,
+        "height": 65,
+        "top": 32,
+        "right": 64,
+        "bottom": 97,
+        "left": 12
+      },
+      "src": "/assets/brand/sport-my-fitness-header.svg?v=horizontal-20261022",
+      "natural": [
+        366,
+        100
+      ],
+      "scrollWidth": 1351,
+      "viewport": 1366
+    },
+    {
+      "width": 320,
+      "theme": {
+        "x": 161,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 205,
+        "bottom": 65.5,
+        "left": 161
+      },
+      "route": "/contact/",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 305,
+        "height": 88,
+        "top": 0,
+        "right": 305,
+        "bottom": 88,
+        "left": 0
+      },
+      "brand": {
+        "x": 12,
+        "y": 24.234375,
+        "width": 141,
+        "height": 38.515625,
+        "top": 24.234375,
+        "right": 153,
+        "bottom": 62.75,
+        "left": 12
+      },
+      "phone": {
+        "x": 205,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 249,
+        "bottom": 65.5,
+        "left": 205
+      },
+      "menu": {
+        "x": 249,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 293,
+        "bottom": 65.5,
+        "left": 249
+      },
+      "src": "/assets/brand/sport-my-fitness-header.svg?v=horizontal-20261022",
+      "natural": [
+        366,
+        100
+      ],
+      "scrollWidth": 305,
+      "viewport": 320
+    },
+    {
+      "width": 390,
+      "theme": {
+        "x": 223,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 267,
+        "bottom": 65.5,
+        "left": 223
+      },
+      "route": "/contact/",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 375,
+        "height": 88,
+        "top": 0,
+        "right": 375,
+        "bottom": 88,
+        "left": 0
+      },
+      "brand": {
+        "x": 12,
+        "y": 17.546875,
+        "width": 190,
+        "height": 51.90625,
+        "top": 17.546875,
+        "right": 202,
+        "bottom": 69.453125,
+        "left": 12
+      },
+      "phone": {
+        "x": 271,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 315,
+        "bottom": 65.5,
+        "left": 271
+      },
+      "menu": {
+        "x": 319,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 363,
+        "bottom": 65.5,
+        "left": 319
+      },
+      "src": "/assets/brand/sport-my-fitness-header.svg?v=horizontal-20261022",
+      "natural": [
+        366,
+        100
+      ],
+      "scrollWidth": 375,
+      "viewport": 390
+    },
+    {
+      "width": 1366,
+      "theme": {
+        "x": 1125.359375,
+        "y": 66,
+        "width": 171,
+        "height": 44,
+        "top": 66,
+        "right": 1296.359375,
+        "bottom": 110,
+        "left": 1125.359375
+      },
+      "route": "/contact/",
+      "header": {
+        "x": 76,
+        "y": 0,
+        "width": 1275,
+        "height": 176,
+        "top": 0,
+        "right": 1351,
+        "bottom": 176,
+        "left": 76
+      },
+      "brand": {
+        "x": 130.640625,
+        "y": 54.671875,
+        "width": 244,
+        "height": 66.65625,
+        "top": 54.671875,
+        "right": 374.640625,
+        "bottom": 121.328125,
+        "left": 130.640625
+      },
+      "phone": {
+        "x": 12,
+        "y": 112,
+        "width": 52,
+        "height": 65,
+        "top": 112,
+        "right": 64,
+        "bottom": 177,
+        "left": 12
+      },
+      "menu": {
+        "x": 12,
+        "y": 32,
+        "width": 52,
+        "height": 65,
+        "top": 32,
+        "right": 64,
+        "bottom": 97,
+        "left": 12
+      },
+      "src": "/assets/brand/sport-my-fitness-header.svg?v=horizontal-20261022",
+      "natural": [
+        366,
+        100
+      ],
+      "scrollWidth": 1351,
+      "viewport": 1366
+    },
+    {
+      "width": 360,
+      "theme": {
+        "x": 193,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 237,
+        "bottom": 65.5,
+        "left": 193
+      },
+      "route": "/home/",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 345,
+        "height": 88,
+        "top": 0,
+        "right": 345,
+        "bottom": 88,
+        "left": 0
+      },
+      "brand": {
+        "x": 12,
+        "y": 19.859375,
+        "width": 173,
+        "height": 47.265625,
+        "top": 19.859375,
+        "right": 185,
+        "bottom": 67.125,
+        "left": 12
+      },
+      "phone": {
+        "x": 241,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 285,
+        "bottom": 65.5,
+        "left": 241
+      },
+      "menu": {
+        "x": 289,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 333,
+        "bottom": 65.5,
+        "left": 289
+      },
+      "src": "/assets/brand/sport-my-fitness-header.svg?v=horizontal-20261022",
+      "natural": [
+        366,
+        100
+      ],
+      "scrollWidth": 345,
+      "viewport": 360
+    },
+    {
+      "width": 428,
+      "theme": {
+        "x": 243,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 287,
+        "bottom": 65.5,
+        "left": 243
+      },
+      "route": "/home/",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 413,
+        "height": 88,
+        "top": 0,
+        "right": 413,
+        "bottom": 88,
+        "left": 0
+      },
+      "brand": {
+        "x": 22,
+        "y": 17.546875,
+        "width": 190,
+        "height": 51.90625,
+        "top": 17.546875,
+        "right": 212,
+        "bottom": 69.453125,
+        "left": 22
+      },
+      "phone": {
+        "x": 295,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 339,
+        "bottom": 65.5,
+        "left": 295
+      },
+      "menu": {
+        "x": 347,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 391,
+        "bottom": 65.5,
+        "left": 347
+      },
+      "src": "/assets/brand/sport-my-fitness-header.svg?v=horizontal-20261022",
+      "natural": [
+        366,
+        100
+      ],
+      "scrollWidth": 413,
+      "viewport": 428
+    },
+    {
+      "width": 768,
+      "theme": {
+        "x": 583,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 627,
+        "bottom": 65.5,
+        "left": 583
+      },
+      "route": "/home/",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 753,
+        "height": 88,
+        "top": 0,
+        "right": 753,
+        "bottom": 88,
+        "left": 0
+      },
+      "brand": {
+        "x": 22,
+        "y": 17.546875,
+        "width": 190,
+        "height": 51.90625,
+        "top": 17.546875,
+        "right": 212,
+        "bottom": 69.453125,
+        "left": 22
+      },
+      "phone": {
+        "x": 635,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 679,
+        "bottom": 65.5,
+        "left": 635
+      },
+      "menu": {
+        "x": 687,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 731,
+        "bottom": 65.5,
+        "left": 687
+      },
+      "src": "/assets/brand/sport-my-fitness-header.svg?v=horizontal-20261022",
+      "natural": [
+        366,
+        100
+      ],
+      "scrollWidth": 753,
+      "viewport": 768
+    },
+    {
+      "width": 900,
+      "theme": {
+        "x": 715,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 759,
+        "bottom": 65.5,
+        "left": 715
+      },
+      "route": "/home/",
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 885,
+        "height": 88,
+        "top": 0,
+        "right": 885,
+        "bottom": 88,
+        "left": 0
+      },
+      "brand": {
+        "x": 22,
+        "y": 17.546875,
+        "width": 190,
+        "height": 51.90625,
+        "top": 17.546875,
+        "right": 212,
+        "bottom": 69.453125,
+        "left": 22
+      },
+      "phone": {
+        "x": 767,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 811,
+        "bottom": 65.5,
+        "left": 767
+      },
+      "menu": {
+        "x": 819,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "top": 21.5,
+        "right": 863,
+        "bottom": 65.5,
+        "left": 819
+      },
+      "src": "/assets/brand/sport-my-fitness-header.svg?v=horizontal-20261022",
+      "natural": [
+        366,
+        100
+      ],
+      "scrollWidth": 885,
+      "viewport": 900
+    },
+    {
+      "width": 901,
+      "theme": {
+        "x": 685,
+        "y": 66,
+        "width": 171,
+        "height": 44,
+        "top": 66,
+        "right": 856,
+        "bottom": 110,
+        "left": 685
+      },
+      "route": "/home/",
+      "header": {
+        "x": 76,
+        "y": 0,
+        "width": 810,
+        "height": 176,
+        "top": 0,
+        "right": 886,
+        "bottom": 176,
+        "left": 76
+      },
+      "brand": {
+        "x": 106,
+        "y": 54.671875,
+        "width": 244,
+        "height": 66.65625,
+        "top": 54.671875,
+        "right": 350,
+        "bottom": 121.328125,
+        "left": 106
+      },
+      "phone": {
+        "x": 12,
+        "y": 112,
+        "width": 52,
+        "height": 65,
+        "top": 112,
+        "right": 64,
+        "bottom": 177,
+        "left": 12
+      },
+      "menu": {
+        "x": 12,
+        "y": 32,
+        "width": 52,
+        "height": 65,
+        "top": 32,
+        "right": 64,
+        "bottom": 97,
+        "left": 12
+      },
+      "src": "/assets/brand/sport-my-fitness-header.svg?v=horizontal-20261022",
+      "natural": [
+        366,
+        100
+      ],
+      "scrollWidth": 886,
+      "viewport": 901
+    },
+    {
+      "width": 1920,
+      "theme": {
+        "x": 1539.5,
+        "y": 66,
+        "width": 171,
+        "height": 44,
+        "top": 66,
+        "right": 1710.5,
+        "bottom": 110,
+        "left": 1539.5
+      },
+      "route": "/home/",
+      "header": {
+        "x": 76,
+        "y": 0,
+        "width": 1829,
+        "height": 176,
+        "top": 0,
+        "right": 1905,
+        "bottom": 176,
+        "left": 76
+      },
+      "brand": {
+        "x": 270.5,
+        "y": 54.671875,
+        "width": 244,
+        "height": 66.65625,
+        "top": 54.671875,
+        "right": 514.5,
+        "bottom": 121.328125,
+        "left": 270.5
+      },
+      "phone": {
+        "x": 12,
+        "y": 112,
+        "width": 52,
+        "height": 65,
+        "top": 112,
+        "right": 64,
+        "bottom": 177,
+        "left": 12
+      },
+      "menu": {
+        "x": 12,
+        "y": 32,
+        "width": 52,
+        "height": 65,
+        "top": 32,
+        "right": 64,
+        "bottom": 97,
+        "left": 12
+      },
+      "src": "/assets/brand/sport-my-fitness-header.svg?v=horizontal-20261022",
+      "natural": [
+        366,
+        100
+      ],
+      "scrollWidth": 1905,
+      "viewport": 1920
+    }
+  ],
+  "menus": [
+    {
+      "width": 320,
+      "pass": true
+    },
+    {
+      "width": 390,
+      "pass": true
+    },
+    {
+      "width": 1366,
+      "pass": true
+    }
+  ],
+  "fallbacks": [
+    {
+      "width": 320,
+      "withoutJavaScript": true,
+      "bookNavigation": true
+    },
+    {
+      "width": 390,
+      "withoutJavaScript": true,
+      "bookNavigation": true
+    },
+    {
+      "width": 1366,
+      "withoutJavaScript": true,
+      "bookNavigation": true
+    }
+  ],
+  "entryPages": [
+    {
+      "route": "/",
+      "pass": true
+    },
+    {
+      "route": "/admin",
+      "pass": true
+    }
+  ],
+  "motion": [
+    {
+      "originalEntranceCompleted": true,
+      "waterControlAbsent": true
+    }
+  ],
+  "failures": [],
+  "chromiumVersion": "153.0.8010.0"
+}

@@ -66,7 +66,8 @@
         >
 
           <img
-            src="/assets/brand/sport-my-fitness-logo.png?v=without-tagline-20261022"
+            src="/assets/brand/sport-my-fitness-header.svg?v=horizontal-20261022"
+            width="366" height="100"
             alt="Sport My Fitness"
           >
 

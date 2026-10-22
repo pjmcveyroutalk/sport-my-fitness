@@ -20,6 +20,7 @@ jobs:
       - name: Syntax and existing contract check
         run: |
           for file in *.js api/*.js verification/apparel-browser.cjs verification/apparel-smoothness.cjs verification/home-actions-browser.cjs verification/book-page-concept.cjs verification/home-trust-browser.cjs; do node --check "$file"; done
+          node --check verification/horizontal-header-browser.cjs
           node --check home-water-motion.js
           node --check verification/home-lakefront-browser.cjs
           node --test test/pilot-verify-production.test.js test/apparel-catalog.test.mjs test/clean-urls.test.cjs
@@ -47,6 +48,7 @@ jobs:
           NODE_PATH="$RUNNER_TEMP/smf-browser/node_modules" node verification/book-page-concept.cjs
           NODE_PATH="$RUNNER_TEMP/smf-browser/node_modules" node verification/home-trust-browser.cjs
           NODE_PATH="$RUNNER_TEMP/smf-browser/node_modules" node verification/home-lakefront-browser.cjs
+          NODE_PATH="$RUNNER_TEMP/smf-browser/node_modules" node verification/horizontal-header-browser.cjs
       - name: Save browser evidence
         if: always()
         uses: actions/upload-artifact@v4

@@ -17,13 +17,19 @@ cookie attributes, origin checks, rate limits, credential environment variables,
 response privacy headers, API/worker exclusions and asset permissions are retained.
 
 Deploy the full website first. Then deploy this source as `api/gateway.js` to the
-existing holding project, retaining its other eight source files and all project
-settings. Do not copy the full website into the public holding deployment or
-change deployment protection. Credential values are never required for packaging.
+existing holding project, retaining all project settings. Use `coming-soon.html`
+for its `index.html` and `404.html`, and the website's
+`assets/brand/sport-my-fitness-header.svg` at the same asset path. Retain the other
+holding source files, including the older PNG for compatibility. Do not copy the
+full website into the public holding deployment or change deployment protection.
+Credential values are never required for packaging.
 
 Deploy this directory's `robots.txt` as the holding project's root `robots.txt`.
 It contains only the active crawler directives; explanatory notes belong here.
 The main website's separate root file retains its sitemap reference for launch.
+
+The horizontal header is a website presentation version. The branding package,
+master artwork and existing kit exports are kept separate and unchanged.
 
 `node --test test/clean-urls.test.cjs` runs real HTTP requests through the gateway
 and the routing-aware site server using local synthetic credentials only.

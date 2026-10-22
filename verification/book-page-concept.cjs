@@ -31,7 +31,7 @@ async function load(page) {
           assert.equal(await page.locator('form, input, button[type="submit"], a[download]').count(), 0);
           const geometry = await page.evaluate(() => {
             const bounds = selector => document.querySelector(selector).getBoundingClientRect().toJSON();
-            return {scrollWidth: document.documentElement.scrollWidth, copy: bounds('.book-copy'),
+            return {scrollWidth: document.documentElement.scrollWidth, intro: bounds('.book-intro'), copy: bounds('.book-copy'),
               cover: bounds('.book-cover-placeholder'), header: bounds('.site-header'),
               heading: bounds('h1'), action: bounds('.book-return')};
           });
@@ -43,6 +43,10 @@ async function load(page) {
           assert(geometry.action.height >= 44, 'primary link too short');
           if (width > 600) assert(geometry.cover.left > geometry.copy.right, 'desktop columns overlap');
           else assert(geometry.cover.top > geometry.copy.bottom, 'mobile cover overlaps introduction');
+          if (width >= 1200 || width <= 600) {
+            assert(Math.abs((geometry.cover.left + geometry.cover.right) / 2 -
+              (geometry.intro.left + geometry.intro.right) / 2) < 1, 'book is not centered on the page');
+          }
           assert(await page.getByText('Cover placeholder', {exact: true}).isVisible());
           assert.equal(await page.locator('main > section').count(), 1, 'removed bottom section returns');
           assert.equal(await page.locator('a[href="#about-the-book"]').count(), 0, 'orphaned about link');

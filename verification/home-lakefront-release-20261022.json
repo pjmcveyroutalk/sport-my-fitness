@@ -1,0 +1,388 @@
+{
+  "schema_version": 1,
+  "status": "published-deployment-and-public-privacy-verified",
+  "approved_concept": "Milwaukee-inspired lakefront at dusk; a hooded woman facing the city from a workout bench; gentle water-only ripple motion",
+  "base_main": "3591bf99f044f7b4d9d7a9cd51c406f7955e6056",
+  "approved_review_source": "2ee9126072c1cb4c23be654468095ec5348c9a7f",
+  "runtime_commit": "2ee9126072c1cb4c23be654468095ec5348c9a7f",
+  "review_branch": "review/approved-glass-lakefront-20261022",
+  "project": {
+    "id": "prj_gekwpLHnnGbcuGHOp47ieG9C93xJ",
+    "name": "sport-my-fitness",
+    "accountId": "team_jC9jlJ9GZ9GSjrbYoD0pin3U",
+    "ssoProtection": {
+      "enabled": true,
+      "deploymentType": "all"
+    }
+  },
+  "production": {
+    "id": "dpl_2v8AhFJsaxE8aDfQb88u9BYQFeiT",
+    "url": "sport-my-fitness-a07epthbg-routalk-builder.vercel.app",
+    "state": "READY",
+    "target": "production",
+    "projectId": "prj_gekwpLHnnGbcuGHOp47ieG9C93xJ",
+    "sourceSha": "2ee9126072c1cb4c23be654468095ec5348c9a7f",
+    "aliases": [
+      "sport-my-fitness.vercel.app",
+      "sport-my-fitness-routalk-builder.vercel.app",
+      "sport-my-fitness-git-main-routalk-builder.vercel.app"
+    ]
+  },
+  "verification": {
+    "run_id": 39739787745,
+    "run_url": "https://github.com/pjmcveyroutalk/sport-my-fitness/actions/runs/39739787745",
+    "job_id": 119693960814,
+    "artifact_id": 12408693729,
+    "archive_digest": "sha256:6be6f0fcf292430f57812243c9c7f302dd32c5a2290b4c20d2cb197638285be1",
+    "existing_contract_tests": 6,
+    "all_pass": true,
+    "visual_review": "Exact-source local desktop and phone dark/light renders inspected; CI WebKit dark phone and light desktop renders inspected. No physical-device testing is claimed.",
+    "reports": {
+      "apparel/results.json": {
+        "layouts": 44,
+        "lettering": 44,
+        "journeys": 6,
+        "approvedProducts": 6,
+        "fallbacks": 4,
+        "motion": 4,
+        "failures": 0
+      },
+      "apparel-motion/results.json": {
+        "baseline": 0,
+        "candidate": 6,
+        "failures": 0
+      },
+      "book-concept/results.json": {
+        "layouts": 24,
+        "journeys": 4,
+        "fallbacks": 4,
+        "failures": 0,
+        "chromiumVersion": "151.0.7922.34",
+        "webkitVersion": "26.5"
+      },
+      "home-actions/results.json": {
+        "layouts": 68,
+        "journeys": 12,
+        "fallbacks": 4,
+        "motion": 4,
+        "menus": 32,
+        "menuFallbacks": 4,
+        "failures": 0,
+        "chromiumVersion": "151.0.7922.34",
+        "webkitVersion": "26.5"
+      },
+      "home-lakefront/results.json": {
+        "layouts": 8,
+        "water": 4,
+        "fallbacks": 4,
+        "failures": 0,
+        "chromiumVersion": "151.0.7922.34",
+        "webkitVersion": "26.5"
+      },
+      "home-trust/results.json": {
+        "layouts": 36,
+        "headlines": 32,
+        "icons": 2,
+        "motion": 4,
+        "fallbacks": 8,
+        "failures": 0,
+        "chromiumVersion": "151.0.7922.34",
+        "webkitVersion": "26.5"
+      },
+      "results.json": {
+        "layouts": 60,
+        "navigation": 24,
+        "motion": 12,
+        "locations": 4,
+        "platformMarks": 20,
+        "headers": 66,
+        "connections": 16,
+        "consolidation": 10,
+        "legacyYoshi": 4,
+        "appearance": 24,
+        "lettering": 84,
+        "safeguards": 23,
+        "failures": 0,
+        "chromiumVersion": "151.0.7922.34",
+        "webkitVersion": "26.5"
+      }
+    },
+    "water": [
+      {
+        "engine": "chromium",
+        "width": 390,
+        "capability": "animated",
+        "pause": true,
+        "resume": true,
+        "restoredPageLifecycle": true,
+        "reducedMotion": true,
+        "pass": true
+      },
+      {
+        "engine": "chromium",
+        "width": 1366,
+        "capability": "animated",
+        "pause": true,
+        "resume": true,
+        "restoredPageLifecycle": true,
+        "reducedMotion": true,
+        "pass": true
+      },
+      {
+        "engine": "webkit",
+        "width": 390,
+        "capability": "animated",
+        "pause": true,
+        "resume": true,
+        "restoredPageLifecycle": true,
+        "reducedMotion": true,
+        "pass": true
+      },
+      {
+        "engine": "webkit",
+        "width": 1366,
+        "capability": "animated",
+        "pause": true,
+        "resume": true,
+        "restoredPageLifecycle": true,
+        "reducedMotion": true,
+        "pass": true
+      }
+    ],
+    "prototype_water_region_comparison": [
+      {
+        "view": "desktop",
+        "regions": {
+          "water": {
+            "changed_pixels": 15838,
+            "pixels": 17020
+          },
+          "museum": {
+            "changed_pixels": 0,
+            "pixels": 18972
+          },
+          "woman": {
+            "changed_pixels": 0,
+            "pixels": 6952
+          },
+          "sky": {
+            "changed_pixels": 0,
+            "pixels": 108058
+          },
+          "pavement": {
+            "changed_pixels": 0,
+            "pixels": 11457
+          }
+        },
+        "paused_image_identical": true
+      },
+      {
+        "view": "mobile",
+        "regions": {
+          "water": {
+            "changed_pixels": 2650,
+            "pixels": 3698
+          },
+          "museum": {
+            "changed_pixels": 0,
+            "pixels": 4042
+          },
+          "woman": {
+            "changed_pixels": 0,
+            "pixels": 1554
+          },
+          "sky": {
+            "changed_pixels": 0,
+            "pixels": 9737
+          },
+          "pavement": {
+            "changed_pixels": 0,
+            "pixels": 963
+          }
+        },
+        "paused_image_identical": true
+      }
+    ]
+  },
+  "live": {
+    "authenticated_served_source": {
+      "status": "unverified",
+      "reason": "The existing connection previously denied authenticated fetching. That known failing route was not retried. No access settings or credentials were changed."
+    },
+    "public_privacy": {
+      "checked_at": "2026-10-22T07:33:19.588090+00:00",
+      "base_url": "https://sportmyfitness.com",
+      "checks": [
+        {
+          "path": "/",
+          "status": 200,
+          "expected": 200,
+          "pass": true,
+          "holding_page": true,
+          "private_home_markup_absent": true
+        },
+        {
+          "path": "/admin",
+          "status": 200,
+          "expected": 200,
+          "pass": true,
+          "private_home_markup_absent": true
+        },
+        {
+          "path": "/index.html",
+          "status": 200,
+          "expected": 200,
+          "pass": true,
+          "holding_page": true,
+          "private_home_markup_absent": true
+        },
+        {
+          "path": "/apparel.html",
+          "status": 404,
+          "expected": 404,
+          "pass": true
+        },
+        {
+          "path": "/yoshis-book.html",
+          "status": 404,
+          "expected": 404,
+          "pass": true
+        },
+        {
+          "path": "/assets/home-lakefront.css?v=lakefront-water-20261022",
+          "status": 404,
+          "expected": 404,
+          "pass": true
+        },
+        {
+          "path": "/assets/home-water-motion.js?v=lakefront-water-20261022",
+          "status": 404,
+          "expected": 404,
+          "pass": true
+        },
+        {
+          "path": "/assets/photos/smf-lakefront-bench-20261022-1584.webp",
+          "status": 404,
+          "expected": 404,
+          "pass": true
+        }
+      ],
+      "all_pass": true
+    }
+  },
+  "source_preservation": "Only Home, its new image/motion assets, related verification, workflow, and release documentation change. Shared entrance, curves, logo, navigation, actions, Book, all other pages and privacy configuration retain their previous bytes.",
+  "scope": "Approved Home artwork and water motion. Setup/Google, branding-kit and payments remain separate.",
+  "review_entry": "https://sportmyfitness.com/admin",
+  "runtime_source_sha256": {
+    ".github/workflows/approved-design-review.yml": "a999b7c126dbc34301fbc1d16b92a069ee107c83ae5a9f942c4a3af0c99b3f50",
+    "assets/home-lakefront.css": "db186fa53143b05f33f942248a1ba128ceb093a91d1f040fdaab77f5eef31639",
+    "assets/home-water-motion.js": "eb88d9433969bed07073312bbeef37a34ff2bb378a746fda7d1cf1409bd7c199",
+    "assets/photos/smf-lakefront-bench-20261022-1200.webp": "3a0f8a204e6bcb8378b602248d3ba291eb099f991abd5ff1ae2ad7bbf89b23b7",
+    "assets/photos/smf-lakefront-bench-20261022-1584.webp": "f7a8f19cd508b3f5532333c143eb2ef59f8c3f0e5a2b5cd5acdfac2461ded8cb",
+    "assets/photos/smf-lakefront-bench-20261022-800.webp": "c7b8cc1003ade30e63da28cb8a7f6e4ad8ef87f75396504e1989eaa91b51924a",
+    "docs/HOME_LAKEFRONT_20261022.md": "9115963c4e37c5782a28e55a90f9c3452ba5541c90bd2ec1488116086374908c",
+    "index.html": "20a614afe3a9a38098e04b0683ac7a6f2c32c0a9f4e8768b95f3b27f733e3215",
+    "verification/approved-design-browser.cjs": "c1eee862a628f9ac346c68bb1bf6d6ef2a3dabdac651b00b01c5738e3fed36ab",
+    "verification/home-lakefront-browser.cjs": "26f4c82246d8108e25396ec38d565c028ab1faeb5d5194fd65cae7ef648e3890",
+    "verification/home-trust-browser.cjs": "f9896600759f3592f5f50c68138acb8e114b51c3ced0eba14bf0c0b72e55f844"
+  },
+  "preserved_shared_files": [
+    {
+      "path": "site-motion.js",
+      "unchanged": true,
+      "sha256": "cff14d42c5d743dcc5bbee2bcafba6780c77bb58a40944e8700292c9ab94cc56"
+    },
+    {
+      "path": "site-motion.css",
+      "unchanged": true,
+      "sha256": "b2c4c1eebeddd76ebb7f6f5eda27ac91d82b16783df3619186217d2ad3143022"
+    },
+    {
+      "path": "assets/smf-motion-curves.json",
+      "unchanged": true,
+      "sha256": "d9197bbfa766676178103ef8834491b804a50d6468047a22f4a5d660c21ce619"
+    },
+    {
+      "path": "site-design.css",
+      "unchanged": true,
+      "sha256": "8fe01340c91f5963774d47f4c86aa8ff9646c1af9413ddac17b9b1d2727c7c84"
+    },
+    {
+      "path": "site-appearance.css",
+      "unchanged": true,
+      "sha256": "fa5f7fe8d60d708d81625ab8229b29a493a2302595f4873f55f9d041dc00fa7e"
+    },
+    {
+      "path": "site-appearance.js",
+      "unchanged": true,
+      "sha256": "f0f7da63ead1687e331450bd182c5e6cadf4740f822a46ac9c493fa0f5d3d6c5"
+    },
+    {
+      "path": "site-menu.js",
+      "unchanged": true,
+      "sha256": "3d4310160d4cea432a6cf780be279c95bf5a6fe4d8aa1cac71bcd6d350a272d7"
+    },
+    {
+      "path": "home-actions.css",
+      "unchanged": true,
+      "sha256": "b19d7d8790b23b09c3cc8754b77bc6dbce1440987af648501528e70f6b0660a3"
+    },
+    {
+      "path": "hero-lettering.css",
+      "unchanged": true,
+      "sha256": "84ca5f514241ed31492e4f70839c6c8fdb98597cf1f06b1d369f293fa9bff855"
+    },
+    {
+      "path": "assets/brand/sport-my-fitness-original-lockup.png",
+      "unchanged": true,
+      "sha256": "202f885d450df6330d8b0809f0c61f43a7ce940f7c870004c9bf6683178aad63"
+    },
+    {
+      "path": "home-trust.css",
+      "unchanged": true,
+      "sha256": "056548bfaf05511e802f21d0e454b8859fa9005eceb8f6008c2a06c631ba7285"
+    },
+    {
+      "path": "vercel.json",
+      "unchanged": true,
+      "sha256": "1e0cc4fa275d94a313f62f27de999c02b9d5e444aef4229caf70461f4dbb913a"
+    },
+    {
+      "path": "training.html",
+      "unchanged": true,
+      "sha256": "ad9c7d936d586ea773c35cb41fea1071278cd095e8940cd5120bd13ef29d4e95"
+    },
+    {
+      "path": "apparel.html",
+      "unchanged": true,
+      "sha256": "3f7d28cb4ac9690e93cadc258143511a11ca879dff18c9b179b82b923a4b68b8"
+    },
+    {
+      "path": "programs.html",
+      "unchanged": true,
+      "sha256": "67eb4bc92e269fe79412b2e20e77f0ded9dee7887e75112210c9fdf10f2c9273"
+    },
+    {
+      "path": "media.html",
+      "unchanged": true,
+      "sha256": "aa005d9247335d21d1e2a2e2d9af836136490f8671355c1432663b61485275e6"
+    },
+    {
+      "path": "community.html",
+      "unchanged": true,
+      "sha256": "498323cb65cc5a2289e40e30d2b27c843fe4513b00de3abff433ab5bf267cc31"
+    },
+    {
+      "path": "contact.html",
+      "unchanged": true,
+      "sha256": "c3fdb3b00dbc3233d1b27628ccbaf7b9421f1e3ca9f24f4e4046fc03f961bd32"
+    },
+    {
+      "path": "yoshis-book.html",
+      "unchanged": true,
+      "sha256": "71028b52b0a8b11b1422dbc7f6c73214d54facb10607fd19828c3b9e517d061b"
+    }
+  ],
+  "source_bytes_match_tested_commit": true,
+  "checked_at": "2026-10-22T07:34:50.753586+00:00"
+}

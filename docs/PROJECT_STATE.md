@@ -1,14 +1,38 @@
 # Sport My Fitness — Current Project State
 
+## Approved Home lakefront and moving water — October 22, 2026
 
-## Current Home badges and headings — October 21, 2026
+PJ selected the final Milwaukee-inspired lakefront homepage: a hooded woman
+facing the city from the workout bench, sharp dusk artwork and gentle water
+ripples. The existing headline, badges, three actions, logo, menu and footer
+remain in place. The image has responsive WebP sources. Water has a pause/play
+control, respects reduced motion and stops while hidden. A still-image fallback
+keeps Home usable without JavaScript or WebGL.
+
+**Published:** runtime `2ee9126`, production `dpl_2v8AhFJsaxE8aDfQb88u9BYQFeiT`,
+READY with the correct tested source and existing full-site aliases. The full
+browser run `39739787745` passes in Chromium and WebKit with zero failures,
+including eight lakefront layouts and four actual water-motion/control checks.
+The original shared entrance, curves, navigation, other pages and exact logo
+retain their prior bytes. All eight signed-out public/privacy checks pass;
+All Deployments protection remains enabled and the public Coming soon page
+continues to serve signed-out visitors.
+
+Authenticated served-content fetching remains unavailable through the existing
+connection; that known failing path was not retried. Review through
+https://sportmyfitness.com/admin in the signed-in tab. See
+`docs/HOME_LAKEFRONT_20261022.md` and
+`verification/home-lakefront-release-20261022.json` for source and evidence.
+Setup/Google, branding-kit and payment workstreams remain separate.
+
+## Home badges and headings — October 21, 2026
 
 PJ selected **Certified trainer** and **Community focused** with existing SVG
 artwork. Both are now applied to Home using Lucide's shield and people drawings.
 All eight pages use the reviewed headline family with smaller secondary titles.
 Current Home imagery, actions, original entrance, exact logo, menu, Book layout
-and quote remain intact. A future Home image replacement is planned, but no
-replacement has been selected or installed.
+and quote remained intact in that release. The later Home image selection and
+installation are recorded in the October 22 entry above.
 
 The full browser workflow passes, with zero failures. The private production
 release and public Coming soon privacy were verified; existing All Deployments

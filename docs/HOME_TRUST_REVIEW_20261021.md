@@ -68,3 +68,20 @@ The focused browser workflow change exists only on this review branch. Never
 merge its temporary replacement of the full production review suite.
 Deployment approval and a chosen trust treatment are still pending PJ’s review.
 Setup, branding-kit and payment sessions remain separate.
+
+## Browser and visual review
+
+Final reviewed source: `de5303203867411f18d07fce57102e970ca47d50`.
+GitHub Actions run `39719697308` passes 108 Home layouts, 32 headline checks
+covering all eight pages, 12 original-motion cases and 12 no-JavaScript cases
+in Chromium and WebKit. Six existing contract tests also pass.
+
+The first 320px quote layout crowded the support text; the decorative quote
+mark was removed. The final badges sit lower on taller desktops, in the open
+water area beside WORK rather than across Yoshi’s arm. Phone layouts retain
+the original positions. Actual phone concepts, the Training font hierarchy
+and final desktop dark/light badge renders were visually inspected.
+
+See `verification/home-trust-review-20261021.json` for source hashes, exact
+evidence references, preserved files and limits. This is a review checkpoint;
+no trust treatment or new headline scale has been published to main.

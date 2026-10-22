@@ -62,7 +62,7 @@ async function layout(browser, engine, width, theme) {
     await sampleContract(page);
     assert.equal(await page.locator('html').getAttribute('data-theme'), theme);
     assert.equal(await page.locator('h1').count(), 1);
-    assert.equal(await page.locator('#primary-nav a').count(), 7);
+    assert.equal(await page.locator('#primary-nav a').count(), 8);
     assert.equal(await page.locator('.site-header .brand-logo').getAttribute('src'), 'assets/brand/apparel-kit/brand-smart.jpg');
     const geometry = await page.evaluate(() => {
       const logo = document.querySelector('.site-header .brand-logo');
@@ -168,7 +168,7 @@ async function journey(browser, engine, width) {
     assert.equal(await page.locator('html').getAttribute('data-theme'), 'light');
     assert.equal(new URL(page.url()).hash, target);
     await page.getByRole('button', {name: 'Menu', exact: true}).click();
-    assert.equal(await page.locator('#site-menu #primary-nav a:visible').count(), 7);
+    assert.equal(await page.locator('#site-menu #primary-nav a:visible').count(), 8);
     await page.keyboard.press('Escape');
     assert(await page.getByRole('button', {name: 'Menu', exact: true}).evaluate(button => button === document.activeElement));
     await page.reload({waitUntil: 'networkidle'});
@@ -236,7 +236,7 @@ async function fallback(browser, engine, mode) {
       await page.waitForURL('**/apparel.html#apparel-sample-jacket');
       assert.equal(await visibleCards(page).count(), 4, 'static fallback details are missing');
       await page.locator('.menu-fallback summary').click();
-      assert.equal(await page.locator('.menu-fallback #primary-nav a:visible').count(), 7);
+      assert.equal(await page.locator('.menu-fallback #primary-nav a:visible').count(), 8);
     } else {
       assert(await page.locator('[data-catalog-error]').isVisible());
       await page.getByRole('button', {name: 'Next style', exact: true}).click();

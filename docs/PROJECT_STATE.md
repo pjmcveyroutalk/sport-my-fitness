@@ -1,5 +1,10 @@
 # Sport My Fitness — Current Project State
 
+## Smaller shared header logo - October 22, 2026
+
+PJ requested a quieter header logo that sits in proportion with the menu, phone and appearance controls. The shared logo width is now 160px on desktop (previously 254px) and 96px at the existing mobile/tablet breakpoint (previously 128px). Existing proportional image sizing and vertical centering remain. All eight pages load the refreshed stylesheet version. Header height, controls, menu-drawer logo, artwork, typography, page spacing and movement are unchanged. This is a website presentation adjustment; brand-kit artwork is unchanged.
+
+
 ## Official logo cleanup and shared Apparel branding - October 22, 2026
 
 PJ requested removal of the small sentence from the official logo, kit and website. All eight current pages now use the same 1100 x 725 cleaned logo in headers and menus, with matching alt text and fresh cache keys. Apparel's separate asset and size overrides were removed so it inherits the shared presentation. The Community branding signoff was removed. Current logo assets and legacy full-wordmark/social variants use the cleaned identity.

@@ -16,8 +16,15 @@ The full main review workflow is retained and extended with the Book checks.
 Home, its buttons, shared movement, other pages, exact brand bytes, Psalm 23,
 redirects, private access and all separate workstreams remain intact.
 
-Publication and live delivery checks are in progress. See
-`docs/BOOK_PAGE_20261021.md` and `verification/book-page-20261021.json`.
+**Published:** runtime `b71c10f`, production `dpl_DvbWZbp1TCEpZSz9yZT8B4dQfNkb`,
+READY with the correct source and aliases. All seven signed-out privacy checks
+pass, including the new Book CSS. Vercel Authentication remains enabled for all
+deployments. The connector denied authenticated content fetching (403); the
+signed-in gateway and delivered-file comparison remain unverified. No access or
+credential setting was changed. This limit does not change the successful
+production deployment. See `docs/BOOK_PAGE_20261021.md` and
+`verification/book-page-20261021.json`. Review through
+https://sportmyfitness.com/admin, then Yoshi’s Book in that signed-in tab.
 
 ## Homepage buttons and book link — October 21, 2026
 ## Book added to every side menu — October 21, 2026

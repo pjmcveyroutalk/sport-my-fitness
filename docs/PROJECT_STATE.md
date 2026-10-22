@@ -1,4 +1,35 @@
 # Sport My Fitness — Current Project State
+## Homepage buttons and book link — October 21, 2026
+
+**Published and live-verified:** Runtime `6724e2e6e079af150abc12739327a880f7dacf70`, Production
+`dpl_AoVNPdcjHpjApUD9Q5nm6m5bnnmh` (READY). The homepage now has three equal buttons in one row
+on desktop: Apparel, Explore training and Yoshi’s Book. Mobile keeps Apparel
+across the first row, with equal Training and Book buttons side by side below.
+Home-only responsive rules keep the actions within the first screen on shorter
+laptops. The exact logo, running artwork, shared styles and original entrance
+motion are preserved.
+
+The Book button opens `yoshis-book.html`, a small branded Coming soon destination
+with a return-home link and the existing menu/theme controls. It is noindex and
+contains no invented title, cover, price, preview, stock or payment claim. The full
+book page and protected digital purchasing/delivery are the next work item.
+Legacy `book.html` and `/book` remain training-booking redirects to Contact;
+do not reuse those addresses for the book storefront.
+
+Accepted browser run `39700246775` passes 68 responsive layouts, including
+24 short-screen cases, 12 navigation journeys, four no-JavaScript fallbacks and
+four original-motion checks in Chromium/WebKit. Both appearances are checked;
+phone, desktop and short Chromebook renders were inspected. Twelve actual live
+HTML/asset comparisons, six signed-out privacy checks and the old booking
+redirect pass. `/index.html` intentionally serves the public Coming soon page
+when signed out; its content is checked, rather than incorrectly requiring 404.
+The private book page and its new CSS remain excluded while signed out.
+
+See `verification/home-actions-20261021.json`. Review through
+https://sportmyfitness.com/admin and choose Home in that signed-in tab.
+All Deployments protection, the public holding page, DNS, accounts and Google
+settings remain intact. Physical-device testing is not claimed.
+
 
 Updated October 21, 2026 (America/Chicago). The current Apparel implementation uses the approved centered carousel and a single replaceable card.
 

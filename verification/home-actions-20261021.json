@@ -1,0 +1,198 @@
+{
+  "schema_version": 1,
+  "status": "published-and-live-verified",
+  "scope": "Approved homepage actions and temporary book destination",
+  "runtime_commit": "6724e2e6e079af150abc12739327a880f7dacf70",
+  "review_commit": "6746d6f85611461c064a6326b012a5d070e68b92",
+  "project": {
+    "id": "prj_gekwpLHnnGbcuGHOp47ieG9C93xJ",
+    "name": "sport-my-fitness",
+    "accountId": "team_jC9jlJ9GZ9GSjrbYoD0pin3U",
+    "protection": {
+      "enabled": true,
+      "deploymentType": "all"
+    }
+  },
+  "production": {
+    "id": "dpl_AoVNPdcjHpjApUD9Q5nm6m5bnnmh",
+    "state": "READY",
+    "url": "sport-my-fitness-nqhzojjnk-routalk-builder.vercel.app",
+    "sha": "6724e2e6e079af150abc12739327a880f7dacf70",
+    "aliases": [
+      "sport-my-fitness.vercel.app",
+      "sport-my-fitness-routalk-builder.vercel.app",
+      "sport-my-fitness-git-main-routalk-builder.vercel.app"
+    ]
+  },
+  "browser": {
+    "run_id": 39700246775,
+    "job_id": 119567458341,
+    "artifact_id": 12393001998,
+    "artifact_digest": "sha256:4110b9d918b0b39505a2d8c5a5318c501d183a0e423b9bb3b18ce52fe03c40ef",
+    "artifact_size_bytes": 21012090,
+    "counts": {
+      "layouts": 68,
+      "journeys": 12,
+      "fallbacks": 4,
+      "motion": 4,
+      "failures": 0
+    },
+    "short_screen_layouts": 24,
+    "chromium_version": "151.0.7922.34",
+    "webkit_version": "26.5",
+    "completed_at": "2026-10-22T00:34:25.855Z"
+  },
+  "earlier_check": {
+    "run_id": 39699416090,
+    "status": "failed",
+    "reason": "Navigation locator included aria-hidden decorative arrows; corrected the test's accessible names. Runtime was unchanged by that correction."
+  },
+  "next_task": "Build the full Yoshi\u2019s Book page with approved cover, title, description, price and finished PDF/EPUB. Checkout and automatic digital delivery are not yet implemented.",
+  "live": {
+    "checked_at": "2026-10-22T00:37:09.328388+00:00",
+    "authenticated_files": [
+      {
+        "path": "index.html",
+        "status": 200,
+        "source_sha256": "7fc52c6f48fdaf4853129ce62c429f6f3da7cc48b2c15319b1c09bb7be60a4d9",
+        "served_sha256": "7fc52c6f48fdaf4853129ce62c429f6f3da7cc48b2c15319b1c09bb7be60a4d9",
+        "existing_admin_control_normalized": true,
+        "pass": true
+      },
+      {
+        "path": "home-actions.css?v=aligned-book-20261021",
+        "status": 200,
+        "source_sha256": "b19d7d8790b23b09c3cc8754b77bc6dbce1440987af648501528e70f6b0660a3",
+        "served_sha256": "b19d7d8790b23b09c3cc8754b77bc6dbce1440987af648501528e70f6b0660a3",
+        "existing_admin_control_normalized": false,
+        "pass": true
+      },
+      {
+        "path": "yoshis-book.html",
+        "status": 200,
+        "source_sha256": "f063a2d13de8fcf284d5e75f103ed50d69d90259032a5eaa42be8c1b9b133845",
+        "served_sha256": "f063a2d13de8fcf284d5e75f103ed50d69d90259032a5eaa42be8c1b9b133845",
+        "existing_admin_control_normalized": true,
+        "pass": true
+      },
+      {
+        "path": "site-design.css?v=desktop-call-20261019",
+        "status": 200,
+        "source_sha256": "8fe01340c91f5963774d47f4c86aa8ff9646c1af9413ddac17b9b1d2727c7c84",
+        "served_sha256": "8fe01340c91f5963774d47f4c86aa8ff9646c1af9413ddac17b9b1d2727c7c84",
+        "existing_admin_control_normalized": false,
+        "pass": true
+      },
+      {
+        "path": "site-appearance.css?v=light-dark-20261019",
+        "status": 200,
+        "source_sha256": "fa5f7fe8d60d708d81625ab8229b29a493a2302595f4873f55f9d041dc00fa7e",
+        "served_sha256": "fa5f7fe8d60d708d81625ab8229b29a493a2302595f4873f55f9d041dc00fa7e",
+        "existing_admin_control_normalized": false,
+        "pass": true
+      },
+      {
+        "path": "site-motion.js?v=approved-glass-1",
+        "status": 200,
+        "source_sha256": "cff14d42c5d743dcc5bbee2bcafba6780c77bb58a40944e8700292c9ab94cc56",
+        "served_sha256": "cff14d42c5d743dcc5bbee2bcafba6780c77bb58a40944e8700292c9ab94cc56",
+        "existing_admin_control_normalized": false,
+        "pass": true
+      },
+      {
+        "path": "hero-lettering.css?v=20261020",
+        "status": 200,
+        "source_sha256": "84ca5f514241ed31492e4f70839c6c8fdb98597cf1f06b1d369f293fa9bff855",
+        "served_sha256": "84ca5f514241ed31492e4f70839c6c8fdb98597cf1f06b1d369f293fa9bff855",
+        "existing_admin_control_normalized": false,
+        "pass": true
+      },
+      {
+        "path": "assets/brand/sport-my-fitness-original-lockup.png",
+        "status": 200,
+        "source_sha256": "202f885d450df6330d8b0809f0c61f43a7ce940f7c870004c9bf6683178aad63",
+        "served_sha256": "202f885d450df6330d8b0809f0c61f43a7ce940f7c870004c9bf6683178aad63",
+        "existing_admin_control_normalized": false,
+        "pass": true
+      },
+      {
+        "path": "assets/photos/smf-waterfront-hero-800.webp",
+        "status": 200,
+        "source_sha256": "ba56966cefcfb98383034c3bad78e714abab6cb058b8d9364c14aed3dcbd4344",
+        "served_sha256": "ba56966cefcfb98383034c3bad78e714abab6cb058b8d9364c14aed3dcbd4344",
+        "existing_admin_control_normalized": false,
+        "pass": true
+      },
+      {
+        "path": "apparel.js?v=carousel-smooth-20261021",
+        "status": 200,
+        "source_sha256": "746ac89226053b7a2fdca01c0727869abb26e8ef57ea19972b7d45667d086b90",
+        "served_sha256": "746ac89226053b7a2fdca01c0727869abb26e8ef57ea19972b7d45667d086b90",
+        "existing_admin_control_normalized": false,
+        "pass": true
+      },
+      {
+        "path": "apparel.css?v=carousel-smooth-20261021",
+        "status": 200,
+        "source_sha256": "c128c1b43385046a5aa0f6f6a4119ef2e9d33c93ba4c451fe6076ae1c7683648",
+        "served_sha256": "c128c1b43385046a5aa0f6f6a4119ef2e9d33c93ba4c451fe6076ae1c7683648",
+        "existing_admin_control_normalized": false,
+        "pass": true
+      },
+      {
+        "path": "assets/apparel/catalog.json",
+        "status": 200,
+        "source_sha256": "b485e80423217a2f3c89915de77f2f4e5232a742feec45aeeee56735eea05f67",
+        "served_sha256": "b485e80423217a2f3c89915de77f2f4e5232a742feec45aeeee56735eea05f67",
+        "existing_admin_control_normalized": false,
+        "pass": true
+      }
+    ],
+    "privacy": [
+      {
+        "path": "/",
+        "status": 200,
+        "pass": true
+      },
+      {
+        "path": "/admin",
+        "status": 200,
+        "pass": true
+      },
+      {
+        "path": "/index.html",
+        "status": 200,
+        "pass": true
+      },
+      {
+        "path": "/apparel.html",
+        "status": 404,
+        "pass": true
+      },
+      {
+        "path": "/yoshis-book.html",
+        "status": 404,
+        "pass": true
+      },
+      {
+        "path": "/home-actions.css",
+        "status": 404,
+        "pass": true
+      }
+    ],
+    "credentials_or_cookies_saved": false,
+    "legacy_booking_redirect": {
+      "destination": "/contact.html",
+      "status": 200,
+      "pass": true
+    },
+    "all_pass": true,
+    "privacy_checked_at": "2026-10-22T00:39:03.088136+00:00",
+    "privacy_verifier_note": "The public /index.html alias intentionally serves the Coming soon page with status 200; its content is checked to exclude the private home hero. Initial 404 expectation was a verifier error and required no site or access-control change."
+  },
+  "runtime_files": {
+    "index.html": "7fc52c6f48fdaf4853129ce62c429f6f3da7cc48b2c15319b1c09bb7be60a4d9",
+    "home-actions.css": "b19d7d8790b23b09c3cc8754b77bc6dbce1440987af648501528e70f6b0660a3",
+    "yoshis-book.html": "f063a2d13de8fcf284d5e75f103ed50d69d90259032a5eaa42be8c1b9b133845"
+  }
+}

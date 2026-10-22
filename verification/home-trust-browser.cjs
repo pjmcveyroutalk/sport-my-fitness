@@ -1,4 +1,4 @@
-/* Approved release: exact previous hero geometry, truthful proof, a shared
+/* Approved release: preserved heading/action geometry, truthful proof, a shared
  * headline family, original entrance direction/timing, and useful fallbacks. */
 const {chromium, webkit} = require('playwright');
 const assert = require('node:assert/strict');
@@ -87,7 +87,12 @@ async function proofGeometry(page) {
             const previousFailures = report.failures.length;
             await load(page, 'index');
             const actual = await geometry(page);
-            assert.deepEqual(actual, original, 'approved geometry changed: ' + JSON.stringify({engine,width,height,theme,variant}));
+            // The selected lakefront artwork has a new responsive crop. All copy,
+            // actions, branding, header and canvas geometry remain unchanged.
+            const protectedGeometry = ({photo, image, ...unchanged}) => unchanged;
+            assert.deepEqual(protectedGeometry(actual), protectedGeometry(original), 'approved foreground geometry changed: ' + JSON.stringify({engine,width,height,theme,variant}));
+            assert.equal(actual.image, 'assets/photos/smf-lakefront-bench-20261022-1584.webp');
+            assert.equal(await page.locator('.yoshi-hero').evaluate(img=>getComputedStyle(img).objectFit), 'cover');
             assert(actual.scrollWidth <= width, 'horizontal overflow');
             const proof = await proofGeometry(page);
             assert.equal(proof.opacity, '1', 'proof not visible');
@@ -103,7 +108,7 @@ async function proofGeometry(page) {
             if ((width === 390 || width === 1366) && height !== 657) {
               await page.screenshot({path: path.join(out, `${engine}-${theme}-${variant}-${width}.png`)});
             }
-            report.layouts.push({engine,width,height,theme,variant,proof,approvedHeroUnchanged:true,pass:report.failures.length === previousFailures});
+            report.layouts.push({engine,width,height,theme,variant,proof,approvedForegroundUnchanged:true,approvedLakefrontCrop:true,pass:report.failures.length === previousFailures});
           }
           await page.close();
         }

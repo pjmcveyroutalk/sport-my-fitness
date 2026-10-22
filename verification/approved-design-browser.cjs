@@ -30,8 +30,9 @@ async function allPhotos(page) {
   }
   return page.evaluate(() => [...document.querySelectorAll('main img,.site-header .brand-logo')].map(i => {
     const r = i.getBoundingClientRect(), style = getComputedStyle(i);
+    const approvedHomeCrop = i.matches('.smf-home-page .yoshi-hero') && style.objectFit === 'cover';
     return {src: i.getAttribute('src'), natural: [i.naturalWidth, i.naturalHeight], rendered: [r.width, r.height], fit: style.objectFit, mask: style.maskImage,
-      valid: i.complete && i.naturalWidth > 0 && r.width > 0 && r.height > 0 && Math.abs((r.width / r.height) / (i.naturalWidth / i.naturalHeight) - 1) < .015};
+      valid: i.complete && i.naturalWidth > 0 && r.width > 0 && r.height > 0 && (approvedHomeCrop || Math.abs((r.width / r.height) / (i.naturalWidth / i.naturalHeight) - 1) < .015)};
   }));
 }
 async function headerControls(page, route, width, engine, withoutJS = false) {
@@ -294,7 +295,7 @@ async function layout(page, route, width, engine) {
   if (route === 'index' && width <= 430) {
     const composition = await page.evaluate(() => {
       const rect = selector => document.querySelector(selector).getBoundingClientRect().toJSON();
-      return {header: rect('.site-header'), photo: rect('.yoshi-hero'), heading: rect('h1'), actions: rect('.hero-actions'), mission: rect('.mission-strip')};
+      return {header: rect('.site-header'), photo: rect('.yoshi-hero'), backdrop: rect('.yoshi-stage'), heading: rect('h1'), actions: rect('.hero-actions'), mission: rect('.mission-strip')};
     });
     await page.evaluate(() => scrollTo({top: 0, behavior: 'instant'}));
     await page.screenshot({path: path.join(out, `${engine}-${route}-${width}.png`), fullPage: true});
@@ -302,7 +303,7 @@ async function layout(page, route, width, engine) {
     assert(composition.heading.top < composition.photo.bottom - 70, 'mobile headline has been stacked below the photograph');
     assert(composition.heading.height < width * .48, 'mobile title is oversized against the reference');
     assert(composition.mission.top - composition.header.bottom < width * 1.75, 'mobile hero is too tall against the approved reference');
-    assert(composition.photo.bottom >= composition.actions.bottom - 10, 'waterfront does not fill the hero behind the actions: ' + JSON.stringify(composition));
+    assert(composition.backdrop.bottom >= composition.actions.bottom - 10, 'approved lakefront backdrop does not fill the hero behind the actions: ' + JSON.stringify(composition));
     report.safeguards.push({test: 'approved-mobile-composition', width, composition, pass: true});
   }
   assert.deepEqual(errors, []);

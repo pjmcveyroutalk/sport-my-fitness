@@ -1,5 +1,21 @@
 # Sport My Fitness — Current Project State
 
+## Approved Book quote area — October 21, 2026
+
+PJ approved the quote-area mockup and requested a clean live implementation.
+The exact tested layout from `a1faf52` puts the quote to the right of the centered
+book on desktop and below it on smaller screens. The book’s approved position
+and size match in all 24 checked layouts. Placeholder text is clearly labeled
+and has no attribution to Yoshi. Actual book content remains pending.
+
+Run `39710016484` passes 24 layouts, four journeys and four native fallbacks in
+both themes and Chromium/WebKit. Integration preserves the full existing review
+workflow; its temporary mockup exclusions are not copied. The homepage, movement,
+other pages, navigation, footer, private access, branding and payments are unchanged.
+
+Publication checks are in progress. See `verification/book-quote-release-20261021.json`.
+
+
 ## Approved Yoshi’s Book page — October 21, 2026
 
 PJ approved the final centered, enlarged book mockup and requested publication.

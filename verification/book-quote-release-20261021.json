@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "status": "approved-awaiting-deployment",
+  "approved_review_commit": "a1faf5292ea35f38ed0e3e3ca37b43529ecc41eb",
+  "base_main": "a6dfc9dd6424490ca47bc9d89d220eed4fed6fb0",
+  "project": {
+    "id": "prj_gekwpLHnnGbcuGHOp47ieG9C93xJ",
+    "name": "sport-my-fitness",
+    "accountId": "team_jC9jlJ9GZ9GSjrbYoD0pin3U",
+    "protection": {
+      "enabled": true,
+      "deploymentType": "all"
+    }
+  },
+  "browser": {
+    "run_id": 39710016484,
+    "job_id": 119598855484,
+    "artifact_id": 12396249537,
+    "artifact_digest": "sha256:1e371bfdcb3a9ac9691d59b5b3ae553daa8eb3805ef77424bac6d56a9c662d55",
+    "layouts": 24,
+    "journeys": 4,
+    "native_fallbacks": 4,
+    "failures": 0,
+    "approved_cover_geometry_preserved_in_all_cases": true
+  },
+  "runtime_source_sha256": {
+    "yoshis-book.html": "84c33c657ab9f26ee5d62fcfc7efccc124219e90577387d68f97a510e8cec5e3",
+    "yoshis-book.css": "dbd7fdd687f9258424098e290330afa69c3a82d8c5852bbbfc21ef870be824e5"
+  },
+  "integration": {
+    "exact_tested_runtime": true,
+    "header_navigation_footer_exact": true,
+    "full_main_workflow_unchanged": true,
+    "existing_contract_tests": 6,
+    "syntax": "passed",
+    "diff_check": "passed"
+  },
+  "content": "Approved placeholder design; sample text is not a quote from the book and is not attributed to Yoshi.",
+  "live": null,
+  "known_verification_limit": "Automated authenticated page fetch denied by Vercel connection in preceding release. No access change authorized or made."
+}

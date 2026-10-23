@@ -1,5 +1,21 @@
 # Sport My Fitness — Current Project State
 
+## Launch sitemap prepared — October 23, 2026
+
+PJ requested a sitemap prepared for launch. `sitemap.xml` now lists the eight
+primary clean routes on `https://sportmyfitness.com`. The full-site robots
+reference and primary-page canonical/social metadata use the same domain;
+Apparel's missing canonical link is added. Body markup, brand assets, styling,
+movement, noindex flags and access controls are retained.
+
+The four unapproved policy drafts are excluded. Source validation checks XML,
+primary navigation, routing, canonical URLs, social-image files, robots and
+retained draft protections. The launch checklist contains the remaining public
+HTTP/indexing checks and Search Console submission. No public launch or Google
+submission has occurred. The public holding site's robots and missing public
+sitemap remain intentional while the full site is private. See
+`docs/LAUNCH_SITEMAP_20261023.md` and `verification/launch-sitemap-20261023.json`.
+
 ## Website policy pages — October 22, 2026
 
 PJ approved Privacy, Website Terms, Shipping & Returns, and a Fitness Disclaimer.

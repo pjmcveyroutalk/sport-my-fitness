@@ -2,6 +2,29 @@
 
 Start at [docs/PROJECT_STATE.md](docs/PROJECT_STATE.md). The October 16 black/turquoise glass-menu design and latest duplicate-removal instructions supersede earlier visual references and the requirement to preserve redundant page-step panels.
 
+## Before public launch: sitemap and indexing
+
+- [x] Prepare `sitemap.xml` with the eight primary pages on
+  `https://sportmyfitness.com`, matching page canonical URLs and the full site's
+  `robots.txt` sitemap reference. Source validation passes on October 23, 2026.
+- [ ] Review the final list of pages intended for search results. Keep Admin,
+  redirects, private pages and unapproved policy drafts out. Resolve the current
+  Apparel and Book `noindex` settings only when their final content and public
+  indexing are approved.
+- [ ] After PJ explicitly approves public launch, verify that
+  `https://sportmyfitness.com/sitemap.xml` returns XML with HTTP 200 without a
+  login, each listed URL returns its approved public page with HTTP 200, and its
+  canonical URL matches the sitemap. Check public pages' indexing directives.
+- [ ] At that approved launch, verify that public `robots.txt` references
+  `https://sportmyfitness.com/sitemap.xml`. Keep genuinely private endpoints
+  protected. A sitemap or robots rule is not an access-control mechanism.
+- [ ] Coordinate with the separate Google setup session: verify the correct
+  Search Console property, submit the public sitemap, record its processing
+  status and monitor page indexing. Submission has not been performed.
+
+Run `python3 verification/verify-launch-sitemap.py` before launch and after public
+page changes. See [sitemap preparation and launch steps](docs/LAUNCH_SITEMAP_20261023.md).
+
 ## Before public launch: finalize website policies
 
 The four policy pages are implemented in the private preview. Their final

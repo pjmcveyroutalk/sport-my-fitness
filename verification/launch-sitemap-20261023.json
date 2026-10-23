@@ -1,0 +1,28 @@
+{
+  "status": "PREPARED_FOR_APPROVED_LAUNCH",
+  "sitemap": "https://sportmyfitness.com/sitemap.xml",
+  "pages": 8,
+  "urls": [
+    "https://sportmyfitness.com/home/",
+    "https://sportmyfitness.com/apparel/",
+    "https://sportmyfitness.com/yoshis-book/",
+    "https://sportmyfitness.com/training/",
+    "https://sportmyfitness.com/programs/",
+    "https://sportmyfitness.com/media/",
+    "https://sportmyfitness.com/community/",
+    "https://sportmyfitness.com/contact/"
+  ],
+  "canonical_checks": 8,
+  "social_image_checks": 12,
+  "draft_policy_pages_excluded": [
+    "/privacy/",
+    "/terms/",
+    "/shipping-returns/",
+    "/fitness-disclaimer/"
+  ],
+  "source_noindex_retained_pending_launch_review": [
+    "/apparel/",
+    "/yoshis-book/"
+  ],
+  "public_launch_or_search_console_submission_performed": false
+}

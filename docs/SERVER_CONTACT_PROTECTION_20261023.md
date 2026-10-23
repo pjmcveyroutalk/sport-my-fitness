@@ -65,7 +65,7 @@ The connector returned `404: not_found — Seawall Config not found` for active
 and draft reads, a scoped read with the known team ID, configuration PUT and an
 initialization PATCH. These were API failures, not successful rule updates or
 automatic approval rejections. Avoid repeating the same calls without new
-evidence. The connector's documented browser fallback needs user approval.
+evidence. The browser tool requires user approval before a browser fallback after repeated connector errors.
 
 Independent fresh 48-byte random `RATE_LIMIT_SECRET` values have already been
 saved as sensitive, production-only environment variables on both projects.

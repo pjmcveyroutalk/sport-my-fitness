@@ -171,7 +171,11 @@ function createGateway(options = {}) {
     for (const key of ['content-type', 'accept-ranges', 'content-range']) {
       const value = response.headers.get(key); if (value) res.setHeader(key, value);
     }
-    res.setHeader('Content-Security-Policy', "frame-ancestors 'none'; base-uri 'self'; object-src 'none'; worker-src 'none'");
+    // Retain the trusted site's script/form restrictions in private review too.
+    // The local fallback preserves protection if an older upstream lacks CSP.
+    res.setHeader('Content-Security-Policy', response.headers.get('content-security-policy') || "frame-ancestors 'none'; base-uri 'self'; object-src 'none'; worker-src 'none'");
+    const permissions = response.headers.get('permissions-policy');
+    if (permissions) res.setHeader('Permissions-Policy', permissions);
     if (req.method === 'HEAD') return res.end();
     if ((response.headers.get('content-type') || '').includes('text/html') && response.status === 200) {
       const body = await response.text();

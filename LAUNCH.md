@@ -30,6 +30,25 @@ After committing content changes, run `python3 design-tools/build-sitemap.py`,
 then `python3 verification/verify-launch-sitemap.py`. Repeat the check before
 launch. See [sitemap preparation and launch steps](docs/LAUNCH_SITEMAP_20261023.md).
 
+## Before public launch: contact security and spam protection
+
+- [x] Prepare restrictive browser security headers, preserve them through the
+  private gateway, explicitly retain FormSubmit CAPTCHA and the hidden bot trap,
+  and disclose the provider's spam/CAPTCHA processing in the privacy draft.
+- [ ] Verify the recipient is activated and the provider's actual challenge,
+  filtering, field/payload limits and rate controls. A public hidden field is
+  not a server-enforced security setting; current direct-to-FormSubmit controls
+  must not be described as a mandatory challenge or site-owned rate limiter.
+- [ ] Before launch, configure a provider or server endpoint with mandatory
+  server-verified challenge, schema/size validation and durable rate limiting
+  that direct requests cannot disable. Keep credentials server-side and the
+  destination fixed. Confirm mailbox filtering/monitoring and provider retention.
+- [ ] Run a controlled delivery and abuse check only when PJ explicitly
+  authorizes real test submissions. Automated site checks must intercept email
+  submissions and never activate the form or send a real inquiry.
+
+See [implemented protections and remaining limits](docs/CONTACT_SECURITY_20261023.md).
+
 ## Before public launch: finalize website policies
 
 The four policy pages are implemented in the private preview. Their final

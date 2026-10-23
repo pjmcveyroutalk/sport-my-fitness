@@ -1,0 +1,128 @@
+{
+  "layouts": [
+    {
+      "route": "/home/",
+      "width": 390,
+      "motion": "complete"
+    },
+    {
+      "route": "/home/",
+      "width": 1366,
+      "motion": "complete"
+    },
+    {
+      "route": "/apparel/",
+      "width": 390,
+      "motion": "complete"
+    },
+    {
+      "route": "/apparel/",
+      "width": 1366,
+      "motion": "complete"
+    },
+    {
+      "route": "/yoshis-book/",
+      "width": 390,
+      "motion": "not used"
+    },
+    {
+      "route": "/yoshis-book/",
+      "width": 1366,
+      "motion": "not used"
+    },
+    {
+      "route": "/training/",
+      "width": 390,
+      "motion": "complete"
+    },
+    {
+      "route": "/training/",
+      "width": 1366,
+      "motion": "complete"
+    },
+    {
+      "route": "/programs/",
+      "width": 390,
+      "motion": "complete"
+    },
+    {
+      "route": "/programs/",
+      "width": 1366,
+      "motion": "complete"
+    },
+    {
+      "route": "/media/",
+      "width": 390,
+      "motion": "complete"
+    },
+    {
+      "route": "/media/",
+      "width": 1366,
+      "motion": "complete"
+    },
+    {
+      "route": "/community/",
+      "width": 390,
+      "motion": "complete"
+    },
+    {
+      "route": "/community/",
+      "width": 1366,
+      "motion": "complete"
+    },
+    {
+      "route": "/contact/",
+      "width": 390,
+      "motion": "complete"
+    },
+    {
+      "route": "/contact/",
+      "width": 1366,
+      "motion": "complete"
+    },
+    {
+      "route": "/privacy/",
+      "width": 390,
+      "motion": "not used"
+    },
+    {
+      "route": "/terms/",
+      "width": 390,
+      "motion": "not used"
+    },
+    {
+      "route": "/shipping-returns/",
+      "width": 390,
+      "motion": "not used"
+    },
+    {
+      "route": "/fitness-disclaimer/",
+      "width": 390,
+      "motion": "not used"
+    }
+  ],
+  "blocked": [
+    {
+      "directive": "script-src-elem",
+      "blocked": "inline"
+    },
+    {
+      "directive": "script-src-elem",
+      "blocked": "https://unapproved.example.invalid/inject.js"
+    },
+    {
+      "directive": "script-src-attr",
+      "blocked": "inline"
+    },
+    {
+      "directive": "form-action",
+      "blocked": "https://unapproved.example.invalid/collect"
+    }
+  ],
+  "form": [
+    "Whitespace rejected; Unicode and punctuation preserved; message stays data; valid POST intercepted once with CAPTCHA and empty honeypot.",
+    "Native required/email/length constraints and provider CAPTCHA configuration remain present with JavaScript disabled."
+  ],
+  "failures": [],
+  "browser": "153.0.8010.0"
+}

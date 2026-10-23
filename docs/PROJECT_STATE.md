@@ -1,5 +1,20 @@
 # Sport My Fitness — Current Project State
 
+## Contact and browser security — October 23, 2026
+
+PJ requested protection against spam and injections, especially at the contact
+form. Restrictive response security headers now limit scripts and form
+submissions, including in the private gateway. Approved motion uses an exact
+inline-script hash; its source, branding and visual styling are unchanged.
+FormSubmit CAPTCHA is explicit and the existing honeypot remains. The privacy
+draft describes provider spam/CAPTCHA processing. No real inquiry was sent.
+
+CSP protects browsers; it does not rate-limit direct FormSubmit requests.
+Provider activation/delivery and mandatory server-enforced challenge, field/size
+validation and durable rate controls remain explicit prelaunch gates. See
+`docs/CONTACT_SECURITY_20261023.md`, the launch checklist and the current security
+verification receipts. The full website remains private.
+
 ## Expanded sitemap format — October 23, 2026
 
 PJ requested Xin's Valpe sitemap example. The eight existing launch entries now

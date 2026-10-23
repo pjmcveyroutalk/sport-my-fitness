@@ -13,6 +13,12 @@ function createPreviewServer(root = path.resolve(__dirname, '..')) {
         res.writeHead(400); return res.end('Invalid path');
       }
       const url = new URL(req.url, 'http://preview.invalid');
+      for (const rule of config.headers || []) {
+        // Only the universal and exact header sources used by this project.
+        if (rule.source === '/(.*)' || rule.source === url.pathname) {
+          for (const header of rule.headers) res.setHeader(header.key, header.value);
+        }
+      }
       if (!['GET','HEAD'].includes(req.method)) { res.writeHead(405); return res.end(); }
       const rule = (config.redirects || []).find(item => item.source === url.pathname);
       if (rule) {

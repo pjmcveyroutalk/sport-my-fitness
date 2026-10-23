@@ -1,0 +1,98 @@
+{
+  "baseline": "649150181ca3b61c2cac96036eb259efd16ab6b0",
+  "nodeContracts": {
+    "passed": 17,
+    "failed": 0,
+    "command": "node --test test/site-security.test.cjs test/clean-urls.test.cjs test/pilot-verify-production.test.js test/apparel-catalog.test.mjs"
+  },
+  "sitemapDateTests": 6,
+  "preservedFiles": [
+    {
+      "file": "assets/brand/sport-my-fitness-header.svg",
+      "unchanged": true,
+      "sha256": "b5bcf5089da077718f152f24a255f44b42bd7c0434ba1f790da410d39fda86e8"
+    },
+    {
+      "file": "site-design.css",
+      "unchanged": true,
+      "sha256": "ee4ee29d6a5f8bbbf2089ad2d11132457795efcb32f1d199bebfe8d694e962b7"
+    },
+    {
+      "file": "site-menu.js",
+      "unchanged": true,
+      "sha256": "3d4310160d4cea432a6cf780be279c95bf5a6fe4d8aa1cac71bcd6d350a272d7"
+    },
+    {
+      "file": "site-motion.js",
+      "unchanged": true,
+      "sha256": "b529c0f54a0f2beb78496a264c12ba3a1d05f3545daf59f22e00d49110a786da"
+    },
+    {
+      "file": "home-water-motion.js",
+      "unchanged": true,
+      "sha256": "e159f8bffd1882622378042265f5c9bda50f4b67843d8a417c8fec352c26f03a"
+    },
+    {
+      "file": "contact.js",
+      "unchanged": true,
+      "sha256": "d791c23847564472ef02a741094da4338e6cdf4df15aef489dbb5beab693e065"
+    },
+    {
+      "file": "contact.css",
+      "unchanged": true,
+      "sha256": "7add6dd6baf6aaec8d3ffcfdc77a4689540668aa0d36f4f06d4140049a073eca"
+    },
+    {
+      "file": "robots.txt",
+      "unchanged": true,
+      "sha256": "a30ff31c8ecc242995483f6bfcd25f428654058ccb9620bed4ae6e23caa36007"
+    },
+    {
+      "file": "index.html",
+      "unchanged": true,
+      "sha256": "5eb09625839b52a5ab1507f2724a351e68f1305b94cbe012406af76d92a63a78"
+    },
+    {
+      "file": "apparel.html",
+      "unchanged": true,
+      "sha256": "d906aeb6d828740ae0b276b917b62129cbd241253fa0fd32e24edd525a3dd60d"
+    },
+    {
+      "file": "yoshis-book.html",
+      "unchanged": true,
+      "sha256": "50ad3fe22bfaac18f21983238b4ba7c749d9f4550eb858318ffb7893296b872c"
+    },
+    {
+      "file": "training.html",
+      "unchanged": true,
+      "sha256": "2c4dec290e5bca279582aa205acab4f2cc709ca284e8eff5bf9d7310da37cf0b"
+    },
+    {
+      "file": "programs.html",
+      "unchanged": true,
+      "sha256": "15da6cc62208ebc7a77b8c4c35ca79e11e49d430c5aac3c790401578bf39138b"
+    },
+    {
+      "file": "media.html",
+      "unchanged": true,
+      "sha256": "f171be407571aa99e6568bae952487192de60069dd0b88bd0683682800db293c"
+    },
+    {
+      "file": "community.html",
+      "unchanged": true,
+      "sha256": "f125aa643b5b7a09ecd6d3610308e901e8b99f703185e0ea71e3a2afde6284af"
+    }
+  ],
+  "contactMarkupChanges": [
+    "Explicit UTF-8 form encoding",
+    "Explicit provider CAPTCHA enabled"
+  ],
+  "browserEvidence": "verification/site-security-browser-20261023.json",
+  "externalMessagesSent": 0,
+  "productionLoginsPerformed": 0,
+  "unverified": [
+    "Provider activation and mailbox delivery",
+    "Provider-enforced mandatory challenge, request schema limits and durable rate limiting"
+  ],
+  "publicLaunch": false
+}

@@ -63,10 +63,10 @@ fs.mkdirSync(out, {recursive: true});
     report.navigation.push('Home → Privacy → Terms → Back');
     await page.goto(base + '/contact/');
     const form = page.locator('#inquiry-form');
-    assert.equal(await form.getAttribute('action'), 'https://formsubmit.co/Yoshi_barnes@outlook.com');
+    assert.equal(await form.getAttribute('action'), '/api/contact/');
     await page.locator('#inquiry-privacy a').click();
     assert.equal(new URL(page.url()).pathname, '/privacy/');
-    report.navigation.push('Contact notice → Privacy; form delivery destination retained');
+    report.navigation.push('Contact notice → Privacy; server submission action retained');
     for (const route of policies) {
       await page.goto(base + route);
       await page.emulateMedia({media: 'print'});

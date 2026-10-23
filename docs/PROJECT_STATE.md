@@ -1,5 +1,22 @@
 # Sport My Fitness — Current Project State
 
+## Server contact protection staged — October 23, 2026
+
+PJ requested completion of mandatory server-side bot protection and hosted rate
+limiting. The replacement is prepared on `review/server-contact-protection-20261023`.
+It keeps the approved visuals and uses BotID Basic, Vercel's persistent rate
+service, strict server validation, a fixed recipient and truthful form receipts.
+The gateway executes the handler on the visitor's host after checking its
+existing session; contact POSTs are never proxied with a review bypass secret.
+
+Independent `RATE_LIMIT_SECRET` values were installed on both production
+projects. No existing credential was retrieved or changed. The Vercel firewall
+connector returns `404 Seawall Config not found` for reads and writes, so its
+rule is prepared but not active or verified. Main and the current working form
+remain at `70bfd5ee013bbd738df8732d62f9430fdb028bcb`. Finish the concrete dashboard
+step and hosted checks before merging/deploying this replacement. No public
+launch or real inquiry was performed. See `docs/SERVER_CONTACT_PROTECTION_20261023.md`.
+
 ## Contact and browser security — October 23, 2026
 
 PJ requested protection against spam and injections, especially at the contact

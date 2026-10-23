@@ -39,3 +39,25 @@ See `docs/WEBSITE_POLICIES_20261022.md` for the approved scope and launch checks
 
 `node --test test/clean-urls.test.cjs` runs real HTTP requests through the gateway
 and the routing-aware site server using local synthetic credentials only.
+
+
+## Prepared server contact extension
+
+The staged server-protection branch admits `/api/contact/` only after the
+existing private session passes. It runs the shared handler on the original
+host, preserving platform BotID context and IP rate limiting. Do not forward
+contact POSTs upstream using `SMF_REVIEW_UPSTREAM_SECRET`.
+
+After the native firewall rule is configured and verified, include these
+additional sources when preparing the holding deployment:
+
+- `infrastructure/contact-handler.cjs` → `contact-handler.cjs` at deployment root
+- repository `package.json` and `package-lock.json` at deployment root, so Vercel
+  installs the pinned BotID/firewall SDKs
+- this directory's `vercel.json` as deployment root `vercel.json`; it matches the
+  currently deployed holding config and retains its 30-second function limit
+
+Replace `api/gateway.js` with this branch's gateway. Retain the other 16 holding
+sources and protection settings. The production-only `RATE_LIMIT_SECRET` has
+already been created as a separate sensitive value on each project. Never
+include its value in source files or deployment manifests.

@@ -98,10 +98,7 @@
 <div class="wrap contact-grid">
 <div class="inquiry-panel">
 <p class="inquiry-guide" id="inquiry-guide">Use this form to ask about your first session. Share your goals and preferred training days, or select “Help me choose”.</p>
-<form action="https://formsubmit.co/Yoshi_barnes@outlook.com" aria-describedby="inquiry-guide inquiry-privacy" aria-label="Send a message about training" id="inquiry-form" method="post" accept-charset="UTF-8">
-<input name="_subject" type="hidden" value="Sport My Fitness — new website message"/>
-<input name="_template" type="hidden" value="table"/>
-<input name="_captcha" type="hidden" value="true"/>
+<form action="/api/contact/" aria-describedby="inquiry-guide inquiry-privacy" aria-label="Send a message about training" id="inquiry-form" method="post" accept-charset="UTF-8">
 <div aria-hidden="true" class="contact-honeypot"><input aria-label="Leave this field empty" autocomplete="off" name="_honey" tabindex="-1" type="text"/></div>
 <div class="field-row">
 <div class="field"><label for="inquiry-name">Your name</label><input autocomplete="name" id="inquiry-name" maxlength="100" name="name" required=""/></div>
@@ -109,7 +106,9 @@
 </div>
 <div class="field"><label for="inquiry-interest">Interested in</label><select id="inquiry-interest" name="interest"><option>Help me choose</option><option>Personal training</option><option>Semi-private or group training</option><option>Online coaching</option><option>Summer group class</option><option>Kids’ camp</option><option>R&amp;B stretching</option><option>Life coaching</option><option>Functional movement &amp; rehab</option><option>Mental performance course</option><option>Packages</option></select></div>
 <div class="field"><label for="inquiry-goals">Your goals or questions</label><textarea id="inquiry-goals" maxlength="1500" name="goals" required="" rows="4"></textarea></div>
-<button class="button form-button" type="submit">Send <span aria-hidden="true">→</span></button>
+<button class="button form-button" type="submit" disabled>Send <span aria-hidden="true">→</span></button>
+<p class="policy-context" id="inquiry-status" role="status" aria-live="polite" hidden></p>
+<noscript><p class="policy-context">Please enable JavaScript to send this form, or contact Yoshi by phone or email.</p></noscript>
 <p class="policy-context" id="inquiry-privacy">Please keep your message general. Do not include medical records, payment details or information about a child. Read our <a href="/privacy/">Privacy Policy</a> to see how your message is handled.</p>
 </form>
 </div>
@@ -141,6 +140,7 @@
 </section>
 </main>
 <footer class="site-footer"><div class="wrap footer-bottom"><span>© <span id="year">2026</span> Sport My Fitness · Milwaukee</span><nav class="footer-legal-nav" aria-label="Legal"><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/shipping-returns/">Shipping &amp; returns</a><a href="/fitness-disclaimer/">Fitness disclaimer</a></nav></div></footer>
-<script src="/contact.js?v=approved-glass-1"></script>
+<script src="/assets/contact/bot-protection.js?v=server-guard-20261023"></script>
+<script src="/contact.js?v=server-guard-20261023"></script>
 </body>
 </html>

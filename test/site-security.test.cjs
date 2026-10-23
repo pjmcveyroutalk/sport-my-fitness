@@ -46,7 +46,7 @@ test('every website page receives the script and submission restrictions, includ
     const policy = response.headers.get('content-security-policy');
     assert(policy?.includes("script-src 'self' 'sha256-"), route + ': restrict scripts');
     assert(!/script-src[^;]*'unsafe-(?:inline|eval)'/.test(policy));
-    for (const directive of ["script-src-attr 'none'", "base-uri 'none'", "object-src 'none'", "frame-ancestors 'none'", "form-action https://formsubmit.co/Yoshi_barnes@outlook.com"]) assert(policy.includes(directive), directive);
+    for (const directive of ["script-src-attr 'none'", "base-uri 'none'", "object-src 'none'", "frame-ancestors 'none'", "form-action 'self'"]) assert(policy.includes(directive), directive);
     assert.equal(response.headers.get('x-content-type-options'), 'nosniff');
     assert.equal(response.headers.get('x-frame-options'), 'DENY');
   }
@@ -62,10 +62,10 @@ test('approved inline motion boot code is authorized by its exact hash', async (
     }
   }
 });
-test('provider CAPTCHA, honeypot, fixed destination and message limits remain configured without uploads or autoresponse', () => {
+test('same-origin server submission, honeypot and message limits remain configured without service controls', () => {
   const html = fs.readFileSync(path.join(root, 'contact.html'), 'utf8');
-  assert.match(html, /action="https:\/\/formsubmit\.co\/Yoshi_barnes@outlook\.com"/);
-  assert.match(html, /name="_captcha"[^>]*value="true"/);
+  assert.match(html, /action="\/api\/contact\/"/);
+  assert(!/name="_(?:captcha|subject|template|cc|next)"/.test(html));
   assert.match(html, /name="_honey"/);
   assert.match(html, /id="inquiry-goals" maxlength="1500"/);
   assert(!/type="file"|name="_autoresponse"|name="_cc"|name="_captcha"[^>]*value="false"/.test(html));

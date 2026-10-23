@@ -2,6 +2,31 @@
 
 Start at [docs/PROJECT_STATE.md](docs/PROJECT_STATE.md). The October 16 black/turquoise glass-menu design and latest duplicate-removal instructions supersede earlier visual references and the requirement to preserve redundant page-step panels.
 
+## Before public launch: finalize website policies
+
+The four policy pages are implemented in the private preview. Their final
+wording and remaining business details are open launch-checklist items:
+
+- [ ] Review and approve the Privacy Policy, Website Terms, Shipping & Returns,
+  and Fitness Disclaimer for the features actually launching, with appropriate
+  legal review.
+- [ ] Confirm Yoshi's legal business identity, contact information, inquiry/email
+  handling, data-retention practices and service providers. Ensure the Privacy
+  Policy matches the final website and any analytics or consent setup.
+- [ ] Confirm shipping destinations, rates and processing estimates; return and
+  exchange eligibility, request periods and return-shipping responsibilities;
+  and digital-edition delivery, use and refund terms before online orders open.
+  If ordering is not launching with the website, keep its unavailable status
+  accurate and checkout disabled.
+- [ ] After approval, replace private-draft labels with the approved public
+  wording and effective dates, then verify all footer links and the inquiry
+  privacy notice.
+- [ ] Obtain PJ's explicit public-launch approval before removing access
+  restrictions or allowing indexing of the full website.
+
+Booking/cancellation policy remains deferred. Participant, minor and guardian
+forms remain excluded. See [policy scope and remaining decisions](docs/WEBSITE_POLICIES_20261022.md).
+
 ## Required before release
 
 1. Apply the approved identity to all seven pages. Use the original logo asset intact, scaled proportionally; no generated, traced, simplified or rearranged substitute.

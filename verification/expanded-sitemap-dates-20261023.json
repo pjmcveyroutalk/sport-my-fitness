@@ -1,0 +1,140 @@
+{
+  "pages": 8,
+  "source": "Committed main-content markup and referenced image/data files",
+  "entries": [
+    {
+      "route": "/home/",
+      "lastmod": "2026-10-22T18:54:45Z",
+      "content_commit": "7b9666e724392021089ee1d7339b64b88b310fb2",
+      "content_dependencies": [
+        "assets/photos/smf-lakefront-bench-20261022-1200.webp",
+        "assets/photos/smf-lakefront-bench-20261022-1584.webp",
+        "assets/photos/smf-lakefront-bench-20261022-800.webp"
+      ],
+      "changefreq": "weekly",
+      "priority": "1.0"
+    },
+    {
+      "route": "/apparel/",
+      "lastmod": "2026-10-22T18:54:45Z",
+      "content_commit": "7b9666e724392021089ee1d7339b64b88b310fb2",
+      "content_dependencies": [
+        "assets/apparel/campaign-1600.webp",
+        "assets/apparel/campaign-960.webp",
+        "assets/apparel/campaign-full.webp",
+        "assets/apparel/placeholders/sample-hoodie-20261021.webp",
+        "assets/apparel/placeholders/sample-jacket-20261021.webp",
+        "assets/apparel/placeholders/sample-pants-20261021.webp",
+        "assets/apparel/placeholders/sample-tee-20261021.webp",
+        "assets/apparel/catalog.json"
+      ],
+      "changefreq": "weekly",
+      "priority": "0.9"
+    },
+    {
+      "route": "/yoshis-book/",
+      "lastmod": "2026-10-22T18:54:45Z",
+      "content_commit": "7b9666e724392021089ee1d7339b64b88b310fb2",
+      "content_dependencies": [],
+      "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
+      "route": "/training/",
+      "lastmod": "2026-10-22T18:54:45Z",
+      "content_commit": "7b9666e724392021089ee1d7339b64b88b310fb2",
+      "content_dependencies": [
+        "assets/photos/training-gym-background-1200.webp",
+        "assets/photos/training-gym-background-1586.webp",
+        "assets/photos/training-gym-background-480.webp",
+        "assets/photos/training-gym-background-800.webp",
+        "assets/photos/yoshi-community-socialx-clarity-1200.webp",
+        "assets/photos/yoshi-community-socialx-clarity-1536.webp",
+        "assets/photos/yoshi-community-socialx-clarity-480.webp",
+        "assets/photos/yoshi-community-socialx-clarity-800.webp",
+        "assets/photos/yoshi-fitness-facebook-clarity-1200.webp",
+        "assets/photos/yoshi-fitness-facebook-clarity-1254.webp",
+        "assets/photos/yoshi-fitness-facebook-clarity-480.webp",
+        "assets/photos/yoshi-fitness-facebook-clarity-800.webp",
+        "assets/photos/yoshi-leading-session-socialx-clarity-1200.webp",
+        "assets/photos/yoshi-leading-session-socialx-clarity-1536.webp",
+        "assets/photos/yoshi-leading-session-socialx-clarity-480.webp",
+        "assets/photos/yoshi-leading-session-socialx-clarity-800.webp",
+        "assets/photos/yoshi-smiling-facebook-clarity-1200.webp",
+        "assets/photos/yoshi-smiling-facebook-clarity-1254.webp",
+        "assets/photos/yoshi-smiling-facebook-clarity-480.webp",
+        "assets/photos/yoshi-smiling-facebook-clarity-800.webp",
+        "assets/photos/yoshi-youth-coaching-2026-09-02-clarity-1200.webp",
+        "assets/photos/yoshi-youth-coaching-2026-09-02-clarity-1254.webp",
+        "assets/photos/yoshi-youth-coaching-2026-09-02-clarity-480.webp",
+        "assets/photos/yoshi-youth-coaching-2026-09-02-clarity-800.webp",
+        "assets/platforms/facebook.svg",
+        "assets/platforms/instagram.svg",
+        "assets/platforms/youtube.svg"
+      ],
+      "changefreq": "monthly",
+      "priority": "0.9"
+    },
+    {
+      "route": "/programs/",
+      "lastmod": "2026-10-22T18:54:45Z",
+      "content_commit": "7b9666e724392021089ee1d7339b64b88b310fb2",
+      "content_dependencies": [
+        "assets/photos/yoshi-coaching-1000.webp",
+        "assets/photos/yoshi-coaching-480.webp",
+        "assets/photos/yoshi-coaching-800.webp"
+      ],
+      "changefreq": "monthly",
+      "priority": "0.9"
+    },
+    {
+      "route": "/media/",
+      "lastmod": "2026-10-22T18:54:45Z",
+      "content_commit": "7b9666e724392021089ee1d7339b64b88b310fb2",
+      "content_dependencies": [
+        "assets/photos/community-floor-work-polished-1200.webp",
+        "assets/photos/community-floor-work-polished-1536.webp",
+        "assets/photos/community-floor-work-polished-480.webp",
+        "assets/photos/community-floor-work-polished-800.webp",
+        "assets/photos/community-strength-polished-1200.webp",
+        "assets/photos/community-strength-polished-1536.webp",
+        "assets/photos/community-strength-polished-480.webp",
+        "assets/photos/community-strength-polished-800.webp",
+        "assets/photos/yoshi-group-squats-polished-1200.webp",
+        "assets/photos/yoshi-group-squats-polished-1536.webp",
+        "assets/photos/yoshi-group-squats-polished-480.webp",
+        "assets/photos/yoshi-group-squats-polished-800.webp",
+        "assets/platforms/tmj4.svg",
+        "assets/platforms/youtube.svg"
+      ],
+      "changefreq": "weekly",
+      "priority": "0.7"
+    },
+    {
+      "route": "/community/",
+      "lastmod": "2026-10-22T18:54:45Z",
+      "content_commit": "7b9666e724392021089ee1d7339b64b88b310fb2",
+      "content_dependencies": [
+        "assets/photos/community-body-camp-1200.webp",
+        "assets/photos/community-body-camp-1246.webp",
+        "assets/photos/community-body-camp-480.webp",
+        "assets/photos/community-body-camp-800.webp"
+      ],
+      "changefreq": "monthly",
+      "priority": "0.7"
+    },
+    {
+      "route": "/contact/",
+      "lastmod": "2026-10-23T01:06:25Z",
+      "content_commit": "ac956ea18bcecd65a4af3bd8bc8132ae36e8de70",
+      "content_dependencies": [
+        "assets/photos/smf-storefront-maps-clarity-1200.webp",
+        "assets/photos/smf-storefront-maps-clarity-1448.webp",
+        "assets/photos/smf-storefront-maps-clarity-480.webp",
+        "assets/photos/smf-storefront-maps-clarity-800.webp"
+      ],
+      "changefreq": "monthly",
+      "priority": "0.8"
+    }
+  ]
+}

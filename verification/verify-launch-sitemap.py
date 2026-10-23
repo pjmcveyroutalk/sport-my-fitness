@@ -4,11 +4,15 @@ Run locally before launch and when public pages change. This checks source files
 the separate launch checklist covers public availability and Search Console.
 """
 import argparse
+from datetime import datetime, timezone
+from decimal import Decimal
 import json
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urlsplit
 import xml.etree.ElementTree as ET
+import subprocess
+import sys
 
 ROOT = Path(__file__).resolve().parent.parent
 ORIGIN = "https://sportmyfitness.com"
@@ -64,9 +68,15 @@ def verify():
     require(all(entry.tag == NAMESPACE + "url" for entry in entries), "Unexpected sitemap element")
     urls = []
     for entry in entries:
+        require([child.tag for child in entry] == [NAMESPACE + tag for tag in ["loc", "lastmod", "changefreq", "priority"]], "Each entry needs exactly one location, date, frequency and priority")
         locations = entry.findall(NAMESPACE + "loc")
         require(len(locations) == 1 and locations[0].text, "Each entry needs one location")
         urls.append(locations[0].text.strip())
+        modified = datetime.fromisoformat(entry.findtext(NAMESPACE + "lastmod").replace("Z", "+00:00"))
+        require(modified.tzinfo is not None and modified <= datetime.now(timezone.utc), "Invalid or future modification date")
+        require(entry.findtext(NAMESPACE + "changefreq") in {"always", "hourly", "daily", "weekly", "monthly", "yearly", "never"}, "Invalid change-frequency hint")
+        priority = Decimal(entry.findtext(NAMESPACE + "priority"))
+        require(priority.is_finite() and 0 <= priority <= 1, "Priority must be between zero and one")
     require(len(urls) == len(set(urls)), "Duplicate sitemap locations")
     require(set(urls) == {ORIGIN + route for route in navigation}, "Sitemap must match the approved primary destinations")
     private_noindex = []
@@ -101,12 +111,17 @@ def verify():
         require(ORIGIN + route not in urls, "Review draft exposed in sitemap")
         page = Page((ROOT / rewrites[route].lstrip("/")).read_text())
         require("noindex" in page.meta.get("robots", "").lower(), "Review draft lost noindex: " + route)
+    generated = json.loads(subprocess.check_output([sys.executable, str(ROOT / "design-tools/build-sitemap.py"), "--check"]))
     return {
         "status": "PREPARED_FOR_APPROVED_LAUNCH",
         "sitemap": ORIGIN + "/sitemap.xml",
         "pages": len(urls),
         "urls": urls,
         "canonical_checks": len(urls),
+        "lastmod_checks": len(urls),
+        "changefreq_checks": len(urls),
+        "priority_checks": len(urls),
+        "generation_and_content_dates_verified": generated["pages"] == len(urls),
         "social_image_checks": image_count,
         "draft_policy_pages_excluded": drafts,
         "source_noindex_retained_pending_launch_review": private_noindex,

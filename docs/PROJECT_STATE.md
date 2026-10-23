@@ -1,5 +1,21 @@
 # Sport My Fitness — Current Project State
 
+## Expanded sitemap format — October 23, 2026
+
+PJ requested Xin's Valpe sitemap example. The eight existing launch entries now
+include `lastmod`, `changefreq` and `priority`. Update dates are derived from
+committed main-content markup and referenced image/data files, with per-page
+provenance. The generator ignores head/footer-only churn and rejects unknown
+dates or uncommitted content. The verifier detects stale XML and validates the
+additional fields. Google ignores the two optional frequency/priority hints;
+no ranking improvement is claimed.
+
+Six date-history tests and all 13 existing contracts pass. All page HTML,
+branding, movement, routes, robots and access controls retain their previous
+bytes. The full site remains private; publication and Search Console submission
+await launch approval. See `docs/LAUNCH_SITEMAP_20261023.md` and its generation and
+verification receipts.
+
 ## Launch sitemap prepared — October 23, 2026
 
 PJ requested a sitemap prepared for launch. `sitemap.xml` now lists the eight

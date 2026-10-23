@@ -13,6 +13,10 @@
     "https://sportmyfitness.com/contact/"
   ],
   "canonical_checks": 8,
+  "lastmod_checks": 8,
+  "changefreq_checks": 8,
+  "priority_checks": 8,
+  "generation_and_content_dates_verified": true,
   "social_image_checks": 12,
   "draft_policy_pages_excluded": [
     "/privacy/",

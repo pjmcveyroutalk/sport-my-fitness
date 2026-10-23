@@ -7,6 +7,10 @@ Start at [docs/PROJECT_STATE.md](docs/PROJECT_STATE.md). The October 16 black/tu
 - [x] Prepare `sitemap.xml` with the eight primary pages on
   `https://sportmyfitness.com`, matching page canonical URLs and the full site's
   `robots.txt` sitemap reference. Source validation passes on October 23, 2026.
+- [x] Expand each entry with verified content-update dates, change-frequency
+  hints and priorities, following the Valpe example. Regeneration and source
+  checks protect date accuracy and catch stale XML. Google ignores the optional
+  frequency/priority hints; they are not ranking guarantees.
 - [ ] Review the final list of pages intended for search results. Keep Admin,
   redirects, private pages and unapproved policy drafts out. Resolve the current
   Apparel and Book `noindex` settings only when their final content and public
@@ -22,8 +26,9 @@ Start at [docs/PROJECT_STATE.md](docs/PROJECT_STATE.md). The October 16 black/tu
   Search Console property, submit the public sitemap, record its processing
   status and monitor page indexing. Submission has not been performed.
 
-Run `python3 verification/verify-launch-sitemap.py` before launch and after public
-page changes. See [sitemap preparation and launch steps](docs/LAUNCH_SITEMAP_20261023.md).
+After committing content changes, run `python3 design-tools/build-sitemap.py`,
+then `python3 verification/verify-launch-sitemap.py`. Repeat the check before
+launch. See [sitemap preparation and launch steps](docs/LAUNCH_SITEMAP_20261023.md).
 
 ## Before public launch: finalize website policies
 

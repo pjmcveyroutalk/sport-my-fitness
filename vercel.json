@@ -116,6 +116,26 @@
       "source": "/apparel-collection/",
       "destination": "/apparel/#collection",
       "permanent": true
+    },
+    {
+      "source": "/privacy.html",
+      "destination": "/privacy/",
+      "permanent": true
+    },
+    {
+      "source": "/terms.html",
+      "destination": "/terms/",
+      "permanent": true
+    },
+    {
+      "source": "/shipping-returns.html",
+      "destination": "/shipping-returns/",
+      "permanent": true
+    },
+    {
+      "source": "/fitness-disclaimer.html",
+      "destination": "/fitness-disclaimer/",
+      "permanent": true
     }
   ],
   "rewrites": [
@@ -150,6 +170,22 @@
     {
       "source": "/contact/",
       "destination": "/contact.html"
+    },
+    {
+      "source": "/privacy/",
+      "destination": "/privacy.html"
+    },
+    {
+      "source": "/terms/",
+      "destination": "/terms.html"
+    },
+    {
+      "source": "/shipping-returns/",
+      "destination": "/shipping-returns.html"
+    },
+    {
+      "source": "/fitness-disclaimer/",
+      "destination": "/fitness-disclaimer.html"
     }
   ]
 }

@@ -1,5 +1,23 @@
 # Sport My Fitness — Current Project State
 
+## Website policy pages — October 22, 2026
+
+PJ approved Privacy, Website Terms, Shipping & Returns, and a Fitness Disclaimer.
+All four are now readable private review pages with clean routes and consistent
+links in all eight existing footers. Contact has a privacy notice beside its
+existing inquiry form. Booking/cancellation are deferred; participant, minor
+and guardian forms were explicitly removed from scope. No such forms or
+signature collection are added.
+
+The policies describe the actual current website. Commercial shipping/return
+choices, business identity and retention practices remain owner confirmations
+before public launch. Draft status is visible; no universal compliance or legal
+review is claimed. The protected gateway adds only the four named routes.
+Original branding, page content, approved headers/menus and automatic water
+movement are preserved. Thirteen contracts, 32 Chromium layouts, two navigation
+flows, four print cases and three private-footer cases pass. See
+`docs/WEBSITE_POLICIES_20261022.md` and its verification receipts.
+
 ## Matching website favicon — October 22, 2026
 
 PJ requested the favicon match the corrected horizontal website branding. New

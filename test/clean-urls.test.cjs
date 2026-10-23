@@ -7,7 +7,7 @@ const path = require('node:path');
 const {createPreviewServer} = require('../verification/site-preview-server.cjs');
 const {createGateway} = require('../infrastructure/review-gateway/gateway.cjs');
 const root = path.resolve(__dirname, '..');
-const pages = {'/home/':'index.html','/apparel/':'apparel.html','/yoshis-book/':'yoshis-book.html','/training/':'training.html','/programs/':'programs.html','/media/':'media.html','/community/':'community.html','/contact/':'contact.html'};
+const pages = {'/home/':'index.html','/apparel/':'apparel.html','/yoshis-book/':'yoshis-book.html','/training/':'training.html','/programs/':'programs.html','/media/':'media.html','/community/':'community.html','/contact/':'contact.html','/privacy/':'privacy.html','/terms/':'terms.html','/shipping-returns/':'shipping-returns.html','/fitness-disclaimer/':'fitness-disclaimer.html'};
 const password = 'routing-fixture-only';
 const salt = '0123456789abcdef0123456789abcdef';
 let site, gateway, siteUrl, gatewayUrl, cookie;

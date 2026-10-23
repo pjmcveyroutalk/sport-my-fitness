@@ -1,0 +1,18 @@
+{
+  "browser": "153.0.8010.0",
+  "checks": [
+    {
+      "width": 320,
+      "linksAccessible": true
+    },
+    {
+      "width": 390,
+      "linksAccessible": true
+    },
+    {
+      "width": 1366,
+      "linksAccessible": true
+    }
+  ],
+  "failures": []
+}

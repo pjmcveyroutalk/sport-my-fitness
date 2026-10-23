@@ -8,7 +8,7 @@ const scrypt = promisify(crypto.scrypt);
 const COOKIE = '__Host-smf_admin';
 const LIFETIME = 8 * 60 * 60;
 const UPSTREAM = 'https://sport-my-fitness.vercel.app';
-const PAGE_ROUTES = new Set(['/home/', '/apparel/', '/yoshis-book/', '/training/', '/programs/', '/media/', '/community/', '/contact/']);
+const PAGE_ROUTES = new Set(['/home/', '/apparel/', '/yoshis-book/', '/training/', '/programs/', '/media/', '/community/', '/contact/', '/privacy/', '/terms/', '/shipping-returns/', '/fitness-disclaimer/']);
 const PAGE_ALIASES = new Map([
   ['/', '/home/'], ['/index', '/home/'], ['/index/', '/home/'], ['/index.html', '/home/'],
   ...[...PAGE_ROUTES].flatMap(route => [[route.slice(0, -1), route], ...(route === '/home/' ? [] : [[route.slice(0, -1) + '.html', route]])]),

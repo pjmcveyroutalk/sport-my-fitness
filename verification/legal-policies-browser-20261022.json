@@ -1,0 +1,176 @@
+{
+  "layouts": [
+    {
+      "route": "/privacy/",
+      "width": 320,
+      "theme": "dark"
+    },
+    {
+      "route": "/privacy/",
+      "width": 390,
+      "theme": "dark"
+    },
+    {
+      "route": "/privacy/",
+      "width": 1366,
+      "theme": "dark"
+    },
+    {
+      "route": "/terms/",
+      "width": 320,
+      "theme": "dark"
+    },
+    {
+      "route": "/terms/",
+      "width": 390,
+      "theme": "dark"
+    },
+    {
+      "route": "/terms/",
+      "width": 1366,
+      "theme": "dark"
+    },
+    {
+      "route": "/shipping-returns/",
+      "width": 320,
+      "theme": "dark"
+    },
+    {
+      "route": "/shipping-returns/",
+      "width": 390,
+      "theme": "dark"
+    },
+    {
+      "route": "/shipping-returns/",
+      "width": 1366,
+      "theme": "dark"
+    },
+    {
+      "route": "/fitness-disclaimer/",
+      "width": 320,
+      "theme": "dark"
+    },
+    {
+      "route": "/fitness-disclaimer/",
+      "width": 390,
+      "theme": "dark"
+    },
+    {
+      "route": "/fitness-disclaimer/",
+      "width": 1366,
+      "theme": "dark"
+    },
+    {
+      "route": "/privacy/",
+      "width": 320,
+      "theme": "light"
+    },
+    {
+      "route": "/privacy/",
+      "width": 390,
+      "theme": "light"
+    },
+    {
+      "route": "/privacy/",
+      "width": 1366,
+      "theme": "light"
+    },
+    {
+      "route": "/terms/",
+      "width": 320,
+      "theme": "light"
+    },
+    {
+      "route": "/terms/",
+      "width": 390,
+      "theme": "light"
+    },
+    {
+      "route": "/terms/",
+      "width": 1366,
+      "theme": "light"
+    },
+    {
+      "route": "/shipping-returns/",
+      "width": 320,
+      "theme": "light"
+    },
+    {
+      "route": "/shipping-returns/",
+      "width": 390,
+      "theme": "light"
+    },
+    {
+      "route": "/shipping-returns/",
+      "width": 1366,
+      "theme": "light"
+    },
+    {
+      "route": "/fitness-disclaimer/",
+      "width": 320,
+      "theme": "light"
+    },
+    {
+      "route": "/fitness-disclaimer/",
+      "width": 390,
+      "theme": "light"
+    },
+    {
+      "route": "/fitness-disclaimer/",
+      "width": 1366,
+      "theme": "light"
+    },
+    {
+      "route": "/home/",
+      "width": 390,
+      "theme": "dark"
+    },
+    {
+      "route": "/apparel/",
+      "width": 390,
+      "theme": "dark"
+    },
+    {
+      "route": "/yoshis-book/",
+      "width": 390,
+      "theme": "dark"
+    },
+    {
+      "route": "/training/",
+      "width": 390,
+      "theme": "dark"
+    },
+    {
+      "route": "/programs/",
+      "width": 390,
+      "theme": "dark"
+    },
+    {
+      "route": "/media/",
+      "width": 390,
+      "theme": "dark"
+    },
+    {
+      "route": "/community/",
+      "width": 390,
+      "theme": "dark"
+    },
+    {
+      "route": "/contact/",
+      "width": 390,
+      "theme": "dark"
+    }
+  ],
+  "navigation": [
+    "Home → Privacy → Terms → Back",
+    "Contact notice → Privacy; form delivery destination retained"
+  ],
+  "print": [
+    "/privacy/",
+    "/terms/",
+    "/shipping-returns/",
+    "/fitness-disclaimer/"
+  ],
+  "failures": [],
+  "browser": "153.0.8010.0"
+}

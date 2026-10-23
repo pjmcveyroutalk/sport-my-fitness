@@ -461,17 +461,17 @@
 
         <div class="footer-legal-simple">
 
-          <span>
+          <a href="/terms/">
             Terms of Use
-          </span>
+          </a>
 
           <span aria-hidden="true">
             ·
           </span>
 
-          <span>
+          <a href="/privacy/">
             Privacy Policy
-          </span>
+          </a>
 
         </div>
 

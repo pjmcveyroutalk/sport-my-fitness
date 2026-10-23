@@ -31,5 +31,11 @@ The main website's separate root file retains its sitemap reference for launch.
 The horizontal header is a website presentation version. The branding package,
 master artwork and existing kit exports are kept separate and unchanged.
 
+The website-policy revision adds `/privacy/`, `/terms/`, `/shipping-returns/`
+and `/fitness-disclaimer/` to the protected page whitelist. It adds no public
+file permissions. The four pages and their source HTML remain private. Reuse
+all existing holding files and settings and replace only `api/gateway.js`.
+See `docs/WEBSITE_POLICIES_20261022.md` for the approved scope and launch checks.
+
 `node --test test/clean-urls.test.cjs` runs real HTTP requests through the gateway
 and the routing-aware site server using local synthetic credentials only.

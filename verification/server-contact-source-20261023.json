@@ -95,7 +95,7 @@
   },
   "blockedBy": "Vercel firewall API: 404 Seawall Config not found for configuration reads and writes",
   "remaining": [
-    "Configure hosted SDK rule through approved dashboard fallback",
+    "Resolve firewall configuration initialization, activate the prepared SDK rule on both projects and preserve other rules",
     "Verify actual native counter across processes and native window reset",
     "Verify deployed BotID proof and negative paths without real messages",
     "Deploy only after the counter is ready",
@@ -104,5 +104,6 @@
   "mainChanged": false,
   "realEmailsSent": 0,
   "realProductionLogins": 0,
-  "publicLaunch": false
+  "publicLaunch": false,
+  "firewallDiagnosticsReceipt": "verification/contact-firewall-api-20261023.json"
 }

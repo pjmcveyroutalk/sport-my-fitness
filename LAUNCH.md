@@ -42,9 +42,11 @@ launch. See [sitemap preparation and launch steps](docs/LAUNCH_SITEMAP_20261023.
   Existing review credentials remain untouched.
 - [ ] Finish the hosted firewall configuration on both projects. Vercel's
   connector returns `404 Seawall Config not found` for configuration reads and
-  writes, including explicit team scope. Configure the exact SDK rule in
-  `infrastructure/contact-firewall-rule.json` through an approved dashboard
-  fallback; do not replace unrelated rules.
+  writes, including explicitly scoped PUT and `rules.insert` PATCH. The existing
+  app connection can read the correct project; no reconnect is required for that
+  access. Resolve configuration initialization and activate the exact SDK rule in
+  `infrastructure/contact-firewall-rule.json`, preserving unrelated rules. See
+  `verification/contact-firewall-api-20261023.json`; stop unchanged API retries.
 - [ ] Verify the actual hosted counter persists across separate processes,
   returns 429 after six attempts per ten-minute window per key/region, and
   checks the right SDK ID. Keep Basic mode on both client and server; do not

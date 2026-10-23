@@ -61,11 +61,21 @@ Configure it on both existing projects, preserving any existing/draft rules:
 | Full site | `prj_gekwpLHnnGbcuGHOp47ieG9C93xJ` | https://vercel.com/routalk-builder/sport-my-fitness/firewall |
 | Private gateway | `prj_KlCwsCvrYBPgY5gcvKcQmpvaAGT5` | https://vercel.com/routalk-builder/sport-my-fitness-coming-soon/firewall |
 
-The connector returned `404: not_found — Seawall Config not found` for active
-and draft reads, a scoped read with the known team ID, configuration PUT and an
-initialization PATCH. These were API failures, not successful rule updates or
-automatic approval rejections. Avoid repeating the same calls without new
-evidence. The browser tool requires user approval before a browser fallback after repeated connector errors.
+The existing Vercel connection is authenticated and can read the correct project,
+team ownership, READY production deployment and protection settings. This is not
+a missing project connection. Active/draft configuration reads and writes return
+`404: not_found — Seawall Config not found`, including explicit team scope.
+The latest distinct attempts were an explicitly scoped configuration PUT and a
+scoped `rules.insert` PATCH; neither succeeded. The documented PUT is meant to
+create a configuration, so the 404 remains an unresolved platform/configuration
+failure, rather than evidence that the rate rule was created.
+
+Exact operations, scope and Vercel request IDs are recorded in
+`verification/contact-firewall-api-20261023.json`. These are API failures, not
+automatic approval rejections. Stop repeating them until new configuration state
+or a distinct supported initialization path is available. Browser fallback was
+authorized but reached a separate sign-in wall; no sign-in completed. Do not
+repeat account-access prompts or claim the existing app connection is missing.
 
 Independent fresh 48-byte random `RATE_LIMIT_SECRET` values have already been
 saved as sensitive, production-only environment variables on both projects.

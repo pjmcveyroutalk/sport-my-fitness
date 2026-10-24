@@ -1,0 +1,73 @@
+{
+  "date": "2026-10-23",
+  "status": "ACTIVATION_BLOCKED_BY_PROVIDER_PERMISSIONS",
+  "connectionPresent": true,
+  "teamId": "team_jC9jlJ9GZ9GSjrbYoD0pin3U",
+  "fullProjectId": "prj_gekwpLHnnGbcuGHOp47ieG9C93xJ",
+  "gatewayProjectId": "prj_KlCwsCvrYBPgY5gcvKcQmpvaAGT5",
+  "storageBindingFailure": {
+    "status": 403,
+    "code": "forbidden",
+    "operation": "POST /storage/stores/blob",
+    "resource": "projectEnvVars",
+    "message": "You don't have permission to create the project environment variable.",
+    "requestId": "iad1:sfo1::tvmvf-1792816179898-650d15ef3352"
+  },
+  "protectedPreviewFailure": {
+    "status": 403,
+    "code": "forbidden",
+    "stage": "read_protection_bypass",
+    "endpoint": "/v2/deployments/dpl_iWqyhao78ZLihnsMy6Te99uCN5xU/aliases"
+  },
+  "privateStore": {
+    "id": "store_4FTSRyxydcewHHGI",
+    "name": "smf-contact-security",
+    "access": "private",
+    "region": "iad1",
+    "runtimeBindingConfirmed": false
+  },
+  "preview": {
+    "id": "dpl_iWqyhao78ZLihnsMy6Te99uCN5xU",
+    "commit": "102a7f9a5f4e49d77d4ed7469daa2b54f08a5a93",
+    "state": "READY",
+    "counterReceiptRead": false
+  },
+  "approvedSourceHashesPreserved": true,
+  "nodeTestsPassed": 58,
+  "hostedCounterVerified": false,
+  "productionReplaced": false,
+  "mainSha": "70bfd5ee013bbd738df8732d62f9430fdb028bcb",
+  "existingCredentialsReadOrRotated": false,
+  "paidUpgradeRequested": false,
+  "realEmailsSent": 0,
+  "publicLaunch": false,
+  "browserGoogleFlow": "STOPPED_AFTER_AUTOMATIC_REVIEW_REJECTION_OF_SEPARATE_SIGN_IN",
+  "nextAction": "Update relevant permissions on the existing Vercel connection; do not repeat unchanged API calls or separate sign-in prompts",
+  "explicitTeamPreviewAccess": {
+    "status": 404,
+    "stage": "lookup_deployment",
+    "teamId": "team_jC9jlJ9GZ9GSjrbYoD0pin3U",
+    "deployment": "dpl_iWqyhao78ZLihnsMy6Te99uCN5xU"
+  },
+  "cliFallback": {
+    "binaryPresent": false,
+    "tokenEnvironmentConfigured": false,
+    "officialAuthFilePresent": false,
+    "credentialValuesInspected": false
+  },
+  "productionConfigurationPrepared": {
+    "fullSiteStoreIdAndPath": true,
+    "gatewayStoreIdAndPath": true,
+    "normalOidcOnBothProjects": true,
+    "runtimeAccessConfirmed": false
+  },
+  "requiredHostedCounterBuild": {
+    "id": "dpl_CiemqDexZT4bfhsw1oAVkaWhRvWE",
+    "sourceCommit": "e9d1117dabd704b0a98e62ba30a8d81e423c84cd",
+    "state": "ERROR",
+    "errorCode": "BUILD_UTILS_SPAWN_1",
+    "requiresHostedReceiptPass": true,
+    "productionTarget": false,
+    "normalProjectBuildDefaultsRestored": true
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-23",
+  "status": "AUTHENTICATED_PROJECT_ACCESS_CONFIRMED_FIREWALL_CONFIGURATION_NOT_FOUND",
+  "teamId": "team_jC9jlJ9GZ9GSjrbYoD0pin3U",
+  "projectRead": {
+    "projectId": "prj_KlCwsCvrYBPgY5gcvKcQmpvaAGT5",
+    "name": "sport-my-fitness-coming-soon",
+    "latestDeployment": "dpl_EGq6Ny1uPAGhzDcUsvk531e6b3Gz",
+    "readyState": "READY",
+    "protection": "prod_deployment_urls_and_all_previews"
+  },
+  "attempts": [
+    {
+      "operation": "GET /v1/security/firewall/config/active",
+      "projectId": "prj_gekwpLHnnGbcuGHOp47ieG9C93xJ",
+      "explicitTeamId": true,
+      "status": 404,
+      "code": "not_found",
+      "message": "Seawall Config not found.",
+      "requestId": "iad1:sfo1::xvhg4-1792791855798-543a1a6fa64d"
+    },
+    {
+      "operation": "PUT /v1/security/firewall/config",
+      "projectId": "prj_gekwpLHnnGbcuGHOp47ieG9C93xJ",
+      "explicitTeamId": true,
+      "purpose": "Create the prepared contact-only configuration after missing active configuration",
+      "status": 404,
+      "code": "not_found",
+      "message": "Seawall Config not found.",
+      "requestId": "iad1:sfo1::h9cws-1792791882187-fae41e1b957f"
+    },
+    {
+      "operation": "PATCH /v1/security/firewall/config",
+      "projectId": "prj_KlCwsCvrYBPgY5gcvKcQmpvaAGT5",
+      "explicitTeamId": true,
+      "action": "rules.insert",
+      "status": 404,
+      "code": "not_found",
+      "message": "Seawall Config not found.",
+      "requestId": "iad1:sfo1::wchcq-1792791914089-101608f7b2d1"
+    }
+  ],
+  "ruleFile": "infrastructure/contact-firewall-rule.json",
+  "configuredRuleConfirmed": false,
+  "hostedCounterVerified": false,
+  "apiFailuresAreApprovalRejections": false,
+  "furtherAutomaticRetries": "STOPPED_PENDING_NEW_CONFIGURATION_STATE_OR_DISTINCT_SUPPORTED_INITIALIZATION_PATH",
+  "newSecretsReadOrRotated": false,
+  "mainOrProductionChangedInThisDiagnosticPass": false,
+  "realEmailsSent": 0,
+  "publicLaunch": false,
+  "reference": "https://vercel.com/docs/rest-api/security/put-firewall-configuration"
+}

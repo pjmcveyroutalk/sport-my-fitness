@@ -1,0 +1,141 @@
+{
+  "baseline": "70bfd5ee013bbd738df8732d62f9430fdb028bcb",
+  "status": "PRIVATE_PREVIEW_READY_PRODUCTION_NOT_ACTIVATED",
+  "nodeTests": {
+    "passed": 58,
+    "failed": 0,
+    "command": "npm test",
+    "sourceCommit": "2844c6c95aa089d44e28d7dcdc9fd6104748e194"
+  },
+  "sitemapDateTests": 6,
+  "browser": {
+    "version": "153.0.8010.0",
+    "layouts": 20,
+    "blockedInjections": 4,
+    "usesLocalBotChallengeFixture": true,
+    "realProductionBotClassificationProven": false,
+    "historicalLocalResult": true
+  },
+  "preserved": [
+    {
+      "file": "site-design.css",
+      "unchanged": true,
+      "sha256": "ee4ee29d6a5f8bbbf2089ad2d11132457795efcb32f1d199bebfe8d694e962b7"
+    },
+    {
+      "file": "site-menu.js",
+      "unchanged": true,
+      "sha256": "3d4310160d4cea432a6cf780be279c95bf5a6fe4d8aa1cac71bcd6d350a272d7"
+    },
+    {
+      "file": "site-motion.js",
+      "unchanged": true,
+      "sha256": "b529c0f54a0f2beb78496a264c12ba3a1d05f3545daf59f22e00d49110a786da"
+    },
+    {
+      "file": "home-water-motion.js",
+      "unchanged": true,
+      "sha256": "e159f8bffd1882622378042265f5c9bda50f4b67843d8a417c8fec352c26f03a"
+    },
+    {
+      "file": "contact.css",
+      "unchanged": true,
+      "sha256": "7add6dd6baf6aaec8d3ffcfdc77a4689540668aa0d36f4f06d4140049a073eca"
+    },
+    {
+      "file": "index.html",
+      "unchanged": true,
+      "sha256": "5eb09625839b52a5ab1507f2724a351e68f1305b94cbe012406af76d92a63a78"
+    },
+    {
+      "file": "apparel.html",
+      "unchanged": true,
+      "sha256": "d906aeb6d828740ae0b276b917b62129cbd241253fa0fd32e24edd525a3dd60d"
+    },
+    {
+      "file": "yoshis-book.html",
+      "unchanged": true,
+      "sha256": "50ad3fe22bfaac18f21983238b4ba7c749d9f4550eb858318ffb7893296b872c"
+    },
+    {
+      "file": "training.html",
+      "unchanged": true,
+      "sha256": "2c4dec290e5bca279582aa205acab4f2cc709ca284e8eff5bf9d7310da37cf0b"
+    },
+    {
+      "file": "programs.html",
+      "unchanged": true,
+      "sha256": "15da6cc62208ebc7a77b8c4c35ca79e11e49d430c5aac3c790401578bf39138b"
+    },
+    {
+      "file": "media.html",
+      "unchanged": true,
+      "sha256": "f171be407571aa99e6568bae952487192de60069dd0b88bd0683682800db293c"
+    },
+    {
+      "file": "community.html",
+      "unchanged": true,
+      "sha256": "f125aa643b5b7a09ecd6d3610308e901e8b99f703185e0ea71e3a2afde6284af"
+    },
+    {
+      "file": "assets/brand/sport-my-fitness-header.svg",
+      "unchanged": true,
+      "sha256": "b5bcf5089da077718f152f24a255f44b42bd7c0434ba1f790da410d39fda86e8"
+    },
+    {
+      "file": "robots.txt",
+      "unchanged": true,
+      "sha256": "a30ff31c8ecc242995483f6bfcd25f428654058ccb9620bed4ae6e23caa36007"
+    }
+  ],
+  "rateRule": "Historical unconfigured native alternative: infrastructure/contact-firewall-rule.json",
+  "rateSecret": {
+    "serverOnly": true,
+    "productionFullSiteCreated": true,
+    "productionReviewGatewayCreated": true,
+    "existingCredentialsChanged": false
+  },
+  "blockedBy": "Existing Vercel connection returns 403 for storage/project binding and protected preview access",
+  "remaining": [
+    "Update the existing Vercel connection permissions for storage binding and protected preview access",
+    "Finish legitimate runtime storage binding and verify the real hosted counter",
+    "Verify deployed BotID proof and negative API paths without real messages",
+    "Assess the design-review CI baseline failure before merge",
+    "Deploy the full site and gateway only after hosted gates pass",
+    "Mailbox activation/delivery test with separate authorization"
+  ],
+  "mainChanged": false,
+  "realEmailsSent": 0,
+  "realProductionLogins": 0,
+  "publicLaunch": false,
+  "firewallDiagnosticsReceipt": "verification/contact-firewall-api-20261023.json",
+  "counterImplementation": "infrastructure/contact-rate-limit.cjs",
+  "permissionsReceipt": "verification/contact-vercel-permissions-20261023.json",
+  "preview": {
+    "id": "dpl_iWqyhao78ZLihnsMy6Te99uCN5xU",
+    "sourceCommit": "102a7f9a5f4e49d77d4ed7469daa2b54f08a5a93",
+    "state": "READY",
+    "hostedCheckRead": false
+  },
+  "hostedCounterVerified": false,
+  "designReviewCI": {
+    "runId": 40063500949,
+    "conclusion": "failure",
+    "error": "phone and navigation targets overlap",
+    "preCounterCheckpointRunId": 40029384641,
+    "preCounterCheckpointConclusion": "failure"
+  },
+  "projectConfigurationChanges": {
+    "fullSiteSystemVariablesEnabled": true,
+    "fullSiteOidcEnabled": true,
+    "deploymentProtectionWeakened": false,
+    "gatewaySystemVariablesEnabled": true,
+    "gatewayOidcEnabled": true
+  },
+  "productionCounterVariablesPrepared": true,
+  "requiredHostedCounterBuild": {
+    "id": "dpl_CiemqDexZT4bfhsw1oAVkaWhRvWE",
+    "state": "ERROR",
+    "hostedCounterPassEstablished": false
+  }
+}

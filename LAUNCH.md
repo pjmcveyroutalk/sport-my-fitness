@@ -32,22 +32,37 @@ launch. See [sitemap preparation and launch steps](docs/LAUNCH_SITEMAP_20261023.
 
 ## Before public launch: contact security and spam protection
 
-- [x] Prepare restrictive browser security headers, preserve them through the
-  private gateway, explicitly retain FormSubmit CAPTCHA and the hidden bot trap,
-  and disclose the provider's spam/CAPTCHA processing in the privacy draft.
-- [ ] Verify the recipient is activated and the provider's actual challenge,
-  filtering, field/payload limits and rate controls. A public hidden field is
-  not a server-enforced security setting; current direct-to-FormSubmit controls
-  must not be described as a mandatory challenge or site-owned rate limiter.
-- [ ] Before launch, configure a provider or server endpoint with mandatory
-  server-verified challenge, schema/size validation and durable rate limiting
-  that direct requests cannot disable. Keep credentials server-side and the
-  destination fixed. Confirm mailbox filtering/monitoring and provider retention.
-- [ ] Run a controlled delivery and abuse check only when PJ explicitly
-  authorizes real test submissions. Automated site checks must intercept email
-  submissions and never activate the form or send a real inquiry.
+- [x] Keep the restrictive browser headers in the existing private preview.
+- [x] Prepare the same-origin server endpoint, strict field/size validation,
+  mandatory BotID Basic verification, fail-closed hosted rate checks, fixed
+  recipient/service controls and honest success/error states. Verify locally
+  without real messages. This replacement is staged, not activated on main.
+- [x] Install independent production `RATE_LIMIT_SECRET` values on the full-site
+  and private-gateway projects as server-only sensitive environment variables.
+  Existing review credentials remain untouched.
+- [ ] Restore the required permissions on the existing Vercel connection for
+  storage binding and protected preview access. The connection is present but
+  Vercel returns 403 for those operations. Record exact evidence in
+  `verification/contact-vercel-permissions-20261023.json`; do not restart a
+  separate Google sign-in or repeat unchanged failed API calls.
+- [ ] Finish a legitimate private hosted-counter binding and require a PASS
+  receipt from its protected preview. Verify persistence across processes,
+  simultaneous-attempt limits and expiry. The current code uses atomic Blob
+  writes after the native Firewall setup failed; local fixtures are not hosted
+  proof. Six attempts per ten-minute window remain the production setting.
+- [x] Prepare separate production counter paths/store IDs and normal OIDC
+  runtime configuration on both projects. This does not establish storage access.
+- [ ] Confirm runtime binding and deploy only after hosted verification passes. Preserve Coming Soon, current sessions,
+  branding and Deployment Protection. Verify actual BotID proof and invalid
+  API paths without sending an inquiry; keep Basic mode and no paid upgrade.
+- [ ] Resolve or explicitly assess the current design-review CI target-gap
+  failure before merge. The approved layout source has not been changed by
+  this security work; do not mark the whole CI suite as passing.
+- [ ] Verify mailbox activation and delivery only with PJ's explicit instruction
+  for controlled real test submissions. Confirm mailbox filtering, monitoring
+  and provider retention with the business before launch.
 
-See [implemented protections and remaining limits](docs/CONTACT_SECURITY_20261023.md).
+See [server protection status and deployment recipe](docs/SERVER_CONTACT_PROTECTION_20261023.md).
 
 ## Before public launch: finalize website policies
 
@@ -90,6 +105,6 @@ forms remain excluded. See [policy scope and remaining decisions](docs/WEBSITE_P
 
 ## Infrastructure and destinations
 
-Keep the GitHub repository, Vercel project, the existing FormSubmit action for `Yoshi_barnes@outlook.com`, direct contact/social/media destinations and existing redirects. PJ's October 17 post-release correction replaces the former site's booking links with the current Programs page and inquiry form.
+Keep the GitHub repository, Vercel project, FormSubmit delivery to `Yoshi_barnes@outlook.com` behind the prepared server guard, direct contact/social/media destinations and existing redirects. PJ's October 17 post-release correction replaces the former site's booking links with the current Programs page and inquiry form.
 
 Do not change domain/DNS, access/protection, environment variables, unrelated API integrations or the external booking provider during presentation work. No framework or hosting migration is required.

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "functions": {
+    "api/gateway.js": {
+      "includeFiles": "{index.html,robots.txt,assets/**}",
+      "maxDuration": 30
+    }
+  },
+  "routes": [
+    {
+      "src": "^/(.*)$",
+      "dest": "/api/gateway.js"
+    }
+  ]
+}

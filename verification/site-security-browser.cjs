@@ -19,14 +19,18 @@ const output = process.env.SMF_SECURITY_REPORT || '/tmp/smf-site-security-browse
     report.browser = browser.version();
     const context = await browser.newContext({viewport:{width:390,height:844}});
     const posts = [], external = [];
+    let formStatus = 200;
     await context.route('**/*', async route => {
       const request = route.request();
       const url = new URL(request.url());
-      if (url.origin === base) return route.continue();
-      if (url.hostname === 'formsubmit.co' && request.method() === 'POST') {
-        posts.push({url:request.url(), body:request.postData()});
-        return route.fulfill({status:200,contentType:'text/html',body:'<h1>Intercepted local form fixture</h1>'});
+      if (url.origin === base && /\/a-4-a\/c\.js$/.test(url.pathname)) {
+        return route.fulfill({status:200,contentType:'application/javascript',body:'window.V_C.push(() => ({b:1, fixture:"local-only"}));'});
       }
+      if (url.origin === base && url.pathname === '/api/contact/' && request.method() === 'POST') {
+        posts.push({url:request.url(), body:request.postData(), headers:request.headers()});
+        return route.fulfill({status:formStatus,contentType:'application/json',body:JSON.stringify({ok:formStatus===200,code:formStatus===200?'accepted':'fixture-error'})});
+      }
+      if (url.origin === base) return route.continue();
       external.push(request.url());
       // The approved map can load its frame, without contacting Google.
       if (url.hostname === 'www.google.com') return route.fulfill({status:200,contentType:'text/html',body:'<p>Local map fixture</p>'});
@@ -82,14 +86,30 @@ const output = process.env.SMF_SECURITY_REPORT || '/tmp/smf-site-security-browse
     assert.equal(await page.evaluate(() => window.messageInjected),undefined);
     assert.equal(await page.locator('#inquiry-form img').count(),0);
     await page.locator('#inquiry-form button').click();
-    await page.waitForURL('https://formsubmit.co/**');
+    await page.waitForFunction(() => document.getElementById('inquiry-status').textContent.includes('accepted for delivery'));
     assert.equal(posts.length,1);
-    const data = new URLSearchParams(posts[0].body);
-    assert.equal(data.get('name'),'Zoë O’Connor');
-    assert.equal(data.get('_captcha'),'true');
-    assert.equal(data.get('_honey'),'');
-    assert(data.get('goals').includes(payload));
-    report.form.push('Whitespace rejected; Unicode and punctuation preserved; message stays data; valid POST intercepted once with CAPTCHA and empty honeypot.');
+    const data = JSON.parse(posts[0].body);
+    assert.equal(data.name,'Zoë O’Connor');
+    assert.equal(data._honey,'');
+    assert.equal(data._captcha,undefined);
+    assert(data.goals.includes(payload));
+    assert.equal(posts[0].headers['x-path'],'/api/contact/');
+    assert.equal(posts[0].headers['x-method'],'POST');
+    assert(posts[0].headers['x-is-human'].includes('local-only'));
+    assert.equal(await page.locator('#inquiry-goals').inputValue(),'');
+    report.form.push('Whitespace rejected; Unicode and message text preserved; same-origin JSON POST carries BotID headers from a local challenge fixture; no service controls are sent.');
+    for (const code of [429,502]) {
+      formStatus = code;
+      await page.locator('#inquiry-name').fill('Local fixture');
+      await page.locator('#inquiry-email').fill('fixture@example.invalid');
+      await page.locator('#inquiry-goals').fill('Retain this message after failure.');
+      await page.locator('#inquiry-form button').click();
+      const expected = code===429 ? 'Too many attempts' : 'could not confirm';
+      await page.waitForFunction(value => document.getElementById('inquiry-status').textContent.includes(value), expected);
+      assert.equal(await page.locator('#inquiry-goals').inputValue(),'Retain this message after failure.');
+      assert.equal(await page.locator('#inquiry-form button').isEnabled(),true);
+    }
+    report.form.push('Rate-limit and delivery-error states preserve the message and never show success.');
     await page.goto(base + '/contact/');
     await page.evaluate(() => {
       const script = document.createElement('script');
@@ -115,11 +135,12 @@ const output = process.env.SMF_SECURITY_REPORT || '/tmp/smf-site-security-browse
     const noJs = await browser.newContext({javaScriptEnabled:false});
     await noJs.route('**/*', route => new URL(route.request().url()).origin === base ? route.continue() : route.abort());
     const native = await noJs.newPage();await native.goto(base + '/contact/');
-    assert.equal(await native.locator('input[name="_captcha"]').getAttribute('value'),'true');
+    assert.equal(await native.locator('#inquiry-form button').isDisabled(),true);
+    assert((await native.locator('noscript').textContent()).includes('enable JavaScript'));
     assert.equal(await native.locator('#inquiry-email').getAttribute('type'),'email');
     assert.equal(await native.locator('#inquiry-goals').getAttribute('maxlength'),'1500');
     assert(await native.locator('.menu-fallback summary').isVisible());
-    report.form.push('Native required/email/length constraints and provider CAPTCHA configuration remain present with JavaScript disabled.');
+    report.form.push('Without JavaScript the send action is disabled and phone/email alternatives remain available; no direct provider fallback.');
     await noJs.close();
   } catch (error) {
     report.failures.push(error.stack || String(error));process.exitCode=1;

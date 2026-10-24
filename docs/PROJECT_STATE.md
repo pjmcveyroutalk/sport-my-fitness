@@ -1,5 +1,32 @@
 # Sport My Fitness — Current Project State
 
+## Server contact protection prepared; Vercel permissions block activation — October 23, 2026
+
+**Not finished and not active on production.** PR #20 contains the server
+validation/BotID implementation and an alternative atomic private hosted
+counter. The native Firewall API could not initialize its configuration. The
+new counter passes local concurrency/restart checks; all 58 Node tests pass.
+The explicit static build output preserves approved page/asset bytes and the
+protected preview now reaches READY. No hosted counter or deployed human BotID
+classification is claimed as verified.
+
+The existing Vercel connection is present. It returns **403 Forbidden** for
+project-bound storage creation (`projectEnvVars`) and protected preview access
+(`read_protection_bypass`). Updating its relevant permissions for the
+`routalk-builder` team and both SMF projects is the concrete continuation gate.
+Do not repeat unchanged API calls or ask for a separate Google sign-in.
+
+Main remains `70bfd5ee013bbd738df8732d62f9430fdb028bcb`; the production holding
+site/private gateway has not been replaced. Production signing secrets are
+installed; production store/path variables are prepared, while legitimate
+runtime binding and deployed verification remain pending. Both projects
+enable system variables/OIDC; existing SSO protections
+remain intact. The design-review CI also has an unresolved mobile target-gap
+assertion; the pre-counter checkpoint already had a failed run. The approved
+visuals, branding kit and water/motion source were not changed. No real inquiry
+or public launch occurred. See `docs/SERVER_CONTACT_PROTECTION_20261023.md` and
+`verification/contact-vercel-permissions-20261023.json`.
+
 ## Contact and browser security — October 23, 2026
 
 PJ requested protection against spam and injections, especially at the contact

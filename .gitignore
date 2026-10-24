@@ -4,3 +4,4 @@ __pycache__/
 .env.local
 .env.*.local
 assets/contact/hosted-counter-check.json
+public/

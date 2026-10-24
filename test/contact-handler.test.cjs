@@ -29,7 +29,7 @@ test('verified same-origin message reaches only the server delivery adapter as t
     const body=valid();body.goals='<img src=x onerror="alert(1)"> & SELECT * FROM members;';
     const r=await h.request(body); assert.equal(r.status,200);
     assert.equal((await r.json()).code,'accepted');
-    assert.deepEqual(h.sent,[body]);assert.deepEqual(h.calls,['rate','bot']);
+    assert.deepEqual(h.sent,[body]);assert.deepEqual(h.calls,['bot','rate']);
     assert.equal(r.headers.get('cache-control'),'private, no-store, max-age=0');
     assert(!r.headers.has('access-control-allow-origin'));
   } finally {await h.close();}

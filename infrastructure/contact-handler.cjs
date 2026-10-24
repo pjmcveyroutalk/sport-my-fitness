@@ -70,9 +70,8 @@ async function verifyBot(req) {
   } finally {clearTimeout(timer);}
 }
 async function limit(req) {
-  if ((process.env.RATE_LIMIT_SECRET || '').length < 32) throw new Error('rate signing unavailable');
-  const {checkRateLimit} = require('@vercel/firewall');
-  return checkRateLimit(RATE_LIMIT_ID, {headers:req.headers, timeout:2000});
+  const {createRateLimit} = require('./contact-rate-limit.cjs');
+  return createRateLimit()(req);
 }
 function createDelivery(sendRequest = fetch) {
   return async function deliver(value) {
@@ -115,16 +114,17 @@ function createContactHandler(options = {}) {
     // Local SDK defaults and provider failures never grant permission to send.
     if (!platform) return json(res, 503, 'unavailable', 'The form is temporarily unavailable. Please call or email Yoshi.');
     try {
-      const result = await rate(req);
-      if (result?.rateLimited === true) {
-        res.setHeader('Retry-After', '600');
-        return json(res, 429, 'rate', 'Too many attempts. Please wait ten minutes before trying again.');
-      }
-      if (result?.error || result?.rateLimited !== false) throw new Error('rate unavailable');
+      // Reject unverified automation before accessing the private counter.
       const bot = await check(req);
       if (bot?.isBot !== false || bot?.isHuman !== true || bot?.bypassed || bot?.isVerifiedBot) {
         return json(res, 403, 'verification', 'We could not verify this attempt. Please reload the contact page and try again, or call Yoshi.');
       }
+      const result = await rate(req);
+      if (result?.rateLimited === true) {
+        res.setHeader('Retry-After', String(Math.min(600,Math.max(1,Math.ceil(result.retryAfter || 600)))));
+        return json(res, 429, 'rate', 'Too many attempts. Please wait ten minutes before trying again.');
+      }
+      if (result?.error || result?.rateLimited !== false) throw new Error('rate unavailable');
     } catch {
       return json(res, 503, 'unavailable', 'The form is temporarily unavailable. Please call or email Yoshi.');
     }

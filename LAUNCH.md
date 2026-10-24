@@ -40,21 +40,24 @@ launch. See [sitemap preparation and launch steps](docs/LAUNCH_SITEMAP_20261023.
 - [x] Install independent production `RATE_LIMIT_SECRET` values on the full-site
   and private-gateway projects as server-only sensitive environment variables.
   Existing review credentials remain untouched.
-- [ ] Finish the hosted firewall configuration on both projects. Vercel's
-  connector returns `404 Seawall Config not found` for configuration reads and
-  writes, including explicitly scoped PUT and `rules.insert` PATCH. The existing
-  app connection can read the correct project; no reconnect is required for that
-  access. Resolve configuration initialization and activate the exact SDK rule in
-  `infrastructure/contact-firewall-rule.json`, preserving unrelated rules. See
-  `verification/contact-firewall-api-20261023.json`; stop unchanged API retries.
-- [ ] Verify the actual hosted counter persists across separate processes,
-  returns 429 after six attempts per ten-minute window per key/region, and
-  checks the right SDK ID. Keep Basic mode on both client and server; do not
-  activate paid Deep Analysis.
-- [ ] After the counter is active, deploy the prepared replacement to the full
-  site and the private gateway, retaining Coming Soon and access protection.
-  Verify missing proof is blocked and a browser proof reaches schema validation
-  without sending a real inquiry. Do not deploy a nonfunctional replacement.
+- [ ] Restore the required permissions on the existing Vercel connection for
+  storage binding and protected preview access. The connection is present but
+  Vercel returns 403 for those operations. Record exact evidence in
+  `verification/contact-vercel-permissions-20261023.json`; do not restart a
+  separate Google sign-in or repeat unchanged failed API calls.
+- [ ] Finish a legitimate private hosted-counter binding and require a PASS
+  receipt from its protected preview. Verify persistence across processes,
+  simultaneous-attempt limits and expiry. The current code uses atomic Blob
+  writes after the native Firewall setup failed; local fixtures are not hosted
+  proof. Six attempts per ten-minute window remain the production setting.
+- [x] Prepare separate production counter paths/store IDs and normal OIDC
+  runtime configuration on both projects. This does not establish storage access.
+- [ ] Confirm runtime binding and deploy only after hosted verification passes. Preserve Coming Soon, current sessions,
+  branding and Deployment Protection. Verify actual BotID proof and invalid
+  API paths without sending an inquiry; keep Basic mode and no paid upgrade.
+- [ ] Resolve or explicitly assess the current design-review CI target-gap
+  failure before merge. The approved layout source has not been changed by
+  this security work; do not mark the whole CI suite as passing.
 - [ ] Verify mailbox activation and delivery only with PJ's explicit instruction
   for controlled real test submissions. Confirm mailbox filtering, monitoring
   and provider retention with the business before launch.

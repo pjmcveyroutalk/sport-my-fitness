@@ -1,3 +1,16 @@
+> Current server-contact branch status (October 23, 2026): the production gateway
+> has not been replaced. Required storage binding and protected preview access
+> return Vercel 403. See `docs/SERVER_CONTACT_PROTECTION_20261023.md` before
+> deployment. The older native Firewall rule recipe below is historical.
+>
+> Current packaging uses the canonical `infrastructure/contact-handler.cjs` and
+> `infrastructure/contact-rate-limit.cjs` plus a root `contact-handler.cjs`
+> wrapper that requires the canonical handler. Include the package manifests,
+> `design-tools/prepare-contact-counter.cjs`, `design-tools/build-public.cjs`
+> and the existing 17 holding files. Use a gateway-specific production counter
+> path; preserve its signing key, review configuration and protections. Finish
+> hosted checks before merging/deploying any replacement.
+
 # Private review gateway
 
 `gateway.cjs` is the source for `api/gateway.js` in the separate

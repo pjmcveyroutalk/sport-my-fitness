@@ -1,10 +1,11 @@
 {
   "baseline": "70bfd5ee013bbd738df8732d62f9430fdb028bcb",
-  "status": "IMPLEMENTED_AND_LOCALLY_VERIFIED_NOT_DEPLOYED",
+  "status": "PRIVATE_PREVIEW_READY_PRODUCTION_NOT_ACTIVATED",
   "nodeTests": {
-    "passed": 51,
+    "passed": 58,
     "failed": 0,
-    "command": "npm test"
+    "command": "npm test",
+    "sourceCommit": "2844c6c95aa089d44e28d7dcdc9fd6104748e194"
   },
   "sitemapDateTests": 6,
   "browser": {
@@ -12,7 +13,8 @@
     "layouts": 20,
     "blockedInjections": 4,
     "usesLocalBotChallengeFixture": true,
-    "realProductionBotClassificationProven": false
+    "realProductionBotClassificationProven": false,
+    "historicalLocalResult": true
   },
   "preserved": [
     {
@@ -86,24 +88,49 @@
       "sha256": "a30ff31c8ecc242995483f6bfcd25f428654058ccb9620bed4ae6e23caa36007"
     }
   ],
-  "rateRule": "infrastructure/contact-firewall-rule.json",
+  "rateRule": "Historical unconfigured native alternative: infrastructure/contact-firewall-rule.json",
   "rateSecret": {
     "serverOnly": true,
     "productionFullSiteCreated": true,
     "productionReviewGatewayCreated": true,
     "existingCredentialsChanged": false
   },
-  "blockedBy": "Vercel firewall API: 404 Seawall Config not found for configuration reads and writes",
+  "blockedBy": "Existing Vercel connection returns 403 for storage/project binding and protected preview access",
   "remaining": [
-    "Resolve firewall configuration initialization, activate the prepared SDK rule on both projects and preserve other rules",
-    "Verify actual native counter across processes and native window reset",
-    "Verify deployed BotID proof and negative paths without real messages",
-    "Deploy only after the counter is ready",
+    "Update the existing Vercel connection permissions for storage binding and protected preview access",
+    "Finish legitimate runtime storage binding and verify the real hosted counter",
+    "Verify deployed BotID proof and negative API paths without real messages",
+    "Assess the design-review CI baseline failure before merge",
+    "Deploy the full site and gateway only after hosted gates pass",
     "Mailbox activation/delivery test with separate authorization"
   ],
   "mainChanged": false,
   "realEmailsSent": 0,
   "realProductionLogins": 0,
   "publicLaunch": false,
-  "firewallDiagnosticsReceipt": "verification/contact-firewall-api-20261023.json"
+  "firewallDiagnosticsReceipt": "verification/contact-firewall-api-20261023.json",
+  "counterImplementation": "infrastructure/contact-rate-limit.cjs",
+  "permissionsReceipt": "verification/contact-vercel-permissions-20261023.json",
+  "preview": {
+    "id": "dpl_iWqyhao78ZLihnsMy6Te99uCN5xU",
+    "sourceCommit": "102a7f9a5f4e49d77d4ed7469daa2b54f08a5a93",
+    "state": "READY",
+    "hostedCheckRead": false
+  },
+  "hostedCounterVerified": false,
+  "designReviewCI": {
+    "runId": 40063500949,
+    "conclusion": "failure",
+    "error": "phone and navigation targets overlap",
+    "preCounterCheckpointRunId": 40029384641,
+    "preCounterCheckpointConclusion": "failure"
+  },
+  "projectConfigurationChanges": {
+    "fullSiteSystemVariablesEnabled": true,
+    "fullSiteOidcEnabled": true,
+    "deploymentProtectionWeakened": false,
+    "gatewaySystemVariablesEnabled": true,
+    "gatewayOidcEnabled": true
+  },
+  "productionCounterVariablesPrepared": true
 }

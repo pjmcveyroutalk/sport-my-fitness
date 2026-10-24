@@ -110,6 +110,13 @@ read `assets/contact/hosted-counter-check.json` and require `status: PASS`.
 Production counter setup errors always fail the build. The test-only diagnostic
 mode is restricted to Preview; it never enables sending around a failed counter.
 
+A separate protected verification deployment,
+`dpl_CiemqDexZT4bfhsw1oAVkaWhRvWE`, forced the hosted-test flag and required the
+generated receipt to be PASS before its build could succeed. It exited with
+`BUILD_UTILS_SPAWN_1`; the hosted gate did not pass. No production target was
+changed. Normal project build defaults were restored after this one-off check.
+This avoids treating a READY diagnostic preview as successful verification.
+
 ## Required continuation
 
 1. Update the existing Vercel connection's relevant team/project permissions.

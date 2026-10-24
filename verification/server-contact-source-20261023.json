@@ -132,5 +132,10 @@
     "gatewaySystemVariablesEnabled": true,
     "gatewayOidcEnabled": true
   },
-  "productionCounterVariablesPrepared": true
+  "productionCounterVariablesPrepared": true,
+  "requiredHostedCounterBuild": {
+    "id": "dpl_CiemqDexZT4bfhsw1oAVkaWhRvWE",
+    "state": "ERROR",
+    "hostedCounterPassEstablished": false
+  }
 }

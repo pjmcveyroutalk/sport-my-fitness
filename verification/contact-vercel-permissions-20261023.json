@@ -60,5 +60,14 @@
     "gatewayStoreIdAndPath": true,
     "normalOidcOnBothProjects": true,
     "runtimeAccessConfirmed": false
+  },
+  "requiredHostedCounterBuild": {
+    "id": "dpl_CiemqDexZT4bfhsw1oAVkaWhRvWE",
+    "sourceCommit": "e9d1117dabd704b0a98e62ba30a8d81e423c84cd",
+    "state": "ERROR",
+    "errorCode": "BUILD_UTILS_SPAWN_1",
+    "requiresHostedReceiptPass": true,
+    "productionTarget": false,
+    "normalProjectBuildDefaultsRestored": true
   }
 }

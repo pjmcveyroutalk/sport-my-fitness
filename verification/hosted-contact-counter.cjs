@@ -35,7 +35,9 @@ async function verify() {
     assert.equal((await child(paths[2],windowMs)).rateLimited,true);
     await new Promise(resolve=>setTimeout(resolve,Math.max(0,(window+1)*windowMs-Date.now()+75)));
     assert.equal((await child(paths[2],windowMs)).rateLimited,false);
-    console.log('HOSTED_COUNTER_VERIFICATION_PASS',JSON.stringify({separateProcessAllows:6,seventhLimited:true,concurrentAllows:6,concurrentLimited:6,realClockReset:true,productionWindowMs:WINDOW_MS,resetVerificationWindowMs:windowMs,realEmailsSent:0}));
+    const receipt={separateProcessAllows:6,seventhLimited:true,concurrentAllows:6,concurrentLimited:6,realClockReset:true,productionWindowMs:WINDOW_MS,resetVerificationWindowMs:windowMs,realEmailsSent:0};
+    console.log('HOSTED_COUNTER_VERIFICATION_PASS',JSON.stringify(receipt));
+    return receipt;
   } finally {
     if(created.length)await sdk.del(created,{abortSignal:AbortSignal.timeout(10000),...auth});
   }

@@ -1,0 +1,20 @@
+{
+  "name": "sport-my-fitness-website",
+  "private": true,
+  "scripts": {
+    "build": "npm run build:contact && npm run prepare:contact-counter && node design-tools/build-public.cjs",
+    "build:contact": "node design-tools/build-contact-client.cjs",
+    "prepare:contact-counter": "node design-tools/prepare-contact-counter.cjs",
+    "test": "node --test test/*.test.cjs test/*.test.js test/*.test.mjs"
+  },
+  "dependencies": {
+    "@vercel/blob": "2.8.2",
+    "botid": "1.5.11"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

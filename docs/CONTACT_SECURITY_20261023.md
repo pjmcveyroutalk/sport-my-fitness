@@ -1,5 +1,9 @@
 # Contact form and browser security — October 23, 2026
 
+This describes the currently deployed browser-only layer. The server-enforced
+replacement is staged separately; its current status and remaining dashboard
+step are in [SERVER_CONTACT_PROTECTION_20261023.md](SERVER_CONTACT_PROTECTION_20261023.md).
+
 PJ requested safeguards against spam and injections, especially through the
 contact form. This change preserves the approved design, movement, inquiry
 fields, FormSubmit destination and private launch status. It does not activate

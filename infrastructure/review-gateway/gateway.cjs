@@ -41,6 +41,7 @@ function createGateway(options = {}) {
   const bypassSecret = options.bypassSecret ?? process.env.SMF_REVIEW_UPSTREAM_SECRET ?? '';
   const fetchUpstream = options.fetchUpstream ?? fetch;
   const readPublic = options.readPublic ?? (name => readFile(path.join(process.cwd(), name)));
+  const contactHandler = options.contactHandler;
   const now = options.now ?? (() => Math.floor(Date.now() / 1000));
   const attempts = new Map();
   const ready = /^[a-f0-9]{32}:[a-f0-9]{128}$/.test(passwordHash) && sessionKey.length >= 64 && bypassSecret.length >= 16;
@@ -194,6 +195,13 @@ function createGateway(options = {}) {
           decoded.split('/').some(segment => segment === '..' || segment === '.')) return text(res, 400, 'Invalid request.');
       const url = new URL(raw, 'http://preview.invalid');
       const method = req.method || 'GET';
+      if (url.pathname === '/api/contact/' || url.pathname === '/api/contact') {
+        if (!session(req)) return text(res, 404, 'Not found.');
+        // Execute on this host so Vercel verifies the original visitor's bot
+        // proof and IP rate bucket. Never proxy a POST with a review bypass key.
+        const handler = contactHandler || require('../contact-handler.cjs').createContactHandler();
+        return await handler(req, res);
+      }
       if (url.pathname === '/admin' && method === 'POST') return await login(req, res);
       if (url.pathname === '/admin/logout' && method === 'POST') {
         if (!originMatches(req)) return text(res, 403, 'Please open the login page and try again.');

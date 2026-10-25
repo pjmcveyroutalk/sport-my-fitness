@@ -1,0 +1,302 @@
+{
+  "checkedAt": "2026-10-25T20:28:18.367Z",
+  "baseCommit": "a3d2538409c7051e7397322e4d240b2234ea11a6",
+  "fix": [
+    "End the pale blend before the athlete instead of washing her torso, legs and shoes",
+    "Remove the vertical white wash from desktop photography",
+    "Retain a dark mobile header and use the exact current wordmark with dark text on the pale desktop header",
+    "Adjust light-only blend and photo-backed proof contrast at narrow desktop widths"
+  ],
+  "allPageThemeChecks": 48,
+  "extraResponsiveLightWidths": [
+    900,
+    901,
+    1100,
+    1366,
+    1920
+  ],
+  "photoColorChecks": {
+    "checks": [
+      {
+        "width": 900,
+        "point": "face",
+        "delta": 0,
+        "passed": true
+      },
+      {
+        "width": 900,
+        "point": "shirt",
+        "delta": 0,
+        "passed": true
+      },
+      {
+        "width": 900,
+        "point": "thigh",
+        "delta": 0,
+        "passed": true
+      },
+      {
+        "width": 900,
+        "point": "bentLeg",
+        "delta": 0,
+        "passed": true
+      },
+      {
+        "width": 900,
+        "point": "standingLeg",
+        "delta": 0,
+        "passed": true
+      },
+      {
+        "width": 900,
+        "point": "shoe",
+        "delta": 0,
+        "passed": true
+      },
+      {
+        "width": 900,
+        "point": "arm",
+        "delta": 0,
+        "passed": true
+      },
+      {
+        "width": 900,
+        "point": "hand",
+        "delta": 0,
+        "passed": true
+      },
+      {
+        "width": 901,
+        "point": "face",
+        "delta": 0,
+        "passed": true
+      },
+      {
+        "width": 901,
+        "point": "shirt",
+        "delta": 0,
+        "passed": true
+      },
+      {
+        "width": 901,
+        "point": "thigh",
+        "delta": 0,
+        "passed": true
+      },
+      {
+        "width": 901,
+        "point": "bentLeg",
+        "delta": 0,
+        "passed": true
+      },
+      {
+        "width": 901,
+        "point": "standingLeg",
+        "delta": 0,
+        "passed": true
+      },
+      {
+        "width": 901,
+        "point": "shoe",
+        "delta": 0,
+        "passed": true
+      },
+      {
+        "width": 901,
+        "point": "arm",
+        "delta": 0,
+        "passed": true
+      },
+      {
+        "width": 901,
+        "point": "hand",
+        "delta": 0,
+        "passed": true
+      },
+      {
+        "width": 1100,
+        "point": "face",
+        "delta": 0,
+        "passed": true
+      },
+      {
+        "width": 1100,
+        "point": "shirt",
+        "delta": 0,
+        "passed": true
+      },
+      {
+        "width": 1100,
+        "point": "thigh",
+        "delta": 0,
+        "passed": true
+      },
+      {
+        "width": 1100,
+        "point": "bentLeg",
+        "delta": 0,
+        "passed": true
+      },
+      {
+        "width": 1100,
+        "point": "standingLeg",
+        "delta": 0,
+        "passed": true
+      },
+      {
+        "width": 1100,
+        "point": "shoe",
+        "delta": 0,
+        "passed": true
+      },
+      {
+        "width": 1100,
+        "point": "arm",
+        "delta": 0,
+        "passed": true
+      },
+      {
+        "width": 1100,
+        "point": "hand",
+        "delta": 0,
+        "passed": true
+      },
+      {
+        "width": 1366,
+        "point": "face",
+        "delta": 0,
+        "passed": true
+      },
+      {
+        "width": 1366,
+        "point": "shirt",
+        "delta": 0,
+        "passed": true
+      },
+      {
+        "width": 1366,
+        "point": "thigh",
+        "delta": 0,
+        "passed": true
+      },
+      {
+        "width": 1366,
+        "point": "bentLeg",
+        "delta": 0,
+        "passed": true
+      },
+      {
+        "width": 1366,
+        "point": "standingLeg",
+        "delta": 0,
+        "passed": true
+      },
+      {
+        "width": 1366,
+        "point": "shoe",
+        "delta": 0,
+        "passed": true
+      },
+      {
+        "width": 1366,
+        "point": "arm",
+        "delta": 0,
+        "passed": true
+      },
+      {
+        "width": 1366,
+        "point": "hand",
+        "delta": 0,
+        "passed": true
+      },
+      {
+        "width": 1920,
+        "point": "face",
+        "delta": 0,
+        "passed": true
+      },
+      {
+        "width": 1920,
+        "point": "shirt",
+        "delta": 0,
+        "passed": true
+      },
+      {
+        "width": 1920,
+        "point": "thigh",
+        "delta": 0,
+        "passed": true
+      },
+      {
+        "width": 1920,
+        "point": "bentLeg",
+        "delta": 0,
+        "passed": true
+      },
+      {
+        "width": 1920,
+        "point": "standingLeg",
+        "delta": 0,
+        "passed": true
+      },
+      {
+        "width": 1920,
+        "point": "shoe",
+        "delta": 0,
+        "passed": true
+      },
+      {
+        "width": 1920,
+        "point": "arm",
+        "delta": 0,
+        "passed": true
+      },
+      {
+        "width": 1920,
+        "point": "hand",
+        "delta": 0,
+        "passed": true
+      }
+    ],
+    "passed": true
+  },
+  "unchangedPixelComparisons": [
+    {
+      "width": 390,
+      "theme": "dark",
+      "exactScreenshotMatch": true
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "exactScreenshotMatch": true
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "exactScreenshotMatch": true
+    }
+  ],
+  "homeLayoutAndLinksMatchApproved": true,
+  "motionAbsent": true,
+  "toggleAndPersistence": [
+    {
+      "width": 390,
+      "click": true,
+      "reloadPersists": true,
+      "keyboard": true,
+      "pageNavigationPersists": true
+    },
+    {
+      "width": 1440,
+      "click": true,
+      "reloadPersists": true,
+      "keyboard": true,
+      "pageNavigationPersists": true
+    }
+  ],
+  "logoVariantChangesOnlyOneWordmarkFillAndDescription": true,
+  "originalLogoSha256": "b5bcf5089da077718f152f24a255f44b42bd7c0434ba1f790da410d39fda86e8",
+  "pageErrors": [],
+  "passed": true
+}

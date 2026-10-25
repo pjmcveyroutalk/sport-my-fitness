@@ -678,5 +678,33 @@
     "failed": 0
   },
   "pageErrors": [],
-  "passed": true
+  "passed": true,
+  "live": {
+    "checkedAt": "2026-10-25T19:47:42.740Z",
+    "sourceCommit": "c54df248cf64c9b74513c584b8955b0b52ac5440",
+    "deployment": "dpl_7A84vSSJ9v4YkcaQLEekB8W5Xu1H",
+    "gatewayUnchanged": "dpl_HdQ6Nz7koQpwMwKGd4H9qEtTwV6H",
+    "anonymous": true,
+    "standardTlsVerification": true,
+    "sourceChecks": 13,
+    "browserChecks": 48,
+    "interaction": [
+      {
+        "width": 390,
+        "click": true,
+        "reloadPersists": true,
+        "keyboard": true,
+        "pageNavigationPersists": true
+      },
+      {
+        "width": 1440,
+        "click": true,
+        "reloadPersists": true,
+        "keyboard": true,
+        "pageNavigationPersists": true
+      }
+    ],
+    "pageErrors": [],
+    "passed": true
+  }
 }

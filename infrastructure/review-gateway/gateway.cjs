@@ -8,6 +8,10 @@ const scrypt = promisify(crypto.scrypt);
 const COOKIE = '__Host-smf_admin';
 const LIFETIME = 8 * 60 * 60;
 const UPSTREAM = 'https://sport-my-fitness.vercel.app';
+// One-day fair publication, in Milwaukee time. Requests become private again
+// at midnight without a scheduled deployment or a credential change.
+const FAIR_FROM = Date.parse('2026-10-25T05:00:00Z') / 1000;
+const FAIR_UNTIL = Date.parse('2026-10-26T05:00:00Z') / 1000;
 const PAGE_ROUTES = new Set(['/home/', '/apparel/', '/yoshis-book/', '/training/', '/programs/', '/media/', '/community/', '/contact/', '/privacy/', '/terms/', '/shipping-returns/', '/fitness-disclaimer/']);
 const PAGE_ALIASES = new Map([
   ['/', '/home/'], ['/index', '/home/'], ['/index/', '/home/'], ['/index.html', '/home/'],
@@ -42,6 +46,8 @@ function createGateway(options = {}) {
   const fetchUpstream = options.fetchUpstream ?? fetch;
   const readPublic = options.readPublic ?? (name => readFile(path.join(process.cwd(), name)));
   const now = options.now ?? (() => Math.floor(Date.now() / 1000));
+  const publicFrom = options.publicFrom ?? FAIR_FROM;
+  const publicUntil = options.publicUntil ?? FAIR_UNTIL;
   const attempts = new Map();
   const ready = /^[a-f0-9]{32}:[a-f0-9]{128}$/.test(passwordHash) && sessionKey.length >= 64 && bypassSecret.length >= 16;
   const version = crypto.createHash('sha256').update(passwordHash).digest('hex').slice(0, 24);
@@ -150,7 +156,7 @@ function createGateway(options = {}) {
     res.setHeader('Set-Cookie', cookie(data + '.' + sign(data), LIFETIME));
     return redirect(res, '/home/');
   }
-  async function privatePage(req, res, url) {
+  async function privatePage(req, res, url, publicView = false) {
     const pathname = url.pathname;
     if (pathname === '/service-worker.js' || pathname === '/pwa-register.js' ||
         pathname.startsWith('/api/') ||
@@ -161,7 +167,7 @@ function createGateway(options = {}) {
     const requestHeaders = { 'x-vercel-protection-bypass': bypassSecret, 'accept-encoding': 'identity' };
     if (req.headers.range && /^bytes=\d*-\d*$/.test(req.headers.range)) requestHeaders.range = req.headers.range;
     const response = await fetchUpstream(upstream.href, { method: req.method, headers: requestHeaders, redirect: 'manual', cache: 'no-store', signal: AbortSignal.timeout(15000) });
-    if ([401, 403].includes(response.status)) return text(res, 503, 'Private preview is temporarily unavailable. Please try again shortly.');
+    if ([401, 403].includes(response.status)) return text(res, 503, 'This page is temporarily unavailable. Please try again shortly.');
     if (response.status >= 300 && response.status < 400) {
       const target = new URL(response.headers.get('location') || '/', UPSTREAM);
       if (target.origin !== UPSTREAM) return text(res, 502, 'Preview destination unavailable.');
@@ -179,6 +185,7 @@ function createGateway(options = {}) {
     if (req.method === 'HEAD') return res.end();
     if ((response.headers.get('content-type') || '').includes('text/html') && response.status === 200) {
       const body = await response.text();
+      if (publicView) return res.end(body);
       const control = '<a href="/admin" aria-label="Private preview controls" style="position:fixed;right:16px;bottom:16px;z-index:2147483000;padding:9px 14px;border:1px solid #03d6df;border-radius:8px;background:#071014;color:#f4f7f7;font:600 13px/1.4 Arial,sans-serif;text-decoration:none">Private preview · Admin</a>';
       return res.end(body.includes('</body>') ? body.replace('</body>', control + '</body>') : body + control);
     }
@@ -194,6 +201,8 @@ function createGateway(options = {}) {
           decoded.split('/').some(segment => segment === '..' || segment === '.')) return text(res, 400, 'Invalid request.');
       const url = new URL(raw, 'http://preview.invalid');
       const method = req.method || 'GET';
+      const publicView = Number.isFinite(publicFrom) && Number.isFinite(publicUntil) &&
+        now() >= publicFrom && now() < publicUntil;
       if (url.pathname === '/admin' && method === 'POST') return await login(req, res);
       if (url.pathname === '/admin/logout' && method === 'POST') {
         if (!originMatches(req)) return text(res, 403, 'Please open the login page and try again.');
@@ -202,6 +211,7 @@ function createGateway(options = {}) {
       if (!['GET', 'HEAD'].includes(method)) { res.setHeader('Allow', 'GET, HEAD'); return text(res, 405, 'Method not allowed.'); }
       if (url.pathname === '/admin') {
         if (!ready) return text(res, 503, 'Private preview is being prepared.');
+        if (publicView) return redirect(res, '/home/');
         return html(res, 200, adminPage('', session(req)), method === 'HEAD');
       }
       if (url.pathname === '/admin/logout') return redirect(res, '/admin');
@@ -209,6 +219,11 @@ function createGateway(options = {}) {
         const [name, type] = PUBLIC_FILES[url.pathname];
         res.statusCode = 200; res.setHeader('Content-Type', type);
         return res.end(method === 'HEAD' ? undefined : await readPublic(name));
+      }
+      if (publicView) {
+        if (!ready) return text(res, 503, 'This page is temporarily unavailable. Please try again shortly.');
+        if (PAGE_ALIASES.has(url.pathname)) return canonicalRedirect(res, url, PAGE_ALIASES.get(url.pathname));
+        return await privatePage(req, res, url, true);
       }
       if (session(req) && url.searchParams.get('public') !== '1') {
         if (PAGE_ALIASES.has(url.pathname)) return canonicalRedirect(res, url, PAGE_ALIASES.get(url.pathname));

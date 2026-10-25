@@ -19,6 +19,7 @@ async function start(server) {
 before(async () => {
   site = createPreviewServer(); siteUrl = await start(site);
   const handler = createGateway({
+    publicUntil: 0,
     passwordHash: salt + ':' + crypto.scryptSync(password, salt, 64).toString('hex'),
     sessionKey: 'routing-test-session-key-only-'.repeat(3),
     bypassSecret: 'routing-test-upstream-key-only',

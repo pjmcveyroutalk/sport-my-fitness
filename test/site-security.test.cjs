@@ -17,6 +17,7 @@ before(async () => {
   const password = 'security-fixture-only';
   const salt = '0123456789abcdef0123456789abcdef';
   gateway = http.createServer(createGateway({
+    publicUntil: 0,
     passwordHash: salt + ':' + crypto.scryptSync(password, salt, 64).toString('hex'),
     sessionKey: 'security-test-session-key-only-'.repeat(3),
     bypassSecret: 'security-test-upstream-key-only',

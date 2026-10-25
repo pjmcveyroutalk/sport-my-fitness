@@ -1,0 +1,371 @@
+{
+  "checkedAt": "2026-10-25T21:19:50.356Z",
+  "checks": [
+    {
+      "width": 390,
+      "height": 844,
+      "theme": "dark",
+      "layoutAndLinksUnchanged": true,
+      "photoCropUnchanged": true,
+      "motionAbsent": true,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "theme": "light",
+      "layoutAndLinksUnchanged": true,
+      "photoCropUnchanged": true,
+      "motionAbsent": true,
+      "overflow": false
+    },
+    {
+      "width": 800,
+      "height": 1000,
+      "theme": "dark",
+      "layoutAndLinksUnchanged": true,
+      "photoCropUnchanged": true,
+      "motionAbsent": true,
+      "overflow": false
+    },
+    {
+      "width": 800,
+      "height": 1000,
+      "theme": "light",
+      "layoutAndLinksUnchanged": true,
+      "photoCropUnchanged": true,
+      "motionAbsent": true,
+      "overflow": false
+    },
+    {
+      "width": 801,
+      "height": 1000,
+      "theme": "dark",
+      "layoutAndLinksUnchanged": true,
+      "photoCropUnchanged": true,
+      "motionAbsent": true,
+      "overflow": false
+    },
+    {
+      "width": 801,
+      "height": 1000,
+      "theme": "light",
+      "layoutAndLinksUnchanged": true,
+      "photoCropUnchanged": true,
+      "motionAbsent": true,
+      "overflow": false
+    },
+    {
+      "width": 900,
+      "height": 1000,
+      "theme": "dark",
+      "layoutAndLinksUnchanged": true,
+      "photoCropUnchanged": true,
+      "motionAbsent": true,
+      "overflow": false
+    },
+    {
+      "width": 900,
+      "height": 1000,
+      "theme": "light",
+      "layoutAndLinksUnchanged": true,
+      "photoCropUnchanged": true,
+      "motionAbsent": true,
+      "overflow": false
+    },
+    {
+      "width": 901,
+      "height": 1000,
+      "theme": "dark",
+      "layoutAndLinksUnchanged": true,
+      "photoCropUnchanged": true,
+      "motionAbsent": true,
+      "overflow": false
+    },
+    {
+      "width": 901,
+      "height": 1000,
+      "theme": "light",
+      "layoutAndLinksUnchanged": true,
+      "photoCropUnchanged": true,
+      "motionAbsent": true,
+      "overflow": false
+    },
+    {
+      "width": 1100,
+      "height": 1000,
+      "theme": "dark",
+      "layoutAndLinksUnchanged": true,
+      "photoCropUnchanged": true,
+      "motionAbsent": true,
+      "overflow": false
+    },
+    {
+      "width": 1100,
+      "height": 1000,
+      "theme": "light",
+      "layoutAndLinksUnchanged": true,
+      "photoCropUnchanged": true,
+      "motionAbsent": true,
+      "overflow": false
+    },
+    {
+      "width": 1366,
+      "height": 768,
+      "theme": "dark",
+      "layoutAndLinksUnchanged": true,
+      "photoCropUnchanged": true,
+      "motionAbsent": true,
+      "overflow": false
+    },
+    {
+      "width": 1366,
+      "height": 768,
+      "theme": "light",
+      "layoutAndLinksUnchanged": true,
+      "photoCropUnchanged": true,
+      "motionAbsent": true,
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "theme": "dark",
+      "layoutAndLinksUnchanged": true,
+      "photoCropUnchanged": true,
+      "motionAbsent": true,
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "theme": "light",
+      "layoutAndLinksUnchanged": true,
+      "photoCropUnchanged": true,
+      "motionAbsent": true,
+      "overflow": false
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "theme": "dark",
+      "layoutAndLinksUnchanged": true,
+      "photoCropUnchanged": true,
+      "motionAbsent": true,
+      "overflow": false
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "theme": "light",
+      "layoutAndLinksUnchanged": true,
+      "photoCropUnchanged": true,
+      "motionAbsent": true,
+      "overflow": false
+    }
+  ],
+  "photoRegions": [
+    {
+      "width": 801,
+      "clip": {
+        "x": 192.56799149840595,
+        "y": 198.56323060573857,
+        "width": 304.0488841657811,
+        "height": 290.22848034006375
+      },
+      "originalPhotoExactMatch": true,
+      "sha256": "e71a08f7edf1be6618d1eae4ed7b085b0dbab59b1a15f0460d164688e05798e9"
+    },
+    {
+      "width": 900,
+      "clip": {
+        "x": 265.827991498406,
+        "y": 198.56323060573857,
+        "width": 304.0488841657811,
+        "height": 290.22848034006375
+      },
+      "originalPhotoExactMatch": true,
+      "sha256": "e71a08f7edf1be6618d1eae4ed7b085b0dbab59b1a15f0460d164688e05798e9"
+    },
+    {
+      "width": 901,
+      "clip": {
+        "x": 246.8374070138151,
+        "y": 121.78533475026572,
+        "width": 334.9096705632306,
+        "height": 319.6865037194474
+      },
+      "originalPhotoExactMatch": true,
+      "sha256": "d8a48f29f98b7d5d294aeaadb70f88416b4b37d0e1eb6ae2ea8f49346fc2265b"
+    },
+    {
+      "width": 1100,
+      "clip": {
+        "x": 394.0974070138151,
+        "y": 121.78533475026572,
+        "width": 334.9096705632306,
+        "height": 319.6865037194474
+      },
+      "originalPhotoExactMatch": true,
+      "sha256": "d8a48f29f98b7d5d294aeaadb70f88416b4b37d0e1eb6ae2ea8f49346fc2265b"
+    },
+    {
+      "width": 1366,
+      "clip": {
+        "x": 627.6302743092455,
+        "y": 111.35826248671626,
+        "width": 306.2352218384697,
+        "height": 292.3154390276302
+      },
+      "originalPhotoExactMatch": true,
+      "sha256": "ccd8e924c9039d8bae99adaf288eddfeef6cb122f6bf83b1a8d82e84735b2e85"
+    },
+    {
+      "width": 1440,
+      "clip": {
+        "x": 661.1374402231668,
+        "y": 117.39771519659936,
+        "width": 322.8437167906482,
+        "height": 308.1690023910733
+      },
+      "originalPhotoExactMatch": true,
+      "sha256": "50698550365dce95f8ad92e8ffb309495b417e51105828ce6dc6cc63a32f9d02"
+    },
+    {
+      "width": 1920,
+      "clip": {
+        "x": 967.5281100478469,
+        "y": 106.0882177033493,
+        "width": 360.9868421052632,
+        "height": 344.57834928229664
+      },
+      "originalPhotoExactMatch": true,
+      "sha256": "5f15861b6984bffe3294ee8003e41332c0cc6b97b06cafd1f2905e3ee7797fde"
+    }
+  ],
+  "pixelComparisons": [
+    {
+      "width": 390,
+      "theme": "dark",
+      "exactMatch": true
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "exactMatch": true
+    },
+    {
+      "width": 800,
+      "theme": "dark",
+      "exactMatch": true
+    },
+    {
+      "width": 800,
+      "theme": "light",
+      "exactMatch": true
+    },
+    {
+      "width": 801,
+      "theme": "dark",
+      "exactMatch": true
+    },
+    {
+      "width": 900,
+      "theme": "dark",
+      "exactMatch": true
+    },
+    {
+      "width": 901,
+      "theme": "dark",
+      "exactMatch": true
+    },
+    {
+      "width": 1100,
+      "theme": "dark",
+      "exactMatch": true
+    },
+    {
+      "width": 1366,
+      "theme": "dark",
+      "exactMatch": true
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "exactMatch": true
+    },
+    {
+      "width": 1920,
+      "theme": "dark",
+      "exactMatch": true
+    }
+  ],
+  "interaction": [
+    {
+      "width": 390,
+      "click": true,
+      "reloadPersists": true,
+      "keyboard": true
+    },
+    {
+      "width": 800,
+      "click": true,
+      "reloadPersists": true,
+      "keyboard": true
+    },
+    {
+      "width": 801,
+      "click": true,
+      "reloadPersists": true,
+      "keyboard": true
+    },
+    {
+      "width": 900,
+      "click": true,
+      "reloadPersists": true,
+      "keyboard": true
+    },
+    {
+      "width": 901,
+      "click": true,
+      "reloadPersists": true,
+      "keyboard": true
+    },
+    {
+      "width": 1100,
+      "click": true,
+      "reloadPersists": true,
+      "keyboard": true
+    },
+    {
+      "width": 1366,
+      "click": true,
+      "reloadPersists": true,
+      "keyboard": true
+    },
+    {
+      "width": 1440,
+      "click": true,
+      "reloadPersists": true,
+      "keyboard": true
+    },
+    {
+      "width": 1920,
+      "click": true,
+      "reloadPersists": true,
+      "keyboard": true
+    }
+  ],
+  "passed": true,
+  "pageErrors": [],
+  "baseCommit": "af64769871bc267de47d491888cbaf8283c97f9c",
+  "rootCause": "A separate masked arm was shown over a fade applied to the surrounding photograph.",
+  "correction": "In desktop light mode, remove the separate arm layer and map the continuous blend to the original photo coordinates, ending before the arm.",
+  "photoRegionSourceBounds": {
+    "x": 815,
+    "y": 120,
+    "width": 330,
+    "height": 315
+  },
+  "scope": "Homepage light compositing and proof text contrast. Original photos, dark mode, mobile, layout, header controls, branding kit and other pages retain their existing source."
+}

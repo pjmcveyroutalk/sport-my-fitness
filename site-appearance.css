@@ -1,11 +1,14 @@
 /* The switch and light palette. Existing layout, typography and motion stay in
    their original stylesheets; dark mode uses those rules without overrides. */
-.theme-toggle { display: inline-flex; align-items: center; flex: 0 0 auto; min-height: 44px; padding: 4px; border: 1px solid #49676f; border-radius: 999px; background: #0b1b22eb; color: #c9dadc; }
-.theme-option { display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 34px; padding: 6px 12px; border-radius: 999px; font: 700 13px/1.2 var(--body); }
-.theme-option svg { display: block; width: 18px; height: 18px; flex: 0 0 auto; }
-:root:not([data-theme="light"]) .theme-option--dark,
-:root[data-theme="light"] .theme-option--light { background: #edf4f4; color: #14262b; }
-.theme-toggle:hover { border-color: #8eb4bd; }
+/* Use the same icon-only header switch at every screen size. */
+.theme-toggle { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; flex: 0 0 44px; min-height: 44px; padding: 0; border: 0; border-radius: 6px; background: transparent; color: #03d6df; }
+.theme-option { display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 0; padding: 0; border-radius: 999px; font: 700 13px/1.2 var(--body); }
+.theme-option svg { display: block; width: 22px; height: 22px; flex: 0 0 auto; }
+.theme-option > span { display: none; }
+.theme-option--dark { display: none; }
+:root[data-theme="light"] .theme-option--light { display: none; }
+:root[data-theme="light"] .theme-option--dark { display: inline-flex; }
+.theme-toggle:hover { background: #1c3a4480; }
 
 :root[data-theme="light"] {
   color-scheme: light;
@@ -49,18 +52,6 @@
 :root[data-theme="light"] .film-poster { color: #f4f7f7; }
 :root[data-theme="light"] .film-poster .teal { color: var(--teal); }
 
-@media (max-width: 900px) {
-  .theme-toggle { justify-content: center; width: 44px; height: 44px; flex: 0 0 44px; min-height: 44px; padding: 0; border: 0; border-radius: 6px; background: transparent; color: #03d6df; }
-  .theme-option { min-height: 0; padding: 0; }
-  .theme-option svg { width: 22px; height: 22px; }
-  .theme-option > span { display: none; }
-  .theme-option--dark { display: none; }
-  :root[data-theme="light"] .theme-option--light { display: none; }
-  :root[data-theme="light"] .theme-option--dark { display: inline-flex; }
-  :root:not([data-theme="light"]) .theme-option--dark,
-  :root[data-theme="light"] .theme-option--light { background: transparent; color: inherit; }
-  .theme-toggle:hover { background: #1c3a4480; }
-}
 @media (max-width: 359px) {
   .header-actions { gap: 0; }
 }

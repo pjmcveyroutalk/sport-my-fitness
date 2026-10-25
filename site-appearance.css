@@ -10,6 +10,11 @@
 :root[data-theme="light"] .theme-option--dark { display: inline-flex; }
 .theme-toggle:hover { background: #1c3a4480; }
 
+/* Desktop controls share the left rail: Menu, Call, then appearance. */
+@media (min-width: 901px) {
+  .theme-toggle { position: fixed; z-index: 85; left: calc((var(--rail-width) - 44px) / 2); top: 192px; }
+}
+
 :root[data-theme="light"] {
   color-scheme: light;
   --ink: #18272f;

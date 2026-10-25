@@ -1,0 +1,674 @@
+{
+  "checkedAt": "2026-10-25T20:01:10.234Z",
+  "baseCommit": "c54df248cf64c9b74513c584b8955b0b52ac5440",
+  "requestedPlacement": "Desktop left rail directly below the phone icon; mobile unchanged",
+  "desktop": {
+    "phoneCenterX": 38,
+    "themeCenterX": 38,
+    "themeTop": 192,
+    "gapBelowPhone": 15,
+    "size": [
+      44,
+      44
+    ],
+    "fixedDuringScroll": true
+  },
+  "pageChecks": [
+    {
+      "route": "/home/",
+      "width": 390,
+      "theme": "dark",
+      "position": {
+        "x": 223,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "right": 267
+      },
+      "passed": true
+    },
+    {
+      "route": "/apparel/",
+      "width": 390,
+      "theme": "dark",
+      "position": {
+        "x": 223,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "right": 267
+      },
+      "passed": true
+    },
+    {
+      "route": "/yoshis-book/",
+      "width": 390,
+      "theme": "dark",
+      "position": {
+        "x": 223,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "right": 267
+      },
+      "passed": true
+    },
+    {
+      "route": "/training/",
+      "width": 390,
+      "theme": "dark",
+      "position": {
+        "x": 223,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "right": 267
+      },
+      "passed": true
+    },
+    {
+      "route": "/programs/",
+      "width": 390,
+      "theme": "dark",
+      "position": {
+        "x": 223,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "right": 267
+      },
+      "passed": true
+    },
+    {
+      "route": "/media/",
+      "width": 390,
+      "theme": "dark",
+      "position": {
+        "x": 223,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "right": 267
+      },
+      "passed": true
+    },
+    {
+      "route": "/community/",
+      "width": 390,
+      "theme": "dark",
+      "position": {
+        "x": 223,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "right": 267
+      },
+      "passed": true
+    },
+    {
+      "route": "/contact/",
+      "width": 390,
+      "theme": "dark",
+      "position": {
+        "x": 223,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "right": 267
+      },
+      "passed": true
+    },
+    {
+      "route": "/privacy/",
+      "width": 390,
+      "theme": "dark",
+      "position": {
+        "x": 223,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "right": 267
+      },
+      "passed": true
+    },
+    {
+      "route": "/terms/",
+      "width": 390,
+      "theme": "dark",
+      "position": {
+        "x": 223,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "right": 267
+      },
+      "passed": true
+    },
+    {
+      "route": "/shipping-returns/",
+      "width": 390,
+      "theme": "dark",
+      "position": {
+        "x": 223,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "right": 267
+      },
+      "passed": true
+    },
+    {
+      "route": "/fitness-disclaimer/",
+      "width": 390,
+      "theme": "dark",
+      "position": {
+        "x": 223,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "right": 267
+      },
+      "passed": true
+    },
+    {
+      "route": "/home/",
+      "width": 390,
+      "theme": "light",
+      "position": {
+        "x": 223,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "right": 267
+      },
+      "passed": true
+    },
+    {
+      "route": "/apparel/",
+      "width": 390,
+      "theme": "light",
+      "position": {
+        "x": 223,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "right": 267
+      },
+      "passed": true
+    },
+    {
+      "route": "/yoshis-book/",
+      "width": 390,
+      "theme": "light",
+      "position": {
+        "x": 223,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "right": 267
+      },
+      "passed": true
+    },
+    {
+      "route": "/training/",
+      "width": 390,
+      "theme": "light",
+      "position": {
+        "x": 223,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "right": 267
+      },
+      "passed": true
+    },
+    {
+      "route": "/programs/",
+      "width": 390,
+      "theme": "light",
+      "position": {
+        "x": 223,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "right": 267
+      },
+      "passed": true
+    },
+    {
+      "route": "/media/",
+      "width": 390,
+      "theme": "light",
+      "position": {
+        "x": 223,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "right": 267
+      },
+      "passed": true
+    },
+    {
+      "route": "/community/",
+      "width": 390,
+      "theme": "light",
+      "position": {
+        "x": 223,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "right": 267
+      },
+      "passed": true
+    },
+    {
+      "route": "/contact/",
+      "width": 390,
+      "theme": "light",
+      "position": {
+        "x": 223,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "right": 267
+      },
+      "passed": true
+    },
+    {
+      "route": "/privacy/",
+      "width": 390,
+      "theme": "light",
+      "position": {
+        "x": 223,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "right": 267
+      },
+      "passed": true
+    },
+    {
+      "route": "/terms/",
+      "width": 390,
+      "theme": "light",
+      "position": {
+        "x": 223,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "right": 267
+      },
+      "passed": true
+    },
+    {
+      "route": "/shipping-returns/",
+      "width": 390,
+      "theme": "light",
+      "position": {
+        "x": 223,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "right": 267
+      },
+      "passed": true
+    },
+    {
+      "route": "/fitness-disclaimer/",
+      "width": 390,
+      "theme": "light",
+      "position": {
+        "x": 223,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "right": 267
+      },
+      "passed": true
+    },
+    {
+      "route": "/home/",
+      "width": 1440,
+      "theme": "dark",
+      "position": {
+        "x": 16,
+        "y": 192,
+        "width": 44,
+        "height": 44,
+        "right": 60
+      },
+      "passed": true
+    },
+    {
+      "route": "/apparel/",
+      "width": 1440,
+      "theme": "dark",
+      "position": {
+        "x": 16,
+        "y": 192,
+        "width": 44,
+        "height": 44,
+        "right": 60
+      },
+      "passed": true
+    },
+    {
+      "route": "/yoshis-book/",
+      "width": 1440,
+      "theme": "dark",
+      "position": {
+        "x": 16,
+        "y": 192,
+        "width": 44,
+        "height": 44,
+        "right": 60
+      },
+      "passed": true
+    },
+    {
+      "route": "/training/",
+      "width": 1440,
+      "theme": "dark",
+      "position": {
+        "x": 16,
+        "y": 192,
+        "width": 44,
+        "height": 44,
+        "right": 60
+      },
+      "passed": true
+    },
+    {
+      "route": "/programs/",
+      "width": 1440,
+      "theme": "dark",
+      "position": {
+        "x": 16,
+        "y": 192,
+        "width": 44,
+        "height": 44,
+        "right": 60
+      },
+      "passed": true
+    },
+    {
+      "route": "/media/",
+      "width": 1440,
+      "theme": "dark",
+      "position": {
+        "x": 16,
+        "y": 192,
+        "width": 44,
+        "height": 44,
+        "right": 60
+      },
+      "passed": true
+    },
+    {
+      "route": "/community/",
+      "width": 1440,
+      "theme": "dark",
+      "position": {
+        "x": 16,
+        "y": 192,
+        "width": 44,
+        "height": 44,
+        "right": 60
+      },
+      "passed": true
+    },
+    {
+      "route": "/contact/",
+      "width": 1440,
+      "theme": "dark",
+      "position": {
+        "x": 16,
+        "y": 192,
+        "width": 44,
+        "height": 44,
+        "right": 60
+      },
+      "passed": true
+    },
+    {
+      "route": "/privacy/",
+      "width": 1440,
+      "theme": "dark",
+      "position": {
+        "x": 16,
+        "y": 192,
+        "width": 44,
+        "height": 44,
+        "right": 60
+      },
+      "passed": true
+    },
+    {
+      "route": "/terms/",
+      "width": 1440,
+      "theme": "dark",
+      "position": {
+        "x": 16,
+        "y": 192,
+        "width": 44,
+        "height": 44,
+        "right": 60
+      },
+      "passed": true
+    },
+    {
+      "route": "/shipping-returns/",
+      "width": 1440,
+      "theme": "dark",
+      "position": {
+        "x": 16,
+        "y": 192,
+        "width": 44,
+        "height": 44,
+        "right": 60
+      },
+      "passed": true
+    },
+    {
+      "route": "/fitness-disclaimer/",
+      "width": 1440,
+      "theme": "dark",
+      "position": {
+        "x": 16,
+        "y": 192,
+        "width": 44,
+        "height": 44,
+        "right": 60
+      },
+      "passed": true
+    },
+    {
+      "route": "/home/",
+      "width": 1440,
+      "theme": "light",
+      "position": {
+        "x": 16,
+        "y": 192,
+        "width": 44,
+        "height": 44,
+        "right": 60
+      },
+      "passed": true
+    },
+    {
+      "route": "/apparel/",
+      "width": 1440,
+      "theme": "light",
+      "position": {
+        "x": 16,
+        "y": 192,
+        "width": 44,
+        "height": 44,
+        "right": 60
+      },
+      "passed": true
+    },
+    {
+      "route": "/yoshis-book/",
+      "width": 1440,
+      "theme": "light",
+      "position": {
+        "x": 16,
+        "y": 192,
+        "width": 44,
+        "height": 44,
+        "right": 60
+      },
+      "passed": true
+    },
+    {
+      "route": "/training/",
+      "width": 1440,
+      "theme": "light",
+      "position": {
+        "x": 16,
+        "y": 192,
+        "width": 44,
+        "height": 44,
+        "right": 60
+      },
+      "passed": true
+    },
+    {
+      "route": "/programs/",
+      "width": 1440,
+      "theme": "light",
+      "position": {
+        "x": 16,
+        "y": 192,
+        "width": 44,
+        "height": 44,
+        "right": 60
+      },
+      "passed": true
+    },
+    {
+      "route": "/media/",
+      "width": 1440,
+      "theme": "light",
+      "position": {
+        "x": 16,
+        "y": 192,
+        "width": 44,
+        "height": 44,
+        "right": 60
+      },
+      "passed": true
+    },
+    {
+      "route": "/community/",
+      "width": 1440,
+      "theme": "light",
+      "position": {
+        "x": 16,
+        "y": 192,
+        "width": 44,
+        "height": 44,
+        "right": 60
+      },
+      "passed": true
+    },
+    {
+      "route": "/contact/",
+      "width": 1440,
+      "theme": "light",
+      "position": {
+        "x": 16,
+        "y": 192,
+        "width": 44,
+        "height": 44,
+        "right": 60
+      },
+      "passed": true
+    },
+    {
+      "route": "/privacy/",
+      "width": 1440,
+      "theme": "light",
+      "position": {
+        "x": 16,
+        "y": 192,
+        "width": 44,
+        "height": 44,
+        "right": 60
+      },
+      "passed": true
+    },
+    {
+      "route": "/terms/",
+      "width": 1440,
+      "theme": "light",
+      "position": {
+        "x": 16,
+        "y": 192,
+        "width": 44,
+        "height": 44,
+        "right": 60
+      },
+      "passed": true
+    },
+    {
+      "route": "/shipping-returns/",
+      "width": 1440,
+      "theme": "light",
+      "position": {
+        "x": 16,
+        "y": 192,
+        "width": 44,
+        "height": 44,
+        "right": 60
+      },
+      "passed": true
+    },
+    {
+      "route": "/fitness-disclaimer/",
+      "width": 1440,
+      "theme": "light",
+      "position": {
+        "x": 16,
+        "y": 192,
+        "width": 44,
+        "height": 44,
+        "right": 60
+      },
+      "passed": true
+    }
+  ],
+  "mobilePixelComparison": [
+    {
+      "width": 390,
+      "theme": "dark",
+      "exactScreenshotMatch": true
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "exactScreenshotMatch": true
+    }
+  ],
+  "interaction": [
+    {
+      "width": 390,
+      "click": true,
+      "reloadPersists": true,
+      "keyboard": true,
+      "pageNavigationPersists": true
+    },
+    {
+      "width": 1440,
+      "click": true,
+      "reloadPersists": true,
+      "keyboard": true,
+      "pageNavigationPersists": true
+    }
+  ],
+  "approvedHomepageGeometryUnchangedExceptThemeControl": true,
+  "htmlOnlyStylesheetCacheVersionChanged": true,
+  "pageErrors": [],
+  "passed": true
+}

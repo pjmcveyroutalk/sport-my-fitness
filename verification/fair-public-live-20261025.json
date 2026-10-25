@@ -1,0 +1,182 @@
+{
+  "checkedAt": "2026-10-25T16:03:04.377005+00:00",
+  "anonymous": true,
+  "cookiesUsed": false,
+  "productionDeployment": "dpl_HdQ6Nz7koQpwMwKGd4H9qEtTwV6H",
+  "publicUntil": "2026-10-26T05:00:00Z",
+  "pages": [
+    {
+      "route": "/",
+      "status": 200,
+      "url": "https://sportmyfitness.com/home/",
+      "title": "Sport My Fitness | Coach Yoshi Barnes",
+      "adminBadge": false,
+      "passwordPrompt": false,
+      "noStore": true,
+      "bodySha256": "5eb09625839b52a5ab1507f2724a351e68f1305b94cbe012406af76d92a63a78"
+    },
+    {
+      "route": "/home/",
+      "status": 200,
+      "url": "https://sportmyfitness.com/home/",
+      "title": "Sport My Fitness | Coach Yoshi Barnes",
+      "adminBadge": false,
+      "passwordPrompt": false,
+      "noStore": true,
+      "bodySha256": "5eb09625839b52a5ab1507f2724a351e68f1305b94cbe012406af76d92a63a78"
+    },
+    {
+      "route": "/apparel/",
+      "status": 200,
+      "url": "https://sportmyfitness.com/apparel/",
+      "title": "Apparel | Sport My Fitness",
+      "adminBadge": false,
+      "passwordPrompt": false,
+      "noStore": true,
+      "bodySha256": "d906aeb6d828740ae0b276b917b62129cbd241253fa0fd32e24edd525a3dd60d"
+    },
+    {
+      "route": "/yoshis-book/",
+      "status": 200,
+      "url": "https://sportmyfitness.com/yoshis-book/",
+      "title": "Yoshi\u2019s Book | Sport My Fitness",
+      "adminBadge": false,
+      "passwordPrompt": false,
+      "noStore": true,
+      "bodySha256": "50ad3fe22bfaac18f21983238b4ba7c749d9f4550eb858318ffb7893296b872c"
+    },
+    {
+      "route": "/training/",
+      "status": 200,
+      "url": "https://sportmyfitness.com/training/",
+      "title": "Train with Yoshi | Sport My Fitness",
+      "adminBadge": false,
+      "passwordPrompt": false,
+      "noStore": true,
+      "bodySha256": "2c4dec290e5bca279582aa205acab4f2cc709ca284e8eff5bf9d7310da37cf0b"
+    },
+    {
+      "route": "/programs/",
+      "status": 200,
+      "url": "https://sportmyfitness.com/programs/",
+      "title": "Programs &amp; Rates | Sport My Fitness",
+      "adminBadge": false,
+      "passwordPrompt": false,
+      "noStore": true,
+      "bodySha256": "15da6cc62208ebc7a77b8c4c35ca79e11e49d430c5aac3c790401578bf39138b"
+    },
+    {
+      "route": "/media/",
+      "status": 200,
+      "url": "https://sportmyfitness.com/media/",
+      "title": "Media &amp; Community | Sport My Fitness",
+      "adminBadge": false,
+      "passwordPrompt": false,
+      "noStore": true,
+      "bodySha256": "f171be407571aa99e6568bae952487192de60069dd0b88bd0683682800db293c"
+    },
+    {
+      "route": "/community/",
+      "status": 200,
+      "url": "https://sportmyfitness.com/community/",
+      "title": "Community | Sport My Fitness",
+      "adminBadge": false,
+      "passwordPrompt": false,
+      "noStore": true,
+      "bodySha256": "f125aa643b5b7a09ecd6d3610308e901e8b99f703185e0ea71e3a2afde6284af"
+    },
+    {
+      "route": "/contact/",
+      "status": 200,
+      "url": "https://sportmyfitness.com/contact/",
+      "title": "Let\u2019s Train | Sport My Fitness",
+      "adminBadge": false,
+      "passwordPrompt": false,
+      "noStore": true,
+      "bodySha256": "5d6970ea6eee601b4bc67885be6342d30b6c5617104b8640e887f48b73b0bae1"
+    },
+    {
+      "route": "/admin",
+      "status": 200,
+      "url": "https://sportmyfitness.com/home/",
+      "title": "Sport My Fitness | Coach Yoshi Barnes",
+      "adminBadge": false,
+      "passwordPrompt": false,
+      "noStore": true,
+      "bodySha256": "5eb09625839b52a5ab1507f2724a351e68f1305b94cbe012406af76d92a63a78"
+    },
+    {
+      "route": "/privacy/",
+      "status": 200,
+      "url": "https://sportmyfitness.com/privacy/",
+      "title": "Privacy Policy | Sport My Fitness",
+      "adminBadge": false,
+      "passwordPrompt": false,
+      "noStore": true,
+      "bodySha256": "62d96843d4990936addb4be7f0afa242e3ee2e63393424ef85fe1d7dfa53e319"
+    },
+    {
+      "route": "/terms/",
+      "status": 200,
+      "url": "https://sportmyfitness.com/terms/",
+      "title": "Website Terms | Sport My Fitness",
+      "adminBadge": false,
+      "passwordPrompt": false,
+      "noStore": true,
+      "bodySha256": "5fc426cc3058efef7850d8b687deb35f372ff6fbc8a8dd96400aac52db67cbdd"
+    },
+    {
+      "route": "/shipping-returns/",
+      "status": 200,
+      "url": "https://sportmyfitness.com/shipping-returns/",
+      "title": "Shipping & Returns | Sport My Fitness",
+      "adminBadge": false,
+      "passwordPrompt": false,
+      "noStore": true,
+      "bodySha256": "d7f178375dae426f180c03664f3bd478c28d1aaf69ad3b0c8114a0d2a99d296f"
+    },
+    {
+      "route": "/fitness-disclaimer/",
+      "status": 200,
+      "url": "https://sportmyfitness.com/fitness-disclaimer/",
+      "title": "Fitness Disclaimer | Sport My Fitness",
+      "adminBadge": false,
+      "passwordPrompt": false,
+      "noStore": true,
+      "bodySha256": "6030ea2680d14d9ca817303cdc01ad64d47d3728f42ea1a2b96626eba9299c99"
+    }
+  ],
+  "assets": [
+    {
+      "path": "site-design.css",
+      "status": 200,
+      "matchesApprovedSource": true,
+      "sha256": "ee4ee29d6a5f8bbbf2089ad2d11132457795efcb32f1d199bebfe8d694e962b7"
+    },
+    {
+      "path": "home-water-motion.js",
+      "status": 200,
+      "matchesApprovedSource": true,
+      "sha256": "e159f8bffd1882622378042265f5c9bda50f4b67843d8a417c8fec352c26f03a"
+    },
+    {
+      "path": "assets/photos/smf-lakefront-bench-20261022-800.webp",
+      "status": 200,
+      "matchesApprovedSource": true,
+      "sha256": "c7b8cc1003ade30e63da28cb8a7f6e4ad8ef87f75396504e1989eaa91b51924a"
+    },
+    {
+      "path": "assets/brand/sport-my-fitness-header.svg",
+      "status": 200,
+      "matchesApprovedSource": true,
+      "sha256": "b5bcf5089da077718f152f24a255f44b42bd7c0434ba1f790da410d39fda86e8"
+    }
+  ],
+  "www": {
+    "status": 200,
+    "url": "https://sportmyfitness.com/home/",
+    "passwordPrompt": false
+  },
+  "excludedInternalApiStatus": 404,
+  "passed": true
+}

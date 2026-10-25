@@ -24,5 +24,19 @@ website continues serving approved main `70bfd5ee013bbd738df8732d62f9430fdb028bc
 Validation: 16 focused HTTP/security/routing checks pass, including all twelve
 page routes without cookies, absence of the Admin control, old Admin links,
 HEAD, API exclusions, precise expiry and existing sessions after expiry. Existing
-private-mode tests explicitly disable the fair window. Live verification is
-recorded separately after deployment; no real inquiry is submitted.
+private-mode tests explicitly disable the fair window.
+
+Production deployment `dpl_HdQ6Nz7koQpwMwKGd4H9qEtTwV6H` reached READY. Anonymous
+live verification at `2026-10-25T16:03:04Z` passed for all twelve pages, the root
+redirect and `/admin`, with no password prompt or Admin badge. The `www` hostname
+also redirects successfully. Shared CSS, water-motion JavaScript, the homepage
+photo and header logo match the approved repository bytes. Private/no-store
+responses remain active, and an excluded internal API returns 404. The report
+and reproducible anonymous checker are in `verification/fair-public-live-20261025.*`.
+No real inquiry was submitted.
+
+A follow-up privacy check is enabled for shortly after midnight America/Chicago.
+The site itself enforces the exact cutoff regardless of that check. The check
+may restore the previous private deployment only if production is still this
+fair deployment and public access incorrectly persists; it must not overwrite
+a later deployment. Automation reference: `6ade27fe70248191b76183c77f0bb2a1`.

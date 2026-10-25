@@ -26,3 +26,15 @@ Geometry and links match the approved fixture; no homepage animation runs,
 all images decode, and no browser errors or horizontal overflow occur.
 See `verification/home-artwork-release-20261025.json` for the browser result.
 The Canva draft was saved after PJ approved it.
+
+Production `dpl_5nKR5EG5KYY1EmPJ8GMYxDggx6VS` reached READY on approved
+source `03d0c96091c1ea04ea1e70bc9a7bc2b65e2d10e9`. Its upstream aliases
+serve the new release through the unchanged fair gateway. Twenty-five anonymous
+HTTPS checks passed: all twelve pages, eleven shared/new assets, and the root
+and www redirects match repository bytes. Normal TLS validation remained on.
+Four live browser cases also passed in light/dark mode on desktop/mobile,
+with no homepage animation, layout drift, horizontal overflow or page errors.
+The cloud test browser used the configured runtime proxy with its certificate
+override; this is test transport configuration only. The independent HTTPS
+checks verified TLS normally. Deployment protection remains enabled, and
+the prior production deployment remains available for rollback.

@@ -1,0 +1,698 @@
+[
+  {
+    "width": 1440,
+    "height": 1000,
+    "theme": "dark",
+    "geometry": {
+      ".site-header": {
+        "x": 76,
+        "y": 0,
+        "width": 1349,
+        "height": 176,
+        "text": "LightDarkCallMenu",
+        "font": "17px / 27.2px Arial, Helvetica, sans-serif",
+        "fontSize": "17px"
+      },
+      ".brand-logo": {
+        "x": 133.59375,
+        "y": 54.671875,
+        "width": 244,
+        "height": 66.65625,
+        "text": "",
+        "font": "17px / 27.2px Arial, Helvetica, sans-serif",
+        "fontSize": "17px"
+      },
+      ".header-actions": {
+        "x": 1189.25,
+        "y": 66,
+        "width": 178.140625,
+        "height": 44,
+        "text": "LightDarkCallMenu",
+        "font": "17px / 27.2px Arial, Helvetica, sans-serif",
+        "fontSize": "17px"
+      },
+      ".menu-toggle": {
+        "x": 12,
+        "y": 32,
+        "width": 52,
+        "height": 65,
+        "text": "Menu",
+        "font": "17px / 27.2px Arial, Helvetica, sans-serif",
+        "fontSize": "17px"
+      },
+      ".hero": {
+        "x": 76,
+        "y": 0,
+        "width": 1349,
+        "height": 921.59375,
+        "text": "MILWAUKEE \u00b7 SPORT MY FITNESS\n          IT ALLTAKESWORK.\n          \n          \n            \n              \n  \n  \nCertifiedtrainerISSA certification\n              \n  \n  \n  \nCommunityfocusedMilwaukee, WI\n            \n          \n          \n          To gain, maintain, or lose.\n          Personal, group and online training with Yoshi Barnes.\n          Apparel \u2192Explore training \u2192Yoshi\u2019s Book \u2192",
+        "font": "17px / 27.2px Arial, Helvetica, sans-serif",
+        "fontSize": "17px"
+      },
+      ".hero-copy": {
+        "x": 133.59375,
+        "y": 200,
+        "width": 629.234375,
+        "height": 633.609375,
+        "text": "MILWAUKEE \u00b7 SPORT MY FITNESS\n          IT ALLTAKESWORK.\n          \n          \n            \n              \n  \n  \nCertifiedtrainerISSA certification\n              \n  \n  \n  \nCommunityfocusedMilwaukee, WI\n            \n          \n          \n          To gain, maintain, or lose.\n          Personal, group and online training with Yoshi Barnes.\n          Apparel \u2192Explore training \u2192Yoshi\u2019s Book \u2192",
+        "font": "17px / 27.2px Arial, Helvetica, sans-serif",
+        "fontSize": "17px"
+      },
+      ".hero-eyebrow": {
+        "x": 133.59375,
+        "y": 200,
+        "width": 264.078125,
+        "height": 21.75,
+        "text": "MILWAUKEE \u00b7 SPORT MY FITNESS",
+        "font": "700 15px / 21.75px Rajdhani, \"Arial Narrow\", sans-serif",
+        "fontSize": "15px"
+      },
+      "#hero-heading": {
+        "x": 133.59375,
+        "y": 234,
+        "width": 629.234375,
+        "height": 387.046875,
+        "text": "IT ALLTAKESWORK.",
+        "font": "italic 900 161.28px / 129.024px \"Barlow Condensed\", Impact, \"Arial Narrow\", sans-serif",
+        "fontSize": "161.28px"
+      },
+      ".home-proof": {
+        "x": 609.359375,
+        "y": 459.78125,
+        "width": 206,
+        "height": 147.9375,
+        "text": "CertifiedtrainerISSA certification\n              \n  \n  \n  \nCommunityfocusedMilwaukee, WI",
+        "font": "17px / 27.2px Arial, Helvetica, sans-serif",
+        "fontSize": "17px"
+      },
+      ".hero-subline": {
+        "x": 133.59375,
+        "y": 639.046875,
+        "width": 629.234375,
+        "height": 41.40625,
+        "text": "To gain, maintain, or lose.",
+        "font": "700 33.12px / 41.4px Arial, Helvetica, sans-serif",
+        "fontSize": "33.12px"
+      },
+      ".hero-description": {
+        "x": 133.59375,
+        "y": 690.453125,
+        "width": 574.1875,
+        "height": 64.15625,
+        "text": "Personal, group and online training with Yoshi Barnes.",
+        "font": "23.76px / 32.076px Arial, Helvetica, sans-serif",
+        "fontSize": "23.76px"
+      },
+      ".home-actions": {
+        "x": 133.59375,
+        "y": 781.609375,
+        "width": 620,
+        "height": 52,
+        "text": "Apparel \u2192Explore training \u2192Yoshi\u2019s Book \u2192",
+        "font": "17px / 27.2px Arial, Helvetica, sans-serif",
+        "fontSize": "17px"
+      },
+      ".home-actions > a:nth-child(1)": {
+        "x": 133.59375,
+        "y": 781.609375,
+        "width": 198.65625,
+        "height": 52,
+        "text": "Apparel \u2192",
+        "font": "700 18px / 23.4px Arial, Helvetica, sans-serif",
+        "fontSize": "18px"
+      },
+      ".home-actions > a:nth-child(2)": {
+        "x": 344.25,
+        "y": 781.609375,
+        "width": 198.671875,
+        "height": 52,
+        "text": "Explore training \u2192",
+        "font": "700 18px / 23.4px Arial, Helvetica, sans-serif",
+        "fontSize": "18px"
+      },
+      ".home-actions > a:nth-child(3)": {
+        "x": 554.921875,
+        "y": 781.609375,
+        "width": 198.671875,
+        "height": 52,
+        "text": "Yoshi\u2019s Book \u2192",
+        "font": "700 18px / 23.4px Arial, Helvetica, sans-serif",
+        "fontSize": "18px"
+      },
+      ".mission-strip": {
+        "x": 76,
+        "y": 921.59375,
+        "width": 1349,
+        "height": 65.15625,
+        "text": "EMPOWER THE BODY. STRENGTHEN THE MIND.",
+        "font": "17px / 27.2px Arial, Helvetica, sans-serif",
+        "fontSize": "17px"
+      },
+      ".site-footer": {
+        "x": 76,
+        "y": 986.75,
+        "width": 1349,
+        "height": 124.1875,
+        "text": "\u00a9 2026 Sport My Fitness \u00b7 MilwaukeePrivacyTermsShipping & returnsFitness disclaimer",
+        "font": "17px / 27.2px Arial, Helvetica, sans-serif",
+        "fontSize": "17px"
+      }
+    },
+    "links": [
+      {
+        "text": "Apparel \u2192",
+        "href": "/apparel/"
+      },
+      {
+        "text": "Explore training \u2192",
+        "href": "/training/"
+      },
+      {
+        "text": "Yoshi\u2019s Book \u2192",
+        "href": "/yoshis-book/"
+      }
+    ]
+  },
+  {
+    "width": 1440,
+    "height": 1000,
+    "theme": "light",
+    "geometry": {
+      ".site-header": {
+        "x": 76,
+        "y": 0,
+        "width": 1349,
+        "height": 176,
+        "text": "LightDarkCallMenu",
+        "font": "17px / 27.2px Arial, Helvetica, sans-serif",
+        "fontSize": "17px"
+      },
+      ".brand-logo": {
+        "x": 133.59375,
+        "y": 54.671875,
+        "width": 244,
+        "height": 66.65625,
+        "text": "",
+        "font": "17px / 27.2px Arial, Helvetica, sans-serif",
+        "fontSize": "17px"
+      },
+      ".header-actions": {
+        "x": 1189.25,
+        "y": 66,
+        "width": 178.140625,
+        "height": 44,
+        "text": "LightDarkCallMenu",
+        "font": "17px / 27.2px Arial, Helvetica, sans-serif",
+        "fontSize": "17px"
+      },
+      ".menu-toggle": {
+        "x": 12,
+        "y": 32,
+        "width": 52,
+        "height": 65,
+        "text": "Menu",
+        "font": "17px / 27.2px Arial, Helvetica, sans-serif",
+        "fontSize": "17px"
+      },
+      ".hero": {
+        "x": 76,
+        "y": 0,
+        "width": 1349,
+        "height": 921.59375,
+        "text": "MILWAUKEE \u00b7 SPORT MY FITNESS\n          IT ALLTAKESWORK.\n          \n          \n            \n              \n  \n  \nCertifiedtrainerISSA certification\n              \n  \n  \n  \nCommunityfocusedMilwaukee, WI\n            \n          \n          \n          To gain, maintain, or lose.\n          Personal, group and online training with Yoshi Barnes.\n          Apparel \u2192Explore training \u2192Yoshi\u2019s Book \u2192",
+        "font": "17px / 27.2px Arial, Helvetica, sans-serif",
+        "fontSize": "17px"
+      },
+      ".hero-copy": {
+        "x": 133.59375,
+        "y": 200,
+        "width": 629.234375,
+        "height": 633.609375,
+        "text": "MILWAUKEE \u00b7 SPORT MY FITNESS\n          IT ALLTAKESWORK.\n          \n          \n            \n              \n  \n  \nCertifiedtrainerISSA certification\n              \n  \n  \n  \nCommunityfocusedMilwaukee, WI\n            \n          \n          \n          To gain, maintain, or lose.\n          Personal, group and online training with Yoshi Barnes.\n          Apparel \u2192Explore training \u2192Yoshi\u2019s Book \u2192",
+        "font": "17px / 27.2px Arial, Helvetica, sans-serif",
+        "fontSize": "17px"
+      },
+      ".hero-eyebrow": {
+        "x": 133.59375,
+        "y": 200,
+        "width": 264.078125,
+        "height": 21.75,
+        "text": "MILWAUKEE \u00b7 SPORT MY FITNESS",
+        "font": "700 15px / 21.75px Rajdhani, \"Arial Narrow\", sans-serif",
+        "fontSize": "15px"
+      },
+      "#hero-heading": {
+        "x": 133.59375,
+        "y": 234,
+        "width": 629.234375,
+        "height": 387.046875,
+        "text": "IT ALLTAKESWORK.",
+        "font": "italic 900 161.28px / 129.024px \"Barlow Condensed\", Impact, \"Arial Narrow\", sans-serif",
+        "fontSize": "161.28px"
+      },
+      ".home-proof": {
+        "x": 609.359375,
+        "y": 459.78125,
+        "width": 206,
+        "height": 147.9375,
+        "text": "CertifiedtrainerISSA certification\n              \n  \n  \n  \nCommunityfocusedMilwaukee, WI",
+        "font": "17px / 27.2px Arial, Helvetica, sans-serif",
+        "fontSize": "17px"
+      },
+      ".hero-subline": {
+        "x": 133.59375,
+        "y": 639.046875,
+        "width": 629.234375,
+        "height": 41.40625,
+        "text": "To gain, maintain, or lose.",
+        "font": "700 33.12px / 41.4px Arial, Helvetica, sans-serif",
+        "fontSize": "33.12px"
+      },
+      ".hero-description": {
+        "x": 133.59375,
+        "y": 690.453125,
+        "width": 574.1875,
+        "height": 64.15625,
+        "text": "Personal, group and online training with Yoshi Barnes.",
+        "font": "23.76px / 32.076px Arial, Helvetica, sans-serif",
+        "fontSize": "23.76px"
+      },
+      ".home-actions": {
+        "x": 133.59375,
+        "y": 781.609375,
+        "width": 620,
+        "height": 52,
+        "text": "Apparel \u2192Explore training \u2192Yoshi\u2019s Book \u2192",
+        "font": "17px / 27.2px Arial, Helvetica, sans-serif",
+        "fontSize": "17px"
+      },
+      ".home-actions > a:nth-child(1)": {
+        "x": 133.59375,
+        "y": 781.609375,
+        "width": 198.65625,
+        "height": 52,
+        "text": "Apparel \u2192",
+        "font": "700 18px / 23.4px Arial, Helvetica, sans-serif",
+        "fontSize": "18px"
+      },
+      ".home-actions > a:nth-child(2)": {
+        "x": 344.25,
+        "y": 781.609375,
+        "width": 198.671875,
+        "height": 52,
+        "text": "Explore training \u2192",
+        "font": "700 18px / 23.4px Arial, Helvetica, sans-serif",
+        "fontSize": "18px"
+      },
+      ".home-actions > a:nth-child(3)": {
+        "x": 554.921875,
+        "y": 781.609375,
+        "width": 198.671875,
+        "height": 52,
+        "text": "Yoshi\u2019s Book \u2192",
+        "font": "700 18px / 23.4px Arial, Helvetica, sans-serif",
+        "fontSize": "18px"
+      },
+      ".mission-strip": {
+        "x": 76,
+        "y": 921.59375,
+        "width": 1349,
+        "height": 65.15625,
+        "text": "EMPOWER THE BODY. STRENGTHEN THE MIND.",
+        "font": "17px / 27.2px Arial, Helvetica, sans-serif",
+        "fontSize": "17px"
+      },
+      ".site-footer": {
+        "x": 76,
+        "y": 986.75,
+        "width": 1349,
+        "height": 124.1875,
+        "text": "\u00a9 2026 Sport My Fitness \u00b7 MilwaukeePrivacyTermsShipping & returnsFitness disclaimer",
+        "font": "17px / 27.2px Arial, Helvetica, sans-serif",
+        "fontSize": "17px"
+      }
+    },
+    "links": [
+      {
+        "text": "Apparel \u2192",
+        "href": "/apparel/"
+      },
+      {
+        "text": "Explore training \u2192",
+        "href": "/training/"
+      },
+      {
+        "text": "Yoshi\u2019s Book \u2192",
+        "href": "/yoshis-book/"
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "theme": "dark",
+    "geometry": {
+      ".site-header": {
+        "x": 0,
+        "y": 0,
+        "width": 375,
+        "height": 88,
+        "text": "LightDarkCallMenu",
+        "font": "17px / 27.2px Arial, Helvetica, sans-serif",
+        "fontSize": "17px"
+      },
+      ".brand-logo": {
+        "x": 12,
+        "y": 17.546875,
+        "width": 190,
+        "height": 51.90625,
+        "text": "",
+        "font": "17px / 27.2px Arial, Helvetica, sans-serif",
+        "fontSize": "17px"
+      },
+      ".header-actions": {
+        "x": 223,
+        "y": 21.5,
+        "width": 140,
+        "height": 44,
+        "text": "LightDarkCallMenu",
+        "font": "17px / 27.2px Arial, Helvetica, sans-serif",
+        "fontSize": "17px"
+      },
+      ".menu-toggle": {
+        "x": 319,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "text": "Menu",
+        "font": "17px / 27.2px Arial, Helvetica, sans-serif",
+        "fontSize": "17px"
+      },
+      ".hero": {
+        "x": 0,
+        "y": 88,
+        "width": 375,
+        "height": 624,
+        "text": "MILWAUKEE \u00b7 SPORT MY FITNESS\n          IT ALLTAKESWORK.\n          \n          \n            \n              \n  \n  \nCertifiedtrainerISSA certification\n              \n  \n  \n  \nCommunityfocusedMilwaukee, WI\n            \n          \n          \n          To gain, maintain, or lose.\n          Personal, group and online training with Yoshi Barnes.\n          Apparel \u2192Explore training \u2192Yoshi\u2019s Book \u2192",
+        "font": "17px / 27.2px Arial, Helvetica, sans-serif",
+        "fontSize": "17px"
+      },
+      ".hero-copy": {
+        "x": 22,
+        "y": 306.390625,
+        "width": 331,
+        "height": 383.59375,
+        "text": "MILWAUKEE \u00b7 SPORT MY FITNESS\n          IT ALLTAKESWORK.\n          \n          \n            \n              \n  \n  \nCertifiedtrainerISSA certification\n              \n  \n  \n  \nCommunityfocusedMilwaukee, WI\n            \n          \n          \n          To gain, maintain, or lose.\n          Personal, group and online training with Yoshi Barnes.\n          Apparel \u2192Explore training \u2192Yoshi\u2019s Book \u2192",
+        "font": "17px / 27.2px Arial, Helvetica, sans-serif",
+        "fontSize": "17px"
+      },
+      ".hero-eyebrow": {
+        "x": 22,
+        "y": 306.390625,
+        "width": 224.90625,
+        "height": 19.796875,
+        "text": "MILWAUKEE \u00b7 SPORT MY FITNESS",
+        "font": "700 13.65px / 19.7925px Rajdhani, \"Arial Narrow\", sans-serif",
+        "fontSize": "13.65px"
+      },
+      "#hero-heading": {
+        "x": 22,
+        "y": 332.171875,
+        "width": 331,
+        "height": 164.953125,
+        "text": "IT ALLTAKESWORK.",
+        "font": "italic 900 63.96px / 55.0056px \"Barlow Condensed\", Impact, \"Arial Narrow\", sans-serif",
+        "fontSize": "63.96px"
+      },
+      ".home-proof": {
+        "x": 210.671875,
+        "y": 354.5625,
+        "width": 157.3125,
+        "height": 125.75,
+        "text": "CertifiedtrainerISSA certification\n              \n  \n  \n  \nCommunityfocusedMilwaukee, WI",
+        "font": "17px / 27.2px Arial, Helvetica, sans-serif",
+        "fontSize": "17px"
+      },
+      ".hero-subline": {
+        "x": 22,
+        "y": 505.125,
+        "width": 331,
+        "height": 24.859375,
+        "text": "To gain, maintain, or lose.",
+        "font": "700 19.89px / 24.8625px Arial, Helvetica, sans-serif",
+        "fontSize": "19.89px"
+      },
+      ".hero-description": {
+        "x": 22,
+        "y": 533.984375,
+        "width": 331,
+        "height": 40,
+        "text": "Personal, group and online training with Yoshi Barnes.",
+        "font": "16px / 20px Arial, Helvetica, sans-serif",
+        "fontSize": "16px"
+      },
+      ".home-actions": {
+        "x": 22,
+        "y": 587.984375,
+        "width": 331,
+        "height": 102,
+        "text": "Apparel \u2192Explore training \u2192Yoshi\u2019s Book \u2192",
+        "font": "17px / 27.2px Arial, Helvetica, sans-serif",
+        "fontSize": "17px"
+      },
+      ".home-actions > a:nth-child(1)": {
+        "x": 22,
+        "y": 587.984375,
+        "width": 331,
+        "height": 46,
+        "text": "Apparel \u2192",
+        "font": "700 18px / 23.4px Arial, Helvetica, sans-serif",
+        "fontSize": "18px"
+      },
+      ".home-actions > a:nth-child(2)": {
+        "x": 22,
+        "y": 643.984375,
+        "width": 160.5,
+        "height": 46,
+        "text": "Explore training \u2192",
+        "font": "13.65px / 17.745px Arial, Helvetica, sans-serif",
+        "fontSize": "13.65px"
+      },
+      ".home-actions > a:nth-child(3)": {
+        "x": 192.5,
+        "y": 643.984375,
+        "width": 160.5,
+        "height": 46,
+        "text": "Yoshi\u2019s Book \u2192",
+        "font": "13.65px / 17.745px Arial, Helvetica, sans-serif",
+        "fontSize": "13.65px"
+      },
+      ".mission-strip": {
+        "x": 0,
+        "y": 712,
+        "width": 375,
+        "height": 65,
+        "text": "EMPOWER THE BODY. STRENGTHEN THE MIND.",
+        "font": "17px / 27.2px Arial, Helvetica, sans-serif",
+        "fontSize": "17px"
+      },
+      ".site-footer": {
+        "x": 0,
+        "y": 777,
+        "width": 375,
+        "height": 162.1875,
+        "text": "\u00a9 2026 Sport My Fitness \u00b7 MilwaukeePrivacyTermsShipping & returnsFitness disclaimer",
+        "font": "17px / 27.2px Arial, Helvetica, sans-serif",
+        "fontSize": "17px"
+      }
+    },
+    "links": [
+      {
+        "text": "Apparel \u2192",
+        "href": "/apparel/"
+      },
+      {
+        "text": "Explore training \u2192",
+        "href": "/training/"
+      },
+      {
+        "text": "Yoshi\u2019s Book \u2192",
+        "href": "/yoshis-book/"
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "theme": "light",
+    "geometry": {
+      ".site-header": {
+        "x": 0,
+        "y": 0,
+        "width": 375,
+        "height": 88,
+        "text": "LightDarkCallMenu",
+        "font": "17px / 27.2px Arial, Helvetica, sans-serif",
+        "fontSize": "17px"
+      },
+      ".brand-logo": {
+        "x": 12,
+        "y": 17.546875,
+        "width": 190,
+        "height": 51.90625,
+        "text": "",
+        "font": "17px / 27.2px Arial, Helvetica, sans-serif",
+        "fontSize": "17px"
+      },
+      ".header-actions": {
+        "x": 223,
+        "y": 21.5,
+        "width": 140,
+        "height": 44,
+        "text": "LightDarkCallMenu",
+        "font": "17px / 27.2px Arial, Helvetica, sans-serif",
+        "fontSize": "17px"
+      },
+      ".menu-toggle": {
+        "x": 319,
+        "y": 21.5,
+        "width": 44,
+        "height": 44,
+        "text": "Menu",
+        "font": "17px / 27.2px Arial, Helvetica, sans-serif",
+        "fontSize": "17px"
+      },
+      ".hero": {
+        "x": 0,
+        "y": 88,
+        "width": 375,
+        "height": 624,
+        "text": "MILWAUKEE \u00b7 SPORT MY FITNESS\n          IT ALLTAKESWORK.\n          \n          \n            \n              \n  \n  \nCertifiedtrainerISSA certification\n              \n  \n  \n  \nCommunityfocusedMilwaukee, WI\n            \n          \n          \n          To gain, maintain, or lose.\n          Personal, group and online training with Yoshi Barnes.\n          Apparel \u2192Explore training \u2192Yoshi\u2019s Book \u2192",
+        "font": "17px / 27.2px Arial, Helvetica, sans-serif",
+        "fontSize": "17px"
+      },
+      ".hero-copy": {
+        "x": 22,
+        "y": 306.390625,
+        "width": 331,
+        "height": 383.59375,
+        "text": "MILWAUKEE \u00b7 SPORT MY FITNESS\n          IT ALLTAKESWORK.\n          \n          \n            \n              \n  \n  \nCertifiedtrainerISSA certification\n              \n  \n  \n  \nCommunityfocusedMilwaukee, WI\n            \n          \n          \n          To gain, maintain, or lose.\n          Personal, group and online training with Yoshi Barnes.\n          Apparel \u2192Explore training \u2192Yoshi\u2019s Book \u2192",
+        "font": "17px / 27.2px Arial, Helvetica, sans-serif",
+        "fontSize": "17px"
+      },
+      ".hero-eyebrow": {
+        "x": 22,
+        "y": 306.390625,
+        "width": 224.90625,
+        "height": 19.796875,
+        "text": "MILWAUKEE \u00b7 SPORT MY FITNESS",
+        "font": "700 13.65px / 19.7925px Rajdhani, \"Arial Narrow\", sans-serif",
+        "fontSize": "13.65px"
+      },
+      "#hero-heading": {
+        "x": 22,
+        "y": 332.171875,
+        "width": 331,
+        "height": 164.953125,
+        "text": "IT ALLTAKESWORK.",
+        "font": "italic 900 63.96px / 55.0056px \"Barlow Condensed\", Impact, \"Arial Narrow\", sans-serif",
+        "fontSize": "63.96px"
+      },
+      ".home-proof": {
+        "x": 210.671875,
+        "y": 354.5625,
+        "width": 157.3125,
+        "height": 125.75,
+        "text": "CertifiedtrainerISSA certification\n              \n  \n  \n  \nCommunityfocusedMilwaukee, WI",
+        "font": "17px / 27.2px Arial, Helvetica, sans-serif",
+        "fontSize": "17px"
+      },
+      ".hero-subline": {
+        "x": 22,
+        "y": 505.125,
+        "width": 331,
+        "height": 24.859375,
+        "text": "To gain, maintain, or lose.",
+        "font": "700 19.89px / 24.8625px Arial, Helvetica, sans-serif",
+        "fontSize": "19.89px"
+      },
+      ".hero-description": {
+        "x": 22,
+        "y": 533.984375,
+        "width": 331,
+        "height": 40,
+        "text": "Personal, group and online training with Yoshi Barnes.",
+        "font": "16px / 20px Arial, Helvetica, sans-serif",
+        "fontSize": "16px"
+      },
+      ".home-actions": {
+        "x": 22,
+        "y": 587.984375,
+        "width": 331,
+        "height": 102,
+        "text": "Apparel \u2192Explore training \u2192Yoshi\u2019s Book \u2192",
+        "font": "17px / 27.2px Arial, Helvetica, sans-serif",
+        "fontSize": "17px"
+      },
+      ".home-actions > a:nth-child(1)": {
+        "x": 22,
+        "y": 587.984375,
+        "width": 331,
+        "height": 46,
+        "text": "Apparel \u2192",
+        "font": "700 18px / 23.4px Arial, Helvetica, sans-serif",
+        "fontSize": "18px"
+      },
+      ".home-actions > a:nth-child(2)": {
+        "x": 22,
+        "y": 643.984375,
+        "width": 160.5,
+        "height": 46,
+        "text": "Explore training \u2192",
+        "font": "13.65px / 17.745px Arial, Helvetica, sans-serif",
+        "fontSize": "13.65px"
+      },
+      ".home-actions > a:nth-child(3)": {
+        "x": 192.5,
+        "y": 643.984375,
+        "width": 160.5,
+        "height": 46,
+        "text": "Yoshi\u2019s Book \u2192",
+        "font": "13.65px / 17.745px Arial, Helvetica, sans-serif",
+        "fontSize": "13.65px"
+      },
+      ".mission-strip": {
+        "x": 0,
+        "y": 712,
+        "width": 375,
+        "height": 65,
+        "text": "EMPOWER THE BODY. STRENGTHEN THE MIND.",
+        "font": "17px / 27.2px Arial, Helvetica, sans-serif",
+        "fontSize": "17px"
+      },
+      ".site-footer": {
+        "x": 0,
+        "y": 777,
+        "width": 375,
+        "height": 162.1875,
+        "text": "\u00a9 2026 Sport My Fitness \u00b7 MilwaukeePrivacyTermsShipping & returnsFitness disclaimer",
+        "font": "17px / 27.2px Arial, Helvetica, sans-serif",
+        "fontSize": "17px"
+      }
+    },
+    "links": [
+      {
+        "text": "Apparel \u2192",
+        "href": "/apparel/"
+      },
+      {
+        "text": "Explore training \u2192",
+        "href": "/training/"
+      },
+      {
+        "text": "Yoshi\u2019s Book \u2192",
+        "href": "/yoshis-book/"
+      }
+    ]
+  }
+]

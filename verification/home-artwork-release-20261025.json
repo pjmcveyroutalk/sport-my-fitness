@@ -1,0 +1,39 @@
+{
+  "base": "http://127.0.0.1:33091",
+  "normalMotionPreference": true,
+  "checks": [
+    {
+      "width": 1440,
+      "theme": "dark",
+      "layoutMatchesApproved": true,
+      "linksUnchanged": true,
+      "motionAbsent": true,
+      "errors": []
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "layoutMatchesApproved": true,
+      "linksUnchanged": true,
+      "motionAbsent": true,
+      "errors": []
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "layoutMatchesApproved": true,
+      "linksUnchanged": true,
+      "motionAbsent": true,
+      "errors": []
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "layoutMatchesApproved": true,
+      "linksUnchanged": true,
+      "motionAbsent": true,
+      "errors": []
+    }
+  ],
+  "passed": true
+}

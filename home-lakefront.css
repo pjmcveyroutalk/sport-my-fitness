@@ -1,14 +1,17 @@
-/* Approved lakefront composition; preserve the shared headline and navigation geometry. */
+/* Approved static waterfront artwork; preserve the existing layout measurements. */
+.smf-home-page .hero { background: #101a21; }
 .smf-home-page .hero .yoshi-stage { inset: 0; width: 100%; overflow: hidden; }
-.smf-home-page .hero .yoshi-hero {
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  max-width: none;
-  object-fit: cover;
-  object-position: 74% 50%;
-  transform: none;
+.smf-home-page .hero .yoshi-hero { inset: 0; width: 100%; height: 100%; max-width: none; object-fit: cover; object-position: 74% 50%; transform: none; }
+.smf-home-page .hero-art { background-image: linear-gradient(90deg, #101a21 0%, #101a21 43%, #101a21ed 47%, #101a2177 60%, #101a2100 74%), linear-gradient(0deg, #101a21dd 0%, #101a2100 21%); background-size: 100% 100%; background-repeat: no-repeat; }
+/* Remove only the background scrim behind the existing lettering. */
+.smf-home-page .hero h1::before { display: none; }
+/* One continuous artwork surface, with no separate header-shaped wash. */
+@media (min-width: 801px) {
+  body:has(.smf-home-page) .site-header { background: transparent; }
+  body:has(.smf-home-page) .site-header::after { display: none; }
 }
+:root[data-theme="light"] .smf-home-page .hero { background: #f2f5f5; }
+:root[data-theme="light"] .smf-home-page .hero-art { background-image: linear-gradient(90deg, #f2f5f5 0%, #f2f5f5 43%, #f2f5f5ed 47%, #f2f5f577 60%, #f2f5f500 74%), linear-gradient(0deg, #f2f5f5dd 0%, #f2f5f500 21%); }
 .smf-home-page .mission-strip {
   background-image: linear-gradient(#001018d9, #001018e6), url('assets/photos/smf-lakefront-bench-20261022-1200.webp');
 }
@@ -16,15 +19,17 @@
   background-image: linear-gradient(#f2f5f5e8, #e6f1f3f2), url('assets/photos/smf-lakefront-bench-20261022-1200.webp');
 }
 @media (max-width: 800px) {
-  .smf-home-page .hero .yoshi-hero {
-    height: min(110vw, 500px);
-    object-position: 84% 50%;
-  }
+ .smf-home-page .hero .yoshi-hero { height: min(110vw, 500px); object-position: 84% 50%; }
+ .smf-home-page .hero-art { background-image: linear-gradient(180deg, #101a2100 30vw, #101a214d 44vw, #101a21eb 61vw, #101a21 71vw); }
+ :root[data-theme="light"] .smf-home-page .hero-art { background-image: linear-gradient(180deg, #f2f5f500 30vw, #f2f5f54d 44vw, #f2f5f5eb 61vw, #f2f5f5 71vw); }
 }
 
-.smf-water-canvas {
-  position: absolute;
-  inset: 0;
-  display: block;
-  pointer-events: none;
+/* Original arm pixels above the blend, without changing the artwork crop. */
+.smf-home-page .hero .yoshi-arm-detail {
+ position: absolute; z-index: 2; inset: 0; width: 100%; pointer-events: none;
+ background: url('assets/photos/smf-turquoise-waterfront-20261025-1672.webp') 74% 50% / cover no-repeat;
+ mask-image: url('assets/photos/smf-arm-detail-mask-20261025.svg'); mask-mode: luminance; mask-size: cover; mask-position: 74% 50%; mask-repeat: no-repeat;
+}
+@media (max-width: 800px) {
+ .smf-home-page .hero .yoshi-arm-detail { height: min(110vw, 500px); background-position: 84% 50%; mask-position: 84% 50%; }
 }
